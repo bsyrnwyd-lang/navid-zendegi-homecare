@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Shield, Clock, Heart } from "lucide-react";
 import heroImage from "@/assets/medical-hero.jpg";
+import doctorPatientImage from "@/assets/doctor-patient-home.jpg";
 
 const Hero = () => {
   const phoneNumber = "09386117912";
@@ -17,11 +18,11 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background to-muted">
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroImage} 
-          alt="خدمات پزشکی در منزل نوید زندگی"
-          className="w-full h-full object-cover opacity-10"
+          src={doctorPatientImage} 
+          alt="ویزیت پزشک در منزل - خدمات پزشکی نوید زندگی"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 hero-gradient opacity-20"></div>
+        <div className="absolute inset-0 hero-gradient opacity-30"></div>
       </div>
       
       <div className="container mx-auto px-4 py-20 z-10 text-center">

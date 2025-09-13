@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Stethoscope, Heart, Syringe, FileText, UserCheck, Sparkles } from "lucide-react";
+import nursingImage from "@/assets/nurse-home-visit.jpg";
+import injectionImage from "@/assets/injection-home.jpg";
 
 const Services = () => {
   const services = [
@@ -49,6 +51,34 @@ const Services = () => {
           <p className="section-subtitle">
             پرستاری در منزل، تزریقات در منزل، پزشک متخصص در منزل و خدمات زیبایی در منزل
           </p>
+        </div>
+        
+        {/* تصاویر واقعی خدمات */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="relative rounded-lg overflow-hidden shadow-lg">
+            <img 
+              src={nursingImage} 
+              alt="پرستاری در منزل - خدمات پرستاری حرفه‌ای"
+              className="w-full h-64 object-cover"
+            />
+            <div className="absolute inset-0 bg-primary/20"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="text-xl font-bold">پرستاری در منزل</h3>
+              <p className="text-sm">مراقبت حرفه‌ای توسط پرستاران مجرب</p>
+            </div>
+          </div>
+          <div className="relative rounded-lg overflow-hidden shadow-lg">
+            <img 
+              src={injectionImage} 
+              alt="تزریقات در منزل - خدمات تزریق حرفه‌ای"
+              className="w-full h-64 object-cover"
+            />
+            <div className="absolute inset-0 bg-secondary/20"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="text-xl font-bold">تزریقات در منزل</h3>
+              <p className="text-sm">تزریقات ایمن و استریل در محیط منزل</p>
+            </div>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

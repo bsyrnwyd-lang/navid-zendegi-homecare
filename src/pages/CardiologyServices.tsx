@@ -4,6 +4,8 @@ import { Heart, Activity, FileText, Clock, CheckCircle, Phone } from "lucide-rea
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import cardiologyImage from "@/assets/cardiology-home-visit.jpg";
+import medicalEquipmentImage from "@/assets/medical-equipment-home.jpg";
 
 const CardiologyServices = () => {
   const services = [
@@ -66,10 +68,47 @@ const CardiologyServices = () => {
             </div>
             <div className="relative">
               <img 
-                src="/src/assets/medical-equipment.jpg" 
-                alt="تجهیزات پزشکی قلب در منزل" 
+                src={cardiologyImage} 
+                alt="ویزیت پزشک قلب در منزل - اکو قلب و نوار قلب" 
                 className="rounded-lg shadow-2xl w-full h-auto"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* تصویر تجهیزات پزشکی */}
+      <section className="medical-section bg-muted/30">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <img 
+                src={medicalEquipmentImage} 
+                alt="تجهیزات پزشکی قلب در منزل - ECG و اکو"
+                className="w-full h-80 object-cover rounded-lg shadow-lg"
+              />
+              <div className="absolute inset-0 bg-primary/10 rounded-lg"></div>
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold mb-6 text-primary">تجهیزات پیشرفته</h3>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                ما از جدیدترین و پیشرفته‌ترین تجهیزات پزشکی برای انجام خدمات قلب در منزل شما 
+                استفاده می‌کنیم. تمام دستگاه‌ها کالیبره شده و دارای استانداردهای بین‌المللی هستند.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-primary ml-3" />
+                  <span>دستگاه ECG پرتابل دیجیتال</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-primary ml-3" />
+                  <span>اکوکاردیوگراف قابل حمل</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-primary ml-3" />
+                  <span>مانیتور فشار خون اتوماتیک</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

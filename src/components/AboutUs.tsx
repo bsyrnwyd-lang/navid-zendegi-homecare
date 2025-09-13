@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import elderlyImage from "@/assets/elderly-care-home.jpg";
 
 const AboutUs = () => {
   return (
@@ -6,6 +7,25 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">درباره ما</h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+          <div className="relative">
+            <img 
+              src={elderlyImage} 
+              alt="مراقبت از سالمندان در منزل - خدمات نوید زندگی"
+              className="w-full h-96 object-cover rounded-lg shadow-lg"
+            />
+            <div className="absolute inset-0 bg-primary/10 rounded-lg"></div>
+          </div>
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-primary">تجربه و اعتماد</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              ما با بیش از ۴ سال تجربه در ارائه خدمات پزشکی در منزل، به یکی از معتبرترین 
+              ارائه‌دهندگان این خدمات تبدیل شده‌ایم. تیم ما متشکل از پزشکان و پرستاران 
+              مجرب است که با دقت و مهارت بالا خدمات‌رسانی می‌کنند.
+            </p>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto space-y-8">

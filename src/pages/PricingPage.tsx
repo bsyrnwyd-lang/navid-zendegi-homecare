@@ -4,6 +4,8 @@ import { CheckCircle, Star, Phone, Clock, AlertTriangle, AlertCircle, MessageCir
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import nursingImage from "@/assets/nurse-home-visit.jpg";
+import doctorImage from "@/assets/doctor-patient-home.jpg";
 
 const PricingPage = () => {
   const phoneNumber = "09386117912";
@@ -86,6 +88,38 @@ const PricingPage = () => {
                 <MessageCircle className="w-6 h-6" />
                 واتساپ
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* تصاویر واقعی خدمات */}
+      <section className="medical-section bg-muted/30">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="relative rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={doctorImage} 
+                alt="ویزیت پزشک در منزل - خدمات پزشکی حرفه‌ای"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h3 className="text-xl font-bold">ویزیت پزشک در منزل</h3>
+                <p className="text-sm">تشخیص و درمان توسط پزشکان مجرب</p>
+              </div>
+            </div>
+            <div className="relative rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={nursingImage} 
+                alt="پرستاری در منزل - مراقبت حرفه‌ای"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h3 className="text-xl font-bold">پرستاری در منزل</h3>
+                <p className="text-sm">مراقبت و تزریقات با استانداردهای بالا</p>
+              </div>
             </div>
           </div>
         </div>
