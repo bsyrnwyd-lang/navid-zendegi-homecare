@@ -280,11 +280,9 @@ const PricingPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               "مدیریت تخصصی",
-              "نظارت شبانه روزی مسئول فنی", 
-              "نظارت مستقیم وزارت بهداشت",
               "رویکرد علمی در پرستاری",
               "قیمت مناسب خدمات",
               "پرستار خصوصی در منزل",
