@@ -21,6 +21,7 @@ const Header = () => {
     { to: "/", label: "صفحه اصلی" },
     { to: "/general-doctor", label: "ویزیت پزشک عمومی" },
     { to: "/cardiology", label: "ویزیت پزشک قلب" },
+    { to: "/about", label: "درباره ما" },
     { to: "/pricing", label: "تعرفه خدمات" },
     { href: "#services", label: "خدمات" },
     { href: "#contact", label: "تماس" }
