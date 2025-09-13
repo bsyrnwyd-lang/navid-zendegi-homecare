@@ -26,8 +26,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-40">
-      <div className="container mx-auto px-4 py-4">
+    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-3">
             <img 
@@ -41,74 +41,76 @@ const Header = () => {
             </div>
           </div>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
-            {navigationItems.map((item, index) => (
-              item.to ? (
-                <Link 
-                  key={index}
-                  to={item.to} 
-                  className="text-sm font-medium hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <a 
-                  key={index}
-                  href={item.href} 
-                  className="text-sm font-medium hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </a>
-              )
-            ))}
-          </nav>
+          {/* Desktop Navigation - Moved to top right */}
+          <div className="flex items-center gap-4">
+            <nav className="hidden md:flex items-center gap-6 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg border border-border/50">
+              {navigationItems.map((item, index) => (
+                item.to ? (
+                  <Link 
+                    key={index}
+                    to={item.to} 
+                    className="text-sm font-medium hover:text-primary transition-colors px-2 py-1 rounded hover:bg-muted/50"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a 
+                    key={index}
+                    href={item.href} 
+                    className="text-sm font-medium hover:text-primary transition-colors px-2 py-1 rounded hover:bg-muted/50"
+                  >
+                    {item.label}
+                  </a>
+                )
+              ))}
+            </nav>
 
-          {/* Mobile Navigation */}
-          <div className="lg:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="sm">
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-64">
-                <div className="flex flex-col gap-4 mt-8">
-                  {navigationItems.map((item, index) => (
-                    item.to ? (
-                      <Link 
-                        key={index}
-                        to={item.to} 
-                        className="text-lg font-medium hover:text-primary transition-colors py-2"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.label}
-                      </Link>
-                    ) : (
-                      <a 
-                        key={index}
-                        href={item.href} 
-                        className="text-lg font-medium hover:text-primary transition-colors py-2"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.label}
-                      </a>
-                    )
-                  ))}
-                  
-                  <div className="mt-6 pt-6 border-t">
-                    <Button onClick={handleCall} className="w-full mb-3">
-                      <Phone className="ml-2 h-4 w-4" />
-                      تماس: {phoneNumber}
-                    </Button>
-                    <Button onClick={handleWhatsApp} variant="outline" className="w-full">
-                      <MessageCircle className="ml-2 h-4 w-4" />
-                      واتساپ
-                    </Button>
+            {/* Mobile Navigation Button */}
+            <div className="md:hidden">
+              <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="outline" size="sm" className="bg-background/90 backdrop-blur-sm">
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-64">
+                  <div className="flex flex-col gap-4 mt-8">
+                    {navigationItems.map((item, index) => (
+                      item.to ? (
+                        <Link 
+                          key={index}
+                          to={item.to} 
+                          className="text-lg font-medium hover:text-primary transition-colors py-2 px-3 rounded hover:bg-muted/50"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <a 
+                          key={index}
+                          href={item.href} 
+                          className="text-lg font-medium hover:text-primary transition-colors py-2 px-3 rounded hover:bg-muted/50"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {item.label}
+                        </a>
+                      )
+                    ))}
+                    
+                    <div className="mt-6 pt-6 border-t">
+                      <Button onClick={handleCall} className="w-full mb-3">
+                        <Phone className="ml-2 h-4 w-4" />
+                        تماس: {phoneNumber}
+                      </Button>
+                      <Button onClick={handleWhatsApp} variant="outline" className="w-full">
+                        <MessageCircle className="ml-2 h-4 w-4" />
+                        واتساپ
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </SheetContent>
-            </Sheet>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
           
         </div>
