@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   const handleInstagram = () => {
-    window.open('https://instagram.com/Navidzendegii', '_blank');
+    window.open('https://instagram.com/Navidzendegiii', '_blank');
   };
 
   const navigationItems = [
