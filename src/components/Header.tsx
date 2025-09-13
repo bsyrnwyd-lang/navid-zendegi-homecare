@@ -106,8 +106,8 @@ const Header = () => {
                     منو
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-64 bg-background z-[60]">
-                  <div className="flex flex-col gap-4 mt-8">
+                <SheetContent side="right" className="w-72 bg-background z-[70]">
+                  <div className="flex flex-col gap-4 mt-8 overflow-y-auto max-h-[calc(100vh-8rem)] pr-2">
                     {navigationItems.map((item, index) => (
                       item.to ? (
                         <Link 
