@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Phone, MessageCircle, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import logo from "@/assets/navid-zendegi-logo.jpg";
 
 const Header = () => {
   const phoneNumber = "09386117912";
+  const [isOpen, setIsOpen] = useState(false);
   
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -13,6 +16,14 @@ const Header = () => {
   const handleWhatsApp = () => {
     window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
   };
+
+  const navigationItems = [
+    { to: "/", label: "صفحه اصلی" },
+    { to: "/cardiology", label: "ویزیت پزشک قلب" },
+    { to: "/pricing", label: "تعرفه خدمات" },
+    { href: "#services", label: "خدمات" },
+    { href: "#contact", label: "تماس" }
+  ];
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-40">
@@ -30,23 +41,75 @@ const Header = () => {
             </div>
           </div>
           
-          <nav className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
-              صفحه اصلی
-            </Link>
-            <Link to="/cardiology" className="text-sm font-medium hover:text-primary transition-colors">
-              ویزیت پزشک قلب
-            </Link>
-            <Link to="/pricing" className="text-sm font-medium hover:text-primary transition-colors">
-              تعرفه خدمات
-            </Link>
-            <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">
-              خدمات
-            </a>
-            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-              تماس
-            </a>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-6">
+            {navigationItems.map((item, index) => (
+              item.to ? (
+                <Link 
+                  key={index}
+                  to={item.to} 
+                  className="text-sm font-medium hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a 
+                  key={index}
+                  href={item.href} 
+                  className="text-sm font-medium hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </a>
+              )
+            ))}
           </nav>
+
+          {/* Mobile Navigation */}
+          <div className="lg:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-64">
+                <div className="flex flex-col gap-4 mt-8">
+                  {navigationItems.map((item, index) => (
+                    item.to ? (
+                      <Link 
+                        key={index}
+                        to={item.to} 
+                        className="text-lg font-medium hover:text-primary transition-colors py-2"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a 
+                        key={index}
+                        href={item.href} 
+                        className="text-lg font-medium hover:text-primary transition-colors py-2"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </a>
+                    )
+                  ))}
+                  
+                  <div className="mt-6 pt-6 border-t">
+                    <Button onClick={handleCall} className="w-full mb-3">
+                      <Phone className="ml-2 h-4 w-4" />
+                      تماس: {phoneNumber}
+                    </Button>
+                    <Button onClick={handleWhatsApp} variant="outline" className="w-full">
+                      <MessageCircle className="ml-2 h-4 w-4" />
+                      واتساپ
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
           
         </div>
       </div>
