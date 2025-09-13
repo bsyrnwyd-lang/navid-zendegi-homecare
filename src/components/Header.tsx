@@ -85,7 +85,7 @@ const Header = () => {
                   خدمات
                   <ChevronDown className="mr-1 h-3 w-3" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-64 bg-background border border-border shadow-lg z-[70]">
+                <DropdownMenuContent align="end" className="w-64 bg-background border border-border shadow-lg z-[70] max-h-96 overflow-y-auto">
                   {serviceItems.map((service, index) => (
                     <DropdownMenuItem key={index} asChild>
                       <Link to={service.to} className="text-sm cursor-pointer">
