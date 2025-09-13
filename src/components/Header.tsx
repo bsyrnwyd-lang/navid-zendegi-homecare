@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Phone, MessageCircle, Menu, ChevronDown } from "lucide-react";
+import { Phone, MessageCircle, Menu, ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "@/assets/navid-zendegi-logo.jpg";
@@ -9,6 +9,7 @@ import logo from "@/assets/navid-zendegi-logo.jpg";
 const Header = () => {
   const phoneNumber = "09386117912";
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -132,17 +133,30 @@ const Header = () => {
                     
                     {/* Mobile Services Menu */}
                     <div className="border-t pt-4">
-                      <h3 className="text-lg font-semibold mb-2 px-3">خدمات</h3>
-                      {serviceItems.map((service, index) => (
-                        <Link 
-                          key={index}
-                          to={service.to} 
-                          className="text-sm hover:text-primary transition-colors py-2 px-3 rounded hover:bg-muted/50 block"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {service.label}
-                        </Link>
-                      ))}
+                      <button 
+                        onClick={() => setServicesOpen(!servicesOpen)}
+                        className="flex items-center justify-between w-full text-lg font-semibold mb-2 px-3 py-2 hover:bg-muted/50 rounded"
+                      >
+                        خدمات
+                        {servicesOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                      </button>
+                      {servicesOpen && (
+                        <div className="space-y-1 animate-fade-in">
+                          {serviceItems.map((service, index) => (
+                            <Link 
+                              key={index}
+                              to={service.to} 
+                              className="text-sm hover:text-primary transition-colors py-2 px-6 rounded hover:bg-muted/50 block"
+                              onClick={() => {
+                                setIsOpen(false);
+                                setServicesOpen(false);
+                              }}
+                            >
+                              {service.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                     <div className="mt-6 pt-6 border-t">
                       <Button onClick={handleCall} className="w-full mb-3">
