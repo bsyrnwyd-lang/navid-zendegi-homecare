@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Heart, Syringe, FileText, UserCheck, Ambulance } from "lucide-react";
+import { Stethoscope, Heart, Syringe, FileText, UserCheck, Sparkles } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -34,10 +34,10 @@ const Services = () => {
       features: ["ارزیابی سلامت", "برنامه درمانی", "پیگیری بیماری", "مشاوره تغذیه"]
     },
     {
-      icon: Ambulance,
-      title: "خدمات اورژانس",
-      description: "خدمات اورژانس و کمک‌های اولیه در منزل",
-      features: ["کمک‌های اولیه", "مراقبت‌های ویژه", "انتقال بیمار", "خدمات فوری"]
+      icon: Sparkles,
+      title: "خدمات زیبایی در منزل",
+      description: "خدمات زیبایی و مراقبت پوست تخصصی در راحتی منزل",
+      features: ["تزریق بوتاکس", "تزریق فیلر", "پلاسماتراپی", "مراقبت پوست"]
     }
   ];
 
