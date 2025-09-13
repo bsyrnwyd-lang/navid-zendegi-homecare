@@ -35,7 +35,9 @@ const Header = () => {
     { to: "/services/neurology", label: "ویزیت متخصص مغز و اعصاب در منزل" },
     { to: "/services/urology", label: "ویزیت متخصص اورولوژی" },
     { to: "/services/infectious", label: "ویزیت متخصص عفونی در منزل" },
-    { to: "/services/gynecology", label: "ویزیت متخصص زنان در منزل" }
+    { to: "/services/gynecology", label: "ویزیت متخصص زنان در منزل" },
+    { to: "/services/beauty", label: "پزشک زیبایی در منزل" },
+    { to: "/services/physiotherapy", label: "فیزیوتراپی در منزل" }
   ];
 
   return (

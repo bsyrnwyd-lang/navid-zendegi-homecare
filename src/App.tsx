@@ -16,6 +16,8 @@ import NeurologyPage from "./pages/services/NeurologyPage";
 import UrologyPage from "./pages/services/UrologyPage";
 import InfectiousDiseasePage from "./pages/services/InfectiousDiseasePage";
 import GynecologyPage from "./pages/services/GynecologyPage";
+import BeautyDoctorPage from "./pages/services/BeautyDoctorPage";
+import PhysiotherapyPage from "./pages/services/PhysiotherapyPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +44,8 @@ const App = () => (
           <Route path="/services/urology" element={<UrologyPage />} />
           <Route path="/services/infectious" element={<InfectiousDiseasePage />} />
           <Route path="/services/gynecology" element={<GynecologyPage />} />
+          <Route path="/services/beauty" element={<BeautyDoctorPage />} />
+          <Route path="/services/physiotherapy" element={<PhysiotherapyPage />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
