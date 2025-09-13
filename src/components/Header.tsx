@@ -29,6 +29,21 @@ const Header = () => {
             </div>
           </div>
           
+          <nav className="hidden md:flex items-center gap-6">
+            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
+              صفحه اصلی
+            </a>
+            <a href="/cardiology" className="text-sm font-medium hover:text-primary transition-colors">
+              ویزیت پزشک قلب
+            </a>
+            <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">
+              خدمات
+            </a>
+            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+              تماس
+            </a>
+          </nav>
+          
         </div>
       </div>
     </header>
