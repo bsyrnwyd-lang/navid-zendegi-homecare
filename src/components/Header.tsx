@@ -19,6 +19,7 @@ const Header = () => {
 
   const navigationItems = [
     { to: "/", label: "صفحه اصلی" },
+    { to: "/general-doctor", label: "ویزیت پزشک عمومی" },
     { to: "/cardiology", label: "ویزیت پزشک قلب" },
     { to: "/pricing", label: "تعرفه خدمات" },
     { href: "#services", label: "خدمات" },

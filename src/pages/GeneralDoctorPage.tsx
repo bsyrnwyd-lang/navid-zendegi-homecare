@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock, Shield, MapPin, Phone, CheckCircle, HelpCircle } from "lucide-react";
+import generalDoctorImage from "@/assets/general-doctor-home.jpg";
 
 const GeneralDoctorPage = () => {
   return (
@@ -11,14 +12,26 @@ const GeneralDoctorPage = () => {
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}
         <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary">
-              ویزیت پزشک عمومی در منزل | ویزیت فوری شبانه‌روزی
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              اگر به هر دلیل امکان رفتن به مطب یا بیمارستان را ندارید، پزشک عمومی ما در سریع‌ترین زمان در منزل شما حاضر می‌شود. 
-              خدمات ما به صورت شبانه‌روزی در تهران و حومه ارائه می‌گردد.
-            </p>
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary">
+                  ویزیت پزشک عمومی در منزل | ویزیت فوری شبانه‌روزی
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                  اگر به هر دلیل امکان رفتن به مطب یا بیمارستان را ندارید، پزشک عمومی ما در سریع‌ترین زمان در منزل شما حاضر می‌شود. 
+                  خدمات ما به صورت شبانه‌روزی در تهران و حومه ارائه می‌گردد.
+                </p>
+              </div>
+              <div className="relative">
+                <img 
+                  src={generalDoctorImage} 
+                  alt="ویزیت پزشک عمومی در منزل - خدمات پزشکی حرفه‌ای"
+                  className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
+              </div>
+            </div>
           </div>
         </section>
 
