@@ -29,26 +29,6 @@ const Header = () => {
             </div>
           </div>
           
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleWhatsApp}
-              className="flex items-center gap-2"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span className="hidden md:inline">واتساپ</span>
-            </Button>
-            <Button
-              variant="contact"
-              size="sm"
-              onClick={handleCall}
-              className="flex items-center gap-2"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="ltr">{phoneNumber}</span>
-            </Button>
-          </div>
         </div>
       </div>
     </header>
