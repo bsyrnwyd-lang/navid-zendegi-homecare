@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/navid-zendegi-logo.jpg";
 
 const Header = () => {
@@ -30,12 +31,12 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center gap-6">
-            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
               صفحه اصلی
-            </a>
-            <a href="/cardiology" className="text-sm font-medium hover:text-primary transition-colors">
+            </Link>
+            <Link to="/cardiology" className="text-sm font-medium hover:text-primary transition-colors">
               ویزیت پزشک قلب
-            </a>
+            </Link>
             <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">
               خدمات
             </a>
