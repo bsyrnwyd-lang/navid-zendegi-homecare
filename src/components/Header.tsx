@@ -26,7 +26,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-60">
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-3">
@@ -69,11 +69,12 @@ const Header = () => {
             <div className="md:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="sm" className="bg-background/90 backdrop-blur-sm">
-                    <Menu className="h-5 w-5" />
+                  <Button variant="secondary" size="sm" aria-label="منوی ناوبری" className="px-3 py-2">
+                    <Menu className="h-5 w-5 ml-2" />
+                    منو
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-64">
+                <SheetContent side="right" className="w-64 bg-background z-[60]">
                   <div className="flex flex-col gap-4 mt-8">
                     {navigationItems.map((item, index) => (
                       item.to ? (
