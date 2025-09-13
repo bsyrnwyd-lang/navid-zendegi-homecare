@@ -1,0 +1,88 @@
+import { Button } from "@/components/ui/button";
+import { Phone, MessageCircle, Shield, Clock, Heart } from "lucide-react";
+import heroImage from "@/assets/medical-hero.jpg";
+
+const Hero = () => {
+  const phoneNumber = "09386117912";
+  
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background to-muted">
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroImage} 
+          alt="خدمات پزشکی در منزل نوید زندگی"
+          className="w-full h-full object-cover opacity-10"
+        />
+        <div className="absolute inset-0 hero-gradient opacity-20"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-20 z-10 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
+            خدمات پزشکی تخصصی
+            <br />
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              در منزل شما
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            مراقبت حرفه‌ای و با کیفیت در راحتی منزل
+            <br />
+            با تیم پزشکی مجرب نوید زندگی
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Button
+              variant="hero"
+              size="lg"
+              onClick={handleCall}
+              className="flex items-center gap-3 text-lg px-8 py-6"
+            >
+              <Phone className="w-6 h-6" />
+              تماس فوری
+              <span className="ltr font-bold">{phoneNumber}</span>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={handleWhatsApp}
+              className="flex items-center gap-3 text-lg px-8 py-6 border-2"
+            >
+              <MessageCircle className="w-6 h-6" />
+              واتساپ
+            </Button>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div className="medical-card text-center">
+              <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-2">تضمین کیفیت</h3>
+              <p className="text-muted-foreground">بالاترین استانداردهای پزشکی</p>
+            </div>
+            <div className="medical-card text-center">
+              <Clock className="w-12 h-12 text-secondary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-2">دسترسی ۲۴ ساعته</h3>
+              <p className="text-muted-foreground">آماده خدمات‌رسانی در تمام ساعات</p>
+            </div>
+            <div className="medical-card text-center">
+              <Heart className="w-12 h-12 text-accent mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-2">مراقبت دلسوزانه</h3>
+              <p className="text-muted-foreground">با محبت و دقت تمام</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Medical Home Services Design System - Persian RTL Support */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Medical color palette */
+    --background: 0 0% 99%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Medical primary - Trust blue */
+    --primary: 200 80% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 200 85% 60%;
+    --primary-dark: 200 85% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Medical secondary - Healing green */
+    --secondary: 140 45% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 140 45% 65%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Medical accent - Warm care orange */
+    --accent: 25 85% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 200 80% 45%;
 
-    --radius: 0.5rem;
+    /* Medical gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+
+    /* Medical shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+    --shadow-medical: 0 8px 30px -8px hsl(var(--primary) / 0.15);
+    --shadow-floating: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -99,7 +118,45 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    direction: rtl;
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
   body {
     @apply bg-background text-foreground;
+    direction: rtl;
+  }
+
+  /* RTL fixes for components */
+  .ltr {
+    direction: ltr;
+  }
+}
+
+@layer components {
+  /* Medical component styles */
+  .medical-card {
+    @apply bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-soft)] transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-medical)];
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .floating-contact {
+    @apply fixed bottom-6 left-6 z-50 shadow-[var(--shadow-floating)] transition-[var(--transition-bounce)] hover:scale-105;
+  }
+
+  .medical-section {
+    @apply py-16 px-4;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-4 text-foreground;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto;
   }
 }

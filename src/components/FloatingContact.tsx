@@ -1,0 +1,64 @@
+import { Button } from "@/components/ui/button";
+import { Phone, MessageCircle } from "lucide-react";
+import { useState } from "react";
+
+const FloatingContact = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const phoneNumber = "09386117912";
+  
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
+  };
+
+  return (
+    <>
+      {/* Main floating button */}
+      <div className="floating-contact">
+        <Button
+          variant="floating"
+          size="lg"
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="rounded-full w-16 h-16 flex items-center justify-center"
+        >
+          <Phone className="w-6 h-6" />
+        </Button>
+      </div>
+      
+      {/* Expanded contact options */}
+      {isExpanded && (
+        <div className="fixed bottom-24 left-6 z-50 flex flex-col gap-3">
+          <Button
+            variant="hero"
+            onClick={handleCall}
+            className="flex items-center gap-3 shadow-[var(--shadow-floating)] transition-[var(--transition-bounce)] hover:scale-105"
+          >
+            <Phone className="w-5 h-5" />
+            <span className="ltr font-bold">{phoneNumber}</span>
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={handleWhatsApp}
+            className="flex items-center gap-3 shadow-[var(--shadow-floating)] transition-[var(--transition-bounce)] hover:scale-105"
+          >
+            <MessageCircle className="w-5 h-5" />
+            واتساپ
+          </Button>
+        </div>
+      )}
+      
+      {/* Overlay to close expanded menu */}
+      {isExpanded && (
+        <div 
+          className="fixed inset-0 z-40 bg-transparent"
+          onClick={() => setIsExpanded(false)}
+        />
+      )}
+    </>
+  );
+};
+
+export default FloatingContact;
