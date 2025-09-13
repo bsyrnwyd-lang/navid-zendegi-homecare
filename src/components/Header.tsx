@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Phone, MessageCircle, Menu } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Phone, MessageCircle, Menu, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "@/assets/navid-zendegi-logo.jpg";
@@ -23,8 +24,18 @@ const Header = () => {
     { to: "/cardiology", label: "ویزیت پزشک قلب" },
     { to: "/about", label: "درباره ما" },
     { to: "/pricing", label: "تعرفه خدمات" },
-    { href: "#services", label: "خدمات" },
     { href: "#contact", label: "تماس" }
+  ];
+
+  const serviceItems = [
+    { to: "/services/specialist", label: "ویزیت پزشک متخصص در منزل" },
+    { to: "/services/internal", label: "ویزیت متخصص داخلی در منزل" },
+    { to: "/services/pediatrics", label: "ویزیت متخصص اطفال در منزل" },
+    { to: "/services/nursing", label: "خدمات پرستاری در منزل" },
+    { to: "/services/neurology", label: "ویزیت متخصص مغز و اعصاب در منزل" },
+    { to: "/services/urology", label: "ویزیت متخصص اورولوژی" },
+    { to: "/services/infectious", label: "ویزیت متخصص عفونی در منزل" },
+    { to: "/services/gynecology", label: "ویزیت متخصص زنان در منزل" }
   ];
 
   return (
@@ -65,6 +76,23 @@ const Header = () => {
                   </a>
                 )
               ))}
+              
+              {/* Services Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center text-sm font-medium hover:text-primary transition-colors px-2 py-1 rounded hover:bg-muted/50">
+                  خدمات
+                  <ChevronDown className="mr-1 h-3 w-3" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-64">
+                  {serviceItems.map((service, index) => (
+                    <DropdownMenuItem key={index} asChild>
+                      <Link to={service.to} className="text-sm">
+                        {service.label}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </nav>
 
             {/* Mobile Navigation Button */}
@@ -100,6 +128,20 @@ const Header = () => {
                       )
                     ))}
                     
+                    {/* Mobile Services Menu */}
+                    <div className="border-t pt-4">
+                      <h3 className="text-lg font-semibold mb-2 px-3">خدمات</h3>
+                      {serviceItems.map((service, index) => (
+                        <Link 
+                          key={index}
+                          to={service.to} 
+                          className="text-sm hover:text-primary transition-colors py-2 px-3 rounded hover:bg-muted/50 block"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {service.label}
+                        </Link>
+                      ))}
+                    </div>
                     <div className="mt-6 pt-6 border-t">
                       <Button onClick={handleCall} className="w-full mb-3">
                         <Phone className="ml-2 h-4 w-4" />
