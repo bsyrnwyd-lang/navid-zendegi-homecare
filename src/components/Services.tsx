@@ -17,9 +17,9 @@ const Services = () => {
     },
     {
       icon: Syringe,
-      title: "آزمایشات و تست‌ها",
-      description: "انجام آزمایشات پزشکی در منزل با نتایج دقیق و سریع",
-      features: ["نمونه‌گیری خون", "تست قند خون", "فشار خون", "آزمایشات تخصصی"]
+      title: "تزریقات در منزل و آزمایشات",
+      description: "تزریقات در منزل و انجام آزمایشات پزشکی با نتایج دقیق",
+      features: ["تزریقات در منزل", "نمونه‌گیری خون", "تست قند خون", "فشار خون"]
     },
     {
       icon: UserCheck,
@@ -45,9 +45,9 @@ const Services = () => {
     <section id="services" className="medical-section bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="section-title">خدمات پزشکی ما</h2>
+          <h2 className="section-title">ویزیت در منزل و پزشکی در منزل</h2>
           <p className="section-subtitle">
-            طیف کاملی از خدمات پزشکی تخصصی در راحتی منزل شما
+            پرستاری در منزل، تزریقات در منزل، پزشک متخصص در منزل و خدمات زیبایی در منزل
           </p>
         </div>
         

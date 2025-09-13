@@ -27,17 +27,17 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 z-10 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
-            خدمات پزشکی تخصصی
+            ویزیت پزشک در منزل
             <br />
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              در منزل شما
+              پزشکی در منزل با کیفیت
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            مراقبت حرفه‌ای و با کیفیت در راحتی منزل
+            پرستاری در منزل، تزریقات در منزل، پزشک متخصص در منزل
             <br />
-            با تیم پزشکی مجرب نوید زندگی
+            ویزیت پزشک قلب در منزل و خدمات زیبایی در منزل
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
