@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle, Instagram } from "lucide-react";
 import { useState } from "react";
 
 const FloatingContact = () => {
@@ -12,6 +12,10 @@ const FloatingContact = () => {
 
   const handleWhatsApp = () => {
     window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
+  };
+
+  const handleInstagram = () => {
+    window.open('https://instagram.com/Navidzendegii', '_blank');
   };
 
   return (
@@ -46,6 +50,14 @@ const FloatingContact = () => {
           >
             <MessageCircle className="w-5 h-5" />
             واتساپ
+          </Button>
+          <Button
+            variant="outline"
+            onClick={handleInstagram}
+            className="flex items-center gap-3 shadow-[var(--shadow-floating)] transition-[var(--transition-bounce)] hover:scale-105"
+          >
+            <Instagram className="w-5 h-5" />
+            اینستاگرام
           </Button>
         </div>
       )}

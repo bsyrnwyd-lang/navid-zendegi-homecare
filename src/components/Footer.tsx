@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, Heart } from "lucide-react";
+import { Phone, MessageCircle, Heart, Instagram } from "lucide-react";
 import logo from "@/assets/navid-zendegi-logo.jpg";
 
 const Footer = () => {
@@ -11,6 +11,10 @@ const Footer = () => {
 
   const handleWhatsApp = () => {
     window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
+  };
+
+  const handleInstagram = () => {
+    window.open('https://instagram.com/Navidzendegii', '_blank');
   };
 
   return (
@@ -76,6 +80,15 @@ const Footer = () => {
                 >
                   <MessageCircle className="w-4 h-4 ml-2" />
                   واتساپ
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleInstagram}
+                  className="bg-transparent border-background text-background hover:bg-background hover:text-foreground"
+                >
+                  <Instagram className="w-4 h-4 ml-2" />
+                  اینستاگرام
                 </Button>
               </div>
               <p className="text-sm opacity-80">

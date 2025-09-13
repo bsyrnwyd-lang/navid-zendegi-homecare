@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Phone, MessageCircle, Menu, ChevronDown, ChevronUp } from "lucide-react";
+import { Phone, MessageCircle, Menu, ChevronDown, ChevronUp, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "@/assets/navid-zendegi-logo.jpg";
@@ -19,6 +19,10 @@ const Header = () => {
     window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
   };
 
+  const handleInstagram = () => {
+    window.open('https://instagram.com/Navidzendegii', '_blank');
+  };
+
   const navigationItems = [
     { to: "/", label: "صفحه اصلی" },
     { to: "/general-doctor", label: "ویزیت پزشک عمومی" },
@@ -29,15 +33,17 @@ const Header = () => {
   ];
 
   const serviceItems = [
+    // پزشک‌ها اول
     { to: "/services/specialist", label: "ویزیت پزشک متخصص در منزل" },
     { to: "/services/internal", label: "ویزیت متخصص داخلی در منزل" },
     { to: "/services/pediatrics", label: "ویزیت متخصص اطفال در منزل" },
-    { to: "/services/nursing", label: "خدمات پرستاری در منزل" },
     { to: "/services/neurology", label: "ویزیت متخصص مغز و اعصاب در منزل" },
     { to: "/services/urology", label: "ویزیت متخصص اورولوژی" },
     { to: "/services/infectious", label: "ویزیت متخصص عفونی در منزل" },
     { to: "/services/gynecology", label: "ویزیت متخصص زنان در منزل" },
     { to: "/services/beauty", label: "پزشک زیبایی در منزل" },
+    // سایر خدمات
+    { to: "/services/nursing", label: "خدمات پرستاری در منزل" },
     { to: "/services/physiotherapy", label: "فیزیوتراپی در منزل" }
   ];
 
@@ -163,9 +169,13 @@ const Header = () => {
                         <Phone className="ml-2 h-4 w-4" />
                         تماس: {phoneNumber}
                       </Button>
-                      <Button onClick={handleWhatsApp} variant="outline" className="w-full">
+                      <Button onClick={handleWhatsApp} variant="outline" className="w-full mb-3">
                         <MessageCircle className="ml-2 h-4 w-4" />
                         واتساپ
+                      </Button>
+                      <Button onClick={handleInstagram} variant="outline" className="w-full">
+                        <Instagram className="ml-2 h-4 w-4" />
+                        اینستاگرام
                       </Button>
                     </div>
                   </div>
