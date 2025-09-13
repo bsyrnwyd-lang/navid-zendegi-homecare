@@ -53,6 +53,11 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-primary" />
                 <span className="ltr font-bold text-lg">{phoneNumber}</span>
               </div>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold">آدرس:</p>
+                <p className="text-sm opacity-90">تهران، شهرآرا، پاتریس، پلاک ۵۰</p>
+                <p className="text-sm opacity-80">پوشش دهی: شهر تهران و اطراف</p>
+              </div>
               <div className="flex gap-3">
                 <Button
                   variant="outline"

@@ -71,10 +71,18 @@ const Contact = () => {
                 
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-primary" />
+                  <span className="font-semibold">آدرس دفتر مرکزی:</span>
+                </div>
+                <p className="text-muted-foreground mr-8">
+                  تهران، شهرآرا، پاتریس، پلاک ۵۰
+                </p>
+                
+                <div className="flex items-center gap-3 mt-4">
+                  <MapPin className="w-5 h-5 text-secondary" />
                   <span className="font-semibold">منطقه تحت پوشش:</span>
                 </div>
                 <p className="text-muted-foreground mr-8">
-                  سراسر شهر و حومه
+                  پوشش دهی شهر تهران و اطراف
                 </p>
               </CardContent>
             </Card>
