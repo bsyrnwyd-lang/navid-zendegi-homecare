@@ -266,29 +266,6 @@ const PricingPage = () => {
                 </CardContent>
               </Card>
             </div>
-
-            <div className="mt-8 text-center">
-              <Card className="medical-card bg-primary/5 border-primary/20">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 text-primary">
-                    دارای مجوز رسمی از وزارت بهداشت و درمان و آموزش پزشکی
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    پروانه بهره‌برداری به شماره ۲۱۱۷۲۷-۳
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button onClick={handleCall} size="lg" className="flex items-center gap-2">
-                      <Phone className="w-5 h-5" />
-                      تماس برای مشاوره: {phoneNumber}
-                    </Button>
-                    <Button onClick={handleWhatsApp} variant="outline" size="lg" className="flex items-center gap-2">
-                      <MessageCircle className="w-5 h-5" />
-                      واتساپ
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
