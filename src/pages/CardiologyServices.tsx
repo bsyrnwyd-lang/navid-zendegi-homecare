@@ -55,9 +55,9 @@ const CardiologyServices = () => {
                 توسط پزشکان مجرب و تجهیزات پیشرفته.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8">
+                <Button size="lg" className="text-lg px-8" onClick={() => window.location.href = 'tel:09386117912'}>
                   <Phone className="ml-2 h-5 w-5" />
-                  تماس فوری: ۰۹۱۲۲۰۰۰۰۰۰
+                  تماس فوری: ۰۹۳۸۶۱۱۷۹۱۲
                 </Button>
                 <Button variant="outline" size="lg" className="text-lg px-8">
                   درخواست ویزیت
