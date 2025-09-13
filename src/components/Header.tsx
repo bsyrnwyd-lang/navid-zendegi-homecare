@@ -37,6 +37,9 @@ const Header = () => {
             <Link to="/cardiology" className="text-sm font-medium hover:text-primary transition-colors">
               ویزیت پزشک قلب
             </Link>
+            <Link to="/pricing" className="text-sm font-medium hover:text-primary transition-colors">
+              تعرفه خدمات
+            </Link>
             <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">
               خدمات
             </a>
