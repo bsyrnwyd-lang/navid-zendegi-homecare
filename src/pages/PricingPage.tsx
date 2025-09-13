@@ -1,80 +1,53 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Check, Star, Phone, Clock } from "lucide-react";
+import { CheckCircle, Star, Phone, Clock, AlertTriangle, AlertCircle, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 
 const PricingPage = () => {
-  const pricingCategories = [
-    {
-      title: "ویزیت پزشک در منزل",
-      description: "تعرفه ویزیت پزشکان عمومی و متخصص",
-      services: [
-        { name: "ویزیت پزشک عمومی در منزل", price: "150,000", unit: "تومان" },
-        { name: "ویزیت پزشک متخصص در منزل", price: "300,000", unit: "تومان" },
-        { name: "ویزیت پزشک قلب در منزل", price: "400,000", unit: "تومان" },
-        { name: "مشاوره پزشکی تلفنی", price: "50,000", unit: "تومان" }
-      ]
-    },
-    {
-      title: "پرستاری در منزل",
-      description: "تعرفه خدمات پرستاری و مراقبتی",
-      services: [
-        { name: "پرستاری در منزل (۸ ساعته)", price: "200,000", unit: "تومان" },
-        { name: "پرستاری در منزل (۱۲ ساعته)", price: "280,000", unit: "تومان" },
-        { name: "پرستاری در منزل (۲۴ ساعته)", price: "450,000", unit: "تومان" },
-        { name: "مراقبت از سالمند (روزانه)", price: "300,000", unit: "تومان" }
-      ]
-    },
-    {
-      title: "تزریقات و آزمایشات در منزل",
-      description: "تعرفه تزریقات و نمونه‌گیری",
-      services: [
-        { name: "تزریق عضلانی در منزل", price: "30,000", unit: "تومان" },
-        { name: "تزریق وریدی در منزل", price: "40,000", unit: "تومان" },
-        { name: "نمونه‌گیری خون در منزل", price: "35,000", unit: "تومان" },
-        { name: "تست قند خون در منزل", price: "25,000", unit: "تومان" }
-      ]
-    },
-    {
-      title: "خدمات تخصصی قلب در منزل",
-      description: "تعرفه اکو و نوار قلب در منزل",
-      services: [
-        { name: "اکو قلب در منزل", price: "350,000", unit: "تومان" },
-        { name: "نوار قلب (ECG) در منزل", price: "120,000", unit: "تومان" },
-        { name: "بسته کامل قلب (ویزیت + اکو + نوار)", price: "750,000", unit: "تومان" },
-        { name: "پیگیری درمان قلبی (ماهانه)", price: "200,000", unit: "تومان" }
-      ]
-    },
-    {
-      title: "خدمات زیبایی در منزل",
-      description: "تعرفه خدمات زیبایی و مراقبت پوست",
-      services: [
-        { name: "تزریق بوتاکس در منزل", price: "800,000", unit: "تومان" },
-        { name: "تزریق فیلر در منزل", price: "1,200,000", unit: "تومان" },
-        { name: "پلاسماتراپی در منزل", price: "600,000", unit: "تومان" },
-        { name: "مشاوره پوست و زیبایی", price: "100,000", unit: "تومان" }
-      ]
-    }
+  const phoneNumber = "09386117912";
+  
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
+  };
+
+  // خدمات پرستاری در منزل
+  const nursingServices = [
+    { service: "تعبیه آنژیوکت و وصل سرم بزرگسال (بدون اقامت پرستار)", price: "500,000" },
+    { service: "هر تزریق داخل سرم (غیر از آنتی بیوتیک)", price: "50,000" },
+    { service: "هر تزریق آنتی بیوتیک داخل سرم (با نیم ساعت ماندگاری پرستار)", price: "200,000" },
+    { service: "تزریق عضلانی یک تزریق", price: "400,000" },
+    { service: "سرم تراپی کودک 5 تا 10 سال", price: "600,000" },
+    { service: "سرم تراپی کودک زیر 5 سال", price: "700,000" },
+    { service: "هر تزریق عضلانی اضافه", price: "100,000" },
+    { service: "هر نیم ساعت ماندگاری پرستار", price: "150,000" },
+    { service: "تعبیه سوند", price: "600,000" },
+    { service: "تعبیه NG (لوله گاواژ)", price: "700,000" },
+    { service: "پانسمان (قیمت پایه)", price: "500,000" },
+    { service: "کشیدن بخیه (قیمت پایه)", price: "400,000" },
+    { service: "کنترل فشار خون", price: "400,000" },
+    { service: "انما (تنقیه)", price: "800,000" },
+    { service: "درمان زخم بستر (قیمت پایه)", price: "700,000" },
+    { service: "نوار قلب", price: "700,000" }
   ];
 
-  const specialOffers = [
-    {
-      title: "بسته ویژه سالمندان",
-      description: "پکیج کامل مراقبت از سالمندان",
-      originalPrice: "500,000",
-      discountPrice: "400,000",
-      includes: ["ویزیت پزشک عمومی", "پرستاری ۸ ساعته", "تزریقات ضروری", "پیگیری هفتگی"]
-    },
-    {
-      title: "بسته قلب و عروق",
-      description: "پکیج کامل بررسی قلب در منزل",
-      originalPrice: "850,000",
-      discountPrice: "750,000",
-      includes: ["ویزیت پزشک قلب", "اکو قلب", "نوار قلب", "مشاوره درمانی"]
-    }
+  // ویزیت پزشک در منزل
+  const doctorServices = [
+    { service: "ویزیت پزشک عمومی", price: "980,000" },
+    { service: "ویزیت پزشک متخصص", price: "از 2,000,000" }
+  ];
+
+  // سایر خدمات تخصصی
+  const specialServices = [
+    { service: "فیزیوتراپی در منزل (قیمت پایه)", price: "800,000" },
+    { service: "سونوگرافی در منزل (قیمت پایه)", price: "2,700,000" },
+    { service: "رادیولوژی در منزل (قیمت پایه)", price: "2,500,000" },
+    { service: "نوار عصب و عضله در منزل", price: "3,000,000" }
   ];
 
   return (
@@ -86,215 +59,270 @@ const PricingPage = () => {
         <div className="container mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              تعرفه خدمات پزشکی در منزل
-              <span className="block text-primary">نوید زندگی</span>
+              تعرفه خدمات نوید زندگی
+              <span className="block text-primary text-2xl mt-2">سال ۱۴۰۳ - ۱۴۰۴</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              <strong>تعرفه ویزیت پزشک در منزل</strong>، <strong>قیمت پرستاری در منزل</strong> و 
-              <strong> تعرفه تزریقات در منزل</strong> با شفافیت کامل. بهترین خدمات پزشکی با قیمت‌های منصفانه.
+              تعرفه‌های شفاف و منصفانه برای خدمات پزشکی، پرستاری و تخصصی در منزل
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                <Phone className="ml-2 h-5 w-5" />
-                مشاوره رایگان: ۰۹۳۸۶۱۱۷۹۱۲
+              <Button
+                variant="hero"
+                size="lg"
+                onClick={handleCall}
+                className="flex items-center gap-3 text-lg px-8 py-6"
+              >
+                <Phone className="w-6 h-6" />
+                تماس فوری
+                <span className="ltr font-bold">{phoneNumber}</span>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
-                درخواست خدمات
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={handleWhatsApp}
+                className="flex items-center gap-3 text-lg px-8 py-6 border-2"
+              >
+                <MessageCircle className="w-6 h-6" />
+                واتساپ
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Special Offers */}
-      <section className="medical-section bg-muted/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="section-title">پیشنهادات ویژه</h2>
-            <p className="section-subtitle">
-              بسته‌های ترکیبی با تخفیف ویژه برای شما
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {specialOffers.map((offer, index) => (
-              <Card key={index} className="medical-card border-primary/20 relative overflow-hidden">
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-primary text-primary-foreground">
-                    <Star className="w-3 h-3 ml-1" />
-                    ویژه
-                  </Badge>
-                </div>
-                <CardHeader className="text-center pt-12">
-                  <CardTitle className="text-2xl mb-2">{offer.title}</CardTitle>
-                  <p className="text-muted-foreground">{offer.description}</p>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <div className="mb-6">
-                    <span className="text-sm text-muted-foreground line-through">
-                      {offer.originalPrice} تومان
-                    </span>
-                    <div className="text-3xl font-bold text-primary">
-                      {offer.discountPrice} تومان
-                    </div>
-                  </div>
-                  <ul className="space-y-2 mb-6">
-                    {offer.includes.map((item, idx) => (
-                      <li key={idx} className="flex items-center justify-center">
-                        <Check className="w-4 h-4 text-primary ml-2" />
-                        <span className="text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full">سفارش بسته ویژه</Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Categories */}
+      {/* خدمات پرستاری */}
       <section className="medical-section bg-background">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="section-title">تعرفه کامل خدمات</h2>
+          <div className="text-center mb-12">
+            <h2 className="section-title">تعرفه اقدامات پرستاری در منزل</h2>
             <p className="section-subtitle">
-              قیمت‌های شفاف و منصفانه برای تمام خدمات پزشکی در منزل
+              خدمات پرستاری توسط نیروهای مجرب با حداقل مدرک کارشناس پرستاری
             </p>
           </div>
           
-          <div className="space-y-12">
-            {pricingCategories.map((category, index) => (
-              <div key={index} className="bg-muted/50 rounded-lg p-8">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
-                  <p className="text-muted-foreground">{category.description}</p>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {category.services.map((service, serviceIndex) => (
-                    <Card key={serviceIndex} className="medical-card text-center">
-                      <CardContent className="p-6">
-                        <h4 className="font-semibold mb-3 text-sm leading-tight">
-                          {service.name}
-                        </h4>
-                        <div className="text-2xl font-bold text-primary">
-                          {service.price}
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          {service.unit}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+          <Card className="medical-card">
+            <CardContent className="p-6">
+              <div className="overflow-x-auto">
+                <table className="w-full text-right border-collapse">
+                  <thead>
+                    <tr className="border-b-2 border-primary/20">
+                      <th className="text-primary font-bold py-4 px-2">نام خدمت</th>
+                      <th className="text-primary font-bold py-4 px-2">تعرفه (تومان)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {nursingServices.map((item, index) => (
+                      <tr key={index} className="border-b border-muted hover:bg-muted/20 transition-colors">
+                        <td className="py-4 px-2 font-medium">{item.service}</td>
+                        <td className="py-4 px-2 text-primary font-bold ltr text-left">
+                          {item.price}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-            ))}
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* Important Notes */}
+      {/* ویزیت پزشک */}
+      <section className="medical-section bg-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="section-title">تعرفه ویزیت پزشک در منزل</h2>
+            <p className="section-subtitle">
+              تمام ویزیت‌ها توسط پزشکان حرفه‌ای انجام می‌شود
+            </p>
+          </div>
+          
+          <Card className="medical-card max-w-3xl mx-auto">
+            <CardContent className="p-6">
+              <div className="overflow-x-auto">
+                <table className="w-full text-right border-collapse">
+                  <thead>
+                    <tr className="border-b-2 border-secondary/20">
+                      <th className="text-secondary font-bold py-4 px-2">نام خدمت</th>
+                      <th className="text-secondary font-bold py-4 px-2">تعرفه (تومان)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {doctorServices.map((item, index) => (
+                      <tr key={index} className="border-b border-muted hover:bg-muted/20 transition-colors">
+                        <td className="py-4 px-2 font-medium">{item.service}</td>
+                        <td className="py-4 px-2 text-secondary font-bold ltr text-left">
+                          {item.price}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* سایر خدمات تخصصی */}
+      <section className="medical-section bg-background">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="section-title">تعرفه سایر خدمات تخصصی</h2>
+            <p className="section-subtitle">
+              خدمات تخصصی با تجهیزات پیشرفته در منزل شما
+            </p>
+          </div>
+          
+          <Card className="medical-card max-w-4xl mx-auto">
+            <CardContent className="p-6">
+              <div className="overflow-x-auto">
+                <table className="w-full text-right border-collapse">
+                  <thead>
+                    <tr className="border-b-2 border-accent/20">
+                      <th className="text-accent font-bold py-4 px-2">نام خدمت</th>
+                      <th className="text-accent font-bold py-4 px-2">تعرفه (تومان)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {specialServices.map((item, index) => (
+                      <tr key={index} className="border-b border-muted hover:bg-muted/20 transition-colors">
+                        <td className="py-4 px-2 font-medium">{item.service}</td>
+                        <td className="py-4 px-2 text-accent font-bold ltr text-left">
+                          {item.price}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* شرایط و نکات مهم */}
       <section className="medical-section bg-muted/30">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="section-title text-center mb-8">نکات مهم تعرفه</h2>
+            <h2 className="section-title text-center mb-8">شرایط و نکات مهم</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="medical-card">
                 <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <Clock className="w-5 h-5 ml-2 text-primary" />
-                    ساعات کاری
+                  <CardTitle className="text-primary flex items-center gap-2">
+                    <AlertCircle className="w-5 h-5" />
+                    نکات کلی
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li>• خدمات ۲۴ ساعته در دسترس</li>
-                    <li>• تعرفه شبانه ۲۰٪ اضافه</li>
-                    <li>• ایام تعطیل ۳۰٪ اضافه</li>
-                    <li>• خدمات اورژانسی در اسرع وقت</li>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span>کلیه خدمات پرستاری توسط نیروهای مجرب با حداقل مدرک کارشناس پرستاری صورت می‌گیرد</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span>در صورت درخواست چند خدمت همزمان، خدمت دوم مشمول تخفیف می‌گردد</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span>هزینه مواد مصرفی در مواردی مثل سرم و داروها، پانسمان و سونداژ به صورت جداگانه اخذ می‌گردد</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <span>صدور فاکتور خدمات جهت ارائه به بیمه تکمیلی امکان‌پذیر می‌باشد</span>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
-              
+
               <Card className="medical-card">
                 <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <Check className="w-5 h-5 ml-2 text-primary" />
-                    شرایط پرداخت
+                  <CardTitle className="text-secondary flex items-center gap-2">
+                    <Clock className="w-5 h-5" />
+                    تعرفه‌های ویژه
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li>• پرداخت نقدی یا کارتخوان</li>
-                    <li>• امکان پرداخت اقساطی برای پکیج‌ها</li>
-                    <li>• تخفیف ۱۰٪ برای بیماران مزمن</li>
-                    <li>• ضمانت کیفیت خدمات</li>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
+                      <span>در موارد درخواست اورژانسی، شبانه و تایم ترافیک ۲۰٪ الی ۳۰٪ اضافه می‌شود</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <AlertTriangle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
+                      <span>در موارد متفرقه جهت اطلاع از تعرفه، با کارشناسان ما تماس بگیرید</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
+                      <span>درصورت نیاز به نسخه پزشک جهت سرم تراپی میتوانید از ویزیت آنلاین مرکز استفاده نمایید</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Star className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
+                      <span>قابلیت سرویس دهی به کلیه مناطق تهران</span>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
-            
-            <div className="mt-8 p-6 bg-primary/10 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-4">درخواست تخفیف ویژه</h3>
-              <p className="text-muted-foreground mb-4">
-                برای بیماران مزمن، خانواده‌های پرجمعیت و سفارش‌های بلندمدت، تخفیف‌های ویژه‌ای در نظر گرفته شده است.
-              </p>
-              <Button size="lg">
-                <Phone className="ml-2 h-4 w-4" />
-                تماس برای کسب تخفیف
-              </Button>
+
+            <div className="mt-8 text-center">
+              <Card className="medical-card bg-primary/5 border-primary/20">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4 text-primary">
+                    دارای مجوز رسمی از وزارت بهداشت و درمان و آموزش پزشکی
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    پروانه بهره‌برداری به شماره ۲۱۱۷۲۷-۳
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button onClick={handleCall} size="lg" className="flex items-center gap-2">
+                      <Phone className="w-5 h-5" />
+                      تماس برای مشاوره: {phoneNumber}
+                    </Button>
+                    <Button onClick={handleWhatsApp} variant="outline" size="lg" className="flex items-center gap-2">
+                      <MessageCircle className="w-5 h-5" />
+                      واتساپ
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SEO Content */}
+      {/* مزایای مرکز */}
       <section className="medical-section bg-background">
         <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="section-title mb-8">چرا تعرفه نوید زندگی منصفانه است؟</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-right">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-primary">شفافیت در قیمت‌گذاری</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong>تعرفه ویزیت پزشک در منزل</strong> نوید زندگی با کاملترین شفافیت 
-                  اعلام می‌شود. هیچ هزینه پنهانی وجود ندارد و تمام <strong>قیمت پرستاری در منزل</strong> 
-                  و سایر خدمات از قبل مشخص است.
-                </p>
-              </div>
-              
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-secondary">کیفیت متناسب با قیمت</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong>تعرفه تزریقات در منزل</strong> و سایر خدمات با توجه به کیفیت بالای 
-                  خدمات و تجربه کادر پزشکی تعیین شده است. بهترین نسبت کیفیت به قیمت در بازار.
-                </p>
-              </div>
-            </div>
-            
-            <div className="mt-12 p-6 bg-muted/50 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">کلمات کلیدی قیمت‌گذاری</h3>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {[
-                  "تعرفه ویزیت پزشک در منزل",
-                  "قیمت پرستاری در منزل",
-                  "تعرفه تزریقات در منزل",
-                  "قیمت پزشک در منزل",
-                  "هزینه ویزیت در منزل",
-                  "تعرفه اکو قلب در منزل",
-                  "قیمت نوار قلب در منزل",
-                  "تعرفه خدمات زیبایی در منزل"
-                ].map((keyword, index) => (
-                  <span key={index} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                    {keyword}
-                  </span>
-                ))}
-              </div>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="section-title">مزایت‌های نوید زندگی</h2>
+            <p className="section-subtitle">
+              چرا نوید زندگی بهترین انتخاب برای خدمات پزشکی در منزل است
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              "مدیریت تخصصی",
+              "نظارت شبانه روزی مسئول فنی", 
+              "نظارت مستقیم وزارت بهداشت",
+              "رویکرد علمی در پرستاری",
+              "قیمت مناسب خدمات",
+              "پرستار خصوصی در منزل",
+              "پاسخگویی شبانه روزی",
+              "پشتیبانی آنی پزشکی و پرستاری"
+            ].map((advantage, index) => (
+              <Card key={index} className="medical-card text-center">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-sm">{advantage}</h3>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
