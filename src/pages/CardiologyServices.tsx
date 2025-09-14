@@ -4,8 +4,8 @@ import { Heart, Activity, FileText, Clock, CheckCircle, Phone } from "lucide-rea
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
-import cardiologyImage from "@/assets/cardiology-home-visit.jpg";
-import medicalEquipmentImage from "@/assets/medical-equipment-home.jpg";
+import cardiologyImage from "@/assets/iranian-cardiology-home.jpg";
+import medicalEquipmentImage from "@/assets/iranian-medical-equipment.jpg";
 
 const CardiologyServices = () => {
   const services = [

@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock, Shield, MapPin, Phone, CheckCircle, HelpCircle } from "lucide-react";
-import generalDoctorImage from "@/assets/general-doctor-home.jpg";
+import generalDoctorImage from "@/assets/iranian-general-doctor.jpg";
 
 const GeneralDoctorPage = () => {
   return (

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Stethoscope, Heart, Syringe, FileText, UserCheck, Sparkles } from "lucide-react";
-import nursingImage from "@/assets/nurse-home-visit.jpg";
-import injectionImage from "@/assets/injection-home.jpg";
+import nursingImage from "@/assets/iranian-nurse-home-care.jpg";
+import injectionImage from "@/assets/iranian-injection-home.jpg";
 
 const Services = () => {
   const services = [
