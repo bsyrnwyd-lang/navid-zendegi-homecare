@@ -6,7 +6,7 @@ const AboutUs = () => {
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">درباره ما</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4">درباره نوید زندگی | پیشرو در خدمات پزشکی در منزل</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
@@ -19,11 +19,12 @@ const AboutUs = () => {
             <div className="absolute inset-0 bg-primary/10 rounded-lg"></div>
           </div>
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-primary">تجربه و اعتماد</h3>
+            <h3 className="text-2xl font-bold text-primary">نوید زندگی | رهبر خدمات پزشکی در منزل تهران</h3>
             <p className="text-muted-foreground leading-relaxed">
-              ما با بیش از ۴ سال تجربه در ارائه خدمات پزشکی در منزل، به یکی از معتبرترین 
-              ارائه‌دهندگان این خدمات تبدیل شده‌ایم. تیم ما متشکل از پزشکان و پرستاران 
-              مجرب است که با دقت و مهارت بالا خدمات‌رسانی می‌کنند.
+              <strong>نوید زندگی</strong> با بیش از ۵ سال تجربه در ارائه خدمات <strong>پزشکی در منزل تهران</strong>، 
+              به معتبرترین و پیشروترین ارائه‌دهنده <strong>ویزیت پزشک در منزل</strong> و <strong>پرستاری در منزل</strong> 
+              تبدیل شده است. تیم متخصص نوید زندگی متشکل از پزشکان و پرستاران مجرب با مجوزهای معتبر است که 
+              با بالاترین کیفیت و دقت خدمات‌رسانی می‌کنند.
             </p>
           </div>
         </div>
@@ -35,7 +36,9 @@ const AboutUs = () => {
             </CardHeader>
             <CardContent>
               <p className="text-right text-muted-foreground leading-relaxed">
-                ما از سال ۱۳۹۹ با تمرکز بر ارائه‌ی خدمات پزشکی در منزل فعالیت خود را آغاز کردیم و در این مسیر تجربه‌ای ارزشمند در حوزه‌ی ویزیت و مراقبت‌های خانگی به دست آوردیم.
+                <strong>نوید زندگی</strong> از سال ۱۳۹۸ با تمرکز ویژه بر ارائه‌ی خدمات <strong>پزشکی در منزل تهران</strong> 
+                فعالیت خود را آغاز کرد. در این سال‌ها تجربه‌ای ارزشمند و منحصربه‌فرد در حوزه‌ی <strong>ویزیت پزشک در منزل</strong>، 
+                <strong>پرستاری در منزل</strong> و مراقبت‌های تخصصی خانگی کسب کرده‌ایم.
               </p>
             </CardContent>
           </Card>
@@ -46,7 +49,10 @@ const AboutUs = () => {
             </CardHeader>
             <CardContent>
               <p className="text-right text-muted-foreground leading-relaxed">
-                با توجه به نیاز روزافزون جامعه به این خدمات، تصمیم گرفتیم مجموعه‌ای تخصصی متشکل از پزشکان و پرستاران متعهد را پایه‌گذاری کنیم تا خدمات پزشکی و پرستاری را با بالاترین کیفیت و در عین حال با تعرفه‌های منصفانه در اختیار شما قرار دهیم.
+                با توجه به نیاز فزاینده جامعه به خدمات <strong>پزشکی در منزل</strong> با کیفیت، <strong>نوید زندگی</strong> 
+                مجموعه‌ای تخصصی و منسجم متشکل از پزشکان، پرستاران و متخصصان متعهد را پایه‌گذاری کرد. هدف ما ارائه 
+                خدمات <strong>ویزیت پزشک در منزل تهران</strong> و <strong>پرستاری در منزل</strong> با بالاترین کیفیت 
+                و در عین حال با تعرفه‌های منصفانه و رقابتی است.
               </p>
             </CardContent>
           </Card>
@@ -57,7 +63,9 @@ const AboutUs = () => {
             </CardHeader>
             <CardContent>
               <p className="text-right text-muted-foreground leading-relaxed">
-                هدف اصلی ما، ارائه‌ی خدماتی سریع، دقیق و متناسب با نیاز بیماران است؛ به گونه‌ای که بتوانید در آرامش خانه‌ی خود، بهترین مراقبت‌های پزشکی و پرستاری را دریافت کنید.
+                هدف اصلی <strong>نوید زندگی</strong>، ارائه‌ی خدمات <strong>پزشکی در منزل تهران</strong> سریع، دقیق و 
+                شخصی‌سازی شده متناسب با نیاز هر بیمار است. ما معتقدیم که شما باید در آرامش و امنیت خانه‌ی خود، 
+                بهترین و مدرن‌ترین مراقبت‌های پزشکی، <strong>پرستاری در منزل</strong> و خدمات درمانی را دریافت کنید.
               </p>
             </CardContent>
           </Card>

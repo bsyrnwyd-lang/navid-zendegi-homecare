@@ -28,17 +28,17 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 z-10 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
-            ویزیت پزشک در منزل
+            ویزیت پزشک در منزل تهران
             <br />
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              پزشکی در منزل با کیفیت
+              نوید زندگی | پزشکی در منزل با کیفیت
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            پرستاری در منزل، تزریقات در منزل، پزشک متخصص در منزل
+            پرستاری در منزل، تزریقات در منزل، پزشک متخصص در منزل توسط نوید زندگی
             <br />
-            ویزیت پزشک قلب در منزل و خدمات زیبایی در منزل
+            ویزیت پزشک قلب در منزل، خدمات زیبایی در منزل در سراسر تهران و کرج
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -66,18 +66,18 @@ const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <div className="medical-card text-center">
               <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">تضمین کیفیت</h3>
-              <p className="text-muted-foreground">بالاترین استانداردهای پزشکی</p>
+              <h3 className="text-lg font-semibold mb-2">تضمین کیفیت نوید زندگی</h3>
+              <p className="text-muted-foreground">بالاترین استانداردهای پزشکی بین‌المللی</p>
             </div>
             <div className="medical-card text-center">
               <Clock className="w-12 h-12 text-secondary mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">دسترسی ۲۴ ساعته</h3>
-              <p className="text-muted-foreground">آماده خدمات‌رسانی در تمام ساعات</p>
+              <h3 className="text-lg font-semibold mb-2">خدمات ۲۴ ساعته در تهران</h3>
+              <p className="text-muted-foreground">پاسخگویی فوری در تمام ساعات شبانه‌روز</p>
             </div>
             <div className="medical-card text-center">
               <Heart className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">مراقبت دلسوزانه</h3>
-              <p className="text-muted-foreground">با محبت و دقت تمام</p>
+              <h3 className="text-lg font-semibold mb-2">مراقبت تخصصی در منزل</h3>
+              <p className="text-muted-foreground">با تیم پزشکی مجرب نوید زندگی</p>
             </div>
           </div>
         </div>
