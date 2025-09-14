@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   const handleInstagram = () => {
-    window.open('https://instagram.com/Navidzendegiii', '_blank');
+    window.open('https://instagram.com/navidzendegi1', '_blank');
   };
 
   return (
