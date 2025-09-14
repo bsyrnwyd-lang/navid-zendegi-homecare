@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Heart, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/navid-zendegi-logo.jpg";
 
 const Footer = () => {
@@ -41,12 +42,66 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">خدمات ما</h4>
             <ul className="space-y-2 opacity-90">
-              <li>ویزیت پزشک در منزل</li>
-              <li>پرستاری در منزل</li>
-              <li>آزمایشات پزشکی</li>
-              <li>مراقبت از سالمندان</li>
-              <li>مشاوره پزشکی</li>
-              <li>خدمات زیبایی در منزل</li>
+              <li>
+                <Link to="/general-doctor" className="hover:text-primary transition-colors">
+                  ویزیت پزشک عمومی در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/specialist" className="hover:text-primary transition-colors">
+                  ویزیت پزشک متخصص در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/cardiology" className="hover:text-primary transition-colors">
+                  ویزیت پزشک قلب در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/internal" className="hover:text-primary transition-colors">
+                  ویزیت متخصص داخلی در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/pediatrics" className="hover:text-primary transition-colors">
+                  ویزیت متخصص اطفال در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/neurology" className="hover:text-primary transition-colors">
+                  ویزیت متخصص مغز و اعصاب در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/urology" className="hover:text-primary transition-colors">
+                  ویزیت متخصص اورولوژی در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/infectious" className="hover:text-primary transition-colors">
+                  ویزیت متخصص عفونی در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/gynecology" className="hover:text-primary transition-colors">
+                  ویزیت متخصص زنان در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/beauty" className="hover:text-primary transition-colors">
+                  پزشک زیبایی در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/nursing" className="hover:text-primary transition-colors">
+                  خدمات پرستاری در منزل
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/physiotherapy" className="hover:text-primary transition-colors">
+                  فیزیوتراپی در منزل
+                </Link>
+              </li>
             </ul>
           </div>
           
