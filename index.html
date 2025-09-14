@@ -28,45 +28,170 @@
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "نوید زندگی",
-      "description": "ارائه خدمات پزشکی در منزل شامل ویزیت پزشک در منزل، پرستاری در منزل، تزریقات در منزل و خدمات زیبایی در منزل",
-      "url": "https://navidezendegi.com",
-      "telephone": "+989386117912",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IR",
-        "addressLocality": "تهران"
-      },
-      "medicalSpecialty": [
-        "ویزیت پزشک در منزل",
-        "پرستاری در منزل", 
-        "تزریقات در منزل",
-        "پزشک متخصص در منزل",
-        "پزشک قلب در منزل",
-        "خدمات زیبایی در منزل"
-      ],
-      "serviceType": "Home Medical Services",
-      "availableService": [
-        {
-          "@type": "MedicalService", 
-          "name": "ویزیت پزشک در منزل",
-          "description": "ویزیت و معاینه پزشک در منزل بیمار"
-        },
-        {
-          "@type": "MedicalService",
-          "name": "پرستاری در منزل", 
-          "description": "خدمات پرستاری تخصصی در منزل"
-        },
-        {
-          "@type": "MedicalService",
-          "name": "تزریقات در منزل",
-          "description": "انجام تزریقات پزشکی در منزل"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "نوید زندگی",
+        "alternateName": "Navid Zendegi",
+        "url": "https://navidezendegi.com",
+        "logo": "https://navidezendegi.com/logo.jpg",
+        "sameAs": [
+          "https://instagram.com/navidzendegi1"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+989386117912",
+          "contactType": "customer service",
+          "availableLanguage": "Persian"
         }
-      ]
-    }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": ["MedicalBusiness", "LocalBusiness"],
+        "name": "نوید زندگی - ویزیت پزشک در منزل تهران",
+        "description": "نوید زندگی ارائه دهنده تخصصی ویزیت پزشک در منزل تهران، پرستاری در منزل، تزریقات در منزل، پزشک متخصص در منزل و خدمات زیبایی در منزل با کیفیت برتر",
+        "url": "https://navidezendegi.com",
+        "telephone": "+989386117912",
+        "priceRange": "$$",
+        "currenciesAccepted": "IRR",
+        "paymentAccepted": ["cash", "credit card"],
+        "openingHours": "Mo-Su 08:00-22:00",
+        "image": "https://navidezendegi.com/logo.jpg",
+        "logo": "https://navidezendegi.com/logo.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IR",
+          "addressLocality": "تهران",
+          "addressRegion": "تهران"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "35.6892",
+          "longitude": "51.3890"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "تهران"
+        },
+        "medicalSpecialty": [
+          "Family Medicine",
+          "Cardiology", 
+          "Internal Medicine",
+          "Nursing Care",
+          "Dermatology",
+          "Neurology"
+        ],
+        "serviceType": "Home Medical Services",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "خدمات پزشکی در منزل",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalService",
+                "name": "ویزیت پزشک عمومی در منزل تهران",
+                "description": "ویزیت و معاینه پزشک عمومی در منزل بیمار در تهران",
+                "provider": {
+                  "@type": "MedicalBusiness",
+                  "name": "نوید زندگی"
+                }
+              }
+            },
+            {
+              "@type": "Offer", 
+              "itemOffered": {
+                "@type": "MedicalService",
+                "name": "پزشک متخصص قلب در منزل تهران",
+                "description": "ویزیت پزشک متخصص قلب و عروق در منزل تهران",
+                "provider": {
+                  "@type": "MedicalBusiness",
+                  "name": "نوید زندگی"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalService", 
+                "name": "پرستاری در منزل تهران",
+                "description": "خدمات پرستاری تخصصی و مراقبت در منزل تهران",
+                "provider": {
+                  "@type": "MedicalBusiness",
+                  "name": "نوید زندگی"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalService",
+                "name": "تزریقات در منزل تهران", 
+                "description": "انجام تزریقات دارویی و واکسیناسیون در منزل تهران",
+                "provider": {
+                  "@type": "MedicalBusiness",
+                  "name": "نوید زندگی"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalService",
+                "name": "خدمات زیبایی در منزل تهران",
+                "description": "خدمات زیبایی و درماتولوژی در منزل تهران", 
+                "provider": {
+                  "@type": "MedicalBusiness",
+                  "name": "نوید زندگی"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ویزیت پزشک در منزل تهران چگونه است؟",
+            "acceptedAnswer": {
+              "@type": "Answer", 
+              "text": "نوید زندگی ویزیت پزشک در منزل تهران را با کیفیت برتر ارائه می‌دهد. پزشکان مجرب ما در کمترین زمان به منزل شما مراجعه کرده و خدمات پزشکی کامل ارائه می‌دهند."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "پزشک متخصص در منزل تهران دارید؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "بله، نوید زندگی پزشکان متخصص در رشته‌های مختلف شامل قلب، داخلی، اعصاب، زنان و زایمان را برای ویزیت در منزل تهران دارد."
+            }
+          },
+          {
+            "@type": "Question", 
+            "name": "پرستاری در منزل تهران چه خدماتی شامل می‌شود؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "خدمات پرستاری در منزل تهران شامل مراقبت از بیماران، تزریقات، پانسمان زخم، فیزیوتراپی و مراقبت از سالمندان است."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "نوید زندگی - ویزیت پزشک در منزل تهران",
+        "url": "https://navidezendegi.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://navidezendegi.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
     </script>
   </head>
 
