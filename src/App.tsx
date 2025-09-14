@@ -18,6 +18,7 @@ import InfectiousDiseasePage from "./pages/services/InfectiousDiseasePage";
 import GynecologyPage from "./pages/services/GynecologyPage";
 import BeautyDoctorPage from "./pages/services/BeautyDoctorPage";
 import PhysiotherapyPage from "./pages/services/PhysiotherapyPage";
+import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/cardiology" element={<CardiologyServices />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           
           {/* Service Pages */}
           <Route path="/services/specialist" element={<SpecialistDoctorPage />} />

@@ -29,7 +29,7 @@ const Header = () => {
     { to: "/cardiology", label: "ویزیت پزشک قلب" },
     { to: "/about", label: "درباره ما" },
     { to: "/pricing", label: "تعرفه خدمات" },
-    { href: "#contact", label: "تماس" }
+    { to: "/contact", label: "تماس با ما" }
   ];
 
   const serviceItems = [
@@ -66,8 +66,7 @@ const Header = () => {
           {/* Desktop Navigation - Moved to top right */}
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex items-center gap-6 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg border border-border/50">
-              {navigationItems.map((item, index) => (
-                item.to ? (
+               {navigationItems.map((item, index) => (
                   <Link 
                     key={index}
                     to={item.to} 
@@ -75,16 +74,7 @@ const Header = () => {
                   >
                     {item.label}
                   </Link>
-                ) : (
-                  <a 
-                    key={index}
-                    href={item.href} 
-                    className="text-sm font-medium hover:text-primary transition-colors px-2 py-1 rounded hover:bg-muted/50"
-                  >
-                    {item.label}
-                  </a>
-                )
-              ))}
+               ))}
               
               {/* Services Dropdown */}
               <DropdownMenu>
@@ -116,7 +106,6 @@ const Header = () => {
                 <SheetContent side="right" className="w-72 bg-background z-[70]">
                   <div className="flex flex-col gap-4 mt-8 overflow-y-auto max-h-[calc(100vh-8rem)] pr-2">
                     {navigationItems.map((item, index) => (
-                      item.to ? (
                         <Link 
                           key={index}
                           to={item.to} 
@@ -125,16 +114,6 @@ const Header = () => {
                         >
                           {item.label}
                         </Link>
-                      ) : (
-                        <a 
-                          key={index}
-                          href={item.href} 
-                          className="text-lg font-medium hover:text-primary transition-colors py-2 px-3 rounded hover:bg-muted/50"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {item.label}
-                        </a>
-                      )
                     ))}
                     
                     {/* Mobile Services Menu */}
