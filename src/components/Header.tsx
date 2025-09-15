@@ -30,7 +30,8 @@ const Header = () => {
     { to: "/cardiology", label: "ویزیت پزشک قلب" },
     { to: "/about", label: "درباره ما" },
     { to: "/pricing", label: "تعرفه خدمات" },
-    { to: "/contact", label: "تماس با ما" }
+    { to: "/contact", label: "تماس با ما" },
+    { to: "/collaboration", label: "همکاری با ما" }
   ];
 
   const articleItems = [

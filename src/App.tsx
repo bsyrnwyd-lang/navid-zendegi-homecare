@@ -24,6 +24,7 @@ import InfluenzaTreatmentPage from "./pages/articles/InfluenzaTreatmentPage";
 import StrokeSymptomsPage from "./pages/articles/StrokeSymptomsPage";
 import HeartAttackSymptomsPage from "./pages/articles/HeartAttackSymptomsPage";
 import SmokingHeartEffectsPage from "./pages/articles/SmokingHeartEffectsPage";
+import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/collaboration" element={<CollaborationPage />} />
           
           {/* Service Pages */}
           <Route path="/services/specialist" element={<SpecialistDoctorPage />} />
