@@ -34,7 +34,7 @@ const Header = () => {
   ];
 
   const articleItems = [
-    { to: "/articles/influenza-treatment", label: "آنفلوآنزا در تهران: درمان سریع و مطمئن در منزل" }
+    { to: "/articles/influenza-treatment", label: "آنفولوآنزا و درمان" }
   ];
 
   const serviceItems = [
