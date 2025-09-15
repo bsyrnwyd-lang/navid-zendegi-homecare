@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
-import genitalWartsImage from "@/assets/genital-warts-article.jpg";
+import medicalConsultationImage from "@/assets/medical-consultation-article.jpg";
 
 const GenitalWartsPage = () => {
   const phoneNumber = "09386117912";
@@ -30,8 +30,8 @@ const GenitalWartsPage = () => {
                 </h1>
                 <div className="mb-8">
                   <img 
-                    src={genitalWartsImage} 
-                    alt="تشخیص زگیل تناسلی توسط پزشک متخصص در منزل" 
+                    src={medicalConsultationImage} 
+                    alt="مشاوره پزشکی تخصصی برای تشخیص بیماری‌های پوستی در منزل" 
                     className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
                   />
                 </div>
