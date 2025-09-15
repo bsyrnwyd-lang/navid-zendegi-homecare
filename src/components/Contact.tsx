@@ -130,21 +130,21 @@ const Contact = () => {
             </Card>
           </div>
           
-          <div className="mt-12 text-center">
-            <div className="bg-card rounded-2xl p-8 shadow-[var(--shadow-medical)]">
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
+          <div className="mt-12 px-4 text-center">
+            <div className="bg-card rounded-2xl p-4 sm:p-8 shadow-[var(--shadow-medical)] mx-auto max-w-2xl">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-foreground">
                 نیاز به مشاوره فوری دارید؟
               </h3>
-              <p className="text-muted-foreground mb-6 text-lg">
+              <p className="text-muted-foreground mb-6 text-base sm:text-lg">
                 کارشناسان ما آماده پاسخگویی به سوالات شما هستند
               </p>
               <Button 
                 variant="contact" 
                 size="lg"
                 onClick={handleCall}
-                className="text-xl px-12 py-6"
+                className="text-lg sm:text-xl px-6 sm:px-12 py-4 sm:py-6 w-full sm:w-auto"
               >
-                <Phone className="w-6 h-6 ml-3" />
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 ml-3" />
                 تماس فوری: {phoneNumber}
               </Button>
             </div>
