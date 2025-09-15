@@ -20,6 +20,7 @@ import GynecologyPage from "./pages/services/GynecologyPage";
 import BeautyDoctorPage from "./pages/services/BeautyDoctorPage";
 import PhysiotherapyPage from "./pages/services/PhysiotherapyPage";
 import ContactPage from "./pages/ContactPage";
+import InfluenzaTreatmentPage from "./pages/articles/InfluenzaTreatmentPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -50,6 +51,9 @@ const App = () => (
           <Route path="/services/gynecology" element={<GynecologyPage />} />
           <Route path="/services/beauty" element={<BeautyDoctorPage />} />
           <Route path="/services/physiotherapy" element={<PhysiotherapyPage />} />
+          
+          {/* Article Pages */}
+          <Route path="/articles/influenza-treatment" element={<InfluenzaTreatmentPage />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

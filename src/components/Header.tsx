@@ -10,6 +10,7 @@ const Header = () => {
   const phoneNumber = "09386117912";
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [articlesOpen, setArticlesOpen] = useState(false);
   
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -30,6 +31,10 @@ const Header = () => {
     { to: "/about", label: "درباره ما" },
     { to: "/pricing", label: "تعرفه خدمات" },
     { to: "/contact", label: "تماس با ما" }
+  ];
+
+  const articleItems = [
+    { to: "/articles/influenza-treatment", label: "آنفلوآنزا در تهران: درمان سریع و مطمئن در منزل" }
   ];
 
   const serviceItems = [
@@ -92,6 +97,23 @@ const Header = () => {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
+
+              {/* Articles Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center text-sm font-medium hover:text-primary transition-colors px-2 py-1 rounded hover:bg-muted/50">
+                  مقالات
+                  <ChevronDown className="mr-1 h-3 w-3" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-64 bg-background border border-border shadow-lg z-[70] max-h-96 overflow-y-auto">
+                  {articleItems.map((article, index) => (
+                    <DropdownMenuItem key={index} asChild>
+                      <Link to={article.to} className="text-sm cursor-pointer">
+                        {article.label}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </nav>
 
             {/* Mobile Navigation Button */}
@@ -138,6 +160,34 @@ const Header = () => {
                               }}
                             >
                               {service.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Mobile Articles Menu */}
+                    <div className="border-t pt-4">
+                      <button 
+                        onClick={() => setArticlesOpen(!articlesOpen)}
+                        className="flex items-center justify-between w-full text-lg font-semibold mb-2 px-3 py-2 hover:bg-muted/50 rounded"
+                      >
+                        مقالات
+                        {articlesOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                      </button>
+                      {articlesOpen && (
+                        <div className="space-y-1 animate-fade-in">
+                          {articleItems.map((article, index) => (
+                            <Link 
+                              key={index}
+                              to={article.to} 
+                              className="text-sm hover:text-primary transition-colors py-2 px-6 rounded hover:bg-muted/50 block"
+                              onClick={() => {
+                                setIsOpen(false);
+                                setArticlesOpen(false);
+                              }}
+                            >
+                              {article.label}
                             </Link>
                           ))}
                         </div>
