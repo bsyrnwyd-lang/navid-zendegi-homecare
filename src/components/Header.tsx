@@ -10,7 +10,6 @@ const Header = () => {
   const phoneNumber = "09386117912";
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [articlesOpen, setArticlesOpen] = useState(false);
   
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -32,21 +31,6 @@ const Header = () => {
     { to: "/pricing", label: "تعرفه خدمات" },
     { to: "/contact", label: "تماس با ما" },
     { to: "/collaboration", label: "همکاری با ما" }
-  ];
-
-  const articleItems = [
-    { to: "/articles/influenza-treatment", label: "آنفولوآنزا و درمان" },
-    { to: "/articles/stroke-symptoms", label: "علائم سکته مغزی" },
-    { to: "/articles/heart-attack-symptoms", label: "علائم سکته قلبی" },
-    { to: "/articles/smoking-heart-effects", label: "تاثیر سیگار بر قلب" },
-    { to: "/articles/cholesterol-test", label: "آزمایش چربی خون HDL/LDL" },
-    { to: "/articles/breathing-treatment", label: "درمان فوری تنگی نفس" },
-    { to: "/articles/neurobion-ampoule", label: "آمپول نوروبیون" },
-    { to: "/articles/heat-exhaustion", label: "گرمازدگی: تشخیص و درمان" },
-    { to: "/articles/gardasil-vaccine", label: "واکسن گارداسیل بعد از ابتلا" },
-    { to: "/articles/genital-warts", label: "تشخیص زگیل تناسلی" },
-    { to: "/articles/hpv-pool", label: "انتقال HPV از استخر" },
-    { to: "/articles/nail-spots", label: "لکه‌های سفید ناخن" }
   ];
 
   const serviceItems = [
@@ -91,7 +75,7 @@ const Header = () => {
                   >
                     {item.label}
                   </Link>
-               ))}
+                ))}
               
               {/* Services Dropdown */}
               <DropdownMenu>
@@ -110,22 +94,13 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              {/* Articles Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-sm font-medium hover:text-primary transition-colors px-2 py-1 rounded hover:bg-muted/50">
-                  مقالات
-                  <ChevronDown className="mr-1 h-3 w-3" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-64 bg-background border border-border shadow-lg z-[70] max-h-96 overflow-y-auto">
-                  {articleItems.map((article, index) => (
-                    <DropdownMenuItem key={index} asChild>
-                      <Link to={article.to} className="text-sm cursor-pointer">
-                        {article.label}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+              {/* Articles Link */}
+              <Link 
+                to="/articles"
+                className="text-sm font-medium hover:text-primary transition-colors px-2 py-1 rounded hover:bg-muted/50"
+              >
+                مقالات
+              </Link>
             </nav>
 
             {/* Mobile Navigation Button */}
@@ -149,6 +124,15 @@ const Header = () => {
                           {item.label}
                         </Link>
                     ))}
+
+                    {/* Articles Link */}
+                    <Link 
+                      to="/articles"
+                      className="text-lg font-medium hover:text-primary transition-colors py-2 px-3 rounded hover:bg-muted/50"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      مقالات
+                    </Link>
                     
                     {/* Mobile Services Menu */}
                     <div className="border-t pt-4">
@@ -172,34 +156,6 @@ const Header = () => {
                               }}
                             >
                               {service.label}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Mobile Articles Menu */}
-                    <div className="border-t pt-4">
-                      <button 
-                        onClick={() => setArticlesOpen(!articlesOpen)}
-                        className="flex items-center justify-between w-full text-lg font-semibold mb-2 px-3 py-2 hover:bg-muted/50 rounded"
-                      >
-                        مقالات
-                        {articlesOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-                      </button>
-                      {articlesOpen && (
-                        <div className="space-y-1 animate-fade-in">
-                          {articleItems.map((article, index) => (
-                            <Link 
-                              key={index}
-                              to={article.to} 
-                              className="text-sm hover:text-primary transition-colors py-2 px-6 rounded hover:bg-muted/50 block"
-                              onClick={() => {
-                                setIsOpen(false);
-                                setArticlesOpen(false);
-                              }}
-                            >
-                              {article.label}
                             </Link>
                           ))}
                         </div>

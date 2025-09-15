@@ -32,6 +32,7 @@ import GardasilVaccinePage from "./pages/articles/GardasilVaccinePage";
 import GenitalWartsPage from "./pages/articles/GenitalWartsPage";
 import HPVPoolPage from "./pages/articles/HPVPoolPage";
 import NailSpotsPage from "./pages/articles/NailSpotsPage";
+import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
 
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/collaboration" element={<CollaborationPage />} />
+          <Route path="/articles" element={<ArticlesPage />} />
           
           {/* Service Pages */}
           <Route path="/services/specialist" element={<SpecialistDoctorPage />} />
