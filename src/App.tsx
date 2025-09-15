@@ -23,6 +23,7 @@ import ContactPage from "./pages/ContactPage";
 import InfluenzaTreatmentPage from "./pages/articles/InfluenzaTreatmentPage";
 import StrokeSymptomsPage from "./pages/articles/StrokeSymptomsPage";
 import HeartAttackSymptomsPage from "./pages/articles/HeartAttackSymptomsPage";
+import SmokingHeartEffectsPage from "./pages/articles/SmokingHeartEffectsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/articles/influenza-treatment" element={<InfluenzaTreatmentPage />} />
           <Route path="/articles/stroke-symptoms" element={<StrokeSymptomsPage />} />
           <Route path="/articles/heart-attack-symptoms" element={<HeartAttackSymptomsPage />} />
+          <Route path="/articles/smoking-heart-effects" element={<SmokingHeartEffectsPage />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

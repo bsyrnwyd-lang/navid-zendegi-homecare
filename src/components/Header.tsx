@@ -36,7 +36,8 @@ const Header = () => {
   const articleItems = [
     { to: "/articles/influenza-treatment", label: "آنفولوآنزا و درمان" },
     { to: "/articles/stroke-symptoms", label: "علائم سکته مغزی" },
-    { to: "/articles/heart-attack-symptoms", label: "علائم سکته قلبی" }
+    { to: "/articles/heart-attack-symptoms", label: "علائم سکته قلبی" },
+    { to: "/articles/smoking-heart-effects", label: "تاثیر سیگار بر قلب" }
   ];
 
   const serviceItems = [
