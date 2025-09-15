@@ -42,7 +42,11 @@ const Header = () => {
     { to: "/articles/cholesterol-test", label: "آزمایش چربی خون HDL/LDL" },
     { to: "/articles/breathing-treatment", label: "درمان فوری تنگی نفس" },
     { to: "/articles/neurobion-ampoule", label: "آمپول نوروبیون" },
-    { to: "/articles/heat-exhaustion", label: "گرمازدگی: تشخیص و درمان" }
+    { to: "/articles/heat-exhaustion", label: "گرمازدگی: تشخیص و درمان" },
+    { to: "/articles/gardasil-vaccine", label: "واکسن گارداسیل بعد از ابتلا" },
+    { to: "/articles/genital-warts", label: "تشخیص زگیل تناسلی" },
+    { to: "/articles/hpv-pool", label: "انتقال HPV از استخر" },
+    { to: "/articles/nail-spots", label: "لکه‌های سفید ناخن" }
   ];
 
   const serviceItems = [

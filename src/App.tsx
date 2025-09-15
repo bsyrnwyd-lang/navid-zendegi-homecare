@@ -28,6 +28,10 @@ import CholesterolTestPage from "./pages/articles/CholesterolTestPage";
 import BreathingTreatmentPage from "./pages/articles/BreathingTreatmentPage";
 import NeurobionAmpoule from "./pages/articles/NeurobionAmpoule";
 import HeatExhaustionPage from "./pages/articles/HeatExhaustionPage";
+import GardasilVaccinePage from "./pages/articles/GardasilVaccinePage";
+import GenitalWartsPage from "./pages/articles/GenitalWartsPage";
+import HPVPoolPage from "./pages/articles/HPVPoolPage";
+import NailSpotsPage from "./pages/articles/NailSpotsPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
 
@@ -70,6 +74,10 @@ const App = () => (
           <Route path="/articles/breathing-treatment" element={<BreathingTreatmentPage />} />
           <Route path="/articles/neurobion-ampoule" element={<NeurobionAmpoule />} />
           <Route path="/articles/heat-exhaustion" element={<HeatExhaustionPage />} />
+          <Route path="/articles/gardasil-vaccine" element={<GardasilVaccinePage />} />
+          <Route path="/articles/genital-warts" element={<GenitalWartsPage />} />
+          <Route path="/articles/hpv-pool" element={<HPVPoolPage />} />
+          <Route path="/articles/nail-spots" element={<NailSpotsPage />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
