@@ -24,6 +24,10 @@ import InfluenzaTreatmentPage from "./pages/articles/InfluenzaTreatmentPage";
 import StrokeSymptomsPage from "./pages/articles/StrokeSymptomsPage";
 import HeartAttackSymptomsPage from "./pages/articles/HeartAttackSymptomsPage";
 import SmokingHeartEffectsPage from "./pages/articles/SmokingHeartEffectsPage";
+import CholesterolTestPage from "./pages/articles/CholesterolTestPage";
+import BreathingTreatmentPage from "./pages/articles/BreathingTreatmentPage";
+import NeurobionAmpoule from "./pages/articles/NeurobionAmpoule";
+import HeatExhaustionPage from "./pages/articles/HeatExhaustionPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
 
@@ -62,6 +66,10 @@ const App = () => (
           <Route path="/articles/stroke-symptoms" element={<StrokeSymptomsPage />} />
           <Route path="/articles/heart-attack-symptoms" element={<HeartAttackSymptomsPage />} />
           <Route path="/articles/smoking-heart-effects" element={<SmokingHeartEffectsPage />} />
+          <Route path="/articles/cholesterol-test" element={<CholesterolTestPage />} />
+          <Route path="/articles/breathing-treatment" element={<BreathingTreatmentPage />} />
+          <Route path="/articles/neurobion-ampoule" element={<NeurobionAmpoule />} />
+          <Route path="/articles/heat-exhaustion" element={<HeatExhaustionPage />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
