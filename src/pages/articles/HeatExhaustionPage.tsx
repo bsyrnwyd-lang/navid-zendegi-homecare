@@ -25,13 +25,9 @@ const HeatExhaustionPage = () => {
             <div className="max-w-4xl mx-auto">
               
               <header className="text-center mb-12">
-                <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
                   گرمازدگی: تشخیص و درمان فوری در منزل با نوید زندگی
                 </h1>
-                <div className="text-center mb-8">
-                  <p className="text-lg font-semibold text-primary">دکتر نیره مظاهری تهرانی</p>
-                  <p className="text-sm text-muted-foreground">متخصص قلب و عروق</p>
-                </div>
                 <div className="mb-8">
                   <img 
                     src={heatImage} 
