@@ -17,6 +17,7 @@ import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
 import childrenFeverImage from "@/assets/children-fever-article.jpg";
+import migrainImage from "@/assets/migraine-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
@@ -131,10 +132,18 @@ const ArticlesPage = () => {
       image: childrenFeverImage,
       link: "/articles/children-fever",
       category: "کودکان"
+    },
+    {
+      id: 15,
+      title: "سردرد میگرنی | چیست، علائم و عوامل تحریک‌کننده",
+      description: "راهنمای کامل تشخیص، علائم و درمان میگرن و روش‌های پیشگیری",
+      image: migrainImage,
+      link: "/articles/migraine",
+      category: "مغز و اعصاب"
     }
   ];
 
-  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان"];
+  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان", "مغز و اعصاب"];
 
   return (
     <div className="min-h-screen bg-background">
