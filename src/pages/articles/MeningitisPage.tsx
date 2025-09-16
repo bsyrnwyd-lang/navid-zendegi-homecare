@@ -61,66 +61,35 @@ const MeningitisPage = () => {
             </div>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6 border-b border-border pb-2">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
                 علائم مننژیت
               </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-card border rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-foreground">علائم اصلی</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      تب ناگهانی و بالا
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      سردرد شدید
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      خشکی و سفتی گردن
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      تهوع یا استفراغ
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      حساسیت غیرعادی به نور
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      تغییر سطح هوشیاری یا گیجی
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      در برخی موارد، بثورات پوستی
-                    </li>
-                  </ul>
-                </div>
+              
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                علائم اصلی مننژیت عبارتند از:
+              </p>
+              
+              <ul className="space-y-3 text-muted-foreground mb-6 pr-6">
+                <li>• تب ناگهانی و بالا</li>
+                <li>• سردرد شدید</li>
+                <li>• خشکی و سفتی گردن</li>
+                <li>• تهوع یا استفراغ</li>
+                <li>• حساسیت غیرعادی به نور</li>
+                <li>• تغییر سطح هوشیاری یا گیجی</li>
+                <li>• در برخی موارد، بثورات پوستی</li>
+              </ul>
 
-                <div className="bg-card border rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-foreground">👶 علائم در نوزادان و کودکان</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      بی‌حالی و خواب‌آلودگی غیرطبیعی
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      گریه شدید و مداوم
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      ضعف در شیر خوردن
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary font-bold ml-2">•</span>
-                      برجستگی یا تورم ملاج سر
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold mb-4 text-foreground">👶 علائم در نوزادان و کودکان</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                در نوزادان و کودکان علائم کمتر اختصاصی هستند:
+              </p>
+              
+              <ul className="space-y-3 text-muted-foreground mb-6 pr-6">
+                <li>• بی‌حالی و خواب‌آلودگی غیرطبیعی</li>
+                <li>• گریه شدید و مداوم</li>
+                <li>• ضعف در شیر خوردن</li>
+                <li>• برجستگی یا تورم ملاج سر</li>
+              </ul>
 
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-6">
                 <p className="text-yellow-800 font-medium">
@@ -130,31 +99,28 @@ const MeningitisPage = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6 border-b border-border pb-2">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
                 درمان مننژیت
               </h2>
-              <div className="space-y-6">
-                <div className="bg-card border rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-primary">مننژیت باکتریایی</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    آنتی‌بیوتیک وریدی سریع + گاهی کورتون برای کاهش التهاب
-                  </p>
-                </div>
+              
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                درمان مننژیت بسته به نوع آن متفاوت است:
+              </p>
+              
+              <h3 className="text-xl font-semibold mb-4 text-primary">• مننژیت باکتریایی:</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6 pr-4">
+                آنتی‌بیوتیک وریدی سریع + گاهی کورتون برای کاهش التهاب
+              </p>
 
-                <div className="bg-card border rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-primary">مننژیت ویروسی</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    معمولاً خفیف‌تر بوده و با استراحت، مایعات و کنترل تب بهبود می‌یابد
-                  </p>
-                </div>
+              <h3 className="text-xl font-semibold mb-4 text-primary">• مننژیت ویروسی:</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6 pr-4">
+                معمولاً خفیف‌تر بوده و با استراحت، مایعات و کنترل تب بهبود می‌یابد
+              </p>
 
-                <div className="bg-card border rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-primary">قارچی و انگلی</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    درمان دارویی اختصاصی لازم دارند
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold mb-4 text-primary">• قارچی و انگلی:</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6 pr-4">
+                درمان دارویی اختصاصی لازم دارند
+              </p>
 
               <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-6">
                 <p className="text-green-800 font-medium">
@@ -164,29 +130,16 @@ const MeningitisPage = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6 border-b border-border pb-2">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
                 پیشگیری از مننژیت
               </h2>
-              <div className="bg-card border rounded-lg p-6">
-                <ul className="space-y-4 text-muted-foreground">
-                  <li className="flex items-start">
-                    <span className="text-primary font-bold ml-2">•</span>
-                    واکسیناسیون علیه باکتری‌های شایع (مننگوکوک، پنوموکوک، Hib)
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary font-bold ml-2">•</span>
-                    رعایت بهداشت فردی و شست‌وشوی دست‌ها
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary font-bold ml-2">•</span>
-                    عدم استفاده از وسایل شخصی مشترک
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary font-bold ml-2">•</span>
-                    پیگیری درمان سریع در صورت مشاهده علائم
-                  </li>
-                </ul>
-              </div>
+              
+              <ul className="space-y-4 text-muted-foreground pr-6">
+                <li>• واکسیناسیون علیه باکتری‌های شایع (مننگوکوک، پنوموکوک، Hib)</li>
+                <li>• رعایت بهداشت فردی و شست‌وشوی دست‌ها</li>
+                <li>• عدم استفاده از وسایل شخصی مشترک</li>
+                <li>• پیگیری درمان سریع در صورت مشاهده علائم</li>
+              </ul>
             </section>
 
             <section className="mb-8">
@@ -198,40 +151,29 @@ const MeningitisPage = () => {
                   تشخیص و درمان سریع مننژیت اهمیت حیاتی دارد. اگر امکان مراجعه فوری به بیمارستان برای شما دشوار باشد، می‌توانید از خدمات ویزیت پزشک در منزل استفاده کنید.
                 </p>
                 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-3">خدمات در دسترس:</h3>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li className="flex items-start">
-                        <span className="text-primary font-bold ml-2">•</span>
-                        ویزیت پزشک عمومی و متخصص در منزل
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary font-bold ml-2">•</span>
-                        تزریق سرم در منزل
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary font-bold ml-2">•</span>
-                        تزریقات و خدمات پرستاری در منزل
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary font-bold ml-2">•</span>
-                        مراقبت‌های ویژه کودکان و سالمندان
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-muted-foreground mb-4">
-                      بدون اتلاف وقت، بهترین مراقبت پزشکی را در خانه دریافت کنید.
-                    </p>
-                    <a 
-                      href="tel:09386117912"
-                      className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
-                    >
-                      <Phone className="h-4 w-4 ml-2" />
-                      تماس فوری
-                    </a>
-                  </div>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  در وب‌سایت نوید زندگی می‌توانید به خدماتی مانند:
+                </p>
+                
+                <ul className="space-y-2 text-muted-foreground mb-6 pr-6">
+                  <li>• ویزیت پزشک عمومی و متخصص در منزل</li>
+                  <li>• تزریق سرم در منزل</li>
+                  <li>• تزریقات و خدمات پرستاری در منزل</li>
+                  <li>• مراقبت‌های ویژه کودکان و سالمندان</li>
+                </ul>
+                
+                <p className="text-muted-foreground mb-6">
+                  دسترسی داشته باشید و بدون اتلاف وقت، بهترین مراقبت پزشکی را در خانه دریافت کنید.
+                </p>
+                
+                <div className="text-center">
+                  <a 
+                    href="tel:09386117912"
+                    className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                  >
+                    <Phone className="h-4 w-4 ml-2" />
+                    تماس فوری
+                  </a>
                 </div>
               </div>
             </section>

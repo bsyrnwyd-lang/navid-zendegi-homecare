@@ -176,7 +176,7 @@ const ArticlesPage = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {articles.reverse().map((article) => (
+              {articles.map((article) => (
                 <Card key={article.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                   <Link to={article.link} className="block">
                     <div className="overflow-hidden rounded-t-lg">
