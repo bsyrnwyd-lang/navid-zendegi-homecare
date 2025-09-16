@@ -16,6 +16,7 @@ import heartAttackImage from "@/assets/cardiology-home-visit.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
+import childrenFeverImage from "@/assets/children-fever-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
@@ -122,10 +123,18 @@ const ArticlesPage = () => {
       image: aiCardiologyImage,
       link: "/articles/ai-cardiology",
       category: "تکنولوژی پزشکی"
+    },
+    {
+      id: 14,
+      title: "تب در کودکان | علل، درمان خانگی و ویزیت پزشک در منزل",
+      description: "راهنمای کامل مدیریت تب کودکان در خانه و زمان مراجعه به پزشک",
+      image: childrenFeverImage,
+      link: "/articles/children-fever",
+      category: "کودکان"
     }
   ];
 
-  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی"];
+  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان"];
 
   return (
     <div className="min-h-screen bg-background">
