@@ -20,9 +20,18 @@ import childrenFeverImage from "@/assets/children-fever-article.jpg";
 import migrainImage from "@/assets/migraine-article.jpg";
 import meningitisImage from "@/assets/meningitis-article.jpg";
 import airPollutionImage from "@/assets/air-pollution-article.jpg";
+import coffeeHeartImage from "@/assets/coffee-heart-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 18,
+      title: "تأثیر مصرف قهوه بر سلامت قلب",
+      description: "بررسی تأثیرات مثبت و منفی مصرف قهوه بر سلامت قلب و عروق - دکتر نیره مظاهری تهرانی",
+      image: coffeeHeartImage,
+      link: "/articles/coffee-heart",
+      category: "قلب و عروق"
+    },
     {
       id: 17,
       title: "تأثیر آلودگی هوا بر بیماری‌های قلبی و ریوی",
@@ -161,7 +170,7 @@ const ArticlesPage = () => {
     }
   ];
 
-  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان", "مغز و اعصاب"];
+  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان", "مغز و اعصاب", "قلب و عروق"];
 
   return (
     <div className="min-h-screen bg-background">
