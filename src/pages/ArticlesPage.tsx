@@ -15,6 +15,7 @@ import strokeImage from "@/assets/neurology.jpg";
 import heartAttackImage from "@/assets/cardiology-home-visit.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
+import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
@@ -113,10 +114,18 @@ const ArticlesPage = () => {
       image: nailSpotsImage,
       link: "/articles/nail-spots",
       category: "پوست و مو"
+    },
+    {
+      id: 13,
+      title: "استفاده از هوش مصنوعی در تفسیر اکو و‌ نوار قلب",
+      description: "نقش هوش مصنوعی در تحلیل نوار قلب و اکوکاردیوگرافی و محدودیت‌های آن",
+      image: aiCardiologyImage,
+      link: "/articles/ai-cardiology",
+      category: "تکنولوژی پزشکی"
     }
   ];
 
-  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو"];
+  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی"];
 
   return (
     <div className="min-h-screen bg-background">

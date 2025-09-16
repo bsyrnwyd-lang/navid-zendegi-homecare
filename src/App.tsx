@@ -32,6 +32,7 @@ import GardasilVaccinePage from "./pages/articles/GardasilVaccinePage";
 import GenitalWartsPage from "./pages/articles/GenitalWartsPage";
 import HPVPoolPage from "./pages/articles/HPVPoolPage";
 import NailSpotsPage from "./pages/articles/NailSpotsPage";
+import AICardiologyPage from "./pages/articles/AICardiologyPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -80,6 +81,7 @@ const App = () => (
           <Route path="/articles/genital-warts" element={<GenitalWartsPage />} />
           <Route path="/articles/hpv-pool" element={<HPVPoolPage />} />
           <Route path="/articles/nail-spots" element={<NailSpotsPage />} />
+          <Route path="/articles/ai-cardiology" element={<AICardiologyPage />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
