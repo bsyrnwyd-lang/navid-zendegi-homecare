@@ -19,9 +19,18 @@ import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
 import childrenFeverImage from "@/assets/children-fever-article.jpg";
 import migrainImage from "@/assets/migraine-article.jpg";
 import meningitisImage from "@/assets/meningitis-article.jpg";
+import airPollutionImage from "@/assets/air-pollution-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 17,
+      title: "تأثیر آلودگی هوا بر بیماری‌های قلبی و ریوی",
+      description: "بررسی تأثیرات آلودگی هوا بر سلامت قلب و ریه‌ها و راه‌های پیشگیری",
+      image: airPollutionImage,
+      link: "/articles/air-pollution",
+      category: "پیشگیری"
+    },
     {
       id: 16,
       title: "مننژیت چیست؟ علل، علائم و درمان",
