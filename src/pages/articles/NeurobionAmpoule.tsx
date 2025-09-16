@@ -123,7 +123,9 @@ const NeurobionAmpoule = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">ویزیت پزشک در منزل ۲۴ ساعته</p>
-                    <p className="text-primary font-bold">۰۲۱-۱۲۳۴۵۶۷۸</p>
+                    <a href="tel:+989386117912" className="text-primary font-bold hover:text-primary/80 transition-colors">
+                      ۰۹۳۸۶۱۱۷۹۱۲
+                    </a>
                   </div>
                 </div>
               </div>
