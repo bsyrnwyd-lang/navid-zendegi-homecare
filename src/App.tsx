@@ -35,6 +35,7 @@ import NailSpotsPage from "./pages/articles/NailSpotsPage";
 import AICardiologyPage from "./pages/articles/AICardiologyPage";
 import ChildrenFeverPage from "./pages/articles/ChildrenFeverPage";
 import MigrainePage from "./pages/articles/MigrainePage";
+import MeningitisPage from "./pages/articles/MeningitisPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -86,6 +87,7 @@ const App = () => (
           <Route path="/articles/ai-cardiology" element={<AICardiologyPage />} />
           <Route path="/articles/children-fever" element={<ChildrenFeverPage />} />
           <Route path="/articles/migraine" element={<MigrainePage />} />
+          <Route path="/articles/meningitis" element={<MeningitisPage />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

@@ -18,9 +18,18 @@ import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
 import childrenFeverImage from "@/assets/children-fever-article.jpg";
 import migrainImage from "@/assets/migraine-article.jpg";
+import meningitisImage from "@/assets/meningitis-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 16,
+      title: "مننژیت چیست؟ علل، علائم و درمان",
+      description: "راهنمای کامل مننژیت: علل، علائم، درمان و پیشگیری التهاب پرده‌های محافظ مغز",
+      image: meningitisImage,
+      link: "/articles/meningitis",
+      category: "اورژانس پزشکی"
+    },
     {
       id: 1,
       title: "تشخیص سریع علائم سکته مغزی",
