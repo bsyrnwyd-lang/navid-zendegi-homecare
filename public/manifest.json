@@ -1,0 +1,52 @@
+{
+  "name": "نوید زندگی - خدمات پزشکی در منزل تهران",
+  "short_name": "نوید زندگی",
+  "description": "ویزیت پزشک در منزل، پرستاری در منزل، تزریقات در منزل تهران و کرج - نوید زندگی",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "lang": "fa-IR",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["medical", "healthcare", "services"],
+  "shortcuts": [
+    {
+      "name": "ویزیت پزشک",
+      "short_name": "ویزیت",
+      "description": "ویزیت پزشک در منزل",
+      "url": "/general-doctor",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "تماس فوری",
+      "short_name": "تماس",
+      "description": "تماس فوری با نوید زندگی",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

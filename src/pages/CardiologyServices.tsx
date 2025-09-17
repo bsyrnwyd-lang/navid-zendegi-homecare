@@ -4,10 +4,29 @@ import { Heart, Activity, FileText, Clock, CheckCircle, Phone } from "lucide-rea
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import cardiologyImage from "@/assets/iranian-cardiology-home.jpg";
 import medicalEquipmentImage from "@/assets/iranian-medical-equipment.jpg";
 
 const CardiologyServices = () => {
+  const phoneNumber = "09386117912";
+  
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
+  };
+
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "خدمات", url: "/#services" },
+    { name: "ویزیت پزشک قلب در منزل", url: "/cardiology" }
+  ];
+
   const services = [
     {
       icon: Heart,
@@ -40,8 +59,33 @@ const CardiologyServices = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="ویزیت پزشک قلب در منزل تهران | کاردیولوژیست در منزل | نوید زندگی"
+        description="ویزیت متخصص قلب و عروق در منزل تهران. اکوکاردیوگرافی، نوار قلب ECG، مشاوره کاردیولوژی در منزل توسط متخصصان مجرب نوید زندگی. تماس: 09386117912"
+        keywords="ویزیت پزشک قلب در منزل, کاردیولوژیست در منزل تهران, اکو قلب در منزل, نوار قلب در منزل, متخصص قلب و عروق در منزل, نوید زندگی"
+        canonical="https://navidezendegi.com/cardiology"
+        ogType="website"
+      />
+      
+      <StructuredData
+        breadcrumbs={breadcrumbItems}
+        service={{
+          name: "ویزیت متخصص قلب و عروق در منزل",
+          description: "ویزیت کاردیولوژیست در منزل، اکوکاردیوگرافی، نوار قلب و مشاوره تخصصی قلب",
+          provider: "نوید زندگی",
+          areaServed: "تهران و کرج",
+          serviceType: "خدمات پزشکی تخصصی قلب در منزل"
+        }}
+      />
+      
       <Header />
       
+      <main className="pt-20 md:pt-24">
+        <div className="container mx-auto px-4 py-8">
+          <BreadcrumbNavigation items={breadcrumbItems} />
+        </div>
+      
+        {/* ... keep existing code */}
       {/* Hero Section */}
       <section className="medical-section bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto">
@@ -218,8 +262,8 @@ const CardiologyServices = () => {
             </div>
           </div>
         </div>
-      </section>
-
+      </main>
+      
       <Footer />
       <FloatingContact />
     </div>

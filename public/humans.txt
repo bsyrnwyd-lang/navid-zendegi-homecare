@@ -1,0 +1,27 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Developer: Lovable AI Development Team
+    Contact: support@lovable.dev
+    From: Tehran, Iran
+
+# THANKS
+
+    To all healthcare professionals providing home medical services
+    To the Navid Zendegi team for their dedication to healthcare
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, TypeScript
+    React, Vite, Tailwind CSS
+    Font: Vazirmatn (Persian)
+    Tools: Lovable, shadcn/ui
+    
+# SITE
+
+    Last update: 2024/01/15
+    Language: Persian / فارسی
+    Doctype: HTML5
+    IDE: Lovable Development Platform
