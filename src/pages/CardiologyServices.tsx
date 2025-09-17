@@ -262,6 +262,7 @@ const CardiologyServices = () => {
             </div>
           </div>
         </div>
+      </section>
       </main>
       
       <Footer />
