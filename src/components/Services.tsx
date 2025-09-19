@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Heart, Syringe, FileText, UserCheck, Sparkles, Baby } from "lucide-react";
+import { Stethoscope, Heart, Syringe, FileText, UserCheck, Sparkles, Baby, Scan } from "lucide-react";
 import nursingImage from "@/assets/iranian-nurse-home-care.jpg";
 import injectionImage from "@/assets/iranian-injection-home.jpg";
 
@@ -46,6 +46,12 @@ const Services = () => {
       title: "ویزیت متخصص زنان در منزل",
       description: "ویزیت دکتر زنان در منزل توسط متخصصان زنان و زایمان مجرب نوید زندگی",
       features: ["ویزیت زنان در منزل", "مشاوره بارداری", "کنترل‌های دوره‌ای", "مشاوره تخصصی زنان"]
+    },
+    {
+      icon: Scan,
+      title: "رادیولوژی و سونوگرافی در منزل",
+      description: "خدمات رادیولوژی و سونوگرافی در منزل توسط تکنسین‌های مجرب نوید زندگی",
+      features: ["سونوگرافی در منزل", "رادیولوژی پرتابل", "ارزیابی تصویری", "گزارش تخصصی"]
     }
   ];
 
