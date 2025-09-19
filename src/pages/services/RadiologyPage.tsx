@@ -1,3 +1,6 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Scan, Heart, Shield, Clock, Phone } from "lucide-react";
@@ -17,6 +20,8 @@ const RadiologyPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
+      <main className="pt-20 md:pt-24">
       {/* Hero Section */}
       <section className="medical-section bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto">
@@ -142,7 +147,10 @@ const RadiologyPage = () => {
             رزرو نوبت: ۰۹۳۸۶۱۱۷۹۱۲
           </Button>
         </div>
-      </section>
+        </section>
+      </main>
+      <Footer />
+      <FloatingContact />
     </div>
   );
 };
