@@ -45,7 +45,8 @@ const Header = () => {
     { to: "/services/beauty", label: "پزشک زیبایی در منزل" },
     // سایر خدمات
     { to: "/services/nursing", label: "خدمات پرستاری در منزل" },
-    { to: "/services/physiotherapy", label: "فیزیوتراپی در منزل" }
+    { to: "/services/physiotherapy", label: "فیزیوتراپی در منزل" },
+    { to: "/services/radiology", label: "رادیولوژی و سونوگرافی در منزل" }
   ];
 
   return (
