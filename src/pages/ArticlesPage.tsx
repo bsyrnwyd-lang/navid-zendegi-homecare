@@ -25,6 +25,14 @@ import coffeeHeartImage from "@/assets/coffee-heart-article.jpg";
 const ArticlesPage = () => {
   const articles = [
     {
+      id: 19,
+      title: "خدمات پزشکی و پرستاری در منزل",
+      description: "بررسی کامل مزایا و معایب خدمات درمانی و بستری در منزل و راهنمای انتخاب بهترین خدمات پزشکی",
+      image: medicalConsultationImage,
+      link: "/articles/medical-consultation",
+      category: "خدمات پزشکی"
+    },
+    {
       id: 18,
       title: "تأثیر مصرف قهوه بر سلامت قلب",
       description: "بررسی تأثیرات مثبت و منفی مصرف قهوه بر سلامت قلب و عروق - دکتر نیره مظاهری تهرانی",
@@ -57,7 +65,7 @@ const ArticlesPage = () => {
       category: "اورژانس پزشکی"
     },
     {
-      id: 2,
+      id: 3,
       title: "علائم حمله قلبی و اقدامات فوری",
       description: "تشخیص زودهنگام علائم سکته قلبی و ارائه کمک‌های اولیه",
       image: heartAttackImage,
