@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Heart, Syringe, FileText, UserCheck, Sparkles } from "lucide-react";
+import { Stethoscope, Heart, Syringe, FileText, UserCheck, Sparkles, Baby } from "lucide-react";
 import nursingImage from "@/assets/iranian-nurse-home-care.jpg";
 import injectionImage from "@/assets/iranian-injection-home.jpg";
 
@@ -40,6 +40,12 @@ const Services = () => {
       title: "خدمات زیبایی و درماتولوژی در منزل",
       description: "خدمات زیبایی در منزل و مراقبت پوست تخصصی توسط متخصصان نوید زندگی",
       features: ["تزریق بوتاکس در منزل", "تزریق فیلر در منزل", "پلاسماتراپی", "مشاوره پوست و مو"]
+    },
+    {
+      icon: Baby,
+      title: "ویزیت متخصص زنان در منزل",
+      description: "ویزیت دکتر زنان در منزل توسط متخصصان زنان و زایمان مجرب نوید زندگی",
+      features: ["ویزیت زنان در منزل", "مشاوره بارداری", "کنترل‌های دوره‌ای", "مشاوره تخصصی زنان"]
     }
   ];
 
