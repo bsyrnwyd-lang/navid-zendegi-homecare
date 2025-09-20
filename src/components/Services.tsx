@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Heart, Syringe, FileText, UserCheck, Sparkles, Baby, Scan } from "lucide-react";
+import { Stethoscope, Heart, FileText, UserCheck, Baby, Scan } from "lucide-react";
 import nursingImage from "@/assets/iranian-nurse-home-care.jpg";
-import injectionImage from "@/assets/iranian-injection-home.jpg";
 
 const Services = () => {
   const services = [
@@ -15,13 +14,7 @@ const Services = () => {
       icon: Heart,
       title: "پرستاری در منزل تهران",
       description: "خدمات پرستاری در منزل تخصصی نوید زندگی با تجهیزات کامل پزشکی و پرستاران مجرب",
-      features: ["مراقبت پرستاری در منزل", "تزریقات تخصصی", "پانسمان زخم در منزل", "فیزیوتراپی در منزل"]
-    },
-    {
-      icon: Syringe,
-      title: "تزریقات در منزل و آزمایشات",
-      description: "انجام تزریقات در منزل و آزمایشات پزشکی توسط تیم نوید زندگی با نتایج دقیق و سریع",
-      features: ["انواع تزریقات در منزل", "نمونه‌گیری خون در منزل", "تست قند خون", "کنترل فشار خون"]
+      features: ["مراقبت پرستاری در منزل", "پانسمان زخم در منزل", "فیزیوتراپی در منزل", "مراقبت‌های ویژه"]
     },
     {
       icon: UserCheck,
@@ -34,12 +27,6 @@ const Services = () => {
       title: "ویزیت پزشک قلب در منزل",
       description: "ویزیت متخصص قلب در منزل تهران توسط کاردیولوژیست‌های مجرب نوید زندگی",
       features: ["ویزیت کاردیولوژیست در منزل", "اکوکاردیوگرافی در منزل", "نوار قلب ECG در منزل", "مشاوره تخصصی قلب و عروق"]
-    },
-    {
-      icon: Sparkles,
-      title: "خدمات زیبایی و درماتولوژی در منزل",
-      description: "خدمات زیبایی در منزل و مراقبت پوست تخصصی توسط متخصصان نوید زندگی",
-      features: ["تزریق بوتاکس در منزل", "تزریق فیلر در منزل", "پلاسماتراپی", "مشاوره پوست و مو"]
     },
     {
       icon: Baby,
@@ -61,12 +48,12 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="section-title">خدمات پزشکی در منزل نوید زندگی</h2>
           <p className="section-subtitle">
-            ویزیت پزشک در منزل تهران، پرستاری در منزل، تزریقات در منزل، پزشک متخصص در منزل و خدمات زیبایی در منزل توسط تیم متخصص نوید زندگی
+            ویزیت پزشک در منزل تهران، پرستاری در منزل، پزشک متخصص در منزل، رادیولوژی و سونوگرافی در منزل توسط تیم متخصص نوید زندگی
           </p>
         </div>
         
         {/* تصاویر واقعی خدمات */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 gap-8 mb-16 max-w-2xl mx-auto">
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img 
               src={nursingImage} 
@@ -77,18 +64,6 @@ const Services = () => {
             <div className="absolute bottom-4 left-4 text-white">
               <h3 className="text-xl font-bold">پرستاری در منزل نوید زندگی</h3>
               <p className="text-sm">مراقبت حرفه‌ای توسط پرستاران مجرب در سراسر تهران</p>
-            </div>
-          </div>
-          <div className="relative rounded-lg overflow-hidden shadow-lg">
-            <img 
-              src={injectionImage} 
-              alt="تزریقات در منزل - خدمات تزریق حرفه‌ای"
-              className="w-full h-64 object-cover"
-            />
-            <div className="absolute inset-0 bg-secondary/20"></div>
-            <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-xl font-bold">تزریقات در منزل نوید زندگی</h3>
-              <p className="text-sm">تزریقات ایمن و استریل توسط تیم متخصص</p>
             </div>
           </div>
         </div>
