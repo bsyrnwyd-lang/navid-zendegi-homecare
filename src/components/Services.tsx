@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Heart, FileText, UserCheck, Baby, Scan, Ear, Activity } from "lucide-react";
+import { Stethoscope, Heart, FileText, UserCheck, Scan, Ear, Activity } from "lucide-react";
 import nursingImage from "@/assets/iranian-nurse-home-care.jpg";
 
 const Services = () => {
@@ -33,12 +33,6 @@ const Services = () => {
       title: "اکو و نوار قلب در منزل",
       description: "انجام آزمایشات تخصصی قلب شامل اکوکاردیوگرافی و نوار قلب در منزل توسط تکنسین‌های مجرب",
       features: ["اکوکاردیوگرافی در منزل", "نوار قلب در منزل", "هولتر ۲۴ ساعته", "ارزیابی عملکرد قلب"]
-    },
-    {
-      icon: Baby,
-      title: "ویزیت متخصص زنان در منزل",
-      description: "ویزیت دکتر زنان در منزل توسط متخصصان زنان و زایمان مجرب نوید زندگی",
-      features: ["ویزیت زنان در منزل", "مشاوره بارداری", "کنترل‌های دوره‌ای", "مشاوره تخصصی زنان"]
     },
     {
       icon: Ear,
