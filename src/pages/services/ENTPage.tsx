@@ -15,7 +15,7 @@ const ENTPage = () => {
   });
 
   const handleCall = () => {
-    window.location.href = "tel:02191002090";
+    window.location.href = "tel:09386117912";
   };
 
   return (
@@ -39,7 +39,7 @@ const ENTPage = () => {
                 onClick={handleCall}
               >
                 <Phone className="ml-2 h-5 w-5" />
-                رزرو نوبت فوری - ۰۲۱۹۱۰۰۲۰۹۰
+                رزرو نوبت فوری - ۰۹۳۸۶۱۱۷۹۱۲
               </Button>
             </div>
             <div className="relative">
@@ -176,7 +176,7 @@ const ENTPage = () => {
             onClick={handleCall}
           >
             <Phone className="ml-2 h-5 w-5" />
-            تماس فوری: ۰۲۱۹۱۰۰۲۰۹۰
+            تماس فوری: ۰۹۳۸۶۱۱۷۹۱۲
           </Button>
         </div>
       </section>
