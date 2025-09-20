@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Heart, FileText, UserCheck, Baby, Scan } from "lucide-react";
+import { Stethoscope, Heart, FileText, UserCheck, Baby, Scan, Ear } from "lucide-react";
 import nursingImage from "@/assets/iranian-nurse-home-care.jpg";
 
 const Services = () => {
@@ -33,6 +33,12 @@ const Services = () => {
       title: "ویزیت متخصص زنان در منزل",
       description: "ویزیت دکتر زنان در منزل توسط متخصصان زنان و زایمان مجرب نوید زندگی",
       features: ["ویزیت زنان در منزل", "مشاوره بارداری", "کنترل‌های دوره‌ای", "مشاوره تخصصی زنان"]
+    },
+    {
+      icon: Ear,
+      title: "ویزیت متخصص گوش حلق و بینی در منزل",
+      description: "ویزیت متخصص گوش حلق و بینی در منزل توسط ENT متخصصان مجرب نوید زندگی",
+      features: ["خدمات شستشو گوش در منزل", "درمان خونریزی بینی در منزل", "رویت اودیومتری در منزل", "معاینه تخصصی گوش و حلق"]
     },
     {
       icon: Scan,

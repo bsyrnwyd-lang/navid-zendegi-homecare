@@ -20,6 +20,7 @@ import GynecologyPage from "./pages/services/GynecologyPage";
 import BeautyDoctorPage from "./pages/services/BeautyDoctorPage";
 import PhysiotherapyPage from "./pages/services/PhysiotherapyPage";
 import RadiologyPage from "./pages/services/RadiologyPage";
+import ENTPage from "./pages/services/ENTPage";
 import ContactPage from "./pages/ContactPage";
 import InfluenzaTreatmentPage from "./pages/articles/InfluenzaTreatmentPage";
 import StrokeSymptomsPage from "./pages/articles/StrokeSymptomsPage";
@@ -75,6 +76,7 @@ const App = () => (
           <Route path="/services/beauty" element={<BeautyDoctorPage />} />
           <Route path="/services/physiotherapy" element={<PhysiotherapyPage />} />
           <Route path="/services/radiology" element={<RadiologyPage />} />
+          <Route path="/services/ent" element={<ENTPage />} />
           
           {/* Article Pages */}
           <Route path="/articles/influenza-treatment" element={<InfluenzaTreatmentPage />} />
