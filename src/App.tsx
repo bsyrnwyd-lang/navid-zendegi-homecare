@@ -11,13 +11,10 @@ import AboutUsPage from "./pages/AboutUsPage";
 import PricingPage from "./pages/PricingPage";
 import SpecialistDoctorPage from "./pages/services/SpecialistDoctorPage";
 import InternalMedicinePage from "./pages/services/InternalMedicinePage";
-import PediatricsPage from "./pages/services/PediatricsPage";
 import NursingPage from "./pages/services/NursingPage";
 import NeurologyPage from "./pages/services/NeurologyPage";
 import UrologyPage from "./pages/services/UrologyPage";
 import InfectiousDiseasePage from "./pages/services/InfectiousDiseasePage";
-import GynecologyPage from "./pages/services/GynecologyPage";
-import BeautyDoctorPage from "./pages/services/BeautyDoctorPage";
 import PhysiotherapyPage from "./pages/services/PhysiotherapyPage";
 import RadiologyPage from "./pages/services/RadiologyPage";
 import ENTPage from "./pages/services/ENTPage";
@@ -68,13 +65,10 @@ const App = () => (
           {/* Service Pages */}
           <Route path="/services/specialist" element={<SpecialistDoctorPage />} />
           <Route path="/services/internal" element={<InternalMedicinePage />} />
-          <Route path="/services/pediatrics" element={<PediatricsPage />} />
           <Route path="/services/nursing" element={<NursingPage />} />
           <Route path="/services/neurology" element={<NeurologyPage />} />
           <Route path="/services/urology" element={<UrologyPage />} />
           <Route path="/services/infectious" element={<InfectiousDiseasePage />} />
-          <Route path="/services/gynecology" element={<GynecologyPage />} />
-          <Route path="/services/beauty" element={<BeautyDoctorPage />} />
           <Route path="/services/physiotherapy" element={<PhysiotherapyPage />} />
           <Route path="/services/radiology" element={<RadiologyPage />} />
           <Route path="/services/ent" element={<ENTPage />} />

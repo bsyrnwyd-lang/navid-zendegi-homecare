@@ -37,13 +37,10 @@ const Header = () => {
     // پزشک‌ها اول
     { to: "/services/specialist", label: "ویزیت پزشک متخصص در منزل" },
     { to: "/services/internal", label: "ویزیت متخصص داخلی در منزل" },
-    { to: "/services/pediatrics", label: "ویزیت متخصص اطفال در منزل" },
     { to: "/services/neurology", label: "ویزیت متخصص مغز و اعصاب در منزل" },
     { to: "/services/urology", label: "ویزیت متخصص اورولوژی" },
     { to: "/services/ent", label: "ویزیت متخصص گوش، حلق و بینی در منزل" },
     { to: "/services/infectious", label: "ویزیت متخصص عفونی در منزل" },
-    { to: "/services/gynecology", label: "ویزیت متخصص زنان در منزل" },
-    { to: "/services/beauty", label: "پزشک زیبایی در منزل" },
     // سایر خدمات
     { to: "/services/nursing", label: "خدمات پرستاری در منزل" },
     { to: "/services/echo-ecg", label: "اکو و نوار قلب در منزل" },

@@ -63,11 +63,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services/pediatrics" className="hover:text-primary transition-colors">
-                  ویزیت متخصص اطفال در منزل
-                </Link>
-              </li>
-              <li>
                 <Link to="/services/neurology" className="hover:text-primary transition-colors">
                   ویزیت متخصص مغز و اعصاب در منزل
                 </Link>
@@ -80,16 +75,6 @@ const Footer = () => {
               <li>
                 <Link to="/services/infectious" className="hover:text-primary transition-colors">
                   ویزیت متخصص عفونی در منزل
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/gynecology" className="hover:text-primary transition-colors">
-                  ویزیت متخصص زنان در منزل
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/beauty" className="hover:text-primary transition-colors">
-                  پزشک زیبایی در منزل
                 </Link>
               </li>
               <li>

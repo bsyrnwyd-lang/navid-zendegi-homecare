@@ -38,7 +38,7 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
             پرستاری در منزل، تزریقات در منزل، پزشک متخصص در منزل توسط نوید زندگی
             <br />
-            ویزیت پزشک قلب در منزل، خدمات زیبایی در منزل در سراسر تهران و کرج
+            ویزیت پزشک قلب در منزل در سراسر تهران و کرج
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
