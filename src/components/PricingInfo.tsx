@@ -14,8 +14,11 @@ const PricingInfo = () => {
             </div>
             <div>
               <h3 className="font-semibold text-sm mb-1">تعرفه خدمات</h3>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-muted-foreground mb-1">
                 برای اطلاع از تعرفه خدمات به لینک زیر مراجعه کنید
+              </p>
+              <p className="text-xs text-muted-foreground font-medium">
+                سیاست ما ارایه قیمت های شفاف در تمام مناطق تهران است.
               </p>
             </div>
           </div>
