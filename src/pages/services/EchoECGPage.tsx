@@ -4,6 +4,7 @@ import { Activity, Phone, CheckCircle, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import PricingInfo from "@/components/PricingInfo";
 import { useSEO } from "@/hooks/useSEO";
 import cardiacImage from "@/assets/iranian-cardiology-home.jpg";
 
@@ -179,7 +180,14 @@ const EchoECGPage = () => {
             تماس فوری: ۰۹۳۸۶۱۱۷۹۱۲
           </Button>
         </div>
-      </section>
+        </section>
+
+        {/* Pricing Info Section */}
+        <section className="medical-section bg-background">
+          <div className="container mx-auto">
+            <PricingInfo />
+          </div>
+        </section>
 
       <Footer />
       <FloatingContact />

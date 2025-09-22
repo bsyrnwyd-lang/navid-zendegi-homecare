@@ -4,6 +4,7 @@ import { Heart, Activity, FileText, Clock, CheckCircle, Phone } from "lucide-rea
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import PricingInfo from "@/components/PricingInfo";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
@@ -266,6 +267,13 @@ const CardiologyServices = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Pricing Info Section */}
+      <section className="medical-section bg-background">
+        <div className="container mx-auto">
+          <PricingInfo />
         </div>
       </section>
       </main>

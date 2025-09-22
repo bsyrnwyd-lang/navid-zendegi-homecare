@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import PricingInfo from "@/components/PricingInfo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Stethoscope, CheckCircle, Phone, Clock } from "lucide-react";
 import specialistImage from "@/assets/specialist-doctor.jpg";
@@ -102,6 +103,13 @@ const SpecialistDoctorPage = () => {
               <Phone className="ml-2 h-6 w-6" />
               تماس: 09386117912
             </a>
+          </div>
+        </section>
+
+        {/* Pricing Info Section */}
+        <section className="medical-section bg-background">
+          <div className="container mx-auto">
+            <PricingInfo />
           </div>
         </section>
       </main>

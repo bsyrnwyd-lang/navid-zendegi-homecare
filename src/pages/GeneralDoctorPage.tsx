@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import PricingInfo from "@/components/PricingInfo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock, Shield, MapPin, Phone, CheckCircle, HelpCircle } from "lucide-react";
 import generalDoctorImage from "@/assets/iranian-general-doctor.jpg";
@@ -215,6 +216,13 @@ const GeneralDoctorPage = () => {
                 <div className="text-3xl font-bold text-primary" dir="ltr">09386117912</div>
               </CardContent>
             </Card>
+          </div>
+        </section>
+
+        {/* Pricing Info Section */}
+        <section className="medical-section bg-background">
+          <div className="container mx-auto">
+            <PricingInfo />
           </div>
         </section>
       </main>
