@@ -49,12 +49,13 @@ const CardiologyServices = () => {
   ];
 
   const whyChooseUs = [
-    "پزشکان متخصص قلب و عروق",
-    "تجهیزات پزشکی مدرن و قابل حمل", 
-    "سرویس ۲۴ ساعته",
-    "گزارش‌دهی سریع و دقیق",
-    "مشاوره رایگان قبل از ویزیت",
-    "قیمت‌های مناسب و منصفانه"
+    "مرکز تخصصی منحصراً برای خدمات قلب در منزل",
+    "کاردیولوژیست‌های مجرب و فوق تخصص", 
+    "تجهیزات پزشکی مدرن اختصاصی قلب",
+    "۱۰۰٪ تمرکز روی خدمات کاردیولوژی در منزل",
+    "سرویس ۲۴ ساعته تخصصی قلب",
+    "گزارش‌دهی فوری و تفسیر تخصصی",
+    "مشاوره رایگان کاردیولوژی قبل از ویزیت"
   ];
 
   return (
@@ -92,13 +93,17 @@ const CardiologyServices = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                ویزیت پزشک قلب در منزل
+                مرکز تخصصی ویزیت پزشک قلب در منزل
                 <span className="block text-primary">اکو و نوار قلب در منزل</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                خدمات تخصصی قلب و عروق در راحتی منزل شما. <strong>ویزیت پزشک قلب در منزل</strong> 
-                همراه با <strong>اکو قلب در منزل</strong> و <strong>نوار قلب در منزل</strong> 
-                توسط پزشکان مجرب و تجهیزات پیشرفته.
+                <span className="bg-primary/10 px-3 py-1 rounded-lg font-semibold inline-block mb-4">
+                  مرکز نوید زندگی به صورت تخصصی و انحصاری خدمات ویزیت متخصص قلب، اکو قلب و نوار قلب در منزل ارائه می‌دهد
+                </span>
+                <br />
+                تنها مرکز متخصص در تهران که <strong>فقط روی خدمات قلب در منزل</strong> تمرکز دارد. 
+                <strong>ویزیت پزشک قلب در منزل</strong> همراه با <strong>اکو قلب در منزل</strong> و 
+                <strong>نوار قلب در منزل</strong> توسط کاردیولوژیست‌های مجرب.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-lg px-8" onClick={() => window.location.href = 'tel:09386117912'}>
@@ -162,9 +167,9 @@ const CardiologyServices = () => {
       <section className="medical-section bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="section-title">خدمات تخصصی قلب در منزل</h2>
+            <h2 className="section-title">خدمات انحصاری مرکز تخصصی قلب در منزل</h2>
             <p className="section-subtitle">
-              ویزیت پزشک قلب، اکو قلب و نوار قلب با بالاترین کیفیت در منزل شما
+              نوید زندگی تنها مرکز متخصص در خدمات قلب در منزل - ویزیت پزشک قلب، اکو قلب و نوار قلب
             </p>
           </div>
           
@@ -200,9 +205,9 @@ const CardiologyServices = () => {
       <section className="medical-section bg-background">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="section-title">چرا ما را انتخاب کنید؟</h2>
+            <h2 className="section-title">چرا مرکز تخصصی نوید زندگی؟</h2>
             <p className="section-subtitle">
-              مزایای استفاده از خدمات تخصصی قلب نوید زندگی
+              تنها مرکز متخصص در ارائه خدمات کاردیولوژی در منزل با ۱۰۰٪ تمرکز روی قلب
             </p>
           </div>
           
