@@ -8,12 +8,14 @@ import PricingInfo from "@/components/PricingInfo";
 import SEOHead from "@/components/SEOHead";
 
 const ChildGrowthMonitoringPage = () => {
+  const phoneNumber = "09386117912";
+  
   const handleCall = () => {
-    window.location.href = "tel:02191309033";
+    window.location.href = `tel:${phoneNumber}`;
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/989190440849", "_blank");
+    window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
   };
 
   return (
@@ -74,11 +76,11 @@ const ChildGrowthMonitoringPage = () => {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button onClick={handleCall} className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  تماس فوری: ۰۲۱-۹۱۳۰۹۰۳۳
+                  تماس فوری: ۰۹۳۸۶۱۱۷۹۱۲
                 </Button>
                 <Button onClick={handleWhatsApp} variant="outline" className="flex items-center gap-2">
                   <MessageCircle className="h-4 w-4" />
-                  واتساپ: ۰۹۱۹۰۴۴۰۸۴۹
+                  واتساپ: ۰۹۳۸۶۱۱۷۹۱۲
                 </Button>
               </div>
             </div>
