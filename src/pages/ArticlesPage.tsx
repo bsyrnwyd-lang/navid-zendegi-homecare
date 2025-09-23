@@ -206,11 +206,11 @@ const ArticlesPage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                 مقالات پزشکی نوید زندگی
-              </h1>
-              <p className="text-lg text-muted-foreground mb-8">
-                راهنمای جامع سلامت و درمان در منزل با بهترین متخصصان پزشکی
-              </p>
+                  مقالات پزشکی نوید زندگی
+                </h1>
+                <p className="text-lg text-muted-foreground mb-8">
+                  راهنمای جامع سلامت و درمان در منزل با بهترین متخصصان پزشکی
+                </p>
             </div>
           </div>
         </section>
