@@ -39,6 +39,7 @@ import MeningitisPage from "./pages/articles/MeningitisPage";
 import AirPollutionPage from "./pages/articles/AirPollutionPage";
 import CoffeeHeartPage from "./pages/articles/CoffeeHeartPage";
 import MedicalConsultationPage from "./pages/articles/MedicalConsultationPage";
+import ChildGrowthMonitoringPage from "./pages/articles/ChildGrowthMonitoringPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -94,6 +95,7 @@ const App = () => (
           <Route path="/articles/air-pollution" element={<AirPollutionPage />} />
            <Route path="/articles/coffee-heart" element={<CoffeeHeartPage />} />
            <Route path="/articles/medical-consultation" element={<MedicalConsultationPage />} />
+           <Route path="/articles/child-growth-monitoring" element={<ChildGrowthMonitoringPage />} />
            
            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
