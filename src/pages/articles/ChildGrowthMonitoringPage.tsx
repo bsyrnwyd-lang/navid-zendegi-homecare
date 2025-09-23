@@ -37,7 +37,7 @@ const ChildGrowthMonitoringPage = () => {
             </h1>
             <div className="text-center mb-6">
               <p className="text-lg font-semibold text-primary">دکتر نیره مظاهری تهرانی</p>
-              <p className="text-sm text-muted-foreground">متخصص اطفال</p>
+              <p className="text-sm text-muted-foreground">متخصص قلب و عروق</p>
             </div>
             <img 
               src={pediatricsImage} 
