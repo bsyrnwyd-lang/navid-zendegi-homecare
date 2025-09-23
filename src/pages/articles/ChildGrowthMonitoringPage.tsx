@@ -35,6 +35,10 @@ const ChildGrowthMonitoringPage = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               رشد کودک؛ اهمیت پایش منظم در منزل
             </h1>
+            <div className="text-center mb-6">
+              <p className="text-lg font-semibold text-primary">دکتر نیره مظاهری تهرانی</p>
+              <p className="text-sm text-muted-foreground">متخصص اطفال</p>
+            </div>
             <img 
               src={pediatricsImage} 
               alt="پایش رشد کودک در منزل توسط پزشک متخصص اطفال" 
