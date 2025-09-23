@@ -21,9 +21,18 @@ import migrainImage from "@/assets/migraine-article.jpg";
 import meningitisImage from "@/assets/meningitis-article.jpg";
 import airPollutionImage from "@/assets/air-pollution-article.jpg";
 import coffeeHeartImage from "@/assets/coffee-heart-article.jpg";
+import pediatricsImage from "@/assets/pediatrics.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 20,
+      title: "رشد کودک؛ اهمیت پایش منظم در منزل",
+      description: "پایش رشد کودک در منزل با خدمات ویزیت پزشک اطفال. بررسی قد، وزن و تکامل رفتاری کودک توسط متخصص در منزل",
+      image: pediatricsImage,
+      link: "/articles/child-growth-monitoring",
+      category: "کودکان"
+    },
     {
       id: 19,
       title: "خدمات پزشکی و پرستاری در منزل",
