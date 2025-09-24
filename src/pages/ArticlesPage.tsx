@@ -25,9 +25,18 @@ import pediatricsImage from "@/assets/pediatrics.jpg";
 import vaccinationImage from "@/assets/vaccination-article.jpg";
 import hivAidsImage from "@/assets/hiv-aids-article.jpg";
 import diabetesImage from "@/assets/diabetes-article.jpg";
+import hyperhidrosisImage from "@/assets/hyperhidrosis-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 25,
+      title: "تعریق بیش از حد: علت‌ها و راهکارهای درمان",
+      description: "راهنمای جامع تعریق بیش از حد، علل، علائم خطرناک، راهکارهای درمان و خدمات پزشکی در منزل",
+      image: hyperhidrosisImage,
+      link: "/articles/hyperhidrosis",
+      category: "عمومی"
+    },
     {
       id: 24,
       title: "دیابت و راه‌های کنترل آن",
