@@ -24,9 +24,18 @@ import coffeeHeartImage from "@/assets/coffee-heart-article.jpg";
 import pediatricsImage from "@/assets/pediatrics.jpg";
 import vaccinationImage from "@/assets/vaccination-article.jpg";
 import hivAidsImage from "@/assets/hiv-aids-article.jpg";
+import diabetesImage from "@/assets/diabetes-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 24,
+      title: "دیابت و راه‌های کنترل آن",
+      description: "راهنمای جامع دیابت، انواع دیابت، علائم، کنترل قند خون و خدمات پزشکی در منزل برای بیماران دیابتی",
+      image: diabetesImage,
+      link: "/articles/diabetes",
+      category: "بیماری‌های مزمن"
+    },
     {
       id: 23,
       title: "عفونت با ویروس HIV (ایدز)",
@@ -229,7 +238,7 @@ const ArticlesPage = () => {
     }
   ];
 
-  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان", "مغز و اعصاب", "قلب و عروق", "تغذیه", "عمومی"];
+  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان", "مغز و اعصاب", "قلب و عروق", "تغذیه", "عمومی", "بیماری‌های مزمن"];
 
   return (
     <div className="min-h-screen bg-background">
