@@ -43,6 +43,7 @@ import DepressionHeartDiseasePage from "./pages/articles/DepressionHeartDiseaseP
 import MedicalConsultationPage from "./pages/articles/MedicalConsultationPage";
 import ChildGrowthMonitoringPage from "./pages/articles/ChildGrowthMonitoringPage";
 import VitaminsHealthPage from "./pages/articles/VitaminsHealthPage";
+import VaccinationPage from "./pages/articles/VaccinationPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -102,6 +103,7 @@ const App = () => (
            <Route path="/articles/medical-consultation" element={<MedicalConsultationPage />} />
            <Route path="/articles/child-growth-monitoring" element={<ChildGrowthMonitoringPage />} />
            <Route path="/articles/vitamins-health" element={<VitaminsHealthPage />} />
+           <Route path="/articles/vaccination" element={<VaccinationPage />} />
            
            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

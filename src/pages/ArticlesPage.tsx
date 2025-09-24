@@ -22,9 +22,18 @@ import meningitisImage from "@/assets/meningitis-article.jpg";
 import airPollutionImage from "@/assets/air-pollution-article.jpg";
 import coffeeHeartImage from "@/assets/coffee-heart-article.jpg";
 import pediatricsImage from "@/assets/pediatrics.jpg";
+import vaccinationImage from "@/assets/vaccination-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 22,
+      title: "واکسیناسیون و اهمیت آن در حفظ سلامت",
+      description: "همه چیز در مورد واکسیناسیون، نحوه عمل واکسن، برنامه واکسیناسیون و خدمات تزریق واکسن در منزل",
+      image: vaccinationImage,
+      link: "/articles/vaccination",
+      category: "واکسیناسیون"
+    },
     {
       id: 21,
       title: "اهمیت ویتامین‌ها در سلامت بدن",
