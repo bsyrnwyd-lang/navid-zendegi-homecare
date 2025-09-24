@@ -23,9 +23,18 @@ import airPollutionImage from "@/assets/air-pollution-article.jpg";
 import coffeeHeartImage from "@/assets/coffee-heart-article.jpg";
 import pediatricsImage from "@/assets/pediatrics.jpg";
 import vaccinationImage from "@/assets/vaccination-article.jpg";
+import hivAidsImage from "@/assets/hiv-aids-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 23,
+      title: "عفونت با ویروس HIV (ایدز)",
+      description: "راهنمای جامع ویروس HIV، راه‌های انتقال، علائم، مراحل بیماری و خدمات پزشکی در منزل برای بیماران",
+      image: hivAidsImage,
+      link: "/articles/hiv-aids",
+      category: "بیماری‌های عفونی"
+    },
     {
       id: 22,
       title: "واکسیناسیون و اهمیت آن در حفظ سلامت",
