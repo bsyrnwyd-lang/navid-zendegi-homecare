@@ -31,7 +31,7 @@ const Hero = () => {
             ویزیت پزشک در منزل تهران
             <br />
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              نوید زندگی | پزشکی در منزل با کیفیت
+              نوید زندگی | ویزیت پزشک عمومی و متخصص در منزل
             </span>
           </h1>
           
