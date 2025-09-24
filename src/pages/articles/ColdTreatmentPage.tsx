@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, Home, Thermometer, Shield, Clock } from "lucide-react";
+import { Phone, MessageCircle, Home, Thermometer, Shield, Clock, Heart, AlertTriangle, CheckCircle } from "lucide-react";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
+import LazyImage from "@/components/LazyImage";
 import coldTreatmentImage from "@/assets/medical-consultation-article.jpg";
 
 const ColdTreatmentPage = () => {
@@ -21,6 +23,15 @@ const ColdTreatmentPage = () => {
     { name: "درمان سرماخوردگی در منزل", url: "/articles/cold-treatment" }
   ];
 
+  const articleData = {
+    title: "درمان سرماخوردگی در منزل | راهنمای کامل نوید زندگی",
+    description: "روش‌های مؤثر درمان سرماخوردگی در منزل، نشانه‌های خطر و زمان مراجعه به پزشک",
+    author: "دکتر نیره مظاهری تهراتی",
+    publishedDate: "2024-09-24",
+    modifiedDate: "2024-09-24",
+    image: "https://navidzendegi.com/medical-consultation-article.jpg"
+  };
+
   return (
     <>
       <SEOHead 
@@ -28,6 +39,10 @@ const ColdTreatmentPage = () => {
         description="روش‌های مؤثر درمان سرماخوردگی در منزل، نشانه‌های خطر و زمان مراجعه به پزشک. ویزیت پزشک در منزل تهران توسط نوید زندگی."
         keywords="درمان سرماخوردگی در منزل، سرماخوردگی، درمان سرما، ویزیت پزشک در منزل، نوید زندگی، پزشک در منزل تهران"
         canonical="https://navidzendegi.com/articles/cold-treatment"
+      />
+      <StructuredData 
+        breadcrumbs={breadcrumbItems}
+        article={articleData}
       />
 
       <div className="min-h-screen bg-background">
@@ -65,16 +80,39 @@ const ColdTreatmentPage = () => {
                 </Button>
               </div>
 
-              <img 
+              <LazyImage 
                 src={coldTreatmentImage}
                 alt="درمان سرماخوردگی در منزل - مشاوره پزشکی نوید زندگی"
                 className="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-8"
+                width={800}
+                height={450}
               />
             </header>
 
             <div className="prose prose-lg max-w-none">
-              <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-foreground">سرماخوردگی چیست؟</h2>
+              {/* Table of Contents */}
+              <nav className="bg-muted/30 p-6 rounded-lg mb-8">
+                <h2 className="text-lg font-semibold mb-4 text-foreground">فهرست مطالب:</h2>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li><a href="#what-is-cold" className="hover:text-primary transition-colors">سرماخوردگی چیست؟</a></li>
+                  <li><a href="#symptoms" className="hover:text-primary transition-colors">علائم سرماخوردگی</a></li>
+                  <li><a href="#home-treatment" className="hover:text-primary transition-colors">روش‌های درمان در منزل</a></li>
+                  <li><a href="#medication" className="hover:text-primary transition-colors">دارودرمانی</a></li>
+                  <li><a href="#warning-signs" className="hover:text-primary transition-colors">نشانه‌های خطر</a></li>
+                  <li><a href="#prevention" className="hover:text-primary transition-colors">پیشگیری</a></li>
+                </ul>
+              </nav>
+
+              <section id="what-is-cold" className="mb-8">
+                <h2 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
+                  <Heart className="w-6 h-6 text-primary" />
+                  سرماخوردگی چیست؟
+                </h2>
+                <div className="bg-primary/5 border-r-4 border-primary p-4 mb-4">
+                  <p className="text-foreground font-medium">
+                    ⚡ نکته مهم: سرماخوردگی بیماری ویروسی است و آنتی‌بیوتیک برای آن مؤثر نیست
+                  </p>
+                </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   سرماخوردگی یکی از شایع‌ترین بیماری‌های عفونی است که توسط ویروس‌ها ایجاد می‌شود. 
                   این بیماری معمولاً خود به خود بهبود می‌یابد، اما می‌توان با روش‌های مناسب درمان در منزل، 
@@ -82,20 +120,54 @@ const ColdTreatmentPage = () => {
                 </p>
               </section>
 
-              <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-foreground">علائم سرماخوردگی</h2>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>آبریزش و گرفتگی بینی</li>
-                  <li>عطسه و سرفه</li>
-                  <li>درد گلو</li>
-                  <li>سردرد خفیف</li>
-                  <li>خستگی و ضعف</li>
-                  <li>تب خفیف (در برخی موارد)</li>
-                </ul>
+              <section id="symptoms" className="mb-8">
+                <h2 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
+                  <CheckCircle className="w-6 h-6 text-secondary" />
+                  علائم سرماخوردگی
+                </h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-secondary/10 p-4 rounded-lg">
+                    <h3 className="font-semibold mb-3 text-foreground">علائم اولیه (روز ۱-۳)</h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary" />
+                        آبریزش و گرفتگی بینی
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary" />
+                        عطسه مکرر
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary" />
+                        درد خفیف گلو
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="bg-accent/10 p-4 rounded-lg">
+                    <h3 className="font-semibold mb-3 text-foreground">علائم پیشرفته (روز ۴-۷)</h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-accent" />
+                        سرفه خشک یا با خلط
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-accent" />
+                        سردرد و خستگی
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-accent" />
+                        تب خفیف (در برخی موارد)
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </section>
 
-              <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-foreground">روش‌های درمان سرماخوردگی در منزل</h2>
+              <section id="home-treatment" className="mb-8">
+                <h2 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
+                  <Home className="w-6 h-6 text-primary" />
+                  روش‌های درمان سرماخوردگی در منزل
+                </h2>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-muted/50 p-6 rounded-lg">
@@ -130,8 +202,11 @@ const ColdTreatmentPage = () => {
                 </ul>
               </section>
 
-              <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-foreground">دارودرمانی در منزل</h2>
+              <section id="medication" className="mb-8">
+                <h2 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
+                  <Shield className="w-6 h-6 text-primary" />
+                  دارودرمانی در منزل
+                </h2>
                 <div className="bg-primary/10 border-r-4 border-primary p-4 mb-4">
                   <p className="text-foreground font-semibold">
                     توجه: مصرف هر گونه دارو باید تحت نظر پزشک انجام شود
@@ -145,8 +220,11 @@ const ColdTreatmentPage = () => {
                 </ul>
               </section>
 
-              <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-foreground text-red-600">⚠️ نشانه‌های خطر و زمان مراجعه به پزشک</h2>
+              <section id="warning-signs" className="mb-8">
+                <h2 className="text-2xl font-bold mb-4 text-foreground text-red-600 flex items-center gap-2">
+                  <AlertTriangle className="w-6 h-6 text-red-600" />
+                  نشانه‌های خطر و زمان مراجعه به پزشک
+                </h2>
                 <div className="bg-red-50 border border-red-200 p-4 rounded-lg">
                   <p className="text-red-800 font-semibold mb-3">در صورت مشاهده این علائم، فوراً با پزشک تماس بگیرید:</p>
                   <ul className="list-disc list-inside space-y-2 text-red-700">
@@ -160,15 +238,53 @@ const ColdTreatmentPage = () => {
                 </div>
               </section>
 
-              <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-foreground">پیشگیری از سرماخوردگی</h2>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>شستن مداوم دست‌ها با آب و صابون</li>
-                  <li>اجتناب از تماس با افراد مبتلا</li>
-                  <li>تقویت سیستم ایمنی با تغذیه سالم و ورزش</li>
-                  <li>خواب کافی و مدیریت استرس</li>
-                  <li>واکسیناسیون در فصول مناسب</li>
-                </ul>
+              <section id="prevention" className="mb-8">
+                <h2 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
+                  <Shield className="w-6 h-6 text-secondary" />
+                  پیشگیری از سرماخوردگی
+                </h2>
+                <div className="bg-secondary/5 border border-secondary/20 p-6 rounded-lg mb-4">
+                  <h3 className="font-semibold text-foreground mb-3">💡 نکته طلایی پیشگیری:</h3>
+                  <p className="text-muted-foreground">
+                    بهترین درمان، پیشگیری است! رعایت نکات بهداشتی می‌تواند تا ۸۰٪ از ابتلا به سرماخوردگی جلوگیری کند.
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h3 className="font-semibold mb-3 text-foreground">اقدامات روزانه:</h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary" />
+                        شستن مداوم دست‌ها (۲۰ ثانیه)
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary" />
+                        اجتناب از لمس صورت
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary" />
+                        حفظ فاصله از افراد مبتلا
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-3 text-foreground">تقویت ایمنی:</h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary" />
+                        تغذیه سالم و متنوع
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary" />
+                        خواب کافی (۷-۸ ساعت)
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-secondary" />
+                        ورزش منظم و مدیریت استرس
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </section>
             </div>
 
