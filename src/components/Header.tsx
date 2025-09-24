@@ -28,7 +28,7 @@ const Header = () => {
     { to: "/general-doctor", label: "ویزیت پزشک عمومی" },
     { to: "/cardiology", label: "ویزیت پزشک قلب" },
     { to: "/about", label: "درباره ما" },
-    { to: "/pricing", label: "تعرفه خدمات" },
+    { to: "/pricing", label: "تعرفه خدمات پزشکی در منزل" },
     { to: "/contact", label: "تماس با ما" },
     { to: "/collaboration", label: "همکاری با ما" }
   ];
