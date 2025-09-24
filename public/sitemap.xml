@@ -238,4 +238,10 @@
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/depression-heart-disease</loc>
+    <lastmod>2024-09-24</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>

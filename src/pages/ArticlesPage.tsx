@@ -200,6 +200,14 @@ const ArticlesPage = () => {
       image: medicalConsultationImage,
       link: "/articles/cold-treatment",
       category: "عمومی"
+    },
+    {
+      id: 21,
+      title: "افسردگی و بیماری‌های قلبی: نگاهی علمی به یک ارتباط دوطرفه",
+      description: "بررسی علمی رابطه دوطرفه میان افسردگی و بیماری‌های قلبی، عوامل خطر و راهکارهای درمانی",
+      image: smokingImage,
+      link: "/articles/depression-heart-disease",
+      category: "قلب و عروق"
     }
   ];
 
