@@ -38,6 +38,7 @@ import MigrainePage from "./pages/articles/MigrainePage";
 import MeningitisPage from "./pages/articles/MeningitisPage";
 import AirPollutionPage from "./pages/articles/AirPollutionPage";
 import CoffeeHeartPage from "./pages/articles/CoffeeHeartPage";
+import ColdTreatmentPage from "./pages/articles/ColdTreatmentPage";
 import MedicalConsultationPage from "./pages/articles/MedicalConsultationPage";
 import ChildGrowthMonitoringPage from "./pages/articles/ChildGrowthMonitoringPage";
 import VitaminsHealthPage from "./pages/articles/VitaminsHealthPage";
@@ -94,7 +95,8 @@ const App = () => (
           <Route path="/articles/migraine" element={<MigrainePage />} />
           <Route path="/articles/meningitis" element={<MeningitisPage />} />
           <Route path="/articles/air-pollution" element={<AirPollutionPage />} />
-           <Route path="/articles/coffee-heart" element={<CoffeeHeartPage />} />
+          <Route path="/articles/coffee-heart" element={<CoffeeHeartPage />} />
+          <Route path="/articles/cold-treatment" element={<ColdTreatmentPage />} />
            <Route path="/articles/medical-consultation" element={<MedicalConsultationPage />} />
            <Route path="/articles/child-growth-monitoring" element={<ChildGrowthMonitoringPage />} />
            <Route path="/articles/vitamins-health" element={<VitaminsHealthPage />} />
