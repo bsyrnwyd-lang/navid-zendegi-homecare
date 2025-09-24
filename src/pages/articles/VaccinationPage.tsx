@@ -31,7 +31,7 @@ const VaccinationPage = () => {
         article={{
           title: "واکسیناسیون و اهمیت آن در حفظ سلامت",
           description: "راهنمای جامع واکسیناسیون، نحوه عمل واکسن و خدمات تزریق در منزل",
-          author: "دکتر نیره مظاهری",
+          author: "دکتر نیره مظاهری تهرانی",
           publishedDate: "2024-01-20",
           image: vaccinationImage
         }}
@@ -50,7 +50,7 @@ const VaccinationPage = () => {
               </h1>
               
               <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-6">
-                <span>نویسنده: دکتر نیره مظاهری، متخصص قلب و عروق</span>
+                <span>نویسنده: دکتر نیره مظاهری تهرانی، متخصص قلب و عروق</span>
                 <span>تاریخ انتشار: 20 ژانویه 2024</span>
               </div>
 
@@ -122,6 +122,27 @@ const VaccinationPage = () => {
                 <p>
                   واکسیناسیون نقشی حیاتی در پیشگیری از بیماری‌ها دارد. پایبندی به برنامه واکسیناسیون و انجام دوزهای یادآور در سنین مختلف، به‌ویژه برای افراد پرخطر، از اهمیت زیادی برخوردار است. استفاده از خدمات تزریق واکسن در منزل می‌تواند فرآیند واکسیناسیون را ساده‌تر، امن‌تر و راحت‌تر کند.
                 </p>
+              </section>
+
+              {/* Contact Section */}
+              <section className="bg-primary/5 border border-primary/20 rounded-lg p-6 text-center">
+                <h3 className="text-xl font-semibold mb-3 text-primary">نیاز به مشاوره پزشکی دارید؟</h3>
+                <p className="text-muted-foreground mb-4">
+                  برای دریافت خدمات واکسیناسیون و مشاوره پزشکی در منزل با ما تماس بگیرید
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                  <a 
+                    href="tel:+989386117912" 
+                    className="inline-flex items-center gap-2 text-lg font-bold text-primary hover:text-primary/80 transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    ۰۹۳۸-۶۱۱-۷۹۱۲
+                  </a>
+                  <span className="text-muted-foreground hidden sm:inline">|</span>
+                  <span className="text-sm text-muted-foreground">پاسخگویی ۲۴ ساعته</span>
+                </div>
               </section>
             </div>
           </article>
