@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, Home, Thermometer, Shield, Clock, Heart, AlertTriangle, CheckCircle } from "lucide-react";
+import { Phone, MessageCircle, Home, Thermometer, Shield, Clock, Heart, AlertTriangle, CheckCircle, Stethoscope, Users, Award } from "lucide-react";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import LazyImage from "@/components/LazyImage";
-import coldTreatmentImage from "@/assets/medical-consultation-article.jpg";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import coldTreatmentImage from "@/assets/home-medical-consultation.jpg";
 
 const ColdTreatmentPage = () => {
   const phoneNumber = "09386117912";
@@ -46,11 +48,13 @@ const ColdTreatmentPage = () => {
       />
 
       <div className="min-h-screen bg-background">
-        <header className="bg-white shadow-sm border-b sticky top-0 z-50">
-          <div className="container mx-auto px-4 py-4">
-            <BreadcrumbNavigation items={breadcrumbItems} />
-          </div>
-        </header>
+        <Header />
+        <main className="pt-20 md:pt-24">
+          <header className="bg-white shadow-sm border-b">
+            <div className="container mx-auto px-4 py-4">
+              <BreadcrumbNavigation items={breadcrumbItems} />
+            </div>
+          </header>
 
         <article className="py-12">
           <div className="container mx-auto px-4 max-w-4xl">
@@ -82,10 +86,10 @@ const ColdTreatmentPage = () => {
 
               <LazyImage 
                 src={coldTreatmentImage}
-                alt="درمان سرماخوردگی در منزل - مشاوره پزشکی نوید زندگی"
+                alt="ویزیت پزشک در منزل تهران - خدمات پزشکی نوید زندگی"
                 className="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-8"
                 width={800}
-                height={450}
+                height={512}
               />
             </header>
 
@@ -95,6 +99,7 @@ const ColdTreatmentPage = () => {
                 <h2 className="text-lg font-semibold mb-4 text-foreground">فهرست مطالب:</h2>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li><a href="#what-is-cold" className="hover:text-primary transition-colors">سرماخوردگی چیست؟</a></li>
+                  <li><a href="#home-services" className="hover:text-primary transition-colors">خدمات پزشکی در منزل</a></li>
                   <li><a href="#symptoms" className="hover:text-primary transition-colors">علائم سرماخوردگی</a></li>
                   <li><a href="#home-treatment" className="hover:text-primary transition-colors">روش‌های درمان در منزل</a></li>
                   <li><a href="#medication" className="hover:text-primary transition-colors">دارودرمانی</a></li>
@@ -102,6 +107,82 @@ const ColdTreatmentPage = () => {
                   <li><a href="#prevention" className="hover:text-primary transition-colors">پیشگیری</a></li>
                 </ul>
               </nav>
+
+              <section id="home-services" className="mb-8">
+                <h2 className="text-2xl font-bold mb-6 text-foreground flex items-center gap-2">
+                  <Stethoscope className="w-6 h-6 text-primary" />
+                  خدمات پزشکی در منزل نوید زندگی
+                </h2>
+                
+                <div className="bg-gradient-to-br from-primary/10 via-background to-secondary/10 p-6 rounded-lg mb-6">
+                  <p className="text-foreground text-lg font-medium mb-4 text-center">
+                    🏥 نوید زندگی؛ پیشرو در ارائه خدمات پزشکی تخصصی در منزل
+                  </p>
+                  <p className="text-muted-foreground text-center leading-relaxed">
+                    تیم پزشکی مجرب ما با تجهیزات پیشرفته آماده ارائه کلیه خدمات درمانی در راحتی منزل شما است
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="bg-primary/5 border border-primary/20 p-6 rounded-lg text-center">
+                    <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-3 text-foreground">تیم پزشکی مجرب</h3>
+                    <p className="text-muted-foreground text-sm">
+                      پزشکان عمومی و متخصص با سال‌ها تجربه در ارائه خدمات درمانی در منزل
+                    </p>
+                  </div>
+                  
+                  <div className="bg-secondary/5 border border-secondary/20 p-6 rounded-lg text-center">
+                    <Shield className="w-12 h-12 text-secondary mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-3 text-foreground">تجهیزات پیشرفته</h3>
+                    <p className="text-muted-foreground text-sm">
+                      تجهیزات پزشکی استاندارد برای انجام معاینات دقیق و تشخیص‌های صحیح
+                    </p>
+                  </div>
+                  
+                  <div className="bg-accent/5 border border-accent/20 p-6 rounded-lg text-center">
+                    <Award className="w-12 h-12 text-accent mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-3 text-foreground">خدمات تضمینی</h3>
+                    <p className="text-muted-foreground text-sm">
+                      کیفیت خدمات با ضمانت کامل و پیگیری مستمر وضعیت سلامت بیماران
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-muted/20 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-4 text-foreground">خدمات ویژه درمان سرماخوردگی:</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <ul className="space-y-3">
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-primary" />
+                        <span>معاینه کامل و تشخیص دقیق</span>
+                      </li>
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-primary" />
+                        <span>تجویز داروهای مناسب</span>
+                      </li>
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-primary" />
+                        <span>آموزش روش‌های درمان خانگی</span>
+                      </li>
+                    </ul>
+                    <ul className="space-y-3">
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-secondary" />
+                        <span>پیگیری تلفنی روند درمان</span>
+                      </li>
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-secondary" />
+                        <span>مشاوره تغذیه و سبک زندگی</span>
+                      </li>
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-secondary" />
+                        <span>ویزیت مجدد در صورت نیاز</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
 
               <section id="what-is-cold" className="mb-8">
                 <h2 className="text-2xl font-bold mb-4 text-foreground flex items-center gap-2">
@@ -288,49 +369,64 @@ const ColdTreatmentPage = () => {
               </section>
             </div>
 
-            <div className="mt-12 bg-primary/5 rounded-lg p-8 text-center">
-              <h2 className="text-2xl font-bold mb-4 text-foreground">
-                نیاز به مشاوره پزشکی دارید؟
+            <div className="mt-12 bg-gradient-to-br from-primary/10 via-background to-secondary/10 rounded-lg p-8 text-center">
+              <h2 className="text-3xl font-bold mb-6 text-foreground">
+                خدمات پزشکی نوید زندگی در منزل شما
               </h2>
-              <p className="text-muted-foreground mb-6">
-                تیم پزشکی نوید زندگی آماده ارائه خدمات ویزیت در منزل و مشاوره تخصصی در سراسر تهران و کرج است
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                تیم پزشکی مجرب نوید زندگی با تجهیزات کامل آماده ارائه خدمات تخصصی درمان سرماخوردگی و سایر بیماری‌ها در راحتی منزل شماست
               </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div className="bg-white/50 p-4 rounded-lg border border-primary/20">
+                  <Home className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold text-foreground mb-2">ویزیت در منزل</h3>
+                  <p className="text-sm text-muted-foreground">بدون نیاز به مراجعه به مطب</p>
+                </div>
+                <div className="bg-white/50 p-4 rounded-lg border border-secondary/20">
+                  <Clock className="w-8 h-8 text-secondary mx-auto mb-3" />
+                  <h3 className="font-semibold text-foreground mb-2">خدمات ۲۴ ساعته</h3>
+                  <p className="text-sm text-muted-foreground">در تمام ساعات شبانه‌روز</p>
+                </div>
+                <div className="bg-white/50 p-4 rounded-lg border border-accent/20">
+                  <Shield className="w-8 h-8 text-accent mx-auto mb-3" />
+                  <h3 className="font-semibold text-foreground mb-2">تضمین کیفیت</h3>
+                  <p className="text-sm text-muted-foreground">با بهترین متخصصان</p>
+                </div>
+                <div className="bg-white/50 p-4 rounded-lg border border-primary/20">
+                  <Heart className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold text-foreground mb-2">مراقبت کامل</h3>
+                  <p className="text-sm text-muted-foreground">از تشخیص تا بهبود کامل</p>
+                </div>
+              </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button
                   onClick={handleCall}
-                  className="flex items-center gap-2 px-6 py-3"
+                  className="flex items-center gap-2 px-8 py-4 text-lg"
                 >
                   <Phone className="w-5 h-5" />
-                  تماس فوری: {phoneNumber}
+                  درخواست ویزیت فوری: {phoneNumber}
                 </Button>
                 <Button
                   variant="outline"
                   onClick={handleWhatsApp}
-                  className="flex items-center gap-2 px-6 py-3"
+                  className="flex items-center gap-2 px-8 py-4 text-lg border-2"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  واتساپ
+                  مشاوره رایگان واتساپ
                 </Button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 text-sm">
-                <div className="flex items-center justify-center gap-2">
-                  <Home className="w-4 h-4 text-primary" />
-                  <span>ویزیت در منزل</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <Clock className="w-4 h-4 text-secondary" />
-                  <span>خدمات ۲۴ ساعته</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <Shield className="w-4 h-4 text-accent" />
-                  <span>تضمین کیفیت</span>
-                </div>
+              <div className="mt-8 text-sm text-muted-foreground">
+                <p className="mb-2">🌟 بیش از ۱۰ سال تجربه در خدمات پزشکی منزل</p>
+                <p>📍 پوشش کامل تهران و کرج - ویزیت در کمترین زمان ممکن</p>
               </div>
             </div>
           </div>
         </article>
+        </main>
+        <Footer />
       </div>
     </>
   );
