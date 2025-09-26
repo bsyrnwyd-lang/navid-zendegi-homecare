@@ -28,9 +28,18 @@ import diabetesImage from "@/assets/diabetes-article.jpg";
 import hyperhidrosisImage from "@/assets/hyperhidrosis-article.jpg";
 import headacheImage from "@/assets/headache-article.jpg";
 import dizzinessImage from "@/assets/dizziness-article.jpg";
+import depressionImage from "@/assets/depression-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 28,
+      title: "افسردگی: علائم، نشانه‌ها و روش‌های درمان",
+      description: "راهنمای جامع افسردگی، علائم هشدار، روش‌های درمان و خدمات روانشناسی در منزل",
+      image: depressionImage,
+      link: "/articles/depression",
+      category: "روانشناسی"
+    },
     {
       id: 27,
       title: "سرگیجه: علت‌ها، تفاوت‌ها و راه‌های پیشگیری",
