@@ -88,7 +88,7 @@ const DizzinessPage = () => {
           {/* Author and Date */}
           <div className="mt-8 pt-6 border-t border-border" dir="rtl">
             <p className="text-sm text-muted-foreground">
-              نویسنده: دکتر نیره مظاهری تهرانی
+              نویسنده: دکتر نیره مظاهری تهرانی متخصص قلب و عروق
             </p>
           </div>
 
