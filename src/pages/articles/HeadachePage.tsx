@@ -92,9 +92,12 @@ const HeadachePage = () => {
             <p className="text-muted-foreground mb-4">
               برای دریافت خدمات پزشکی در منزل با ما تماس بگیرید
             </p>
-            <div className="text-2xl font-bold text-primary">
+            <a 
+              href="tel:+989386117912" 
+              className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
+            >
               ۰۹۳۸۶۱۱۷۹۱۲
-            </div>
+            </a>
           </div>
         </article>
       </main>
