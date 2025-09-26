@@ -27,9 +27,18 @@ import hivAidsImage from "@/assets/hiv-aids-article.jpg";
 import diabetesImage from "@/assets/diabetes-article.jpg";
 import hyperhidrosisImage from "@/assets/hyperhidrosis-article.jpg";
 import headacheImage from "@/assets/headache-article.jpg";
+import dizzinessImage from "@/assets/dizziness-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 27,
+      title: "سرگیجه: علت‌ها، تفاوت‌ها و راه‌های پیشگیری",
+      description: "راهنمای جامع سرگیجه، تفاوت احساس عدم تعادل و سرگیجه واقعی، علائم خطرناک و خدمات پزشکی در منزل",
+      image: dizzinessImage,
+      link: "/articles/dizziness",
+      category: "عمومی"
+    },
     {
       id: 26,
       title: "سردرد: علت‌ها، علائم خطر و روش‌های کنترل",
