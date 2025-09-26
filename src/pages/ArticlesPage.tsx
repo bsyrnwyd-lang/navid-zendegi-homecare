@@ -26,9 +26,18 @@ import vaccinationImage from "@/assets/vaccination-article.jpg";
 import hivAidsImage from "@/assets/hiv-aids-article.jpg";
 import diabetesImage from "@/assets/diabetes-article.jpg";
 import hyperhidrosisImage from "@/assets/hyperhidrosis-article.jpg";
+import headacheImage from "@/assets/headache-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 26,
+      title: "سردرد: علت‌ها، علائم خطر و روش‌های کنترل",
+      description: "راهنمای جامع سردرد، علل، علائم خطرناک، روش‌های درمان میگرن و خدمات پزشکی در منزل",
+      image: headacheImage,
+      link: "/articles/headache",
+      category: "عمومی"
+    },
     {
       id: 25,
       title: "تعریق بیش از حد: علت‌ها و راهکارهای درمان",

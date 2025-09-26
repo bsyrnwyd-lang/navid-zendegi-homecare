@@ -47,6 +47,7 @@ import VaccinationPage from "./pages/articles/VaccinationPage";
 import HIVAidsPage from "./pages/articles/HIVAidsPage";
 import DiabetesPage from "./pages/articles/DiabetesPage";
 import HyperhidrosisPage from "./pages/articles/HyperhidrosisPage";
+import HeadachePage from "./pages/articles/HeadachePage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -110,6 +111,7 @@ const App = () => (
            <Route path="/articles/hiv-aids" element={<HIVAidsPage />} />
            <Route path="/articles/diabetes" element={<DiabetesPage />} />
            <Route path="/articles/hyperhidrosis" element={<HyperhidrosisPage />} />
+           <Route path="/articles/headache" element={<HeadachePage />} />
            
            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
