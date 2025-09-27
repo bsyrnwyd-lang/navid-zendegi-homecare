@@ -19,6 +19,7 @@ import PhysiotherapyPage from "./pages/services/PhysiotherapyPage";
 import RadiologyPage from "./pages/services/RadiologyPage";
 import ENTPage from "./pages/services/ENTPage";
 import EchoECGPage from "./pages/services/EchoECGPage";
+import HolterPage from "./pages/services/HolterPage";
 import ContactPage from "./pages/ContactPage";
 import InfluenzaTreatmentPage from "./pages/articles/InfluenzaTreatmentPage";
 import StrokeSymptomsPage from "./pages/articles/StrokeSymptomsPage";
@@ -84,6 +85,7 @@ const App = () => (
           <Route path="/services/radiology" element={<RadiologyPage />} />
           <Route path="/services/ent" element={<ENTPage />} />
           <Route path="/services/echo-ecg" element={<EchoECGPage />} />
+          <Route path="/services/holter" element={<HolterPage />} />
           
           {/* Article Pages */}
           <Route path="/articles/influenza-treatment" element={<InfluenzaTreatmentPage />} />
