@@ -45,7 +45,8 @@ const Header = () => {
     { to: "/services/nursing", label: "خدمات پرستاری در منزل" },
     { to: "/services/echo-ecg", label: "اکو و نوار قلب در منزل" },
     { to: "/services/physiotherapy", label: "فیزیوتراپی در منزل" },
-    { to: "/services/radiology", label: "رادیولوژی و سونوگرافی در منزل" }
+    { to: "/services/radiology", label: "رادیولوژی و سونوگرافی در منزل" },
+    { to: "/services/holter", label: "هولتر قلب و فشار خون در منزل" }
   ];
 
   return (
