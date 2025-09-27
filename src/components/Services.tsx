@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Heart, FileText, UserCheck, Scan, Ear, Activity } from "lucide-react";
+import { Stethoscope, Heart, FileText, UserCheck, Scan, Ear, Activity, Monitor } from "lucide-react";
 import nursingImage from "@/assets/iranian-nurse-home-care.jpg";
+import holterImage from "@/assets/holter-monitoring.jpg";
 
 const Services = () => {
   const services = [
@@ -45,6 +46,12 @@ const Services = () => {
       title: "رادیولوژی و سونوگرافی در منزل",
       description: "خدمات رادیولوژی و سونوگرافی در منزل توسط تکنسین‌های مجرب نوید زندگی",
       features: ["سونوگرافی در منزل", "رادیولوژی پرتابل", "ارزیابی تصویری", "گزارش تخصصی"]
+    },
+    {
+      icon: Monitor,
+      title: "هولتر قلب و فشار خون در منزل",
+      description: "خدمات هولتر ریتم قلب و هولتر فشار خون در منزل با دستگاه‌های مدرن و گزارش تخصصی",
+      features: ["هولتر ریتم ۲۴-۴۸ ساعته در منزل", "هولتر فشار خون ۲۴ ساعته", "نصب و جمع‌آوری در منزل", "گزارش تخصصی کاردیولوژیست"]
     }
   ];
 
