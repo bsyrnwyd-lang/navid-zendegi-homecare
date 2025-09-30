@@ -32,9 +32,18 @@ import depressionImage from "@/assets/depression-article.jpg";
 import ivTherapyImage from "@/assets/iv-therapy-home.jpg";
 import patientDemandsImage from "@/assets/patient-demands-article.jpg";
 import feverTrackingImage from "@/assets/fever-tracking-article.jpg";
+import greenTeaImage from "@/assets/green-tea-weight-loss-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 32,
+      title: "چای سبز و کاهش وزن؛ نگاه علمی",
+      description: "بررسی علمی تأثیر چای سبز بر کاهش وزن، ترکیبات فعال، شواهد تحقیقاتی و نقش خدمات پزشکی در منزل",
+      image: greenTeaImage,
+      link: "/articles/green-tea-weight-loss",
+      category: "تغذیه"
+    },
     {
       id: 31,
       title: "تب و پیگیری آن؛ چه زمانی باید به پزشک در منزل مراجعه کنیم؟",

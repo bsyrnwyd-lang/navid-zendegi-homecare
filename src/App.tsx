@@ -54,6 +54,7 @@ import DepressionPage from "./pages/articles/DepressionPage";
 import IVTherapyHomePage from "./pages/articles/IVTherapyHomePage";
 import PatientDemandsPage from "./pages/articles/PatientDemandsPage";
 import FeverTrackingPage from "./pages/articles/FeverTrackingPage";
+import GreenTeaWeightLossPage from "./pages/articles/GreenTeaWeightLossPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -124,6 +125,7 @@ const App = () => (
           <Route path="/articles/iv-therapy-home" element={<IVTherapyHomePage />} />
           <Route path="/articles/patient-demands" element={<PatientDemandsPage />} />
           <Route path="/articles/fever-tracking" element={<FeverTrackingPage />} />
+          <Route path="/articles/green-tea-weight-loss" element={<GreenTeaWeightLossPage />} />
            
            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
