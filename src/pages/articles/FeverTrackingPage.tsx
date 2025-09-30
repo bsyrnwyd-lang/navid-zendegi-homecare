@@ -1,3 +1,6 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
@@ -35,9 +38,12 @@ const FeverTrackingPage = () => {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
-        <div className="container mx-auto px-4 py-8 max-w-4xl">
-          <BreadcrumbNavigation items={breadcrumbs} />
+      <div className="min-h-screen bg-background">
+        <Header />
+        
+        <main className="pt-20 pb-12">
+          <div className="container mx-auto px-4">
+            <BreadcrumbNavigation items={breadcrumbs} />
 
           <article className="mt-8 space-y-8">
             <header>
@@ -128,7 +134,11 @@ const FeverTrackingPage = () => {
               </p>
             </section>
           </article>
-        </div>
+          </div>
+        </main>
+
+        <FloatingContact />
+        <Footer />
       </div>
     </>
   );
