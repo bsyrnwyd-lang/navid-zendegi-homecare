@@ -33,9 +33,18 @@ import ivTherapyImage from "@/assets/iv-therapy-home.jpg";
 import patientDemandsImage from "@/assets/patient-demands-article.jpg";
 import feverTrackingImage from "@/assets/fever-tracking-article.jpg";
 import greenTeaImage from "@/assets/green-tea-weight-loss-article.jpg";
+import breastMassImage from "@/assets/breast-mass-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 33,
+      title: "توده‌های پستانی؛ علل، تشخیص و اهمیت پیگیری",
+      description: "راهنمای جامع توده‌های پستانی، علل خوش‌خیم و بدخیم، علائم هشداردهنده، روش‌های تشخیص و خدمات پزشکی در منزل",
+      image: breastMassImage,
+      link: "/articles/breast-mass",
+      category: "سلامت زنان"
+    },
     {
       id: 32,
       title: "چای سبز و کاهش وزن؛ نگاه علمی",
