@@ -29,9 +29,18 @@ import hyperhidrosisImage from "@/assets/hyperhidrosis-article.jpg";
 import headacheImage from "@/assets/headache-article.jpg";
 import dizzinessImage from "@/assets/dizziness-article.jpg";
 import depressionImage from "@/assets/depression-article.jpg";
+import ivTherapyImage from "@/assets/iv-therapy-home.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 29,
+      title: "سرم درمانی در منزل؛ چرا بیماران به دریافت سرم تمایل دارند؟",
+      description: "راهنمای جامع سرم درمانی در منزل، فواید و مضرات تزریق سرم، خدمات سرم تراپی در خانه و نکات مهم درباره استفاده از سرم",
+      image: ivTherapyImage,
+      link: "/articles/iv-therapy-home",
+      category: "خدمات پزشکی"
+    },
     {
       id: 28,
       title: "افسردگی: علائم، نشانه‌ها و روش‌های درمان",
