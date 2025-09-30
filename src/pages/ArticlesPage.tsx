@@ -31,9 +31,18 @@ import dizzinessImage from "@/assets/dizziness-article.jpg";
 import depressionImage from "@/assets/depression-article.jpg";
 import ivTherapyImage from "@/assets/iv-therapy-home.jpg";
 import patientDemandsImage from "@/assets/patient-demands-article.jpg";
+import feverTrackingImage from "@/assets/fever-tracking-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 31,
+      title: "تب و پیگیری آن؛ چه زمانی باید به پزشک در منزل مراجعه کنیم؟",
+      description: "راهنمای کامل پیگیری تب در منزل، علل تب، زمان مراجعه به پزشک و نحوه استفاده از خدمات پزشکی در منزل برای درمان تب",
+      image: feverTrackingImage,
+      link: "/articles/fever-tracking",
+      category: "عمومی"
+    },
     {
       id: 30,
       title: "چرا بیماران بر دریافت خدمات اضافه اصرار می‌کنند؟",
