@@ -34,9 +34,18 @@ import patientDemandsImage from "@/assets/patient-demands-article.jpg";
 import feverTrackingImage from "@/assets/fever-tracking-article.jpg";
 import greenTeaImage from "@/assets/green-tea-weight-loss-article.jpg";
 import breastMassImage from "@/assets/breast-mass-article.jpg";
+import skinItchingImage from "@/assets/skin-itching-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 34,
+      title: "خارش پوستی؛ علل، تشخیص و درمان در منزل",
+      description: "راهنمای جامع خارش پوستی، علل پوستی و سیستمیک، علائم هشداردهنده، مراقبت‌های اولیه و خدمات پزشکی در منزل",
+      image: skinItchingImage,
+      link: "/articles/skin-itching",
+      category: "پوست و مو"
+    },
     {
       id: 33,
       title: "توده‌های پستانی؛ علل، تشخیص و اهمیت پیگیری",
