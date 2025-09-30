@@ -129,10 +129,10 @@ const IVTherapyHomePage = () => {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a 
-                      href="tel:+982188776655" 
+                      href="tel:+989386117912" 
                       className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
                     >
-                      تماس برای سرم درمانی: ۰۲۱-۸۸۷۷۶۶۵۵
+                      تماس برای سرم درمانی: ۰۹۳۸۶۱۱۷۹۱۲
                     </a>
                   </div>
                 </section>
