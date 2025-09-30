@@ -52,6 +52,7 @@ import HeadachePage from "./pages/articles/HeadachePage";
 import DizzinessPage from "./pages/articles/DizzinessPage";
 import DepressionPage from "./pages/articles/DepressionPage";
 import IVTherapyHomePage from "./pages/articles/IVTherapyHomePage";
+import PatientDemandsPage from "./pages/articles/PatientDemandsPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -120,6 +121,7 @@ const App = () => (
            <Route path="/articles/dizziness" element={<DizzinessPage />} />
           <Route path="/articles/depression" element={<DepressionPage />} />
           <Route path="/articles/iv-therapy-home" element={<IVTherapyHomePage />} />
+          <Route path="/articles/patient-demands" element={<PatientDemandsPage />} />
            
            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

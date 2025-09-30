@@ -30,9 +30,18 @@ import headacheImage from "@/assets/headache-article.jpg";
 import dizzinessImage from "@/assets/dizziness-article.jpg";
 import depressionImage from "@/assets/depression-article.jpg";
 import ivTherapyImage from "@/assets/iv-therapy-home.jpg";
+import patientDemandsImage from "@/assets/patient-demands-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 30,
+      title: "چرا بیماران بر دریافت خدمات اضافه اصرار می‌کنند؟",
+      description: "بررسی دلایل اصرار بیماران بر دریافت خدمات پزشکی اضافه، پیامدها و نقش خدمات پزشکی در منزل در مدیریت این موضوع",
+      image: patientDemandsImage,
+      link: "/articles/patient-demands",
+      category: "مشاوره پزشکی"
+    },
     {
       id: 29,
       title: "سرم درمانی در منزل؛ چرا بیماران به دریافت سرم تمایل دارند؟",
