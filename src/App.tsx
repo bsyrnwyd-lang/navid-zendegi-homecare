@@ -58,6 +58,7 @@ import GreenTeaWeightLossPage from "./pages/articles/GreenTeaWeightLossPage";
 import BreastMassPage from "./pages/articles/BreastMassPage";
 import SkinItchingPage from "./pages/articles/SkinItchingPage";
 import BloodPressurePage from "./pages/articles/BloodPressurePage";
+import HairLossPage from "./pages/articles/HairLossPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -132,6 +133,7 @@ const App = () => (
            <Route path="/articles/breast-mass" element={<BreastMassPage />} />
            <Route path="/articles/skin-itching" element={<SkinItchingPage />} />
            <Route path="/articles/blood-pressure" element={<BloodPressurePage />} />
+           <Route path="/articles/hair-loss" element={<HairLossPage />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

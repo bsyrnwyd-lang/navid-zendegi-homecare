@@ -36,9 +36,18 @@ import greenTeaImage from "@/assets/green-tea-weight-loss-article.jpg";
 import breastMassImage from "@/assets/breast-mass-article.jpg";
 import skinItchingImage from "@/assets/skin-itching-article.jpg";
 import bloodPressureImage from "@/assets/blood-pressure-article.jpg";
+import hairLossImage from "@/assets/hair-loss-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 36,
+      title: "ریزش مو؛ علل، تشخیص و راه‌های پیگیری در منزل",
+      description: "راهنمای جامع ریزش مو، علل ژنتیکی و هورمونی، انواع ریزش مو، روش‌های تشخیص و درمان با خدمات پزشکی در منزل",
+      image: hairLossImage,
+      link: "/articles/hair-loss",
+      category: "پوست و مو"
+    },
     {
       id: 35,
       title: "فشار خون؛ علل، عوارض و اهمیت پیگیری در منزل",
