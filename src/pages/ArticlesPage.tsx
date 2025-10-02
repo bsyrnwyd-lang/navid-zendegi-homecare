@@ -37,9 +37,18 @@ import breastMassImage from "@/assets/breast-mass-article.jpg";
 import skinItchingImage from "@/assets/skin-itching-article.jpg";
 import bloodPressureImage from "@/assets/blood-pressure-article.jpg";
 import hairLossImage from "@/assets/hair-loss-article.jpg";
+import skinMolesImage from "@/assets/skin-moles-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 37,
+      title: "خال‌های پوستی؛ انواع، علائم هشدار و اهمیت بررسی در منزل",
+      description: "راهنمای جامع خال‌های پوستی، انواع خال، علائم هشداردهنده، قاعده ABCDE و بررسی خال‌ها با خدمات پزشکی در منزل",
+      image: skinMolesImage,
+      link: "/articles/skin-moles",
+      category: "پوست و مو"
+    },
     {
       id: 36,
       title: "ریزش مو؛ علل، تشخیص و راه‌های پیگیری در منزل",
