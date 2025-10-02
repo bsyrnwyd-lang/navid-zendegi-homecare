@@ -38,9 +38,18 @@ import skinItchingImage from "@/assets/skin-itching-article.jpg";
 import bloodPressureImage from "@/assets/blood-pressure-article.jpg";
 import hairLossImage from "@/assets/hair-loss-article.jpg";
 import skinMolesImage from "@/assets/skin-moles-article.jpg";
+import rubellaPregnancyImage from "@/assets/rubella-pregnancy-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 38,
+      title: "ارتباط سرخچه و بارداری؛ خطرات، پیشگیری و نقش خدمات پزشکی",
+      description: "راهنمای جامع سرخچه در بارداری، عوارض سندرم سرخچه مادرزادی، پیشگیری با واکسیناسیون و خدمات پزشکی در منزل",
+      image: rubellaPregnancyImage,
+      link: "/articles/rubella-pregnancy",
+      category: "سلامت مادر و کودک"
+    },
     {
       id: 37,
       title: "خال‌های پوستی؛ انواع، علائم هشدار و اهمیت بررسی در منزل",
@@ -355,7 +364,7 @@ const ArticlesPage = () => {
     }
   ];
 
-  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان", "مغز و اعصاب", "قلب و عروق", "تغذیه", "عمومی", "بیماری‌های مزمن"];
+  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان", "مغز و اعصاب", "قلب و عروق", "تغذیه", "عمومی", "بیماری‌های مزمن", "سلامت مادر و کودک"];
 
   return (
     <div className="min-h-screen bg-background">

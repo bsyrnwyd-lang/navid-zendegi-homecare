@@ -60,6 +60,7 @@ import SkinItchingPage from "./pages/articles/SkinItchingPage";
 import BloodPressurePage from "./pages/articles/BloodPressurePage";
 import HairLossPage from "./pages/articles/HairLossPage";
 import SkinMolesPage from "./pages/articles/SkinMolesPage";
+import RubellaPregnancyPage from "./pages/articles/RubellaPregnancyPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -136,6 +137,7 @@ const App = () => (
            <Route path="/articles/blood-pressure" element={<BloodPressurePage />} />
            <Route path="/articles/hair-loss" element={<HairLossPage />} />
            <Route path="/articles/skin-moles" element={<SkinMolesPage />} />
+           <Route path="/articles/rubella-pregnancy" element={<RubellaPregnancyPage />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
