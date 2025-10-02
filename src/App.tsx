@@ -57,6 +57,7 @@ import FeverTrackingPage from "./pages/articles/FeverTrackingPage";
 import GreenTeaWeightLossPage from "./pages/articles/GreenTeaWeightLossPage";
 import BreastMassPage from "./pages/articles/BreastMassPage";
 import SkinItchingPage from "./pages/articles/SkinItchingPage";
+import BloodPressurePage from "./pages/articles/BloodPressurePage";
 import ArticlesPage from "./pages/ArticlesPage";
 import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
@@ -128,10 +129,11 @@ const App = () => (
           <Route path="/articles/patient-demands" element={<PatientDemandsPage />} />
           <Route path="/articles/fever-tracking" element={<FeverTrackingPage />} />
           <Route path="/articles/green-tea-weight-loss" element={<GreenTeaWeightLossPage />} />
-          <Route path="/articles/breast-mass" element={<BreastMassPage />} />
-          <Route path="/articles/skin-itching" element={<SkinItchingPage />} />
-           
-           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+           <Route path="/articles/breast-mass" element={<BreastMassPage />} />
+           <Route path="/articles/skin-itching" element={<SkinItchingPage />} />
+           <Route path="/articles/blood-pressure" element={<BloodPressurePage />} />
+            
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

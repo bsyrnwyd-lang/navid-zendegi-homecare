@@ -35,9 +35,18 @@ import feverTrackingImage from "@/assets/fever-tracking-article.jpg";
 import greenTeaImage from "@/assets/green-tea-weight-loss-article.jpg";
 import breastMassImage from "@/assets/breast-mass-article.jpg";
 import skinItchingImage from "@/assets/skin-itching-article.jpg";
+import bloodPressureImage from "@/assets/blood-pressure-article.jpg";
 
 const ArticlesPage = () => {
   const articles = [
+    {
+      id: 35,
+      title: "فشار خون؛ علل، عوارض و اهمیت پیگیری در منزل",
+      description: "راهنمای جامع فشار خون، علل فشار خون بالا، عوارض، علائم و روش‌های کنترل و پیگیری فشار خون با خدمات پزشکی در منزل",
+      image: bloodPressureImage,
+      link: "/articles/blood-pressure",
+      category: "بیماری‌های مزمن"
+    },
     {
       id: 34,
       title: "خارش پوستی؛ علل، تشخیص و درمان در منزل",
