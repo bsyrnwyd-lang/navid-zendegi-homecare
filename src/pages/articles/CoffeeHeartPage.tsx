@@ -1,16 +1,97 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import RelatedArticles from "@/components/RelatedArticles";
+import FAQSection from "@/components/FAQSection";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 import { Phone } from "lucide-react";
 import coffeeHeartImage from "@/assets/coffee-heart-article.jpg";
 
 const CoffeeHeartPage = () => {
+  const breadcrumbs = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "تأثیر قهوه بر قلب", url: "/articles/coffee-heart" }
+  ];
+
+  const faqs = [
+    {
+      question: "آیا قهوه برای قلب مفید است؟",
+      answer: "بله، مصرف متعادل قهوه (۲ تا ۳ فنجان در روز) می‌تواند به کاهش خطر ابتلا به بیماری‌های قلبی و سکته مغزی کمک کند، به دلیل وجود آنتی‌اکسیدان‌ها و ترکیبات مفید."
+    },
+    {
+      question: "آیا قهوه باعث افزایش فشار خون می‌شود؟",
+      answer: "مصرف بیش از حد کافئین (بیش از ۴ فنجان در روز) می‌تواند باعث افزایش فشار خون و تپش قلب شود، به‌خصوص در افراد حساس یا افرادی که فشار خون بالا دارند."
+    },
+    {
+      question: "چند فنجان قهوه در روز مناسب است؟",
+      answer: "برای اکثر افراد، مصرف ۲ تا ۳ فنجان قهوه در روز مفید و ایمن است. اما افراد با بیماری قلبی یا حساسیت به کافئین باید با پزشک مشورت کنند."
+    },
+    {
+      question: "چه افرادی باید مصرف قهوه را محدود کنند؟",
+      answer: "افراد با فشار خون بالا، بیماری قلبی، حساسیت به کافئین یا کسانی که تپش قلب دارند باید مصرف قهوه را محدود کرده و با پزشک مشورت کنند."
+    }
+  ];
+
+  const relatedArticles = [
+    {
+      title: "فشار خون بالا: راهنمای جامع پیشگیری و کنترل",
+      description: "همه چیز درباره فشار خون، علائم و روش‌های کنترل آن",
+      link: "/articles/blood-pressure",
+      image: "/src/assets/blood-pressure-article.jpg",
+      category: "قلب و عروق"
+    },
+    {
+      title: "کلسترول: آزمایش، تفسیر نتایج و راه‌های کنترل",
+      description: "راهنمای جامع کلسترول و تأثیر آن بر سلامت قلب",
+      link: "/articles/cholesterol-test",
+      image: "/src/assets/cholesterol-test-article.jpg",
+      category: "قلب و عروق"
+    },
+    {
+      title: "تأثیر سیگار بر سلامت قلب و عروق",
+      description: "بررسی عوارض سیگار بر قلب و راه‌های ترک آن",
+      link: "/articles/smoking-heart-effects",
+      image: "/src/assets/coffee-heart-article.jpg",
+      category: "قلب و عروق"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
+      <SEOHead
+        title="تأثیر مصرف قهوه بر سلامت قلب | نوید زندگی"
+        description="بررسی تأثیر قهوه بر سلامت قلب، مقدار مصرف مناسب و نکات مهم برای افراد با بیماری قلبی. راهنمای کامل با نظارت دکتر نیره مظاهری تهرانی"
+        keywords="قهوه و قلب، کافئین و فشار خون، مصرف قهوه برای قلب، آنتی اکسیدان قهوه، خدمات قلب و عروق در منزل"
+        canonical="https://navidzendegi.ir/articles/coffee-heart"
+        ogType="article"
+        author="دکتر نیره مظاهری تهرانی"
+        publishedTime="2024-01-18T00:00:00Z"
+      />
+
+      <StructuredData
+        breadcrumbs={breadcrumbs}
+        article={{
+          title: "تأثیر مصرف قهوه بر سلامت قلب",
+          description: "بررسی تأثیر قهوه بر سلامت قلب، مقدار مصرف مناسب و نکات مهم",
+          author: "دکتر نیره مظاهری تهرانی",
+          publishedDate: "2024-01-18",
+          image: coffeeHeartImage
+        }}
+        faqs={faqs}
+      />
+
+      <div className="min-h-screen bg-background">
+        <Header />
       
-      <main className="pt-20 md:pt-24">
-        <article className="container mx-auto px-4 py-8 md:py-16 max-w-4xl">
+        <main className="pt-20 md:pt-24">
+          <div className="container mx-auto px-4 max-w-4xl mb-8">
+            <BreadcrumbNavigation items={breadcrumbs} />
+          </div>
+
+          <article className="container mx-auto px-4 py-8 md:py-16 max-w-4xl">
           {/* Article Header */}
           <header className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -161,12 +242,21 @@ const CoffeeHeartPage = () => {
               </div>
             </section>
           </div>
+
+          {/* FAQ Section */}
+          <div className="mb-8">
+            <FAQSection faqs={faqs} />
+          </div>
+
+          {/* Related Articles */}
+          <RelatedArticles articles={relatedArticles} />
         </article>
       </main>
-      
-      <Footer />
-      <FloatingContact />
-    </div>
+        
+        <Footer />
+        <FloatingContact />
+      </div>
+    </>
   );
 };
 

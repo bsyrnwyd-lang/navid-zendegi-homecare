@@ -1,17 +1,95 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FloatingContact from "../../components/FloatingContact";
+import BreadcrumbNavigation from "../../components/BreadcrumbNavigation";
 import LazyImage from "../../components/LazyImage";
+import RelatedArticles from "../../components/RelatedArticles";
+import FAQSection from "../../components/FAQSection";
+import SEOHead from "../../components/SEOHead";
+import StructuredData from "../../components/StructuredData";
 import headacheImage from "../../assets/headache-article.jpg";
 
 const HeadachePage = () => {
+  const breadcrumbs = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "سردرد", url: "/articles/headache" }
+  ];
+
+  const faqs = [
+    {
+      question: "چه زمانی سردرد نگران‌کننده است؟",
+      answer: "اگر سردرد بیش از ۲۴ ساعت ادامه یابد یا با علائمی مانند گیجی، ضعف اندام‌ها، تاری دید، از دست دادن هوشیاری یا تهوع و استفراغ شدید همراه باشد، باید فوراً به پزشک مراجعه کنید."
+    },
+    {
+      question: "چگونه می‌توان سردرد روزمره را کاهش داد؟",
+      answer: "با استراحت کوتاه، ماساژ گردن و شانه‌ها، نشستن در محیط آرام با نور ملایم و استفاده از مسکن‌های ساده می‌توان سردردهای معمولی را کنترل کرد."
+    },
+    {
+      question: "میگرن چیست و چگونه از آن پیشگیری کنیم؟",
+      answer: "میگرن سردردی است که با تهوع، حساسیت به نور و صدا همراه است. برای پیشگیری باید از غذاهای محرک مانند شکلات و پنیر پرهیز کنید، وعده‌های غذایی منظم داشته باشید و خواب کافی داشته باشید."
+    },
+    {
+      question: "آیا می‌توان برای سردرد از خدمات پزشکی در منزل استفاده کرد؟",
+      answer: "بله، در صورت سردرد مکرر یا شدید می‌توانید از خدمات ویزیت پزشک، انجام آزمایش، تزریق دارو و مشاوره تغذیه در منزل استفاده کنید."
+    }
+  ];
+
+  const relatedArticles = [
+    {
+      title: "میگرن: علل، تشخیص و درمان سردرد میگرنی",
+      description: "اطلاعات کامل درباره سردرد میگرنی، علائم و روش‌های درمان",
+      link: "/articles/migraine",
+      image: "/src/assets/migraine-article.jpg",
+      category: "عمومی"
+    },
+    {
+      title: "سرگیجه: علت‌ها، تفاوت‌ها و راه‌های پیشگیری",
+      description: "بررسی انواع سرگیجه، علل ایجاد و روش‌های پیشگیری",
+      link: "/articles/dizziness",
+      image: "/src/assets/dizziness-article.jpg",
+      category: "عمومی"
+    },
+    {
+      title: "افسردگی: علائم، نشانه‌ها و روش‌های درمان",
+      description: "راهنمای جامع افسردگی و روش‌های درمانی",
+      link: "/articles/depression",
+      image: "/src/assets/depression-article.jpg",
+      category: "عمومی"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <FloatingContact />
+    <>
+      <SEOHead
+        title="سردرد: علت‌ها، علائم خطر و روش‌های کنترل | نوید زندگی"
+        description="راهنمای جامع سردرد، علائم خطرناک، میگرن و روش‌های درمانی. خدمات پزشکی در منزل برای درمان سردرد با نظارت دکتر نیره مظاهری تهرانی"
+        keywords="سردرد، میگرن، درمان سردرد، علائم خطرناک سردرد، ویزیت پزشک در منزل، مسکن سردرد"
+        canonical="https://navidzendegi.ir/articles/headache"
+        ogType="article"
+        author="دکتر نیره مظاهری تهرانی"
+        publishedTime="2024-01-15T00:00:00Z"
+      />
+
+      <StructuredData
+        breadcrumbs={breadcrumbs}
+        article={{
+          title: "سردرد: علت‌ها، علائم خطر و روش‌های کنترل",
+          description: "راهنمای جامع سردرد، علائم خطرناک و روش‌های درمانی",
+          author: "دکتر نیره مظاهری تهرانی",
+          publishedDate: "2024-01-15",
+          image: headacheImage
+        }}
+        faqs={faqs}
+      />
+
+      <div className="min-h-screen bg-background">
+        <Header />
+        <FloatingContact />
       
-      <main className="container mx-auto px-4 py-8 mt-20">
-        <article className="max-w-4xl mx-auto">
+        <main className="container mx-auto px-4 py-8 mt-20">
+          <article className="max-w-4xl mx-auto">
+            <BreadcrumbNavigation items={breadcrumbs} />
           {/* Hero Section */}
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -84,6 +162,12 @@ const HeadachePage = () => {
             </p>
           </div>
 
+          {/* FAQ Section */}
+          <FAQSection faqs={faqs} />
+
+          {/* Related Articles */}
+          <RelatedArticles articles={relatedArticles} />
+
           {/* Contact Section */}
           <div className="mt-8 p-6 bg-muted rounded-lg text-center">
             <h3 className="text-xl font-semibold text-foreground mb-4">
@@ -95,6 +179,7 @@ const HeadachePage = () => {
             <a 
               href="tel:+989386117912" 
               className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
+              aria-label="تماس با شماره 09386117912"
             >
               ۰۹۳۸۶۱۱۷۹۱۲
             </a>
@@ -104,6 +189,7 @@ const HeadachePage = () => {
       
       <Footer />
     </div>
+  </>
   );
 };
 

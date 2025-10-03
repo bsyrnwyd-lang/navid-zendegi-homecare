@@ -1,30 +1,115 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import RelatedArticles from "@/components/RelatedArticles";
+import FAQSection from "@/components/FAQSection";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 import migrainImage from "@/assets/migraine-article.jpg";
 
 const MigrainePage = () => {
+  const breadcrumbs = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "میگرن", url: "/articles/migraine" }
+  ];
+
+  const faqs = [
+    {
+      question: "علائم میگرن چیست؟",
+      answer: "علائم میگرن شامل سردرد ضربان‌دار (معمولاً یک‌طرفه)، حساسیت شدید به نور و صدا، تهوع و استفراغ، تاری دید یا دیدن هاله‌های نوری و افزایش درد با فعالیت است."
+    },
+    {
+      question: "چه چیزهایی میگرن را تحریک می‌کنند؟",
+      answer: "عوامل تحریک‌کننده میگرن شامل تغییرات هورمونی، کمبود خواب، استرس، کم‌آبی، نور شدید، صداهای بلند و مصرف برخی غذاها مانند شکلات و کافئین است."
+    },
+    {
+      question: "چگونه می‌توان از میگرن پیشگیری کرد؟",
+      answer: "برای پیشگیری از میگرن باید خواب کافی و منظم داشته باشید، تغذیه سالم با وعده‌های منظم داشته باشید، مایعات کافی بنوشید، استرس را مدیریت کنید و از محرک‌های شناخته‌شده اجتناب کنید."
+    },
+    {
+      question: "میگرن چگونه درمان می‌شود؟",
+      answer: "درمان میگرن شامل داروهای بدون نسخه مانند ایبوپروفن در مراحل اولیه و در موارد شدید داروهای پیشگیرانه مثل توپیرامات یا مکمل‌هایی مانند ریبوفلاوین است."
+    },
+    {
+      question: "آیا می‌توان برای میگرن از خدمات پزشک در منزل استفاده کرد؟",
+      answer: "بله، در صورت میگرن شدید و مکرر می‌توانید از خدمات ویزیت پزشک در منزل برای ارزیابی، تجویز دارو و مشاوره درباره پیشگیری و مدیریت بهتر استفاده کنید."
+    }
+  ];
+
+  const relatedArticles = [
+    {
+      title: "سردرد: علت‌ها، علائم خطر و روش‌های کنترل",
+      description: "راهنمای جامع انواع سردرد و درمان‌های موثر",
+      link: "/articles/headache",
+      image: "/src/assets/headache-article.jpg",
+      category: "عمومی"
+    },
+    {
+      title: "سرگیجه: علت‌ها، تفاوت‌ها و راه‌های پیشگیری",
+      description: "بررسی انواع سرگیجه و علل ایجاد آن",
+      link: "/articles/dizziness",
+      image: "/src/assets/dizziness-article.jpg",
+      category: "عمومی"
+    },
+    {
+      title: "افسردگی: علائم، نشانه‌ها و روش‌های درمان",
+      description: "راهنمای جامع افسردگی و تأثیر استرس بر سلامت",
+      link: "/articles/depression",
+      image: "/src/assets/depression-article.jpg",
+      category: "عمومی"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-20 md:pt-24">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-center">
-                سردرد میگرنی | چیست، علائم و عوامل تحریک‌کننده
-              </h1>
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={migrainImage} 
-                  alt="سردرد میگرنی و علائم آن"
-                  className="w-full h-[400px] object-cover"
-                />
+    <>
+      <SEOHead
+        title="میگرن: علل، تشخیص و درمان سردرد میگرنی | نوید زندگی"
+        description="راهنمای جامع میگرن، علائم، عوامل تحریک‌کننده و روش‌های درمانی. خدمات پزشکی در منزل برای درمان میگرن با نظارت متخصصین"
+        keywords="میگرن، سردرد میگرنی، علائم میگرن، درمان میگرن، پیشگیری از میگرن، ویزیت پزشک در منزل"
+        canonical="https://navidzendegi.ir/articles/migraine"
+        ogType="article"
+        author="دکتر نیره مظاهری تهرانی"
+        publishedTime="2024-01-16T00:00:00Z"
+      />
+
+      <StructuredData
+        breadcrumbs={breadcrumbs}
+        article={{
+          title: "سردرد میگرنی | چیست، علائم و عوامل تحریک‌کننده",
+          description: "راهنمای جامع میگرن، علائم، عوامل تحریک‌کننده و روش‌های درمانی",
+          author: "دکتر نیره مظاهری تهرانی",
+          publishedDate: "2024-01-16",
+          image: migrainImage
+        }}
+        faqs={faqs}
+      />
+
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="pt-20 md:pt-24">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <BreadcrumbNavigation items={breadcrumbs} />
+          </div>
+
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-center">
+                  سردرد میگرنی | چیست، علائم و عوامل تحریک‌کننده
+                </h1>
+                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={migrainImage} 
+                    alt="سردرد میگرنی و علائم آن"
+                    className="w-full h-[400px] object-cover"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Article Content */}
         <section className="py-16">
@@ -145,6 +230,24 @@ const MigrainePage = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <FAQSection faqs={faqs} />
+            </div>
+          </div>
+        </section>
+
+        {/* Related Articles */}
+        <section className="pb-8">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <RelatedArticles articles={relatedArticles} />
+            </div>
+          </div>
+        </section>
+
         {/* 24/7 Contact Section */}
         <section className="bg-primary/5 py-8 border-t border-border">
           <div className="container mx-auto px-4">
@@ -158,7 +261,7 @@ const MigrainePage = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">ویزیت پزشک در منزل ۲۴ ساعته</p>
-                    <a href="tel:+989386117912" className="text-primary font-bold hover:text-primary/80 transition-colors">
+                    <a href="tel:+989386117912" className="text-primary font-bold hover:text-primary/80 transition-colors" aria-label="تماس با شماره 09386117912">
                       ۰۹۳۸۶۱۱۷۹۱۲
                     </a>
                   </div>
@@ -199,6 +302,7 @@ const MigrainePage = () => {
       <Footer />
       <FloatingContact />
     </div>
+  </>
   );
 };
 
