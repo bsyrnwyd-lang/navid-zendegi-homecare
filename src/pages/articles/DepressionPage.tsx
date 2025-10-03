@@ -1,17 +1,95 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FloatingContact from "../../components/FloatingContact";
+import BreadcrumbNavigation from "../../components/BreadcrumbNavigation";
 import LazyImage from "../../components/LazyImage";
+import RelatedArticles from "../../components/RelatedArticles";
+import FAQSection from "../../components/FAQSection";
+import SEOHead from "../../components/SEOHead";
+import StructuredData from "../../components/StructuredData";
 import depressionImage from "../../assets/depression-article.jpg";
 
 const DepressionPage = () => {
+  const breadcrumbs = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "افسردگی", url: "/articles/depression" }
+  ];
+
+  const faqs = [
+    {
+      question: "علائم افسردگی چیست؟",
+      answer: "علائم افسردگی شامل غمگینی مداوم، کاهش یا افزایش اشتها، انزوا، کاهش تمرکز، احساس بی‌ارزشی و در موارد شدید افکار خودکشی است."
+    },
+    {
+      question: "افسردگی چگونه درمان می‌شود؟",
+      answer: "درمان افسردگی شامل دارو درمانی با داروهای ضد افسردگی، روان‌درمانی، گروه‌درمانی و اصلاح سبک زندگی است."
+    },
+    {
+      question: "آیا افسردگی قابل درمان است؟",
+      answer: "بله، افسردگی با مراجعه به‌موقع به روانپزشک و پیروی از روند درمانی کاملاً قابل کنترل و درمان است."
+    },
+    {
+      question: "آیا خدمات روانشناسی در منزل وجود دارد؟",
+      answer: "بله، برای بیماران با افسردگی شدید که تمایل به خروج از خانه ندارند، خدمات ویزیت روانپزشک و روانشناس در منزل ارائه می‌شود."
+    }
+  ];
+
+  const relatedArticles = [
+    {
+      title: "سردرد: انواع، علل و روش‌های درمان",
+      description: "راهنمای جامع انواع سردرد، علل ایجاد و درمان‌های موثر",
+      link: "/articles/headache",
+      image: "/src/assets/headache-article.jpg",
+      category: "عمومی"
+    },
+    {
+      title: "سرگیجه: علت‌ها، تفاوت‌ها و راه‌های پیشگیری",
+      description: "بررسی انواع سرگیجه، علل ایجاد و روش‌های پیشگیری",
+      link: "/articles/dizziness",
+      image: "/src/assets/dizziness-article.jpg",
+      category: "عمومی"
+    },
+    {
+      title: "افسردگی و ارتباط آن با بیماری‌های قلبی",
+      description: "بررسی تاثیر افسردگی بر سلامت قلب و عروق",
+      link: "/articles/depression-heart-disease",
+      image: "/src/assets/depression-article.jpg",
+      category: "قلب و عروق"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <FloatingContact />
+    <>
+      <SEOHead
+        title="افسردگی: علائم، نشانه‌ها و روش‌های درمان | نوید زندگی"
+        description="راهنمای جامع افسردگی، علائم هشدار دهنده، روش‌های درمانی و خدمات روانشناسی در منزل. راهنمای کامل با نظارت دکتر نیره مظاهری تهرانی"
+        keywords="افسردگی، درمان افسردگی، علائم افسردگی، روانشناس در منزل، روانپزشک در منزل، خدمات روانشناسی در منزل"
+        canonical="https://navidzendegi.ir/articles/depression"
+        ogType="article"
+        author="دکتر نیره مظاهری تهرانی"
+        publishedTime="2024-01-20T00:00:00Z"
+      />
+
+      <StructuredData
+        breadcrumbs={breadcrumbs}
+        article={{
+          title: "افسردگی: علائم، نشانه‌ها و روش‌های درمان",
+          description: "راهنمای جامع افسردگی، علائم، درمان و خدمات روانشناسی در منزل",
+          author: "دکتر نیره مظاهری تهرانی",
+          publishedDate: "2024-01-20",
+          image: depressionImage
+        }}
+        faqs={faqs}
+      />
+
+      <div className="min-h-screen bg-background">
+        <Header />
+        <FloatingContact />
       
-      <main className="container mx-auto px-4 py-8 mt-20">
-        <article className="max-w-4xl mx-auto">
+        <main className="container mx-auto px-4 py-8 mt-20">
+          <article className="max-w-4xl mx-auto">
+            <BreadcrumbNavigation items={breadcrumbs} />
           {/* Hero Section */}
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -82,17 +160,24 @@ const DepressionPage = () => {
             </p>
           </div>
 
+          {/* FAQ Section */}
+          <FAQSection faqs={faqs} />
+
+          {/* Related Articles */}
+          <RelatedArticles articles={relatedArticles} />
+
           {/* Contact Section */}
           <div className="mt-8 p-6 bg-muted rounded-lg text-center">
             <h3 className="text-xl font-semibold text-foreground mb-4">
               نیاز به مشاوره دارید؟
             </h3>
             <p className="text-muted-foreground mb-4">
-              برای دریافت خدمات پزشکی در منزل با ما تماس بگیرید
+              برای دریافت خدمات روانشناسی و مشاوره در منزل با ما تماس بگیرید
             </p>
             <a 
               href="tel:+989386117912" 
               className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
+              aria-label="تماس با شماره 09386117912"
             >
               ۰۹۳۸۶۱۱۷۹۱۲
             </a>
@@ -102,6 +187,7 @@ const DepressionPage = () => {
       
       <Footer />
     </div>
+  </>
   );
 };
 

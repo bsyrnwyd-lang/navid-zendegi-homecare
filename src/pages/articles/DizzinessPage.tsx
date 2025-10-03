@@ -1,17 +1,95 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FloatingContact from "../../components/FloatingContact";
+import BreadcrumbNavigation from "../../components/BreadcrumbNavigation";
 import LazyImage from "../../components/LazyImage";
+import RelatedArticles from "../../components/RelatedArticles";
+import FAQSection from "../../components/FAQSection";
+import SEOHead from "../../components/SEOHead";
+import StructuredData from "../../components/StructuredData";
 import dizzinessImage from "../../assets/dizziness-article.jpg";
 
 const DizzinessPage = () => {
+  const breadcrumbs = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "سرگیجه", url: "/articles/dizziness" }
+  ];
+
+  const faqs = [
+    {
+      question: "تفاوت احساس عدم تعادل با سرگیجه واقعی چیست؟",
+      answer: "احساس عدم تعادل معمولاً به صورت تار شدن یا سیاهی رفتن چشم‌ها هنگام بلند شدن است، در حالی که در سرگیجه واقعی فرد محیط اطراف را در حال چرخیدن می‌بیند."
+    },
+    {
+      question: "علل شایع سیاهی رفتن چشم‌ها چیست؟",
+      answer: "کم‌خونی، افت قند خون، اضطراب، افسردگی و فشار خون پایین از علل شایع سیاهی رفتن چشم‌ها هستند."
+    },
+    {
+      question: "چه زمانی سرگیجه خطرناک است؟",
+      answer: "اگر سرگیجه همراه با ضعف اندام‌ها، اختلال در تکلم یا بینایی، سردرد شدید ناگهانی یا از دست دادن تعادل شدید باشد، باید فوراً به بیمارستان مراجعه کرد."
+    },
+    {
+      question: "چگونه از سرگیجه هنگام بلند شدن پیشگیری کنیم؟",
+      answer: "از تغییر ناگهانی پوزیشن بدن خودداری کنید، هنگام برخاستن چند لحظه بنشینید و سپس به آرامی بایستید، آب کافی بنوشید و تغذیه منظم داشته باشید."
+    }
+  ];
+
+  const relatedArticles = [
+    {
+      title: "سردرد: انواع، علل و روش‌های درمان",
+      description: "راهنمای جامع انواع سردرد، علل ایجاد و درمان‌های موثر",
+      link: "/articles/headache",
+      image: "/src/assets/headache-article.jpg",
+      category: "عمومی"
+    },
+    {
+      title: "میگرن: علل، تشخیص و درمان سردرد میگرنی",
+      description: "اطلاعات کامل درباره سردرد میگرنی، علائم و روش‌های درمان",
+      link: "/articles/migraine",
+      image: "/src/assets/migraine-article.jpg",
+      category: "عمومی"
+    },
+    {
+      title: "فشار خون بالا: راهنمای جامع پیشگیری و کنترل",
+      description: "همه چیز درباره فشار خون، علائم و روش‌های کنترل آن",
+      link: "/articles/blood-pressure",
+      image: "/src/assets/blood-pressure-article.jpg",
+      category: "قلب و عروق"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <FloatingContact />
+    <>
+      <SEOHead
+        title="سرگیجه: علت‌ها، تفاوت‌ها و راه‌های پیشگیری | نوید زندگی"
+        description="راهنمای جامع سرگیجه، تفاوت انواع سرگیجه، علل ایجاد و روش‌های پیشگیری. راهنمای کامل با نظارت دکتر نیره مظاهری تهرانی"
+        keywords="سرگیجه، علت سرگیجه، درمان سرگیجه، سیاهی رفتن چشم، کم خونی، افت قند، ویزیت پزشک در منزل"
+        canonical="https://navidzendegi.ir/articles/dizziness"
+        ogType="article"
+        author="دکتر نیره مظاهری تهرانی"
+        publishedTime="2024-01-21T00:00:00Z"
+      />
+
+      <StructuredData
+        breadcrumbs={breadcrumbs}
+        article={{
+          title: "سرگیجه: علت‌ها، تفاوت‌ها و راه‌های پیشگیری",
+          description: "راهنمای جامع سرگیجه، تفاوت انواع و روش‌های پیشگیری",
+          author: "دکتر نیره مظاهری تهرانی",
+          publishedDate: "2024-01-21",
+          image: dizzinessImage
+        }}
+        faqs={faqs}
+      />
+
+      <div className="min-h-screen bg-background">
+        <Header />
+        <FloatingContact />
       
-      <main className="container mx-auto px-4 py-8 mt-20">
-        <article className="max-w-4xl mx-auto">
+        <main className="container mx-auto px-4 py-8 mt-20">
+          <article className="max-w-4xl mx-auto">
+            <BreadcrumbNavigation items={breadcrumbs} />
           {/* Hero Section */}
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -92,6 +170,12 @@ const DizzinessPage = () => {
             </p>
           </div>
 
+          {/* FAQ Section */}
+          <FAQSection faqs={faqs} />
+
+          {/* Related Articles */}
+          <RelatedArticles articles={relatedArticles} />
+
           {/* Contact Section */}
           <div className="mt-8 p-6 bg-muted rounded-lg text-center">
             <h3 className="text-xl font-semibold text-foreground mb-4">
@@ -103,6 +187,7 @@ const DizzinessPage = () => {
             <a 
               href="tel:+989386117912" 
               className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
+              aria-label="تماس با شماره 09386117912"
             >
               ۰۹۳۸۶۱۱۷۹۱۲
             </a>
@@ -112,6 +197,7 @@ const DizzinessPage = () => {
       
       <Footer />
     </div>
+  </>
   );
 };
 
