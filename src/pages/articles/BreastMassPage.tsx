@@ -5,6 +5,7 @@ import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import FAQSection from "@/components/FAQSection";
 import breastMassImage from "@/assets/breast-mass-article.jpg";
 import skinMolesImage from "@/assets/skin-moles-article.jpg";
 import skinItchingImage from "@/assets/skin-itching-article.jpg";
@@ -25,7 +26,29 @@ const BreastMassPage = () => {
       author: "نوید زندگی",
       publishedDate: "2025-01-15",
       image: breastMassImage
-    }
+    },
+    faqs: [
+      {
+        question: "آیا هر توده پستانی بدخیم است؟",
+        answer: "خیر، اکثر توده‌های پستانی خوش‌خیم هستند. فیبروآدنوم و کیست‌های پستانی از شایع‌ترین علل توده‌های خوش‌خیم هستند. با این حال، هر توده‌ای باید توسط پزشک بررسی شود تا احتمال بدخیمی رد گردد."
+      },
+      {
+        question: "چه زمانی باید برای توده پستانی به پزشک مراجعه کنم؟",
+        answer: "اگر توده سفت، ثابت و بدون درد باشد، تغییر در شکل یا اندازه پستان مشاهده کنید، ترشح خونی از نوک سینه داشته باشید، یا تغییرات پوستی مثل قرمزی یا فرورفتگی ببینید، فوراً به پزشک مراجعه کنید."
+      },
+      {
+        question: "آیا می‌توانم در منزل توده پستانی را بررسی کنم؟",
+        answer: "بله، با خدمات پزشکی در منزل می‌توانید توسط پزشک متخصص یا جراح عمومی در خانه معاینه شوید. همچنین می‌توانید برای آزمایش‌های تصویربرداری نیز هماهنگی کنید."
+      },
+      {
+        question: "چه آزمایشاتی برای تشخیص توده پستانی لازم است؟",
+        answer: "معمولاً معاینه بالینی، ماموگرافی (برای زنان بالای 40 سال)، سونوگرافی پستان، و در صورت مشکوک بودن توده، نمونه‌برداری (بیوپسی) انجام می‌شود."
+      },
+      {
+        question: "هزینه ویزیت پزشک در منزل برای بررسی توده پستانی چقدر است؟",
+        answer: "هزینه ویزیت بستگی به نوع خدمات و زمان مراجعه دارد. برای اطلاع از قیمت‌ها می‌توانید با شماره 09386117912 تماس بگیرید یا به صفحه تعرفه‌ها مراجعه کنید."
+      }
+    ]
   };
 
   const relatedArticles = [
@@ -203,6 +226,7 @@ const BreastMassPage = () => {
                 </section>
               </div>
 
+              <FAQSection faqs={structuredData.faqs} />
               <RelatedArticles articles={relatedArticles} />
             </article>
           </div>

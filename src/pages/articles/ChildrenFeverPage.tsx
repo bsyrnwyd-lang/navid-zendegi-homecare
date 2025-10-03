@@ -1,13 +1,98 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import FAQSection from "@/components/FAQSection";
 import childrenFeverImage from "@/assets/children-fever-article.jpg";
 
 const ChildrenFeverPage = () => {
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "تب در کودکان", url: "/articles/children-fever" }
+  ];
+
+  const structuredData = {
+    breadcrumbs: breadcrumbItems,
+    article: {
+      title: "تب در کودکان | علل، درمان خانگی و ویزیت پزشک در منزل",
+      description: "راهنمای کامل مدیریت تب کودکان در خانه و زمان مراجعه به پزشک",
+      author: "نوید زندگی",
+      publishedDate: "2025-01-15",
+      image: childrenFeverImage
+    },
+    faqs: [
+      {
+        question: "تب در کودک در چه دمایی خطرناک است؟",
+        answer: "دمای بالاتر از 38.5 درجه سانتی‌گراد به‌عنوان تب شناخته می‌شود. در نوزادان زیر 3 ماه، حتی تب خفیف نیازمند ویزیت فوری پزشک است. تب بالای 40 درجه در کودکان بزرگتر نیز نیاز به مراجعه دارد."
+      },
+      {
+        question: "چطور می‌توانم تب کودکم را در خانه کاهش دهم؟",
+        answer: "استفاده از داروهای تب‌بر مثل استامینوفن یا ایبوپروفن (تحت نظر پزشک)، لباس سبک پوشاندن، مایعات کافی دادن، و کمپرس آب ولرم می‌تواند کمک کننده باشد."
+      },
+      {
+        question: "چه زمانی باید برای تب کودک به پزشک مراجعه کنم؟",
+        answer: "در نوزادان زیر 3 ماه فوراً، تب بالای 40 درجه، تب بیش از 3 روز، علائم تشنج، تنگی نفس، گیجی، یا بی‌حالی شدید نیازمند مراجعه فوری است."
+      },
+      {
+        question: "آیا می‌توانم پزشک اطفال را در منزل ویزیت کنم؟",
+        answer: "بله، با خدمات پزشکی در منزل navidezendegi.com می‌توانید پزشک اطفال را در خانه ویزیت کنید و نسخه و مشاوره دریافت کنید."
+      }
+    ],
+    howTo: {
+      name: "چگونه تب کودک را در منزل مدیریت کنیم",
+      description: "راهنمای گام‌به‌گام مراقبت از کودک تب‌دار در خانه",
+      steps: [
+        {
+          name: "اندازه‌گیری دقیق دما",
+          text: "با دماسنج دیجیتال یا زیربغلی دمای کودک را اندازه بگیرید. دمای زیر زبان دقیق‌ترین روش است."
+        },
+        {
+          name: "دادن داروی تب‌بر",
+          text: "در صورت نیاز و تحت نظر پزشک، داروی استامینوفن یا ایبوپروفن مناسب سن و وزن کودک بدهید."
+        },
+        {
+          name: "پوشیدن لباس سبک",
+          text: "کودک را با لباس‌های نازک و راحت بپوشانید و از پوشش بیش‌ازحد خودداری کنید."
+        },
+        {
+          name: "تأمین مایعات",
+          text: "به کودک مایعات کافی مثل آب، آبمیوه رقیق شده یا شیرمادر بدهید تا از کم‌آبی جلوگیری شود."
+        },
+        {
+          name: "استفاده از کمپرس",
+          text: "در صورت نیاز، با پارچه آغشته به آب ولرم روی پیشانی، گردن و مچ دست‌ها کمپرس بگذارید."
+        },
+        {
+          name: "استراحت کافی",
+          text: "به کودک اجازه دهید استراحت کافی داشته باشد و از فعالیت‌های سنگین خودداری کند."
+        }
+      ]
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-20 md:pt-24">
+    <>
+      <SEOHead
+        title="تب در کودکان | علل، درمان خانگی و ویزیت پزشک در منزل | نوید زندگی"
+        description="راهنمای کامل مدیریت تب کودکان در خانه، علل، درمان و زمان مراجعه به پزشک با خدمات ویزیت پزشک اطفال در منزل"
+        keywords="تب کودک، درمان تب در خانه، پزشک اطفال در منزل، تب نوزاد، داروی تب‌بر کودک، ویزیت پزشک در منزل"
+        canonical="https://navidzendegi.com/articles/children-fever"
+        ogImage={childrenFeverImage}
+        ogType="article"
+        author="نوید زندگی"
+        publishedTime="2025-01-15"
+      />
+      <StructuredData {...structuredData} />
+      
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="pt-20 md:pt-24">
+          <div className="container mx-auto px-4">
+            <BreadcrumbNavigation items={breadcrumbItems} />
+          </div>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
           <div className="container mx-auto px-4">
@@ -123,6 +208,8 @@ const ChildrenFeverPage = () => {
                   </p>
                 </div>
               </article>
+
+              <FAQSection faqs={structuredData.faqs} />
             </div>
           </div>
         </section>
@@ -181,6 +268,7 @@ const ChildrenFeverPage = () => {
       <Footer />
       <FloatingContact />
     </div>
+    </>
   );
 };
 

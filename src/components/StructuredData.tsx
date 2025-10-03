@@ -3,6 +3,16 @@ interface BreadcrumbItem {
   url: string;
 }
 
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface HowToStep {
+  name: string;
+  text: string;
+}
+
 interface StructuredDataProps {
   breadcrumbs?: BreadcrumbItem[];
   article?: {
@@ -20,9 +30,15 @@ interface StructuredDataProps {
     areaServed: string;
     serviceType: string;
   };
+  faqs?: FAQ[];
+  howTo?: {
+    name: string;
+    description: string;
+    steps: HowToStep[];
+  };
 }
 
-const StructuredData = ({ breadcrumbs, article, service }: StructuredDataProps) => {
+const StructuredData = ({ breadcrumbs, article, service, faqs, howTo }: StructuredDataProps) => {
   const generateBreadcrumbSchema = (items: BreadcrumbItem[]) => {
     return {
       "@context": "https://schema.org",
@@ -84,6 +100,36 @@ const StructuredData = ({ breadcrumbs, article, service }: StructuredDataProps) 
     };
   };
 
+  const generateFAQSchema = (faqData: FAQ[]) => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+  };
+
+  const generateHowToSchema = (howToData: any) => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": howToData.name,
+      "description": howToData.description,
+      "step": howToData.steps.map((step: HowToStep, index: number) => ({
+        "@type": "HowToStep",
+        "position": index + 1,
+        "name": step.name,
+        "text": step.text
+      }))
+    };
+  };
+
   const schemas: any[] = [];
   
   if (breadcrumbs) {
@@ -96,6 +142,14 @@ const StructuredData = ({ breadcrumbs, article, service }: StructuredDataProps) 
   
   if (service) {
     schemas.push(generateServiceSchema(service));
+  }
+
+  if (faqs) {
+    schemas.push(generateFAQSchema(faqs));
+  }
+
+  if (howTo) {
+    schemas.push(generateHowToSchema(howTo));
   }
 
   return (

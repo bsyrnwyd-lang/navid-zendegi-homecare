@@ -5,6 +5,7 @@ import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import RelatedArticles from "@/components/RelatedArticles";
+import FAQSection from "@/components/FAQSection";
 import skinItchingImage from "@/assets/skin-itching-article.jpg";
 import skinMolesImage from "@/assets/skin-moles-article.jpg";
 import hairLossImage from "@/assets/hair-loss-article.jpg";
@@ -25,7 +26,25 @@ const SkinItchingPage = () => {
       author: "نوید زندگی",
       publishedDate: "2025-01-15",
       image: skinItchingImage
-    }
+    },
+    faqs: [
+      {
+        question: "خارش پوستی نشانه چه بیماری‌هایی است؟",
+        answer: "خارش می‌تواند ناشی از بیماری‌های پوستی مثل اگزما، پسوریازیس یا کهیر باشد. همچنین ممکن است نشانه مشکلات سیستمیک مثل بیماری‌های کبدی، کلیوی، تیروئید، دیابت یا حتی برخی سرطان‌ها باشد."
+      },
+      {
+        question: "چه زمانی باید برای خارش پوستی به پزشک مراجعه کنم؟",
+        answer: "اگر خارش بیش از 2 هفته ادامه داشت، بثورات گسترده یا تاول داشتید، همراه با تب، کاهش وزن یا تعریق شبانه بود، یا خارش در کل بدن بدون علت مشخص بود، باید به پزشک مراجعه کنید."
+      },
+      {
+        question: "چطور می‌توانم خارش پوست را در خانه کاهش دهم؟",
+        answer: "استفاده از مرطوب‌کننده‌ها، دوش با آب ولرم، پرهیز از خاراندن، استفاده از لباس‌های نخی و شناسایی و پرهیز از محرک‌ها می‌تواند کمک کند."
+      },
+      {
+        question: "آیا می‌توانم پزشک پوست در منزل داشته باشم؟",
+        answer: "بله، با خدمات پزشکی در منزل navidezendegi.com می‌توانید پزشک عمومی یا متخصص پوست را در منزل ویزیت کنید و نسخه دارویی یا کرم‌های موضعی دریافت کنید."
+      }
+    ]
   };
 
   const relatedArticles = [
@@ -200,6 +219,7 @@ const SkinItchingPage = () => {
                 </section>
               </div>
 
+              <FAQSection faqs={structuredData.faqs} />
               <RelatedArticles articles={relatedArticles} />
             </article>
           </div>
