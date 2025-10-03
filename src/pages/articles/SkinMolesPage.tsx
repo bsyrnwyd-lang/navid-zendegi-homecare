@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
@@ -17,8 +18,19 @@ const SkinMolesPage = () => {
   const breadcrumbItems = [
     { name: "خانه", url: "/" },
     { name: "مقالات", url: "/articles" },
-    { name: "خال‌های پوستی؛ انواع، علائم هشدار و اهمیت بررسی در منزل", url: "" }
+    { name: "خال‌های پوستی؛ انواع، علائم هشدار و اهمیت بررسی در منزل", url: "/articles/skin-moles" }
   ];
+
+  const structuredData = {
+    breadcrumbs: breadcrumbItems,
+    article: {
+      title: "خال‌های پوستی؛ انواع، علائم هشدار و اهمیت بررسی در منزل",
+      description: "راهنمای جامع خال‌های پوستی، انواع خال، علائم هشداردهنده، قاعده ABCDE و بررسی خال‌ها با خدمات پزشکی در منزل",
+      author: "نوید زندگی",
+      publishedDate: "2025-10-03",
+      image: skinMolesImage
+    }
+  };
 
   return (
     <>
@@ -30,7 +42,9 @@ const SkinMolesPage = () => {
         ogImage={skinMolesImage}
         ogType="article"
         author="نوید زندگی"
+        publishedTime="2025-10-03"
       />
+      <StructuredData {...structuredData} />
       
       <div className="min-h-screen bg-background">
         <Header />

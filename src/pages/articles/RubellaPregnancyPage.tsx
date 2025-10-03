@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
@@ -17,8 +18,19 @@ const RubellaPregnancyPage = () => {
   const breadcrumbItems = [
     { name: "خانه", url: "/" },
     { name: "مقالات", url: "/articles" },
-    { name: "ارتباط سرخچه و بارداری؛ خطرات، پیشگیری و نقش خدمات پزشکی", url: "" }
+    { name: "ارتباط سرخچه و بارداری؛ خطرات، پیشگیری و نقش خدمات پزشکی", url: "/articles/rubella-pregnancy" }
   ];
+
+  const structuredData = {
+    breadcrumbs: breadcrumbItems,
+    article: {
+      title: "ارتباط سرخچه و بارداری؛ خطرات، پیشگیری و نقش خدمات پزشکی در منزل",
+      description: "راهنمای جامع سرخچه در بارداری، عوارض سندرم سرخچه مادرزادی، پیشگیری با واکسیناسیون و خدمات پزشکی در منزل",
+      author: "نوید زندگی",
+      publishedDate: "2025-10-03",
+      image: rubellaPregnancyImage
+    }
+  };
 
   return (
     <>
@@ -30,7 +42,9 @@ const RubellaPregnancyPage = () => {
         ogImage={rubellaPregnancyImage}
         ogType="article"
         author="نوید زندگی"
+        publishedTime="2025-10-03"
       />
+      <StructuredData {...structuredData} />
       
       <div className="min-h-screen bg-background">
         <Header />

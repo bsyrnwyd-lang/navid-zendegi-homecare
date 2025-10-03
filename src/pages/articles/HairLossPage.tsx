@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
@@ -17,8 +18,19 @@ const HairLossPage = () => {
   const breadcrumbItems = [
     { name: "خانه", url: "/" },
     { name: "مقالات", url: "/articles" },
-    { name: "ریزش مو؛ علل، تشخیص و راه‌های پیگیری در منزل", url: "" }
+    { name: "ریزش مو؛ علل، تشخیص و راه‌های پیگیری در منزل", url: "/articles/hair-loss" }
   ];
+
+  const structuredData = {
+    breadcrumbs: breadcrumbItems,
+    article: {
+      title: "ریزش مو؛ علل، تشخیص و راه‌های پیگیری در منزل",
+      description: "راهنمای جامع ریزش مو، علل ژنتیکی و هورمونی، انواع ریزش مو، روش‌های تشخیص و درمان با خدمات پزشکی در منزل",
+      author: "نوید زندگی",
+      publishedDate: "2025-10-03",
+      image: hairLossImage
+    }
+  };
 
   return (
     <>
@@ -30,7 +42,9 @@ const HairLossPage = () => {
         ogImage={hairLossImage}
         ogType="article"
         author="نوید زندگی"
+        publishedTime="2025-10-03"
       />
+      <StructuredData {...structuredData} />
       
       <div className="min-h-screen bg-background">
         <Header />

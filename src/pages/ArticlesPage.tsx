@@ -235,7 +235,7 @@ const ArticlesPage = () => {
       category: "اورژانس پزشکی"
     },
     {
-      id: 3,
+      id: 2,
       title: "علائم حمله قلبی و اقدامات فوری",
       description: "تشخیص زودهنگام علائم سکته قلبی و ارائه کمک‌های اولیه",
       image: heartAttackImage,

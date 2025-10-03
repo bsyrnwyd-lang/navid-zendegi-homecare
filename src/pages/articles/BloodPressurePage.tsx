@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
@@ -17,8 +18,19 @@ const BloodPressurePage = () => {
   const breadcrumbItems = [
     { name: "خانه", url: "/" },
     { name: "مقالات", url: "/articles" },
-    { name: "فشار خون؛ علل، عوارض و اهمیت پیگیری در منزل", url: "" }
+    { name: "فشار خون؛ علل، عوارض و اهمیت پیگیری در منزل", url: "/articles/blood-pressure" }
   ];
+
+  const structuredData = {
+    breadcrumbs: breadcrumbItems,
+    article: {
+      title: "فشار خون؛ علل، عوارض و اهمیت پیگیری در منزل",
+      description: "راهنمای جامع فشار خون، علل فشار خون بالا، عوارض، علائم، روش‌های کنترل و پیگیری فشار خون با خدمات پزشکی در منزل",
+      author: "نوید زندگی",
+      publishedDate: "2025-10-03",
+      image: bloodPressureImage
+    }
+  };
 
   return (
     <>
@@ -30,7 +42,9 @@ const BloodPressurePage = () => {
         ogImage={bloodPressureImage}
         ogType="article"
         author="نوید زندگی"
+        publishedTime="2025-10-03"
       />
+      <StructuredData {...structuredData} />
       
       <div className="min-h-screen bg-background">
         <Header />

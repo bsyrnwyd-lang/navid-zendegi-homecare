@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://navidzendegi.com/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-10-03</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -243,5 +243,65 @@
     <lastmod>2024-09-24</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/breast-mass</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/breast-mass-article.jpg</image:loc>
+      <image:title>توده‌های پستانی - خدمات پزشکی در منزل</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/skin-itching</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/skin-itching-article.jpg</image:loc>
+      <image:title>خارش پوستی - متخصص پوست در منزل</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/blood-pressure</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/blood-pressure-article.jpg</image:loc>
+      <image:title>فشار خون - کنترل و پیگیری در منزل</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/hair-loss</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/hair-loss-article.jpg</image:loc>
+      <image:title>ریزش مو - تشخیص و درمان در منزل</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/skin-moles</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/skin-moles-article.jpg</image:loc>
+      <image:title>خال‌های پوستی - بررسی در منزل</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/rubella-pregnancy</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/rubella-pregnancy-article.jpg</image:loc>
+      <image:title>سرخچه و بارداری - خدمات پزشکی در منزل</image:title>
+    </image:image>
   </url>
 </urlset>
