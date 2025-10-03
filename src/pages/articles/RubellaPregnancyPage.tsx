@@ -4,9 +4,13 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import rubellaPregnancyImage from "@/assets/rubella-pregnancy-article.jpg";
+import vaccinationImage from "@/assets/vaccination-article.jpg";
+import childrenFeverImage from "@/assets/children-fever-article.jpg";
+import pediatricsImage from "@/assets/pediatrics.jpg";
 
 const RubellaPregnancyPage = () => {
   const phoneNumber = "09386117912";
@@ -31,6 +35,30 @@ const RubellaPregnancyPage = () => {
       image: rubellaPregnancyImage
     }
   };
+
+  const relatedArticles = [
+    {
+      title: "واکسیناسیون و اهمیت آن",
+      description: "همه چیز در مورد واکسیناسیون و خدمات تزریق واکسن در منزل",
+      image: vaccinationImage,
+      link: "/articles/vaccination",
+      category: "واکسیناسیون"
+    },
+    {
+      title: "تب در کودکان؛ علل و درمان",
+      description: "راهنمای کامل مدیریت تب کودکان در خانه",
+      image: childrenFeverImage,
+      link: "/articles/children-fever",
+      category: "کودکان"
+    },
+    {
+      title: "رشد کودک؛ اهمیت پایش منظم",
+      description: "پایش رشد کودک در منزل با ویزیت پزشک اطفال",
+      image: pediatricsImage,
+      link: "/articles/child-growth-monitoring",
+      category: "کودکان"
+    }
+  ];
 
   return (
     <>
@@ -165,6 +193,8 @@ const RubellaPregnancyPage = () => {
                 </Button>
               </section>
             </div>
+
+            <RelatedArticles articles={relatedArticles} />
           </article>
         </main>
         <Footer />

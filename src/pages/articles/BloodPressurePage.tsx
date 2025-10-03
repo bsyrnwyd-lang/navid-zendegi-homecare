@@ -4,9 +4,13 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import bloodPressureImage from "@/assets/blood-pressure-article.jpg";
+import diabetesImage from "@/assets/diabetes-article.jpg";
+import cholesterolTestImage from "@/assets/cholesterol-test-article.jpg";
+import heartAttackImage from "@/assets/cardiology-home-visit.jpg";
 
 const BloodPressurePage = () => {
   const phoneNumber = "09386117912";
@@ -31,6 +35,30 @@ const BloodPressurePage = () => {
       image: bloodPressureImage
     }
   };
+
+  const relatedArticles = [
+    {
+      title: "دیابت و راه‌های کنترل آن",
+      description: "راهنمای جامع دیابت و کنترل قند خون در منزل",
+      image: diabetesImage,
+      link: "/articles/diabetes",
+      category: "بیماری‌های مزمن"
+    },
+    {
+      title: "آزمایش چربی خون HDL/LDL",
+      description: "راهنمای کامل آزمایش کلسترول و تفسیر نتایج",
+      image: cholesterolTestImage,
+      link: "/articles/cholesterol-test",
+      category: "آزمایش‌ها"
+    },
+    {
+      title: "علائم حمله قلبی و اقدامات فوری",
+      description: "تشخیص زودهنگام علائم سکته قلبی",
+      image: heartAttackImage,
+      link: "/articles/heart-attack-symptoms",
+      category: "اورژانس پزشکی"
+    }
+  ];
 
   return (
     <>
@@ -174,6 +202,8 @@ const BloodPressurePage = () => {
                 </Button>
               </section>
             </div>
+
+            <RelatedArticles articles={relatedArticles} />
           </article>
         </main>
         <Footer />

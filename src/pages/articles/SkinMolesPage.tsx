@@ -4,9 +4,13 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import skinMolesImage from "@/assets/skin-moles-article.jpg";
+import skinItchingImage from "@/assets/skin-itching-article.jpg";
+import breastMassImage from "@/assets/breast-mass-article.jpg";
+import nailSpotsImage from "@/assets/nail-spots-article.jpg";
 
 const SkinMolesPage = () => {
   const phoneNumber = "09386117912";
@@ -31,6 +35,30 @@ const SkinMolesPage = () => {
       image: skinMolesImage
     }
   };
+
+  const relatedArticles = [
+    {
+      title: "خارش پوستی؛ علل و درمان",
+      description: "راهنمای جامع خارش پوستی و خدمات پزشکی در منزل",
+      image: skinItchingImage,
+      link: "/articles/skin-itching",
+      category: "پوست و مو"
+    },
+    {
+      title: "توده‌های پستانی؛ علل و تشخیص",
+      description: "راهنمای جامع توده‌های پستانی و بررسی در منزل",
+      image: breastMassImage,
+      link: "/articles/breast-mass",
+      category: "سلامت زنان"
+    },
+    {
+      title: "لکه‌های سفید ناخن",
+      description: "علل، تشخیص و درمان سفیدی ناخن",
+      image: nailSpotsImage,
+      link: "/articles/nail-spots",
+      category: "پوست و مو"
+    }
+  ];
 
   return (
     <>
@@ -177,6 +205,8 @@ const SkinMolesPage = () => {
                 </Button>
               </section>
             </div>
+
+            <RelatedArticles articles={relatedArticles} />
           </article>
         </main>
         <Footer />

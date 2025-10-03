@@ -4,7 +4,11 @@ import FloatingContact from "@/components/FloatingContact";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
+import RelatedArticles from "@/components/RelatedArticles";
 import breastMassImage from "@/assets/breast-mass-article.jpg";
+import skinMolesImage from "@/assets/skin-moles-article.jpg";
+import skinItchingImage from "@/assets/skin-itching-article.jpg";
+import rubellaPregnancyImage from "@/assets/rubella-pregnancy-article.jpg";
 
 const BreastMassPage = () => {
   const breadcrumbItems = [
@@ -23,6 +27,30 @@ const BreastMassPage = () => {
       image: breastMassImage
     }
   };
+
+  const relatedArticles = [
+    {
+      title: "خال‌های پوستی؛ انواع، علائم هشدار و اهمیت بررسی در منزل",
+      description: "راهنمای جامع خال‌های پوستی، قاعده ABCDE و بررسی خال‌ها با خدمات پزشکی در منزل",
+      image: skinMolesImage,
+      link: "/articles/skin-moles",
+      category: "پوست و مو"
+    },
+    {
+      title: "خارش پوستی؛ علل، تشخیص و درمان در منزل",
+      description: "راهنمای جامع خارش پوستی، علل و خدمات پزشکی در منزل",
+      image: skinItchingImage,
+      link: "/articles/skin-itching",
+      category: "پوست و مو"
+    },
+    {
+      title: "ارتباط سرخچه و بارداری؛ خطرات، پیشگیری",
+      description: "راهنمای جامع سرخچه در بارداری و خدمات پزشکی در منزل",
+      image: rubellaPregnancyImage,
+      link: "/articles/rubella-pregnancy",
+      category: "سلامت مادر و کودک"
+    }
+  ];
 
   return (
     <>
@@ -174,6 +202,8 @@ const BreastMassPage = () => {
                   </div>
                 </section>
               </div>
+
+              <RelatedArticles articles={relatedArticles} />
             </article>
           </div>
         </main>

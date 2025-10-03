@@ -4,7 +4,11 @@ import FloatingContact from "@/components/FloatingContact";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
+import RelatedArticles from "@/components/RelatedArticles";
 import skinItchingImage from "@/assets/skin-itching-article.jpg";
+import skinMolesImage from "@/assets/skin-moles-article.jpg";
+import hairLossImage from "@/assets/hair-loss-article.jpg";
+import breastMassImage from "@/assets/breast-mass-article.jpg";
 
 const SkinItchingPage = () => {
   const breadcrumbItems = [
@@ -23,6 +27,30 @@ const SkinItchingPage = () => {
       image: skinItchingImage
     }
   };
+
+  const relatedArticles = [
+    {
+      title: "خال‌های پوستی؛ انواع، علائم هشدار",
+      description: "راهنمای جامع خال‌های پوستی و خدمات پزشکی در منزل",
+      image: skinMolesImage,
+      link: "/articles/skin-moles",
+      category: "پوست و مو"
+    },
+    {
+      title: "ریزش مو؛ علل، تشخیص و راه‌های پیگیری",
+      description: "راهنمای جامع ریزش مو و خدمات پزشکی در منزل",
+      image: hairLossImage,
+      link: "/articles/hair-loss",
+      category: "پوست و مو"
+    },
+    {
+      title: "توده‌های پستانی؛ علل و تشخیص",
+      description: "راهنمای جامع توده‌های پستانی و خدمات پزشکی در منزل",
+      image: breastMassImage,
+      link: "/articles/breast-mass",
+      category: "سلامت زنان"
+    }
+  ];
 
   return (
     <>
@@ -171,6 +199,8 @@ const SkinItchingPage = () => {
                   </div>
                 </section>
               </div>
+
+              <RelatedArticles articles={relatedArticles} />
             </article>
           </div>
         </main>

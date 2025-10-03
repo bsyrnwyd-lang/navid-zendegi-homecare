@@ -4,9 +4,13 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import hairLossImage from "@/assets/hair-loss-article.jpg";
+import skinItchingImage from "@/assets/skin-itching-article.jpg";
+import skinMolesImage from "@/assets/skin-moles-article.jpg";
+import hyperhidrosisImage from "@/assets/hyperhidrosis-article.jpg";
 
 const HairLossPage = () => {
   const phoneNumber = "09386117912";
@@ -31,6 +35,30 @@ const HairLossPage = () => {
       image: hairLossImage
     }
   };
+
+  const relatedArticles = [
+    {
+      title: "خارش پوستی؛ علل، تشخیص و درمان",
+      description: "راهنمای جامع خارش پوستی و خدمات پزشکی در منزل",
+      image: skinItchingImage,
+      link: "/articles/skin-itching",
+      category: "پوست و مو"
+    },
+    {
+      title: "خال‌های پوستی؛ انواع و علائم هشدار",
+      description: "راهنمای جامع خال‌های پوستی و بررسی در منزل",
+      image: skinMolesImage,
+      link: "/articles/skin-moles",
+      category: "پوست و مو"
+    },
+    {
+      title: "تعریق بیش از حد: علت‌ها و راهکارها",
+      description: "راهنمای جامع تعریق بیش از حد و درمان",
+      image: hyperhidrosisImage,
+      link: "/articles/hyperhidrosis",
+      category: "عمومی"
+    }
+  ];
 
   return (
     <>
@@ -171,6 +199,8 @@ const HairLossPage = () => {
                 </Button>
               </section>
             </div>
+
+            <RelatedArticles articles={relatedArticles} />
           </article>
         </main>
         <Footer />
