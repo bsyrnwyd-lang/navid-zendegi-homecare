@@ -3,69 +3,87 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
+
+// Core pages - load immediately
 import Index from "./pages/Index";
-import CardiologyServices from "./pages/CardiologyServices";
-import GeneralDoctorPage from "./pages/GeneralDoctorPage";
-import AboutUsPage from "./pages/AboutUsPage";
-import PricingPage from "./pages/PricingPage";
-import SpecialistDoctorPage from "./pages/services/SpecialistDoctorPage";
-import InternalMedicinePage from "./pages/services/InternalMedicinePage";
-import NursingPage from "./pages/services/NursingPage";
-import NeurologyPage from "./pages/services/NeurologyPage";
-import UrologyPage from "./pages/services/UrologyPage";
-import InfectiousDiseasePage from "./pages/services/InfectiousDiseasePage";
-import PhysiotherapyPage from "./pages/services/PhysiotherapyPage";
-import RadiologyPage from "./pages/services/RadiologyPage";
-import ENTPage from "./pages/services/ENTPage";
-import EchoECGPage from "./pages/services/EchoECGPage";
-import HolterPage from "./pages/services/HolterPage";
-import ContactPage from "./pages/ContactPage";
-import InfluenzaTreatmentPage from "./pages/articles/InfluenzaTreatmentPage";
-import StrokeSymptomsPage from "./pages/articles/StrokeSymptomsPage";
-import HeartAttackSymptomsPage from "./pages/articles/HeartAttackSymptomsPage";
-import SmokingHeartEffectsPage from "./pages/articles/SmokingHeartEffectsPage";
-import CholesterolTestPage from "./pages/articles/CholesterolTestPage";
-import BreathingTreatmentPage from "./pages/articles/BreathingTreatmentPage";
-import NeurobionAmpoule from "./pages/articles/NeurobionAmpoule";
-import HeatExhaustionPage from "./pages/articles/HeatExhaustionPage";
-import GardasilVaccinePage from "./pages/articles/GardasilVaccinePage";
-import GenitalWartsPage from "./pages/articles/GenitalWartsPage";
-import HPVPoolPage from "./pages/articles/HPVPoolPage";
-import NailSpotsPage from "./pages/articles/NailSpotsPage";
-import AICardiologyPage from "./pages/articles/AICardiologyPage";
-import ChildrenFeverPage from "./pages/articles/ChildrenFeverPage";
-import MigrainePage from "./pages/articles/MigrainePage";
-import MeningitisPage from "./pages/articles/MeningitisPage";
-import AirPollutionPage from "./pages/articles/AirPollutionPage";
-import CoffeeHeartPage from "./pages/articles/CoffeeHeartPage";
-import ColdTreatmentPage from "./pages/articles/ColdTreatmentPage";
-import DepressionHeartDiseasePage from "./pages/articles/DepressionHeartDiseasePage";
-import MedicalConsultationPage from "./pages/articles/MedicalConsultationPage";
-import ChildGrowthMonitoringPage from "./pages/articles/ChildGrowthMonitoringPage";
-import VitaminsHealthPage from "./pages/articles/VitaminsHealthPage";
-import VaccinationPage from "./pages/articles/VaccinationPage";
-import HIVAidsPage from "./pages/articles/HIVAidsPage";
-import DiabetesPage from "./pages/articles/DiabetesPage";
-import HyperhidrosisPage from "./pages/articles/HyperhidrosisPage";
-import HeadachePage from "./pages/articles/HeadachePage";
-import DizzinessPage from "./pages/articles/DizzinessPage";
-import DepressionPage from "./pages/articles/DepressionPage";
-import IVTherapyHomePage from "./pages/articles/IVTherapyHomePage";
-import PatientDemandsPage from "./pages/articles/PatientDemandsPage";
-import FeverTrackingPage from "./pages/articles/FeverTrackingPage";
-import GreenTeaWeightLossPage from "./pages/articles/GreenTeaWeightLossPage";
-import BreastMassPage from "./pages/articles/BreastMassPage";
-import SkinItchingPage from "./pages/articles/SkinItchingPage";
-import BloodPressurePage from "./pages/articles/BloodPressurePage";
-import HairLossPage from "./pages/articles/HairLossPage";
-import SkinMolesPage from "./pages/articles/SkinMolesPage";
-import RubellaPregnancyPage from "./pages/articles/RubellaPregnancyPage";
-import ArticlesPage from "./pages/ArticlesPage";
-import CollaborationPage from "./pages/CollaborationPage";
 import NotFound from "./pages/NotFound";
 
+// Lazy load other pages for better performance
+const CardiologyServices = lazy(() => import("./pages/CardiologyServices"));
+const GeneralDoctorPage = lazy(() => import("./pages/GeneralDoctorPage"));
+const AboutUsPage = lazy(() => import("./pages/AboutUsPage"));
+const PricingPage = lazy(() => import("./pages/PricingPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const CollaborationPage = lazy(() => import("./pages/CollaborationPage"));
+const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
+
+// Service pages
+const SpecialistDoctorPage = lazy(() => import("./pages/services/SpecialistDoctorPage"));
+const InternalMedicinePage = lazy(() => import("./pages/services/InternalMedicinePage"));
+const NursingPage = lazy(() => import("./pages/services/NursingPage"));
+const NeurologyPage = lazy(() => import("./pages/services/NeurologyPage"));
+const UrologyPage = lazy(() => import("./pages/services/UrologyPage"));
+const InfectiousDiseasePage = lazy(() => import("./pages/services/InfectiousDiseasePage"));
+const PhysiotherapyPage = lazy(() => import("./pages/services/PhysiotherapyPage"));
+const RadiologyPage = lazy(() => import("./pages/services/RadiologyPage"));
+const ENTPage = lazy(() => import("./pages/services/ENTPage"));
+const EchoECGPage = lazy(() => import("./pages/services/EchoECGPage"));
+const HolterPage = lazy(() => import("./pages/services/HolterPage"));
+
+// Article pages - lazy loaded
+const InfluenzaTreatmentPage = lazy(() => import("./pages/articles/InfluenzaTreatmentPage"));
+const StrokeSymptomsPage = lazy(() => import("./pages/articles/StrokeSymptomsPage"));
+const HeartAttackSymptomsPage = lazy(() => import("./pages/articles/HeartAttackSymptomsPage"));
+const SmokingHeartEffectsPage = lazy(() => import("./pages/articles/SmokingHeartEffectsPage"));
+const CholesterolTestPage = lazy(() => import("./pages/articles/CholesterolTestPage"));
+const BreathingTreatmentPage = lazy(() => import("./pages/articles/BreathingTreatmentPage"));
+const NeurobionAmpoule = lazy(() => import("./pages/articles/NeurobionAmpoule"));
+const HeatExhaustionPage = lazy(() => import("./pages/articles/HeatExhaustionPage"));
+const GardasilVaccinePage = lazy(() => import("./pages/articles/GardasilVaccinePage"));
+const GenitalWartsPage = lazy(() => import("./pages/articles/GenitalWartsPage"));
+const HPVPoolPage = lazy(() => import("./pages/articles/HPVPoolPage"));
+const NailSpotsPage = lazy(() => import("./pages/articles/NailSpotsPage"));
+const AICardiologyPage = lazy(() => import("./pages/articles/AICardiologyPage"));
+const ChildrenFeverPage = lazy(() => import("./pages/articles/ChildrenFeverPage"));
+const MigrainePage = lazy(() => import("./pages/articles/MigrainePage"));
+const MeningitisPage = lazy(() => import("./pages/articles/MeningitisPage"));
+const AirPollutionPage = lazy(() => import("./pages/articles/AirPollutionPage"));
+const CoffeeHeartPage = lazy(() => import("./pages/articles/CoffeeHeartPage"));
+const ColdTreatmentPage = lazy(() => import("./pages/articles/ColdTreatmentPage"));
+const DepressionHeartDiseasePage = lazy(() => import("./pages/articles/DepressionHeartDiseasePage"));
+const MedicalConsultationPage = lazy(() => import("./pages/articles/MedicalConsultationPage"));
+const ChildGrowthMonitoringPage = lazy(() => import("./pages/articles/ChildGrowthMonitoringPage"));
+const VitaminsHealthPage = lazy(() => import("./pages/articles/VitaminsHealthPage"));
+const VaccinationPage = lazy(() => import("./pages/articles/VaccinationPage"));
+const HIVAidsPage = lazy(() => import("./pages/articles/HIVAidsPage"));
+const DiabetesPage = lazy(() => import("./pages/articles/DiabetesPage"));
+const HyperhidrosisPage = lazy(() => import("./pages/articles/HyperhidrosisPage"));
+const HeadachePage = lazy(() => import("./pages/articles/HeadachePage"));
+const DizzinessPage = lazy(() => import("./pages/articles/DizzinessPage"));
+const DepressionPage = lazy(() => import("./pages/articles/DepressionPage"));
+const IVTherapyHomePage = lazy(() => import("./pages/articles/IVTherapyHomePage"));
+const PatientDemandsPage = lazy(() => import("./pages/articles/PatientDemandsPage"));
+const FeverTrackingPage = lazy(() => import("./pages/articles/FeverTrackingPage"));
+const GreenTeaWeightLossPage = lazy(() => import("./pages/articles/GreenTeaWeightLossPage"));
+const BreastMassPage = lazy(() => import("./pages/articles/BreastMassPage"));
+const SkinItchingPage = lazy(() => import("./pages/articles/SkinItchingPage"));
+const BloodPressurePage = lazy(() => import("./pages/articles/BloodPressurePage"));
+const HairLossPage = lazy(() => import("./pages/articles/HairLossPage"));
+const SkinMolesPage = lazy(() => import("./pages/articles/SkinMolesPage"));
+const RubellaPregnancyPage = lazy(() => import("./pages/articles/RubellaPregnancyPage"));
+
 const queryClient = new QueryClient();
+
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="flex flex-col items-center gap-4">
+      <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+      <p className="text-muted-foreground text-lg">در حال بارگذاری...</p>
+    </div>
+  </div>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -74,7 +92,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
+        <Suspense fallback={<LoadingFallback />}>
+          <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/general-doctor" element={<GeneralDoctorPage />} />
           <Route path="/cardiology" element={<CardiologyServices />} />
@@ -138,13 +157,14 @@ const App = () => (
            <Route path="/articles/hair-loss" element={<HairLossPage />} />
            <Route path="/articles/skin-moles" element={<SkinMolesPage />} />
            <Route path="/articles/rubella-pregnancy" element={<RubellaPregnancyPage />} />
-            
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-export default App;
+             
+             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+           <Route path="*" element={<NotFound />} />
+         </Routes>
+        </Suspense>
+       </BrowserRouter>
+     </TooltipProvider>
+   </QueryClientProvider>
+ );
+ 
+ export default App;
