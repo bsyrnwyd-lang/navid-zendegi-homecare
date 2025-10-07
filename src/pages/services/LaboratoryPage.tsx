@@ -104,219 +104,175 @@ const LaboratoryPage = () => {
 
         {/* Benefits Section */}
         <section className="medical-section">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-4xl">
             <h2 className="section-title text-center mb-12">مزایای انجام آزمایش در منزل</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <CheckCircle className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">صرفه‌جویی در زمان</h3>
-                  <p className="text-muted-foreground">
-                    جلوگیری از اتلاف وقت در صف‌های آزمایشگاه و صرفه‌جویی در زمان شما
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="space-y-4">
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-muted/50 transition-colors">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">صرفه‌جویی در زمان</h3>
+                  <p className="text-muted-foreground">جلوگیری از اتلاف وقت در صف‌های آزمایشگاه</p>
+                </div>
+              </div>
 
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <Heart className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">راحتی و آرامش</h3>
-                  <p className="text-muted-foreground">
-                    انجام آزمایش در محیط آرام و راحت منزل شما
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-muted/50 transition-colors">
+                <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">راحتی و آرامش بیمار در محیط منزل</h3>
+                  <p className="text-muted-foreground">انجام آزمایش در محیط آرام و راحت خانه</p>
+                </div>
+              </div>
 
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <Microscope className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">کاهش خطر عفونت</h3>
-                  <p className="text-muted-foreground">
-                    کاهش خطر ابتلا به عفونت‌ها و بیماری‌های واگیردار
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-muted/50 transition-colors">
+                <Microscope className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">کاهش خطر ابتلا به عفونت‌ها</h3>
+                  <p className="text-muted-foreground">کاهش خطر ابتلا به بیماری‌های واگیردار</p>
+                </div>
+              </div>
 
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <ClipboardList className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">رعایت اصول بهداشتی</h3>
-                  <p className="text-muted-foreground">
-                    نمونه‌گیری با رعایت کامل اصول بهداشتی و استاندارد
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-muted/50 transition-colors">
+                <ClipboardList className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">انجام نمونه‌گیری با رعایت کامل اصول بهداشتی</h3>
+                  <p className="text-muted-foreground">نمونه‌گیری با استانداردهای بالا</p>
+                </div>
+              </div>
 
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <FileText className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">ارسال سریع نتایج</h3>
-                  <p className="text-muted-foreground">
-                    تحویل سریع جواب آزمایش به‌صورت آنلاین یا چاپی
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <Phone className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">پشتیبانی مداوم</h3>
-                  <p className="text-muted-foreground">
-                    پشتیبانی تلفنی و آنلاین در تمام روزهای هفته
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-muted/50 transition-colors">
+                <FileText className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">ارسال سریع جواب آزمایش</h3>
+                  <p className="text-muted-foreground">تحویل نتایج به‌صورت آنلاین یا چاپی</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Process Section */}
         <section className="medical-section bg-primary/5">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-4xl">
             <h2 className="section-title text-center mb-12">نحوه انجام آزمایش در منزل</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="medical-card">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">1</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">ارسال نسخه پزشک</h3>
+            <div className="space-y-6">
+              <div className="flex gap-4 p-6 rounded-lg bg-card">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold text-primary">1</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">ارسال نسخه پزشک</h3>
                   <p className="text-muted-foreground">
                     در صورت داشتن نسخه، عکس آن را برای ما ارسال کنید. اگر نسخه ندارید، پزشک مقیم ما آزمایش‌های لازم را تجویز می‌کند.
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card className="medical-card">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">2</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">اعزام نمونه‌گیر</h3>
+              <div className="flex gap-4 p-6 rounded-lg bg-card">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold text-primary">2</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">اعزام نمونه‌گیر</h3>
                   <p className="text-muted-foreground">
                     نمونه‌گیر حرفه‌ای در سریع‌ترین زمان ممکن به آدرس شما مراجعه کرده و نمونه‌گیری را انجام می‌دهد.
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card className="medical-card">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">3</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">تحویل نتایج</h3>
+              <div className="flex gap-4 p-6 rounded-lg bg-card">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl font-bold text-primary">3</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">تحویل نتایج</h3>
                   <p className="text-muted-foreground">
                     پس از انجام آزمایش، نتیجه در کوتاه‌ترین زمان از طریق واتساپ، پیامک یا پیک برای شما ارسال می‌گردد.
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Tests Section */}
         <section className="medical-section">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-4xl">
             <h2 className="section-title text-center mb-12">انواع آزمایش‌هایی که در منزل انجام می‌شود</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <Microscope className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-4">آزمایش‌های عمومی</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
-                      <span className="text-sm">آزمایش خون کامل (CBC)</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
-                      <span className="text-sm">آزمایش قند و چربی خون</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
-                      <span className="text-sm">آزمایش ادرار و مدفوع</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
-                      <span className="text-sm">تست کرونا و آنفلوآنزا</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <Heart className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-4">آزمایش‌های تخصصی</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
-                      <span className="text-sm">آزمایش هورمونی و تیروئید</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
-                      <span className="text-sm">آزمایش‌های قلب، کبد و کلیه</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
-                      <span className="text-sm">آزمایش‌های دیابت</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
-                      <span className="text-sm">آزمایش‌های چکاپ کامل سلامت</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+            
+            <div className="space-y-6">
+              <div className="p-6 rounded-lg bg-card border border-border">
+                <div className="flex items-center gap-3 mb-4">
+                  <Microscope className="w-8 h-8 text-primary" />
+                  <h3 className="text-xl font-semibold">آزمایش‌های عمومی</h3>
+                </div>
+                <ul className="space-y-2 mr-11">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
+                    <span>آزمایش خون کامل (CBC)</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
+                    <span>آزمایش قند و چربی</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
+                    <span>آزمایش هورمونی و تیروئید</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
+                    <span>تست کرونا و آنفلوآنزا</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
+                    <span>آزمایش ادرار و مدفوع</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
+                    <span>آزمایش‌های تخصصی قلب، کبد، کلیه و دیابت</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-secondary ml-2 flex-shrink-0" />
+                    <span>آزمایش‌های چکاپ کامل سلامت</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Why Choose Us Section */}
         <section className="medical-section bg-primary/5">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-4xl">
             <h2 className="section-title text-center mb-12">چرا «نوید زندگی» را انتخاب کنیم؟</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+            <div className="space-y-3">
+              <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-card/50 transition-colors">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">نمونه‌گیران مجرب</h3>
-                  <p className="text-sm text-muted-foreground">نمونه‌گیران آموزش‌دیده و دارای مجوز</p>
+                  <span className="font-semibold">نمونه‌گیران مجرب و آموزش‌دیده</span>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+              <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-card/50 transition-colors">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">آزمایشگاه‌های معتبر</h3>
-                  <p className="text-sm text-muted-foreground">همکاری با آزمایشگاه‌های دارای مجوز وزارت بهداشت</p>
+                  <span className="font-semibold">همکاری با آزمایشگاه‌های معتبر و دارای مجوز وزارت بهداشت</span>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+              <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-card/50 transition-colors">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">سرعت بالا</h3>
-                  <p className="text-sm text-muted-foreground">اعزام سریع و تحویل به‌موقع نتایج</p>
+                  <span className="font-semibold">سرعت بالا در اعزام و تحویل نتایج</span>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+              <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-card/50 transition-colors">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">دقت بالا</h3>
-                  <p className="text-sm text-muted-foreground">رعایت کامل اصول نمونه‌گیری و انتقال</p>
+                  <span className="font-semibold">دقت بالا در فرآیند نمونه‌گیری و انتقال</span>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+              <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-card/50 transition-colors">
+                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">پشتیبانی مداوم</h3>
-                  <p className="text-sm text-muted-foreground">پشتیبانی تلفنی و آنلاین همه‌روزه</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-1">پزشک مقیم</h3>
-                  <p className="text-sm text-muted-foreground">امکان مشاوره و تجویز آزمایش بدون نسخه</p>
+                  <span className="font-semibold">پشتیبانی تلفنی و آنلاین همه‌روزه</span>
                 </div>
               </div>
             </div>
