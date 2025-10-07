@@ -31,6 +31,7 @@ const RadiologyPage = lazy(() => import("./pages/services/RadiologyPage"));
 const ENTPage = lazy(() => import("./pages/services/ENTPage"));
 const EchoECGPage = lazy(() => import("./pages/services/EchoECGPage"));
 const HolterPage = lazy(() => import("./pages/services/HolterPage"));
+const LaboratoryPage = lazy(() => import("./pages/services/LaboratoryPage"));
 
 // Article pages - lazy loaded
 const InfluenzaTreatmentPage = lazy(() => import("./pages/articles/InfluenzaTreatmentPage"));
@@ -115,6 +116,7 @@ const App = () => (
           <Route path="/services/ent" element={<ENTPage />} />
           <Route path="/services/echo-ecg" element={<EchoECGPage />} />
           <Route path="/services/holter" element={<HolterPage />} />
+          <Route path="/services/laboratory" element={<LaboratoryPage />} />
           
           {/* Article Pages */}
           <Route path="/articles/influenza-treatment" element={<InfluenzaTreatmentPage />} />
