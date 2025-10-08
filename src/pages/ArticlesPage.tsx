@@ -50,12 +50,21 @@ import hairLossImage from "@/assets/hair-loss-article.jpg";
 import skinMolesImage from "@/assets/skin-moles-article.jpg";
 import rubellaPregnancyImage from "@/assets/rubella-pregnancy-article.jpg";
 import angiographyImage from "@/assets/angiography-article.jpg";
+import postAngiographyMedicationsImage from "@/assets/post-angiography-medications.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 40,
+      title: "داروهای ضروری بعد از آنژیوگرافی و استنت‌گذاری",
+      description: "راهنمای کامل داروهای ضد پلاکت، استاتین‌ها و داروهای کنترل فشار خون بعد از آنژیوگرافی و استنت‌گذاری",
+      image: postAngiographyMedicationsImage,
+      link: "/articles/post-angiography-medications",
+      category: "قلب و عروق"
+    },
     {
       id: 39,
       title: "آیا آنژیوگرافی ترسناک است؟",
