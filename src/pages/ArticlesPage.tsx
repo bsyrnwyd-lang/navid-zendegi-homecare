@@ -52,12 +52,21 @@ import rubellaPregnancyImage from "@/assets/rubella-pregnancy-article.jpg";
 import angiographyImage from "@/assets/angiography-article.jpg";
 import postAngiographyMedicationsImage from "@/assets/post-angiography-medications.jpg";
 import angiographyRecoveryImage from "@/assets/angiography-recovery.jpg";
+import postAngiographyLiftingImage from "@/assets/post-angiography-lifting.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 42,
+      title: "بلند کردن اجسام سنگین بعد از آنژیوگرافی",
+      description: "راهنمای کامل محدودیت بلند کردن اجسام بعد از آنژیوگرافی و استنت‌گذاری، مراحل بازگشت به فعالیت",
+      image: postAngiographyLiftingImage,
+      link: "/articles/post-angiography-lifting",
+      category: "قلب و عروق"
+    },
     {
       id: 41,
       title: "مدت زمان و بستری بعد از آنژیوگرافی",
