@@ -49,12 +49,21 @@ import bloodPressureImage from "@/assets/blood-pressure-article.jpg";
 import hairLossImage from "@/assets/hair-loss-article.jpg";
 import skinMolesImage from "@/assets/skin-moles-article.jpg";
 import rubellaPregnancyImage from "@/assets/rubella-pregnancy-article.jpg";
+import angiographyImage from "@/assets/angiography-article.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 39,
+      title: "آیا آنژیوگرافی ترسناک است؟",
+      description: "همه چیز درباره آنژیوگرافی قلب، مراحل انجام، آیا دردناک است و چگونه به تشخیص و درمان بیماری‌های قلبی کمک می‌کند",
+      image: angiographyImage,
+      link: "/articles/angiography-fear",
+      category: "قلب و عروق"
+    },
     {
       id: 38,
       title: "ارتباط سرخچه و بارداری؛ خطرات، پیشگیری و نقش خدمات پزشکی",
