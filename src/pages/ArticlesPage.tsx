@@ -53,12 +53,21 @@ import angiographyImage from "@/assets/angiography-article.jpg";
 import postAngiographyMedicationsImage from "@/assets/post-angiography-medications.jpg";
 import angiographyRecoveryImage from "@/assets/angiography-recovery.jpg";
 import postAngiographyLiftingImage from "@/assets/post-angiography-lifting.jpg";
+import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 43,
+      title: "تپش قلب؛ علل، علائم و روش‌های بررسی",
+      description: "راهنمای کامل تپش قلب، علل شایع، علائم خطرناک، روش‌های بررسی و خدمات هولتر در منزل",
+      image: heartPalpitationsImage,
+      link: "/articles/heart-palpitations",
+      category: "قلب و عروق"
+    },
     {
       id: 42,
       title: "بلند کردن اجسام سنگین بعد از آنژیوگرافی",
