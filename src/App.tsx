@@ -76,6 +76,7 @@ const SkinMolesPage = lazy(() => import("./pages/articles/SkinMolesPage"));
 const RubellaPregnancyPage = lazy(() => import("./pages/articles/RubellaPregnancyPage"));
 const AngiographyFearPage = lazy(() => import("./pages/articles/AngiographyFearPage"));
 const PostAngiographyMedicationsPage = lazy(() => import("./pages/articles/PostAngiographyMedicationsPage"));
+const AngiographyRecoveryTimePage = lazy(() => import("./pages/articles/AngiographyRecoveryTimePage"));
 
 const queryClient = new QueryClient();
 
@@ -163,6 +164,7 @@ const App = () => (
            <Route path="/articles/rubella-pregnancy" element={<RubellaPregnancyPage />} />
            <Route path="/articles/angiography-fear" element={<AngiographyFearPage />} />
            <Route path="/articles/post-angiography-medications" element={<PostAngiographyMedicationsPage />} />
+           <Route path="/articles/angiography-recovery-time" element={<AngiographyRecoveryTimePage />} />
              
              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
            <Route path="*" element={<NotFound />} />

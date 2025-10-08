@@ -51,12 +51,21 @@ import skinMolesImage from "@/assets/skin-moles-article.jpg";
 import rubellaPregnancyImage from "@/assets/rubella-pregnancy-article.jpg";
 import angiographyImage from "@/assets/angiography-article.jpg";
 import postAngiographyMedicationsImage from "@/assets/post-angiography-medications.jpg";
+import angiographyRecoveryImage from "@/assets/angiography-recovery.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 41,
+      title: "مدت زمان و بستری بعد از آنژیوگرافی",
+      description: "مدت زمان انجام آنژیوگرافی، بستری بعد از آنژیوگرافی و استنت‌گذاری، ترخیص و مراقبت‌های بعد از عمل",
+      image: angiographyRecoveryImage,
+      link: "/articles/angiography-recovery-time",
+      category: "قلب و عروق"
+    },
     {
       id: 40,
       title: "داروهای ضروری بعد از آنژیوگرافی و استنت‌گذاری",
