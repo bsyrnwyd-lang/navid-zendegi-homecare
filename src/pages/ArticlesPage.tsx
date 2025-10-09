@@ -55,12 +55,21 @@ import angiographyRecoveryImage from "@/assets/angiography-recovery.jpg";
 import postAngiographyLiftingImage from "@/assets/post-angiography-lifting.jpg";
 import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
 import warfarinImage from "@/assets/warfarin-medication.jpg";
+import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 45,
+      title: "فشار خون بالا چه علائمی دارد و چگونه باید کنترل شود؟",
+      description: "راهنمای کامل فشار خون بالا، علائم قاتل خاموش، علت‌ها، روش‌های کنترل و اهمیت اندازه‌گیری منظم فشار خون",
+      image: highBloodPressureImage,
+      link: "/articles/high-blood-pressure-control",
+      category: "قلب و عروق"
+    },
     {
       id: 44,
       title: "وارفارین؛ داروی ضدانعقاد و نکات مهم در مصرف آن",
