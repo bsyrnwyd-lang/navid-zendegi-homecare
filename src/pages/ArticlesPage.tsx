@@ -54,12 +54,21 @@ import postAngiographyMedicationsImage from "@/assets/post-angiography-medicatio
 import angiographyRecoveryImage from "@/assets/angiography-recovery.jpg";
 import postAngiographyLiftingImage from "@/assets/post-angiography-lifting.jpg";
 import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
+import warfarinImage from "@/assets/warfarin-medication.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 44,
+      title: "وارفارین؛ داروی ضدانعقاد و نکات مهم در مصرف آن",
+      description: "راهنمای کامل وارفارین، موارد مصرف، عوارض جانبی، رژیم غذایی، کنترل INR و ویزیت پزشک در منزل",
+      image: warfarinImage,
+      link: "/articles/warfarin",
+      category: "داروها"
+    },
     {
       id: 43,
       title: "تپش قلب؛ علل، علائم و روش‌های بررسی",
