@@ -56,12 +56,21 @@ import postAngiographyLiftingImage from "@/assets/post-angiography-lifting.jpg";
 import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
 import warfarinImage from "@/assets/warfarin-medication.jpg";
 import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
+import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 46,
+      title: "آتوروستاتین چیست و چه کاربردی دارد؟",
+      description: "راهنمای کامل آتوروستاتین، کاربرد در کنترل چربی خون، نحوه مصرف، عوارض و اهمیت پیگیری پزشکی",
+      image: atorvastatinImage,
+      link: "/articles/atorvastatin",
+      category: "داروها"
+    },
     {
       id: 45,
       title: "فشار خون بالا چه علائمی دارد و چگونه باید کنترل شود؟",
