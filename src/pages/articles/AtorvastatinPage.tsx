@@ -4,7 +4,11 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
+import RelatedArticles from "@/components/RelatedArticles";
 import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
+import warfarinImage from "@/assets/warfarin-medication.jpg";
+import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
+import cholesterolTestImage from "@/assets/cholesterol-test-article.jpg";
 
 const AtorvastatinPage = () => {
   const handleCall = () => {
@@ -14,6 +18,30 @@ const AtorvastatinPage = () => {
   const handleWhatsApp = () => {
     window.open("https://wa.me/989122593357", "_blank");
   };
+
+  const relatedArticles = [
+    {
+      title: "وارفارین؛ داروی ضدانعقاد و نکات مهم در مصرف آن",
+      description: "راهنمای کامل وارفارین، موارد مصرف، عوارض جانبی، رژیم غذایی، کنترل INR و ویزیت پزشک در منزل",
+      image: warfarinImage,
+      link: "/articles/warfarin",
+      category: "داروها"
+    },
+    {
+      title: "فشار خون بالا چه علائمی دارد و چگونه باید کنترل شود؟",
+      description: "راهنمای کامل فشار خون بالا، علائم قاتل خاموش، علت‌ها، روش‌های کنترل و اهمیت اندازه‌گیری منظم فشار خون",
+      image: highBloodPressureImage,
+      link: "/articles/high-blood-pressure-control",
+      category: "قلب و عروق"
+    },
+    {
+      title: "آزمایش چربی خون HDL/LDL",
+      description: "راهنمای کامل آزمایش کلسترول و تفسیر نتایج",
+      image: cholesterolTestImage,
+      link: "/articles/cholesterol-test",
+      category: "آزمایش‌ها"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -117,6 +145,8 @@ const AtorvastatinPage = () => {
               ما آشنا شوید.
             </p>
           </div>
+
+          <RelatedArticles articles={relatedArticles} />
         </article>
       </main>
 

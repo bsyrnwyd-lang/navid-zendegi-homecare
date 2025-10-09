@@ -4,7 +4,11 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
+import RelatedArticles from "@/components/RelatedArticles";
 import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
+import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
+import warfarinImage from "@/assets/warfarin-medication.jpg";
+import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
 
 const HighBloodPressurePage = () => {
   const handleCall = () => {
@@ -14,6 +18,30 @@ const HighBloodPressurePage = () => {
   const handleWhatsApp = () => {
     window.open("https://wa.me/989122593357", "_blank");
   };
+
+  const relatedArticles = [
+    {
+      title: "آتوروستاتین چیست و چه کاربردی دارد؟",
+      description: "راهنمای کامل آتوروستاتین، کاربرد در کنترل چربی خون، نحوه مصرف، عوارض و اهمیت پیگیری پزشکی",
+      image: atorvastatinImage,
+      link: "/articles/atorvastatin",
+      category: "داروها"
+    },
+    {
+      title: "تپش قلب؛ علل، علائم و روش‌های بررسی",
+      description: "راهنمای کامل تپش قلب، علل شایع، علائم خطرناک، روش‌های بررسی و خدمات هولتر در منزل",
+      image: heartPalpitationsImage,
+      link: "/articles/heart-palpitations",
+      category: "قلب و عروق"
+    },
+    {
+      title: "وارفارین؛ داروی ضدانعقاد و نکات مهم در مصرف آن",
+      description: "راهنمای کامل وارفارین، موارد مصرف، عوارض جانبی، رژیم غذایی، کنترل INR و ویزیت پزشک در منزل",
+      image: warfarinImage,
+      link: "/articles/warfarin",
+      category: "داروها"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -140,6 +168,8 @@ const HighBloodPressurePage = () => {
               ما آشنا شوید.
             </p>
           </div>
+
+          <RelatedArticles articles={relatedArticles} />
         </article>
       </main>
 

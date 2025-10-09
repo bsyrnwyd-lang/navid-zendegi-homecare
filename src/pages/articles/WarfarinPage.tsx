@@ -4,7 +4,11 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
+import RelatedArticles from "@/components/RelatedArticles";
 import warfarinImage from "@/assets/warfarin-medication.jpg";
+import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
+import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
+import postAngiographyMedicationsImage from "@/assets/post-angiography-medications.jpg";
 
 const WarfarinPage = () => {
   const handleCall = () => {
@@ -14,6 +18,30 @@ const WarfarinPage = () => {
   const handleWhatsApp = () => {
     window.open("https://wa.me/989122593357", "_blank");
   };
+
+  const relatedArticles = [
+    {
+      title: "آتوروستاتین چیست و چه کاربردی دارد؟",
+      description: "راهنمای کامل آتوروستاتین، کاربرد در کنترل چربی خون، نحوه مصرف، عوارض و اهمیت پیگیری پزشکی",
+      image: atorvastatinImage,
+      link: "/articles/atorvastatin",
+      category: "داروها"
+    },
+    {
+      title: "داروهای ضروری بعد از آنژیوگرافی و استنت‌گذاری",
+      description: "راهنمای کامل داروهای ضد پلاکت، استاتین‌ها و داروهای کنترل فشار خون بعد از آنژیوگرافی و استنت‌گذاری",
+      image: postAngiographyMedicationsImage,
+      link: "/articles/post-angiography-medications",
+      category: "قلب و عروق"
+    },
+    {
+      title: "فشار خون بالا چه علائمی دارد و چگونه باید کنترل شود؟",
+      description: "راهنمای کامل فشار خون بالا، علائم قاتل خاموش، علت‌ها، روش‌های کنترل و اهمیت اندازه‌گیری منظم فشار خون",
+      image: highBloodPressureImage,
+      link: "/articles/high-blood-pressure-control",
+      category: "قلب و عروق"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -159,6 +187,8 @@ const WarfarinPage = () => {
               ما آشنا شوید.
             </p>
           </div>
+
+          <RelatedArticles articles={relatedArticles} />
         </article>
       </main>
 
