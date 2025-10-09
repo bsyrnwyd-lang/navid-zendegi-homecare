@@ -34,7 +34,7 @@ const WarfarinPage = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               وارفارین؛ داروی ضدانعقاد و نکات مهم در مصرف آن
             </h1>
-            <p className="text-foreground text-lg font-medium">نویسنده: دکتر نیره مظاهری تهرانی، متخصص قلب و عروق</p>
+            <p className="text-foreground/90 text-lg font-semibold mb-2">نویسنده: دکتر نیره مظاهری تهرانی، متخصص قلب و عروق</p>
           </div>
 
           <img
