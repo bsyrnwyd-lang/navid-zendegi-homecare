@@ -58,12 +58,21 @@ import warfarinImage from "@/assets/warfarin-medication.jpg";
 import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
 import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
 import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
+import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 48,
+      title: "عوارض خطرناک کوکائین بر قلب، مغز و سیستم عصبی مرکزی",
+      description: "آشنایی با عوارض جدی و خطرناک کوکائین بر قلب، مغز و سیستم عصبی و خطر سکته و مرگ آنی",
+      image: cocaineDangersImage,
+      link: "/articles/cocaine-dangers",
+      category: "سلامت عمومی"
+    },
     {
       id: 47,
       title: "رژیم مدیترانه‌ای: بهترین رژیم غذایی برای قلب، کنترل قند خون و دیابت",
