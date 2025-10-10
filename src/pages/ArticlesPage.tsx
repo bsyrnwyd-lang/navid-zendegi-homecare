@@ -57,12 +57,21 @@ import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
 import warfarinImage from "@/assets/warfarin-medication.jpg";
 import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
 import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
+import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 47,
+      title: "رژیم مدیترانه‌ای: بهترین رژیم غذایی برای قلب، کنترل قند خون و دیابت",
+      description: "راهنمای کامل رژیم مدیترانه‌ای برای سلامت قلب، کنترل قند خون و دیابت. آشنایی با مواد غذایی مجاز و فواید علمی",
+      image: mediterraneanDietImage,
+      link: "/articles/mediterranean-diet",
+      category: "تغذیه"
+    },
     {
       id: 46,
       title: "آتوروستاتین چیست و چه کاربردی دارد؟",
