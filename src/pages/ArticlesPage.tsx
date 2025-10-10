@@ -59,12 +59,21 @@ import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
 import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
 import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
 import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
+import botulismWarningImage from "@/assets/botulism-warning.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 49,
+      title: "مسمومیت بوتولیسم: علائم، خطرات فلج تنفسی و راهنمای پیشگیری",
+      description: "راهنمای کامل بوتولیسم، علائم فلج تنفسی، منابع انتقال (کنسرو، عسل خام) و پیشگیری از این فوریت پزشکی",
+      image: botulismWarningImage,
+      link: "/articles/botulism",
+      category: "فوریت‌های پزشکی"
+    },
     {
       id: 48,
       title: "عوارض خطرناک کوکائین بر قلب، مغز و سیستم عصبی مرکزی",
