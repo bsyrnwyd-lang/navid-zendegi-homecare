@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import Contact from "@/components/Contact";
-import CommentsSection from "@/components/CommentsSection";
 
 const ContactPage = () => {
   return (
@@ -10,7 +9,6 @@ const ContactPage = () => {
       <Header />
       <main className="pt-20 md:pt-24">
         <Contact />
-        <CommentsSection />
       </main>
       <Footer />
       <FloatingContact />
