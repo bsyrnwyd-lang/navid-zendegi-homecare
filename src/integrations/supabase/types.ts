@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      comments: {
+        Row: {
+          comment: string
+          created_at: string
+          email: string | null
+          id: string
+          is_approved: boolean
+          name: string
+          page_url: string
+          replied_at: string | null
+          reply: string | null
+        }
+        Insert: {
+          comment: string
+          created_at?: string
+          email?: string | null
+          id?: string
+          is_approved?: boolean
+          name: string
+          page_url: string
+          replied_at?: string | null
+          reply?: string | null
+        }
+        Update: {
+          comment?: string
+          created_at?: string
+          email?: string | null
+          id?: string
+          is_approved?: boolean
+          name?: string
+          page_url?: string
+          replied_at?: string | null
+          reply?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

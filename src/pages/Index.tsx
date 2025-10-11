@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import PricingInfo from "@/components/PricingInfo";
+import CommentsSection from "@/components/CommentsSection";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
         <WhyChooseUs />
         <PricingInfo />
         <Contact />
+        <CommentsSection />
       </main>
       <Footer />
       <FloatingContact />
