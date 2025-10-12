@@ -224,8 +224,8 @@ const PricingPage = () => {
                     {specialServices.map((item, index) => (
                       <tr key={index} className="border-b border-muted hover:bg-muted/20 transition-colors">
                         <td className="py-4 px-2 font-medium">{item.service}</td>
-                        <td className="py-4 px-2 text-accent font-bold ltr text-left">
-                          {item.price}
+                        <td className="py-4 px-2 text-accent font-bold text-left">
+                          <span className="rtl">از</span> <span className="ltr">{item.price}</span>
                         </td>
                       </tr>
                     ))}
