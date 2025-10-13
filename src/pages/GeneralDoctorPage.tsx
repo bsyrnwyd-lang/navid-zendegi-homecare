@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
+import PricingInfo from "@/components/PricingInfo";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 
@@ -218,6 +219,13 @@ const GeneralDoctorPage = () => {
                 تماس فوری: 09386117912
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Pricing Info Section */}
+        <section className="medical-section">
+          <div className="container mx-auto">
+            <PricingInfo />
           </div>
         </section>
       </main>
