@@ -1,107 +1,116 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
-import { Card, CardContent } from "@/components/ui/card";
-import { Heart, CheckCircle, Phone, Users } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import PricingInfo from "@/components/PricingInfo";
+import { Phone } from "lucide-react";
 import internalImage from "@/assets/internal-medicine.jpg";
 
 const InternalMedicinePage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="ویزیت متخصص داخلی در منزل تهران | دکتر داخلی برای بیماری‌های مزمن | نوید زندگی"
+        description="اعزام فوری متخصص داخلی در منزل تهران برای کنترل و درمان بیماری‌هایی چون دیابت، فشار خون، مشکلات گوارشی و تیروئید. مراقبت‌های کامل بیماری‌های داخلی در خانه."
+        keywords="متخصص داخلی در منزل، دکتر داخلی در تهران، ویزیت داخلی منزل، درمان دیابت در خانه، کنترل فشار خون، بیماری‌های مزمن، اختلالات تیروئید"
+        canonical="https://navidzendegi.ir/services/internal-medicine"
+      />
       <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}
         <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary">
-                  ویزیت متخصص داخلی در منزل
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-                  تشخیص و درمان بیماری‌های داخلی توسط متخصصان مجرب در منزل. مراقبت جامع برای بیماری‌های مزمن و حاد.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="tel:09386117912" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-                    <Phone className="ml-2 h-5 w-5" />
-                    تماس فوری: 09386117912
-                  </a>
-                </div>
-              </div>
-              <div className="relative">
-                <img 
-                  src={internalImage} 
-                  alt="ویزیت متخصص داخلی در منزل - تشخیص و درمان بیماری‌های داخلی"
-                  className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
-                />
-                <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
-              </div>
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-8">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+                ویزیت متخصص داخلی در منزل تهران (مدیریت بیماری‌های مزمن)
+              </h1>
+              <p className="text-base md:text-lg text-foreground leading-relaxed text-justify">
+                متخصص داخلی یکی از حیاتی‌ترین تخصص‌ها در حوزه پزشکی است، به ویژه برای مدیریت بیماری‌های مزمن و پیچیده. نوید زندگی با اعزام متخصص داخلی در منزل تهران، امکان کنترل دقیق بیماری‌هایی چون دیابت، فشار خون، و اختلالات تیروئید را در محیط آرام خانه فراهم می‌کند. هدف ما پایش مستمر وضعیت بیمار و جلوگیری از پیشرفت بیماری‌ها بدون نیاز به مراجعه‌های مکرر و سخت به مراکز درمانی است.
+              </p>
+            </div>
+            
+            <div className="relative mb-8">
+              <img 
+                src={internalImage} 
+                alt="ویزیت متخصص داخلی در منزل تهران - مدیریت بیماری‌های مزمن"
+                className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div className="text-center mb-8">
+              <a href="tel:09386117912" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-lg font-semibold">
+                <Phone className="ml-2 h-5 w-5" />
+                تماس فوری: 09386117912
+              </a>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Content Section */}
         <section className="medical-section">
-          <div className="container mx-auto">
-            <h2 className="section-title text-center mb-12">خدمات متخصص داخلی در منزل</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <Heart className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">تشخیص بیماری‌های داخلی</h3>
-                  <p className="text-muted-foreground mb-4">
-                    شناسایی و درمان انواع بیماری‌های سیستم‌های مختلف بدن
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">بیماری‌های قلبی عروقی</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">اختلالات گوارشی</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">بیماری‌های تنفسی</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              تخصص‌های تحت پوشش دکتر داخلی در منزل
+            </h2>
+            <p className="text-base text-foreground mb-6 leading-relaxed text-justify">
+              متخصص داخلی در خانه طیف وسیعی از بیماری‌ها و شرایط را تحت پوشش قرار می‌دهد که از مهم‌ترین آن‌ها می‌توان به موارد زیر اشاره کرد:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>دیابت و اختلالات متابولیک:</strong> تنظیم دوز انسولین، مدیریت قند خون و جلوگیری از عوارض دیابت.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>فشار خون بالا و چربی خون:</strong> پایش دقیق فشار و تجویز داروهای لازم برای کنترل بیماری‌های عروقی.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>بیماری‌های گوارشی:</strong> تشخیص و درمان مشکلات معده، روده، کبد و کیسه صفرا.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>بیماری‌های تنفسی:</strong> مدیریت آسم، برونشیت و عفونت‌های ریوی غیرحاد.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>اختلالات تیروئید و غدد:</strong> تنظیم هورمون‌ها و پیگیری وضعیت غدد درون‌ریز.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>عفونت‌های عمومی و تب‌های طولانی:</strong> تشخیص منشأ تب و عفونت‌های داخلی بدن.
+              </li>
+            </ul>
 
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <Users className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">مراقبت بیماری‌های مزمن</h3>
-                  <p className="text-muted-foreground mb-4">
-                    پیگیری و کنترل بیماری‌های طولانی مدت در منزل
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">دیابت و فشار خون</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">بیماری‌های کلیوی</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">اختلالات هورمونی</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              مزایای دریافت خدمات بیماری‌های داخلی در خانه
+            </h2>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>پایش منظم و دقیق:</strong> امکان انجام چکاپ‌ها و آزمایش‌های دوره‌ای برای کنترل وضعیت بیمار بدون تعویق.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>مشاوره تغذیه و سبک زندگی:</strong> دریافت توصیه‌های لازم برای مدیریت بیماری‌های مزمن از متخصص در محیط زندگی بیمار.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>کاهش عوارض:</strong> مدیریت بهتر بیماری‌های مزمن، خطر بروز حملات قلبی، سکته مغزی و سایر عوارض را کاهش می‌دهد.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>انجام آزمایش در محل:</strong> امکان نمونه‌گیری آزمایشگاهی و تفسیر نتایج توسط متخصص داخلی در همان منزل.
+              </li>
+            </ul>
+
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              مناطق تحت پوشش اعزام دکتر داخلی در منزل
+            </h2>
+            <p className="text-base text-foreground mb-8 leading-relaxed text-justify">
+              خدمات ما شامل تمامی مناطق تهران می‌شود. تیم نوید زندگی آماده اعزام فوری متخصص داخلی به منزل شما در شمال، جنوب، شرق و غرب تهران است.
+            </p>
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* CTA Section */}
         <section className="medical-section bg-primary/5">
-          <div className="container mx-auto text-center">
-            <h2 className="section-title mb-6">ویزیت متخصص داخلی در منزل</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              تشخیص و درمان دقیق بیماری‌های داخلی در راحتی منزل
+          <div className="container mx-auto max-w-4xl text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
+              ویزیت متخصص داخلی در منزل
+            </h2>
+            <p className="text-base text-foreground mb-6 leading-relaxed">
+              برای مدیریت حرفه‌ای و کنترل دقیق بیماری‌های مزمن، همین حالا برای ویزیت متخصص داخلی در منزل با نوید زندگی تماس بگیرید و آرامش را به خانه خود بیاورید.
             </p>
             <a 
               href="tel:09386117912" 
@@ -110,6 +119,13 @@ const InternalMedicinePage = () => {
               <Phone className="ml-2 h-6 w-6" />
               تماس: 09386117912
             </a>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-4xl">
+            <PricingInfo />
           </div>
         </section>
       </main>
