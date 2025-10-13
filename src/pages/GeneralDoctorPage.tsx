@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import PricingInfo from "@/components/PricingInfo";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import generalDoctorImage from "@/assets/iranian-general-doctor.jpg";
 
 const GeneralDoctorPage = () => {
   const handleCall = () => {
@@ -25,20 +26,32 @@ const GeneralDoctorPage = () => {
         {/* Hero Section */}
         <section className="medical-section">
           <div className="container mx-auto max-w-5xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-primary">
-              ویزیت پزشک عمومی در منزل تهران (اعزام فوری و شبانه روزی)
-            </h1>
-            <p className="text-lg leading-relaxed mb-6">
-              آیا شما یا یکی از عزیزانتان به دلیل بیماری، کهولت سن، یا شرایط خاص، امکان مراجعه حضوری به مطب یا بیمارستان را ندارید؟ <strong>نوید زندگی</strong> با ارائه خدمات <strong>پزشک در منزل تهران</strong>، آسایش و درمان را به خانه شما می‌آورد. ما متعهد به اعزام سریع و فوری کادر درمانی مجرب و متخصص، به صورت شبانه روزی در تمام مناطق تهران هستیم تا بهترین مراقبت پزشکی را در محیط امن و راحت خانه خود دریافت کنید.
-            </p>
-            <Button 
-              onClick={handleCall}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              <Phone className="ml-2 h-5 w-5" />
-              درخواست ویزیت پزشک عمومی
-            </Button>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-primary">
+                  ویزیت پزشک عمومی در منزل تهران (اعزام فوری و شبانه روزی)
+                </h1>
+                <p className="text-lg leading-relaxed mb-6">
+                  آیا شما یا یکی از عزیزانتان به دلیل بیماری، کهولت سن، یا شرایط خاص، امکان مراجعه حضوری به مطب یا بیمارستان را ندارید؟ <strong>نوید زندگی</strong> با ارائه خدمات <strong>پزشک در منزل تهران</strong>، آسایش و درمان را به خانه شما می‌آورد. ما متعهد به اعزام سریع و فوری کادر درمانی مجرب و متخصص، به صورت شبانه روزی در تمام مناطق تهران هستیم تا بهترین مراقبت پزشکی را در محیط امن و راحت خانه خود دریافت کنید.
+                </p>
+                <Button 
+                  onClick={handleCall}
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
+                  <Phone className="ml-2 h-5 w-5" />
+                  درخواست ویزیت پزشک عمومی
+                </Button>
+              </div>
+              <div className="relative">
+                <img 
+                  src={generalDoctorImage} 
+                  alt="ویزیت پزشک عمومی در منزل تهران - خدمات پزشکی در خانه"
+                  className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
+              </div>
+            </div>
           </div>
         </section>
 
