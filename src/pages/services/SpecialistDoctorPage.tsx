@@ -51,64 +51,17 @@ const SpecialistDoctorPage = () => {
 
         {/* Why Choose Home Specialist Section */}
         <section className="medical-section bg-background">
-          <div className="container mx-auto max-w-3xl">
-            <h2 className="section-title text-center mb-12">چرا برای خدمات تخصصی، پزشک در منزل را انتخاب کنیم؟</h2>
-            <div className="space-y-6">
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-2">کاهش ریسک انتقال بیماری</h3>
-                      <p className="text-muted-foreground">
-                        جلوگیری از قرار گرفتن بیماران حساس در محیط‌های شلوغ بیمارستانی
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Stethoscope className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-2">معاینه دقیق‌تر</h3>
-                      <p className="text-muted-foreground">
-                        پزشک زمان بیشتری برای بررسی کامل سوابق و شرایط زندگی بیمار دارد
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-2">راحتی بیمار</h3>
-                      <p className="text-muted-foreground">
-                        حذف سختی‌های جابه‌جایی، به‌ویژه برای بیماران با شرایط حاد یا ناتوانی حرکتی
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-2">پیگیری مستمر</h3>
-                      <p className="text-muted-foreground">
-                        امکان هماهنگی برای ویزیت‌های دوره‌ای و پیگیری روند درمان در خانه
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8">چرا برای خدمات تخصصی، پزشک در منزل را انتخاب کنیم؟</h2>
+            
+            <div className="space-y-4 text-lg leading-relaxed">
+              <p><strong>• کاهش ریسک انتقال بیماری:</strong> جلوگیری از قرار گرفتن بیماران حساس در محیط‌های شلوغ بیمارستانی</p>
+              
+              <p><strong>• معاینه دقیق‌تر:</strong> پزشک زمان بیشتری برای بررسی کامل سوابق و شرایط زندگی بیمار دارد</p>
+              
+              <p><strong>• راحتی بیمار:</strong> حذف سختی‌های جابه‌جایی، به‌ویژه برای بیماران با شرایط حاد یا ناتوانی حرکتی</p>
+              
+              <p><strong>• پیگیری مستمر:</strong> امکان هماهنگی برای ویزیت‌های دوره‌ای و پیگیری روند درمان در خانه</p>
             </div>
           </div>
         </section>
@@ -116,169 +69,63 @@ const SpecialistDoctorPage = () => {
         {/* Specialties Section */}
         <section className="medical-section bg-primary/5">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="section-title text-center mb-12">تخصص‌های پزشکی قابل ارائه در منزل توسط نوید زندگی</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8">تخصص‌های پزشکی قابل ارائه در منزل توسط نوید زندگی</h2>
             
-            <div className="space-y-6">
-              {/* Cardiology */}
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Heart className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-3">۱. متخصص قلب و عروق در منزل</h3>
-                      <p className="text-muted-foreground mb-3">
-                        اعزام کاردیولوژیست همراه با تجهیزات اکو و نوار قلب برای بررسی وضعیت قلب و فشار خون.
-                      </p>
-                      <Link to="/cardiology-services" className="text-primary hover:underline inline-flex items-center">
-                        اطلاعات بیشتر درباره خدمات قلب و عروق
-                        <CheckCircle className="w-4 h-4 mr-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="space-y-6 text-lg leading-relaxed">
+              <div>
+                <h3 className="text-xl font-bold mb-2">۱. متخصص قلب و عروق در منزل</h3>
+                <p className="mb-2">اعزام کاردیولوژیست همراه با تجهیزات اکو و نوار قلب برای بررسی وضعیت قلب و فشار خون.</p>
+                <Link to="/cardiology-services" className="text-primary hover:underline">
+                  اطلاعات بیشتر درباره خدمات قلب و عروق ←
+                </Link>
+              </div>
 
-              {/* Internal Medicine */}
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Stethoscope className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-3">۲. متخصص داخلی در منزل</h3>
-                      <p className="text-muted-foreground mb-3">
-                        تشخیص و درمان بیماری‌های مزمن مانند دیابت، فشار خون بالا، مشکلات گوارشی و عفونی.
-                      </p>
-                      <Link to="/services/internal-medicine" className="text-primary hover:underline inline-flex items-center">
-                        اطلاعات بیشتر درباره خدمات داخلی
-                        <CheckCircle className="w-4 h-4 mr-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <h3 className="text-xl font-bold mb-2">۲. متخصص داخلی در منزل</h3>
+                <p className="mb-2">تشخیص و درمان بیماری‌های مزمن مانند دیابت، فشار خون بالا، مشکلات گوارشی و عفونی.</p>
+                <Link to="/services/internal-medicine" className="text-primary hover:underline">
+                  اطلاعات بیشتر درباره خدمات داخلی ←
+                </Link>
+              </div>
 
-              {/* Orthopedics */}
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Bone className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-3">۳. متخصص ارتوپدی در منزل</h3>
-                      <p className="text-muted-foreground">
-                        ویزیت و مشاوره برای بیماران دارای شکستگی، آرتروز شدید، یا پس از جراحی‌های ارتوپدی و مفاصل.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <h3 className="text-xl font-bold mb-2">۳. متخصص ارتوپدی در منزل</h3>
+                <p>ویزیت و مشاوره برای بیماران دارای شکستگی، آرتروز شدید، یا پس از جراحی‌های ارتوپدی و مفاصل.</p>
+              </div>
 
-              {/* Neurology */}
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Brain className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-3">۴. متخصص مغز و اعصاب (نورولوژی) در منزل</h3>
-                      <p className="text-muted-foreground mb-3">
-                        مراقبت‌های تخصصی برای بیماران سکته مغزی، ام‌اس، پارکینسون و سایر اختلالات عصبی.
-                      </p>
-                      <Link to="/services/neurology" className="text-primary hover:underline inline-flex items-center">
-                        اطلاعات بیشتر درباره خدمات مغز و اعصاب
-                        <CheckCircle className="w-4 h-4 mr-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <h3 className="text-xl font-bold mb-2">۴. متخصص مغز و اعصاب (نورولوژی) در منزل</h3>
+                <p className="mb-2">مراقبت‌های تخصصی برای بیماران سکته مغزی، ام‌اس، پارکینسون و سایر اختلالات عصبی.</p>
+                <Link to="/services/neurology" className="text-primary hover:underline">
+                  اطلاعات بیشتر درباره خدمات مغز و اعصاب ←
+                </Link>
+              </div>
 
-              {/* Pulmonology */}
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Wind className="w-6 h-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-3">۵. متخصص ریه و عفونی در منزل</h3>
-                      <p className="text-muted-foreground mb-3">
-                        تشخیص و پیگیری درمان بیماری‌های تنفسی، ذات‌الریه و عفونت‌های پیچیده.
-                      </p>
-                      <Link to="/services/infectious-disease" className="text-primary hover:underline inline-flex items-center">
-                        اطلاعات بیشتر درباره خدمات بیماری‌های عفونی
-                        <CheckCircle className="w-4 h-4 mr-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <h3 className="text-xl font-bold mb-2">۵. متخصص ریه و عفونی در منزل</h3>
+                <p className="mb-2">تشخیص و پیگیری درمان بیماری‌های تنفسی، ذات‌الریه و عفونت‌های پیچیده.</p>
+                <Link to="/services/infectious-disease" className="text-primary hover:underline">
+                  اطلاعات بیشتر درباره خدمات بیماری‌های عفونی ←
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
         {/* How to Request Section */}
         <section className="medical-section bg-background">
-          <div className="container mx-auto max-w-3xl">
-            <h2 className="section-title text-center mb-12">نحوه درخواست ویزیت پزشک فوق تخصص در خانه</h2>
-            <p className="text-center text-lg text-muted-foreground mb-8">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">نحوه درخواست ویزیت پزشک فوق تخصص در خانه</h2>
+            <p className="text-lg mb-6">
               فرآیند درخواست خدمات تخصصی در نوید زندگی بسیار ساده است:
             </p>
             
-            <div className="space-y-6">
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                      ۱
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">تماس و مشاوره</h3>
-                      <p className="text-muted-foreground">
-                        با ما تماس بگیرید و نوع تخصص مورد نیاز و شرایط بیمار را شرح دهید
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                      ۲
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">هماهنگی سریع</h3>
-                      <p className="text-muted-foreground">
-                        در کوتاه‌ترین زمان، پزشک متخصص مربوطه برای ویزیت هماهنگ می‌شود
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 text-xl font-bold">
-                      ۳
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">ویزیت و درمان</h3>
-                      <p className="text-muted-foreground">
-                        متخصص با تجهیزات کامل به منزل شما اعزام شده و فرآیند تشخیص و درمان را آغاز می‌کند
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="space-y-4 text-lg leading-relaxed">
+              <p><strong>۱. تماس و مشاوره:</strong> با ما تماس بگیرید و نوع تخصص مورد نیاز و شرایط بیمار را شرح دهید</p>
+              
+              <p><strong>۲. هماهنگی سریع:</strong> در کوتاه‌ترین زمان، پزشک متخصص مربوطه برای ویزیت هماهنگ می‌شود</p>
+              
+              <p><strong>۳. ویزیت و درمان:</strong> متخصص با تجهیزات کامل به منزل شما اعزام شده و فرآیند تشخیص و درمان را آغاز می‌کند</p>
             </div>
           </div>
         </section>
