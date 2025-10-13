@@ -1,228 +1,223 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
-import PricingInfo from "@/components/PricingInfo";
-import { Card, CardContent } from "@/components/ui/card";
-import { Clock, Shield, MapPin, Phone, CheckCircle, HelpCircle } from "lucide-react";
-import generalDoctorImage from "@/assets/iranian-general-doctor.jpg";
+import SEOHead from "@/components/SEOHead";
+import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 
 const GeneralDoctorPage = () => {
+  const handleCall = () => {
+    window.location.href = "tel:09386117912";
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="ویزیت پزشک عمومی در منزل تهران | اعزام فوری و شبانه روزی | نوید زندگی"
+        description="پزشک در منزل تهران را شبانه روزی و فوری بخواهید. اعزام پزشک عمومی و متخصص به محل شما با کادر مجرب نوید زندگی. برای ویزیت دکتر در خانه همین حالا تماس بگیرید."
+        keywords="ویزیت پزشک در منزل، پزشک عمومی در منزل، پزشک در خانه تهران، دکتر در منزل، ویزیت دکتر، خدمات پزشکی در منزل"
+        canonical="https://navidzendegi.com/general-doctor"
+        ogType="website"
+      />
       <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}
-        <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary">
-                  ویزیت پزشک عمومی در منزل | ویزیت فوری شبانه‌روزی
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  اگر به هر دلیل امکان رفتن به مطب یا بیمارستان را ندارید، پزشک عمومی ما در سریع‌ترین زمان در منزل شما حاضر می‌شود. 
-                  خدمات ما به صورت شبانه‌روزی در تهران و حومه ارائه می‌گردد.
-                </p>
-              </div>
-              <div className="relative">
-                <img 
-                  src={generalDoctorImage} 
-                  alt="ویزیت پزشک عمومی در منزل - خدمات پزشکی حرفه‌ای"
-                  className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
-                />
-                <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
-              </div>
-            </div>
+        <section className="medical-section">
+          <div className="container mx-auto max-w-5xl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-primary">
+              ویزیت پزشک عمومی در منزل تهران (اعزام فوری و شبانه روزی)
+            </h1>
+            <p className="text-lg leading-relaxed mb-6">
+              آیا شما یا یکی از عزیزانتان به دلیل بیماری، کهولت سن، یا شرایط خاص، امکان مراجعه حضوری به مطب یا بیمارستان را ندارید؟ <strong>نوید زندگی</strong> با ارائه خدمات <strong>پزشک در منزل تهران</strong>، آسایش و درمان را به خانه شما می‌آورد. ما متعهد به اعزام سریع و فوری کادر درمانی مجرب و متخصص، به صورت شبانه روزی در تمام مناطق تهران هستیم تا بهترین مراقبت پزشکی را در محیط امن و راحت خانه خود دریافت کنید.
+            </p>
+            <Button 
+              onClick={handleCall}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              <Phone className="ml-2 h-5 w-5" />
+              درخواست ویزیت پزشک عمومی
+            </Button>
           </div>
         </section>
 
         {/* Why Choose Section */}
-        <section className="medical-section">
-          <div className="container mx-auto">
-            <h2 className="section-title text-center mb-12">چرا ویزیت پزشک عمومی در منزل؟</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4 space-x-reverse">
-                    <Shield className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold mb-2">راحتی و آسایش بیمار</h3>
-                      <p className="text-muted-foreground">بدون نیاز به جابه‌جایی</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+        <section className="medical-section bg-muted/30">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              چرا باید خدمات پزشک در منزل را انتخاب کنید؟
+            </h2>
+            <p className="text-lg leading-relaxed mb-6">
+              استفاده از خدمات <strong>ویزیت دکتر در خانه</strong> مزایای متعددی دارد که تجربه درمان را بهبود می‌بخشد:
+            </p>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-3">راحتی و آسایش بیمار</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  دیگر نیازی به تحمل ترافیک، زمان انتظار طولانی در درمانگاه‌ها یا جابجایی بیماران بدحال نیست.
+                </p>
+              </div>
               
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4 space-x-reverse">
-                    <Shield className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold mb-2">کاهش خطر ابتلا</h3>
-                      <p className="text-muted-foreground">به عفونت‌های بیمارستانی یا ویروسی (مانند آنفولانزا و کرونا)</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <h3 className="text-xl font-semibold mb-3">کاهش ریسک ابتلا به بیماری‌های واگیر</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  با ماندن در خانه، از قرار گرفتن در معرض ویروس‌ها و عفونت‌های محیط‌های درمانی شلوغ جلوگیری می‌کنید.
+                </p>
+              </div>
               
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4 space-x-reverse">
-                    <Clock className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold mb-2">صرفه‌جویی در زمان</h3>
-                      <p className="text-muted-foreground">و هزینه رفت‌وآمد</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <h3 className="text-xl font-semibold mb-3">مراقبت شخصی‌تر</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  پزشک در منزل زمان بیشتری برای معاینه دقیق، پاسخ به سؤالات و بررسی سوابق پزشکی شما دارد.
+                </p>
+              </div>
               
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4 space-x-reverse">
-                    <CheckCircle className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold mb-2">رسیدگی ویژه</h3>
-                      <p className="text-muted-foreground">امکان رسیدگی به سالمندان و بیماران بدحال در خانه</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <h3 className="text-xl font-semibold mb-3">پوشش شبانه روزی و اورژانسی</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  امکان درخواست پزشک شبانه روزی برای مواقع اضطراری که دسترسی به مراکز درمانی سخت است.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Services Section */}
-        <section className="medical-section bg-muted/30">
-          <div className="container mx-auto">
-            <h2 className="section-title text-center mb-12">خدمات پزشک عمومی در منزل</h2>
-            <Card className="medical-card max-w-4xl mx-auto">
-              <CardContent className="p-8">
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-1 ml-3 flex-shrink-0" />
-                    <span>معاینه و تشخیص بیماری‌های عمومی (مانند سرماخوردگی، تب، بدن‌درد، مشکلات گوارشی و…)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-1 ml-3 flex-shrink-0" />
-                    <span>تجویز دارو و ارائه نسخه معتبر (دارو همیشه همراه پزشک است)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-1 ml-3 flex-shrink-0" />
-                    <span>کنترل علائم حیاتی مانند فشار خون و قند خون</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-1 ml-3 flex-shrink-0" />
-                    <span>صدور گواهی استراحت پزشکی در صورت نیاز</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-1 ml-3 flex-shrink-0" />
-                    <span>ارجاع بیمار به پزشک متخصص یا مراکز درمانی در شرایط ضروری</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Coverage Area */}
         <section className="medical-section">
-          <div className="container mx-auto">
-            <div className="text-center max-w-3xl mx-auto">
-              <h2 className="section-title mb-6">مناطق تحت پوشش</h2>
-              <Card className="medical-card">
-                <CardContent className="p-8">
-                  <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <p className="text-lg">
-                    خدمات ویزیت پزشک عمومی در منزل در تهران و حومه به صورت شبانه‌روزی ارائه می‌شود.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* How to Request */}
-        <section className="medical-section bg-muted/30">
-          <div className="container mx-auto">
-            <h2 className="section-title text-center mb-12">نحوه درخواست ویزیت پزشک</h2>
-            <Card className="medical-card max-w-2xl mx-auto">
-              <CardContent className="p-8 text-center">
-                <Phone className="w-16 h-16 text-primary mx-auto mb-6" />
-                <h3 className="text-xl font-semibold mb-4">تماس تلفنی با شماره:</h3>
-                <div className="text-2xl font-bold text-primary mb-4" dir="ltr">09386117912</div>
-                <p className="text-muted-foreground">
-                  پشتیبانی ما به صورت ۲۴ ساعته آماده پاسخگویی است.
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              خدمات تخصصی پزشک عمومی در منزل چیست؟
+            </h2>
+            <p className="text-lg leading-relaxed mb-6">
+              پزشکان عمومی اعزامی توسط نوید زندگی، طیف گسترده‌ای از خدمات درمانی و تشخیصی را در خانه شما انجام می‌دهند:
+            </p>
+            <div className="space-y-4 mr-6">
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>معاینه کامل:</strong> بررسی علائم حیاتی، شرح حال‌گیری دقیق و تشخیص اولیه بیماری‌ها.
                 </p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="medical-section">
-          <div className="container mx-auto">
-            <h2 className="section-title text-center mb-12">سوالات متداول</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4 space-x-reverse">
-                    <HelpCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold mb-2">چقدر طول می‌کشد تا پزشک برسد؟</h3>
-                      <p className="text-muted-foreground">معمولاً بین ۳۰ تا ۶۰ دقیقه (بسته به فاصله و ترافیک).</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              </div>
               
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4 space-x-reverse">
-                    <HelpCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold mb-2">آیا امکان ویزیت شبانه‌روزی وجود دارد؟</h3>
-                      <p className="text-muted-foreground">بله، خدمات ما در تمام ساعات شبانه‌روز ارائه می‌شود.</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>تجویز دارو و دستورات درمانی:</strong> نوشتن نسخه دارویی لازم و ارائه مشاوره‌های بهداشتی.
+                </p>
+              </div>
               
-              <Card className="medical-card md:col-span-2">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4 space-x-reverse">
-                    <HelpCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold mb-2">دارو همراه پزشک هست؟</h3>
-                      <p className="text-muted-foreground">بله، داروهای مورد نیاز همیشه همراه پزشک می‌باشد.</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>مشاوره و ارجاع:</strong> ارائه مشاوره‌های تخصصی در مورد روند بیماری و در صورت نیاز، ارجاع به پزشک متخصص در منزل.
+                </p>
+              </div>
+              
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>انجام خدمات اولیه درمانی:</strong> شامل تزریقات، سرم تراپی و پانسمان‌های اولیه در صورت لزوم.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Emergency Contact */}
+        {/* Pricing Section */}
+        <section className="medical-section bg-muted/30">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              هزینه و تعرفه ویزیت پزشک در منزل تهران
+            </h2>
+            <p className="text-lg leading-relaxed mb-6">
+              یکی از مهم‌ترین دغدغه‌های خانواده‌ها، هزینه ویزیت پزشک در خانه است. در نوید زندگی، شفافیت در قیمت‌گذاری اولویت ماست. تعرفه پزشک در منزل بر اساس عوامل زیر تعیین می‌شود:
+            </p>
+            <div className="space-y-4 mr-6">
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>زمان ارائه خدمات:</strong> ویزیت‌ها در ساعات عادی یا خدمات پزشکی در خانه شبانه روزی تعرفه‌های متفاوتی دارند.
+                </p>
+              </div>
+              
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>منطقه جغرافیایی:</strong> هزینه ایاب و ذهاب پزشک به محل شما.
+                </p>
+              </div>
+              
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>تخصص پزشک:</strong> (پزشک عمومی یا متخصص).
+                </p>
+              </div>
+            </div>
+            <p className="text-lg leading-relaxed mt-6">
+              برای دریافت قیمت دقیق بر اساس شرایط بیمار و منطقه سکونت خود، لطفاً با شماره‌های ما تماس بگیرید.
+            </p>
+          </div>
+        </section>
+
+        {/* Why Navid Zendegi Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              چرا نوید زندگی بهترین انتخاب برای خدمات پزشکی در منزل است؟
+            </h2>
+            <p className="text-lg leading-relaxed mb-6">
+              انتخاب یک مرکز معتبر برای پزشک در منزل اهمیت حیاتی دارد. نوید زندگی با تضمین کیفیت خدمات، در کنار شماست:
+            </p>
+            <div className="space-y-4 mr-6">
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>اعزام سریع و فوری:</strong> ما در کوتاه‌ترین زمان ممکن، پزشک را به محل شما اعزام می‌کنیم.
+                </p>
+              </div>
+              
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>کادر پزشکی مجرب و متعهد:</strong> تمامی پزشکان ما دارای مجوزهای لازم و سابقه کار درخشان هستند.
+                </p>
+              </div>
+              
+              <div className="flex items-start">
+                <span className="ml-3 text-primary font-bold">•</span>
+                <p className="leading-relaxed">
+                  <strong>پوشش سراسری تهران:</strong> خدمات ما تمام مناطق تهران، از شمال و جنوب تا شرق و غرب را شامل می‌شود.
+                </p>
+              </div>
+            </div>
+            
+            <h3 className="text-xl font-semibold mt-8 mb-4">مناطق اصلی تحت پوشش در تهران</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              ما متعهد به ارائه خدمات <strong>ویزیت پزشک در منزل</strong> در تمام نقاط تهران هستیم، از جمله: شمال تهران (ولنجک، نیاوران، فرمانیه، الهیه)، غرب تهران (سعادت‌آباد، شهرک غرب، پونک)، شرق تهران (تجریش، دربند، فرشته)، و جنوب تهران (یافت‌آباد، شهران، نازی‌آباد).
+            </p>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="medical-section bg-primary/5">
-          <div className="container mx-auto">
-            <Card className="medical-card max-w-3xl mx-auto border-primary/20">
-              <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold mb-6 text-primary">تماس فوری</h2>
-                <Phone className="w-16 h-16 text-primary mx-auto mb-6" />
-                <p className="text-lg mb-4">
-                  ☎️ برای درخواست فوری ویزیت پزشک عمومی در منزل همین حالا تماس بگیرید:
-                </p>
-                <div className="text-3xl font-bold text-primary" dir="ltr">09386117912</div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Pricing Info Section */}
-        <section className="medical-section bg-background">
-          <div className="container mx-auto">
-            <PricingInfo />
+          <div className="container mx-auto max-w-5xl text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              آسایش و درمان در خانه شماست
+            </h2>
+            <p className="text-lg leading-relaxed mb-8">
+              برای درخواست فوری <strong>ویزیت پزشک در منزل</strong> همین حالا با ما تماس بگیرید.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                onClick={handleCall}
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                <Phone className="ml-2 h-5 w-5" />
+                تماس فوری: 09386117912
+              </Button>
+            </div>
           </div>
         </section>
       </main>
