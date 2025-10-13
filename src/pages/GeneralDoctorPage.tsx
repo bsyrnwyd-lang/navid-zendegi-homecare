@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import PricingInfo from "@/components/PricingInfo";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import generalDoctorImage from "@/assets/general-doctor-home-clean.jpg";
+import generalDoctorImage from "@/assets/modern-general-doctor-home.jpg";
 
 const GeneralDoctorPage = () => {
   const handleCall = () => {
