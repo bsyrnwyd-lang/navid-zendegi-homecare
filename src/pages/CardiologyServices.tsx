@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import PricingInfo from "@/components/PricingInfo";
 import SEOHead from "@/components/SEOHead";
+import cardiologyImage from "@/assets/iranian-cardiology-home.jpg";
 
 const CardiologyServices = () => {
   const handleCall = () => {
@@ -25,20 +26,32 @@ const CardiologyServices = () => {
         {/* Hero Section */}
         <section className="medical-section">
           <div className="container mx-auto max-w-5xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-primary">
-              ویزیت متخصص قلب در منزل تهران (خدمات کامل کاردیولوژی)
-            </h1>
-            <p className="text-lg leading-relaxed mb-6">
-              بیماری‌های قلبی عروقی نیازمند مراقبت‌های ویژه و تخصصی هستند. اگر بیمار شما شرایط انتقال به بیمارستان را ندارد یا به دنبال آسایش و دقت بیشتر در فرآیند درمان هستید، <strong>نوید زندگی</strong> با اعزام <strong>متخصص قلب در منزل تهران</strong>، خدمات کامل کاردیولوژی را به خانه شما می‌آورد. ما متعهد به ارائه مراقبت‌های حرفه‌ای و استفاده از تجهیزات پزشکی استاندارد در محیط راحت و امن منزل شما هستیم.
-            </p>
-            <Button 
-              onClick={handleCall}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              <Phone className="ml-2 h-5 w-5" />
-              درخواست ویزیت متخصص قلب
-            </Button>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-primary">
+                  ویزیت متخصص قلب در منزل تهران (خدمات کامل کاردیولوژی)
+                </h1>
+                <p className="text-lg leading-relaxed mb-6">
+                  بیماری‌های قلبی عروقی نیازمند مراقبت‌های ویژه و تخصصی هستند. اگر بیمار شما شرایط انتقال به بیمارستان را ندارد یا به دنبال آسایش و دقت بیشتر در فرآیند درمان هستید، <strong>نوید زندگی</strong> با اعزام <strong>متخصص قلب در منزل تهران</strong>، خدمات کامل کاردیولوژی را به خانه شما می‌آورد. ما متعهد به ارائه مراقبت‌های حرفه‌ای و استفاده از تجهیزات پزشکی استاندارد در محیط راحت و امن منزل شما هستیم.
+                </p>
+                <Button 
+                  onClick={handleCall}
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
+                  <Phone className="ml-2 h-5 w-5" />
+                  درخواست ویزیت متخصص قلب
+                </Button>
+              </div>
+              <div className="relative">
+                <img 
+                  src={cardiologyImage} 
+                  alt="ویزیت متخصص قلب در منزل تهران - خدمات کاردیولوژی در خانه"
+                  className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
+              </div>
+            </div>
           </div>
         </section>
 
