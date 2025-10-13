@@ -8,10 +8,20 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import PricingInfo from "@/components/PricingInfo";
+import OrganizationSchema from "@/components/OrganizationSchema";
+import SEOHead from "@/components/SEOHead";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="ویزیت پزشک در منزل تهران | نوید زندگی - خدمات پزشکی در منزل"
+        description="ویزیت پزشک در منزل تهران با نوید زندگی - اعزام دکتر عمومی، متخصص، پرستار و انجام آزمایش در منزل. خدمات پزشکی درب منزل با کیفیت بالا و قیمت مناسب در تمام مناطق تهران"
+        keywords="ویزیت پزشک در منزل تهران, دکتر در منزل, پرستار در منزل تهران, آزمایش در منزل, خدمات پزشکی در منزل"
+        canonical="https://navidzendegi.com/"
+        ogType="website"
+      />
+      <OrganizationSchema />
       <Header />
       <main className="pt-20 md:pt-24">
         <Hero />
