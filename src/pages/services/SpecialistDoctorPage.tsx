@@ -51,54 +51,62 @@ const SpecialistDoctorPage = () => {
 
         {/* Why Choose Home Specialist Section */}
         <section className="medical-section bg-background">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-3xl">
             <h2 className="section-title text-center mb-12">چرا برای خدمات تخصصی، پزشک در منزل را انتخاب کنیم؟</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="space-y-6">
               <Card className="medical-card">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-primary" />
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-semibold mb-2">کاهش ریسک انتقال بیماری</h3>
+                      <p className="text-muted-foreground">
+                        جلوگیری از قرار گرفتن بیماران حساس در محیط‌های شلوغ بیمارستانی
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="font-semibold mb-2">کاهش ریسک انتقال بیماری</h3>
-                  <p className="text-sm text-muted-foreground">
-                    جلوگیری از قرار گرفتن بیماران حساس در محیط‌های شلوغ بیمارستانی
-                  </p>
                 </CardContent>
               </Card>
 
               <Card className="medical-card">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Stethoscope className="w-8 h-8 text-primary" />
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Stethoscope className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-semibold mb-2">معاینه دقیق‌تر</h3>
+                      <p className="text-muted-foreground">
+                        پزشک زمان بیشتری برای بررسی کامل سوابق و شرایط زندگی بیمار دارد
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="font-semibold mb-2">معاینه دقیق‌تر</h3>
-                  <p className="text-sm text-muted-foreground">
-                    پزشک زمان بیشتری برای بررسی کامل سوابق و شرایط زندگی بیمار دارد
-                  </p>
                 </CardContent>
               </Card>
 
               <Card className="medical-card">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Heart className="w-8 h-8 text-primary" />
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-semibold mb-2">راحتی بیمار</h3>
+                      <p className="text-muted-foreground">
+                        حذف سختی‌های جابه‌جایی، به‌ویژه برای بیماران با شرایط حاد یا ناتوانی حرکتی
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="font-semibold mb-2">راحتی بیمار</h3>
-                  <p className="text-sm text-muted-foreground">
-                    حذف سختی‌های جابه‌جایی، به‌ویژه برای بیماران با شرایط حاد یا ناتوانی حرکتی
-                  </p>
                 </CardContent>
               </Card>
 
               <Card className="medical-card">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-primary" />
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-semibold mb-2">پیگیری مستمر</h3>
+                      <p className="text-muted-foreground">
+                        امکان هماهنگی برای ویزیت‌های دوره‌ای و پیگیری روند درمان در خانه
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="font-semibold mb-2">پیگیری مستمر</h3>
-                  <p className="text-sm text-muted-foreground">
-                    امکان هماهنگی برای ویزیت‌های دوره‌ای و پیگیری روند درمان در خانه
-                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -107,10 +115,10 @@ const SpecialistDoctorPage = () => {
 
         {/* Specialties Section */}
         <section className="medical-section bg-primary/5">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-4xl">
             <h2 className="section-title text-center mb-12">تخصص‌های پزشکی قابل ارائه در منزل توسط نوید زندگی</h2>
             
-            <div className="space-y-8">
+            <div className="space-y-6">
               {/* Cardiology */}
               <Card className="medical-card">
                 <CardContent className="p-6">
@@ -217,46 +225,58 @@ const SpecialistDoctorPage = () => {
 
         {/* How to Request Section */}
         <section className="medical-section bg-background">
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-3xl">
             <h2 className="section-title text-center mb-12">نحوه درخواست ویزیت پزشک فوق تخصص در خانه</h2>
-            <p className="text-center text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-center text-lg text-muted-foreground mb-8">
               فرآیند درخواست خدمات تخصصی در نوید زندگی بسیار ساده است:
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <Card className="medical-card text-center">
+            <div className="space-y-6">
+              <Card className="medical-card">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                    ۱
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                      ۱
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-2">تماس و مشاوره</h3>
+                      <p className="text-muted-foreground">
+                        با ما تماس بگیرید و نوع تخصص مورد نیاز و شرایط بیمار را شرح دهید
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="font-semibold mb-3">تماس و مشاوره</h3>
-                  <p className="text-sm text-muted-foreground">
-                    با ما تماس بگیرید و نوع تخصص مورد نیاز و شرایط بیمار را شرح دهید
-                  </p>
                 </CardContent>
               </Card>
 
-              <Card className="medical-card text-center">
+              <Card className="medical-card">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                    ۲
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                      ۲
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-2">هماهنگی سریع</h3>
+                      <p className="text-muted-foreground">
+                        در کوتاه‌ترین زمان، پزشک متخصص مربوطه برای ویزیت هماهنگ می‌شود
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="font-semibold mb-3">هماهنگی سریع</h3>
-                  <p className="text-sm text-muted-foreground">
-                    در کوتاه‌ترین زمان، پزشک متخصص مربوطه برای ویزیت هماهنگ می‌شود
-                  </p>
                 </CardContent>
               </Card>
 
-              <Card className="medical-card text-center">
+              <Card className="medical-card">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                    ۳
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                      ۳
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-2">ویزیت و درمان</h3>
+                      <p className="text-muted-foreground">
+                        متخصص با تجهیزات کامل به منزل شما اعزام شده و فرآیند تشخیص و درمان را آغاز می‌کند
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="font-semibold mb-3">ویزیت و درمان</h3>
-                  <p className="text-sm text-muted-foreground">
-                    متخصص با تجهیزات کامل به منزل شما اعزام شده و فرآیند تشخیص و درمان را آغاز می‌کند
-                  </p>
                 </CardContent>
               </Card>
             </div>
