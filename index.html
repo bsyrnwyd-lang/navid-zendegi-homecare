@@ -41,11 +41,6 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-17585357399');
-      gtag('event', 'conversion', {
-          'send_to': 'AW-17585357399/g2_6COj7gp8bENeErcFB',
-          'value': 1.0,
-          'currency': 'TRY'
-      });
     </script>
     
     <title>ویزیت پزشک در منزل تهران | نوید زندگی | پزشکی در منزل | پرستاری در منزل</title>
@@ -254,6 +249,14 @@
         </div>
       </div>
     </div>
+    <script>
+      // Force-remove any stale service workers that may serve a blank page
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(regs){
+          for (var i=0; i<regs.length; i++) { regs[i].unregister(); }
+        }).catch(function(){});
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
