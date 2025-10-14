@@ -60,12 +60,21 @@ import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
 import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
 import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
+import gynecologyImage from "@/assets/gynecology.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 50,
+      title: "راهنمای جامع ویروس HPV و رویکردهای درمانی نوین",
+      description: "راهنمای کامل علمی درباره ویروس HPV، درمان زگیل تناسلی با پلاسما پن، پاپ اسمیر و واکسیناسیون HPV در منزل",
+      image: gynecologyImage,
+      link: "/articles/hpv-treatment-guide",
+      category: "سلامت زنان"
+    },
     {
       id: 49,
       title: "مسمومیت بوتولیسم: علائم، خطرات فلج تنفسی و راهنمای پیشگیری",
