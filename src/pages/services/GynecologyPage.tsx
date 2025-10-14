@@ -87,7 +87,7 @@ const GynecologyPage = () => {
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
-                      <span><strong>تزریق واکسن HPV:</strong> خدمات تزریق واکسن‌های مربوط به HPV جهت پیشگیری (تهیه واکسن به عهده متقاضی است)</span>
+                      <span><strong>تزریق واکسن HPV:</strong> خدمات تزریق واکسن‌های مربوط به HPV جهت پیشگیری</span>
                     </li>
                   </ul>
                 </div>
