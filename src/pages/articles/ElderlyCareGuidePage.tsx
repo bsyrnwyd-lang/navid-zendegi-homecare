@@ -8,6 +8,9 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
+import nursingCareImage from "@/assets/nursing-home-care.jpg";
+import physiotherapyImage from "@/assets/physiotherapy.jpg";
+import doctorPatientImage from "@/assets/doctor-patient-home.jpg";
 
 const ElderlyCareGuidePage = () => {
   const handleCall = () => {
@@ -25,21 +28,21 @@ const ElderlyCareGuidePage = () => {
       title: "خدمات پرستاری در منزل",
       description: "دریافت خدمات پرستاری حرفه‌ای و مراقبت‌های تخصصی در خانه",
       link: "/services/nursing",
-      image: "/src/assets/nursing-home-care.jpg",
+      image: nursingCareImage,
       category: "خدمات پزشکی"
     },
     {
       title: "فیزیوتراپی در منزل",
       description: "خدمات توانبخشی و فیزیوتراپی تخصصی برای سالمندان در خانه",
       link: "/services/physiotherapy",
-      image: "/src/assets/physiotherapy.jpg",
+      image: physiotherapyImage,
       category: "توانبخشی"
     },
     {
       title: "ویزیت پزشک عمومی در منزل",
       description: "دریافت خدمات پزشک عمومی و معاینات دوره‌ای در خانه",
       link: "/general-doctor",
-      image: "/src/assets/doctor-patient-home.jpg",
+      image: doctorPatientImage,
       category: "خدمات پزشکی"
     }
   ];
