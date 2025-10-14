@@ -37,12 +37,13 @@
     Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
 
-# Redirect HTTP to HTTPS
+# Redirect HTTP to HTTPS (proxy-aware)
 RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Remove trailing slash
+# SPA fallback for client-side routing
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{THE_REQUEST} /+([^?\s]*)/(\?[^?\s]*)?
-RewriteRule ^(.*)$ /%1%2? [R=301,L]
+RewriteRule ^ index.html [L]
