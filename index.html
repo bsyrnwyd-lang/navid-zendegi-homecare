@@ -241,7 +241,19 @@
 </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <style>
+        /* Minimal inline loader so users don't see a blank page if JS fails */
+        .__boot-loader{display:flex;align-items:center;justify-content:center;min-height:100vh;color:#111827;background:#fafafa;font-family:Vazirmatn,Segoe UI,Tahoma,Arial,sans-serif}
+        .__boot-sub{opacity:.7;margin-top:8px;font-size:14px}
+      </style>
+      <div class="__boot-loader">
+        <div>
+          <div>در حال بارگذاری سایت نوید زندگی...</div>
+          <div class="__boot-sub">اگر بیش از چند ثانیه طول کشید، یکبار ریفرش کنید.</div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
