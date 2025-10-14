@@ -21,6 +21,7 @@ const Hero = () => {
           src={doctorPatientImage} 
           alt="ویزیت پزشک در منزل - خدمات پزشکی نوید زندگی"
           className="w-full h-full object-cover opacity-20"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 hero-gradient opacity-30"></div>
       </div>
