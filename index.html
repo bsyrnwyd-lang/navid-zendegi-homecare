@@ -292,14 +292,10 @@
           caches.keys().then(function(keys){ keys.forEach(function(k){ caches.delete(k); }); }).catch(function(){});
         }
 
-        // Global error handlers before React loads
-        window.addEventListener('error', function(e){ showBootFallback(e.message || 'خطای ناشناخته'); });
-        window.addEventListener('unhandledrejection', function(e){ showBootFallback(String(e.reason||'خطای ناشناخته')); });
-
-        // Watchdog: if app didn't mount in time, show fallback
+        // Watchdog: show fallback only if app didn't mount in time (less aggressive)
         setTimeout(function(){
           if (!window.__APP_MOUNTED__) { showBootFallback('بارگذاری طولانی شد، لطفاً تلاش دوباره کنید'); }
-        }, 7000);
+        }, 15000);
       })();
     </script>
     <script type="module" src="/src/main.tsx"></script>
