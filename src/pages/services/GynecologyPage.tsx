@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
-import { Phone, Shield, Home, Microscope, Zap, HeartPulse } from "lucide-react";
+import { Phone } from "lucide-react";
 import gynecologyImage from "@/assets/gynecology.jpg";
 
 const GynecologyPage = () => {
   const handleCall = () => {
-    window.location.href = "tel:02191004206";
+    window.location.href = "tel:09386117912";
   };
 
   return (
@@ -73,87 +72,66 @@ const GynecologyPage = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              <div className="max-w-4xl mx-auto space-y-8">
                 {/* غربالگری سلامت زنان */}
-                <Card className="medical-card">
-                  <CardHeader>
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Microscope className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-center">غربالگری سلامت زنان (پاپ اسمیر و HPV)</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 mt-2 flex-shrink-0"></div>
-                        <span><strong>پاپ اسمیر (Pap Smear):</strong> انجام تست پاپ اسمیر جهت غربالگری سرطان دهانه رحم توسط متخصص زنان در خانه</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 mt-2 flex-shrink-0"></div>
-                        <span><strong>تشخیص و درمان HPV:</strong> مشاوره، پیگیری درمان و کاهش بار ویروس پاپیلومای انسانی (HPV) در منزل</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 mt-2 flex-shrink-0"></div>
-                        <span><strong>تزریق واکسن HPV:</strong> خدمات تزریق واکسن‌های مربوط به HPV جهت پیشگیری (تهیه واکسن به عهده متقاضی است)</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">غربالگری سلامت زنان (پاپ اسمیر و HPV)</h3>
+                  <ul className="space-y-4 text-lg">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
+                      <span><strong>پاپ اسمیر (Pap Smear):</strong> انجام تست پاپ اسمیر جهت غربالگری سرطان دهانه رحم توسط متخصص زنان در خانه</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
+                      <span><strong>تشخیص و درمان HPV:</strong> مشاوره، پیگیری درمان و کاهش بار ویروس پاپیلومای انسانی (HPV) در منزل</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
+                      <span><strong>تزریق واکسن HPV:</strong> خدمات تزریق واکسن‌های مربوط به HPV جهت پیشگیری (تهیه واکسن به عهده متقاضی است)</span>
+                    </li>
+                  </ul>
+                </div>
 
                 {/* درمان با پلاسما پن */}
-                <Card className="medical-card">
-                  <CardHeader>
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Zap className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-center">درمان زگیل تناسلی و ضایعات پوستی با پلاسما پن</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      ما از دستگاه پیشرفته پلاسما پن برای درمان موثر و سریع ضایعات پوستی و تناسلی در منزل استفاده می‌کنیم.
-                    </p>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 mt-2 flex-shrink-0"></div>
-                        <span><strong>موارد درمان:</strong> رفع انواع زگیل تناسلی (وارت)، برداشتن انواع خال‌های پوستی و ضایعات تناسلی با پلاسما پن</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 mt-2 flex-shrink-0"></div>
-                        <span><strong>تسریع بهبود زخم:</strong> درمان انواع زخم‌های بدن و تسریع فرآیند بهبود زخم‌های دهانه رحم و سایر ضایعات</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">درمان زگیل تناسلی و ضایعات پوستی با پلاسما پن</h3>
+                  <p className="text-lg text-muted-foreground mb-4">
+                    ما از دستگاه پیشرفته پلاسما پن برای درمان موثر و سریع ضایعات پوستی و تناسلی در منزل استفاده می‌کنیم.
+                  </p>
+                  <ul className="space-y-4 text-lg">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
+                      <span><strong>موارد درمان:</strong> رفع انواع زگیل تناسلی (وارت)، برداشتن انواع خال‌های پوستی و ضایعات تناسلی با پلاسما پن</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
+                      <span><strong>تسریع بهبود زخم:</strong> درمان انواع زخم‌های بدن و تسریع فرآیند بهبود زخم‌های دهانه رحم و سایر ضایعات</span>
+                    </li>
+                  </ul>
+                </div>
 
                 {/* درمان عفونت‌ها */}
-                <Card className="medical-card">
-                  <CardHeader>
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <HeartPulse className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-center">درمان تخصصی عفونت‌ها و مشکلات واژینال</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 mt-2 flex-shrink-0"></div>
-                        <span><strong>درمان انواع عفونت‌های واژینال:</strong> تشخیص دقیق نوع عفونت و تجویز درمان‌های مناسب در خانه</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 mt-2 flex-shrink-0"></div>
-                        <span><strong>درمان زخم دهانه رحم:</strong> تشخیص و شروع فرآیند درمان زخم‌ها</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 mt-2 flex-shrink-0"></div>
-                        <span><strong>درمان واژینیسموس:</strong> ارائه مشاوره و روش‌های درمانی جهت رفع واژینیسموس</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 mt-2 flex-shrink-0"></div>
-                        <span><strong>درمان خشکی واژن در یائسگی:</strong> ارائه درمان‌های موضعی برای تسریع خون‌رسانی، بهبود خشکی واژن و علائم یائسگی و انواع بیماری‌ها</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">درمان تخصصی عفونت‌ها و مشکلات واژینال</h3>
+                  <ul className="space-y-4 text-lg">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
+                      <span><strong>درمان انواع عفونت‌های واژینال:</strong> تشخیص دقیق نوع عفونت و تجویز درمان‌های مناسب در خانه</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
+                      <span><strong>درمان زخم دهانه رحم:</strong> تشخیص و شروع فرآیند درمان زخم‌ها</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
+                      <span><strong>درمان واژینیسموس:</strong> ارائه مشاوره و روش‌های درمانی جهت رفع واژینیسموس</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-primary rounded-full ml-3 mt-3 flex-shrink-0"></div>
+                      <span><strong>درمان خشکی واژن در یائسگی:</strong> ارائه درمان‌های موضعی برای تسریع خون‌رسانی، بهبود خشکی واژن و علائم یائسگی و انواع بیماری‌ها</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
@@ -165,62 +143,46 @@ const GynecologyPage = () => {
                 <h2 className="section-title">چرا نوید زندگی را برای متخصص زنان در منزل انتخاب کنید؟</h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <Card className="medical-card text-center">
-                  <CardHeader>
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Shield className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle>حفظ کامل حریم خصوصی</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
+              <div className="max-w-4xl mx-auto space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">حفظ کامل حریم خصوصی</h3>
+                    <p className="text-lg text-muted-foreground">
                       انجام کلیه معاینات و درمان‌ها در محیط امن خانه و با بالاترین سطح رازداری
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                <Card className="medical-card text-center">
-                  <CardHeader>
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Microscope className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle>تجهیزات تخصصی پرتابل</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
+                <div className="flex items-start gap-4">
+                  <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">تجهیزات تخصصی پرتابل</h3>
+                    <p className="text-lg text-muted-foreground">
                       همراه داشتن دستگاه‌هایی مانند پلاسما پن و تجهیزات کامل معاینه
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                <Card className="medical-card text-center">
-                  <CardHeader>
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Home className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle>اولویت با آسایش بیمار</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
+                <div className="flex items-start gap-4">
+                  <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">اولویت با آسایش بیمار</h3>
+                    <p className="text-lg text-muted-foreground">
                       حذف استرس ناشی از مراجعه به مراکز درمانی و امکان استراحت فوری پس از فرآیند درمان
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                <Card className="medical-card text-center">
-                  <CardHeader>
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Phone className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle>پوشش سراسری تهران</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
+                <div className="flex items-start gap-4">
+                  <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">پوشش سراسری تهران</h3>
+                    <p className="text-lg text-muted-foreground">
                       اعزام سریع متخصص زنان به کلیه مناطق تهران
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -243,12 +205,12 @@ const GynecologyPage = () => {
                     className="group"
                   >
                     <Phone className="ml-2 h-5 w-5 group-hover:animate-bounce" />
-                    ۰۲۱-۹۱۰۰۴۲۰۶
+                    ۰۹۳۸۶۱۱۷۹۱۲
                   </Button>
                   <Button 
                     variant="outline" 
                     size="lg"
-                    onClick={() => window.open('https://wa.me/989924904206', '_blank')}
+                    onClick={() => window.open('https://wa.me/989386117912', '_blank')}
                   >
                     تماس از طریق واتساپ
                   </Button>
