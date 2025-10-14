@@ -67,17 +67,17 @@ const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <div className="medical-card text-center">
               <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">تضمین کیفیت نوید زندگی</h3>
+              <h2 className="text-lg font-semibold mb-2">تضمین کیفیت نوید زندگی</h2>
               <p className="text-muted-foreground">بالاترین استانداردهای پزشکی بین‌المللی</p>
             </div>
             <div className="medical-card text-center">
               <Clock className="w-12 h-12 text-secondary mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">خدمات ۲۴ ساعته در تهران</h3>
+              <h2 className="text-lg font-semibold mb-2">خدمات ۲۴ ساعته در تهران</h2>
               <p className="text-muted-foreground">پاسخگویی فوری در تمام ساعات شبانه‌روز</p>
             </div>
             <div className="medical-card text-center">
               <Heart className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">مراقبت تخصصی در منزل</h3>
+              <h2 className="text-lg font-semibold mb-2">مراقبت تخصصی در منزل</h2>
               <p className="text-muted-foreground">با تیم پزشکی مجرب نوید زندگی</p>
             </div>
           </div>
