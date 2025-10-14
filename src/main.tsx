@@ -22,8 +22,20 @@ function showFallback(message: string) {
     </div>`;
 }
 
-window.addEventListener('error', (e) => showFallback(String(e.error || e.message || 'اجرای اسکریپت ناموفق بود')));
-window.addEventListener('unhandledrejection', (e: PromiseRejectionEvent) => showFallback(String(e.reason || 'خطای ناشناخته')));
+window.addEventListener('error', (e) => {
+  if (!(window as any).__APP_MOUNTED__) {
+    showFallback(String((e as ErrorEvent).error || (e as ErrorEvent).message || 'اجرای اسکریپت ناموفق بود'));
+  } else {
+    console.error('App error after mount:', e);
+  }
+});
+window.addEventListener('unhandledrejection', (e: PromiseRejectionEvent) => {
+  if (!(window as any).__APP_MOUNTED__) {
+    showFallback(String(e.reason || 'خطای ناشناخته'));
+  } else {
+    console.error('Unhandled rejection after mount:', e.reason);
+  }
+});
 
 try {
   createRoot(rootEl!).render(
