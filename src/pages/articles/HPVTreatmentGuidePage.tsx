@@ -25,21 +25,21 @@ const HPVTreatmentGuidePage = () => {
       title: "زگیل تناسلی: دلایل، علائم و راه‌های درمان",
       description: "راهنمای کامل درباره زگیل تناسلی، علل، علائم و روش‌های درمانی",
       link: "/articles/genital-warts",
-      image: "/src/assets/genital-warts-article.jpg",
+      image: "/src/assets/medical-consultation-article.jpg",
       category: "بهداشت"
     },
     {
       title: "واکسن گارداسیل: محافظت در برابر HPV",
       description: "اطلاعات کامل درباره واکسن گارداسیل و نحوه محافظت در برابر HPV",
       link: "/articles/gardasil-vaccine",
-      image: "/src/assets/gardasil-vaccine-article.jpg",
+      image: "/src/assets/vaccination-article.jpg",
       category: "پیشگیری"
     },
     {
       title: "آیا HPV از طریق استخر منتقل می‌شود؟",
       description: "بررسی علمی راه‌های انتقال ویروس HPV و نکات بهداشتی",
       link: "/articles/hpv-pool",
-      image: "/src/assets/hpv-pool-article.jpg",
+      image: "/src/assets/infectious-disease.jpg",
       category: "بهداشت"
     }
   ];
