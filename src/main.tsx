@@ -5,6 +5,11 @@ import ErrorBoundary from "./components/ErrorBoundary";
 
 const rootEl = document.getElementById("root");
 
+// Ensure any static boot loader in index.html is removed before React mounts
+if (rootEl) {
+  rootEl.innerHTML = "";
+}
+
 function showFallback(message: string) {
   if (!rootEl) return;
   rootEl.innerHTML = `
