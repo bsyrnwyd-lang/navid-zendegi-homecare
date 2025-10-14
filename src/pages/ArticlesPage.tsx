@@ -61,12 +61,21 @@ import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
 import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
+import elderlyCareImage from "@/assets/elderly-care-home.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 51,
+      title: "راهنمای جامع مراقبت از سالمند در منزل",
+      description: "راهنمای کامل مراقبت از سالمند، چالش‌ها، مزایا و خدمات پرستاری، ویزیت پزشک و فیزیوتراپی در خانه",
+      image: elderlyCareImage,
+      link: "/articles/elderly-care-guide",
+      category: "مراقبت از سالمند"
+    },
     {
       id: 50,
       title: "راهنمای جامع ویروس HPV و رویکردهای درمانی نوین",

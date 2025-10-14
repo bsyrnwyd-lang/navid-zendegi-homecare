@@ -87,6 +87,7 @@ const MediterraneanDietPage = lazy(() => import("./pages/articles/MediterraneanD
 const CocaineDangersPage = lazy(() => import("./pages/articles/CocaineDangersPage"));
 const BotulismPage = lazy(() => import("./pages/articles/BotulismPage"));
 const HPVTreatmentGuidePage = lazy(() => import("./pages/articles/HPVTreatmentGuidePage"));
+const ElderlyCareGuidePage = lazy(() => import("./pages/articles/ElderlyCareGuidePage"));
 
 const queryClient = new QueryClient();
 
@@ -185,6 +186,7 @@ const App = () => (
            <Route path="/articles/cocaine-dangers" element={<CocaineDangersPage />} />
            <Route path="/articles/botulism" element={<BotulismPage />} />
            <Route path="/articles/hpv-treatment-guide" element={<HPVTreatmentGuidePage />} />
+           <Route path="/articles/elderly-care-guide" element={<ElderlyCareGuidePage />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
