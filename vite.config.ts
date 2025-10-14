@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
+// import { componentTagger } from "lovable-tagger";
 import viteCompression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
@@ -12,19 +12,14 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(), 
-    mode === "development" && componentTagger(),
+    // componentTagger removed to avoid build-time dependency
     mode === "production" && viteCompression({
       algorithm: 'gzip',
       ext: '.gz',
       threshold: 10240,
       deleteOriginFile: false
     }),
-    mode === "production" && viteCompression({
-      algorithm: 'brotliCompress',
-      ext: '.br',
-      threshold: 10240,
-      deleteOriginFile: false
-    })
+    // Brotli disabled to avoid rare Node zlib issues in some build environments
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -32,7 +27,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    target: 'esnext',
+    target: 'es2019',
     rollupOptions: {
       output: {
         manualChunks: (id) => {
