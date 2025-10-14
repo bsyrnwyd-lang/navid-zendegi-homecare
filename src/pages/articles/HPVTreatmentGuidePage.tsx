@@ -6,6 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import gynecologyImage from "@/assets/gynecology.jpg";
 
 const HPVTreatmentGuidePage = () => {
@@ -201,7 +202,10 @@ const HPVTreatmentGuidePage = () => {
             <section className="mb-12 bg-muted/30 p-6 rounded-lg">
               <h2 className="text-2xl font-bold mb-4">نتیجه‌گیری</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                با وجود اینکه درمان مستقیم برای حذف ویروس HPV از بدن وجود ندارد، روش‌های درمانی نوین مانند استفاده از پلاسما پن (برای ضایعات) و اقدامات تشخیصی مانند پاپ اسمیر، به ما این امکان را می‌دهند که عوارض جدی را به طور مؤثر مدیریت کنیم. تمامی این خدمات، با حفظ حریم خصوصی و بالاترین استانداردها، از طریق <strong>ویزیت متخصص زنان در منزل</strong> نوید زندگی در دسترس شماست.
+                با وجود اینکه درمان مستقیم برای حذف ویروس HPV از بدن وجود ندارد، روش‌های درمانی نوین مانند استفاده از پلاسما پن (برای ضایعات) و اقدامات تشخیصی مانند پاپ اسمیر، به ما این امکان را می‌دهند که عوارض جدی را به طور مؤثر مدیریت کنیم. تمامی این خدمات، با حفظ حریم خصوصی و بالاترین استانداردها، از طریق <Link to="/services/gynecology" className="text-primary font-bold hover:underline">ویزیت متخصص زنان در منزل</Link> نوید زندگی در دسترس شماست.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                برای اطلاعات بیشتر درباره خدمات تخصصی زنان، می‌توانید از صفحه <Link to="/services/gynecology" className="text-primary font-bold hover:underline">خدمات متخصص زنان در منزل</Link> ما دیدن کنید.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
