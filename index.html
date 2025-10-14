@@ -292,10 +292,18 @@
           caches.keys().then(function(keys){ keys.forEach(function(k){ caches.delete(k); }); }).catch(function(){});
         }
 
-        // Watchdog: show fallback only if app didn't mount in time (less aggressive)
+        // Collect early errors (for diagnostics). Do not show fallback immediately.
+        window.__BOOT_ERRORS__ = [];
+        window.addEventListener('error', function(e){ try { window.__BOOT_ERRORS__.push(String(e.error || e.message || e)); } catch(_){} });
+        window.addEventListener('unhandledrejection', function(e){ try { window.__BOOT_ERRORS__.push(String(e.reason || '')); } catch(_){} });
+
+        // Watchdog: show fallback only if app didn't mount in time (much less aggressive)
         setTimeout(function(){
-          if (!window.__APP_MOUNTED__) { showBootFallback('بارگذاری طولانی شد، لطفاً تلاش دوباره کنید'); }
-        }, 15000);
+          if (!window.__APP_MOUNTED__) {
+            var err = (window.__BOOT_ERRORS__ && window.__BOOT_ERRORS__[0]) || '';
+            showBootFallback(err ? ('بارگذاری طولانی شد: ' + err) : 'بارگذاری طولانی شد، لطفاً تلاش دوباره کنید');
+          }
+        }, 60000);
       })();
     </script>
     <script type="module" src="/src/main.tsx"></script>
