@@ -39,13 +39,30 @@
       <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </noscript>
     
-    <!-- Google tag (gtag.js) - deferred for better performance -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-17585357399"></script>
+    <!-- Google tag (gtag.js) - deferred and loaded after page interaction to reduce unused JS -->
     <script>
+      // Defer Google Analytics until user interaction or page load
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-17585357399');
+      
+      // Load gtag.js after page is interactive
+      function loadGtag() {
+        if (!window.__gtag_loaded) {
+          window.__gtag_loaded = true;
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17585357399';
+          document.head.appendChild(script);
+        }
+      }
+      
+      // Load on first user interaction or after 3 seconds
+      ['click', 'scroll', 'mousemove', 'touchstart'].forEach(function(event) {
+        window.addEventListener(event, loadGtag, { once: true, passive: true });
+      });
+      setTimeout(loadGtag, 3000);
     </script>
     
     <title>ویزیت پزشک در منزل تهران | نوید زندگی | پزشکی در منزل | پرستاری در منزل</title>

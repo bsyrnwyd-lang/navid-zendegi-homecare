@@ -26,8 +26,11 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-core';
+            }
+            if (id.includes('react-router')) {
+              return 'react-router';
             }
             if (id.includes('@radix-ui')) {
               return 'ui-vendor';
@@ -37,8 +40,17 @@ export default defineConfig(({ mode }) => ({
             }
             return 'vendor';
           }
+          // Split article pages into separate chunks by category
           if (id.includes('/articles/')) {
-            return 'articles';
+            // Group articles by first letter for better chunking
+            const match = id.match(/articles\/([A-Z])/i);
+            if (match) {
+              const letter = match[1].toUpperCase();
+              if (letter >= 'A' && letter <= 'H') return 'articles-a-h';
+              if (letter >= 'I' && letter <= 'P') return 'articles-i-p';
+              return 'articles-q-z';
+            }
+            return 'articles-other';
           }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
