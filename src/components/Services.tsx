@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Heart, FileText, UserCheck, Scan, Ear, Activity, Monitor } from "lucide-react";
+import { Stethoscope, Heart, FileText, UserCheck, Scan, Ear, Activity, Monitor, Baby } from "lucide-react";
 import nursingImage from "@/assets/iranian-nurse-home-care.jpg";
 import holterImage from "@/assets/holter-monitoring.jpg";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -52,6 +53,13 @@ const Services = () => {
       title: "هولتر قلب و فشار خون در منزل",
       description: "خدمات هولتر ریتم قلب و هولتر فشار خون در منزل با دستگاه‌های مدرن و گزارش تخصصی",
       features: ["هولتر ریتم ۲۴-۴۸ ساعته در منزل", "هولتر فشار خون ۲۴ ساعته", "نصب و جمع‌آوری در منزل", "گزارش تخصصی کاردیولوژیست"]
+    },
+    {
+      icon: Baby,
+      title: "ویزیت متخصص زنان در منزل",
+      description: "خدمات تخصصی زنان شامل پاپ اسمیر، درمان HPV و زگیل تناسلی با پلاسما پن در منزل با حفظ حریم خصوصی",
+      features: ["پاپ اسمیر در منزل", "درمان HPV و زگیل تناسلی", "پلاسما پن", "حفظ کامل حریم خصوصی"],
+      link: "/services/gynecology"
     }
   ];
 
@@ -82,29 +90,41 @@ const Services = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="medical-card group hover:border-primary/20">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="w-8 h-8 text-primary" />
-                </div>
-                <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 text-center">
-                  {service.description}
-                </p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm">
-                      <div className="w-2 h-2 bg-secondary rounded-full ml-3 flex-shrink-0"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+          {services.map((service, index) => {
+            const content = (
+              <Card className="medical-card group hover:border-primary/20 h-full">
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <service.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4 text-center">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm">
+                        <div className="w-2 h-2 bg-secondary rounded-full ml-3 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            );
+            
+            return service.link ? (
+              <Link key={index} to={service.link} className="block">
+                {content}
+              </Link>
+            ) : (
+              <div key={index}>
+                {content}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
