@@ -24,35 +24,7 @@ export default defineConfig(({ mode }) => ({
     target: 'es2019',
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-core';
-            }
-            if (id.includes('react-router')) {
-              return 'react-router';
-            }
-            if (id.includes('@radix-ui')) {
-              return 'ui-vendor';
-            }
-            if (id.includes('lucide-react')) {
-              return 'icons';
-            }
-            return 'vendor';
-          }
-          // Split article pages into separate chunks by category
-          if (id.includes('/articles/')) {
-            // Group articles by first letter for better chunking
-            const match = id.match(/articles\/([A-Z])/i);
-            if (match) {
-              const letter = match[1].toUpperCase();
-              if (letter >= 'A' && letter <= 'H') return 'articles-a-h';
-              if (letter >= 'I' && letter <= 'P') return 'articles-i-p';
-              return 'articles-q-z';
-            }
-            return 'articles-other';
-          }
-        },
+        // Let Rollup handle optimal chunking automatically to avoid cyclic init errors
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]'
