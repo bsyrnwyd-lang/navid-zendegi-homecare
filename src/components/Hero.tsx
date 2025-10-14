@@ -42,7 +42,7 @@ const Hero = () => {
             ویزیت پزشک قلب در منزل در سراسر تهران و کرج
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 min-h-[76px]">
             <Button
               variant="hero"
               size="lg"
