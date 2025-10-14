@@ -27,8 +27,9 @@ const FloatingContact = () => {
           size="lg"
           onClick={() => setIsExpanded(!isExpanded)}
           className="rounded-full w-16 h-16 flex items-center justify-center"
+          aria-label="تماس با ما - منوی تماس"
         >
-          <Phone className="w-6 h-6" />
+          <Phone className="w-6 h-6" aria-hidden="true" />
         </Button>
       </div>
       
