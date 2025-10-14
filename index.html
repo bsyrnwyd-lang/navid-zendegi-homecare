@@ -250,12 +250,40 @@
       </div>
     </div>
     <script>
-      // Force-remove any stale service workers that may serve a blank page
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistrations().then(function(regs){
-          for (var i=0; i<regs.length; i++) { regs[i].unregister(); }
-        }).catch(function(){});
-      }
+      (function(){
+        var root = document.getElementById('root');
+        function showBootFallback(msg){
+          if (!root) return;
+          root.innerHTML = '\n            <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#fafafa;color:#111;font-family:Vazirmatn,Segoe UI,Tahoma,Arial,sans-serif;text-align:center;padding:16px">\n              <div>\n                <div>خطا در بارگذاری سایت نوید زندگی</div>\n                <div style="opacity:.7;font-size:14px;margin-top:8px">'+ (msg||'لطفاً صفحه را رفرش کنید') +'</div>\n                <div style="margin-top:12px;font-size:14px"><button id="__force_reload" style="padding:8px 12px;border:1px solid #ddd;border-radius:8px;background:#fff;cursor:pointer">تلاش دوباره</button></div>\n              </div>\n            </div>';
+          var btn=document.getElementById('__force_reload');
+          if(btn) btn.onclick=function(){
+            if ('caches' in window) { caches.keys().then(function(keys){ keys.forEach(function(k){ caches.delete(k); }); }).catch(function(){}); }
+            if ('serviceWorker' in navigator) { navigator.serviceWorker.getRegistrations().then(function(r){ r.forEach(function(sw){ sw.unregister(); }); }).catch(function(){}); }
+            var v = 'v=' + Date.now();
+            var url = location.href.indexOf('?')>-1 ? location.href + '&'+v : location.href + '?'+v;
+            location.replace(url);
+          };
+        }
+
+        // Early SW + cache cleanup
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(regs){
+            for (var i=0; i<regs.length; i++) { regs[i].unregister(); }
+          }).catch(function(){});
+        }
+        if ('caches' in window) {
+          caches.keys().then(function(keys){ keys.forEach(function(k){ caches.delete(k); }); }).catch(function(){});
+        }
+
+        // Global error handlers before React loads
+        window.addEventListener('error', function(e){ showBootFallback(e.message || 'خطای ناشناخته'); });
+        window.addEventListener('unhandledrejection', function(e){ showBootFallback(String(e.reason||'خطای ناشناخته')); });
+
+        // Watchdog: if app didn't mount in time, show fallback
+        setTimeout(function(){
+          if (!window.__APP_MOUNTED__) { showBootFallback('بارگذاری طولانی شد، لطفاً تلاش دوباره کنید'); }
+        }, 7000);
+      })();
     </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>

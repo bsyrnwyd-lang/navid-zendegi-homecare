@@ -31,6 +31,8 @@ try {
       <App />
     </ErrorBoundary>
   );
+  // Mark app mounted for boot watchdog
+  (window as any).__APP_MOUNTED__ = true;
 } catch (e: any) {
   showFallback(String(e?.message || e));
 }
