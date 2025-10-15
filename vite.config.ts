@@ -27,6 +27,8 @@ export default defineConfig(({ mode }) => ({
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
+        // NOTE: manualChunks removed intentionally to prevent circular dependency errors
+        // ("Cannot access 'S' before initialization"). Let Rollup handle chunking automatically.
       }
     },
     chunkSizeWarningLimit: 1000,
