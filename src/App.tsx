@@ -6,9 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 
-// Core pages - load immediately
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+// Lazy load ALL pages including homepage for optimal bundle size
+const Index = lazy(() => import("./pages/Index"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Lazy load other pages for better performance
 const CardiologyServices = lazy(() => import("./pages/CardiologyServices"));
