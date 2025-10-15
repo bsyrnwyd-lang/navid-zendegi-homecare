@@ -335,7 +335,10 @@
             // One cache-busted retry to bypass any stale CDN/browser cache
             await import('/src/main.tsx?mt=' + Date.now());
           } catch (e2) {
-            try { (window as any).__BOOT_ERRORS__ = (window as any).__BOOT_ERRORS__ || []; (window as any).__BOOT_ERRORS__.push(String(e2)); } catch(_){}
+            try { 
+              window.__BOOT_ERRORS__ = window.__BOOT_ERRORS__ || []; 
+              window.__BOOT_ERRORS__.push(String(e2)); 
+            } catch(_){}
           }
         }
       })();
