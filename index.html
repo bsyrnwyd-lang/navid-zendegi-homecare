@@ -50,36 +50,9 @@
       <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </noscript>
     
-    <!-- Async CSS loader to prevent render blocking -->
-    <script>
-      !function(){"use strict";var e=function(e,n,t){var o,r=window.document,i=r.createElement("link");if(n)o=n;else{var a=(r.body||r.getElementsByTagName("head")[0]).childNodes;o=a[a.length-1]}var d=r.styleSheets;if(t)for(var l in t)t.hasOwnProperty(l)&&i.setAttribute(l,t[l]);i.rel="stylesheet",i.href=e,i.media="only x",function e(n){if(r.body)return n();setTimeout(function(){e(n)})}(function(){o.parentNode.insertBefore(i,n?o:o.nextSibling)});var s=function(e){for(var n=i.href,t=d.length;t--;)if(d[t].href===n)return e();setTimeout(function(){s(e)})};function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=t||"all"}return i.addEventListener&&i.addEventListener("load",f),(i.onloadcssdefined=s)(f),i};"undefined"!=typeof exports?exports.loadCSS=e:window.loadCSS=e}();
-    </script>
+    <!-- Removed async CSS polyfill to avoid any potential head-time errors -->
     
-    <!-- Google tag (gtag.js) - deferred and loaded after page interaction to reduce unused JS -->
-    <script>
-      // Defer Google Analytics until user interaction or page load
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17585357399');
-      
-      // Load gtag.js after page is interactive
-      function loadGtag() {
-        if (!window.__gtag_loaded) {
-          window.__gtag_loaded = true;
-          var script = document.createElement('script');
-          script.async = true;
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17585357399';
-          document.head.appendChild(script);
-        }
-      }
-      
-      // Load on first user interaction or after 3 seconds
-      ['click', 'scroll', 'mousemove', 'touchstart'].forEach(function(event) {
-        window.addEventListener(event, loadGtag, { once: true, passive: true });
-      });
-      setTimeout(loadGtag, 3000);
-    </script>
+    <!-- Temporarily removed Google Analytics bootstrap to eliminate any chance of blocking/errors during boot -->
     
     <title>ویزیت پزشک در منزل تهران | نوید زندگی | پزشکی در منزل | پرستاری در منزل</title>
     <meta name="description" content="نوید زندگی ارائه دهنده ویزیت پزشک در منزل تهران، پزشک متخصص در منزل، پرستاری در منزل، تزریقات در منزل و خدمات زیبایی در منزل. پزشک قلب در منزل با کیفیت برتر. تماس: 09386117912">
