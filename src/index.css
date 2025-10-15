@@ -27,8 +27,8 @@
     --secondary-foreground: 0 0% 100%;
     --secondary-light: 140 45% 65%;
 
-    /* Medical accent - Warm care orange */
-    --accent: 25 85% 52%;
+    /* Medical accent - Warm care orange (WCAG AA compliant) */
+    --accent: 25 85% 42%;
     --accent-foreground: 0 0% 100%;
 
     --muted: 210 40% 96%;
