@@ -42,12 +42,12 @@ const Hero = () => {
             ویزیت پزشک قلب در منزل در سراسر تهران و کرج
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 min-h-[76px]">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" style={{ minHeight: '120px' }}>
             <Button
               variant="hero"
               size="lg"
               onClick={handleCall}
-              className="flex items-center gap-3 text-lg px-8 py-6"
+              className="flex items-center gap-3 text-lg px-8 py-6 w-full sm:w-auto"
             >
               <Phone className="w-6 h-6" />
               تماس فوری
@@ -57,7 +57,7 @@ const Hero = () => {
               variant="outline"
               size="lg"
               onClick={handleWhatsApp}
-              className="flex items-center gap-3 text-lg px-8 py-6 border-2"
+              className="flex items-center gap-3 text-lg px-8 py-6 border-2 w-full sm:w-auto"
             >
               <MessageCircle className="w-6 h-6" />
               واتساپ
