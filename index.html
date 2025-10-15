@@ -325,23 +325,7 @@
         }, 9000);
       })();
     </script>
-    <script type="module">
-      (async () => {
-        try {
-          // Primary import (Vite rewrites this in production)
-          await import('/src/main.tsx');
-        } catch (e1) {
-          try {
-            // One cache-busted retry to bypass any stale CDN/browser cache
-            await import('/src/main.tsx?mt=' + Date.now());
-          } catch (e2) {
-            try { 
-              window.__BOOT_ERRORS__ = window.__BOOT_ERRORS__ || []; 
-              window.__BOOT_ERRORS__.push(String(e2)); 
-            } catch(_){}
-          }
-        }
-      })();
-    </script>
+    <link rel="modulepreload" href="/src/main.tsx">
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
