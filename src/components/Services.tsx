@@ -80,6 +80,10 @@ const Services = () => {
               src={nursingImage} 
               alt="پرستاری در منزل - خدمات پرستاری حرفه‌ای"
               className="w-full h-64 object-cover"
+              width="316"
+              height="256"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-primary/20"></div>
             <div className="absolute bottom-4 left-4 text-white">

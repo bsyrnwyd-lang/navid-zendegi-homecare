@@ -15,6 +15,10 @@ const AboutUs = () => {
               src={elderlyImage} 
               alt="مراقبت از سالمندان در منزل - خدمات نوید زندگی"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
+              width="528"
+              height="384"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-primary/10 rounded-lg"></div>
           </div>
