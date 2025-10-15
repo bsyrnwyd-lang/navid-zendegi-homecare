@@ -325,7 +325,46 @@
         }, 9000);
       })();
     </script>
-    <link rel="modulepreload" href="/src/main.tsx">
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      (async () => {
+        // Step 1: Unregister any existing service workers ASAP
+        let hadController = false;
+        try {
+          if ('serviceWorker' in navigator) {
+            hadController = !!navigator.serviceWorker.controller;
+            const regs = await navigator.serviceWorker.getRegistrations();
+            regs.forEach(sw => { try { sw.unregister(); } catch(_){} });
+          }
+          if ('caches' in window) {
+            const keys = await caches.keys();
+            await Promise.all(keys.map(k => caches.delete(k)));
+          }
+        } catch(_) {}
+
+        // Step 2: If a SW was controlling this page, do a one-time reload to pick up fresh assets
+        try {
+          if (hadController && !sessionStorage.getItem('__navid_sw_cleared__')) {
+            sessionStorage.setItem('__navid_sw_cleared__','1');
+            var v='v='+Date.now();
+            var url=location.href.indexOf('?')>-1? location.href+'&'+v : location.href+'?'+v;
+            return location.replace(url);
+          }
+        } catch(_) {}
+
+        // Step 3: Load the app module with a cache-busted retry
+        try {
+          await import('/src/main.tsx');
+        } catch (e1) {
+          try {
+            await import('/src/main.tsx?mt=' + Date.now());
+          } catch (e2) {
+            try {
+              window.__BOOT_ERRORS__ = window.__BOOT_ERRORS__ || [];
+              window.__BOOT_ERRORS__.push(String(e2));
+            } catch(_){}
+          }
+        }
+      })();
+    </script>
   </body>
 </html>
