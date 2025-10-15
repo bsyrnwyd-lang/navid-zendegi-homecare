@@ -1,19 +1,10 @@
-/*
-  # Security headers
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  X-XSS-Protection: 1; mode=block
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), microphone=(), camera=()
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy: upgrade-insecure-requests
-
-  # Default caching for HTML: short cache to allow updates
-  Cache-Control: public, max-age=300, must-revalidate
-  Vary: Accept-Encoding
-
+# Specific asset rules first (most specific to least specific)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
 
 /*.css
   Cache-Control: public, max-age=31536000, immutable
@@ -33,10 +24,6 @@
 /*.svg
   Cache-Control: public, max-age=31536000, immutable
 
-/*.woff2
-  Cache-Control: public, max-age=31536000, immutable
-  Access-Control-Allow-Origin: *
-
 /index.html
   Cache-Control: no-cache, no-store, must-revalidate
 
@@ -51,3 +38,18 @@
 /manifest.json
   Cache-Control: public, max-age=86400
   Content-Type: application/json; charset=utf-8
+
+# Default rule for HTML and other files (must come last)
+/*
+  # Security headers
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: upgrade-insecure-requests
+  
+  # Default caching for HTML: short cache to allow updates
+  Cache-Control: public, max-age=300, must-revalidate
+  Vary: Accept-Encoding
