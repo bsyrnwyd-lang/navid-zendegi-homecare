@@ -1,107 +1,137 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
-import { Card, CardContent } from "@/components/ui/card";
-import { Shield, CheckCircle, Phone, Activity } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import PricingInfo from "@/components/PricingInfo";
+import { Phone } from "lucide-react";
 import infectiousImage from "@/assets/infectious-disease.jpg";
 
 const InfectiousDiseasePage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="ویزیت متخصص عفونی در منزل تهران | تشخیص و درمان تب، کرونا و عفونت‌های پیچیده | نوید زندگی"
+        description="اعزام فوری متخصص عفونی در منزل تهران برای تشخیص و درمان تب‌های طولانی، عفونت‌های ریوی، زخم و کرونا. مدیریت آنتی‌بیوتیک تراپی در خانه."
+        keywords="ویزیت متخصص عفونی در منزل، دکتر عفونی در خانه، درمان تب طولانی، کرونا در منزل، عفونت ریوی، آنتی‌بیوتیک تراپی، متخصص عفونی تهران"
+        canonical="https://navidzendegi.ir/services/infectious-disease"
+      />
       <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}
         <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary">
-                  ویزیت متخصص عفونی در منزل
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-                  تشخیص و درمان بیماری‌های عفونی توسط متخصص در منزل. مراقبت ایمن و تخصصی برای انواع عفونت‌ها.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="tel:09386117912" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-                    <Phone className="ml-2 h-5 w-5" />
-                    تماس فوری: 09386117912
-                  </a>
-                </div>
-              </div>
-              <div className="relative">
-                <img 
-                  src={infectiousImage} 
-                  alt="ویزیت متخصص عفونی در منزل - تشخیص و درمان بیماری‌های عفونی"
-                  className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
-                />
-                <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
-              </div>
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-8">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+                ویزیت متخصص عفونی در منزل تهران (مدیریت تب‌های نامشخص و عفونت‌های پیچیده)
+              </h1>
+              <p className="text-base md:text-lg text-foreground leading-relaxed text-justify">
+                بیماری‌های عفونی می‌توانند به سرعت وضعیت بیمار را تغییر دهند و نیازمند تشخیص سریع و دقیق هستند. نوید زندگی با اعزام متخصص عفونی در منزل تهران، خدمات تخصصی خود را برای تشخیص، مدیریت و درمان انواع عفونت‌ها در محیط امن خانه شما ارائه می‌دهد. این خدمات به خصوص برای بیماران دارای نقص ایمنی، سالمندان یا افرادی که شرایط حاد دارند و نباید در محیط‌های پرخطر بیمارستانی قرار گیرند، ضروری است.
+              </p>
+            </div>
+            
+            <div className="relative mb-8">
+              <img 
+                src={infectiousImage} 
+                alt="ویزیت متخصص عفونی در منزل تهران"
+                className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div className="text-center mb-8">
+              <a href="tel:09386117912" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-lg font-semibold">
+                <Phone className="ml-2 h-5 w-5" />
+                تماس فوری: 09386117912
+              </a>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Content Section */}
         <section className="medical-section">
-          <div className="container mx-auto">
-            <h2 className="section-title text-center mb-12">خدمات متخصص عفونی در منزل</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <Shield className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">تشخیص بیماری‌های عفونی</h3>
-                  <p className="text-muted-foreground mb-4">
-                    شناسایی و درمان انواع عفونت‌های باکتریال، ویروسی و قارچی
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">عفونت‌های تنفسی</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">عفونت‌های ادراری</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">عفونت‌های پوستی</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              موارد ضروری برای استفاده از متخصص عفونی در منزل
+            </h2>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>تب‌های طولانی و با منشأ نامشخص:</strong> تشخیص دلیل تب‌هایی که به درمان‌های عمومی پاسخ نمی‌دهند.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>عفونت‌های پیچیده:</strong> مدیریت عفونت‌های دستگاه تنفسی (مانند ذات‌الریه)، دستگاه ادراری و عفونت‌های زخم.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>مشاوره و درمان بیماری‌های واگیر:</strong> تشخیص و مدیریت بیماری‌های ویروسی مانند آنفولانزا، کرونا و سایر بیماری‌های واگیر.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>کنترل آنتی‌بیوتیک تراپی:</strong> ارزیابی نیاز به آنتی‌بیوتیک‌های وریدی و مدیریت دوره درمان در خانه.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>عفونت در بیماران نقص ایمنی:</strong> مراقبت ویژه از بیماران دیابتی، سرطانی یا HIV مثبت که به عفونت‌ها حساس هستند.
+              </li>
+            </ul>
 
-              <Card className="medical-card">
-                <CardContent className="p-6">
-                  <Activity className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">درمان ایمن و موثر</h3>
-                  <p className="text-muted-foreground mb-4">
-                    ارائه درمان مناسب با رعایت پروتکل‌های بهداشتی
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">تجویز آنتی‌بیوتیک مناسب</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">رعایت اصول ایمنی</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-secondary ml-2" />
-                      <span className="text-sm">پیگیری درمان</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              خدمات تخصصی ارائه شده توسط متخصص عفونی در منزل
+            </h2>
+            <p className="text-base text-foreground mb-6 leading-relaxed text-justify">
+              دکتر عفونی در منزل ما، با تجهیزات لازم، این خدمات را در محل شما ارائه می‌دهد:
+            </p>
+
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-primary">
+              تشخیص و برنامه‌ریزی درمانی
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>معاینه کامل و شرح حال‌گیری تخصصی:</strong> بررسی دقیق علائم برای رسیدن به تشخیص افتراقی درست.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>تفسیر آزمایش‌ها:</strong> بررسی و تفسیر نتایج آزمایش‌های کشت خون، ادرار و سایر نمونه‌ها و مشاوره در مورد آنتی‌بیوتیک مقاومتی.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>شروع آنتی‌بیوتیک تراپی:</strong> تجویز و شروع درمان‌های دارویی، از جمله آنتی‌بیوتیک‌های تزریقی در منزل.
+              </li>
+            </ul>
+
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-primary">
+              خدمات مدیریت عفونت در منزل
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>مدیریت درمان کرونا و سایر بیماری‌های تنفسی:</strong> پایش علائم تنفسی و سطح اکسیژن، ویزیت متخصص و نظارت بر قرنطینه در منزل.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>درمان عفونت زخم:</strong> مدیریت زخم‌های عفونی و عفونت‌های پس از جراحی با همکاری تیم پرستاری.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>تزریق واکسن‌های تخصصی:</strong> ارائه خدمات تزریق واکسن‌های مورد نیاز برای افراد در معرض خطر.
+              </li>
+            </ul>
+
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              مزایای دریافت خدمات تخصصی عفونی در خانه
+            </h2>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>کاهش خطر انتقال عفونت:</strong> جلوگیری از ورود بیماران عفونی به محیط‌های عمومی و کاهش خطر سرایت.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>مراقبت ایمن برای بیماران ضعیف:</strong> بهترین گزینه برای سالمندان یا بیماران دارای بیماری زمینه‌ای که نباید در معرض آلودگی‌های بیمارستانی قرار گیرند.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>پایش مستمر:</strong> نظارت دقیق بر پاسخ بدن به آنتی‌بیوتیک‌ها و تنظیم سریع دوز دارو.
+              </li>
+            </ul>
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* CTA Section */}
         <section className="medical-section bg-primary/5">
-          <div className="container mx-auto text-center">
-            <h2 className="section-title mb-6">ویزیت متخصص عفونی در منزل</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              درمان ایمن و تخصصی بیماری‌های عفونی در منزل
+          <div className="container mx-auto max-w-4xl text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
+              ویزیت متخصص عفونی در منزل
+            </h2>
+            <p className="text-base text-foreground mb-6 leading-relaxed">
+              برای تشخیص دقیق و مدیریت مؤثر بیماری‌های عفونی و تب‌های طولانی، همین حالا برای ویزیت متخصص عفونی در منزل با نوید زندگی تماس بگیرید.
             </p>
             <a 
               href="tel:09386117912" 
@@ -110,6 +140,13 @@ const InfectiousDiseasePage = () => {
               <Phone className="ml-2 h-6 w-6" />
               تماس: 09386117912
             </a>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-4xl">
+            <PricingInfo />
           </div>
         </section>
       </main>
