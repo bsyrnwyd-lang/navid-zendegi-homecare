@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import PricingInfo from "@/components/PricingInfo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Scan, Heart, Shield, Clock, Phone } from "lucide-react";
@@ -147,7 +148,14 @@ const RadiologyPage = () => {
             رزرو نوبت: ۰۹۳۸۶۱۱۷۹۱۲
           </Button>
         </div>
-        </section>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="medical-section">
+        <div className="container mx-auto">
+          <PricingInfo />
+        </div>
+      </section>
       </main>
       <Footer />
       <FloatingContact />

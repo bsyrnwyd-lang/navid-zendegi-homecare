@@ -4,6 +4,7 @@ import FloatingContact from "@/components/FloatingContact";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
+import PricingInfo from "@/components/PricingInfo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone } from "lucide-react";
 import holterImage from "@/assets/holter-monitoring.jpg";
@@ -145,6 +146,10 @@ const HolterPage = () => {
                 </button>
               </CardContent>
             </Card>
+
+            <div className="mt-12">
+              <PricingInfo />
+            </div>
           </article>
         </div>
       </main>

@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
+import PricingInfo from "@/components/PricingInfo";
 import { Phone } from "lucide-react";
 import gynecologyImage from "@/assets/gynecology.jpg";
 
@@ -216,6 +217,13 @@ const GynecologyPage = () => {
                   </Button>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section className="medical-section">
+            <div className="container mx-auto">
+              <PricingInfo />
             </div>
           </section>
         </main>

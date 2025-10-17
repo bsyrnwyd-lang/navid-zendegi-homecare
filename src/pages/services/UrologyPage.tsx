@@ -4,6 +4,7 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import StructuredData from "@/components/StructuredData";
+import PricingInfo from "@/components/PricingInfo";
 import { Phone } from "lucide-react";
 import urologyImage from "@/assets/urology.jpg";
 
@@ -177,6 +178,13 @@ const UrologyPage = () => {
               <Phone className="ml-2 h-6 w-6" />
               09386117912
             </a>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <PricingInfo />
           </div>
         </section>
       </main>

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import PricingInfo from "@/components/PricingInfo";
 import { Brain, CheckCircle, Phone, Activity, Syringe, Target } from "lucide-react";
 import neurologyImage from "@/assets/neurology.jpg";
 
@@ -191,6 +192,13 @@ const NeurologyPage = () => {
               <Phone className="ml-2 h-6 w-6" />
               تماس: 09386117912
             </a>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="medical-section">
+          <div className="container mx-auto">
+            <PricingInfo />
           </div>
         </section>
       </main>

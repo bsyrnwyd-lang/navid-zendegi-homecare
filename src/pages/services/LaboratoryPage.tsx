@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import FAQSection from "@/components/FAQSection";
+import PricingInfo from "@/components/PricingInfo";
 import LazyImage from "@/components/LazyImage";
 import { CheckCircle } from "lucide-react";
 import medicalEquipmentImage from "@/assets/medical-equipment-home.jpg";
@@ -207,6 +208,10 @@ const LaboratoryPage = () => {
                   <span className="text-sm text-muted-foreground">پاسخگویی ۲۴ ساعته</span>
                 </div>
               </section>
+
+              <div className="mt-8">
+                <PricingInfo />
+              </div>
             </div>
           </article>
         </main>
