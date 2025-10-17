@@ -255,14 +255,6 @@ const PricingPage = () => {
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>کلیه خدمات پرستاری توسط نیروهای مجرب با حداقل مدرک کارشناس پرستاری صورت می‌گیرد</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>در صورت درخواست چند خدمت همزمان، خدمت دوم مشمول تخفیف می‌گردد</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                       <span>هزینه مواد مصرفی در مواردی مثل سرم و داروها، پانسمان و سونداژ به صورت جداگانه اخذ می‌گردد</span>
                     </li>
                     <li className="flex items-start gap-2">
