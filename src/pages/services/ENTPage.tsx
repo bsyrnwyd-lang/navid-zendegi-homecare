@@ -23,102 +23,120 @@ const ENTPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto max-w-3xl">
-          <div className="text-center space-y-8">
-            <h1 className="text-4xl font-bold text-foreground leading-relaxed">
-              ویزیت متخصص گوش، حلق و بینی (ENT) در منزل تهران
-            </h1>
-            <p className="text-2xl text-muted-foreground leading-loose">
-              مشکلات مربوط به گوش، حلق و بینی می‌توانند آزاردهنده و گاهی اورژانسی باشند. برای بیمارانی که به دلیل سرگیجه، درد شدید یا شرایط خاص قادر به مراجعه به کلینیک نیستند، نوید زندگی با اعزام متخصص ENT در منزل تهران، مراقبت‌های تخصصی را به خانه شما می‌آورد.
-            </p>
-            <p className="text-xl text-muted-foreground leading-loose">
-              ما خدمات کامل تشخیصی و درمانی گوش، حلق و بینی را با تجهیزات پرتابل و دقت بالا در محیط آرام منزل ارائه می‌دهیم.
-            </p>
-            <Button 
-              onClick={handleCall}
-              size="lg"
-              className="text-2xl px-12 py-8 mt-6"
-            >
-              <Phone className="ml-3 h-7 w-7" />
-              تماس برای ویزیت فوری
-            </Button>
-          </div>
+      <section className="py-20 px-8">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
+          <h1 className="text-5xl font-bold text-foreground leading-relaxed">
+            ویزیت متخصص گوش، حلق و بینی در منزل
+          </h1>
+          
+          <p className="text-3xl text-foreground leading-loose">
+            مشکلات گوش، حلق و بینی را در خانه درمان کنید
+          </p>
+          
+          <p className="text-2xl text-muted-foreground leading-loose">
+            برای بیماران سرگیجه و کسانی که نمی‌توانند به کلینیک بروند، متخصص به منزل شما می‌آید
+          </p>
+          
+          <Button 
+            onClick={handleCall}
+            size="lg"
+            className="text-3xl px-20 py-12 mt-8"
+          >
+            <Phone className="ml-4 h-10 w-10" />
+            تماس فوری
+          </Button>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-            خدمات تخصصی گوش، حلق و بینی قابل ارائه در منزل
+      <section className="py-20 px-8 bg-muted/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-20 text-foreground">
+            خدمات در منزل
           </h2>
 
-          {/* گوش و شنوایی */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-foreground">
-              تشخیص و درمان مشکلات گوش و شنوایی
-            </h3>
-            <div className="space-y-6">
-              <div className="bg-card p-8 rounded-lg border-2 border-border">
-                <h4 className="font-bold text-xl mb-4 text-foreground">معاینه گوش</h4>
-                <p className="text-lg text-muted-foreground leading-loose">استفاده از اتوسکوپ برای بررسی مجرای گوش و پرده صماخ</p>
+          <div className="space-y-16">
+            {/* گوش و شنوایی */}
+            <div className="space-y-10">
+              <h3 className="text-3xl font-bold text-foreground pb-6 border-b-2 border-primary">
+                گوش و شنوایی
+              </h3>
+              
+              <div className="bg-card p-12 rounded-xl border border-border">
+                <h4 className="font-bold text-2xl mb-4 text-foreground">معاینه گوش</h4>
+                <p className="text-2xl text-muted-foreground leading-loose">
+                  بررسی دقیق گوش با تجهیزات پزشکی
+                </p>
               </div>
 
-              <div className="bg-card p-8 rounded-lg border-2 border-border">
-                <h4 className="font-bold text-xl mb-4 text-foreground">تشخیص و مدیریت سرگیجه (ورتیگو)</h4>
-                <p className="text-lg text-muted-foreground leading-loose">ارزیابی علل سرگیجه‌های محیطی و تجویز درمان‌های دارویی یا مانورهای توانبخشی لازم</p>
+              <div className="bg-card p-12 rounded-xl border border-border">
+                <h4 className="font-bold text-2xl mb-4 text-foreground">درمان سرگیجه</h4>
+                <p className="text-2xl text-muted-foreground leading-loose">
+                  تشخیص و درمان ورتیگو در منزل
+                </p>
               </div>
 
-              <div className="bg-card p-8 rounded-lg border-2 border-border">
-                <h4 className="font-bold text-xl mb-4 text-foreground">درمان عفونت گوش</h4>
-                <p className="text-lg text-muted-foreground leading-loose">تشخیص دقیق نوع عفونت (خارجی، میانی) و تجویز پروتکل درمانی مناسب</p>
+              <div className="bg-card p-12 rounded-xl border border-border">
+                <h4 className="font-bold text-2xl mb-4 text-foreground">درمان عفونت گوش</h4>
+                <p className="text-2xl text-muted-foreground leading-loose">
+                  تشخیص و درمان انواع عفونت گوش
+                </p>
               </div>
 
-              <div className="bg-card p-8 rounded-lg border-2 border-border">
-                <h4 className="font-bold text-xl mb-4 text-foreground">برداشتن جرم گوش</h4>
-                <p className="text-lg text-muted-foreground leading-loose">شستشو یا خارج کردن جرم‌های سخت شده گوش در منزل</p>
-              </div>
-            </div>
-          </div>
-
-          {/* حلق و حنجره */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-foreground">
-              مدیریت مشکلات حلق و حنجره
-            </h3>
-            <div className="space-y-6">
-              <div className="bg-card p-8 rounded-lg border-2 border-border">
-                <h4 className="font-bold text-xl mb-4 text-foreground">تشخیص و درمان عفونت‌های حاد حلق</h4>
-                <p className="text-lg text-muted-foreground leading-loose">معاینه دقیق حلق و حنجره برای تشخیص فارنژیت، لارنژیت یا تونسیلیت</p>
-              </div>
-
-              <div className="bg-card p-8 rounded-lg border-2 border-border">
-                <h4 className="font-bold text-xl mb-4 text-foreground">مشاوره مشکلات بلع</h4>
-                <p className="text-lg text-muted-foreground leading-loose">ارزیابی و راهنمایی اولیه برای مشکلات مرتبط با بلع</p>
+              <div className="bg-card p-12 rounded-xl border border-border">
+                <h4 className="font-bold text-2xl mb-4 text-foreground">برداشتن جرم گوش</h4>
+                <p className="text-2xl text-muted-foreground leading-loose">
+                  پاکسازی گوش در منزل
+                </p>
               </div>
             </div>
-          </div>
 
-          {/* بینی و سینوس */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-foreground">
-              رسیدگی به مشکلات بینی و سینوس
-            </h3>
-            <div className="space-y-6">
-              <div className="bg-card p-8 rounded-lg border-2 border-border">
-                <h4 className="font-bold text-xl mb-4 text-foreground">درمان سینوزیت حاد</h4>
-                <p className="text-lg text-muted-foreground leading-loose">تشخیص و ارائه برنامه درمانی برای سینوزیت‌های عفونی و التهابی</p>
+            {/* حلق و حنجره */}
+            <div className="space-y-10">
+              <h3 className="text-3xl font-bold text-foreground pb-6 border-b-2 border-primary">
+                حلق و حنجره
+              </h3>
+              
+              <div className="bg-card p-12 rounded-xl border border-border">
+                <h4 className="font-bold text-2xl mb-4 text-foreground">عفونت حلق</h4>
+                <p className="text-2xl text-muted-foreground leading-loose">
+                  تشخیص و درمان فارنژیت و تونسیلیت
+                </p>
               </div>
 
-              <div className="bg-card p-8 rounded-lg border-2 border-border">
-                <h4 className="font-bold text-xl mb-4 text-foreground">کنترل خونریزی بینی (اپیستاکسی)</h4>
-                <p className="text-lg text-muted-foreground leading-loose">ارزیابی و مدیریت خونریزی‌های ساده بینی در منزل</p>
+              <div className="bg-card p-12 rounded-xl border border-border">
+                <h4 className="font-bold text-2xl mb-4 text-foreground">مشکلات بلع</h4>
+                <p className="text-2xl text-muted-foreground leading-loose">
+                  ارزیابی و راهنمایی تخصصی
+                </p>
+              </div>
+            </div>
+
+            {/* بینی و سینوس */}
+            <div className="space-y-10">
+              <h3 className="text-3xl font-bold text-foreground pb-6 border-b-2 border-primary">
+                بینی و سینوس
+              </h3>
+              
+              <div className="bg-card p-12 rounded-xl border border-border">
+                <h4 className="font-bold text-2xl mb-4 text-foreground">سینوزیت حاد</h4>
+                <p className="text-2xl text-muted-foreground leading-loose">
+                  درمان عفونت‌های سینوسی
+                </p>
               </div>
 
-              <div className="bg-card p-8 rounded-lg border-2 border-border">
-                <h4 className="font-bold text-xl mb-4 text-foreground">بررسی مشکلات بویایی</h4>
-                <p className="text-lg text-muted-foreground leading-loose">مشاوره و ارزیابی اولیه برای اختلالات بویایی</p>
+              <div className="bg-card p-12 rounded-xl border border-border">
+                <h4 className="font-bold text-2xl mb-4 text-foreground">خونریزی بینی</h4>
+                <p className="text-2xl text-muted-foreground leading-loose">
+                  کنترل و درمان خونریزی بینی
+                </p>
+              </div>
+
+              <div className="bg-card p-12 rounded-xl border border-border">
+                <h4 className="font-bold text-2xl mb-4 text-foreground">مشکلات بویایی</h4>
+                <p className="text-2xl text-muted-foreground leading-loose">
+                  ارزیابی اختلالات بویایی
+                </p>
               </div>
             </div>
           </div>
@@ -126,59 +144,66 @@ const ENTPage = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-12 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-            چرا باید متخصص ENT را در منزل ویزیت کنید؟
+      <section className="py-20 px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-20 text-foreground">
+            چرا ویزیت در منزل؟
           </h2>
-          <div className="space-y-6">
-            <div className="bg-card p-8 rounded-lg border-2 border-border">
-              <h3 className="font-bold text-xl mb-4 text-foreground">کاهش اضطراب در بیماران مبتلا به سرگیجه</h3>
-              <p className="text-lg text-muted-foreground leading-loose">جابجایی بیماران دچار ورتیگو بسیار سخت و آزاردهنده است. ویزیت ENT در منزل بهترین راهکار است.</p>
+          
+          <div className="space-y-10">
+            <div className="bg-card p-12 rounded-xl border border-border">
+              <h3 className="font-bold text-2xl mb-4 text-foreground">راحتی بیماران</h3>
+              <p className="text-2xl text-muted-foreground leading-loose">
+                بیماران سرگیجه نیازی به جابجایی ندارند
+              </p>
             </div>
 
-            <div className="bg-card p-8 rounded-lg border-2 border-border">
-              <h3 className="font-bold text-xl mb-4 text-foreground">رسیدگی فوری به عفونت‌ها</h3>
-              <p className="text-lg text-muted-foreground leading-loose">تشخیص و شروع درمان سریع عفونت‌ها برای جلوگیری از پیشرفت بیماری.</p>
+            <div className="bg-card p-12 rounded-xl border border-border">
+              <h3 className="font-bold text-2xl mb-4 text-foreground">درمان سریع</h3>
+              <p className="text-2xl text-muted-foreground leading-loose">
+                تشخیص و شروع درمان بدون تاخیر
+              </p>
             </div>
 
-            <div className="bg-card p-8 rounded-lg border-2 border-border">
-              <h3 className="font-bold text-xl mb-4 text-foreground">صرفه‌جویی در زمان و راحتی</h3>
-              <p className="text-lg text-muted-foreground leading-loose">حذف نیاز به انتظار طولانی در مطب‌های شلوغ.</p>
+            <div className="bg-card p-12 rounded-xl border border-border">
+              <h3 className="font-bold text-2xl mb-4 text-foreground">صرفه‌جویی در زمان</h3>
+              <p className="text-2xl text-muted-foreground leading-loose">
+                بدون نیاز به انتظار در مطب
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-            فرایند درخواست و اعزام متخصص ENT در تهران
+      <section className="py-20 px-8 bg-muted/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
+            نحوه درخواست
           </h2>
-          <div className="bg-card p-8 rounded-lg border-2 border-border">
-            <p className="text-xl text-muted-foreground leading-loose text-center">
-              برای دریافت خدمات متخصص گوش، حلق و بینی در منزل، کافی است با شماره‌های ما تماس بگیرید. کارشناسان ما پس از بررسی شرایط، سریع‌ترین هماهنگی را برای اعزام پزشک متخصص به محل شما در سراسر تهران انجام خواهند داد.
+          <div className="bg-card p-12 rounded-xl border border-border">
+            <p className="text-2xl text-muted-foreground leading-loose text-center">
+              با شماره تماس بگیرید، متخصص به منزل شما می‌آید
             </p>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-3xl text-center space-y-8">
-          <h2 className="text-3xl font-bold text-foreground leading-relaxed">
-            برای درمان سریع مشکلات گوش، حلق و بینی خود با حفظ راحتی در خانه
+      <section className="py-20 px-8">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
+          <h2 className="text-4xl font-bold text-foreground leading-relaxed">
+            برای ویزیت متخصص در منزل
           </h2>
-          <p className="text-xl text-muted-foreground leading-loose">
-            همین حالا برای ویزیت متخصص ENT در منزل با نوید زندگی تماس بگیرید
+          <p className="text-2xl text-muted-foreground">
+            همین الان تماس بگیرید
           </p>
           <Button 
             onClick={handleCall}
             size="lg"
-            className="text-2xl px-12 py-8"
+            className="text-3xl px-20 py-12"
           >
-            <Phone className="ml-3 h-7 w-7" />
+            <Phone className="ml-4 h-10 w-10" />
             تماس فوری
           </Button>
         </div>
