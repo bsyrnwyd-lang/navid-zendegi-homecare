@@ -1,254 +1,141 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Activity, Phone, CheckCircle, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
-import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
-import FAQSection from "@/components/FAQSection";
 import SEOHead from "@/components/SEOHead";
-import StructuredData from "@/components/StructuredData";
 import PricingInfo from "@/components/PricingInfo";
+import { Phone } from "lucide-react";
 import cardiacImage from "@/assets/iranian-cardiology-home.jpg";
 
 const EchoECGPage = () => {
-  const breadcrumbs = [
-    { name: "خانه", url: "/" },
-    { name: "خدمات", url: "/#services" },
-    { name: "اکو و نوار قلب", url: "/services/echo-ecg" }
-  ];
-
-  const faqs = [
-    {
-      question: "اکوکاردیوگرافی در منزل چیست؟",
-      answer: "اکوکاردیوگرافی یا سونوگرافی قلب روشی است که با استفاده از امواج صوتی، ساختار و عملکرد قلب را بررسی می‌کند. این آزمایش برای ارزیابی دریچه‌های قلب، عملکرد بطن‌ها و تشخیص ناهنجاری‌های قلبی استفاده می‌شود."
-    },
-    {
-      question: "نوار قلب (ECG) چه اطلاعاتی ارائه می‌دهد؟",
-      answer: "نوار قلب ریتم و فعالیت الکتریکی قلب را ثبت می‌کند و به تشخیص آریتمی، ایسکمی قلب، سکته قلبی و سایر مشکلات قلبی کمک می‌کند."
-    },
-    {
-      question: "هولتر ۲۴ ساعته چگونه کار می‌کند؟",
-      answer: "هولتر یک دستگاه پرتابل است که ضربان قلب را به صورت مستمر در طول ۲۴ ساعت ثبت می‌کند. این آزمایش برای تشخیص آریتمی‌های مخفی که در نوار قلب معمولی ظاهر نمی‌شوند، استفاده می‌شود."
-    },
-    {
-      question: "آیا نیاز به آماده‌سازی خاصی قبل از این آزمایشات است؟",
-      answer: "خیر، معمولاً نیاز به آماده‌سازی خاصی نیست. فقط کافی است لباس راحت بپوشید که دسترسی به قفسه سینه آسان باشد."
-    }
-  ];
-
-  const handleCall = () => {
-    window.location.href = "tel:09386117912";
-  };
-
   return (
-    <>
-      <SEOHead
-        title="اکو و نوار قلب در منزل تهران | اکوکاردیوگرافی منزل | نوید زندگی"
-        description="انجام اکوکاردیوگرافی، نوار قلب ECG و هولتر ۲۴ ساعته در منزل تهران توسط تکنسین‌های مجرب نوید زندگی. گزارش فوری و تخصصی. تماس: 09386117912"
-        keywords="اکو قلب در منزل، نوار قلب در منزل، اکوکاردیوگرافی منزل، ECG در منزل، هولتر منزل، تست قلب در منزل تهران"
+    <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="اکو قلب در منزل تهران (اکوکاردیوگرافی) | نوار قلب (ECG) در خانه | نوید زندگی"
+        description="انجام اکو قلب در منزل تهران و نوار قلب (ECG) فوری با دستگاه‌های پرتابل و پیشرفته. تفسیر نتایج توسط متخصص قلب در منزل. آسایش و دقت در تشخیص بیماری‌های قلبی."
+        keywords="اکو قلب در منزل، نوار قلب در منزل، اکوکاردیوگرافی در خانه، ECG در منزل، متخصص قلب تهران، تست قلب منزل"
         canonical="https://navidzendegi.ir/services/echo-ecg"
-        ogType="website"
       />
-
-      <StructuredData
-        breadcrumbs={breadcrumbs}
-        service={{
-          name: "اکو و نوار قلب در منزل",
-          description: "انجام اکوکاردیوگرافی، نوار قلب و هولتر در منزل با تجهیزات پیشرفته",
-          provider: "نوید زندگی",
-          areaServed: "تهران و کرج",
-          serviceType: "آزمایشات تخصصی قلب در منزل"
-        }}
-        faqs={faqs}
-      />
-
-      <div className="min-h-screen bg-background">
-        <Header />
-      
-        <main className="pt-20 md:pt-24">
-          <div className="container mx-auto px-4 py-8">
-            <BreadcrumbNavigation items={breadcrumbs} />
-          </div>
-
-          {/* Hero Section */}
-          <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
-            <div className="container mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                    اکو و نوار قلب در منزل تهران
-                  </h1>
-                  <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                    انجام آزمایشات تخصصی قلب شامل اکوکاردیوگرافی، نوار قلب و هولتر در راحتی منزل شما توسط تکنسین‌های مجرب نوید زندگی.
-                  </p>
-                  <Button 
-                    size="lg" 
-                    className="text-lg px-8 py-6"
-                    onClick={handleCall}
-                  >
-                    <Phone className="ml-2 h-5 w-5" />
-                    رزرو نوبت فوری - ۰۹۳۸۶۱۱۷۹۱۲
-                  </Button>
-                </div>
-                <div className="relative">
-                  <img 
-                    src={cardiacImage} 
-                    alt="اکو و نوار قلب در منزل"
-                    className="rounded-lg shadow-2xl w-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Services Section */}
-          <section className="medical-section">
-            <div className="container mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="section-title">خدمات اکو و نوار قلب در منزل</h2>
-                <p className="section-subtitle">
-                  انجام کلیه آزمایشات قلب با تجهیزات پیشرفته و گزارش فوری
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <Card className="medical-card group hover:border-primary/20">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Heart className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl mb-2">اکوکاردیوگرافی در منزل</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4 text-center">
-                      بررسی تخصصی ساختار و عملکرد قلب با سونوگرافی قلب
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        ارزیابی دریچه‌های قلب
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        بررسی عملکرد بطن‌ها
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        تشخیص ناهنجاری‌های قلبی
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        گزارش فوری متخصص
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="medical-card group hover:border-primary/20">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Activity className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl mb-2">نوار قلب (ECG) در منزل</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4 text-center">
-                      ثبت و بررسی ریتم قلب و تشخیص آریتمی‌ها
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        ثبت ۱۲ کاناله ECG
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        تشخیص آریتمی
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        بررسی ایسکمی قلب
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        تفسیر تخصصی نوار
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="medical-card group hover:border-primary/20">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Activity className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl mb-2">هولتر ۲۴ ساعته</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4 text-center">
-                      مانیتورینگ مستمر ضربان قلب در طول ۲۴ ساعت
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        ثبت مستمر ۲۴ ساعته
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        تشخیص آریتمی‌های مخفی
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        بررسی فعالیت روزمره
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                        گزارش تحلیلی کامل
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </section>
-
-          {/* FAQ Section */}
-          <section className="medical-section">
-            <div className="container mx-auto">
-              <FAQSection faqs={faqs} />
-            </div>
-          </section>
-
-          {/* Contact Section */}
-          <section className="medical-section bg-muted/50">
-            <div className="container mx-auto text-center">
-              <h2 className="section-title mb-8">رزرو نوبت اکو و نوار قلب در منزل</h2>
-              <p className="section-subtitle mb-8">
-                برای انجام آزمایشات قلب در منزل همین حالا تماس بگیرید
+      <Header />
+      <main className="pt-20 md:pt-24">
+        {/* Hero Section */}
+        <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-8">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+                اکو قلب و نوار قلب (ECG) در منزل تهران (خدمات کامل تشخیصی قلب)
+              </h1>
+              <p className="text-base md:text-lg text-foreground leading-relaxed text-justify">
+                تشخیص دقیق بیماری‌های قلبی نیازمند تجهیزات پیشرفته است. برای بیماران قلبی، سالمندان یا افرادی که شرایط انتقال به کلینیک‌های شلوغ را ندارند، نوید زندگی با اعزام کادر متخصص و دستگاه‌های پرتابل، خدمات اکو قلب و نوار قلب (ECG) را مستقیماً در خانه شما فراهم می‌کند. این خدمات تضمین می‌کند که پایش سلامت قلب شما بدون هیچگونه استرس و تأخیری انجام شود.
               </p>
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6"
-                onClick={handleCall}
-              >
+            </div>
+            
+            <div className="relative mb-8">
+              <img 
+                src={cardiacImage} 
+                alt="اکو قلب و نوار قلب در منزل تهران"
+                className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div className="text-center mb-8">
+              <a href="tel:09386117912" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-lg font-semibold">
                 <Phone className="ml-2 h-5 w-5" />
-                تماس فوری: ۰۹۳۸۶۱۱۷۹۱۲
-              </Button>
+                تماس فوری: 09386117912
+              </a>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Pricing Info Section */}
-          <section className="medical-section bg-background">
-            <div className="container mx-auto">
-              <PricingInfo />
-            </div>
-          </section>
-        </main>
+        {/* Content Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              خدمات تخصصی نوار قلب (ECG) در منزل
+            </h2>
+            <p className="text-base text-foreground mb-6 leading-relaxed text-justify">
+              نوار قلب یا الکتروکاردیوگرام (ECG/EKG) یکی از اساسی‌ترین تست‌ها برای ارزیابی عملکرد قلب است.
+            </p>
+            
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>انجام نوار قلب فوری:</strong> ثبت فعالیت الکتریکی قلب برای تشخیص آریتمی‌ها، مشکلات هدایتی و علائم حمله قلبی.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>تفسیر توسط متخصص:</strong> نوار قلب ثبت شده بلافاصله توسط متخصص قلب و عروق تفسیر شده و نتایج آن در اختیار پزشک معالج قرار می‌گیرد.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>پایش آریتمی:</strong> استفاده از نوار قلب برای بررسی و پیگیری نامنظمی‌های ضربان قلب.
+              </li>
+            </ul>
 
-        <Footer />
-        <FloatingContact />
-      </div>
-    </>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              خدمات تخصصی اکو قلب (اکوکاردیوگرافی) در منزل
+            </h2>
+            <p className="text-base text-foreground mb-6 leading-relaxed text-justify">
+              اکوکاردیوگرافی یک سونوگرافی تخصصی از قلب است که ساختار و عملکرد قلب را به صورت تصویری نشان می‌دهد.
+            </p>
+
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>ارائه اکو قلب پرتابل:</strong> انجام اکوکاردیوگرافی با دستگاه‌های پیشرفته و قابل حمل توسط کارشناس یا دکتر قلب در منزل.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>بررسی ساختار قلب:</strong> ارزیابی اندازه اتاقک‌های قلب، عملکرد دریچه‌ها و ضخامت دیواره‌های قلبی.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>تشخیص نارسایی قلبی:</strong> بررسی قدرت پمپاژ قلب (EF) که برای تشخیص و مدیریت نارسایی قلبی حیاتی است.
+              </li>
+            </ul>
+
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              مزایای انتخاب نوید زندگی برای تست‌های قلبی در خانه
+            </h2>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>دقت تشخیص بالا:</strong> استفاده از دستگاه‌های استاندارد پزشکی که نتایجی مشابه کلینیک‌ها ارائه می‌دهند.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>کاهش استرس بیمار:</strong> معاینه در محیط آشنای خانه، اضطراب بیمار را کاهش داده و به ثبت نوار قلب و اکوی دقیق‌تر کمک می‌کند.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>عدم نیاز به جابجایی:</strong> ایده‌آل برای بیماران بدحال، سالمندان و افرادی که تحت مراقبت‌های ویژه هستند.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>اعزام فوری:</strong> امکان اعزام سریع در مواقعی که نیاز به ارزیابی فوری وضعیت قلب وجود دارد.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="medical-section bg-primary/5">
+          <div className="container mx-auto max-w-4xl text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
+              اکو قلب و نوار قلب در منزل
+            </h2>
+            <p className="text-base text-foreground mb-6 leading-relaxed">
+              برای ارزیابی دقیق سلامت قلب خود یا عزیزانتان، همین حالا برای رزرو اکو قلب و نوار قلب (ECG) در منزل با نوید زندگی تماس بگیرید.
+            </p>
+            <a 
+              href="tel:09386117912" 
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-lg font-semibold"
+            >
+              <Phone className="ml-2 h-6 w-6" />
+              تماس: 09386117912
+            </a>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-4xl">
+            <PricingInfo />
+          </div>
+        </section>
+      </main>
+      <Footer />
+      <FloatingContact />
+    </div>
   );
 };
 
