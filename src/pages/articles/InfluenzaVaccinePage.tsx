@@ -9,7 +9,7 @@ import vaccinationImage from "@/assets/vaccination-article.jpg";
 
 const InfluenzaVaccinePage = () => {
   const handleCall = () => {
-    window.location.href = "tel:02126402303";
+    window.location.href = "tel:02126701329";
   };
 
   const handleWhatsApp = () => {
@@ -142,7 +142,7 @@ const InfluenzaVaccinePage = () => {
                     size="lg"
                   >
                     <Phone className="w-4 h-4" />
-                    تماس فوری: ۰۲۱-۲۶۴۰۲۳۰۳
+                    تماس فوری: ۰۲۱-۲۶۷۰۱۳۲۹
                   </Button>
                   <Button
                     onClick={handleWhatsApp}
@@ -168,7 +168,7 @@ const InfluenzaVaccinePage = () => {
                   برای دریافت خدمات ویزیت پزشک در منزل در تهران می‌توانید با شماره تلفن زیر تماس بگیرید:
                 </p>
                 <p className="font-bold text-lg text-primary">
-                  ۰۲۱-۲۶۴۰۲۳۰۳
+                  ۰۲۱-۲۶۷۰۱۳۲۹
                 </p>
               </div>
             </div>
