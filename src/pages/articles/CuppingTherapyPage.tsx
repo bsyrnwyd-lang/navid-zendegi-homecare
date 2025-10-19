@@ -7,6 +7,9 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 import cuppingTherapyImage from "@/assets/cupping-therapy-home.jpg";
+import generalDoctorImage from "@/assets/general-doctor-home.jpg";
+import nursingImage from "@/assets/nursing-home-care.jpg";
+import vaccinationImage from "@/assets/vaccination-article.jpg";
 
 const CuppingTherapyPage = () => {
   const handleCall = () => {
@@ -22,21 +25,21 @@ const CuppingTherapyPage = () => {
       title: "ویزیت پزشک عمومی در منزل",
       description: "اعزام فوری پزشک عمومی به منزل در تهران",
       link: "/general-doctor",
-      image: "/assets/general-doctor-home.jpg",
+      image: generalDoctorImage,
       category: "خدمات پزشکی"
     },
     {
       title: "خدمات پرستاری در منزل",
       description: "پرستاری تخصصی و مراقبت از بیمار در منزل",
       link: "/services/nursing",
-      image: "/assets/nursing-home-care.jpg",
+      image: nursingImage,
       category: "خدمات پزشکی"
     },
     {
       title: "تزریق واکسن آنفولانزا در منزل",
       description: "تزریق واکسن آنفولانزا در منزل توسط پرستار متخصص",
       link: "/articles/influenza-vaccine",
-      image: "/assets/vaccination-article.jpg",
+      image: vaccinationImage,
       category: "واکسیناسیون"
     }
   ];
