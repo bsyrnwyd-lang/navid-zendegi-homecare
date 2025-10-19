@@ -62,12 +62,21 @@ import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
+import cuppingTherapyImage from "@/assets/cupping-therapy-home.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 53,
+      title: "حجامت در منزل و فصد خون در منزل: راهنمای انتخاب آگاهانه",
+      description: "حجامت در منزل و فصد خون در منزل با رعایت کامل اصول بهداشتی. خدمات فصد خون درمانی با تجویز پزشک توسط تیم نوید زندگی",
+      image: cuppingTherapyImage,
+      link: "/articles/cupping-therapy",
+      category: "خدمات پزشکی"
+    },
     {
       id: 52,
       title: "تزریق واکسن آنفولانزا در منزل: راهنمای کامل، زمان‌بندی و گروه‌های پرخطر",
