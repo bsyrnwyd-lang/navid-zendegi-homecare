@@ -63,12 +63,22 @@ import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
 import cuppingTherapyImage from "@/assets/cupping-therapy-home.jpg";
+import echoHomeImage from "@/assets/echo-home-service.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 54,
+      title: "اکو قلب در منزل: تشخیص دقیق بیماری‌های قلبی با دستگاه پرتابل",
+      description: "انجام اکوکاردیوگرافی تخصصی در منزل با دستگاه پرتابل و تفسیر توسط متخصص قلب. بررسی ساختار قلب، دریچه‌ها و عملکرد پمپاژ",
+      image: echoHomeImage,
+      link: "/articles/echo-home",
+      category: "خدمات پزشکی",
+      date: "1403/12/16"
+    },
     {
       id: 53,
       title: "حجامت در منزل و فصد خون در منزل: راهنمای انتخاب آگاهانه",

@@ -90,6 +90,7 @@ const HPVTreatmentGuidePage = lazy(() => import("./pages/articles/HPVTreatmentGu
 const ElderlyCareGuidePage = lazy(() => import("./pages/articles/ElderlyCareGuidePage"));
 const InfluenzaVaccinePage = lazy(() => import("./pages/articles/InfluenzaVaccinePage"));
 const CuppingTherapyPage = lazy(() => import("./pages/articles/CuppingTherapyPage"));
+const EchoHomePage = lazy(() => import("./pages/articles/EchoHomePage"));
 
 const queryClient = new QueryClient();
 
@@ -163,6 +164,7 @@ const App = () => (
            <Route path="/articles/hiv-aids" element={<HIVAidsPage />} />
            <Route path="/articles/diabetes" element={<DiabetesPage />} />
            <Route path="/articles/hyperhidrosis" element={<HyperhidrosisPage />} />
+           <Route path="/articles/echo-home" element={<EchoHomePage />} />
            <Route path="/articles/headache" element={<HeadachePage />} />
            <Route path="/articles/dizziness" element={<DizzinessPage />} />
           <Route path="/articles/depression" element={<DepressionPage />} />

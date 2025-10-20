@@ -1,0 +1,243 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
+import SEOHead from "@/components/SEOHead";
+import PricingInfo from "@/components/PricingInfo";
+import RelatedArticles from "@/components/RelatedArticles";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import { Button } from "@/components/ui/button";
+import { Phone, MessageCircle } from "lucide-react";
+import echoHomeImage from "@/assets/echo-home-service.jpg";
+import cardiologyImage from "@/assets/cardiology-home-visit.jpg";
+import holterImage from "@/assets/holter-monitoring.jpg";
+import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
+
+const EchoHomePage = () => {
+  const handleCall = () => {
+    window.location.href = "tel:09386117912";
+  };
+
+  const handleWhatsApp = () => {
+    window.open("https://wa.me/989386117912", "_blank");
+  };
+
+  const relatedArticles = [
+    {
+      title: "خدمات متخصص قلب و عروق در منزل",
+      description: "ویزیت تخصصی قلب و عروق در منزل",
+      link: "/cardiology",
+      image: cardiologyImage,
+      category: "خدمات پزشکی"
+    },
+    {
+      title: "هولتر قلب در منزل",
+      description: "نصب و مانیتورینگ هولتر قلب در منزل",
+      link: "/services/holter",
+      image: holterImage,
+      category: "خدمات پزشکی"
+    },
+    {
+      title: "تپش قلب: علل، علائم و درمان",
+      description: "راهنمای کامل تپش قلب و روش‌های کنترل آن",
+      link: "/articles/heart-palpitations",
+      image: heartPalpitationsImage,
+      category: "مقالات"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="اکو قلب در منزل | اکوکاردیوگرافی تخصصی در خانه | نوید زندگی"
+        description="انجام اکو قلب در منزل با دستگاه پرتابل و تفسیر توسط متخصص قلب. تشخیص دقیق بیماری‌های قلبی، بررسی دریچه‌ها و عملکرد قلب در آسایش منزل."
+        keywords="اکو قلب در منزل، اکوکاردیوگرافی در خانه، سونوگرافی قلب منزل، متخصص قلب منزل تهران، اکو قلب پرتابل"
+        canonical="https://navidzendegi.ir/articles/echo-home"
+        ogType="article"
+      />
+      <Header />
+      <main className="pt-20 md:pt-24">
+        <article>
+          {/* Breadcrumb */}
+          <section className="medical-section py-4">
+            <div className="container mx-auto max-w-4xl">
+              <BreadcrumbNavigation 
+                items={[
+                  { name: "صفحه اصلی", url: "/" },
+                  { name: "مقالات", url: "/articles" },
+                  { name: "اکو قلب در منزل", url: "/articles/echo-home" }
+                ]}
+              />
+            </div>
+          </section>
+
+          {/* Hero Section */}
+          <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
+            <div className="container mx-auto max-w-4xl">
+              <h1 className="text-3xl md:text-4xl font-bold mb-6 text-primary text-center">
+                اکو قلب در منزل: تشخیص دقیق و غیرتهاجمی بیماری‌های قلبی با دستگاه پرتابل
+              </h1>
+              
+              <div className="relative mb-8">
+                <img 
+                  src={echoHomeImage} 
+                  alt="اکو قلب در منزل - اکوکاردیوگرافی تخصصی"
+                  className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+                />
+              </div>
+
+              <div className="prose max-w-none">
+                <p className="text-base md:text-lg text-foreground leading-relaxed text-justify mb-6">
+                  اکو قلب یا اکوکاردیوگرافی، یکی از حیاتی‌ترین و بی‌خطرترین روش‌های تشخیصی در علم قلب و عروق است. این آزمایش در واقع یک سونوگرافی تخصصی از قلب است که از امواج صوتی با فرکانس بالا (اولتراسوند) برای تولید تصاویر متحرک از قلب استفاده می‌کند. این تصاویر ساختار دقیق قلب، عملکرد دریچه‌ها و نحوه جریان خون را نشان می‌دهند.
+                </p>
+                <p className="text-base md:text-lg text-foreground leading-relaxed text-justify mb-8">
+                  در عصر حاضر، با پیشرفت فناوری دستگاه‌های اکوکاردیوگرافی پرتابل، امکان انجام این تست تخصصی مستقیماً در محل اقامت بیمار (خانه یا محل کار) فراهم شده است.
+                </p>
+
+                <div className="flex gap-4 mb-8 flex-wrap justify-center">
+                  <Button onClick={handleCall} size="lg" className="gap-2">
+                    <Phone className="h-5 w-5" />
+                    تماس فوری: 09386117912
+                  </Button>
+                  <Button onClick={handleWhatsApp} variant="outline" size="lg" className="gap-2">
+                    <MessageCircle className="h-5 w-5" />
+                    واتساپ
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Content Section */}
+          <section className="medical-section">
+            <div className="container mx-auto max-w-4xl">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                اکو قلب چیست و کاربردهای حیاتی آن کدامند؟
+              </h2>
+              <p className="text-base text-foreground mb-6 leading-relaxed text-justify">
+                اکو قلب اطلاعات بسیار مهمی را در اختیار متخصص قلب و عروق قرار می‌دهد که برای تشخیص و پیگیری انواع بیماری‌های قلبی ضروری است.
+              </p>
+
+              <div className="overflow-x-auto mb-8">
+                <table className="w-full border-collapse border border-border">
+                  <thead>
+                    <tr className="bg-primary/5">
+                      <th className="border border-border p-3 text-right">ساختار مورد بررسی</th>
+                      <th className="border border-border p-3 text-right">اطلاعات تشخیصی</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-border p-3">اندازه و شکل قلب</td>
+                      <td className="border border-border p-3">بررسی بزرگ شدن حفره‌ها یا ضخیم شدن دیواره‌های قلب (کاردیومیوپاتی)</td>
+                    </tr>
+                    <tr className="bg-muted/50">
+                      <td className="border border-border p-3">عملکرد پمپاژ (EF)</td>
+                      <td className="border border-border p-3">تعیین قدرت پمپاژ قلب که در تشخیص و ارزیابی نارسایی قلبی کلیدی است.</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-border p-3">دریچه‌های قلبی</td>
+                      <td className="border border-border p-3">بررسی اختلالاتی مانند تنگی دریچه (باریک شدن) یا نارسایی دریچه (نشت خون).</td>
+                    </tr>
+                    <tr className="bg-muted/50">
+                      <td className="border border-border p-3">جریان خون</td>
+                      <td className="border border-border p-3">مشاهده مسیر و جهت جریان خون در قلب و عروق اصلی.</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-border p-3">مشکلات ساختاری</td>
+                      <td className="border border-border p-3">تشخیص نقایص مادرزادی قلب، لخته‌های خونی یا توده‌های غیرعادی.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                چرا باید اکو قلب در منزل را انتخاب کنید؟
+              </h2>
+              <p className="text-base text-foreground mb-6 leading-relaxed text-justify">
+                انجام اکو قلب در منزل توسط متخصص قلب و عروق یک مزیت بزرگ برای بیماران، به ویژه گروه‌های پرخطر محسوب می‌شود.
+              </p>
+
+              <ul className="space-y-4 mb-8">
+                <li className="text-base text-foreground">
+                  <strong>مناسب برای بیماران بدحال و سالمندان:</strong> بیمارانی که جابجایی برایشان دشوار است، یا پس از عمل جراحی در دوران نقاهت به سر می‌برند، نیازی به تحمل سختی‌های رفت و آمد ندارند.
+                </li>
+                <li className="text-base text-foreground">
+                  <strong>کاهش اضطراب و استرس:</strong> معاینه در محیط آشنا و آرام خانه، به کاهش استرس بیمار (که می‌تواند بر ضربان قلب تأثیر بگذارد) کمک کرده و دقت تست را افزایش می‌دهد.
+                </li>
+                <li className="text-base text-foreground">
+                  <strong>تشخیص فوری و سریع:</strong> متخصص قلب به همراه تجهیزات پرتابل به محل اعزام شده، تست را انجام می‌دهد و در همان لحظه نتایج اولیه را تفسیر می‌کند، که این امر فرآیند درمان را تسریع می‌بخشد.
+                </li>
+                <li className="text-base text-foreground">
+                  <strong>کاهش ریسک مواجهه:</strong> برای بیماران با نقص ایمنی، جلوگیری از قرار گرفتن در معرض عفونت‌های احتمالی محیط‌های درمانی شلوغ اهمیت حیاتی دارد.
+                </li>
+              </ul>
+
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                فرآیند اکو قلب در منزل چگونه است؟
+              </h2>
+              <p className="text-base text-foreground mb-6 leading-relaxed text-justify">
+                فرآیند انجام اکوکاردیوگرافی در منزل مشابه کلینیک‌ها و مراکز درمانی است، با این تفاوت که محیط آن منزل شماست:
+              </p>
+
+              <ol className="space-y-4 mb-8 list-decimal list-inside">
+                <li className="text-base text-foreground">
+                  <strong>ثبت درخواست و هماهنگی:</strong> پس از تماس با مرکز و ثبت درخواست، زمان اعزام تکنسین متخصص (یا پزشک متخصص قلب) با دستگاه اکو پرتابل هماهنگ می‌شود.
+                </li>
+                <li className="text-base text-foreground">
+                  <strong>آماده‌سازی:</strong> تکنسین از شما می‌خواهد که لباس بالاتنه خود را درآورید یا آن را شل کنید تا دسترسی به قفسه سینه فراهم شود.
+                </li>
+                <li className="text-base text-foreground">
+                  <strong>انجام تست:</strong> ابتدا ژل مخصوص سونوگرافی روی قفسه سینه زده می‌شود. سپس پروب دستگاه (مبدل) روی قفسه سینه قرار گرفته و امواج صوتی به سمت قلب ارسال و دریافت می‌شوند. تصاویر متحرک قلب روی مانیتور دستگاه ثبت می‌گردد.
+                </li>
+                <li className="text-base text-foreground">
+                  <strong>مدت زمان:</strong> این فرآیند معمولاً ۳۰ تا ۴۵ دقیقه طول می‌کشد و کاملاً بدون درد و غیرتهاجمی است.
+                </li>
+              </ol>
+
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                نوید زندگی؛ ارائه‌دهنده خدمات تخصصی اکو قلب در منزل
+              </h2>
+              <p className="text-base text-foreground mb-8 leading-relaxed text-justify">
+                نوید زندگی با استفاده از دستگاه‌های اکوکاردیوگرافی پرتابل با وضوح بالا و همکاری با متخصصان مجرب قلب، تضمین می‌کند که کیفیت تصویربرداری و تشخیص در منزل شما، هم‌سطح مراکز تخصصی است.
+              </p>
+
+              <div className="bg-primary/5 p-6 rounded-lg mb-8">
+                <p className="text-base text-foreground leading-relaxed text-center mb-4">
+                  برای پایش دقیق و به‌موقع سلامت قلب خود و عزیزانتان، همین حالا برای رزرو نوبت اکو قلب در منزل با کارشناسان ما تماس بگیرید.
+                </p>
+                <div className="flex gap-4 justify-center flex-wrap">
+                  <Button onClick={handleCall} size="lg" className="gap-2">
+                    <Phone className="h-5 w-5" />
+                    09386117912
+                  </Button>
+                  <Button onClick={handleWhatsApp} variant="outline" size="lg" className="gap-2">
+                    <MessageCircle className="h-5 w-5" />
+                    پیام در واتساپ
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section className="medical-section bg-muted/30">
+            <div className="container mx-auto max-w-4xl">
+              <PricingInfo />
+            </div>
+          </section>
+
+          {/* Related Articles */}
+          <section className="medical-section">
+            <div className="container mx-auto max-w-4xl">
+              <RelatedArticles articles={relatedArticles} />
+            </div>
+          </section>
+        </article>
+      </main>
+      <Footer />
+      <FloatingContact />
+    </div>
+  );
+};
+
+export default EchoHomePage;
