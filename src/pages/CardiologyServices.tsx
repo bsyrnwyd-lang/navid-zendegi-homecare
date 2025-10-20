@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
@@ -131,22 +132,40 @@ const CardiologyServices = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-3">اکوکاردیوگرافی در منزل (Eco)</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  انجام <strong>اکو قلب در منزل</strong> با دستگاه‌های پرتابل و پیشرفته برای ارزیابی دقیق ساختار و عملکرد قلب.
+                  انجام <Link to="/articles/echo-home" className="text-primary hover:underline font-semibold">اکو قلب در منزل</Link> با دستگاه‌های پرتابل و پیشرفته برای ارزیابی دقیق ساختار و عملکرد قلب، بررسی دریچه‌ها و تشخیص نارسایی قلبی.
                 </p>
               </div>
               
               <div>
                 <h3 className="text-xl font-semibold mb-3">هولتر مونیتورینگ در منزل</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  نصب و راه‌اندازی دستگاه هولتر برای ثبت ۲۴ ساعته نوار قلب و فشار خون.
+                  نصب و راه‌اندازی <Link to="/services/holter" className="text-primary hover:underline font-semibold">دستگاه هولتر</Link> برای ثبت ۲۴ ساعته نوار قلب و فشار خون با گزارش تخصصی کاردیولوژیست.
                 </p>
               </div>
               
               <div>
                 <h3 className="text-xl font-semibold mb-3">تنظیم و تجویز داروهای قلبی</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  بررسی و تنظیم دوزهای دارویی زیر نظر متخصص.
+                  بررسی و تنظیم دوزهای دارویی زیر نظر متخصص، از جمله داروهای ضد انعقاد مانند <Link to="/articles/warfarin" className="text-primary hover:underline">وارفارین</Link> و داروهای کاهش کلسترول مانند <Link to="/articles/atorvastatin" className="text-primary hover:underline">آتورواستاتین</Link>.
                 </p>
+              </div>
+            </div>
+            
+            <div className="bg-primary/5 p-6 rounded-lg mt-8">
+              <h3 className="text-xl font-semibold mb-4">مقالات مرتبط با سلامت قلب</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Link to="/articles/heart-palpitations" className="text-primary hover:underline flex items-center gap-2">
+                  → تپش قلب: علل و درمان
+                </Link>
+                <Link to="/articles/high-blood-pressure" className="text-primary hover:underline flex items-center gap-2">
+                  → کنترل فشار خون بالا
+                </Link>
+                <Link to="/articles/heart-attack-symptoms" className="text-primary hover:underline flex items-center gap-2">
+                  → علائم حمله قلبی
+                </Link>
+                <Link to="/articles/angiography-recovery-time" className="text-primary hover:underline flex items-center gap-2">
+                  → دوران نقاهت بعد آنژیوگرافی
+                </Link>
               </div>
             </div>
           </div>

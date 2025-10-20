@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import PricingInfo from "@/components/PricingInfo";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import generalDoctorImage from "@/assets/modern-general-doctor-home.jpg";
 
 const GeneralDoctorPage = () => {
@@ -131,15 +132,33 @@ const GeneralDoctorPage = () => {
               <div className="flex items-start">
                 <span className="ml-3 text-primary font-bold">•</span>
                 <p className="leading-relaxed">
-                  <strong>مشاوره و ارجاع:</strong> ارائه مشاوره‌های تخصصی در مورد روند بیماری و در صورت نیاز، ارجاع به پزشک متخصص در منزل.
+                  <strong>مشاوره و ارجاع:</strong> ارائه مشاوره‌های تخصصی در مورد روند بیماری و در صورت نیاز، ارجاع به <Link to="/cardiology" className="text-primary hover:underline">متخصص قلب در منزل</Link> یا سایر پزشکان متخصص.
                 </p>
               </div>
               
               <div className="flex items-start">
                 <span className="ml-3 text-primary font-bold">•</span>
                 <p className="leading-relaxed">
-                  <strong>انجام خدمات اولیه درمانی:</strong> شامل تزریقات، سرم تراپی و پانسمان‌های اولیه در صورت لزوم.
+                  <strong>انجام خدمات اولیه درمانی:</strong> شامل تزریقات، <Link to="/articles/iv-therapy-home" className="text-primary hover:underline">سرم تراپی در منزل</Link> و پانسمان‌های اولیه در صورت لزوم.
                 </p>
+              </div>
+            </div>
+            
+            <div className="bg-primary/5 p-6 rounded-lg mt-8">
+              <h3 className="text-xl font-semibold mb-4">خدمات مرتبط دیگر</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Link to="/services/nursing" className="text-primary hover:underline flex items-center gap-2">
+                  → خدمات پرستاری در منزل
+                </Link>
+                <Link to="/cardiology" className="text-primary hover:underline flex items-center gap-2">
+                  → ویزیت متخصص قلب در منزل
+                </Link>
+                <Link to="/services/internal" className="text-primary hover:underline flex items-center gap-2">
+                  → متخصص داخلی در منزل
+                </Link>
+                <Link to="/articles/medical-consultation" className="text-primary hover:underline flex items-center gap-2">
+                  → مشاوره پزشکی در منزل
+                </Link>
               </div>
             </div>
           </div>

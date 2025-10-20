@@ -9,6 +9,7 @@ import ArticleSchema from "@/components/ArticleSchema";
 import FAQSection from "@/components/FAQSection";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
 import cardiologyImage from "@/assets/cardiology-home-visit.jpg";
 import holterImage from "@/assets/holter-monitoring.jpg";
@@ -121,10 +122,10 @@ const EchoHomePage = () => {
 
               <div className="prose max-w-none">
                 <p className="text-base md:text-lg text-foreground leading-relaxed text-justify mb-6">
-                  اکو قلب یا اکوکاردیوگرافی، یکی از حیاتی‌ترین و بی‌خطرترین روش‌های تشخیصی در علم قلب و عروق است. این آزمایش در واقع یک سونوگرافی تخصصی از قلب است که از امواج صوتی با فرکانس بالا (اولتراسوند) برای تولید تصاویر متحرک از قلب استفاده می‌کند. این تصاویر ساختار دقیق قلب، عملکرد دریچه‌ها و نحوه جریان خون را نشان می‌دهند.
+                  <Link to="/cardiology" className="text-primary hover:underline font-semibold">اکو قلب</Link> یا اکوکاردیوگرافی، یکی از حیاتی‌ترین و بی‌خطرترین روش‌های تشخیصی در علم قلب و عروق است. این آزمایش در واقع یک سونوگرافی تخصصی از قلب است که از امواج صوتی با فرکانس بالا (اولتراسوند) برای تولید تصاویر متحرک از قلب استفاده می‌کند. این تصاویر ساختار دقیق قلب، عملکرد دریچه‌ها و نحوه جریان خون را نشان می‌دهند.
                 </p>
                 <p className="text-base md:text-lg text-foreground leading-relaxed text-justify mb-8">
-                  در عصر حاضر، با پیشرفت فناوری دستگاه‌های اکوکاردیوگرافی پرتابل، امکان انجام این تست تخصصی مستقیماً در محل اقامت بیمار (خانه یا محل کار) فراهم شده است.
+                  در عصر حاضر، با پیشرفت فناوری دستگاه‌های اکوکاردیوگرافی پرتابل، امکان انجام این تست تخصصی مستقیماً در محل اقامت بیمار (خانه یا محل کار) فراهم شده است. این خدمات توسط <Link to="/cardiology" className="text-primary hover:underline">متخصصان قلب نوید زندگی</Link> ارائه می‌شود.
                 </p>
 
                 <div className="flex gap-4 mb-8 flex-wrap justify-center">
@@ -232,7 +233,7 @@ const EchoHomePage = () => {
                 نوید زندگی؛ ارائه‌دهنده خدمات تخصصی اکو قلب در منزل
               </h2>
               <p className="text-base text-foreground mb-8 leading-relaxed text-justify">
-                نوید زندگی با استفاده از دستگاه‌های اکوکاردیوگرافی پرتابل با وضوح بالا و همکاری با متخصصان مجرب قلب، تضمین می‌کند که کیفیت تصویربرداری و تشخیص در منزل شما، هم‌سطح مراکز تخصصی است.
+                <Link to="/" className="text-primary hover:underline font-semibold">نوید زندگی</Link> با استفاده از دستگاه‌های اکوکاردیوگرافی پرتابل با وضوح بالا و همکاری با <Link to="/cardiology" className="text-primary hover:underline">متخصصان مجرب قلب</Link>, تضمین می‌کند که کیفیت تصویربرداری و تشخیص در منزل شما، هم‌سطح مراکز تخصصی است. علاوه بر اکو، می‌توانید از خدمات <Link to="/services/holter" className="text-primary hover:underline">هولتر قلب</Link> و <Link to="/services/echo-ecg" className="text-primary hover:underline">نوار قلب در منزل</Link> نیز استفاده کنید.
               </p>
 
               <div className="bg-primary/5 p-6 rounded-lg mb-8">

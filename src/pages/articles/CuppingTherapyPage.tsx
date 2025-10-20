@@ -8,6 +8,7 @@ import ArticleSchema from "@/components/ArticleSchema";
 import FAQSection from "@/components/FAQSection";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import cuppingTherapyImage from "@/assets/cupping-therapy-home.jpg";
 import generalDoctorImage from "@/assets/general-doctor-home.jpg";
 import nursingImage from "@/assets/nursing-home-care.jpg";
@@ -138,7 +139,7 @@ const CuppingTherapyPage = () => {
               فصد خون یا حجامت: انتخابی برای افراد با شرایط خاص
             </h2>
             <p className="text-lg leading-relaxed mb-6">
-              برخی افراد به دلیل شرایط پزشکی خاص یا منع اهدای خون (مانند داشتن سطح بالای هموگلوبین یا هموکروماتوزیس) نیاز به خارج کردن مقدار کنترل شده‌ای از خون دارند. در این شرایط، پزشک ممکن است <strong>فصد خون درمانی</strong> را تجویز کند.
+              برخی افراد به دلیل شرایط پزشکی خاص یا منع اهدای خون (مانند داشتن سطح بالای هموگلوبین یا هموکروماتوزیس) نیاز به خارج کردن مقدار کنترل شده‌ای از خون دارند. در این شرایط، <Link to="/general-doctor" className="text-primary hover:underline">پزشک</Link> ممکن است <strong>فصد خون درمانی</strong> را تجویز کند.
             </p>
             
             <div className="space-y-6">
@@ -239,7 +240,7 @@ const CuppingTherapyPage = () => {
               دریافت خدمات حجامت و فصد خون با بالاترین استانداردهای بهداشتی
             </h2>
             <p className="text-lg leading-relaxed mb-8">
-              اگر منع پزشکی برای اهدای خون دارید و یا به دلایل پزشکی نیاز به <strong>فصد خون درمانی</strong> دارید، تیم نوید زندگی آماده ارائه خدمات <strong>حجامت در منزل</strong> و <strong>فصد خون در منزل</strong> با بالاترین استانداردهای بهداشتی است.
+              اگر منع پزشکی برای اهدای خون دارید و یا به دلایل پزشکی نیاز به <strong>فصد خون درمانی</strong> دارید، تیم <Link to="/" className="text-primary hover:underline font-semibold">نوید زندگی</Link> آماده ارائه خدمات <strong>حجامت در منزل</strong> و <strong>فصد خون در منزل</strong> با بالاترین استانداردهای بهداشتی است. همچنین می‌توانید از سایر <Link to="/services/nursing" className="text-primary hover:underline">خدمات پرستاری در منزل</Link> نیز بهره‌مند شوید.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
