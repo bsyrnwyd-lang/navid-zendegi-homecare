@@ -19,9 +19,11 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={doctorPatientImage} 
-          alt="ویزیت پزشک در منزل - خدمات پزشکی نوید زندگی"
+          alt="ویزیت پزشک در منزل تهران - خدمات پزشکی نوید زندگی شامل ویزیت دکتر عمومی و متخصص در خانه"
           className="w-full h-full object-cover opacity-20"
           fetchPriority="high"
+          width="1920"
+          height="1080"
         />
         <div className="absolute inset-0 hero-gradient opacity-30"></div>
       </div>

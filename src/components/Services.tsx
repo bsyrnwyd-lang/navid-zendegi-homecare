@@ -78,17 +78,17 @@ const Services = () => {
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img 
               src={nursingImage} 
-              alt="پرستاری در منزل - خدمات پرستاری حرفه‌ای"
+              alt="پرستاری در منزل تهران - خدمات پرستاری حرفه‌ای شامل تزریقات، پانسمان و مراقبت از بیمار در منزل"
               className="w-full h-64 object-cover"
-              width="316"
-              height="256"
+              width="800"
+              height="600"
               loading="lazy"
               decoding="async"
             />
             <div className="absolute inset-0 bg-primary/20"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-xl font-bold">پرستاری در منزل نوید زندگی</h3>
-              <p className="text-sm">مراقبت حرفه‌ای توسط پرستاران مجرب در سراسر تهران</p>
+              <h3 className="text-xl font-bold">پرستاری در منزل تهران - نوید زندگی</h3>
+              <p className="text-sm">مراقبت حرفه‌ای از بیمار، سالمندان و نوزادان توسط پرستاران مجرب در سراسر تهران و کرج</p>
             </div>
           </div>
         </div>

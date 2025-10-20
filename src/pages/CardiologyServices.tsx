@@ -34,6 +34,11 @@ const CardiologyServices = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   بیماری‌های قلبی عروقی نیازمند مراقبت‌های ویژه و تخصصی هستند. اگر بیمار شما شرایط انتقال به بیمارستان را ندارد یا به دنبال آسایش و دقت بیشتر در فرآیند درمان هستید، <strong>نوید زندگی</strong> با اعزام <strong>متخصص قلب در منزل تهران</strong>، خدمات کامل کاردیولوژی را به خانه شما می‌آورد. ما متعهد به ارائه مراقبت‌های حرفه‌ای و استفاده از تجهیزات پزشکی استاندارد در محیط راحت و امن منزل شما هستیم.
                 </p>
+                <div className="bg-muted/50 p-4 rounded-lg mb-6">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    <strong>خدمات تخصصی:</strong> اکوکاردیوگرافی در منزل، نوار قلب در خانه، هولتر ۲۴ ساعته، مشاوره کاردیولوژیست، ویزیت دکتر قلب، تنظیم داروهای قلبی، پیگیری بعد از عمل جراحی قلب
+                  </p>
+                </div>
                 <Button 
                   onClick={handleCall}
                   size="lg"
@@ -46,8 +51,11 @@ const CardiologyServices = () => {
               <div className="relative">
                 <img 
                   src={cardiologyImage} 
-                  alt="ویزیت متخصص قلب در منزل تهران - خدمات کاردیولوژی در خانه"
+                  alt="ویزیت متخصص قلب در منزل تهران - خدمات کاردیولوژی در خانه شامل اکو قلب، نوار قلب و مشاوره تخصصی"
                   className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                  width="1200"
+                  height="800"
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
               </div>
