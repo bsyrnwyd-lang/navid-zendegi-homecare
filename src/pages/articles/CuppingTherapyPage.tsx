@@ -4,6 +4,8 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import PricingInfo from "@/components/PricingInfo";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleSchema from "@/components/ArticleSchema";
+import FAQSection from "@/components/FAQSection";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 import cuppingTherapyImage from "@/assets/cupping-therapy-home.jpg";
@@ -19,6 +21,29 @@ const CuppingTherapyPage = () => {
   const handleWhatsApp = () => {
     window.open("https://wa.me/989386117912", "_blank");
   };
+
+  const faqs = [
+    {
+      question: "آیا حجامت از نظر پزشکی تأیید شده است؟",
+      answer: "حجامت از نظر پزشکی رایج فاقد تأیید علمی قطعی است، اما در میان باورهای طب سنتی همچنان طرفداران زیادی دارد. اگر تصمیم به انجام حجامت دارید، حتماً با رعایت کامل اصول بهداشتی و استریل انجام دهید."
+    },
+    {
+      question: "تفاوت حجامت و فصد خون چیست؟",
+      answer: "فصد خون یک روش پزشکی پذیرفته شده برای کاهش حجم خون در شرایط خاص پزشکی (مانند پلی‌سیتمی) است که باید تحت نظر پزشک انجام شود. حجامت یک روش طب سنتی است که برای خارج کردن مقادیر کم خون از طریق خراش‌های کوچک استفاده می‌شود."
+    },
+    {
+      question: "آیا می‌توانم به جای اهدای خون، حجامت انجام دهم؟",
+      answer: "خیر، اگر شرایط اهدای خون را دارید، حتماً به مراکز انتقال خون مراجعه کنید. اهدای خون علاوه بر مزایای سلامتی برای شما، نجات‌بخش جان یک بیمار نیازمند است. حجامت یا فصد خون تنها برای افرادی است که منع اهدای خون دارند."
+    },
+    {
+      question: "آیا حجامت در منزل ایمن است؟",
+      answer: "حجامت در منزل تنها در صورتی ایمن است که با رعایت کامل اصول بهداشتی، استفاده از ابزار یکبار مصرف و توسط کادر مجرب انجام شود. نوید زندگی تمام این استانداردها را رعایت می‌کند."
+    },
+    {
+      question: "چه کسانی نباید حجامت انجام دهند؟",
+      answer: "افراد با اختلالات انعقاد خون، بیماران با سیستم ایمنی ضعیف، زنان باردار، افراد با عفونت‌های پوستی فعال و بیماران دیابتی کنترل نشده نباید حجامت انجام دهند. حتماً قبل از انجام با پزشک مشورت کنید."
+    }
+  ];
 
   const relatedArticles = [
     {
@@ -52,6 +77,15 @@ const CuppingTherapyPage = () => {
         keywords="حجامت در منزل، فصد خون در منزل، حجامت تهران، فصد خون درمانی، خدمات بهداشتی در منزل"
         canonical="https://navidzendegi.com/articles/cupping-therapy"
         ogType="article"
+        publishedTime="2025-10-20T09:00:00+03:30"
+        modifiedTime="2025-10-20T09:00:00+03:30"
+      />
+      <ArticleSchema
+        title="حجامت در منزل و فصد خون در منزل: راهنمای انتخاب آگاهانه و خدمات بهداشتی"
+        description="راهنمای کامل حجامت و فصد خون در منزل با رعایت اصول بهداشتی، تفاوت‌ها و نکات ایمنی"
+        publishedTime="2025-10-20T09:00:00+03:30"
+        modifiedTime="2025-10-20T09:00:00+03:30"
+        image="/assets/cupping-therapy-home.jpg"
       />
       <Header />
       <main className="pt-20 md:pt-24">
@@ -225,6 +259,13 @@ const CuppingTherapyPage = () => {
                 <a href="tel:09386117912">۰۹۳۸۶۱۱۷۹۱۲</a>
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-5xl">
+            <FAQSection faqs={faqs} />
           </div>
         </section>
 

@@ -5,6 +5,8 @@ import SEOHead from "@/components/SEOHead";
 import PricingInfo from "@/components/PricingInfo";
 import RelatedArticles from "@/components/RelatedArticles";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import ArticleSchema from "@/components/ArticleSchema";
+import FAQSection from "@/components/FAQSection";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
@@ -20,6 +22,29 @@ const EchoHomePage = () => {
   const handleWhatsApp = () => {
     window.open("https://wa.me/989386117912", "_blank");
   };
+
+  const faqs = [
+    {
+      question: "اکو قلب در منزل چقدر طول می‌کشد؟",
+      answer: "انجام اکو قلب در منزل معمولاً بین ۳۰ تا ۴۵ دقیقه زمان می‌برد. این زمان شامل آماده‌سازی، انجام تست و بررسی اولیه نتایج توسط متخصص است."
+    },
+    {
+      question: "آیا اکو قلب دردناک است؟",
+      answer: "خیر، اکو قلب یک روش کاملاً غیرتهاجمی و بدون درد است. در این تست تنها یک پروب روی قفسه سینه حرکت داده می‌شود که هیچ ناراحتی ایجاد نمی‌کند."
+    },
+    {
+      question: "چه کسانی به اکو قلب نیاز دارند؟",
+      answer: "اکو قلب برای افرادی که علائم بیماری قلبی مانند تنگی نفس، تپش قلب، درد قفسه سینه یا ورم پاها دارند، بیماران با سابقه حمله قلبی، افراد با فشار خون بالا و برای پایش بیماری‌های قلبی موجود توصیه می‌شود."
+    },
+    {
+      question: "آیا برای اکو قلب نیاز به آماده‌سازی خاصی هست؟",
+      answer: "خیر، برای اکو قلب معمولی نیازی به ناشتا بودن یا آماده‌سازی خاص نیست. فقط توصیه می‌شود لباسی بپوشید که دسترسی به قفسه سینه را آسان کند."
+    },
+    {
+      question: "هزینه اکو قلب در منزل چقدر است؟",
+      answer: "هزینه اکو قلب در منزل بستگی به منطقه جغرافیایی و نوع خدمات دارد. برای اطلاع از تعرفه دقیق می‌توانید با شماره ۰۹۳۸۶۱۱۷۹۱۲ تماس بگیرید."
+    }
+  ];
 
   const relatedArticles = [
     {
@@ -53,6 +78,15 @@ const EchoHomePage = () => {
         keywords="اکو قلب در منزل، اکوکاردیوگرافی در خانه، سونوگرافی قلب منزل، متخصص قلب منزل تهران، اکو قلب پرتابل"
         canonical="https://navidzendegi.ir/articles/echo-home"
         ogType="article"
+        publishedTime="2025-10-20T10:00:00+03:30"
+        modifiedTime="2025-10-20T10:00:00+03:30"
+      />
+      <ArticleSchema
+        title="اکو قلب در منزل: تشخیص دقیق و غیرتهاجمی بیماری‌های قلبی با دستگاه پرتابل"
+        description="راهنمای کامل اکو قلب در منزل، فرآیند انجام، کاربردها و مزایای این روش تشخیصی برای بیماران قلبی"
+        publishedTime="2025-10-20T10:00:00+03:30"
+        modifiedTime="2025-10-20T10:00:00+03:30"
+        image="/assets/echo-home-service.jpg"
       />
       <Header />
       <main className="pt-20 md:pt-24">
@@ -223,6 +257,13 @@ const EchoHomePage = () => {
           <section className="medical-section bg-muted/30">
             <div className="container mx-auto max-w-4xl">
               <PricingInfo />
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="medical-section">
+            <div className="container mx-auto max-w-4xl">
+              <FAQSection faqs={faqs} />
             </div>
           </section>
 
