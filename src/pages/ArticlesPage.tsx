@@ -65,12 +65,22 @@ import elderlyCareImage from "@/assets/elderly-care-home.jpg";
 import cuppingTherapyImage from "@/assets/cupping-therapy-home.jpg";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
 import adultFeverImage from "@/assets/adult-fever-article.jpg";
+import echoIndicationsImage from "@/assets/echo-indications-article.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 56,
+      title: "اندیکاسیون‌های اکو قلب: چه زمانی نیاز به اکوکاردیوگرافی دارید؟",
+      description: "راهنمای علمی جامع درباره شرایط و علائمی که انجام اکو قلب را ضروری می‌سازند، از نارسایی قلبی تا بیماری‌های دریچه‌ای",
+      image: echoIndicationsImage,
+      link: "/articles/echo-indications",
+      category: "سلامت قلب",
+      date: "1403/10/30"
+    },
     {
       id: 55,
       title: "تب در بزرگسالان: راهنمای علمی تشخیص، دلایل و رویکرد تخصصی",

@@ -92,6 +92,7 @@ const InfluenzaVaccinePage = lazy(() => import("./pages/articles/InfluenzaVaccin
 const CuppingTherapyPage = lazy(() => import("./pages/articles/CuppingTherapyPage"));
 const EchoHomePage = lazy(() => import("./pages/articles/EchoHomePage"));
 const AdultFeverPage = lazy(() => import("./pages/articles/AdultFeverPage"));
+const EchoIndicationsPage = lazy(() => import("./pages/articles/EchoIndicationsPage"));
 
 const queryClient = new QueryClient();
 
@@ -195,6 +196,7 @@ const App = () => (
            <Route path="/articles/influenza-vaccine" element={<InfluenzaVaccinePage />} />
            <Route path="/articles/cupping-therapy" element={<CuppingTherapyPage />} />
            <Route path="/articles/adult-fever" element={<AdultFeverPage />} />
+           <Route path="/articles/echo-indications" element={<EchoIndicationsPage />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
