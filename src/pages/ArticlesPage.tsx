@@ -64,12 +64,22 @@ import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
 import cuppingTherapyImage from "@/assets/cupping-therapy-home.jpg";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
+import adultFeverImage from "@/assets/adult-fever-article.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 55,
+      title: "تب در بزرگسالان: راهنمای علمی تشخیص، دلایل و رویکرد تخصصی",
+      description: "راهنمای جامع علمی تب در بزرگسالان: تعاریف دقیق، روش‌های اندازه‌گیری، علل عفونی و غیرعفونی، تب با منشأ ناشناخته و زمان مراجعه به پزشک",
+      image: adultFeverImage,
+      link: "/articles/adult-fever",
+      category: "سلامت عمومی",
+      date: "1403/10/30"
+    },
     {
       id: 54,
       title: "اکو قلب در منزل: تشخیص دقیق بیماری‌های قلبی با دستگاه پرتابل",
