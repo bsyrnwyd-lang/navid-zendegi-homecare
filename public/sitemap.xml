@@ -192,9 +192,13 @@
   </url>
   <url>
     <loc>https://navidzendegi.com/articles/children-fever</loc>
-    <lastmod>2024-01-15</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2025-10-20</lastmod>
+    <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/children-fever-article.jpg</image:loc>
+      <image:title>تب در کودکان - پروتکل‌های علمی تشخیص و مدیریت</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://navidzendegi.com/articles/migraine</loc>

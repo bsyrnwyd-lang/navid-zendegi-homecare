@@ -1,273 +1,338 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
-import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import FloatingContact from "@/components/FloatingContact";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
+import articleImage from "@/assets/children-fever-article.jpg";
+import ArticleSchema from "@/components/ArticleSchema";
 import FAQSection from "@/components/FAQSection";
-import childrenFeverImage from "@/assets/children-fever-article.jpg";
+import PricingInfo from "@/components/PricingInfo";
+import RelatedArticles from "@/components/RelatedArticles";
+import feverTrackingImage from "@/assets/fever-tracking-article.jpg";
+import adultFeverImage from "@/assets/adult-fever-article.jpg";
+import vaccinationImage from "@/assets/vaccination-article.jpg";
 
 const ChildrenFeverPage = () => {
   const breadcrumbItems = [
     { name: "خانه", url: "/" },
     { name: "مقالات", url: "/articles" },
-    { name: "تب در کودکان", url: "/articles/children-fever" }
+    { name: "تب در کودکان", url: "/articles/children-fever" },
   ];
 
-  const structuredData = {
-    breadcrumbs: breadcrumbItems,
-    article: {
-      title: "تب در کودکان | علل، درمان خانگی و ویزیت پزشک در منزل",
-      description: "راهنمای کامل مدیریت تب کودکان در خانه و زمان مراجعه به پزشک",
-      author: "نوید زندگی",
-      publishedDate: "2025-01-15",
-      image: childrenFeverImage
+  const faqs = [
+    {
+      question: "تب در کودکان از چه دمایی به بالا خطرناک است؟",
+      answer: "تب در کودکان به طور کلی به دمای مقعدی 38 درجه سانتی‌گراد یا بالاتر گفته می‌شود. در نوزادان زیر 28 روز، هر تبی اورژانس پزشکی محسوب می‌شود و نیاز به ارزیابی فوری دارد. تب بالای 40 درجه در کودکان بزرگتر نیز نیازمند مراجعه فوری به پزشک است."
     },
-    faqs: [
-      {
-        question: "تب در کودک در چه دمایی خطرناک است؟",
-        answer: "دمای بالاتر از 38.5 درجه سانتی‌گراد به‌عنوان تب شناخته می‌شود. در نوزادان زیر 3 ماه، حتی تب خفیف نیازمند ویزیت فوری پزشک است. تب بالای 40 درجه در کودکان بزرگتر نیز نیاز به مراجعه دارد."
-      },
-      {
-        question: "چطور می‌توانم تب کودکم را در خانه کاهش دهم؟",
-        answer: "استفاده از داروهای تب‌بر مثل استامینوفن یا ایبوپروفن (تحت نظر پزشک)، لباس سبک پوشاندن، مایعات کافی دادن، و کمپرس آب ولرم می‌تواند کمک کننده باشد."
-      },
-      {
-        question: "چه زمانی باید برای تب کودک به پزشک مراجعه کنم؟",
-        answer: "در نوزادان زیر 3 ماه فوراً، تب بالای 40 درجه، تب بیش از 3 روز، علائم تشنج، تنگی نفس، گیجی، یا بی‌حالی شدید نیازمند مراجعه فوری است."
-      },
-      {
-        question: "آیا می‌توانم پزشک اطفال را در منزل ویزیت کنم؟",
-        answer: "بله، با خدمات پزشکی در منزل navidezendegi.com می‌توانید پزشک اطفال را در خانه ویزیت کنید و نسخه و مشاوره دریافت کنید."
-      }
-    ],
-    howTo: {
-      name: "چگونه تب کودک را در منزل مدیریت کنیم",
-      description: "راهنمای گام‌به‌گام مراقبت از کودک تب‌دار در خانه",
-      steps: [
-        {
-          name: "اندازه‌گیری دقیق دما",
-          text: "با دماسنج دیجیتال یا زیربغلی دمای کودک را اندازه بگیرید. دمای زیر زبان دقیق‌ترین روش است."
-        },
-        {
-          name: "دادن داروی تب‌بر",
-          text: "در صورت نیاز و تحت نظر پزشک، داروی استامینوفن یا ایبوپروفن مناسب سن و وزن کودک بدهید."
-        },
-        {
-          name: "پوشیدن لباس سبک",
-          text: "کودک را با لباس‌های نازک و راحت بپوشانید و از پوشش بیش‌ازحد خودداری کنید."
-        },
-        {
-          name: "تأمین مایعات",
-          text: "به کودک مایعات کافی مثل آب، آبمیوه رقیق شده یا شیرمادر بدهید تا از کم‌آبی جلوگیری شود."
-        },
-        {
-          name: "استفاده از کمپرس",
-          text: "در صورت نیاز، با پارچه آغشته به آب ولرم روی پیشانی، گردن و مچ دست‌ها کمپرس بگذارید."
-        },
-        {
-          name: "استراحت کافی",
-          text: "به کودک اجازه دهید استراحت کافی داشته باشد و از فعالیت‌های سنگین خودداری کند."
-        }
-      ]
+    {
+      question: "دقیق‌ترین روش اندازه‌گیری تب در کودکان چیست؟",
+      answer: "اندازه‌گیری مقعدی (رکتال) استاندارد طلایی برای اندازه‌گیری دمای مرکزی بدن در کودکان، به خصوص نوزادان زیر 3 ماه است. برای کودکان بزرگتر که قادر به همکاری هستند، اندازه‌گیری دهانی نیز مناسب است. اندازه‌گیری زیر بغلی کمترین دقت را دارد."
+    },
+    {
+      question: "چه زمانی باید برای تب کودک فوراً به پزشک مراجعه کرد؟",
+      answer: "در نوزادان زیر 28 روز، هر تبی نیازمند ارزیابی فوری است. در کودکان 1-3 ماهه، تب بالای 38 درجه باید توسط پزشک بررسی شود. همچنین تب بیش از 3 روز، علائمی مانند تشنج، سفتی گردن، تنگی نفس، لتارژی شدید یا بثورات پوستی نیازمند مراجعه فوری است."
+    },
+    {
+      question: "آیا باید استامینوفن و ایبوپروفن را به صورت چرخه‌ای برای کودک استفاده کنم؟",
+      answer: "استفاده چرخه‌ای همزمان از استامینوفن و ایبوپروفن مورد بحث است و برخی سازمان‌های معتبر آن را توصیه نمی‌کنند، زیرا خطر اشتباه در دوزبندی و مسمومیت را افزایش می‌دهد. هدف اصلی درمان تب، بهبود راحتی کودک است، نه لزوماً کاهش کامل دما. همیشه با پزشک مشورت کنید."
+    },
+    {
+      question: "آیا تب بالا می‌تواند به مغز کودک آسیب برساند؟",
+      answer: "شواهد علمی نشان می‌دهد که تب زیر 41 درجه سانتی‌گراد به خودی خود باعث آسیب مغزی نمی‌شود. والدین باید از ترس مفرط از تب (Fever Phobia) دوری کنند و بر وضعیت عمومی و راحتی کودک تمرکز نمایند."
     }
-  };
+  ];
+
+  const relatedArticles = [
+    {
+      title: "تب در بزرگسالان: راهنمای علمی تشخیص و رویکرد تخصصی",
+      description: "راهنمای جامع و علمی تب در بزرگسالان با تمرکز بر تعاریف دقیق، علل و زمان مراجعه به پزشک",
+      image: adultFeverImage,
+      link: "/articles/adult-fever",
+      category: "سلامت عمومی"
+    },
+    {
+      title: "ردیابی تب و زمان مراجعه به پزشک در منزل",
+      description: "آموزش روش‌های صحیح ثبت و پیگیری تب و تشخیص زمان مناسب برای دریافت خدمات پزشکی در منزل",
+      image: feverTrackingImage,
+      link: "/articles/fever-tracking",
+      category: "مراقبت منزل"
+    },
+    {
+      title: "واکسیناسیون کودکان در منزل: برنامه زمانی و اهمیت",
+      description: "راهنمای کامل واکسیناسیون کودکان، برنامه زمانی واکسن‌ها و خدمات تزریق واکسن در منزل",
+      image: vaccinationImage,
+      link: "/articles/vaccination",
+      category: "واکسیناسیون"
+    }
+  ];
 
   return (
     <>
       <SEOHead
-        title="تب در کودکان | علل، درمان خانگی و ویزیت پزشک در منزل | نوید زندگی"
-        description="راهنمای کامل مدیریت تب کودکان در خانه، علل، درمان و زمان مراجعه به پزشک با خدمات ویزیت پزشک اطفال در منزل"
-        keywords="تب کودک، درمان تب در خانه، پزشک اطفال در منزل، تب نوزاد، داروی تب‌بر کودک، ویزیت پزشک در منزل"
+        title="تب در کودکان: پروتکل‌های علمی برای تعریف، ارزیابی و مدیریت | نوید زندگی"
+        description="راهنمای جامع علمی تب در کودکان: تعاریف دقیق بر اساس سن، روش‌های اندازه‌گیری، ملاحظات ویژه نوزادان، مدیریت تب و زمان مراجعه فوری به پزشک"
+        keywords="تب کودکان, تب نوزاد, اندازه‌گیری تب, تب‌بر کودک, استامینوفن, ایبوپروفن, ویزیت پزشک اطفال در منزل, عفونت باکتریایی"
         canonical="https://navidzendegi.com/articles/children-fever"
-        ogImage={childrenFeverImage}
+        ogImage={articleImage}
         ogType="article"
         author="نوید زندگی"
-        publishedTime="2025-01-15"
+        publishedTime="2025-01-20T12:00:00+03:30"
+        modifiedTime="2025-01-20T12:00:00+03:30"
       />
-      <StructuredData {...structuredData} />
       
+      <ArticleSchema
+        title="تب در کودکان: پروتکل‌های علمی برای تعریف، ارزیابی و مدیریت"
+        description="راهنمای جامع علمی تب در کودکان: تعاریف دقیق بر اساس سن، روش‌های اندازه‌گیری، ملاحظات ویژه نوزادان، مدیریت تب و زمان مراجعه فوری به پزشک"
+        publishedTime="2025-01-20T12:00:00+03:30"
+        modifiedTime="2025-01-20T12:00:00+03:30"
+        image={articleImage}
+        author="نوید زندگی"
+      />
+
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="pt-20 md:pt-24">
-          <div className="container mx-auto px-4">
-            <BreadcrumbNavigation items={breadcrumbItems} />
-          </div>
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-center">
-                تب در کودکان | علل، درمان خانگی و ویزیت پزشک در منزل
+        
+        <main className="container mx-auto px-4 py-8">
+          <BreadcrumbNavigation items={breadcrumbItems} />
+          
+          <article className="max-w-4xl mx-auto mt-8">
+            <header className="mb-8">
+              <h1 className="text-4xl font-bold text-foreground mb-4">
+                تب در کودکان: پروتکل‌های علمی برای تعریف، ارزیابی و مدیریت
               </h1>
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={childrenFeverImage} 
-                  alt="تب در کودکان و درمان خانگی"
-                  className="w-full h-[400px] object-cover"
-                />
+              
+              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+                <span>نویسنده: نوید زندگی</span>
+                <span>•</span>
+                <span>تاریخ انتشار: 20 دی 1403</span>
               </div>
-            </div>
-          </div>
-        </section>
+              
+              <img
+                src={articleImage}
+                alt="ارزیابی علمی تب در کودک توسط پزشک متخصص اطفال در منزل"
+                className="w-full h-auto rounded-lg shadow-lg mb-6"
+                width="1200"
+                height="800"
+              />
+            </header>
 
-        {/* Article Content */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <article className="prose prose-lg max-w-none">
-                <div className="space-y-6 text-foreground leading-relaxed text-lg">
-                  <p>
-                    تب در کودکان یکی از نگرانی‌های همیشگی والدین است و در بسیاری از مواقع نشان‌دهنده تلاش بدن برای مقابله با عفونت‌هاست. به گزارش NCBI، دمای بالاتر از ۳۸٫۵ درجه سانتی‌گراد در کودکان به‌عنوان تب شناخته می‌شود. در نوزادان زیر ۳ ماه، حتی تب خفیف هم نیازمند ویزیت فوری پزشک است.
-                  </p>
-
-                  <p>
-                    در بیشتر موارد، تب ناشی از عفونت‌های ویروسی است و طی ۲ تا ۳ روز خودبه‌خود برطرف می‌شود. با این حال، آگاهی از روش‌های مدیریت تب در منزل و زمان مراجعه به پزشک برای والدین بسیار مهم است.
-                  </p>
-
-                  <h2 className="text-2xl font-bold text-primary mt-8 mb-4">
-                    علل شایع تب در کودکان
-                  </h2>
-
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>عفونت‌های ویروسی مانند سرماخوردگی یا آنفولانزا</li>
-                    <li>عفونت‌های باکتریایی (گوش، گلو، ادراری و …)</li>
-                    <li>واکنش به واکسیناسیون</li>
-                    <li>مشکلات التهابی یا بیماری‌های دیگر</li>
-                  </ul>
-
-                  <h2 className="text-2xl font-bold text-primary mt-8 mb-4">
-                    درمان تب در کودکان در منزل
-                  </h2>
-
-                  <p>
-                    برای کاهش تب کودک در خانه می‌توانید از روش‌های زیر استفاده کنید:
-                  </p>
-
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>مصرف مایعات کافی برای جلوگیری از کم‌آبی بدن</li>
-                    <li>پوشاندن لباس سبک و راحت</li>
-                    <li>نگه‌داشتن دمای محیط در شرایط معتدل</li>
-                    <li>استفاده از داروهای ضد تب مانند استامینوفن یا ایبوپروفن (طبق سن و وزن کودک و تجویز پزشک)</li>
-                  </ul>
-
-                  <div className="bg-amber-50 border-r-4 border-amber-400 p-4 my-6">
-                    <p className="text-amber-800 font-medium">
-                      ⚠️ توجه: استفاده خودسرانه و بیش‌ازحد از دارو توصیه نمی‌شود و بهتر است تحت نظر پزشک انجام شود.
-                    </p>
-                  </div>
-
-                  <h2 className="text-2xl font-bold text-primary mt-8 mb-4">
-                    چه زمانی تب کودکان خطرناک است؟
-                  </h2>
-
-                  <p>
-                    اگر تب کودک با علائم زیر همراه باشد، مراجعه به پزشک ضروری است:
-                  </p>
-
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>تب بالاتر از ۳۹٫۵ درجه سانتی‌گراد</li>
-                    <li>ادامه تب بیش از ۳ روز</li>
-                    <li>تشنج، خواب‌آلودگی غیرطبیعی یا بی‌حالی شدید</li>
-                    <li>بی‌اشتهایی شدید یا کم‌آبی بدن</li>
-                    <li>بثورات پوستی یا تغییر رنگ لب‌ها و پوست</li>
-                  </ul>
-
-                  <h2 className="text-2xl font-bold text-primary mt-8 mb-4">
-                    ویزیت پزشک در منزل برای تب کودکان
-                  </h2>
-
-                  <p>
-                    وقتی تب کودک شدید است یا والدین نگران وضعیت او هستند، رفتن به بیمارستان یا درمانگاه ممکن است سخت و وقت‌گیر باشد. در چنین شرایطی، ویزیت پزشک کودکان در منزل بهترین انتخاب است.
-                  </p>
-
-                  <p>
-                    در نوید زندگی می‌توانید به راحتی درخواست پزشک در منزل دهید. پزشکان باتجربه ما با حضور در منزل:
-                  </p>
-
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>وضعیت کودک را بررسی می‌کنند</li>
-                    <li>علت تب را تشخیص می‌دهند</li>
-                    <li>درمان مناسب (دارویی یا غیر دارویی) را آغاز می‌کنند</li>
-                  </ul>
-
-                  <p>
-                    این خدمات باعث می‌شود بدون نیاز به مراجعه حضوری، در کوتاه‌ترین زمان بهترین مراقبت را دریافت کنید.
-                  </p>
-
-                  <h2 className="text-2xl font-bold text-primary mt-8 mb-4">
-                    جمع‌بندی
-                  </h2>
-
-                  <p>
-                    تب در کودکان معمولاً نشانه یک عفونت ساده است و اغلب با مراقبت‌های خانگی بهبود می‌یابد. اما در مواردی که تب شدید یا طولانی باشد، یا همراه با علائم هشداردهنده بروز کند، باید حتماً توسط پزشک بررسی شود.
-                  </p>
-
-                  <p>
-                    با استفاده از خدمات ویزیت پزشک در منزل نوید زندگی می‌توانید در سریع‌ترین زمان، بهترین مراقبت پزشکی را برای فرزندتان در خانه دریافت کنید.
-                  </p>
-                </div>
-              </article>
-
-              <FAQSection faqs={structuredData.faqs} />
-            </div>
-          </div>
-        </section>
-
-        {/* 24/7 Contact Section */}
-        <section className="bg-primary/5 py-8 border-t border-border">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-center justify-center gap-4 text-center">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">ویزیت پزشک در منزل ۲۴ ساعته</p>
-                    <a href="tel:+989386117912" className="text-primary font-bold hover:text-primary/80 transition-colors">
-                      ۰۹۳۸۶۱۱۷۹۱۲
+            <Card className="mb-8 border-primary/20 bg-primary/5">
+              <CardContent className="pt-6">
+                <p className="text-lg leading-relaxed text-foreground">
+                  برای <strong>ویزیت فوری پزشک اطفال در منزل</strong> و ارزیابی تخصصی کودک با <strong>تیم پزشکی نوید زندگی</strong> تماس بگیرید:
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                  <Button asChild size="lg" className="text-lg">
+                    <a href="tel:09386117912" className="flex items-center gap-2">
+                      <Phone className="w-5 h-5" />
+                      تماس فوری: 09386117912
                     </a>
-                  </div>
+                  </Button>
+                  <Button asChild variant="outline" size="lg">
+                    <Link to="/">
+                      مشاهده خدمات پزشکی
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="prose prose-lg max-w-none text-foreground">
+              <p className="text-lg leading-relaxed mb-6">
+                <strong>تب (Fever)</strong> شایع‌ترین علامت در فوریت‌های کودکان است و اغلب باعث نگرانی والدین می‌شود. از نظر فیزیولوژیکی، تب به معنای <strong>افزایش تنظیم شده نقطه تنظیم حرارتی (Set Point)</strong> بدن در هیپوتالاموس است که عمدتاً توسط سیتوکین‌های تب‌زا (Pyrogenic Cytokines) در پاسخ به عفونت یا التهاب ایجاد می‌شود.
+              </p>
+
+              <p className="text-lg leading-relaxed mb-8">
+                در کودکان، تب به طور کلی به عنوان <strong>دمای مقعدی (Rectal Temperature) ≥ 38.0°C (100.4°F)</strong> یا بالاتر تعریف می‌شود. با این حال، سن کودک در ارزیابی اهمیت تب نقشی حیاتی دارد.
+              </p>
+
+              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+                تعریف و روش‌های اندازه‌گیری دما در کودکان
+              </h2>
+              
+              <p className="text-lg leading-relaxed mb-6">
+                دقت در اندازه‌گیری دمای مرکزی بدن برای تشخیص صحیح تب در کودکان ضروری است:
+              </p>
+
+              <div className="bg-card border border-border rounded-lg overflow-hidden my-8">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-primary/10">
+                      <tr>
+                        <th className="px-6 py-4 text-right font-bold text-foreground">روش اندازه‌گیری</th>
+                        <th className="px-6 py-4 text-right font-bold text-foreground">استاندارد تب</th>
+                        <th className="px-6 py-4 text-right font-bold text-foreground">توصیه برای استفاده</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-border">
+                      <tr>
+                        <td className="px-6 py-4 font-semibold">مقعدی (Rectal)</td>
+                        <td className="px-6 py-4 text-primary font-bold">≥ 38.0°C (100.4°F)</td>
+                        <td className="px-6 py-4">استاندارد طلایی، به خصوص در نوزادان زیر 3 ماه</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 font-semibold">دهانی (Oral)</td>
+                        <td className="px-6 py-4 text-primary font-bold">≥ 38.0°C (100.4°F)</td>
+                        <td className="px-6 py-4">کودکان بزرگتر (بالای 4-5 سال) که قادر به همکاری هستند</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 font-semibold">تمپانیک/گوشی (Tympanic)</td>
+                        <td className="px-6 py-4 text-primary font-bold">≥ 38.0°C (100.4°F)</td>
+                        <td className="px-6 py-4">مناسب برای کودکان بزرگتر، دقت وابسته به تکنیک صحیح</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 font-semibold">شریان گیجگاهی (Temporal)</td>
+                        <td className="px-6 py-4 text-primary font-bold">≥ 38.0°C (100.4°F)</td>
+                        <td className="px-6 py-4">روش سریع و غیرتهاجمی، دقت متغیر</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 font-semibold">زیر بغلی (Axillary)</td>
+                        <td className="px-6 py-4 text-primary font-bold">≥ 37.2°C (99.0°F)</td>
+                        <td className="px-6 py-4">کمترین دقت، فقط برای غربالگری اولیه</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="bg-muted/30 py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-2xl mx-auto">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                فرزند شما تب دارد؟
+              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+                ملاحظات ویژه در نوزادان و کودکان خردسال
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                پزشکان کودکان نوید زندگی آماده ویزیت در منزل و ارائه بهترین مراقبت‌های پزشکی هستند
+
+              <p className="text-lg leading-relaxed mb-6">
+                مهم‌ترین تمایز در طب کودکان، سن پایین و ریسک بالاتر ابتلا به <strong>بیماری جدی باکتریایی (Serious Bacterial Infection - SBI)</strong> است.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
-                >
-                  تماس با ما
-                </a>
-                <a 
-                  href="/services/pediatrics"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg hover:bg-muted transition-colors font-medium"
-                >
-                  خدمات کودکان
-                </a>
+
+              <div className="bg-card border-2 border-primary/30 rounded-lg p-6 my-8">
+                <h3 className="text-2xl font-bold text-primary mb-4">🚨 نوزادان زیر 28 روز</h3>
+                <p className="text-lg leading-relaxed mb-4">
+                  تب در این گروه سنی <strong>اورژانس پزشکی</strong> در نظر گرفته می‌شود. حتی در صورت ظاهر شدن نوزاد در حالت عمومی خوب، پروتکل‌های بالینی توصیه می‌کنند که نوزاد باید برای ارزیابی کامل، از جمله:
+                </p>
+                <ul className="list-disc pr-6 space-y-2 mb-4">
+                  <li className="text-lg">آزمایش‌های خون</li>
+                  <li className="text-lg">آزمایش ادرار</li>
+                  <li className="text-lg">پونکسیون کمری - مایع مغزی نخاعی (LP)</li>
+                  <li className="text-lg">اغلب بستری در بیمارستان</li>
+                </ul>
+                <p className="text-lg">
+                  علت آن، <strong>سیستم ایمنی نابالغ</strong> و احتمال بالای گسترش سریع عفونت باکتریایی است.
+                </p>
+              </div>
+
+              <div className="bg-accent/50 border border-border rounded-lg p-6 my-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">⚠️ کودکان 1 تا 3 ماهه</h3>
+                <p className="text-lg leading-relaxed">
+                  رویکرد بالینی پیچیده‌تر است و به <strong>وضعیت عمومی کودک</strong>، نتایج آزمایش‌های اولیه و وجود منابع تب (مانند عفونت‌های ویروسی واضح) بستگی دارد. برخی از نوزادان کم خطر ممکن است با بستری کمتر یا نظارت دقیق‌تر مدیریت شوند.
+                </p>
+              </div>
+
+              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+                مدیریت تب (Fever Management)
+              </h2>
+
+              <div className="bg-primary/10 border-r-4 border-primary p-6 my-8 rounded">
+                <p className="text-foreground font-semibold text-lg">
+                  <strong>هدف اصلی:</strong> هدف اصلی از درمان تب، نه لزوماً کاهش کامل دما، بلکه <strong>بهبود راحتی کودک</strong> است.
+                </p>
+              </div>
+
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">
+                تب‌برها (Antipyretics)
+              </h3>
+
+              <div className="space-y-4 mb-8">
+                <div className="bg-card border border-border rounded-lg p-6">
+                  <h4 className="text-xl font-bold text-primary mb-3">استامینوفن (Acetaminophen)</h4>
+                  <p className="text-lg">
+                    داروی خط اول، با دوز دقیق محاسبه شده بر اساس وزن کودک تجویز می‌شود. این دارو برای همه سنین از جمله نوزادان مناسب است.
+                  </p>
+                </div>
+
+                <div className="bg-card border border-border rounded-lg p-6">
+                  <h4 className="text-xl font-bold text-primary mb-3">ایبوپروفن (Ibuprofen)</h4>
+                  <p className="text-lg">
+                    داروی مؤثر دیگر، که <strong>نباید در نوزادان زیر 6 ماه</strong> استفاده شود. برای کودکان بالای 6 ماه با دوز مناسب وزن تجویز می‌شود.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 p-6 my-8 rounded-lg">
+                <h4 className="text-xl font-bold text-amber-800 dark:text-amber-400 mb-3">⚠️ هشدار مهم</h4>
+                <p className="text-lg text-amber-800 dark:text-amber-300">
+                  استفاده چرخه‌ای (Alternate) از استامینوفن و ایبوپروفن به طور همزمان برای درمان تب بالا، <strong>مورد بحث بوده</strong> و برخی از سازمان‌های معتبر آن را توصیه نمی‌کنند زیرا خطر اشتباه در دوزبندی و مسمومیت را افزایش می‌دهد.
+                </p>
+              </div>
+
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">
+                اقدامات غیردارویی
+              </h3>
+
+              <ul className="list-disc pr-6 space-y-3 mb-8 text-lg">
+                <li><strong>مایعات:</strong> تشویق به مصرف مایعات برای جلوگیری از کم‌آبی ضروری است. <Link to="/articles/iv-therapy-home" className="text-primary hover:underline">سرم تراپی در منزل</Link> در موارد شدید کم‌آبی می‌تواند مفید باشد.</li>
+                <li><strong>لباس:</strong> پوشاندن لباس‌های سبک برای کمک به دفع حرارت بدن</li>
+                <li><strong>استراحت:</strong> اجازه دادن به کودک برای استراحت کافی</li>
+              </ul>
+
+              <div className="bg-card border border-border rounded-lg p-6 my-8">
+                <h3 className="text-xl font-bold text-foreground mb-4">تب‌درمانی غیرضروری (Overtreatment)</h3>
+                <p className="text-lg leading-relaxed">
+                  شواهد علمی نشان می‌دهد که <strong>تب زیر 41.0°C به خودی خود باعث آسیب مغزی نمی‌شود</strong>. بنابراین، والدین باید از ترس مفرط از تب (Fever Phobia) دوری کنند و بر وضعیت عمومی و راحتی کودک تمرکز نمایند.
+                </p>
+              </div>
+
+              <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+                توصیه‌های پزشکی در منزل (Home Medical Services)
+              </h2>
+
+              <p className="text-lg leading-relaxed mb-6">
+                در حالی که بسیاری از موارد تب ویروسی به مراقبت در منزل پاسخ می‌دهند، <Link to="/" className="text-primary hover:underline">خدمات تخصصی ویزیت پزشک اطفال در منزل</Link> و <Link to="/services/laboratory" className="text-primary hover:underline">انجام آزمایش در منزل</Link> می‌تواند در ارزیابی سریع و دقیق موارد زیر بسیار کارآمد باشد:
+              </p>
+
+              <Card className="my-8 bg-accent/50">
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-bold text-foreground mb-4">چه زمانی نیاز به ویزیت پزشک در منزل دارید؟</h3>
+                  <ul className="list-disc pr-6 space-y-2">
+                    <li className="text-lg">نوزادان زیر 3 ماه با هر نوع تب</li>
+                    <li className="text-lg">تب بالا و مداوم که به تب‌برها پاسخ نمی‌دهد</li>
+                    <li className="text-lg">علائم همراه نگران‌کننده (تنگی نفس، سفتی گردن، لتارژی)</li>
+                    <li className="text-lg">کودکانی که به دلیل تب در معرض خطر کم‌آبی هستند</li>
+                    <li className="text-lg">تب بیش از 3 روز بدون بهبودی</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">
+                منابع علمی (References)
+              </h3>
+
+              <div className="bg-card border border-border rounded-lg p-6 space-y-3 text-sm">
+                <p>[1] El-Radhi, A. S. (2018). Fever in children: an evidence-based approach. Springer.</p>
+                <p>[2] American Academy of Pediatrics (AAP). (2021). Fever and Antipyretic Use in Children. Pediatrics, 147(4), e2021051512.</p>
+                <p>[3] Craig, J. V., et al. (2002). Temperature measurement in infants and children: a review of the literature. Journal of Advanced Nursing, 37(1), 22-38.</p>
+                <p>[4] Baker, M. D., et al. (2024). Evaluation and management of fever in the neonate and young infant (less than 90 days of age). UpToDate.</p>
+                <p>[5] Sullins, A. D., et al. (2018). Acetaminophen and ibuprofen in the management of fever and mild pain in children. Journal of Pediatric Pharmacology and Therapeutics, 23(1), 1-9.</p>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-      <FloatingContact />
-    </div>
+
+            <FAQSection faqs={faqs} />
+
+            <div className="mt-12">
+              <RelatedArticles articles={relatedArticles} />
+            </div>
+
+            <div className="mt-12">
+              <PricingInfo />
+            </div>
+          </article>
+        </main>
+
+        <FloatingContact />
+        <Footer />
+      </div>
     </>
   );
 };
