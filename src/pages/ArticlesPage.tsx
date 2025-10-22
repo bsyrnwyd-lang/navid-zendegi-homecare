@@ -66,12 +66,22 @@ import cuppingTherapyImage from "@/assets/cupping-therapy-home.jpg";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
 import adultFeverImage from "@/assets/adult-fever-article.jpg";
 import echoIndicationsImage from "@/assets/echo-indications-article.jpg";
+import afStrokeImage from "@/assets/af-stroke-risk-article.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 57,
+      title: "فیبریلاسیون دهلیزی (AF) و ریسک سکته مغزی: پیشگیری با نوار قلب در منزل",
+      description: "راهنمای جامع فیبریلاسیون دهلیزی، مکانیسم سکته مغزی، تشخیص با نوار قلب در منزل و پیشگیری با داروهای ضد انعقاد",
+      image: afStrokeImage,
+      link: "/articles/af-stroke-risk",
+      category: "قلب و عروق",
+      date: "1403/10/30"
+    },
     {
       id: 56,
       title: "اندیکاسیون‌های اکو قلب: چه زمانی نیاز به اکوکاردیوگرافی دارید؟",
