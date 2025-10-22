@@ -11,7 +11,7 @@ import afStrokeImage from "@/assets/af-stroke-risk-article.jpg";
 import echoIndicationsImage from "@/assets/echo-indications-article.jpg";
 import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
 import warfarinImage from "@/assets/warfarin-medication.jpg";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -93,159 +93,178 @@ const AFStrokeRiskPage = () => {
       <div className="min-h-screen flex flex-col bg-background">
         <Header />
         
-        <main className="flex-grow">
-          <article className="container mx-auto px-4 py-8 max-w-4xl">
+        <main className="flex-grow pt-20 md:pt-24">
+          <article className="container mx-auto px-4 max-w-5xl">
             <BreadcrumbNavigation items={breadcrumbItems} />
             
-            <img 
-              src={afStrokeImage} 
-              alt="فیبریلاسیون دهلیزی و ریسک سکته مغزی" 
-              className="w-full h-64 md:h-96 object-cover rounded-lg mb-8"
-            />
-
-            <header className="mb-8">
-              <h1 className="text-4xl font-bold text-foreground mb-4">
-                فیبریلاسیون دهلیزی (AF) و ریسک سکته مغزی: کلید پیشگیری با نوار قلب در منزل و ضد انعقاد
-              </h1>
-            </header>
-
-            <Card className="mb-8 border-primary/20 bg-primary/5">
-              <CardContent className="p-6">
-                <p className="text-lg leading-relaxed text-foreground mb-4">
-                  فیبریلاسیون دهلیزی (AF)، شایع‌ترین آریتمی قلبی پایدار، نه تنها یک اختلال ریتمیک است، بلکه یک عامل خطر قوی و قابل پیشگیری برای سکته مغزی ایسکمیک به شمار می‌رود. تشخیص زودهنگام AF و شروع به موقع درمان ضد انعقاد، حیاتی‌ترین گام در نجات جان بیمار است.
-                </p>
-                <p className="text-lg leading-relaxed text-foreground mb-6">
-                  نوید زندگی با ارائه خدمات تخصصی <Link to="/services/holter" className="text-primary hover:underline">نوار قلب در منزل</Link>، <Link to="/services/cardiology" className="text-primary hover:underline">ویزیت متخصص قلب در منزل</Link> و مدیریت دقیق دارویی، به غربالگری و پایش مستمر بیماران پرخطر در محیط امن خانه کمک می‌کند.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="tel:09386117912"
-                    className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
-                  >
-                    <Phone className="w-5 h-5" />
-                    <span>تماس فوری: 09386117912</span>
-                  </a>
-                  <a 
-                    href="https://wa.me/989386117912"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    <span>واتساپ</span>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-
-            <section className="prose prose-lg max-w-none mb-8">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                مکانیسم سکته در بیماران AF: چرا تشخیص زودهنگام ضروری است؟
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                ریسک بالای سکته مغزی در AF به دلیل آمبولی کاردیوژنیک است. درک این مکانیسم، ضرورت پایش ریتم قلب را مشخص می‌کند:
-              </p>
-              
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">رکود خون در دهلیز چپ</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  در AF، حفره‌های بالایی قلب (دهلیزها) به جای انقباض مؤثر، می‌لرزند. این لرزش نامنظم منجر به رکود خون (Stasis)، به‌ویژه در زائده دهلیز چپ (LAA)، می‌شود.
-                </p>
-              </div>
-
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">تشکیل لخته و آمبولی</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  رکود خون در LAA بستر مناسبی برای تشکیل لخته‌های خونی (Thrombi) است. بیش از 90% از لخته‌های مسبب سکته مغزی در این بیماران، از همین ناحیه سرچشمه می‌گیرند.
-                </p>
-              </div>
-
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">شدت سکته</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  سکته‌های ناشی از AF معمولاً به دلیل اندازه بزرگ لخته‌ها، شدیدتر بوده و با معلولیت و مرگ و میر بالاتری همراه هستند.
-                </p>
-              </div>
-
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                به همین دلیل، هرگونه تأخیر در تشخیص AF و آغاز درمان، به معنای پذیرش ریسک بالای سکته مغزی است.
-              </p>
-
-              <h2 className="text-3xl font-bold text-foreground mb-4 mt-8">
-                ابزارهای ارزیابی ریسک و ضرورت نوار قلب در منزل
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                تشخیص AF اغلب توسط <Link to="/services/echo-ecg" className="text-primary hover:underline">نوار قلب (ECG)</Link> انجام می‌شود، اما از آنجا که این آریتمی می‌تواند بدون علامت باشد، غربالگری منظم در افراد پرخطر اهمیت دارد.
-              </p>
-
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">غربالگری فعال با نوار قلب در منزل</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  برای افراد مسن، کسانی که سابقه <Link to="/articles/high-blood-pressure" className="text-primary hover:underline">نارسایی قلبی یا فشار خون</Link> دارند، انجام نوار قلب در منزل می‌تواند به صورت دوره‌ای و در زمان مناسب بیمار انجام شود تا حملات AF متناوب (Paroxysmal) تشخیص داده شوند.
-                </p>
-              </div>
-
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">امتیازدهی CHA₂DS₂VASc</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  این ابزار بالینی ریسک سکته مغزی بیمار را بر اساس عواملی مانند سن، فشار خون بالا، دیابت و نارسایی قلبی تعیین می‌کند و مبنای شروع درمان ضد انعقاد است.
-                </p>
-              </div>
-
-              <h2 className="text-3xl font-bold text-foreground mb-4 mt-8">
-                مدیریت و پیشگیری از سکته مغزی: رویکرد نوید زندگی
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                پیشگیری در AF، در وهله اول با درمان‌های ضد انعقاد خوراکی صورت می‌گیرد.
-              </p>
-
-              <h3 className="text-2xl font-semibold text-foreground mb-3">درمان ضد انعقاد خوراکی (Oral Anticoagulation)</h3>
-              
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold text-foreground mb-2">NOACs/DOACs (نسل جدید ضد انعقادها)</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  این داروها (مانند آپیکسابان یا ریواروکسابان) به دلیل اثربخشی بالا و خطر کمتر خونریزی، خط اول درمان در اکثر بیماران پرخطر هستند.
-                </p>
-              </div>
-
-              <div className="bg-card border border-border rounded-lg p-6 mb-6">
-                <h4 className="text-lg font-semibold text-foreground mb-2">مدیریت دارو در منزل</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  شرکت نوید زندگی با اعزام <Link to="/services/nursing" className="text-primary hover:underline">پرستاران متخصص</Link>، بر پایبندی دقیق بیمار به مصرف داروهای ضد انعقاد نظارت می‌کند تا از دوز نادرست یا فراموشی دارو که می‌تواند ریسک سکته را به شدت افزایش دهد، جلوگیری شود.
-                </p>
-              </div>
-
-              <h3 className="text-2xl font-semibold text-foreground mb-3 mt-6">ویزیت و مشاوره تخصصی در منزل</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                پزشکان متخصص قلب و عروق با حضور در منزل، می‌توانند به طور جامع علائم بیمار، نتایج نوار قلب و <Link to="/services/echo-ecg" className="text-primary hover:underline">اکو قلب</Link> (در صورت نیاز به اکو قلب در منزل) را ارزیابی کرده و بهترین رژیم درمانی (دارویی یا مداخله‌ای) را با توجه به شرایط زندگی بیمار تعیین نمایند.
-              </p>
-
-              <Card className="bg-primary/10 border-primary/30 mb-8">
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">دعوت به عمل</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                    با تشخیص و درمان به موقع فیبریلاسیون دهلیزی، خطر سکته مغزی را کاهش دهید. برای هماهنگی فوری جهت دریافت خدمات تخصصی نوار قلب، ویزیت یا تزریقات ضد انعقاد در منزل، با نوید زندگی تماس بگیرید.
+            <section className="medical-section">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div>
+                  <h1 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
+                    فیبریلاسیون دهلیزی (AF) و ریسک سکته مغزی: کلید پیشگیری با نوار قلب در منزل و ضد انعقاد
+                  </h1>
+                  <p className="text-lg leading-relaxed mb-4">
+                    فیبریلاسیون دهلیزی (AF)، شایع‌ترین آریتمی قلبی پایدار، نه تنها یک اختلال ریتمیک است، بلکه یک عامل خطر قوی و قابل پیشگیری برای سکته مغزی ایسکمیک به شمار می‌رود. تشخیص زودهنگام AF و شروع به موقع درمان ضد انعقاد، حیاتی‌ترین گام در نجات جان بیمار است.
+                  </p>
+                  <p className="text-lg leading-relaxed mb-6">
+                    نوید زندگی با ارائه خدمات تخصصی <Link to="/services/holter" className="text-primary hover:underline">نوار قلب در منزل</Link>، <Link to="/services/cardiology" className="text-primary hover:underline">ویزیت متخصص قلب در منزل</Link> و مدیریت دقیق دارویی، به غربالگری و پایش مستمر بیماران پرخطر در محیط امن خانه کمک می‌کند.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
                       href="tel:09386117912"
-                      className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                      className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
                     >
                       <Phone className="w-5 h-5" />
-                      <span>09386117912</span>
+                      <span>تماس فوری: 09386117912</span>
                     </a>
-                    <Link 
-                      to="/contact"
-                      className="flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10 transition-colors"
+                    <a 
+                      href="https://wa.me/989386117912"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
                     >
-                      فرم تماس
-                    </Link>
+                      <MessageCircle className="w-5 h-5" />
+                      <span>واتساپ</span>
+                    </a>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+                <div className="relative">
+                  <img 
+                    src={afStrokeImage} 
+                    alt="فیبریلاسیون دهلیزی و ریسک سکته مغزی" 
+                    className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                  />
+                  <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
+                </div>
+              </div>
+            </section>
 
-              <h3 className="text-xl font-semibold text-foreground mb-3">منابع (References)</h3>
-              <ol className="list-decimal list-inside text-muted-foreground space-y-2 mb-8">
+            <section className="medical-section bg-muted/30">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                مکانیسم سکته در بیماران AF: چرا تشخیص زودهنگام ضروری است؟
+              </h2>
+              <p className="text-lg leading-relaxed mb-6">
+                ریسک بالای سکته مغزی در AF به دلیل آمبولی کاردیوژنیک است. درک این مکانیسم، ضرورت پایش ریتم قلب را مشخص می‌کند:
+              </p>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">رکود خون در دهلیز چپ</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    در AF، حفره‌های بالایی قلب (دهلیزها) به جای انقباض مؤثر، می‌لرزند. این لرزش نامنظم منجر به رکود خون (Stasis)، به‌ویژه در زائده دهلیز چپ (LAA)، می‌شود.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">تشکیل لخته و آمبولی</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    رکود خون در LAA بستر مناسبی برای تشکیل لخته‌های خونی (Thrombi) است. بیش از 90% از لخته‌های مسبب سکته مغزی در این بیماران، از همین ناحیه سرچشمه می‌گیرند.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">شدت سکته</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    سکته‌های ناشی از AF معمولاً به دلیل اندازه بزرگ لخته‌ها، شدیدتر بوده و با معلولیت و مرگ و میر بالاتری همراه هستند.
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-lg leading-relaxed mt-6">
+                به همین دلیل، هرگونه تأخیر در تشخیص AF و آغاز درمان، به معنای پذیرش ریسک بالای سکته مغزی است.
+              </p>
+            </section>
+
+            <section className="medical-section">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                ابزارهای ارزیابی ریسک و ضرورت نوار قلب در منزل
+              </h2>
+              <p className="text-lg leading-relaxed mb-6">
+                تشخیص AF اغلب توسط <Link to="/services/echo-ecg" className="text-primary hover:underline">نوار قلب (ECG)</Link> انجام می‌شود، اما از آنجا که این آریتمی می‌تواند بدون علامت باشد، غربالگری منظم در افراد پرخطر اهمیت دارد.
+              </p>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">غربالگری فعال با نوار قلب در منزل</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    برای افراد مسن، کسانی که سابقه <Link to="/articles/high-blood-pressure" className="text-primary hover:underline">نارسایی قلبی یا فشار خون</Link> دارند، انجام نوار قلب در منزل می‌تواند به صورت دوره‌ای و در زمان مناسب بیمار انجام شود تا حملات AF متناوب (Paroxysmal) تشخیص داده شوند.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">امتیازدهی CHA₂DS₂VASc</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    این ابزار بالینی ریسک سکته مغزی بیمار را بر اساس عواملی مانند سن، فشار خون بالا، دیابت و نارسایی قلبی تعیین می‌کند و مبنای شروع درمان ضد انعقاد است.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="medical-section bg-muted/30">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                مدیریت و پیشگیری از سکته مغزی: رویکرد نوید زندگی
+              </h2>
+              <p className="text-lg leading-relaxed mb-6">
+                پیشگیری در AF، در وهله اول با درمان‌های ضد انعقاد خوراکی صورت می‌گیرد.
+              </p>
+
+              <h3 className="text-xl font-semibold mb-4">درمان ضد انعقاد خوراکی (Oral Anticoagulation)</h3>
+              
+              <div className="space-y-6 mr-6">
+                <div className="flex items-start">
+                  <span className="ml-3 text-primary font-bold">•</span>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">NOACs/DOACs (نسل جدید ضد انعقادها)</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      این داروها (مانند آپیکسابان یا ریواروکسابان) به دلیل اثربخشی بالا و خطر کمتر خونریزی، خط اول درمان در اکثر بیماران پرخطر هستند.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <span className="ml-3 text-primary font-bold">•</span>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">مدیریت دارو در منزل</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      شرکت نوید زندگی با اعزام <Link to="/services/nursing" className="text-primary hover:underline">پرستاران متخصص</Link>، بر پایبندی دقیق بیمار به مصرف داروهای ضد انعقاد نظارت می‌کند تا از دوز نادرست یا فراموشی دارو که می‌تواند ریسک سکته را به شدت افزایش دهد، جلوگیری شود.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-semibold mt-8 mb-4">ویزیت و مشاوره تخصصی در منزل</h3>
+              <p className="text-lg leading-relaxed">
+                پزشکان متخصص قلب و عروق با حضور در منزل، می‌توانند به طور جامع علائم بیمار، نتایج نوار قلب و <Link to="/services/echo-ecg" className="text-primary hover:underline">اکو قلب</Link> (در صورت نیاز به اکو قلب در منزل) را ارزیابی کرده و بهترین رژیم درمانی (دارویی یا مداخله‌ای) را با توجه به شرایط زندگی بیمار تعیین نمایند.
+              </p>
+            </section>
+
+            <section className="medical-section bg-primary/5">
+              <div className="text-center">
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">دعوت به عمل</h2>
+                <p className="text-lg leading-relaxed mb-8">
+                  با تشخیص و درمان به موقع فیبریلاسیون دهلیزی، خطر سکته مغزی را کاهش دهید. برای هماهنگی فوری جهت دریافت خدمات تخصصی نوار قلب، ویزیت یا تزریقات ضد انعقاد در منزل، با نوید زندگی تماس بگیرید.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <a 
+                    href="tel:09386117912"
+                    className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>09386117912</span>
+                  </a>
+                  <Link 
+                    to="/contact"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10 transition-colors"
+                  >
+                    فرم تماس
+                  </Link>
+                </div>
+              </div>
+            </section>
+
+            <section className="medical-section">
+              <h3 className="text-xl font-semibold mb-4">منابع (References)</h3>
+              <ol className="list-decimal list-inside text-muted-foreground space-y-2 mr-6">
                 <li>American Heart Association (AHA). (2020). Atrial Fibrillation and Stroke.</li>
                 <li>Al-Saady, N. M., et al. (1999). Left atrial appendage: structure, function, and role in thromboembolism. Heart, 82(5), 547–554.</li>
                 <li>Kirchhof, P., et al. (2016). 2016 ESC Guidelines for the management of atrial fibrillation developed in collaboration with EACTS. European Heart Journal, 37(38), 2893–2962.</li>
@@ -254,15 +273,17 @@ const AFStrokeRiskPage = () => {
               </ol>
             </section>
 
-            <FAQSection faqs={faqs} />
+            <section className="medical-section bg-muted/30">
+              <FAQSection faqs={faqs} />
+            </section>
 
-            <div className="mt-12">
+            <section className="medical-section">
               <RelatedArticles articles={relatedArticles} />
-            </div>
+            </section>
 
-            <div className="mt-8">
+            <section className="medical-section bg-primary/5">
               <PricingInfo />
-            </div>
+            </section>
           </article>
         </main>
 
