@@ -193,12 +193,9 @@ const PricingPage = () => {
       {/* خدمات پرستاری */}
       <section className="medical-section">
         <div className="container mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">
             هزینه و تعرفه خدمات پرستاری تخصصی در منزل (تزریقات، پانسمان و...)
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-4xl">
-            تمام خدمات پرستاری توسط پرستاران مجرب با حداقل مدرک کارشناسی پرستاری و مجوز رسمی نظام پرستاری انجام می‌شود. تعرفه‌های زیر شامل هزینه خدمت پرستاری بوده و هزینه مواد مصرفی (سرم، دارو، لوازم پانسمان) به صورت جداگانه محاسبه می‌شود. برای درخواست‌های شبانه یا اورژانسی، ۲۰ تا ۳۰ درصد به تعرفه اضافه می‌گردد.
-          </p>
           
           <div className="overflow-x-auto bg-card rounded-lg shadow-sm border border-border">
             <table className="w-full text-right border-collapse">
