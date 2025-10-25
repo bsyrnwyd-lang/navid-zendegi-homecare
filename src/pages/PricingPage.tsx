@@ -173,6 +173,29 @@ const PricingPage = () => {
         </div>
       </section>
 
+      {/* کادر اطلاعات قیمت‌گذاری */}
+      <section className="medical-section bg-primary/5">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-card border-2 border-primary/20 rounded-lg p-8 shadow-lg">
+            <h2 className="text-2xl font-bold text-primary mb-6 text-center">نکات مهم در مورد تعرفه خدمات</h2>
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-foreground leading-relaxed">
+                  قیمت خدمات نهایی است و هزینه‌ای اضافه‌تر بابت ایاب ذهاب و یا مالیات و یا موارد دیگری به مبالغ اضافه نخواهد شد
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-foreground leading-relaxed">
+                  ما متعهد به ثابت بودن تمام قیمت‌ها هستیم و بر اساس تمکن مالی و یا محل سکونت شما در کل مناطق تهران افزایش قیمت نخواهیم داشت
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* خدمات پرستاری */}
       <section className="medical-section">
         <div className="container mx-auto">
