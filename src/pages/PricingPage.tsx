@@ -6,8 +6,6 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import FAQSection from "@/components/FAQSection";
-import nursingImage from "@/assets/nurse-home-visit.jpg";
-import doctorImage from "@/assets/doctor-patient-home.jpg";
 const PricingPage = () => {
   const phoneNumber = "09386117912";
   const handleCall = () => {
@@ -178,24 +176,6 @@ const PricingPage = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="relative rounded-lg overflow-hidden shadow-lg">
-              <img src={doctorImage} alt="ویزیت پزشک در منزل - خدمات پزشکی حرفه‌ای" className="w-full h-64 object-cover" />
-              
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="text-xl font-bold">ویزیت پزشک در منزل</h3>
-                <p className="text-sm">تشخیص و درمان توسط پزشکان مجرب</p>
-              </div>
-            </div>
-            <div className="relative rounded-lg overflow-hidden shadow-lg">
-              <img src={nursingImage} alt="پرستاری در منزل - مراقبت حرفه‌ای" className="w-full h-64 object-cover" />
-              
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="text-xl font-bold">پرستاری در منزل</h3>
-                <p className="text-sm">مراقبت و تزریقات با استانداردهای بالا</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
