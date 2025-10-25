@@ -322,7 +322,7 @@ const PricingPage = () => {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <AlertTriangle className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground leading-relaxed">در موارد درخواست شبانه و تایم ترافیک ۲۰٪ الی ۳۰٪ اضافه می‌شود</span>
+                    <span className="text-muted-foreground leading-relaxed">ممکن است در موارد درخواست شبانه و تایم ترافیک ۲۰٪ الی ۳۰٪ اضافه شود</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <AlertTriangle className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
