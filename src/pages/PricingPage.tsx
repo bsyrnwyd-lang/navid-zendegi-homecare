@@ -8,94 +8,121 @@ import StructuredData from "@/components/StructuredData";
 import FAQSection from "@/components/FAQSection";
 import nursingImage from "@/assets/nurse-home-visit.jpg";
 import doctorImage from "@/assets/doctor-patient-home.jpg";
-
 const PricingPage = () => {
   const phoneNumber = "09386117912";
-  
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
-
   const handleWhatsApp = () => {
     window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
   };
 
   // خدمات پرستاری در منزل
-  const nursingServices = [
-    { service: "تعبیه آنژیوکت و وصل سرم بزرگسال (بدون اقامت پرستار)", price: "500,000" },
-    { service: "هر تزریق داخل سرم (غیر از آنتی بیوتیک)", price: "100,000" },
-    { service: "هر تزریق آنتی بیوتیک داخل سرم (با نیم ساعت ماندگاری پرستار)", price: "200,000" },
-    { service: "تزریق عضلانی یک تزریق", price: "400,000" },
-    { service: "سرم تراپی کودک 5 تا 10 سال", price: "600,000" },
-    { service: "سرم تراپی کودک زیر 5 سال", price: "700,000" },
-    { service: "هر تزریق عضلانی اضافه", price: "100,000" },
-    { service: "هر نیم ساعت ماندگاری پرستار", price: "150,000" },
-    { service: "تعبیه سوند", price: "600,000" },
-    { service: "تعبیه NG (لوله گاواژ)", price: "700,000" },
-    { service: "پانسمان (قیمت پایه)", price: "500,000" },
-    { service: "کشیدن بخیه (قیمت پایه)", price: "400,000" },
-    { service: "کنترل فشار خون", price: "400,000" },
-    { service: "انما (تنقیه)", price: "800,000" },
-    { service: "درمان زخم بستر (قیمت پایه)", price: "700,000" },
-    { service: "نوار قلب", price: "700,000" }
-  ];
+  const nursingServices = [{
+    service: "تعبیه آنژیوکت و وصل سرم بزرگسال (بدون اقامت پرستار)",
+    price: "500,000"
+  }, {
+    service: "هر تزریق داخل سرم (غیر از آنتی بیوتیک)",
+    price: "100,000"
+  }, {
+    service: "هر تزریق آنتی بیوتیک داخل سرم (با نیم ساعت ماندگاری پرستار)",
+    price: "200,000"
+  }, {
+    service: "تزریق عضلانی یک تزریق",
+    price: "400,000"
+  }, {
+    service: "سرم تراپی کودک 5 تا 10 سال",
+    price: "600,000"
+  }, {
+    service: "سرم تراپی کودک زیر 5 سال",
+    price: "700,000"
+  }, {
+    service: "هر تزریق عضلانی اضافه",
+    price: "100,000"
+  }, {
+    service: "هر نیم ساعت ماندگاری پرستار",
+    price: "150,000"
+  }, {
+    service: "تعبیه سوند",
+    price: "600,000"
+  }, {
+    service: "تعبیه NG (لوله گاواژ)",
+    price: "700,000"
+  }, {
+    service: "پانسمان (قیمت پایه)",
+    price: "500,000"
+  }, {
+    service: "کشیدن بخیه (قیمت پایه)",
+    price: "400,000"
+  }, {
+    service: "کنترل فشار خون",
+    price: "400,000"
+  }, {
+    service: "انما (تنقیه)",
+    price: "800,000"
+  }, {
+    service: "درمان زخم بستر (قیمت پایه)",
+    price: "700,000"
+  }, {
+    service: "نوار قلب",
+    price: "700,000"
+  }];
 
   // ویزیت پزشک در منزل
-  const doctorServices = [
-    { service: "ویزیت پزشک عمومی", price: "980,000" },
-    { service: "ویزیت پزشک متخصص", price: "از 2,000,000" }
-  ];
+  const doctorServices = [{
+    service: "ویزیت پزشک عمومی",
+    price: "980,000"
+  }, {
+    service: "ویزیت پزشک متخصص",
+    price: "از 2,000,000"
+  }];
 
   // سایر خدمات تخصصی
-  const specialServices = [
-    { service: "فیزیوتراپی در منزل (قیمت پایه)", price: "800,000" },
-    { service: "سونوگرافی در منزل (قیمت پایه)", price: "2,700,000" },
-    { service: "رادیولوژی در منزل (قیمت پایه)", price: "2,500,000" },
-    { service: "نوار عصب و عضله در منزل", price: "3,000,000" },
-    { service: "ویزیت متخصص قلب + اکو در منزل + نوار قلب در منزل", price: "4,500,000" },
-    { service: "هولتر در منزل", price: "2,000,000" }
-  ];
-
-  const faqs = [
-    {
-      question: "چگونه می‌توانم تعرفه خدمات پزشکی در منزل را محاسبه کنم؟",
-      answer: "تعرفه خدمات بر اساس نوع خدمت (پرستاری، ویزیت پزشک، خدمات تخصصی)، زمان ارائه خدمت (روز یا شب) و موقعیت مکانی محاسبه می‌شود. در صورت درخواست اورژانسی یا شبانه، ۲۰ تا ۳۰ درصد به تعرفه اضافه می‌شود. برای محاسبه دقیق با شماره 09386117912 تماس بگیرید."
-    },
-    {
-      question: "آیا تعرفه خدمات درمانی در منزل نوید زندگی مصوب وزارت بهداشت است؟",
-      answer: "بله، تمام تعرفه‌های ما بر اساس استانداردهای وزارت بهداشت و با رعایت کامل اصول حرفه‌ای تعیین شده است. ما همچنین فاکتور رسمی برای ارائه به بیمه تکمیلی صادر می‌کنیم."
-    },
-    {
-      question: "آیا قیمت ویزیت پزشک متخصص با پزشک عمومی در منزل متفاوت است؟",
-      answer: "بله، تعرفه ویزیت پزشک عمومی ۹۸۰,۰۰۰ تومان است در حالی که تعرفه ویزیت پزشک متخصص از ۲,۰۰۰,۰۰۰ تومان شروع می‌شود و بسته به تخصص پزشک متفاوت است."
-    },
-    {
-      question: "آیا هزینه مواد مصرفی در تعرفه لحاظ شده است؟",
-      answer: "خیر، هزینه مواد مصرفی مانند سرم، داروها، لوازم پانسمان و سونداژ به صورت جداگانه محاسبه و اخذ می‌شود. قیمت‌های اعلام شده فقط شامل هزینه خدمت پرستاری یا پزشکی است."
-    },
-    {
-      question: "آیا نوید زندگی در تمام مناطق تهران خدمات ارائه می‌دهد؟",
-      answer: "بله، نوید زندگی در کلیه مناطق تهران به صورت شبانه‌روزی خدمات پزشکی و پرستاری در منزل ارائه می‌دهد. برای درخواست خدمات در مناطق دورتر، لطفاً با ما تماس بگیرید."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="تعرفه خدمات پزشکی در منزل 1404 | قیمت و هزینه پرستاری و درمانی در خانه - نوید زندگی"
-        description="تعرفه کامل و شفاف خدمات پزشکی در منزل شامل قیمت پرستاری، ویزیت پزشک عمومی و متخصص، تزریقات، سرم تراپی و خدمات تخصصی در تهران. قیمت‌های مصوب و عادلانه با صدور فاکتور رسمی."
-        keywords="تعرفه خدمات پزشکی در منزل، قیمت خدمات پرستاری در منزل، هزینه ویزیت پزشک در منزل، تعرفه تزریقات در منزل، قیمت پرستار شبانه‌روزی، هزینه‌های درمانی در خانه، قیمت سرم تراپی در منزل، تعرفه پرستاری تهران"
-        canonical="https://navidzendegi.ir/pricing"
-        ogImage="https://navidzendegi.ir/logo.jpg"
-      />
+  const specialServices = [{
+    service: "فیزیوتراپی در منزل (قیمت پایه)",
+    price: "800,000"
+  }, {
+    service: "سونوگرافی در منزل (قیمت پایه)",
+    price: "2,700,000"
+  }, {
+    service: "رادیولوژی در منزل (قیمت پایه)",
+    price: "2,500,000"
+  }, {
+    service: "نوار عصب و عضله در منزل",
+    price: "3,000,000"
+  }, {
+    service: "ویزیت متخصص قلب + اکو در منزل + نوار قلب در منزل",
+    price: "4,500,000"
+  }, {
+    service: "هولتر در منزل",
+    price: "2,000,000"
+  }];
+  const faqs = [{
+    question: "چگونه می‌توانم تعرفه خدمات پزشکی در منزل را محاسبه کنم؟",
+    answer: "تعرفه خدمات بر اساس نوع خدمت (پرستاری، ویزیت پزشک، خدمات تخصصی)، زمان ارائه خدمت (روز یا شب) و موقعیت مکانی محاسبه می‌شود. در صورت درخواست اورژانسی یا شبانه، ۲۰ تا ۳۰ درصد به تعرفه اضافه می‌شود. برای محاسبه دقیق با شماره 09386117912 تماس بگیرید."
+  }, {
+    question: "آیا تعرفه خدمات درمانی در منزل نوید زندگی مصوب وزارت بهداشت است؟",
+    answer: "بله، تمام تعرفه‌های ما بر اساس استانداردهای وزارت بهداشت و با رعایت کامل اصول حرفه‌ای تعیین شده است. ما همچنین فاکتور رسمی برای ارائه به بیمه تکمیلی صادر می‌کنیم."
+  }, {
+    question: "آیا قیمت ویزیت پزشک متخصص با پزشک عمومی در منزل متفاوت است؟",
+    answer: "بله، تعرفه ویزیت پزشک عمومی ۹۸۰,۰۰۰ تومان است در حالی که تعرفه ویزیت پزشک متخصص از ۲,۰۰۰,۰۰۰ تومان شروع می‌شود و بسته به تخصص پزشک متفاوت است."
+  }, {
+    question: "آیا هزینه مواد مصرفی در تعرفه لحاظ شده است؟",
+    answer: "خیر، هزینه مواد مصرفی مانند سرم، داروها، لوازم پانسمان و سونداژ به صورت جداگانه محاسبه و اخذ می‌شود. قیمت‌های اعلام شده فقط شامل هزینه خدمت پرستاری یا پزشکی است."
+  }, {
+    question: "آیا نوید زندگی در تمام مناطق تهران خدمات ارائه می‌دهد؟",
+    answer: "بله، نوید زندگی در کلیه مناطق تهران به صورت شبانه‌روزی خدمات پزشکی و پرستاری در منزل ارائه می‌دهد. برای درخواست خدمات در مناطق دورتر، لطفاً با ما تماس بگیرید."
+  }];
+  return <div className="min-h-screen bg-background">
+      <SEOHead title="تعرفه خدمات پزشکی در منزل 1404 | قیمت و هزینه پرستاری و درمانی در خانه - نوید زندگی" description="تعرفه کامل و شفاف خدمات پزشکی در منزل شامل قیمت پرستاری، ویزیت پزشک عمومی و متخصص، تزریقات، سرم تراپی و خدمات تخصصی در تهران. قیمت‌های مصوب و عادلانه با صدور فاکتور رسمی." keywords="تعرفه خدمات پزشکی در منزل، قیمت خدمات پرستاری در منزل، هزینه ویزیت پزشک در منزل، تعرفه تزریقات در منزل، قیمت پرستار شبانه‌روزی، هزینه‌های درمانی در خانه، قیمت سرم تراپی در منزل، تعرفه پرستاری تهران" canonical="https://navidzendegi.ir/pricing" ogImage="https://navidzendegi.ir/logo.jpg" />
       
-      <StructuredData 
-        breadcrumbs={[
-          { name: "خانه", url: "https://navidzendegi.ir" },
-          { name: "تعرفه خدمات", url: "https://navidzendegi.ir/pricing" }
-        ]}
-        faqs={faqs}
-      />
+      <StructuredData breadcrumbs={[{
+      name: "خانه",
+      url: "https://navidzendegi.ir"
+    }, {
+      name: "تعرفه خدمات",
+      url: "https://navidzendegi.ir/pricing"
+    }]} faqs={faqs} />
       
       <Header />
       
@@ -110,22 +137,12 @@ const PricingPage = () => {
               قیمت‌های شفاف و عادلانه برای خدمات پزشکی، پرستاری و تخصصی در منزل - مصوب و قابل اعتماد
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="hero"
-                size="lg"
-                onClick={handleCall}
-                className="flex items-center gap-3 text-lg px-8 py-6"
-              >
+              <Button variant="hero" size="lg" onClick={handleCall} className="flex items-center gap-3 text-lg px-8 py-6">
                 <Phone className="w-6 h-6" />
                 تماس فوری
                 <span className="ltr font-bold">{phoneNumber}</span>
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={handleWhatsApp}
-                className="flex items-center gap-3 text-lg px-8 py-6 border-2"
-              >
+              <Button variant="outline" size="lg" onClick={handleWhatsApp} className="flex items-center gap-3 text-lg px-8 py-6 border-2">
                 <MessageCircle className="w-6 h-6" />
                 واتساپ
               </Button>
@@ -163,24 +180,16 @@ const PricingPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="relative rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src={doctorImage} 
-                alt="ویزیت پزشک در منزل - خدمات پزشکی حرفه‌ای"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <img src={doctorImage} alt="ویزیت پزشک در منزل - خدمات پزشکی حرفه‌ای" className="w-full h-64 object-cover" />
+              
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="text-xl font-bold">ویزیت پزشک در منزل</h3>
                 <p className="text-sm">تشخیص و درمان توسط پزشکان مجرب</p>
               </div>
             </div>
             <div className="relative rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src={nursingImage} 
-                alt="پرستاری در منزل - مراقبت حرفه‌ای"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <img src={nursingImage} alt="پرستاری در منزل - مراقبت حرفه‌ای" className="w-full h-64 object-cover" />
+              
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="text-xl font-bold">پرستاری در منزل</h3>
                 <p className="text-sm">مراقبت و تزریقات با استانداردهای بالا</p>
@@ -206,14 +215,12 @@ const PricingPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {nursingServices.map((item, index) => (
-                  <tr key={index} className="border-b border-border hover:bg-muted/50 transition-colors">
+                {nursingServices.map((item, index) => <tr key={index} className="border-b border-border hover:bg-muted/50 transition-colors">
                     <td className="py-4 px-4 font-medium text-foreground">{item.service}</td>
                     <td className="py-4 px-4 text-primary font-bold ltr text-left">
                       {item.price}
                     </td>
-                  </tr>
-                ))}
+                  </tr>)}
               </tbody>
             </table>
           </div>
@@ -239,14 +246,12 @@ const PricingPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {doctorServices.map((item, index) => (
-                  <tr key={index} className="border-b border-border hover:bg-muted/50 transition-colors">
+                {doctorServices.map((item, index) => <tr key={index} className="border-b border-border hover:bg-muted/50 transition-colors">
                     <td className="py-4 px-4 font-medium text-foreground">{item.service}</td>
                     <td className="py-4 px-4 text-secondary font-bold ltr text-left">
                       {item.price}
                     </td>
-                  </tr>
-                ))}
+                  </tr>)}
               </tbody>
             </table>
           </div>
@@ -272,14 +277,12 @@ const PricingPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {specialServices.map((item, index) => (
-                  <tr key={index} className="border-b border-border hover:bg-muted/50 transition-colors">
+                {specialServices.map((item, index) => <tr key={index} className="border-b border-border hover:bg-muted/50 transition-colors">
                     <td className="py-4 px-4 font-medium text-foreground">{item.service}</td>
                     <td className="py-4 px-4 text-accent font-bold text-left">
                       <span className="ltr">{item.price}</span>
                     </td>
-                  </tr>
-                ))}
+                  </tr>)}
               </tbody>
             </table>
           </div>
@@ -354,22 +357,31 @@ const PricingPage = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              { title: "مدیریت تخصصی", desc: "سیستم مدیریت حرفه‌ای و پاسخگو" },
-              { title: "رویکرد علمی در پرستاری", desc: "استفاده از آخرین دستاوردهای علمی" },
-              { title: "قیمت مناسب خدمات", desc: "تعرفه‌های منصفانه و رقابتی" },
-              { title: "پرستار خصوصی در منزل", desc: "کادر مجرب و دارای مجوز رسمی" },
-              { title: "پاسخگویی شبانه‌روزی", desc: "آماده خدمت‌رسانی در تمام ساعات شبانه‌روز" },
-              { title: "پشتیبانی آنی پزشکی و پرستاری", desc: "پشتیبانی فوری در مواقع اضطراری" }
-            ].map((advantage, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
+            {[{
+            title: "مدیریت تخصصی",
+            desc: "سیستم مدیریت حرفه‌ای و پاسخگو"
+          }, {
+            title: "رویکرد علمی در پرستاری",
+            desc: "استفاده از آخرین دستاوردهای علمی"
+          }, {
+            title: "قیمت مناسب خدمات",
+            desc: "تعرفه‌های منصفانه و رقابتی"
+          }, {
+            title: "پرستار خصوصی در منزل",
+            desc: "کادر مجرب و دارای مجوز رسمی"
+          }, {
+            title: "پاسخگویی شبانه‌روزی",
+            desc: "آماده خدمت‌رسانی در تمام ساعات شبانه‌روز"
+          }, {
+            title: "پشتیبانی آنی پزشکی و پرستاری",
+            desc: "پشتیبانی فوری در مواقع اضطراری"
+          }].map((advantage, index) => <div key={index} className="text-center p-6 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                   <CheckCircle className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">{advantage.title}</h3>
                 <p className="text-sm text-muted-foreground">{advantage.desc}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -383,8 +395,6 @@ const PricingPage = () => {
 
       <Footer />
       <FloatingContact />
-    </div>
-  );
+    </div>;
 };
-
 export default PricingPage;
