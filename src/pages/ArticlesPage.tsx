@@ -68,12 +68,22 @@ import adultFeverImage from "@/assets/adult-fever-article.jpg";
 import echoIndicationsImage from "@/assets/echo-indications-article.jpg";
 import afStrokeImage from "@/assets/af-stroke-risk-article.jpg";
 import dexamethasoneImage from "@/assets/dexamethasone-injection.jpg";
+import ecgHomeImage from "@/assets/ecg-home-service.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 59,
+      title: "نوار قلب (ECG) در منزل: تشخیص فوری اختلالات قلبی با دقت تخصصی",
+      description: "راهنمای جامع نوار قلب در منزل، کاربردها، تشخیص آریتمی و سکته قلبی با دستگاه ECG استاندارد و تفسیر متخصص",
+      image: ecgHomeImage,
+      link: "/articles/ecg-home",
+      category: "قلب و عروق",
+      date: "1403/11/02"
+    },
     {
       id: 58,
       title: "دگزامتازون (Dexamethasone) و تزریق در منزل: درمان تخصصی ضد التهاب",

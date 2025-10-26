@@ -96,6 +96,7 @@ const AdultFeverPage = lazy(() => import("./pages/articles/AdultFeverPage"));
 const EchoIndicationsPage = lazy(() => import("./pages/articles/EchoIndicationsPage"));
 const AFStrokeRiskPage = lazy(() => import("./pages/articles/AFStrokeRiskPage"));
 const DexamethasonePage = lazy(() => import("./pages/articles/DexamethasonePage"));
+const ECGHomePage = lazy(() => import("./pages/articles/ECGHomePage"));
 
 const queryClient = new QueryClient();
 
@@ -203,6 +204,7 @@ const App = () => (
            <Route path="/articles/echo-indications" element={<EchoIndicationsPage />} />
            <Route path="/articles/af-stroke-risk" element={<AFStrokeRiskPage />} />
            <Route path="/articles/dexamethasone" element={<DexamethasonePage />} />
+           <Route path="/articles/ecg-home" element={<ECGHomePage />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
