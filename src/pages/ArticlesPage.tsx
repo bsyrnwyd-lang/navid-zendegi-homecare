@@ -67,12 +67,22 @@ import echoHomeImage from "@/assets/echo-home-service.jpg";
 import adultFeverImage from "@/assets/adult-fever-article.jpg";
 import echoIndicationsImage from "@/assets/echo-indications-article.jpg";
 import afStrokeImage from "@/assets/af-stroke-risk-article.jpg";
+import dexamethasoneImage from "@/assets/dexamethasone-injection.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 58,
+      title: "دگزامتازون (Dexamethasone) و تزریق در منزل: درمان تخصصی ضد التهاب",
+      description: "راهنمای جامع دگزامتازون، کاربردها، مکانیسم اثر، عوارض جانبی و تزریق ایمن در منزل توسط پرستاران مجرب",
+      image: dexamethasoneImage,
+      link: "/articles/dexamethasone",
+      category: "داروها",
+      date: "1403/11/01"
+    },
     {
       id: 57,
       title: "فیبریلاسیون دهلیزی (AF) و ریسک سکته مغزی: پیشگیری با نوار قلب در منزل",
