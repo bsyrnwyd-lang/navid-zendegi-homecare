@@ -94,9 +94,10 @@ const DexamethasonePage = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-relaxed">
               دگزامتازون (Dexamethasone) و تزریق در منزل: درمان تخصصی ضد التهاب تحت نظارت کادر مجرب
             </h1>
-            <p className="text-muted-foreground text-lg">
-              نویسنده: دکتر نیره مظاهری تهرانی - متخصص داخلی
-            </p>
+            <div className="flex flex-col gap-2 text-muted-foreground text-lg">
+              <p>نویسنده: نوید زندگی</p>
+              <p>تاریخ انتشار: ۱ بهمن ۱۴۰۳</p>
+            </div>
           </div>
 
           {/* Featured Image */}
