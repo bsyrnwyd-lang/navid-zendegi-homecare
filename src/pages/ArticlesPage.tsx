@@ -69,12 +69,22 @@ import echoIndicationsImage from "@/assets/echo-indications-article.jpg";
 import afStrokeImage from "@/assets/af-stroke-risk-article.jpg";
 import dexamethasoneImage from "@/assets/dexamethasone-injection.jpg";
 import ecgHomeImage from "@/assets/ecg-home-service.jpg";
+import asthmaImage from "@/assets/asthma-treatment.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 60,
+      title: "آسم: بیماری مزمن ریوی، علائم و درمان تخصصی",
+      description: "راهنمای جامع آسم، محرک‌های آن و مدیریت حملات با ویزیت متخصص ریه در منزل",
+      image: asthmaImage,
+      link: "/articles/asthma",
+      category: "بیماری‌های مزمن",
+      date: "1403/11/03"
+    },
     {
       id: 59,
       title: "نوار قلب (ECG) در منزل: تشخیص فوری اختلالات قلبی با دقت تخصصی",
@@ -568,15 +578,6 @@ const ArticlesPage = () => {
       image: smokingImage,
       link: "/articles/depression-heart-disease",
       category: "قلب و عروق"
-    },
-    {
-      id: 60,
-      title: "آسم: بیماری مزمن ریوی، علائم و درمان تخصصی",
-      description: "راهنمای جامع آسم، محرک‌های آن و مدیریت حملات با ویزیت متخصص ریه در منزل",
-      image: "/src/assets/asthma-treatment.jpg",
-      link: "/articles/asthma",
-      category: "بیماری‌های مزمن",
-      date: "1403/11/03"
     }
   ];
 
