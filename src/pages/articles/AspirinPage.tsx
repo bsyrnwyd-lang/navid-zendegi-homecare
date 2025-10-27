@@ -139,6 +139,35 @@ const AspirinPage = () => {
             </p>
           </div>
 
+          <div className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 p-6 my-8 rounded-lg">
+            <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+              💙 نیاز به ویزیت متخصص قلب و عروق دارید؟
+            </h3>
+            <p className="text-muted-foreground mb-4">
+              برای ارزیابی وضعیت قلبی، تنظیم دوز آسپرین، انجام نوار قلب و اکوکاردیوگرافی در منزل، متخصصین قلب و عروق نوید زندگی آماده خدمت‌رسانی به شما هستند.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link to="/cardiology">
+                <Button
+                  size="lg"
+                  className="gap-2"
+                >
+                  <Phone className="h-5 w-5" />
+                  ویزیت متخصص قلب در منزل
+                </Button>
+              </Link>
+              <Button
+                onClick={handleCall}
+                variant="outline"
+                size="lg"
+                className="gap-2"
+              >
+                <Phone className="h-5 w-5" />
+                تماس: 09386117912
+              </Button>
+            </div>
+          </div>
+
           <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">
             رژیم درمانی و ملاحظات مصرف آسپرین
           </h2>
