@@ -568,6 +568,15 @@ const ArticlesPage = () => {
       image: smokingImage,
       link: "/articles/depression-heart-disease",
       category: "قلب و عروق"
+    },
+    {
+      id: 60,
+      title: "آسم: بیماری مزمن ریوی، علائم و درمان تخصصی",
+      description: "راهنمای جامع آسم، محرک‌های آن و مدیریت حملات با ویزیت متخصص ریه در منزل",
+      image: "/src/assets/asthma-treatment.jpg",
+      link: "/articles/asthma",
+      category: "بیماری‌های مزمن",
+      date: "1403/11/03"
     }
   ];
 
