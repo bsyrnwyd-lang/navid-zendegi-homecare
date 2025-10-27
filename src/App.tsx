@@ -98,6 +98,7 @@ const AFStrokeRiskPage = lazy(() => import("./pages/articles/AFStrokeRiskPage"))
 const DexamethasonePage = lazy(() => import("./pages/articles/DexamethasonePage"));
 const ECGHomePage = lazy(() => import("./pages/articles/ECGHomePage"));
 const AsthmaPage = lazy(() => import("./pages/articles/AsthmaPage"));
+const AspirinPage = lazy(() => import("./pages/articles/AspirinPage"));
 
 const queryClient = new QueryClient();
 
@@ -207,6 +208,7 @@ const App = () => (
            <Route path="/articles/dexamethasone" element={<DexamethasonePage />} />
            <Route path="/articles/ecg-home" element={<ECGHomePage />} />
            <Route path="/articles/asthma" element={<AsthmaPage />} />
+           <Route path="/articles/aspirin" element={<AspirinPage />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

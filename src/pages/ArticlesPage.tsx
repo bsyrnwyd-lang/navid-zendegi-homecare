@@ -70,12 +70,22 @@ import afStrokeImage from "@/assets/af-stroke-risk-article.jpg";
 import dexamethasoneImage from "@/assets/dexamethasone-injection.jpg";
 import ecgHomeImage from "@/assets/ecg-home-service.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
+import aspirinImage from "@/assets/aspirin-medication.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 61,
+      title: "آسپرین (Aspirin): کاربرد حیاتی در بیماری‌های قلبی و سکته مغزی",
+      description: "راهنمای جامع آسپرین، مکانیسم اثر، کاربردهای حیاتی در بیماری‌های قلبی و سکته مغزی، عوارض جانبی و ملاحظات درمانی",
+      image: aspirinImage,
+      link: "/articles/aspirin",
+      category: "داروها",
+      date: "1403/11/03"
+    },
     {
       id: 60,
       title: "آسم: بیماری مزمن ریوی، علائم و درمان تخصصی",
