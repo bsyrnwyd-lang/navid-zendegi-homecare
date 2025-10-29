@@ -4,7 +4,7 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import PricingInfo from "@/components/PricingInfo";
 import { Phone } from "lucide-react";
-import entImage from "@/assets/iranian-doctor-home-visit.jpg";
+import entImage from "@/assets/iranian-doctor-home-visit-optimized.jpg";
 
 const ENTPage = () => {
   return (

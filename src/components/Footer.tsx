@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Heart, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/navid-zendegi-logo.jpg";
+import logo from "@/assets/navid-zendegi-logo-small.jpg";
 
 const Footer = () => {
   const phoneNumber = "09386117912";

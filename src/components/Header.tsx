@@ -4,7 +4,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Phone, MessageCircle, Menu, ChevronDown, ChevronUp, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logo from "@/assets/navid-zendegi-logo.jpg";
+import logo from "@/assets/navid-zendegi-logo-small.jpg";
 
 const Header = () => {
   const phoneNumber = "09386117912";

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Shield, Clock, Heart } from "lucide-react";
 import heroImage from "@/assets/iranian-medical-hero.jpg";
-import doctorPatientImage from "@/assets/iranian-doctor-home-visit.jpg";
+import doctorPatientImage from "@/assets/iranian-doctor-home-visit-optimized.jpg";
 
 const Hero = () => {
   const phoneNumber = "09386117912";

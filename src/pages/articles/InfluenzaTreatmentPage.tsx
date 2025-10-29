@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
-import influenzaImage from "@/assets/iranian-doctor-home-visit.jpg";
+import influenzaImage from "@/assets/iranian-doctor-home-visit-optimized.jpg";
 
 const InfluenzaTreatmentPage = () => {
   const phoneNumber = "09386117912";

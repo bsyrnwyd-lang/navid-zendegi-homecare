@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Stethoscope, Heart, FileText, UserCheck, Scan, Ear, Activity, Monitor, Baby } from "lucide-react";
-import nursingImage from "@/assets/iranian-nurse-home-care.jpg";
+import nursingImage from "@/assets/iranian-nurse-home-care-optimized.jpg";
 import holterImage from "@/assets/holter-monitoring.jpg";
 import { Link } from "react-router-dom";
 
