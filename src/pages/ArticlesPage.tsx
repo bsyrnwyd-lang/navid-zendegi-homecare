@@ -71,12 +71,22 @@ import dexamethasoneImage from "@/assets/dexamethasone-injection.jpg";
 import ecgHomeImage from "@/assets/ecg-home-service.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
+import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 63,
+      title: "رُزُواستاتین (Rosuvastatin): مدیریت کاهش چربی خون و پیشگیری از سکته",
+      description: "راهنمای جامع رُزُواستاتین، یکی از قدرتمندترین استاتین‌ها برای کاهش کلسترول و پیشگیری از حوادث قلبی عروقی",
+      image: rosuvastatinImage,
+      link: "/articles/rosuvastatin",
+      category: "داروها",
+      date: "1403/11/03"
+    },
     {
       id: 62,
       title: "آتورواستاتین (Atorvastatin): مدیریت کلسترول و پیشگیری از سکته قلبی",
