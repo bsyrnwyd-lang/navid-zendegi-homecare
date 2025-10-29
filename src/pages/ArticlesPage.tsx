@@ -73,12 +73,22 @@ import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
 import bisopropolImage from "@/assets/bisoprolol-medication.jpg";
+import osteoarthritisImage from "@/assets/osteoarthritis-treatment.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 65,
+      title: "استئوآرتریت (آرتروز): مدیریت جامع درد و فیزیوتراپی در منزل",
+      description: "راهنمای کامل درمان استئوآرتریت شامل کاهش وزن، فیزیوتراپی، ورزش و درمان دارویی",
+      image: osteoarthritisImage,
+      link: "/articles/osteoarthritis",
+      category: "مقالات",
+      date: "1403/11/03"
+    },
     {
       id: 64,
       title: "بیزوپرولول (کنکور): داروی حیاتی بتا بلاکر برای نارسایی قلبی",
