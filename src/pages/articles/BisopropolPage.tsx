@@ -4,6 +4,9 @@ import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import FAQSection from "@/components/FAQSection";
 import PricingInfo from "@/components/PricingInfo";
 import RelatedArticles from "@/components/RelatedArticles";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import bisopropolImage from "@/assets/bisoprolol-medication.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -66,6 +69,8 @@ const BisopropolPage = () => {
 
   return (
     <>
+      <Header />
+      <FloatingContact />
       <SEOHead
         title="بیزوپرولول (کنکور): کاربرد، عوارض و ویزیت متخصص قلب در منزل | نوید زندگی"
         description="بیزوپرولول داروی حیاتی بتا بلاکر برای نارسایی قلبی، آنژین صدری و آریتمی‌ها. راهنمای مصرف، عوارض، تداخلات دارویی و پایش در منزل."
@@ -245,6 +250,8 @@ const BisopropolPage = () => {
           <RelatedArticles articles={relatedArticles} />
         </div>
       </article>
+      
+      <Footer />
     </>
   );
 };

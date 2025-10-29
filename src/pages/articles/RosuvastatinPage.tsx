@@ -4,6 +4,9 @@ import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import FAQSection from "@/components/FAQSection";
 import PricingInfo from "@/components/PricingInfo";
 import RelatedArticles from "@/components/RelatedArticles";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -66,6 +69,8 @@ const RosuvastatinPage = () => {
 
   return (
     <>
+      <Header />
+      <FloatingContact />
       <SEOHead
         title="رُزُواستاتین: مدیریری کاهش چربی خون و پیشگیری از سکته قلبی | نوید زندگی"
         description="رُزُواستاتین یکی از قدرتمندترین داروهای استاتین برای کاهش کلسترول LDL و پیشگیری از حوادث قلبی عروقی. راهنمای مصرف، عوارض و پایش در منزل."
@@ -231,6 +236,8 @@ const RosuvastatinPage = () => {
           <RelatedArticles articles={relatedArticles} />
         </div>
       </article>
+      
+      <Footer />
     </>
   );
 };
