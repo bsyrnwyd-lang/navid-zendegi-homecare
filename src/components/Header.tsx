@@ -43,6 +43,7 @@ const Header = () => {
     { to: "/services/infectious", label: "ویزیت متخصص عفونی در منزل" },
     { to: "/services/gynecology", label: "ویزیت متخصص زنان در منزل" },
     { to: "/services/psychiatry", label: "ویزیت روانپزشک در منزل" },
+    { to: "/services/online-doctor", label: "ویزیت آنلاین پزشک" },
     // سایر خدمات
     { to: "/services/nursing", label: "خدمات پرستاری در منزل" },
     { to: "/services/echo-ecg", label: "اکو و نوار قلب در منزل" },
