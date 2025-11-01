@@ -91,7 +91,7 @@ const BisopropolPage = () => {
         author="دکتر نیره مظاهری تهرانی"
       />
 
-      <main className="pt-20 md:pt-24">
+      <main className="pt-20 md:pt-24 min-h-screen overflow-y-auto">
         <article className="container mx-auto px-4 py-8 max-w-4xl" dir="rtl">
         <BreadcrumbNavigation items={breadcrumbItems} />
         
