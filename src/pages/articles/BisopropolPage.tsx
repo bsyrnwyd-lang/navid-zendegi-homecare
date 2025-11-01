@@ -68,7 +68,7 @@ const BisopropolPage = () => {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <Header />
       <FloatingContact />
       <SEOHead
@@ -254,7 +254,7 @@ const BisopropolPage = () => {
       </main>
       
       <Footer />
-    </>
+    </div>
   );
 };
 

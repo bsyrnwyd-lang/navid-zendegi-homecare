@@ -68,7 +68,7 @@ const RosuvastatinPage = () => {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <Header />
       <FloatingContact />
       <SEOHead
@@ -240,7 +240,7 @@ const RosuvastatinPage = () => {
       </main>
       
       <Footer />
-    </>
+    </div>
   );
 };
 
