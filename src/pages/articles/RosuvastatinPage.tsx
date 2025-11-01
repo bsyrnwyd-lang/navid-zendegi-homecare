@@ -91,7 +91,8 @@ const RosuvastatinPage = () => {
         author="دکتر نیره مظاهری تهرانی"
       />
 
-      <article className="container mx-auto px-4 py-8 max-w-4xl" dir="rtl">
+      <main className="pt-20 md:pt-24">
+        <article className="container mx-auto px-4 py-8 max-w-4xl" dir="rtl">
         <BreadcrumbNavigation items={breadcrumbItems} />
         
         <header className="mb-8">
@@ -235,7 +236,8 @@ const RosuvastatinPage = () => {
         <div className="mt-12">
           <RelatedArticles articles={relatedArticles} />
         </div>
-      </article>
+        </article>
+      </main>
       
       <Footer />
     </>
