@@ -68,7 +68,7 @@ const OsteoarthritisPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background">
       <Header />
       <FloatingContact />
       <SEOHead
@@ -91,7 +91,7 @@ const OsteoarthritisPage = () => {
         author="دکتر نیره مظاهری تهرانی"
       />
 
-      <main className="pt-20 md:pt-24 min-h-screen overflow-y-auto">
+      <main className="pt-20 md:pt-24">
         <article className="container mx-auto px-4 py-8 max-w-4xl" dir="rtl">
         <BreadcrumbNavigation items={breadcrumbItems} />
         

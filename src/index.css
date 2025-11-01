@@ -121,6 +121,8 @@
   html {
     direction: rtl;
     font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100%;
+    overflow-y: auto;
   }
 
   body {
@@ -129,6 +131,8 @@
     font-display: swap;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    overflow-y: auto;
   }
   
   /* Performance optimizations */
