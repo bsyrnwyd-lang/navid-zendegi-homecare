@@ -74,12 +74,22 @@ import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
 import bisopropolImage from "@/assets/bisoprolol-medication.jpg";
 import osteoarthritisImage from "@/assets/osteoarthritis-treatment.jpg";
+import varicoseVeinsImage from "@/assets/varicose-veins-article.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 66,
+      title: "واریس: علائم، درمان و ویزیت متخصص عروق در منزل",
+      description: "راهنمای جامع واریس، علائم، ریسک فاکتورها، درمان‌های محافظه‌کارانه و مداخلات کم‌تهاجمی، و خدمات متخصص عروق در منزل",
+      image: varicoseVeinsImage,
+      link: "/articles/varicose-veins",
+      category: "قلب و عروق",
+      date: "1403/11/03"
+    },
     {
       id: 65,
       title: "استئوآرتریت (آرتروز): مدیریت جامع درد و فیزیوتراپی در منزل",
