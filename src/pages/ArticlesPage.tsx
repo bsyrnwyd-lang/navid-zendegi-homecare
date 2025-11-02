@@ -75,12 +75,22 @@ import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
 import bisopropolImage from "@/assets/bisoprolol-medication.jpg";
 import osteoarthritisImage from "@/assets/osteoarthritis-treatment.jpg";
 import varicoseVeinsImage from "@/assets/varicose-veins-article.jpg";
+import fluPreventionImage from "@/assets/flu-prevention-article.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 67,
+      title: "پیشگیری از آنفولانزا: واکسیناسیون، بهداشت و تقویت ایمنی",
+      description: "راهکارهای علمی پیشگیری از آنفولانزا شامل واکسیناسیون سالانه، بهداشت فردی و تقویت سیستم ایمنی",
+      image: fluPreventionImage,
+      link: "/articles/influenza-prevention",
+      category: "پیشگیری",
+      date: "1403/11/03"
+    },
     {
       id: 66,
       title: "واریس: علائم، درمان و ویزیت متخصص عروق در منزل",

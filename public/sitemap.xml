@@ -637,4 +637,14 @@
       <image:title>واریس - تشخیص و درمان در منزل</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/influenza-prevention</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/flu-prevention-article.jpg</image:loc>
+      <image:title>پیشگیری از آنفولانزا - واکسیناسیون و بهداشت</image:title>
+    </image:image>
+  </url>
 </urlset>
