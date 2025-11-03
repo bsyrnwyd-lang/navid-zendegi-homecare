@@ -76,12 +76,22 @@ import bisopropolImage from "@/assets/bisoprolol-medication.jpg";
 import osteoarthritisImage from "@/assets/osteoarthritis-treatment.jpg";
 import varicoseVeinsImage from "@/assets/varicose-veins-article.jpg";
 import fluPreventionImage from "@/assets/flu-prevention-article.jpg";
+import clopidogrelImage from "@/assets/clopidogrel-medication.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 68,
+      title: "کلوپیدوگرل (Clopidogrel) چیست و چه کاربردهایی دارد؟",
+      description: "راهنمای جامع کلوپیدوگرل، داروی ضدپلاکت برای پیشگیری از حملات قلبی و سکته، مکانیسم اثر، عوارض و تداخلات دارویی",
+      image: clopidogrelImage,
+      link: "/articles/clopidogrel",
+      category: "داروها",
+      date: "1403/11/02"
+    },
     {
       id: 67,
       title: "پیشگیری از آنفولانزا: واکسیناسیون، بهداشت و تقویت ایمنی",
