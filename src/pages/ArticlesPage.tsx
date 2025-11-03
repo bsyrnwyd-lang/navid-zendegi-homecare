@@ -77,12 +77,22 @@ import osteoarthritisImage from "@/assets/osteoarthritis-treatment.jpg";
 import varicoseVeinsImage from "@/assets/varicose-veins-article.jpg";
 import fluPreventionImage from "@/assets/flu-prevention-article.jpg";
 import clopidogrelImage from "@/assets/clopidogrel-medication.jpg";
+import yogaHeartImage from "@/assets/yoga-heart-health.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 69,
+      title: "یوگا و سلامت قلب: کاهش ریسک بیماری‌های قلبی با یوگا",
+      description: "راهنمای جامع تأثیر یوگا بر سلامت قلب، کاهش فشار خون، بهبود پروفایل چربی خون و کاهش ریسک بیماری‌های قلبی",
+      image: yogaHeartImage,
+      link: "/articles/yoga-heart-health",
+      category: "سبک زندگی",
+      date: "1403/11/02"
+    },
     {
       id: 68,
       title: "کلوپیدوگرل (Clopidogrel) چیست و چه کاربردهایی دارد؟",
