@@ -91,7 +91,7 @@ const ClopidogrelPage = () => {
         <Header />
         <FloatingContact />
 
-        <article className="container mx-auto px-4 py-8 max-w-4xl">
+        <article className="container mx-auto px-4 pt-32 pb-8 max-w-4xl">
           <h1 className="text-4xl font-bold text-foreground mb-6">
             کلوپیدوگرل (Clopidogrel)؛ داروی ضدپلاکت مهم در پیشگیری از حملات قلبی و سکته‌ها
           </h1>
