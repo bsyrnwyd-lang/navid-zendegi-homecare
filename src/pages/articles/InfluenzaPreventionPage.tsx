@@ -12,6 +12,9 @@ import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
 import { Button } from "@/components/ui/button";
 import fluPreventionImage from "@/assets/flu-prevention-article.jpg";
+import vaccinationImage from "@/assets/vaccination-article.jpg";
+import influenzaImage from "@/assets/infectious-disease.jpg";
+import adultFeverImage from "@/assets/adult-fever-article.jpg";
 
 const InfluenzaPreventionPage = () => {
   const phoneNumber = "09386117912";
@@ -53,21 +56,21 @@ const InfluenzaPreventionPage = () => {
     {
       title: "تزریق واکسن آنفولانزا در منزل",
       description: "راهنمای کامل واکسیناسیون آنفولانزا، زمان‌بندی، گروه‌های پرخطر و تزریق در منزل",
-      image: "/src/assets/vaccination-article.jpg",
+      image: vaccinationImage,
       link: "/articles/influenza-vaccine",
       category: "واکسیناسیون"
     },
     {
       title: "درمان آنفولانزا در منزل",
       description: "راهکارهای درمانی و مراقبتی برای بهبود سریع آنفولانزا در خانه",
-      image: "/src/assets/infectious-disease.jpg",
+      image: influenzaImage,
       link: "/articles/influenza-treatment",
       category: "بیماری‌های عفونی"
     },
     {
       title: "تب در بزرگسالان",
       description: "راهنمای علمی تشخیص، دلایل تب و زمان مراجعه به پزشک",
-      image: "/src/assets/adult-fever-article.jpg",
+      image: adultFeverImage,
       link: "/articles/adult-fever",
       category: "سلامت عمومی"
     }

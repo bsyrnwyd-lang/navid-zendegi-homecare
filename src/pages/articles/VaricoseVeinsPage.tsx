@@ -12,6 +12,9 @@ import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
 import { Button } from "@/components/ui/button";
 import varicoseVeinsImage from "@/assets/varicose-veins-article.jpg";
+import internalMedicineImage from "@/assets/internal-medicine.jpg";
+import physiotherapyImage from "@/assets/physiotherapy.jpg";
+import skinItchingImage from "@/assets/skin-itching-article.jpg";
 
 const VaricoseVeinsPage = () => {
   const phoneNumber = "09386117912";
@@ -53,21 +56,21 @@ const VaricoseVeinsPage = () => {
     {
       title: "ویزیت متخصص داخلی در منزل",
       description: "با خدمات ویزیت متخصص داخلی در منزل، از معاینات تخصصی و مشاوره پزشکی در آسایش خانه بهره‌مند شوید",
-      image: "/src/assets/internal-medicine.jpg",
+      image: internalMedicineImage,
       link: "/services/internal",
       category: "خدمات"
     },
     {
       title: "فیزیوتراپی در منزل",
       description: "دریافت خدمات فیزیوتراپی تخصصی در منزل برای درمان دردهای عضلانی و بهبود حرکت",
-      image: "/src/assets/physiotherapy.jpg",
+      image: physiotherapyImage,
       link: "/services/physiotherapy",
       category: "خدمات"
     },
     {
       title: "خارش پوست: علل و درمان",
       description: "بررسی علل مختلف خارش پوست و روش‌های درمانی مؤثر برای کنترل این مشکل",
-      image: "/src/assets/skin-itching-article.jpg",
+      image: skinItchingImage,
       link: "/articles/skin-itching",
       category: "مقالات"
     }

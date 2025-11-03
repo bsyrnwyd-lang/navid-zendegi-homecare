@@ -8,6 +8,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import osteoarthritisImage from "@/assets/osteoarthritis-treatment.jpg";
+import physiotherapyImage from "@/assets/physiotherapy.jpg";
+import headacheImage from "@/assets/headache-article.jpg";
+import elderlyCareImage from "@/assets/elderly-care-home.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -47,21 +50,21 @@ const OsteoarthritisPage = () => {
     {
       title: "فیزیوتراپی در منزل: توانبخشی تخصصی",
       description: "خدمات فیزیوتراپی حرفه‌ای در محیط آرام منزل",
-      image: "/src/assets/physiotherapy.jpg",
+      image: physiotherapyImage,
       link: "/services/physiotherapy",
       category: "خدمات"
     },
     {
       title: "درمان سردرد: راهنمای جامع",
       description: "انواع سردرد، علل و روش‌های درمان",
-      image: "/src/assets/headache-article.jpg",
+      image: headacheImage,
       link: "/articles/headache",
       category: "مقالات"
     },
     {
       title: "مراقبت از سالمندان در منزل",
       description: "راهنمای جامع مراقبت از سالمندان",
-      image: "/src/assets/elderly-care-home.jpg",
+      image: elderlyCareImage,
       link: "/articles/elderly-care-guide",
       category: "مقالات"
     }
