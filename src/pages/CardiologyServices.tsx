@@ -64,6 +64,36 @@ const CardiologyServices = () => {
           </div>
         </section>
 
+        {/* Info Box Section */}
+        <section className="medical-section bg-gradient-to-r from-primary/5 to-secondary/5">
+          <div className="container mx-auto max-w-5xl">
+            <div className="bg-card border-2 border-primary/20 rounded-xl p-8 shadow-lg">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-4">
+                    خدمات دست اول با بهترین کیفیت و قیمت
+                  </h2>
+                  <p className="text-lg leading-relaxed text-foreground">
+                    شرکت نوید زندگی به صورت تخصصی کلیه امور مربوط به ویزیت قلب در منزل شامل <strong>اکو، نوار قلب، ویزیت متخصص قلب و هولتر</strong> را با بهترین کیفیت و مناسب‌ترین قیمت به دلیل دست اول بودن ارائه می‌دهد.
+                  </p>
+                  <div className="mt-4">
+                    <a 
+                      href="tel:09386117912" 
+                      className="inline-flex items-center text-primary hover:underline font-semibold"
+                    >
+                      <Phone className="ml-2 h-4 w-4" />
+                      تماس فوری: 09386117912
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Who Needs Section */}
         <section className="medical-section bg-muted/30">
           <div className="container mx-auto max-w-5xl">
