@@ -79,12 +79,22 @@ import fluPreventionImage from "@/assets/flu-prevention-article.jpg";
 import clopidogrelImage from "@/assets/clopidogrel-medication.jpg";
 import yogaHeartImage from "@/assets/yoga-heart-health.jpg";
 import dashDietImage from "@/assets/dash-diet.jpg";
+import normalBPImage from "@/assets/normal-blood-pressure.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 71,
+      title: "فشار خون نرمال چیست؟ راهنمای کامل اعداد ایدئال فشار خون",
+      description: "فشار خون نرمال کمتر از 120/80 است. آشنایی با اعداد ایدئال، روش‌های اندازه‌گیری صحیح و راهکارهای حفظ فشار خون در محدوده سالم",
+      image: normalBPImage,
+      link: "/articles/normal-blood-pressure",
+      category: "قلب و عروق",
+      date: "1403/11/02"
+    },
     {
       id: 70,
       title: "رژیم DASH؛ راهی علمی برای کاهش فشار خون و تقویت سلامت قلب",
