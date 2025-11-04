@@ -248,6 +248,31 @@ const NormalBloodPressurePage = () => {
               </p>
             </section>
 
+            <section className="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-xl mt-8 border border-primary/20">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-4">نیاز به ویزیت متخصص قلب در منزل دارید؟</h3>
+                <p className="text-lg text-muted-foreground mb-6">
+                  برای بررسی دقیق فشار خون، تنظیم برنامه درمانی و پیشگیری از بیماری‌های قلبی، متخصص قلب را به منزل خود دعوت کنید
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <a 
+                    href="tel:09386117912" 
+                    className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold"
+                  >
+                    <span className="ml-2">📞</span>
+                    تماس فوری: 09386117912
+                  </a>
+                  <Link 
+                    to="/cardiology" 
+                    className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-semibold"
+                  >
+                    اطلاعات بیشتر درباره خدمات قلب و عروق
+                    <span className="mr-2">←</span>
+                  </Link>
+                </div>
+              </div>
+            </section>
+
             <section className="bg-primary/5 p-6 rounded-lg mt-8">
               <h3 className="text-2xl font-bold mb-4">منابع (References)</h3>
               <ul className="space-y-2 text-sm">
