@@ -78,12 +78,22 @@ import varicoseVeinsImage from "@/assets/varicose-veins-article.jpg";
 import fluPreventionImage from "@/assets/flu-prevention-article.jpg";
 import clopidogrelImage from "@/assets/clopidogrel-medication.jpg";
 import yogaHeartImage from "@/assets/yoga-heart-health.jpg";
+import dashDietImage from "@/assets/dash-diet.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 70,
+      title: "رژیم DASH؛ راهی علمی برای کاهش فشار خون و تقویت سلامت قلب",
+      description: "راهنمای جامع رژیم غذایی DASH برای کنترل فشار خون بالا، کاهش چربی خون و پیشگیری از بیماری‌های قلبی با برنامه غذایی علمی",
+      image: dashDietImage,
+      link: "/articles/dash-diet",
+      category: "تغذیه",
+      date: "1403/11/02"
+    },
     {
       id: 69,
       title: "یوگا و سلامت قلب: کاهش ریسک بیماری‌های قلبی با یوگا",
