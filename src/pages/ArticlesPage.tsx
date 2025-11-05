@@ -80,12 +80,22 @@ import clopidogrelImage from "@/assets/clopidogrel-medication.jpg";
 import yogaHeartImage from "@/assets/yoga-heart-health.jpg";
 import dashDietImage from "@/assets/dash-diet.jpg";
 import normalBPImage from "@/assets/normal-blood-pressure.jpg";
+import vitaminEImage from "@/assets/vitamin-e-article.jpg";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 72,
+      title: "ویتامین E؛ نقش، کاربردها و نکاتی که باید بدانیم",
+      description: "راهنمای جامع ویتامین E: عملکرد، منابع غذایی، نیاز روزانه، علائم کمبود و احتیاط‌های مصرف مکمل",
+      image: vitaminEImage,
+      link: "/articles/vitamin-e",
+      category: "تغذیه",
+      date: "1403/11/03"
+    },
     {
       id: 71,
       title: "فشار خون نرمال چیست؟ راهنمای کامل اعداد ایدئال فشار خون",
