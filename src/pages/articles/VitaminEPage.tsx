@@ -7,6 +7,9 @@ import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import vitaminEImage from "@/assets/vitamin-e-article.jpg";
+import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
+import medicalConsultationImage from "@/assets/medical-consultation-article.jpg";
+import generalDoctorImage from "@/assets/modern-general-doctor-home.jpg";
 
 const VitaminEPage = () => {
   const faqs = [
@@ -36,21 +39,21 @@ const VitaminEPage = () => {
     {
       title: "نقش ویتامین‌ها در سلامتی",
       description: "اطلاعات کامل درباره انواع ویتامین‌ها و نقش آنها در سلامت بدن",
-      image: "/placeholder.svg",
+      image: mediterraneanDietImage,
       link: "/articles/vitamins-health",
       category: "تغذیه"
     },
     {
       title: "مشاوره پزشکی در منزل",
       description: "دریافت مشاوره تخصصی پزشکی در منزل با بهترین پزشکان",
-      image: "/placeholder.svg",
+      image: medicalConsultationImage,
       link: "/articles/medical-consultation",
       category: "خدمات پزشکی"
     },
     {
       title: "ویزیت پزشک عمومی در منزل",
       description: "خدمات ویزیت پزشک عمومی در منزل به صورت شبانه‌روزی در تهران",
-      image: "/placeholder.svg",
+      image: generalDoctorImage,
       link: "/general-doctor",
       category: "خدمات پزشکی"
     }
