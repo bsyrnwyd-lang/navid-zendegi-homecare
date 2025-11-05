@@ -24,10 +24,16 @@ const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
             <Card className="h-full hover:shadow-lg transition-shadow duration-300">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img
-                  src={article.image}
+                  src={article.image && article.image.trim() !== "" ? article.image : "/placeholder.svg"}
                   alt={article.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
+                  onError={(e) => {
+                    const img = e.currentTarget as HTMLImageElement;
+                    if (img.src !== window.location.origin + "/placeholder.svg") {
+                      img.src = "/placeholder.svg";
+                    }
+                  }}
                 />
                 <div className="absolute top-3 right-3">
                   <span className="bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full">

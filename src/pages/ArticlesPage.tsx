@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
@@ -81,6 +81,7 @@ import yogaHeartImage from "@/assets/yoga-heart-health.jpg";
 import dashDietImage from "@/assets/dash-diet.jpg";
 import normalBPImage from "@/assets/normal-blood-pressure.jpg";
 import vitaminEImage from "@/assets/vitamin-e-article.jpg";
+import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -700,13 +701,22 @@ const ArticlesPage = () => {
     }
   ];
 
+  // Merge with extra articles and de-duplicate by link
+  const mergedArticles = useMemo(() => {
+    const map = new Map<string, any>();
+    [...extraArticles, ...articles].forEach((a) => {
+      if (!map.has(a.link)) map.set(a.link, a);
+    });
+    return Array.from(map.values());
+  }, []);
+
   const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان", "مغز و اعصاب", "قلب و عروق", "تغذیه", "عمومی", "بیماری‌های مزمن", "سلامت مادر و کودک"];
 
   // Calculate pagination
-  const totalPages = Math.ceil(articles.length / articlesPerPage);
+  const totalPages = Math.ceil(mergedArticles.length / articlesPerPage);
   const startIndex = (currentPage - 1) * articlesPerPage;
   const endIndex = startIndex + articlesPerPage;
-  const currentArticles = articles.slice(startIndex, endIndex);
+  const currentArticles = mergedArticles.slice(startIndex, endIndex);
 
   // Generate page numbers for pagination
   const getPageNumbers = () => {
@@ -771,9 +781,16 @@ const ArticlesPage = () => {
                   <Link to={article.link} className="block">
                     <div className="overflow-hidden rounded-t-lg">
                       <img 
-                        src={article.image} 
+                        src={article.image}
                         alt={article.title}
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        loading="lazy"
+                        onError={(e) => {
+                          const img = e.currentTarget as HTMLImageElement;
+                          if (img.src !== window.location.origin + "/placeholder.svg") {
+                            img.src = "/placeholder.svg";
+                          }
+                        }}
                       />
                     </div>
                   </Link>
