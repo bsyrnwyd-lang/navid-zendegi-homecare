@@ -1,4 +1,5 @@
 import vitaminEImage from "@/assets/vitamin-e-article.jpg";
+import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -11,6 +12,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1002,
+    title: "تأثیرات علمی ویتامین‌ها در زمان سرماخوردگی",
+    description: "بررسی کامل شواهد علمی درباره تأثیر ویتامین C، D، E و A در پیشگیری و درمان سرماخوردگی",
+    image: vitaminsColdImage,
+    link: "/articles/vitamins-cold",
+    category: "تغذیه",
+    date: "1403/11/04"
+  },
   {
     id: 1001,
     title: "ویتامین E؛ نقش، کاربردها و نکاتی که باید بدانیم",
