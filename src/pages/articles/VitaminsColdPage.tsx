@@ -302,6 +302,44 @@ const VitaminsColdPage = () => {
           </div>
         </section>
 
+        {/* منابع علمی */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              منابع علمی
+            </h2>
+            <div className="space-y-4 text-sm md:text-base">
+              <p className="leading-relaxed">
+                1. Cochrane Review: Vitamin C for preventing and treating the common cold. Cochrane Library.
+              </p>
+              <p className="leading-relaxed">
+                2. Hemilä H. Vitamin C for preventing and treating the common cold. PubMed / Systematic reviews. 2013.
+              </p>
+              <p className="leading-relaxed">
+                3. NIH — Office of Dietary Supplements. Vitamin C — Health Professional Fact Sheet. (اطلاعات در مورد دوز، عوارض، تداخلات)
+              </p>
+              <p className="leading-relaxed">
+                4. Martineau AR, et al. Vitamin D supplementation to prevent acute respiratory tract infections: systematic review and meta-analysis of individual participant data. BMJ (2017).
+              </p>
+              <p className="leading-relaxed">
+                5. Martineau AR (update) et al. Vitamin D supplementation and ARIs — later analyses & updates. PubMed (2019) / Lancet updates 2024. (مطالعات متا-آنالیز و بررسی‌های به‌روز)
+              </p>
+              <p className="leading-relaxed">
+                6. Cochrane Review: Zinc for the prevention and treatment of the common cold. (برای مرجع در مورد روی؛ مطالعه‌های مرتبط)
+              </p>
+              <p className="leading-relaxed">
+                7. Meydani SN, et al. Vitamin E and respiratory infections among the elderly. PMC / The American Journal of Clinical Nutrition (2004).
+              </p>
+              <p className="leading-relaxed">
+                8. Cheng X, et al. Oral vitamin A supplements to prevent acute upper respiratory infections. Cochrane Review / PMC (2023).
+              </p>
+              <p className="leading-relaxed">
+                9. Bucher et al. Vitamin C in the Prevention and Treatment of the Common Cold — review article. PMC (2016).
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="medical-section bg-muted/30">
           <div className="container mx-auto max-w-5xl">
