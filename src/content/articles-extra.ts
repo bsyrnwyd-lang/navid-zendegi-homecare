@@ -1,5 +1,6 @@
 import vitaminEImage from "@/assets/vitamin-e-article.jpg";
 import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
+import legSwellingImage from "@/assets/leg-swelling-article.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -12,6 +13,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1003,
+    title: "ورم پا؛ انواع، علل، تشخیص و درمان",
+    description: "راهنمای جامع ورم پا شامل انواع ادم، علل احتباس مایع، تشخیص DVT و روش‌های درمانی",
+    image: legSwellingImage,
+    link: "/articles/leg-swelling",
+    category: "عمومی",
+    date: "1403/11/05"
+  },
   {
     id: 1002,
     title: "تأثیرات علمی ویتامین‌ها در زمان سرماخوردگی",
