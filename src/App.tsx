@@ -112,6 +112,7 @@ const NormalBloodPressurePage = lazy(() => import("./pages/articles/NormalBloodP
 const VitaminEPage = lazy(() => import("./pages/articles/VitaminEPage"));
 const VitaminsColdPage = lazy(() => import("./pages/articles/VitaminsColdPage"));
 const LegSwellingPage = lazy(() => import("./pages/articles/LegSwellingPage"));
+const AbdominalPainPage = lazy(() => import("./pages/articles/AbdominalPainPage"));
 
 const queryClient = new QueryClient();
 
@@ -231,10 +232,11 @@ const App = () => (
            <Route path="/articles/clopidogrel" element={<ClopidogrelPage />} />
            <Route path="/articles/yoga-heart-health" element={<YogaHeartHealthPage />} />
            <Route path="/articles/dash-diet" element={<DASHDietPage />} />
-             <Route path="/articles/normal-blood-pressure" element={<NormalBloodPressurePage />} />
-             <Route path="/articles/vitamin-e" element={<VitaminEPage />} />
-             <Route path="/articles/vitamins-cold" element={<VitaminsColdPage />} />
-             <Route path="/articles/leg-swelling" element={<LegSwellingPage />} />
+              <Route path="/articles/normal-blood-pressure" element={<NormalBloodPressurePage />} />
+              <Route path="/articles/vitamin-e" element={<VitaminEPage />} />
+              <Route path="/articles/vitamins-cold" element={<VitaminsColdPage />} />
+              <Route path="/articles/leg-swelling" element={<LegSwellingPage />} />
+              <Route path="/articles/abdominal-pain" element={<AbdominalPainPage />} />
                
                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

@@ -1,6 +1,7 @@
 import vitaminEImage from "@/assets/vitamin-e-article.jpg";
 import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
 import legSwellingImage from "@/assets/leg-swelling-article.jpg";
+import abdominalPainImage from "@/assets/abdominal-pain-article.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -13,6 +14,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1004,
+    title: "درد شکم؛ علل، انواع، تشخیص و مدیریت",
+    description: "راهنمای کامل درد شکم: انواع درد حاد و مزمن، علل شایع، علائم هشدار و روش‌های تشخیص و درمان",
+    image: abdominalPainImage,
+    link: "/articles/abdominal-pain",
+    category: "عمومی",
+    date: "1403/11/06"
+  },
   {
     id: 1003,
     title: "ورم پا؛ انواع، علل، تشخیص و درمان",
