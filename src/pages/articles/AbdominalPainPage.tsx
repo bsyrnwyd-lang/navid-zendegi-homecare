@@ -1,4 +1,6 @@
 import SEOHead from "@/components/SEOHead";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
@@ -66,7 +68,8 @@ const AbdominalPainPage = () => {
 
   return (
     <div className="min-h-screen bg-background" dir="rtl">
-      <SEOHead 
+      <Header />
+      <SEOHead
         title="درد شکم؛ علل، انواع، تشخیص و مدیریت | راهنمای جامع"
         description="راهنمای کامل درد شکم: انواع درد حاد و مزمن، علل شایع از گاز تا آپاندیسیت، علائم هشدار و روش‌های تشخیص و درمان"
         keywords="درد شکم، Abdominal Pain، درد حاد شکم، یبوست، گاز شکم، آپاندیسیت، سنگ صفرا، IBS، ویزیت پزشک در منزل"
@@ -248,6 +251,7 @@ const AbdominalPainPage = () => {
           <PricingInfo />
         </div>
       </article>
+      <Footer />
     </div>
   );
 };
