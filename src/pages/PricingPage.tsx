@@ -95,7 +95,7 @@ const PricingPage = () => {
     service: "ویزیت آنلاین پزشک عمومی",
     price: "150,000"
   }, {
-    service: "ویزیت آنلاین متخصص",
+    service: "ویزیت آنلاین پزشک متخصص",
     price: "350,000"
   }];
   const faqs = [{
