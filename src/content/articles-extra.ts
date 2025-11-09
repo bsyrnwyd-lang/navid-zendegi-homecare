@@ -2,6 +2,7 @@ import vitaminEImage from "@/assets/vitamin-e-article.jpg";
 import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
 import legSwellingImage from "@/assets/leg-swelling-article.jpg";
 import abdominalPainImage from "@/assets/abdominal-pain-article.jpg";
+import constipationImage from "@/assets/constipation-article.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -14,6 +15,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1005,
+    title: "یبوست؛ علل، انواع، تشخیص و راهکارهای علمی",
+    description: "راهنمای کامل یبوست: انواع یبوست حاد و مزمن، علل شایع، تأثیر تغذیه و فعالیت بدنی، روش‌های تشخیص و درمان علمی",
+    image: constipationImage,
+    link: "/articles/constipation",
+    category: "عمومی",
+    date: "1403/11/07"
+  },
   {
     id: 1004,
     title: "درد شکم؛ علل، انواع، تشخیص و مدیریت",
