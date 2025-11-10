@@ -37,7 +37,7 @@ import hivAidsImage from "@/assets/hiv-aids-article.jpg";
 import diabetesImage from "@/assets/diabetes-article.jpg";
 import hyperhidrosisImage from "@/assets/hyperhidrosis-article.jpg";
 import headacheImage from "@/assets/headache-article.jpg";
-import dizzinessImage from "@/assets/dizziness-article.jpg";
+import dizzinessImage from "@/assets/dizziness-comprehensive.jpg";
 import depressionImage from "@/assets/depression-article.jpg";
 import ivTherapyImage from "@/assets/iv-therapy-home.jpg";
 import patientDemandsImage from "@/assets/patient-demands-article.jpg";
@@ -88,6 +88,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 73,
+      title: "سرگیجه؛ علل، تشخیص، درمان و نکات مهم",
+      description: "راهنمای جامع سرگیجه: تعاریف، دسته‌بندی، علل شایع، تشخیص و درمان. اطلاعات کامل درباره BPPV، سرگیجه موقعیتی و زمان مراجعه ضروری",
+      image: dizzinessImage,
+      link: "/articles/dizziness",
+      category: "عمومی",
+      date: "1403/10/30"
+    },
     {
       id: 72,
       title: "ویتامین E؛ نقش، کاربردها و نکاتی که باید بدانیم",
