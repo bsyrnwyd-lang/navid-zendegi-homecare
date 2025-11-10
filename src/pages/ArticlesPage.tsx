@@ -710,10 +710,11 @@ const ArticlesPage = () => {
     }
   ];
 
-  // Merge with extra articles and de-duplicate by link
+  // Merge with extra articles and de-duplicate by link (newest/custom first)
   const mergedArticles = useMemo(() => {
     const map = new Map<string, any>();
-    [...extraArticles, ...articles].forEach((a) => {
+    // Ensure newly added in-app articles appear first
+    [...articles, ...extraArticles].forEach((a) => {
       if (!map.has(a.link)) map.set(a.link, a);
     });
     return Array.from(map.values());
