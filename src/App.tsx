@@ -114,6 +114,7 @@ const VitaminsColdPage = lazy(() => import("./pages/articles/VitaminsColdPage"))
 const LegSwellingPage = lazy(() => import("./pages/articles/LegSwellingPage"));
 const AbdominalPainPage = lazy(() => import("./pages/articles/AbdominalPainPage"));
 const ConstipationPage = lazy(() => import("./pages/articles/ConstipationPage"));
+const PregnancyNutritionPage = lazy(() => import("./pages/articles/PregnancyNutritionPage"));
 
 const queryClient = new QueryClient();
 
@@ -233,14 +234,15 @@ const App = () => (
            <Route path="/articles/clopidogrel" element={<ClopidogrelPage />} />
            <Route path="/articles/yoga-heart-health" element={<YogaHeartHealthPage />} />
            <Route path="/articles/dash-diet" element={<DASHDietPage />} />
-              <Route path="/articles/normal-blood-pressure" element={<NormalBloodPressurePage />} />
-               <Route path="/articles/vitamin-e" element={<VitaminEPage />} />
-               <Route path="/articles/vitamins-cold" element={<VitaminsColdPage />} />
-               <Route path="/articles/leg-swelling" element={<LegSwellingPage />} />
-               <Route path="/articles/abdominal-pain" element={<AbdominalPainPage />} />
-               <Route path="/articles/constipation" element={<ConstipationPage />} />
-               
-               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+               <Route path="/articles/normal-blood-pressure" element={<NormalBloodPressurePage />} />
+                <Route path="/articles/vitamin-e" element={<VitaminEPage />} />
+                <Route path="/articles/vitamins-cold" element={<VitaminsColdPage />} />
+                <Route path="/articles/leg-swelling" element={<LegSwellingPage />} />
+                <Route path="/articles/abdominal-pain" element={<AbdominalPainPage />} />
+                <Route path="/articles/constipation" element={<ConstipationPage />} />
+                <Route path="/articles/pregnancy-nutrition" element={<PregnancyNutritionPage />} />
+                
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
          </Routes>
         </Suspense>

@@ -81,6 +81,7 @@ import yogaHeartImage from "@/assets/yoga-heart-health.jpg";
 import dashDietImage from "@/assets/dash-diet.jpg";
 import normalBPImage from "@/assets/normal-blood-pressure.jpg";
 import vitaminEImage from "@/assets/vitamin-e-article.jpg";
+import pregnancyNutritionImage from "@/assets/pregnancy-nutrition.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -88,6 +89,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 74,
+      title: "تغذیه در بارداری؛ اصول، نیازها و نکات مهم",
+      description: "راهنمای کامل تغذیه در بارداری شامل نیازهای کالری، پروتئین، ویتامین‌ها، مدیریت تهوع و نکات عملی برای سلامت مادر و جنین",
+      image: pregnancyNutritionImage,
+      link: "/articles/pregnancy-nutrition",
+      category: "تغذیه",
+      date: "1403/11/08"
+    },
     {
       id: 73,
       title: "سرگیجه؛ علل، تشخیص، درمان و نکات مهم",
