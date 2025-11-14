@@ -46,7 +46,7 @@ const CollaborationPage = () => {
                     
                     <p className="text-lg text-muted-foreground">
                       علاقه‌مندان به همکاری در زمینه ویزیت در منزل در محدوده تهران تا کرج، لطفاً از طریق واتس‌اپ به شماره 
-                      <span className="font-bold text-primary mx-2">09386117912</span>
+                      <a href="tel:09386117912" className="font-bold text-primary mx-2 hover:underline">09386117912</a>
                       پیام دهید.
                     </p>
                   </div>
