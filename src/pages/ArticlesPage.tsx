@@ -82,6 +82,7 @@ import dashDietImage from "@/assets/dash-diet.jpg";
 import normalBPImage from "@/assets/normal-blood-pressure.jpg";
 import vitaminEImage from "@/assets/vitamin-e-article.jpg";
 import pregnancyNutritionImage from "@/assets/pregnancy-nutrition.jpg";
+import aspirationPneumoniaImage from "@/assets/aspiration-pneumonia.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -89,6 +90,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 75,
+      title: "ذات‌الریه آسپیراسیونی؛ علل، تشخیص، درمان و پیشگیری",
+      description: "راهنمای جامع ذات‌الریه آسپیراسیونی: علل، عوامل خطر، علائم، تشخیص، درمان و روش‌های پیشگیری از این عفونت خطرناک ریه",
+      image: aspirationPneumoniaImage,
+      link: "/articles/aspiration-pneumonia",
+      category: "تنفسی",
+      date: "1403/11/08"
+    },
     {
       id: 74,
       title: "تغذیه در بارداری؛ اصول، نیازها و نکات مهم",
