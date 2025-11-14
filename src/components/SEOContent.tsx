@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const SEOContent = () => {
   return (
     <section className="medical-section bg-background">
@@ -26,8 +28,8 @@ const SEOContent = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-accent">پزشک متخصص در منزل تهران</h3>
               <p className="text-muted-foreground leading-relaxed">
-                <strong>پزشک متخصص در منزل تهران</strong> نوید زندگی شامل <strong>ویزیت پزشک قلب در منزل</strong>، 
-                ویزیت متخصص داخلی، اعصاب و سایر تخصص‌های پزشکی. <strong>ویزیت در منزل تهران</strong> بدون نیاز به مراجعه به مطب یا بیمارستان.
+                <strong>پزشک متخصص در منزل تهران</strong> نوید زندگی شامل <Link to="/cardiology" className="text-primary hover:underline font-semibold">ویزیت پزشک قلب در منزل</Link>، 
+                <Link to="/services/internal" className="text-primary hover:underline font-semibold">ویزیت متخصص داخلی</Link>، <Link to="/services/neurology" className="text-primary hover:underline font-semibold">اعصاب</Link> و سایر تخصص‌های پزشکی. <strong>ویزیت در منزل تهران</strong> بدون نیاز به مراجعه به مطب یا بیمارستان.
               </p>
             </div>
             
@@ -43,23 +45,36 @@ const SEOContent = () => {
           <div className="mt-12 p-6 bg-muted/50 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">خدمات تخصصی نوید زندگی در تهران</h3>
             <div className="flex flex-wrap gap-2 justify-center">
-              {[
-                "ویزیت پزشک در منزل تهران",
-                "پزشکی در منزل تهران", 
-                "پرستاری در منزل تهران",
-                "پزشک در منزل نوید زندگی",
-                "تزریقات در منزل تهران",
-                "پزشک متخصص در منزل تهران",
-                "ویزیت پزشک قلب در منزل",
-                
-                "ویزیت در منزل تهران و کرج",
-                "درماتولوژی در منزل",
-                "کاردیولوژی در منزل"
-              ].map((keyword, index) => (
-                <span key={index} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                  {keyword}
-                </span>
-              ))}
+              <Link to="/general-doctor" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                ویزیت پزشک در منزل تهران
+              </Link>
+              <Link to="/general-doctor" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                پزشکی در منزل تهران
+              </Link>
+              <Link to="/services/nursing" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                پرستاری در منزل تهران
+              </Link>
+              <Link to="/general-doctor" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                پزشک در منزل نوید زندگی
+              </Link>
+              <Link to="/services/nursing" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                تزریقات در منزل تهران
+              </Link>
+              <Link to="/services/specialist" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                پزشک متخصص در منزل تهران
+              </Link>
+              <Link to="/cardiology" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                ویزیت پزشک قلب در منزل
+              </Link>
+              <Link to="/general-doctor" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                ویزیت در منزل تهران و کرج
+              </Link>
+              <Link to="/services/specialist" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                درماتولوژی در منزل
+              </Link>
+              <Link to="/cardiology" className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors">
+                کاردیولوژی در منزل
+              </Link>
             </div>
           </div>
         </div>
