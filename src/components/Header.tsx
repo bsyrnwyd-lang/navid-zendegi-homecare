@@ -1,15 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Phone, MessageCircle, Menu, ChevronDown, ChevronUp, Instagram } from "lucide-react";
+import { Phone, MessageCircle, Menu, ChevronDown, ChevronUp, Instagram, Search } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "@/assets/navid-zendegi-logo-small.jpg";
+import { SearchDialog } from "@/components/SearchDialog";
 
 const Header = () => {
   const phoneNumber = "09386117912";
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  // کیبورد شورت‌کات برای جستجو
+  useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setSearchOpen((open) => !open);
+      }
+    };
+
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
   
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -74,6 +89,20 @@ const Header = () => {
           
           {/* Desktop Navigation - Moved to top right */}
           <div className="flex items-center gap-4">
+            {/* دکمه جستجو در دسکتاپ */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="hidden md:flex items-center gap-2 text-sm"
+              onClick={() => setSearchOpen(true)}
+            >
+              <Search className="h-4 w-4" />
+              <span>جستجو</span>
+              <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
+                <span className="text-xs">Ctrl+K</span>
+              </kbd>
+            </Button>
+
             <nav className="hidden md:flex items-center gap-6 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg border border-border/50">
                {navigationItems.map((item, index) => (
                   <Link 
@@ -121,6 +150,19 @@ const Header = () => {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-72 bg-background z-[70]">
+                  {/* دکمه جستجو در موبایل */}
+                  <Button
+                    variant="outline"
+                    className="w-full mb-4 flex items-center justify-center gap-2"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setSearchOpen(true);
+                    }}
+                  >
+                    <Search className="h-4 w-4" />
+                    <span>جستجو در سایت</span>
+                  </Button>
+
                   <div className="flex flex-col gap-4 mt-8 overflow-y-auto max-h-[calc(100vh-8rem)] pr-2">
                     {navigationItems.map((item, index) => (
                         <Link 
@@ -191,6 +233,9 @@ const Header = () => {
           
         </div>
       </div>
+
+      {/* دیالوگ جستجو */}
+      <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />
     </header>
   );
 };
