@@ -69,8 +69,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-[70]">
-      <div className="container mx-auto px-4 py-3">
+    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b-2 border-border/50 shadow-sm z-[70]">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center gap-3">
           {/* Logo and Title */}
           <div className="flex items-center gap-3 flex-shrink-0">
