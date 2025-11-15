@@ -83,6 +83,7 @@ import normalBPImage from "@/assets/normal-blood-pressure.jpg";
 import vitaminEImage from "@/assets/vitamin-e-article.jpg";
 import pregnancyNutritionImage from "@/assets/pregnancy-nutrition.jpg";
 import aspirationPneumoniaImage from "@/assets/aspiration-pneumonia.jpg";
+import citalopramImage from "@/assets/citalopram-medication.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -90,6 +91,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 76,
+      title: "سیتالوپرام (Citalopram): مدیریت تخصصی افسردگی و اختلالات اضطراب",
+      description: "راهنمای جامع سیتالوپرام: مکانیسم اثر، کاربردهای درمانی در افسردگی و اضطراب، عوارض جانبی و اهمیت ویزیت آنلاین روانپزشک",
+      image: citalopramImage,
+      link: "/articles/citalopram",
+      category: "روانپزشکی",
+      date: "1403/11/10"
+    },
     {
       id: 75,
       title: "ذات‌الریه آسپیراسیونی؛ علل، تشخیص، درمان و پیشگیری",

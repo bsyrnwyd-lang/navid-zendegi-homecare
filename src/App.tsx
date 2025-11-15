@@ -116,6 +116,7 @@ const AbdominalPainPage = lazy(() => import("./pages/articles/AbdominalPainPage"
 const ConstipationPage = lazy(() => import("./pages/articles/ConstipationPage"));
 const PregnancyNutritionPage = lazy(() => import("./pages/articles/PregnancyNutritionPage"));
 const AspirationPneumoniaPage = lazy(() => import("./pages/articles/AspirationPneumoniaPage"));
+const CitalopramPage = lazy(() => import("./pages/articles/CitalopramPage"));
 
 const queryClient = new QueryClient();
 
@@ -240,9 +241,10 @@ const App = () => (
                 <Route path="/articles/vitamins-cold" element={<VitaminsColdPage />} />
                 <Route path="/articles/leg-swelling" element={<LegSwellingPage />} />
                 <Route path="/articles/abdominal-pain" element={<AbdominalPainPage />} />
-                <Route path="/articles/constipation" element={<ConstipationPage />} />
-                <Route path="/articles/pregnancy-nutrition" element={<PregnancyNutritionPage />} />
-                <Route path="/articles/aspiration-pneumonia" element={<AspirationPneumoniaPage />} />
+                 <Route path="/articles/constipation" element={<ConstipationPage />} />
+                 <Route path="/articles/pregnancy-nutrition" element={<PregnancyNutritionPage />} />
+                 <Route path="/articles/aspiration-pneumonia" element={<AspirationPneumoniaPage />} />
+                 <Route path="/articles/citalopram" element={<CitalopramPage />} />
                 
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
