@@ -23,7 +23,7 @@ const Index = () => {
       />
       <OrganizationSchema />
       <Header />
-      <main className="pt-20 md:pt-24">
+      <main className="pt-16 md:pt-20">
         <Hero />
         <PricingInfo />
         <Services />
