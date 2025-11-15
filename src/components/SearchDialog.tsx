@@ -115,6 +115,14 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
     setQuery("");
   };
 
+  // Handle Enter key for first result
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && results.length > 0) {
+      e.preventDefault();
+      handleSelect(results[0].url);
+    }
+  };
+
   useEffect(() => {
     if (!open) {
       setQuery("");
@@ -140,6 +148,7 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
         placeholder="جستجو در خدمات، مقالات و صفحات..." 
         value={query}
         onValueChange={setQuery}
+        onKeyDown={handleKeyDown}
       />
       <CommandList>
         <CommandEmpty>

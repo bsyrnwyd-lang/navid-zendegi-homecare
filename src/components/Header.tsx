@@ -89,20 +89,6 @@ const Header = () => {
           
           {/* Desktop Navigation - Moved to top right */}
           <div className="flex items-center gap-4">
-            {/* دکمه جستجو در دسکتاپ */}
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden md:flex items-center gap-2 text-sm"
-              onClick={() => setSearchOpen(true)}
-            >
-              <Search className="h-4 w-4" />
-              <span>جستجو</span>
-              <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-                <span className="text-xs">Ctrl+K</span>
-              </kbd>
-            </Button>
-
             <nav className="hidden md:flex items-center gap-6 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg border border-border/50">
                {navigationItems.map((item, index) => (
                   <Link 
@@ -139,6 +125,20 @@ const Header = () => {
                 مقالات
               </Link>
             </nav>
+
+            {/* دکمه جستجو در دسکتاپ */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="hidden md:flex items-center gap-2"
+              onClick={() => setSearchOpen(true)}
+            >
+              <Search className="h-4 w-4" />
+              <span className="hidden lg:inline">جستجو</span>
+              <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 lg:flex">
+                <span className="text-xs">Ctrl+K</span>
+              </kbd>
+            </Button>
 
             {/* Mobile Navigation Button */}
             <div className="md:hidden">
