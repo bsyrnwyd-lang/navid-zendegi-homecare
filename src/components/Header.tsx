@@ -90,17 +90,6 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <div className="flex items-center gap-2">
-            {/* دکمه جستجو */}
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden md:flex items-center gap-2"
-              onClick={() => setSearchOpen(true)}
-            >
-              <Search className="h-4 w-4" />
-              <span className="hidden lg:inline">جستجو</span>
-            </Button>
-
             <nav className="hidden md:flex items-center gap-1">
                {navigationItems.map((item, index) => (
                   <Link 
@@ -137,6 +126,17 @@ const Header = () => {
                 مقالات
               </Link>
             </nav>
+
+            {/* دکمه جستجو */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="hidden md:flex items-center gap-2"
+              onClick={() => setSearchOpen(true)}
+            >
+              <Search className="h-4 w-4" />
+              <span className="hidden lg:inline">جستجو</span>
+            </Button>
 
             {/* Mobile Navigation Button */}
             <div className="md:hidden">
