@@ -70,31 +70,43 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-[70]">
-      <div className="container mx-auto px-4 py-2">
-        <div className="flex justify-between items-center gap-4">
-          <div className="flex items-center gap-2 flex-shrink-0">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex justify-between items-center gap-3">
+          {/* Logo and Title */}
+          <div className="flex items-center gap-3 flex-shrink-0">
             <img 
               src={logo} 
               alt="نوید زندگی" 
-              className="w-9 h-9 rounded-lg object-contain"
-              width="36"
-              height="36"
+              className="w-10 h-10 rounded-lg object-contain"
+              width="40"
+              height="40"
               decoding="async"
             />
-            <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-foreground leading-tight">نوید زندگی</h1>
-              <p className="text-xs text-muted-foreground">خدمات پزشکی در منزل</p>
+            <div>
+              <h1 className="text-xl font-bold text-foreground">نوید زندگی</h1>
+              <p className="text-sm text-muted-foreground hidden sm:block">خدمات پزشکی در منزل</p>
             </div>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="flex items-center gap-2 flex-1 justify-end">
-            <nav className="hidden lg:flex items-center gap-3 bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-border/50">
-               {navigationItems.slice(0, 3).map((item, index) => (
+          <div className="flex items-center gap-2">
+            {/* دکمه جستجو */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="hidden md:flex items-center gap-2"
+              onClick={() => setSearchOpen(true)}
+            >
+              <Search className="h-4 w-4" />
+              <span className="hidden lg:inline">جستجو</span>
+            </Button>
+
+            <nav className="hidden md:flex items-center gap-1">
+               {navigationItems.map((item, index) => (
                   <Link 
                     key={index}
                     to={item.to} 
-                    className="text-xs font-medium hover:text-primary transition-colors px-1.5 py-1 rounded hover:bg-muted/50 whitespace-nowrap"
+                    className="text-sm font-medium hover:text-primary transition-colors px-2.5 py-1.5 rounded hover:bg-muted/50 whitespace-nowrap"
                   >
                     {item.label}
                   </Link>
@@ -102,7 +114,7 @@ const Header = () => {
               
               {/* Services Dropdown */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-xs font-medium hover:text-primary transition-colors px-1.5 py-1 rounded hover:bg-muted/50 whitespace-nowrap">
+                <DropdownMenuTrigger className="flex items-center text-sm font-medium hover:text-primary transition-colors px-2.5 py-1.5 rounded hover:bg-muted/50">
                   خدمات
                   <ChevronDown className="mr-1 h-3 w-3" />
                 </DropdownMenuTrigger>
@@ -120,22 +132,11 @@ const Header = () => {
               {/* Articles Link */}
               <Link 
                 to="/articles"
-                className="text-xs font-medium hover:text-primary transition-colors px-1.5 py-1 rounded hover:bg-muted/50 whitespace-nowrap"
+                className="text-sm font-medium hover:text-primary transition-colors px-2.5 py-1.5 rounded hover:bg-muted/50"
               >
                 مقالات
               </Link>
             </nav>
-
-            {/* دکمه جستجو در دسکتاپ */}
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden md:flex items-center gap-1.5 px-2.5 py-1 h-8"
-              onClick={() => setSearchOpen(true)}
-            >
-              <Search className="h-3.5 w-3.5" />
-              <span className="hidden xl:inline text-xs">جستجو</span>
-            </Button>
 
             {/* Mobile Navigation Button */}
             <div className="md:hidden">
