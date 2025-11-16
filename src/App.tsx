@@ -35,6 +35,7 @@ const LaboratoryPage = lazy(() => import("./pages/services/LaboratoryPage"));
 const GynecologyPage = lazy(() => import("./pages/services/GynecologyPage"));
 const PsychiatryPage = lazy(() => import("./pages/services/PsychiatryPage"));
 const OnlineDoctorPage = lazy(() => import("./pages/services/OnlineDoctorPage"));
+const MedicalEquipmentRentalPage = lazy(() => import("./pages/services/MedicalEquipmentRentalPage"));
 
 // Article pages - lazy loaded
 const InfluenzaTreatmentPage = lazy(() => import("./pages/articles/InfluenzaTreatmentPage"));
@@ -163,6 +164,7 @@ const App = () => (
           <Route path="/services/gynecology" element={<GynecologyPage />} />
           <Route path="/services/psychiatry" element={<PsychiatryPage />} />
           <Route path="/services/online-doctor" element={<OnlineDoctorPage />} />
+          <Route path="/services/medical-equipment-rental" element={<MedicalEquipmentRentalPage />} />
           
           {/* Article Pages */}
           <Route path="/articles/influenza-treatment" element={<InfluenzaTreatmentPage />} />
