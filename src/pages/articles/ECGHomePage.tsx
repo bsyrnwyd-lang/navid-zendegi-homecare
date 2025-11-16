@@ -1,4 +1,4 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle, MapPin, CheckCircle2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
@@ -7,6 +7,8 @@ import SEOHead from "@/components/SEOHead";
 import PricingInfo from "@/components/PricingInfo";
 import RelatedArticles from "@/components/RelatedArticles";
 import FAQSection from "@/components/FAQSection";
+import MedicalBusinessSchema from "@/components/MedicalBusinessSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 import ecgHomeImage from "@/assets/ecg-home-service.jpg";
 import cardiologyImage from "@/assets/cardiology-home-visit.jpg";
 import afStrokeImage from "@/assets/af-stroke-risk-article.jpg";
@@ -75,14 +77,23 @@ const ECGHomePage = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEOHead
-        title="نوار قلب در منزل تهران | ECG/EKG فوری و تخصصی - نوید زندگی"
-        description="خدمات نوار قلب در منزل با دستگاه استاندارد و تفسیر توسط متخصص قلب. تشخیص فوری آریتمی، سکته قلبی و اختلالات قلبی در تهران"
-        keywords="نوار قلب در منزل, ECG در خانه, نوار قلب در منزل تهران, تفسیر نوار قلب, تشخیص آریتمی, فیبریلاسیون دهلیزی"
+        title="نوار قلب در منزل تهران | ECG در خانه ☎️ 09386117912"
+        description="🏥 نوار قلب در منزل تهران - انجام ECG تخصصی با دستگاه استاندارد و تفسیر توسط متخصص قلب. خدمات ۲۴ ساعته در تمام مناطق تهران ☎️ 09386117912"
+        keywords="نوار قلب در منزل تهران، ECG در خانه، الکتروکاردیوگرام در منزل، نوار قلب تهران شمال، نوار قلب فوری در منزل، ECG در منزل تهران"
         canonical="https://navidzendegi.com/articles/ecg-home"
         ogType="article"
         author="نوید زندگی"
         publishedTime="2025-01-21"
         modifiedTime="2025-01-21"
+      />
+      <MedicalBusinessSchema 
+        name="نوار قلب در منزل تهران - نوید زندگی"
+        description="انجام نوار قلب (ECG) تخصصی در منزل با دستگاه استاندارد و تفسیر توسط متخصص قلب"
+        service="نوار قلب در منزل"
+      />
+      <ServiceSchema 
+        name="نوار قلب در منزل تهران"
+        description="الکتروکاردیوگرام در منزل با دستگاه قابل حمل و تفسیر فوری توسط کاردیولوژیست"
       />
       <Header />
       <FloatingContact />

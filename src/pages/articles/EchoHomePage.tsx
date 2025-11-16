@@ -7,8 +7,10 @@ import RelatedArticles from "@/components/RelatedArticles";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import ArticleSchema from "@/components/ArticleSchema";
 import FAQSection from "@/components/FAQSection";
+import MedicalBusinessSchema from "@/components/MedicalBusinessSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle, MapPin, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
 import cardiologyImage from "@/assets/cardiology-home-visit.jpg";
@@ -44,6 +46,18 @@ const EchoHomePage = () => {
     {
       question: "هزینه اکو قلب در منزل چقدر است؟",
       answer: "هزینه اکو قلب در منزل بستگی به منطقه جغرافیایی و نوع خدمات دارد. برای اطلاع از تعرفه دقیق می‌توانید با شماره ۰۹۳۸۶۱۱۷۹۱۲ تماس بگیرید."
+    },
+    {
+      question: "چه مناطقی از تهران تحت پوشش خدمات اکو در منزل هستند؟",
+      answer: "خدمات اکو قلب در منزل در تمام مناطق تهران شامل شمال، غرب، شرق، جنوب و مرکز فعال است."
+    },
+    {
+      question: "آیا اکو قلب در منزل معتبر است؟",
+      answer: "بله، دستگاه‌های اکو قابل حمل استاندارد بوده و نتایج توسط متخصص قلب تفسیر می‌شود. کیفیت تشخیص معادل اکو بیمارستانی است."
+    },
+    {
+      question: "نتایج اکو قلب چه زمانی آماده می‌شود؟",
+      answer: "نتایج اولیه در همان جلسه توضیح داده می‌شود و گزارش کامل ظرف ۲۴ ساعت ارسال می‌گردد."
     }
   ];
 
@@ -74,13 +88,22 @@ const EchoHomePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="اکو قلب در منزل | اکوکاردیوگرافی تخصصی در خانه | نوید زندگی"
-        description="انجام اکو قلب در منزل با دستگاه پرتابل و تفسیر توسط متخصص قلب. تشخیص دقیق بیماری‌های قلبی، بررسی دریچه‌ها و عملکرد قلب در آسایش منزل."
-        keywords="اکو قلب در منزل، اکوکاردیوگرافی در خانه، سونوگرافی قلب منزل، متخصص قلب منزل تهران، اکو قلب پرتابل"
+        title="اکو قلب در منزل تهران | اکوکاردیوگرافی ۲۴ ساعته ☎️ 09386117912"
+        description="🏥 اکو قلب در منزل تهران - انجام اکوکاردیوگرافی تخصصی با دستگاه‌های پیشرفته و تفسیر توسط متخصص قلب. خدمات ۲۴ ساعته در تمام مناطق تهران ☎️ 09386117912"
+        keywords="اکو قلب در منزل تهران، اکوکاردیوگرافی در خانه، اکو قلب تهران شمال، سونوگرافی قلب در منزل، اکو قلب در خانه تهران، اکو قلب فوری"
         canonical="https://navidzendegi.ir/articles/echo-home"
         ogType="article"
         publishedTime="2025-10-20T10:00:00+03:30"
         modifiedTime="2025-10-20T10:00:00+03:30"
+      />
+      <MedicalBusinessSchema 
+        name="اکو قلب در منزل تهران - نوید زندگی"
+        description="انجام اکوکاردیوگرافی تخصصی در منزل با دستگاه‌های پیشرفته و تفسیر توسط متخصص قلب"
+        service="اکو قلب در منزل"
+      />
+      <ServiceSchema 
+        name="اکو قلب در منزل تهران"
+        description="اکوکاردیوگرافی تخصصی در منزل با دستگاه پرتابل و تفسیر فوری توسط کاردیولوژیست"
       />
       <ArticleSchema
         title="اکو قلب در منزل: تشخیص دقیق و غیرتهاجمی بیماری‌های قلبی با دستگاه پرتابل"
