@@ -65,7 +65,8 @@ const Header = () => {
     { to: "/services/physiotherapy", label: "فیزیوتراپی در منزل" },
     { to: "/services/radiology", label: "رادیولوژی و سونوگرافی در منزل" },
     { to: "/services/holter", label: "هولتر قلب و فشار خون در منزل" },
-    { to: "/services/laboratory", label: "خدمات آزمایشگاه در منزل" }
+    { to: "/services/laboratory", label: "خدمات آزمایشگاه در منزل" },
+    { to: "/services/medical-equipment-rental", label: "اجاره تجهیزات پزشکی و پاراکلینیکی" }
   ];
 
   return (
