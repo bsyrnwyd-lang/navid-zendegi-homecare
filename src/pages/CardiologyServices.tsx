@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Phone, MessageCircle, MapPin, CheckCircle2, Clock, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import PricingInfo from "@/components/PricingInfo";
 import SEOHead from "@/components/SEOHead";
+import MedicalBusinessSchema from "@/components/MedicalBusinessSchema";
+import ServiceSchema from "@/components/ServiceSchema";
+import FAQSection from "@/components/FAQSection";
 import cardiologyImage from "@/assets/iranian-cardiology-home.jpg";
 
 const CardiologyServices = () => {
@@ -13,14 +16,62 @@ const CardiologyServices = () => {
     window.location.href = "tel:09386117912";
   };
 
+  const handleWhatsApp = () => {
+    window.open("https://wa.me/989386117912", "_blank");
+  };
+
+  const faqs = [
+    {
+      question: "ویزیت متخصص قلب در منزل چه مزایایی دارد؟",
+      answer: "ویزیت در منزل باعث صرفه‌جویی در زمان، کاهش استرس بیمار، دسترسی آسان به خدمات تخصصی و امکان معاینه دقیق‌تر در محیط آرام می‌شود."
+    },
+    {
+      question: "آیا تجهیزات مورد نیاز برای اکو و نوار قلب در منزل موجود است؟",
+      answer: "بله، تیم ما با تجهیزات کامل و استاندارد شامل دستگاه اکوکاردیوگرافی، ECG و هولتر به منزل شما می‌آید."
+    },
+    {
+      question: "هزینه ویزیت متخصص قلب در منزل چقدر است؟",
+      answer: "هزینه بستگی به نوع خدمات و منطقه دارد. برای دریافت تعرفه دقیق با شماره ۰۹۳۸۶۱۱۷۹۱۲ تماس بگیرید."
+    },
+    {
+      question: "چه مناطقی از تهران تحت پوشش هستند؟",
+      answer: "تمام مناطق تهران شامل شمال، غرب، شرق، جنوب و مرکز تحت پوشش خدمات ماست."
+    },
+    {
+      question: "زمان حضور پزشک در منزل چقدر طول می‌کشد؟",
+      answer: "معمولاً بین ۱ تا ۲ ساعت پس از تماس، تیم پزشکی به منزل شما می‌رسد. در مواقع اورژانسی سریع‌تر اقدام می‌شود."
+    },
+    {
+      question: "آیا می‌توان در شب و تعطیلات درخواست ویزیت داد؟",
+      answer: "بله، خدمات ما ۲۴ ساعته و ۷ روز هفته فعال است."
+    },
+    {
+      question: "نتایج آزمایش‌ها چه زمانی آماده می‌شود؟",
+      answer: "نتایج اولیه اکو و نوار قلب در همان جلسه توسط متخصص بررسی و توضیح داده می‌شود. گزارش کامل ظرف ۲۴ ساعت ارسال می‌گردد."
+    },
+    {
+      question: "آیا برای ویزیت نیاز به معرفی‌نامه پزشک است؟",
+      answer: "خیر، نیازی به معرفی‌نامه نیست. می‌توانید مستقیماً تماس بگیرید و وقت رزرو کنید."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="ویزیت متخصص قلب در منزل تهران | خدمات کاردیولوژی و اکو در خانه | نوید زندگی"
-        description="متخصص قلب در منزل تهران را شبانه روزی بخواهید. اعزام فوری کاردیولوژیست با تجهیزات کامل (شامل اکو و نوار قلب) به خانه شما. برای ویزیت دکتر قلب در منزل تماس بگیرید."
-        keywords="ویزیت متخصص قلب در منزل، کاردیولوژیست در منزل، اکو قلب در منزل، نوار قلب در منزل، دکتر قلب در خانه، متخصص قلب تهران"
+        title="ویزیت متخصص قلب در منزل تهران ⭐ اعزام فوری | نوید زندگی ☎️ 09386117912"
+        description="🏥 ویزیت متخصص قلب در منزل تهران با نوید زندگی - اعزام فوری کاردیولوژیست با تجهیزات کامل (اکو، نوار قلب، هولتر) به تمام نقاط تهران. خدمات ۲۴ ساعته ☎️ 09386117912"
+        keywords="ویزیت متخصص قلب در منزل تهران، کاردیولوژیست در منزل، اکو قلب در منزل تهران، نوار قلب در منزل، دکتر قلب در خانه تهران، متخصص قلب تهران شمال، ویزیت قلب در منزل تهران غرب"
         canonical="https://navidzendegi.com/cardiology"
         ogType="website"
+      />
+      <MedicalBusinessSchema 
+        name="ویزیت متخصص قلب در منزل تهران - نوید زندگی"
+        description="ویزیت تخصصی قلب و عروق در منزل با اعزام کاردیولوژیست و تجهیزات کامل به تمام نقاط تهران"
+        service="ویزیت متخصص قلب و عروق در منزل"
+      />
+      <ServiceSchema 
+        name="ویزیت متخصص قلب در منزل تهران"
+        description="اعزام متخصص قلب و عروق به منزل با تجهیزات کامل شامل اکو، نوار قلب و هولتر"
       />
       <Header />
       <main className="pt-20 md:pt-24">
@@ -40,14 +91,25 @@ const CardiologyServices = () => {
                     <strong>خدمات تخصصی:</strong> اکوکاردیوگرافی در منزل، نوار قلب در خانه، هولتر ۲۴ ساعته، مشاوره کاردیولوژیست، ویزیت دکتر قلب، تنظیم داروهای قلبی، پیگیری بعد از عمل جراحی قلب
                   </p>
                 </div>
-                <Button 
-                  onClick={handleCall}
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                >
-                  <Phone className="ml-2 h-5 w-5" />
-                  درخواست ویزیت متخصص قلب
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    onClick={handleCall}
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  >
+                    <Phone className="ml-2 h-5 w-5" />
+                    تماس فوری: ۰۹۳۸۶۱۱۷۹۱۲
+                  </Button>
+                  <Button 
+                    onClick={handleWhatsApp}
+                    size="lg"
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary/10"
+                  >
+                    <MessageCircle className="ml-2 h-5 w-5" />
+                    واتساپ
+                  </Button>
+                </div>
               </div>
               <div className="relative">
                 <img 
@@ -235,40 +297,126 @@ const CardiologyServices = () => {
           </div>
         </section>
 
-        {/* Coverage & How to Request Section */}
-        <section className="medical-section">
+        {/* Coverage Areas Section */}
+        <section className="medical-section bg-muted/30">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
-              پوشش دهی خدمات متخصص قلب در تهران و نحوه درخواست
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary flex items-center gap-3">
+              <MapPin className="h-8 w-8" />
+              مناطق تحت پوشش در تهران
             </h2>
             <p className="text-lg leading-relaxed mb-6">
-              ما مفتخریم که خدمات <strong>ویزیت متخصص قلب</strong> را به صورت شبانه روزی در تمام مناطق تهران ارائه دهیم. برای درخواست اعزام فوری متخصص قلب به منزل خود، کافی است:
+              خدمات ویزیت متخصص قلب در منزل نوید زندگی در <strong>تمام مناطق تهران</strong> فعال است:
             </p>
-            <div className="space-y-4 mr-6 mb-8">
-              <div className="flex items-start">
-                <span className="ml-3 text-primary font-bold">•</span>
-                <p className="leading-relaxed">
-                  با شماره‌های نوید زندگی تماس بگیرید.
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                "تهران شمال (نیاوران، ولنجک، فرمانیه، اقدسیه)",
+                "تهران غرب (سعادت‌آباد، شهرک غرب، پونک، آزادی)",
+                "تهران شرق (نارمک، تهران‌پارس، نیروهوایی)",
+                "تهران جنوب (شهرری، یافت‌آباد، شوش)",
+                "تهران مرکز (ونک، ولیعصر، میرداماد، انقلاب)",
+                "کرج و حومه (با هماهنگی قبلی)"
+              ].map((area, index) => (
+                <div key={index} className="flex items-start gap-2 p-4 bg-background rounded-lg border border-border">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                  <span className="text-foreground">{area}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary flex items-center gap-3">
+              <Shield className="h-8 w-8" />
+              چرا نوید زندگی برای ویزیت متخصص قلب در منزل؟
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                  کاردیولوژیست‌های مجرب
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  پزشکان متخصص با سابقه کار در بیمارستان‌های معتبر و دارای مجوز از سازمان نظام پزشکی
                 </p>
               </div>
-              
-              <div className="flex items-start">
-                <span className="ml-3 text-primary font-bold">•</span>
-                <p className="leading-relaxed">
-                  مشکل و شرایط بیمار را برای کارشناسان ما توضیح دهید.
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                  تجهیزات پیشرفته
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  دستگاه‌های اکو، نوار قلب و هولتر کاملاً استاندارد و کالیبره شده
                 </p>
               </div>
-              
-              <div className="flex items-start">
-                <span className="ml-3 text-primary font-bold">•</span>
-                <p className="leading-relaxed">
-                  سریعاً هماهنگی لازم برای اعزام <strong>دکتر قلب در منزل</strong> همراه با تجهیزات مورد نیاز انجام می‌شود.
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <Clock className="h-6 w-6 text-primary" />
+                  خدمات ۲۴ ساعته
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  امکان رزرو و دریافت خدمات در تمام ساعات شبانه‌روز و تعطیلات
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                  قیمت شفاف و منصفانه
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  بدون هزینه‌های پنهان، تعرفه مشخص و امکان مشاوره رایگان
                 </p>
               </div>
             </div>
-            <p className="text-lg leading-relaxed">
-              نوید زندگی، با ارائه خدمات کاردیولوژی کامل، آرامش خاطر را برای شما به ارمغان می‌آورد.
-            </p>
+          </div>
+        </section>
+
+        {/* Booking Process Section */}
+        <section className="medical-section bg-muted/30">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary">
+              فرآیند رزرو ویزیت متخصص قلب در منزل
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="bg-primary text-primary-foreground rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  ۱
+                </div>
+                <h3 className="font-semibold mb-2">تماس با ما</h3>
+                <p className="text-sm text-muted-foreground">
+                  با شماره ۰۹۳۸۶۱۱۷۹۱۲ تماس بگیرید یا از واتساپ پیام دهید
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-primary text-primary-foreground rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  ۲
+                </div>
+                <h3 className="font-semibold mb-2">هماهنگی وقت</h3>
+                <p className="text-sm text-muted-foreground">
+                  زمان و آدرس دقیق را با کارشناسان ما هماهنگ کنید
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-primary text-primary-foreground rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  ۳
+                </div>
+                <h3 className="font-semibold mb-2">حضور پزشک</h3>
+                <p className="text-sm text-muted-foreground">
+                  کاردیولوژیست با تجهیزات کامل در منزل شما حاضر می‌شود
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-primary text-primary-foreground rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  ۴
+                </div>
+                <h3 className="font-semibold mb-2">دریافت گزارش</h3>
+                <p className="text-sm text-muted-foreground">
+                  گزارش کامل و توصیه‌های درمانی را دریافت کنید
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
