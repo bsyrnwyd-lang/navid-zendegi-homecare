@@ -8,8 +8,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { Button } from "@/components/ui/button";
-import { Stethoscope, FileText, Home, Search } from "lucide-react";
+import { Stethoscope, FileText, Home } from "lucide-react";
 import { allSearchData, SearchItem } from "@/data/searchData";
 
 interface SearchDialogProps {
@@ -116,14 +115,6 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
     setQuery("");
   };
 
-  // Handle Enter key for first result
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && results.length > 0) {
-      e.preventDefault();
-      handleSelect(results[0].url);
-    }
-  };
-
   useEffect(() => {
     if (!open) {
       setQuery("");
@@ -145,23 +136,12 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
 
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange}>
-      <div className="flex items-center gap-2 border-b px-3 py-2">
-        <CommandInput 
-          placeholder="جستجو در خدمات، مقالات و صفحات..." 
-          value={query}
-          onValueChange={setQuery}
-          onKeyDown={handleKeyDown}
-          className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
-        />
-        <Button
-          size="sm"
-          onClick={() => results.length > 0 && handleSelect(results[0].url)}
-          disabled={results.length === 0}
-          className="flex-shrink-0"
-        >
-          <Search className="h-4 w-4" />
-        </Button>
-      </div>
+      <CommandInput 
+        placeholder="جستجو در خدمات، مقالات و صفحات..." 
+        value={query}
+        onValueChange={setQuery}
+        className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+      />
       <CommandList>
         <CommandEmpty>
           <div className="py-6 text-center">
