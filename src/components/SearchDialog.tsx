@@ -1,13 +1,14 @@
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  CommandDialog,
+  Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Stethoscope, FileText, Home } from "lucide-react";
 import { allSearchData, SearchItem } from "@/data/searchData";
 
@@ -135,14 +136,16 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
   };
 
   return (
-    <CommandDialog open={open} onOpenChange={onOpenChange}>
-      <CommandInput 
-        placeholder="جستجو در خدمات، مقالات و صفحات..." 
-        value={query}
-        onValueChange={setQuery}
-        className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
-      />
-      <CommandList>
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="overflow-hidden p-0 shadow-lg">
+        <Command shouldFilter={false} className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
+          <CommandInput 
+            placeholder="جستجو در خدمات، مقالات و صفحات..." 
+            value={query}
+            onValueChange={setQuery}
+            className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+          />
+          <CommandList className="max-h-[400px]">
         <CommandEmpty>
           <div className="py-6 text-center">
             <p className="text-sm text-muted-foreground mb-4">نتیجه‌ای یافت نشد</p>
@@ -223,7 +226,9 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
             ))}
           </CommandGroup>
         )}
-      </CommandList>
-    </CommandDialog>
+          </CommandList>
+        </Command>
+      </DialogContent>
+    </Dialog>
   );
 }
