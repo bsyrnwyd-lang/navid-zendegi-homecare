@@ -42,6 +42,7 @@ const InfluenzaTreatmentPage = lazy(() => import("./pages/articles/InfluenzaTrea
 const StrokeSymptomsPage = lazy(() => import("./pages/articles/StrokeSymptomsPage"));
 const HeartAttackSymptomsPage = lazy(() => import("./pages/articles/HeartAttackSymptomsPage"));
 const SmokingHeartEffectsPage = lazy(() => import("./pages/articles/SmokingHeartEffectsPage"));
+const OpiumHeartEffectsPage = lazy(() => import("./pages/articles/OpiumHeartEffectsPage"));
 const CholesterolTestPage = lazy(() => import("./pages/articles/CholesterolTestPage"));
 const BreathingTreatmentPage = lazy(() => import("./pages/articles/BreathingTreatmentPage"));
 const NeurobionAmpoule = lazy(() => import("./pages/articles/NeurobionAmpoule"));
@@ -171,6 +172,7 @@ const App = () => (
           <Route path="/articles/stroke-symptoms" element={<StrokeSymptomsPage />} />
           <Route path="/articles/heart-attack-symptoms" element={<HeartAttackSymptomsPage />} />
           <Route path="/articles/smoking-heart-effects" element={<SmokingHeartEffectsPage />} />
+          <Route path="/articles/opium-heart-effects" element={<OpiumHeartEffectsPage />} />
           <Route path="/articles/cholesterol-test" element={<CholesterolTestPage />} />
           <Route path="/articles/breathing-treatment" element={<BreathingTreatmentPage />} />
           <Route path="/articles/neurobion-ampoule" element={<NeurobionAmpoule />} />

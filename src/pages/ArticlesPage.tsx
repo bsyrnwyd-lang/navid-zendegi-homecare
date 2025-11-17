@@ -84,6 +84,7 @@ import vitaminEImage from "@/assets/vitamin-e-article.jpg";
 import pregnancyNutritionImage from "@/assets/pregnancy-nutrition.jpg";
 import aspirationPneumoniaImage from "@/assets/aspiration-pneumonia.jpg";
 import citalopramImage from "@/assets/citalopram-medication.jpg";
+import opiumHeartImage from "@/assets/opium-heart-effects.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -91,6 +92,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 77,
+      title: "اثرات تریاک بر روی قلب: مرور علمی بر پیامدهای قلبی–عروقی",
+      description: "بررسی کامل اثرات مخرب تریاک (اوپیوم) بر سیستم قلبی-عروقی: افزایش خطر سکته قلبی، آترواسکلروز و آریتمی بر اساس شواهد علمی",
+      image: opiumHeartImage,
+      link: "/articles/opium-heart-effects",
+      category: "سلامت قلب",
+      date: "1403/11/15"
+    },
     {
       id: 76,
       title: "سیتالوپرام (Citalopram): مدیریت تخصصی افسردگی و اختلالات اضطراب",

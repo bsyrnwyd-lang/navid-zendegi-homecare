@@ -131,6 +131,13 @@ export const servicesData: SearchItem[] = [
 export const articlesData: SearchItem[] = [
   {
     type: 'article',
+    title: 'اثرات تریاک بر روی قلب',
+    url: '/articles/opium-heart-effects',
+    description: 'مرور علمی اثرات مخرب تریاک و اوپیوم بر سیستم قلبی-عروقی',
+    keywords: ['تریاک', 'قلب', 'اوپیوم', 'سکته قلبی', 'آریتمی', 'آترواسکلروز', 'تریاک و قلب', 'مواد مخدر']
+  },
+  {
+    type: 'article',
     title: 'سیتالوپرام: مدیریت تخصصی افسردگی و اختلالات اضطراب',
     url: '/articles/citalopram',
     description: 'راهنمای جامع سیتالوپرام و درمان افسردگی',
