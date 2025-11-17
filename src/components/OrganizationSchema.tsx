@@ -78,7 +78,7 @@ const OrganizationSchema = () => {
     },
     "sameAs": [
       "https://www.instagram.com/navidzendegi",
-      "https://t.me/navidzendegi"
+      "https://t.me/navidzendegi1"
     ]
   };
 
