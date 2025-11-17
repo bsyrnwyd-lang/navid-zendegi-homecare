@@ -9,8 +9,8 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-touch-fullscreen" content="yes" />
     
-    <!-- Dezhino Script -->
-    <script type="text/javascript" src="https://gate.dezhino.com/v2/3720733401.js"></script>
+    <!-- Dezhino Script - Async loading for better performance -->
+    <script type="text/javascript" src="https://gate.dezhino.com/v2/3720733401.js" async></script>
     
     <!-- Favicon and PWA -->
     <link rel="icon" href="/logo.jpg" type="image/jpeg">
@@ -21,6 +21,8 @@
     <meta name="apple-mobile-web-app-title" content="نوید زندگی" />
     
     <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://gate.dezhino.com">
+    <link rel="dns-prefetch" href="https://gate.dezhino.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com">
