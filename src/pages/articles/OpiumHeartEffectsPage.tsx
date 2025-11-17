@@ -9,6 +9,9 @@ import ArticleSchema from "@/components/ArticleSchema";
 import { Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import opiumHeartImage from "@/assets/opium-heart-effects.jpg";
+import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
+import smokingHeartImage from "@/assets/iranian-cardiology-home.jpg";
+import internalMedicineImage from "@/assets/internal-medicine.jpg";
 
 const OpiumHeartEffectsPage = () => {
   const handleCall = () => {
@@ -46,21 +49,21 @@ const OpiumHeartEffectsPage = () => {
     {
       title: "خطرات کوکائین برای قلب و عروق",
       description: "بررسی کامل اثرات مخرب کوکائین بر سیستم قلبی-عروقی و عوارض استفاده از آن",
-      image: "/src/assets/cocaine-dangers.jpg",
+      image: cocaineDangersImage,
       link: "/articles/cocaine-dangers",
       category: "سلامت قلب"
     },
     {
       title: "تأثیر سیگار بر سلامت قلب",
       description: "چگونه سیگار کشیدن به شدت خطر بیماری‌های قلبی-عروقی را افزایش می‌دهد",
-      image: "/src/assets/smoking-heart-effects.jpg",
+      image: smokingHeartImage,
       link: "/articles/smoking-heart-effects",
       category: "سلامت قلب"
     },
     {
       title: "ویزیت متخصص داخلی در منزل",
       description: "مدیریت بیماری‌های مزمن قلبی و عروقی در منزل توسط متخصص داخلی",
-      image: "/src/assets/internal-medicine.jpg",
+      image: internalMedicineImage,
       link: "/services/internal-medicine",
       category: "خدمات درمانی"
     }
