@@ -86,6 +86,7 @@ import aspirationPneumoniaImage from "@/assets/aspiration-pneumonia.jpg";
 import citalopramImage from "@/assets/citalopram-medication.jpg";
 import opiumHeartImage from "@/assets/opium-heart-effects.jpg";
 import telmisartanImage from "@/assets/telmisartan-medication.jpg";
+import maleUTIImage from "@/assets/male-uti-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -93,6 +94,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 79,
+      title: "عفونت ادراری در مردان (UTI): علائم، علل و درمان تخصصی",
+      description: "راهنمای جامع عفونت ادراری در مردان: علل زمینه‌ای، علائم، تشخیص با کشت ادرار و هشدار مهم درباره مصرف خودسرانه آنتی‌بیوتیک",
+      image: maleUTIImage,
+      link: "/articles/male-uti",
+      category: "اورولوژی",
+      date: "1403/10/28"
+    },
     {
       id: 78,
       title: "تلمیزارتان (Telmisartan): داروی فشار خون با محافظت قلبی و کلیوی",

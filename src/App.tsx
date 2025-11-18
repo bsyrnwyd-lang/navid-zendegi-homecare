@@ -120,6 +120,7 @@ const PregnancyNutritionPage = lazy(() => import("./pages/articles/PregnancyNutr
 const AspirationPneumoniaPage = lazy(() => import("./pages/articles/AspirationPneumoniaPage"));
 const CitalopramPage = lazy(() => import("./pages/articles/CitalopramPage"));
 const TelmisartanPage = lazy(() => import("./pages/articles/TelmisartanPage"));
+const MaleUTIPage = lazy(() => import("./pages/articles/MaleUTIPage"));
 
 const queryClient = new QueryClient();
 
@@ -251,6 +252,7 @@ const App = () => (
                  <Route path="/articles/aspiration-pneumonia" element={<AspirationPneumoniaPage />} />
                  <Route path="/articles/citalopram" element={<CitalopramPage />} />
                  <Route path="/articles/telmisartan" element={<TelmisartanPage />} />
+                 <Route path="/articles/male-uti" element={<MaleUTIPage />} />
                 
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
