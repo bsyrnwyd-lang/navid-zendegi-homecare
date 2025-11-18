@@ -7,6 +7,9 @@ import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
 import LazyImage from "@/components/LazyImage";
 import diabetesPregnancyImage from "@/assets/diabetes-pregnancy.jpg";
+import breastfeedingImage from "@/assets/diabetes-article.jpg";
+import pregnancyNutritionImage from "@/assets/pregnancy-nutrition.jpg";
+import cholesterolTestImage from "@/assets/cholesterol-test-article.jpg";
 import {
   Accordion,
   AccordionContent,
@@ -26,21 +29,21 @@ const DiabetesPregnancyPage = () => {
       title: "دیابت: علائم، انواع و راهکارهای کنترل قند خون",
       description: "راهنمای جامع دیابت شامل انواع، علائم، تشخیص و روش‌های کنترل قند خون",
       link: "/articles/diabetes",
-      image: "/placeholder.svg",
+      image: breastfeedingImage,
       category: "مقالات"
     },
     {
       title: "تغذیه در بارداری: راهنمای کامل تغذیه مادران باردار",
       description: "اصول تغذیه صحیح در دوران بارداری برای سلامت مادر و جنین",
       link: "/articles/pregnancy-nutrition",
-      image: "/placeholder.svg",
+      image: pregnancyNutritionImage,
       category: "مقالات"
     },
     {
       title: "آزمایش کلسترول و چربی خون: راهنمای کامل",
       description: "اطلاعات کامل درباره آزمایش‌های چربی خون و تفسیر نتایج",
       link: "/articles/cholesterol-test",
-      image: "/placeholder.svg",
+      image: cholesterolTestImage,
       category: "مقالات"
     },
   ];
