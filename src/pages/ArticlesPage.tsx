@@ -85,6 +85,7 @@ import pregnancyNutritionImage from "@/assets/pregnancy-nutrition.jpg";
 import aspirationPneumoniaImage from "@/assets/aspiration-pneumonia.jpg";
 import citalopramImage from "@/assets/citalopram-medication.jpg";
 import opiumHeartImage from "@/assets/opium-heart-effects.jpg";
+import telmisartanImage from "@/assets/telmisartan-medication.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -92,6 +93,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 78,
+      title: "تلمیزارتان (Telmisartan): داروی فشار خون با محافظت قلبی و کلیوی",
+      description: "راهنمای جامع تلمیزارتان، داروی ARB نسل جدید برای کنترل فشار خون بالا با پوشش 24 ساعته و حفاظت از قلب و کلیه",
+      image: telmisartanImage,
+      link: "/articles/telmisartan",
+      category: "دارو",
+      date: "1403/10/28"
+    },
     {
       id: 77,
       title: "اثرات تریاک بر روی قلب: مرور علمی بر پیامدهای قلبی–عروقی",
