@@ -85,6 +85,7 @@ const AngiographyRecoveryTimePage = lazy(() => import("./pages/articles/Angiogra
 const PostAngiographyLiftingPage = lazy(() => import("./pages/articles/PostAngiographyLiftingPage"));
 const HeartPalpitationsPage = lazy(() => import("./pages/articles/HeartPalpitationsPage"));
 const WarfarinPage = lazy(() => import("./pages/articles/WarfarinPage"));
+const DiabetesPregnancyPage = lazy(() => import("./pages/articles/DiabetesPregnancyPage"));
 const HighBloodPressurePage = lazy(() => import("./pages/articles/HighBloodPressurePage"));
 const AtorvastatinPage = lazy(() => import("./pages/articles/AtorvastatinPage"));
 const MediterraneanDietPage = lazy(() => import("./pages/articles/MediterraneanDietPage"));
@@ -217,8 +218,9 @@ const App = () => (
            <Route path="/articles/angiography-recovery-time" element={<AngiographyRecoveryTimePage />} />
            <Route path="/articles/post-angiography-lifting" element={<PostAngiographyLiftingPage />} />
            <Route path="/articles/heart-palpitations" element={<HeartPalpitationsPage />} />
-           <Route path="/articles/warfarin" element={<WarfarinPage />} />
-           <Route path="/articles/high-blood-pressure-control" element={<HighBloodPressurePage />} />
+            <Route path="/articles/warfarin" element={<WarfarinPage />} />
+            <Route path="/articles/diabetes-pregnancy" element={<DiabetesPregnancyPage />} />
+            <Route path="/articles/high-blood-pressure-control" element={<HighBloodPressurePage />} />
            <Route path="/articles/atorvastatin" element={<AtorvastatinPage />} />
            <Route path="/articles/mediterranean-diet" element={<MediterraneanDietPage />} />
            <Route path="/articles/cocaine-dangers" element={<CocaineDangersPage />} />
