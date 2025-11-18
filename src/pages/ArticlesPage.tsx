@@ -86,6 +86,7 @@ import aspirationPneumoniaImage from "@/assets/aspiration-pneumonia.jpg";
 import citalopramImage from "@/assets/citalopram-medication.jpg";
 import opiumHeartImage from "@/assets/opium-heart-effects.jpg";
 import telmisartanImage from "@/assets/telmisartan-medication.jpg";
+import diabetesPregnancyImage from "@/assets/diabetes-pregnancy.jpg";
 import maleUTIImage from "@/assets/male-uti-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -101,6 +102,15 @@ const ArticlesPage = () => {
       image: maleUTIImage,
       link: "/articles/male-uti",
       category: "اورولوژی",
+      date: "1403/10/28"
+    },
+    {
+      id: 80,
+      title: "دیابت در بارداری: تشخیص و مدیریت GDM",
+      description: "راهنمای جامع دیابت بارداری شامل انواع، ریسک‌ها، غربالگری و مدیریت تخصصی با آزمایش در منزل",
+      image: diabetesPregnancyImage,
+      link: "/articles/diabetes-pregnancy",
+      category: "بارداری و زایمان",
       date: "1403/10/28"
     },
     {
