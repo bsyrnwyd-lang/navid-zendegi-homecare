@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import { Phone, AlertTriangle } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import ArticleSchema from "@/components/ArticleSchema";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
@@ -49,7 +52,7 @@ const DiabetesPregnancyPage = () => {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <SEOHead
         title="دیابت در بارداری | تشخیص و مدیریت GDM | آزمایش خون در منزل"
         description="راهنمای جامع دیابت در بارداری (GDM): انواع، علائم، ریسک‌ها، غربالگری و مدیریت تخصصی. آزمایش خون و ویزیت متخصص غدد و زنان در منزل با نوید زندگی"
@@ -68,7 +71,10 @@ const DiabetesPregnancyPage = () => {
         image={diabetesPregnancyImage}
       />
 
-      <div className="min-h-screen bg-background py-12 px-4">
+      <Header />
+      <FloatingContact />
+
+      <main className="py-12 px-4">
         <article className="container mx-auto max-w-4xl">
           <BreadcrumbNavigation items={breadcrumbItems} />
 
@@ -327,8 +333,10 @@ const DiabetesPregnancyPage = () => {
             <RelatedArticles articles={relatedArticles} />
           </div>
         </article>
-      </div>
-    </>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 
