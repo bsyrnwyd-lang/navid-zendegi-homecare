@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Phone, AlertTriangle } from "lucide-react";
-import ArticleLayout from "@/components/ArticleLayout";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import ArticleSchema from "@/components/ArticleSchema";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
