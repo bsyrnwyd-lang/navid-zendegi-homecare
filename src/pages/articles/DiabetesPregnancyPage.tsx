@@ -9,9 +9,8 @@ import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
 import LazyImage from "@/components/LazyImage";
-import diabetesPregnancyImage from "@/assets/diabetes-pregnancy.jpg";
-import breastfeedingImage from "@/assets/diabetes-article.jpg";
 import pregnancyNutritionImage from "@/assets/pregnancy-nutrition.jpg";
+import breastfeedingImage from "@/assets/diabetes-article.jpg";
 import cholesterolTestImage from "@/assets/cholesterol-test-article.jpg";
 import {
   Accordion,
@@ -68,7 +67,7 @@ const DiabetesPregnancyPage = () => {
         description="راهنمای جامع دیابت در بارداری شامل انواع، ریسک‌ها، غربالگری و مدیریت تخصصی با آزمایش در منزل"
         publishedTime="2024-01-15T10:00:00Z"
         modifiedTime="2024-01-15T10:00:00Z"
-        image={diabetesPregnancyImage}
+        image={pregnancyNutritionImage}
       />
 
       <Header />
@@ -85,7 +84,7 @@ const DiabetesPregnancyPage = () => {
           </header>
 
           <LazyImage
-            src={diabetesPregnancyImage}
+            src={pregnancyNutritionImage}
             alt="دیابت در بارداری - آزمایش خون و ویزیت متخصص در منزل"
             className="w-full h-auto rounded-lg mb-8"
           />
