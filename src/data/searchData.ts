@@ -201,6 +201,13 @@ export const articlesData: SearchItem[] = [
   },
   {
     type: 'article',
+    title: 'آنژیوگرافی قلب: مراحل انجام و مراقبت',
+    url: '/articles/angiography',
+    description: 'راهنمای کامل آنژیوگرافی کرونر: مراحل، مدیریت درد و مراقبت‌های پس از عمل',
+    keywords: ['آنژیوگرافی', 'قلب', 'کاتتریزاسیون', 'استنت', 'کرونر', 'انژیوگرافی', 'رگ', 'عروق']
+  },
+  {
+    type: 'article',
     title: 'پیشگیری از آنفولانزا',
     url: '/articles/influenza-prevention',
     description: 'روش‌های پیشگیری از سرماخوردگی و آنفولانزا',
