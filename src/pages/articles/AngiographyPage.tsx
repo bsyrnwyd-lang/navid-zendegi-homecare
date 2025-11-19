@@ -23,6 +23,13 @@ const AngiographyPage = () => {
 
   const relatedArticles = [
     {
+      title: "بیهوشی در آنژیوگرافی: آرام‌بخشی یا بیهوشی کامل؟",
+      description: "بررسی کامل نوع بیهوشی و آرام‌بخشی در آنژیوگرافی قلب و مدیریت درد",
+      image: angiographyImage,
+      link: "/articles/angiography-sedation",
+      category: "قلب و عروق"
+    },
+    {
       title: "داروهای ضد انعقاد پس از آنژیوگرافی",
       description: "راهنمای کامل مصرف آسپرین، کلوپیدوگرل و سایر داروهای پس از استنت‌گذاری",
       image: postAngiographyMedicationsImage,
@@ -34,13 +41,6 @@ const AngiographyPage = () => {
       description: "مراقبت‌های لازم و زمان بازگشت به فعالیت‌های روزمره پس از آنژیوگرافی",
       image: angiographyRecoveryImage,
       link: "/articles/angiography-recovery-time",
-      category: "قلب و عروق"
-    },
-    {
-      title: "تپش قلب: علل و درمان",
-      description: "شناخت انواع تپش قلب و روش‌های تشخیص و مدیریت آن",
-      image: heartPalpitationsImage,
-      link: "/articles/heart-palpitations",
       category: "قلب و عروق"
     }
   ];

@@ -208,6 +208,13 @@ export const articlesData: SearchItem[] = [
   },
   {
     type: 'article',
+    title: 'بیهوشی در آنژیوگرافی: آرام‌بخشی یا بیهوشی کامل؟',
+    url: '/articles/angiography-sedation',
+    description: 'بررسی کامل نوع بیهوشی و آرام‌بخشی در آنژیوگرافی قلب و مدیریت درد',
+    keywords: ['بیهوشی', 'آرام‌بخشی', 'آنژیوگرافی', 'قلب', 'درد', 'بیحسی', 'کاتتریزاسیون']
+  },
+  {
+    type: 'article',
     title: 'پیشگیری از آنفولانزا',
     url: '/articles/influenza-prevention',
     description: 'روش‌های پیشگیری از سرماخوردگی و آنفولانزا',
