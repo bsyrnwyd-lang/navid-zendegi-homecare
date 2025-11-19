@@ -122,6 +122,7 @@ const AspirationPneumoniaPage = lazy(() => import("./pages/articles/AspirationPn
 const CitalopramPage = lazy(() => import("./pages/articles/CitalopramPage"));
 const TelmisartanPage = lazy(() => import("./pages/articles/TelmisartanPage"));
 const MaleUTIPage = lazy(() => import("./pages/articles/MaleUTIPage"));
+const AngiographyPage = lazy(() => import("./pages/articles/AngiographyPage"));
 
 const queryClient = new QueryClient();
 
@@ -213,6 +214,7 @@ const App = () => (
            <Route path="/articles/hair-loss" element={<HairLossPage />} />
            <Route path="/articles/skin-moles" element={<SkinMolesPage />} />
            <Route path="/articles/rubella-pregnancy" element={<RubellaPregnancyPage />} />
+           <Route path="/articles/angiography" element={<AngiographyPage />} />
            <Route path="/articles/angiography-fear" element={<AngiographyFearPage />} />
            <Route path="/articles/post-angiography-medications" element={<PostAngiographyMedicationsPage />} />
            <Route path="/articles/angiography-recovery-time" element={<AngiographyRecoveryTimePage />} />
