@@ -126,7 +126,7 @@ const ArticlesPage = () => {
       id: 80,
       title: "دیابت در بارداری: تشخیص و مدیریت GDM",
       description: "راهنمای جامع دیابت بارداری شامل انواع، ریسک‌ها، غربالگری و مدیریت تخصصی با آزمایش در منزل",
-      image: diabetesPregnancyImage,
+      image: pregnancyNutritionImage,
       link: "/articles/diabetes-pregnancy",
       category: "بارداری و زایمان",
       date: "1403/10/28"
