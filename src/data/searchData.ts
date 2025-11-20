@@ -131,6 +131,13 @@ export const servicesData: SearchItem[] = [
 export const articlesData: SearchItem[] = [
   {
     type: 'article',
+    title: 'کمر درد: علل، تشخیص و درمان با فیزیوتراپی در منزل',
+    url: '/articles/low-back-pain',
+    description: 'راهنمای جامع کمر درد شامل علل، انواع (حاد و مزمن)، فتق دیسک، درمان با فیزیوتراپی و ویزیت متخصص ارتوپدی در منزل',
+    keywords: ['کمر درد', 'فتق دیسک', 'فیزیوتراپی', 'کمردرد', 'درمان کمر', 'ارتوپدی', 'سیاتیک', 'مغز و اعصاب', 'دیسک کمر', 'کمر', 'لومبار']
+  },
+  {
+    type: 'article',
     title: 'اثرات تریاک بر روی قلب',
     url: '/articles/opium-heart-effects',
     description: 'مرور علمی اثرات مخرب تریاک و اوپیوم بر سیستم قلبی-عروقی',

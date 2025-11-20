@@ -88,6 +88,7 @@ import opiumHeartImage from "@/assets/opium-heart-effects.jpg";
 import telmisartanImage from "@/assets/telmisartan-medication.jpg";
 import diabetesPregnancyImage from "@/assets/diabetes-pregnancy.jpg";
 import maleUTIImage from "@/assets/male-uti-article.jpg";
+import herniatedDiscImage from "@/assets/herniated-disc.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -95,6 +96,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 83,
+      title: "کمر درد: علل، تشخیص و درمان با فیزیوتراپی در منزل",
+      description: "راهنمای جامع کمر درد شامل علل، انواع (حاد و مزمن)، فتق دیسک، درمان با فیزیوتراپی و ویزیت متخصص ارتوپدی در منزل",
+      image: herniatedDiscImage,
+      link: "/articles/low-back-pain",
+      category: "درمان و سلامت",
+      date: "1403/10/29"
+    },
     {
       id: 82,
       title: "آیا آنژیوگرافی نیاز به بیهوشی کامل دارد؟",
