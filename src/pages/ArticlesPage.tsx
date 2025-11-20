@@ -89,6 +89,7 @@ import telmisartanImage from "@/assets/telmisartan-medication.jpg";
 import diabetesPregnancyImage from "@/assets/diabetes-pregnancy.jpg";
 import maleUTIImage from "@/assets/male-uti-article.jpg";
 import herniatedDiscImage from "@/assets/herniated-disc.jpg";
+import appendicitisImage from "@/assets/appendicitis.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -96,6 +97,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 84,
+      title: "آپاندیسیت: علائم، تشخیص فوری و درمان جراحی",
+      description: "راهنمای کامل آپاندیسیت شامل علائم کلاسیک، مراحل پیشرفت درد، خطرات پارگی و فوریت مراجعه به اورژانس",
+      image: appendicitisImage,
+      link: "/articles/appendicitis",
+      category: "اورژانس پزشکی",
+      date: "1403/10/29"
+    },
     {
       id: 83,
       title: "کمر درد: علل، تشخیص و درمان با فیزیوتراپی در منزل",
