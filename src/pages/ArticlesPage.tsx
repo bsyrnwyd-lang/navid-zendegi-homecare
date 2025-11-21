@@ -90,6 +90,7 @@ import diabetesPregnancyImage from "@/assets/diabetes-pregnancy.jpg";
 import maleUTIImage from "@/assets/male-uti-article.jpg";
 import herniatedDiscImage from "@/assets/herniated-disc.jpg";
 import appendicitisImage from "@/assets/appendicitis.jpg";
+import ginsengImage from "@/assets/ginseng-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -97,6 +98,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 85,
+      title: "جینسینگ: خواص آداپتوژنیک و ملاحظات مصرف",
+      description: "راهنمای جامع جینسینگ: انواع آسیایی و آمریکایی، خواص برای انرژی و تمرکز، عوارض جانبی و تداخلات دارویی خطرناک",
+      image: ginsengImage,
+      link: "/articles/ginseng",
+      category: "تغذیه و سلامت",
+      date: "1403/11/02"
+    },
     {
       id: 84,
       title: "آپاندیسیت: علائم، تشخیص فوری و درمان جراحی",
