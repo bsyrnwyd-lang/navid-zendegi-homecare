@@ -127,6 +127,7 @@ const AngiographySedationPage = lazy(() => import("./pages/articles/AngiographyS
 const LowBackPainPage = lazy(() => import("./pages/articles/LowBackPainPage"));
 const AppendicitisPage = lazy(() => import("./pages/articles/AppendicitisPage"));
 const GinsengPage = lazy(() => import("./pages/articles/GinsengPage"));
+const HerniaPainPage = lazy(() => import("./pages/articles/HerniaPainPage"));
 
 const queryClient = new QueryClient();
 
@@ -267,6 +268,7 @@ const App = () => (
                  <Route path="/articles/low-back-pain" element={<LowBackPainPage />} />
                  <Route path="/articles/appendicitis" element={<AppendicitisPage />} />
                  <Route path="/articles/ginseng" element={<GinsengPage />} />
+                 <Route path="/articles/hernia-pain" element={<HerniaPainPage />} />
                 
                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

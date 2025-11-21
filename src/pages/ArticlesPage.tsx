@@ -91,6 +91,7 @@ import maleUTIImage from "@/assets/male-uti-article.jpg";
 import herniatedDiscImage from "@/assets/herniated-disc.jpg";
 import appendicitisImage from "@/assets/appendicitis.jpg";
 import ginsengImage from "@/assets/ginseng-article.jpg";
+import herniaPainImage from "@/assets/hernia-pain-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -98,6 +99,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 86,
+      title: "درد فتق: انواع، علائم خطر و درمان جراحی",
+      description: "راهنمای جامع درد فتق شامل انواع فتق اینگوینال، نافی و شکاف مری، علائم خطرناک فتق خفه شده و ویزیت متخصص جراحی",
+      image: herniaPainImage,
+      link: "/articles/hernia-pain",
+      category: "جراحی",
+      date: "1403/11/02"
+    },
     {
       id: 85,
       title: "جینسینگ: خواص آداپتوژنیک و ملاحظات مصرف",
