@@ -92,6 +92,7 @@ import herniatedDiscImage from "@/assets/herniated-disc.jpg";
 import appendicitisImage from "@/assets/appendicitis.jpg";
 import ginsengImage from "@/assets/ginseng-article.jpg";
 import herniaPainImage from "@/assets/hernia-pain-article.jpg";
+import medicalAnxietyImage from "@/assets/medical-anxiety-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -99,6 +100,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 87,
+      title: "مدیریت اضطراب پزشکی: حفظ خونسردی در مطب پزشک",
+      description: "روش‌های علمی مدیریت اضطراب و ترس از مراجعه به پزشک: تکنیک‌های تنفس دیافراگمی، حواس‌پرتی و ارتباط مؤثر با تیم درمانی",
+      image: medicalAnxietyImage,
+      link: "/articles/medical-anxiety",
+      category: "روانپزشکی",
+      date: "1403/11/02"
+    },
     {
       id: 86,
       title: "درد فتق: انواع، علائم خطر و درمان جراحی",
