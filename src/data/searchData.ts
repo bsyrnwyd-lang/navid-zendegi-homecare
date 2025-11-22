@@ -131,6 +131,13 @@ export const servicesData: SearchItem[] = [
 export const articlesData: SearchItem[] = [
   {
     type: 'article',
+    title: 'روغن گل مغربی: خواص GLA و مدیریت PMS',
+    url: '/articles/evening-primrose-oil',
+    description: 'راهنمای جامع روغن گل مغربی: نقش اسید گاما-لینولنیک، مدیریت سندرم پیش از قاعدگی، علائم یائسگی، درمان اگزما و تداخلات دارویی',
+    keywords: ['روغن گل مغربی', 'Evening Primrose Oil', 'EPO', 'GLA', 'اسید گاما-لینولنیک', 'PMS', 'سندرم پیش از قاعدگی', 'یائسگی', 'اگزما', 'مکمل گیاهی', 'تداخل دارویی', 'سلامت زنان', 'گل مغربی']
+  },
+  {
+    type: 'article',
     title: 'مدیریت اضطراب پزشکی: حفظ خونسردی در مطب پزشک',
     url: '/articles/medical-anxiety',
     description: 'روش‌های علمی مدیریت اضطراب و ترس از مراجعه به پزشک: تکنیک‌های تنفس دیافراگمی، حواس‌پرتی و ارتباط مؤثر با تیم درمانی',

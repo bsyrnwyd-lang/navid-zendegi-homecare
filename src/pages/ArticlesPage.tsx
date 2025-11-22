@@ -93,6 +93,7 @@ import appendicitisImage from "@/assets/appendicitis.jpg";
 import ginsengImage from "@/assets/ginseng-article.jpg";
 import herniaPainImage from "@/assets/hernia-pain-article.jpg";
 import medicalAnxietyImage from "@/assets/medical-anxiety-article.jpg";
+import eveningPrimroseOilImage from "@/assets/evening-primrose-oil-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -100,6 +101,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 88,
+      title: "روغن گل مغربی: خواص GLA و مدیریت PMS",
+      description: "راهنمای جامع روغن گل مغربی: نقش اسید گاما-لینولنیک، مدیریت سندرم پیش از قاعدگی، علائم یائسگی، درمان اگزما و تداخلات دارویی",
+      image: eveningPrimroseOilImage,
+      link: "/articles/evening-primrose-oil",
+      category: "تغذیه و سلامت",
+      date: "1403/11/02"
+    },
     {
       id: 87,
       title: "مدیریت اضطراب پزشکی: حفظ خونسردی در مطب پزشک",
