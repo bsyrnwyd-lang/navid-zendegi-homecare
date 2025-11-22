@@ -8,6 +8,9 @@ import FAQSection from "@/components/FAQSection";
 import LazyImage from "@/components/LazyImage";
 import medicalAnxietyImage from "@/assets/medical-anxiety-article.jpg";
 import diaphragmaticBreathingImage from "@/assets/diaphragmatic-breathing.jpg";
+import depressionImage from "@/assets/depression-article.jpg";
+import psychiatryImage from "@/assets/psychiatry-home-visit.jpg";
+import onlineDoctorImage from "@/assets/home-medical-consultation.jpg";
 
 const MedicalAnxietyPage = () => {
   const breadcrumbItems = [
@@ -40,21 +43,21 @@ const MedicalAnxietyPage = () => {
       title: "افسردگی و ارتباط آن با بیماری‌های قلبی",
       description: "بررسی ارتباط میان افسردگی و بیماری‌های قلبی و نقش روان‌درمانی در بهبود سلامت قلب",
       link: "/articles/depression-heart-disease",
-      image: "/placeholder.svg",
+      image: depressionImage,
       category: "روانپزشکی"
     },
     {
       title: "ویزیت روانپزشک در منزل",
       description: "دریافت خدمات تخصصی روانپزشکی در منزل برای راحتی و حفظ حریم خصوصی بیماران",
       link: "/services/psychiatry",
-      image: "/placeholder.svg",
+      image: psychiatryImage,
       category: "خدمات"
     },
     {
       title: "ویزیت آنلاین پزشک",
       description: "مشاوره پزشکی آنلاین با متخصصان از راه دور برای دسترسی آسان‌تر به خدمات درمانی",
       link: "/services/online-doctor",
-      image: "/placeholder.svg",
+      image: onlineDoctorImage,
       category: "خدمات"
     }
   ];
