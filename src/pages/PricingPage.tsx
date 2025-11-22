@@ -50,9 +50,6 @@ const PricingPage = () => {
     service: "کشیدن بخیه (قیمت پایه)",
     price: "400,000"
   }, {
-    service: "کنترل فشار خون",
-    price: "400,000"
-  }, {
     service: "انما (تنقیه)",
     price: "800,000"
   }, {
