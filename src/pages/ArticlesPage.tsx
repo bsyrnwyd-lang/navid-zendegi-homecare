@@ -94,6 +94,7 @@ import ginsengImage from "@/assets/ginseng-article.jpg";
 import herniaPainImage from "@/assets/hernia-pain-article.jpg";
 import medicalAnxietyImage from "@/assets/medical-anxiety-article.jpg";
 import eveningPrimroseOilImage from "@/assets/evening-primrose-oil-article.jpg";
+import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -101,6 +102,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 89,
+      title: "ویتامین‌ها و سرماخوردگی: نقش علمی ویتامین C و زینک",
+      description: "راهنمای جامع ویتامین‌ها در روزهای اول سرماخوردگی: دوز صحیح ویتامین C و زینک، زمان مصرف، تداخلات دارویی و هشدارهای ایمنی",
+      image: vitaminsColdImage,
+      link: "/articles/vitamins-cold",
+      category: "تغذیه و سلامت",
+      date: "1403/11/02"
+    },
     {
       id: 88,
       title: "روغن گل مغربی: خواص GLA و مدیریت PMS",
