@@ -95,6 +95,7 @@ import herniaPainImage from "@/assets/hernia-pain-article.jpg";
 import medicalAnxietyImage from "@/assets/medical-anxiety-article.jpg";
 import eveningPrimroseOilImage from "@/assets/evening-primrose-oil-article.jpg";
 import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
+import drugCardiovascularImage from "@/assets/drug-cardiovascular-effects.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -102,6 +103,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 90,
+      title: "مواد مخدر و سکته قلبی: مکانیسم‌های آسیب‌رسان",
+      description: "تأثیرات مخرب مواد مخدر بر قلب و عروق: افزایش خطر سکته قلبی و مغزی، اسپاسم کرونر، فشار خون و اهمیت ترک اعتیاد",
+      image: drugCardiovascularImage,
+      link: "/articles/drug-cardiovascular-effects",
+      category: "قلب و عروق",
+      date: "1403/11/02"
+    },
     {
       id: 89,
       title: "ویتامین‌ها و سرماخوردگی: نقش علمی ویتامین C و زینک",
