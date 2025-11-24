@@ -131,6 +131,7 @@ const HerniaPainPage = lazy(() => import("./pages/articles/HerniaPainPage"));
 const MedicalAnxietyPage = lazy(() => import("./pages/articles/MedicalAnxietyPage"));
 const EveningPrimroseOilPage = lazy(() => import("./pages/articles/EveningPrimroseOilPage"));
 const DrugCardiovascularEffectsPage = lazy(() => import("./pages/articles/DrugCardiovascularEffectsPage"));
+const PregnancySupplementsPage = lazy(() => import("./pages/articles/PregnancySupplementsPage"));
 
 const queryClient = new QueryClient();
 
@@ -276,6 +277,7 @@ const App = () => (
                  <Route path="/articles/evening-primrose-oil" element={<EveningPrimroseOilPage />} />
                  <Route path="/articles/drug-cardiovascular-effects" element={<DrugCardiovascularEffectsPage />} />
                  <Route path="/articles/vitamins-health" element={<VitaminsHealthPage />} />
+                 <Route path="/articles/pregnancy-supplements" element={<PregnancySupplementsPage />} />
                 
                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

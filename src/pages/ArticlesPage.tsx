@@ -97,6 +97,7 @@ import eveningPrimroseOilImage from "@/assets/evening-primrose-oil-article.jpg";
 import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
 import vitaminHealthImage from "@/assets/vitamins-health-article.jpg";
 import drugCardiovascularImage from "@/assets/drug-cardiovascular-effects.jpg";
+import pregnancySupplementsImage from "@/assets/pregnancy-supplements.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -104,6 +105,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 92,
+      title: "مکمل‌های ضروری دوران بارداری",
+      description: "راهنمای جامع مکمل‌های حیاتی دوران بارداری: فولیک اسید، آهن، ویتامین D و سایر مکمل‌ها، زمان‌بندی مصرف و هشدارهای مهم",
+      image: pregnancySupplementsImage,
+      link: "/articles/pregnancy-supplements",
+      category: "بارداری و زایمان",
+      date: "1403/11/02"
+    },
     {
       id: 91,
       title: "میزان نیاز روزانه ویتامین‌ها (RDA)",
