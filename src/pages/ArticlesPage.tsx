@@ -95,6 +95,7 @@ import herniaPainImage from "@/assets/hernia-pain-article.jpg";
 import medicalAnxietyImage from "@/assets/medical-anxiety-article.jpg";
 import eveningPrimroseOilImage from "@/assets/evening-primrose-oil-article.jpg";
 import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
+import vitaminHealthImage from "@/assets/vitamins-health-article.jpg";
 import drugCardiovascularImage from "@/assets/drug-cardiovascular-effects.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -103,6 +104,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 91,
+      title: "میزان نیاز روزانه ویتامین‌ها (RDA)",
+      description: "راهنمای جامع مقادیر توصیه شده روزانه (RDA) ویتامین‌ها، هشدارهای مسمومیت با ویتامین (هایپرویتامینوزیس)، تداخلات دارویی و ضرورت مشاوره پزشکی قبل از مصرف مکمل",
+      image: vitaminHealthImage,
+      link: "/articles/vitamins-health",
+      category: "تغذیه و رژیم",
+      date: "1403/11/02"
+    },
     {
       id: 90,
       title: "مواد مخدر و سکته قلبی: مکانیسم‌های آسیب‌رسان",
