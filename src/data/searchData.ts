@@ -779,6 +779,13 @@ export const articlesData: SearchItem[] = [
     url: '/articles/vitamins-health',
     description: 'نقش ویتامین‌ها در بدن',
     keywords: ['ویتامین', 'سلامت', 'تغذیه', 'مکمل', 'ویتامین']
+  },
+  {
+    type: 'article',
+    title: 'تأثیر آلودگی هوا بر قلب و ریه',
+    url: '/articles/air-pollution-effects',
+    description: 'اثرات آلودگی هوا بر سلامت قلبی-ریوی',
+    keywords: ['آلودگی هوا', 'PM2.5', 'AQI', 'قلب', 'ریه', 'سکته']
   }
 ];
 

@@ -98,6 +98,7 @@ import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
 import vitaminHealthImage from "@/assets/vitamins-health-article.jpg";
 import drugCardiovascularImage from "@/assets/drug-cardiovascular-effects.jpg";
 import pregnancySupplementsImage from "@/assets/pregnancy-supplements.jpg";
+import airPollutionEffectsImage from "@/assets/air-pollution-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -105,6 +106,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 93,
+      title: "تأثیر آلودگی هوا بر قلب و ریه: شاخص AQI",
+      description: "بررسی جامع اثرات آلودگی هوا بر سیستم قلبی-عروقی، ذرات PM2.5، شاخص کیفیت هوا (AQI) و راهکارهای حمایت تنفسی در منزل",
+      image: airPollutionEffectsImage,
+      link: "/articles/air-pollution-effects",
+      category: "محیط زیست و سلامت",
+      date: "1403/11/02"
+    },
     {
       id: 92,
       title: "مکمل‌های ضروری دوران بارداری",
