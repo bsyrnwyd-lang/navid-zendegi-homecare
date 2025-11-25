@@ -9,6 +9,9 @@ import LazyImage from "@/components/LazyImage";
 import { Link } from "react-router-dom";
 import { Phone } from "lucide-react";
 import airPollutionImage from "@/assets/air-pollution-article.jpg";
+import heartAttackImage from "@/assets/heart-palpitations.jpg";
+import strokeImage from "@/assets/af-stroke-risk-article.jpg";
+import highBPImage from "@/assets/high-blood-pressure-control.jpg";
 
 const AirPollutionEffectsPage = () => {
   const breadcrumbItems = [
@@ -22,21 +25,21 @@ const AirPollutionEffectsPage = () => {
       title: "علائم سکته قلبی: تشخیص زودهنگام و اقدامات فوری",
       description: "شناخت علائم هشداردهنده سکته قلبی و اهمیت مراجعه فوری به پزشک",
       link: "/articles/heart-attack-symptoms",
-      image: "/placeholder.svg",
+      image: heartAttackImage,
       category: "قلب و عروق"
     },
     {
       title: "علائم سکته مغزی و اهمیت طلایی زمان",
       description: "شناسایی سریع نشانه‌های سکته مغزی و اهمیت درمان فوری",
       link: "/articles/stroke-symptoms",
-      image: "/placeholder.svg",
+      image: strokeImage,
       category: "مغز و اعصاب"
     },
     {
       title: "کنترل فشار خون بالا: راهکارهای دارویی و غیردارویی",
       description: "روش‌های علمی کنترل و مدیریت فشار خون بالا",
       link: "/articles/high-blood-pressure-control",
-      image: "/placeholder.svg",
+      image: highBPImage,
       category: "قلب و عروق"
     }
   ];
