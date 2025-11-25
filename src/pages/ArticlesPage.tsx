@@ -99,6 +99,7 @@ import vitaminHealthImage from "@/assets/vitamins-health-article.jpg";
 import drugCardiovascularImage from "@/assets/drug-cardiovascular-effects.jpg";
 import pregnancySupplementsImage from "@/assets/pregnancy-supplements.jpg";
 import airPollutionEffectsImage from "@/assets/air-pollution-article.jpg";
+import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
@@ -106,6 +107,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 4;
   
   const articles = [
+    {
+      id: 94,
+      title: "نحوه صحیح اندازه‌گیری فشار خون",
+      description: "راهنمای کامل اندازه‌گیری دقیق فشار خون: آمادگی بیمار، وضعیت صحیح بدن، تکنیک استفاده از دستگاه و ثبت نتایج به مدت ۱۰ روز",
+      image: bloodPressureMeasurementImage,
+      link: "/articles/blood-pressure-measurement",
+      category: "قلب و عروق",
+      date: "1403/11/02"
+    },
     {
       id: 93,
       title: "تأثیر آلودگی هوا بر قلب و ریه: شاخص AQI",
