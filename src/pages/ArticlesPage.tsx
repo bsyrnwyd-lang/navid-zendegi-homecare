@@ -4,6 +4,9 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { Input } from "@/components/ui/input";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Search } from "lucide-react";
 import {
   Pagination,
   PaginationContent,
@@ -104,7 +107,9 @@ import { extraArticles } from "@/content/articles-extra";
 
 const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const articlesPerPage = 4;
+  const [selectedCategory, setSelectedCategory] = useState("همه");
+  const [searchQuery, setSearchQuery] = useState("");
+  const articlesPerPage = 12;
   
   const articles = [
     {
@@ -928,13 +933,56 @@ const ArticlesPage = () => {
     return Array.from(map.values());
   }, []);
 
-  const categories = ["همه", "اورژانس پزشکی", "بیماری‌های عفونی", "پیشگیری", "آزمایش‌ها", "تزریقات", "واکسیناسیون", "پوست و مو", "تکنولوژی پزشکی", "کودکان", "مغز و اعصاب", "قلب و عروق", "تغذیه", "عمومی", "بیماری‌های مزمن", "سلامت مادر و کودک"];
+  // Define main categories with mappings
+  const categoryMappings: Record<string, string[]> = {
+    "همه": [],
+    "قلب و عروق": ["قلب و عروق", "سلامت قلب"],
+    "تنفسی": ["تنفسی"],
+    "مغز و اعصاب": ["مغز و اعصاب", "عصبی"],
+    "روانپزشکی": ["روانپزشکی"],
+    "تغذیه": ["تغذیه", "تغذیه و رژیم", "تغذیه و سلامت"],
+    "بارداری": ["بارداری و زایمان", "بارداری", "سلامت مادر و کودک"],
+    "دارو": ["دارو"],
+    "عمومی": ["عمومی", "درمان و سلامت", "محیط زیست و سلامت", "اورژانس پزشکی", "جراحی", "اورولوژی"],
+  };
 
-  // Calculate pagination
-  const totalPages = Math.ceil(mergedArticles.length / articlesPerPage);
+  const mainCategories = Object.keys(categoryMappings);
+
+  // Filter articles based on selected category and search query
+  const filteredArticles = useMemo(() => {
+    let filtered = mergedArticles;
+
+    // Filter by category
+    if (selectedCategory !== "همه") {
+      const allowedCategories = categoryMappings[selectedCategory] || [];
+      filtered = filtered.filter(article => 
+        allowedCategories.includes(article.category)
+      );
+    }
+
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(article =>
+        article.title.toLowerCase().includes(query) ||
+        article.description.toLowerCase().includes(query) ||
+        article.category.toLowerCase().includes(query)
+      );
+    }
+
+    return filtered;
+  }, [mergedArticles, selectedCategory, searchQuery]);
+
+  // Reset to first page when filters change
+  useMemo(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchQuery]);
+
+  // Calculate pagination based on filtered articles
+  const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
   const startIndex = (currentPage - 1) * articlesPerPage;
   const endIndex = startIndex + articlesPerPage;
-  const currentArticles = mergedArticles.slice(startIndex, endIndex);
+  const currentArticles = filteredArticles.slice(startIndex, endIndex);
 
   // Generate page numbers for pagination
   const getPageNumbers = () => {
@@ -976,124 +1024,180 @@ const ArticlesPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20 md:pt-24">
-        {/* Hero Section */}
+        {/* Hero Section with Search */}
         <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  مقالات پزشکی نوید زندگی
-                </h1>
-                <p className="text-lg text-muted-foreground mb-8">
-                  راهنمای جامع سلامت و درمان در منزل با بهترین متخصصان پزشکی
-                </p>
+                مقالات پزشکی نوید زندگی
+              </h1>
+              <p className="text-lg text-muted-foreground mb-8">
+                راهنمای جامع سلامت و درمان در منزل با بهترین متخصصان پزشکی
+              </p>
+
+              {/* Search Box */}
+              <div className="relative max-w-xl mx-auto">
+                <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="جستجو در مقالات..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-4 pr-12 h-12 text-base"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Articles Grid */}
-        <section className="py-16">
+        {/* Categories Tabs Section */}
+        <section className="py-8 bg-muted/30 border-b">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {currentArticles.map((article) => (
-                <Card key={article.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-                  <Link to={article.link} className="block">
-                    <div className="overflow-hidden rounded-t-lg">
-                      <img 
-                        src={article.image}
-                        alt={article.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
-                        loading="lazy"
-                        onError={(e) => {
-                          const img = e.currentTarget as HTMLImageElement;
-                          if (img.src !== window.location.origin + "/placeholder.svg") {
-                            img.src = "/placeholder.svg";
-                          }
-                        }}
-                      />
-                    </div>
-                  </Link>
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
-                        {article.category}
-                      </span>
-                    </div>
-                    <CardTitle className="text-lg font-bold leading-tight hover:text-primary transition-colors">
-                      {article.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-muted-foreground mb-4 leading-relaxed">
-                      {article.description}
-                    </CardDescription>
-                    <Link 
-                      to={article.link}
-                      className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
-                    >
-                      مطالعه مقاله
-                      <svg className="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                      </svg>
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
+              <TabsList className="w-full flex flex-wrap h-auto gap-2 bg-transparent justify-center">
+                {mainCategories.map((category) => (
+                  <TabsTrigger
+                    key={category}
+                    value={category}
+                    className="px-6 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                  >
+                    {category}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
+          </div>
+        </section>
 
-            {/* Pagination */}
-            <div className="mt-12">
-              <Pagination>
-                <PaginationContent>
-                  <PaginationItem>
-                    <PaginationPrevious 
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        if (currentPage > 1) {
-                          setCurrentPage(currentPage - 1);
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }
-                      }}
-                      className={currentPage === 1 ? 'pointer-events-none opacity-50' : ''}
-                    />
-                  </PaginationItem>
-                  
-                  {getPageNumbers().map((page, index) => (
-                    <PaginationItem key={index}>
-                      {page === 'ellipsis' ? (
-                        <PaginationEllipsis />
-                      ) : (
-                        <PaginationLink
-                          href="#"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setCurrentPage(page as number);
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                          }}
-                          isActive={currentPage === page}
+        {/* Results Counter */}
+        <section className="py-6">
+          <div className="container mx-auto px-4">
+            <p className="text-muted-foreground text-center">
+              {filteredArticles.length} مقاله یافت شد
+              {selectedCategory !== "همه" && ` در دسته "${selectedCategory}"`}
+              {searchQuery && ` برای "${searchQuery}"`}
+            </p>
+          </div>
+        </section>
+
+        {/* Articles Grid */}
+        <section className="pb-16">
+          <div className="container mx-auto px-4">
+            {currentArticles.length === 0 ? (
+              <div className="text-center py-16">
+                <p className="text-xl text-muted-foreground">
+                  مقاله‌ای یافت نشد. لطفاً جستجو یا دسته‌بندی دیگری را امتحان کنید.
+                </p>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentArticles.map((article) => (
+                    <Card key={article.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                      <Link to={article.link} className="block">
+                        <div className="overflow-hidden rounded-t-lg">
+                          <img 
+                            src={article.image}
+                            alt={article.title}
+                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                            onError={(e) => {
+                              const img = e.currentTarget as HTMLImageElement;
+                              if (img.src !== window.location.origin + "/placeholder.svg") {
+                                img.src = "/placeholder.svg";
+                              }
+                            }}
+                          />
+                        </div>
+                      </Link>
+                      <CardHeader className="flex-none">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                            {article.category}
+                          </span>
+                        </div>
+                        <Link to={article.link}>
+                          <CardTitle className="text-base font-bold leading-tight hover:text-primary transition-colors line-clamp-2">
+                            {article.title}
+                          </CardTitle>
+                        </Link>
+                      </CardHeader>
+                      <CardContent className="flex-1 flex flex-col">
+                        <CardDescription className="text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-4 flex-1">
+                          {article.description}
+                        </CardDescription>
+                        <Link 
+                          to={article.link}
+                          className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors text-sm"
                         >
-                          {page}
-                        </PaginationLink>
-                      )}
-                    </PaginationItem>
+                          مطالعه مقاله
+                          <svg className="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                          </svg>
+                        </Link>
+                      </CardContent>
+                    </Card>
                   ))}
-                  
-                  <PaginationItem>
-                    <PaginationNext 
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        if (currentPage < totalPages) {
-                          setCurrentPage(currentPage + 1);
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }
-                      }}
-                      className={currentPage === totalPages ? 'pointer-events-none opacity-50' : ''}
-                    />
-                  </PaginationItem>
-                </PaginationContent>
-              </Pagination>
-            </div>
+                </div>
+
+                {/* Pagination */}
+                {totalPages > 1 && (
+                  <div className="mt-12">
+                    <Pagination>
+                      <PaginationContent>
+                        <PaginationItem>
+                          <PaginationPrevious 
+                            href="#"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              if (currentPage > 1) {
+                                setCurrentPage(currentPage - 1);
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                              }
+                            }}
+                            className={currentPage === 1 ? 'pointer-events-none opacity-50' : ''}
+                          />
+                        </PaginationItem>
+                        
+                        {getPageNumbers().map((page, index) => (
+                          <PaginationItem key={index}>
+                            {page === 'ellipsis' ? (
+                              <PaginationEllipsis />
+                            ) : (
+                              <PaginationLink
+                                href="#"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setCurrentPage(page as number);
+                                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }}
+                                isActive={currentPage === page}
+                              >
+                                {page}
+                              </PaginationLink>
+                            )}
+                          </PaginationItem>
+                        ))}
+                        
+                        <PaginationItem>
+                          <PaginationNext 
+                            href="#"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              if (currentPage < totalPages) {
+                                setCurrentPage(currentPage + 1);
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                              }
+                            }}
+                            className={currentPage === totalPages ? 'pointer-events-none opacity-50' : ''}
+                          />
+                        </PaginationItem>
+                      </PaginationContent>
+                    </Pagination>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </section>
 
@@ -1108,12 +1212,12 @@ const ArticlesPage = () => {
                 متخصصان نوید زندگی آماده ارائه خدمات پزشکی در منزل شما هستند
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
+                <a 
+                  href="tel:09386117912"
                   className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
                 >
-                  تماس با ما
-                </Link>
+                  تماس با ما: 09386117912
+                </a>
                 <Link 
                   to="/"
                   className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg hover:bg-muted transition-colors font-medium"
