@@ -352,7 +352,7 @@ const ArticlesPage = () => {
       description: "راهنمای جامع کلوپیدوگرل، داروی ضدپلاکت برای پیشگیری از حملات قلبی و سکته، مکانیسم اثر، عوارض و تداخلات دارویی",
       image: clopidogrelImage,
       link: "/articles/clopidogrel",
-      category: "داروها",
+      category: "دارو",
       date: "1403/11/02"
     },
     {
@@ -388,7 +388,7 @@ const ArticlesPage = () => {
       description: "راهنمای جامع بیزوپرولول، کاربردها در نارسایی قلبی، آنژین صدری و آریتمی‌ها، عوارض و تداخلات دارویی",
       image: bisopropolImage,
       link: "/articles/bisoprolol",
-      category: "داروها",
+      category: "دارو",
       date: "1403/11/03"
     },
     {
@@ -397,7 +397,7 @@ const ArticlesPage = () => {
       description: "راهنمای جامع رُزُواستاتین، یکی از قدرتمندترین استاتین‌ها برای کاهش کلسترول و پیشگیری از حوادث قلبی عروقی",
       image: rosuvastatinImage,
       link: "/articles/rosuvastatin",
-      category: "داروها",
+      category: "دارو",
       date: "1403/11/03"
     },
     {
@@ -406,7 +406,7 @@ const ArticlesPage = () => {
       description: "راهنمای جامع آتورواستاتین، کاربردها، عوارض جانبی، پایش دوره‌ای و ضرورت مراقبت در منزل",
       image: atorvastatinImage,
       link: "/articles/atorvastatin",
-      category: "داروها",
+      category: "دارو",
       date: "1403/11/03"
     },
     {
@@ -415,7 +415,7 @@ const ArticlesPage = () => {
       description: "راهنمای جامع آسپرین، مکانیسم اثر، کاربردهای حیاتی در بیماری‌های قلبی و سکته مغزی، عوارض جانبی و ملاحظات درمانی",
       image: aspirinImage,
       link: "/articles/aspirin",
-      category: "داروها",
+      category: "دارو",
       date: "1403/11/03"
     },
     {
@@ -442,7 +442,7 @@ const ArticlesPage = () => {
       description: "راهنمای جامع دگزامتازون، کاربردها، مکانیسم اثر، عوارض جانبی و تزریق ایمن در منزل توسط پرستاران مجرب",
       image: dexamethasoneImage,
       link: "/articles/dexamethasone",
-      category: "داروها",
+      category: "دارو",
       date: "1403/11/01"
     },
     {
@@ -543,7 +543,7 @@ const ArticlesPage = () => {
       description: "راهنمای کامل آتوروستاتین، کاربرد در کنترل چربی خون، نحوه مصرف، عوارض و اهمیت پیگیری پزشکی",
       image: atorvastatinImage,
       link: "/articles/atorvastatin",
-      category: "داروها"
+      category: "دارو"
     },
     {
       id: 45,
@@ -559,7 +559,7 @@ const ArticlesPage = () => {
       description: "راهنمای کامل وارفارین، موارد مصرف، عوارض جانبی، رژیم غذایی، کنترل INR و ویزیت پزشک در منزل",
       image: warfarinImage,
       link: "/articles/warfarin",
-      category: "داروها"
+      category: "دارو"
     },
     {
       id: 43,
