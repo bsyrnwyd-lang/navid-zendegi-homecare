@@ -64,6 +64,7 @@ import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
 import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
 import marijuanaEffectsImage from "@/assets/marijuana-effects.jpg";
 import methamphetamineEffectsImage from "@/assets/methamphetamine-effects.jpg";
+import pantoprazoleImage from "@/assets/pantoprazole-medication.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
@@ -114,6 +115,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 12;
   
   const articles = [
+    {
+      id: 1009,
+      title: "قرص پنتوپرازول (Pantoprazole): کاربردها، نحوه مصرف و عوارض جانبی",
+      description: "راهنمای کامل قرص پنتوپرازول (PPI): کاربردها در درمان ریفلاکس و زخم معده، نحوه مصرف صحیح، عوارض جانبی طولانی‌مدت و تداخلات دارویی",
+      image: pantoprazoleImage,
+      link: "/articles/pantoprazole",
+      category: "دارو",
+      date: "1403/10/28"
+    },
     {
       id: 94,
       title: "نحوه صحیح اندازه‌گیری فشار خون",
