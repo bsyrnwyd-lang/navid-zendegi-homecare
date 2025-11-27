@@ -93,6 +93,7 @@ const CocaineDangersPage = lazy(() => import("./pages/articles/CocaineDangersPag
 const MarijuanaEffectsPage = lazy(() => import("./pages/articles/MarijuanaEffectsPage"));
 const MethamphetamineEffectsPage = lazy(() => import("./pages/articles/MethamphetamineEffectsPage"));
 const PantoprazolePage = lazy(() => import("./pages/articles/PantoprazolePage"));
+const ADHDPage = lazy(() => import("./pages/articles/ADHDPage"));
 const BotulismPage = lazy(() => import("./pages/articles/BotulismPage"));
 const HPVTreatmentGuidePage = lazy(() => import("./pages/articles/HPVTreatmentGuidePage"));
 const ElderlyCareGuidePage = lazy(() => import("./pages/articles/ElderlyCareGuidePage"));
@@ -246,6 +247,7 @@ const App = () => (
            <Route path="/articles/marijuana-effects" element={<MarijuanaEffectsPage />} />
            <Route path="/articles/methamphetamine-effects" element={<MethamphetamineEffectsPage />} />
            <Route path="/articles/pantoprazole" element={<PantoprazolePage />} />
+           <Route path="/articles/adhd" element={<ADHDPage />} />
            <Route path="/articles/botulism" element={<BotulismPage />} />
            <Route path="/articles/hpv-treatment-guide" element={<HPVTreatmentGuidePage />} />
            <Route path="/articles/elderly-care-guide" element={<ElderlyCareGuidePage />} />
