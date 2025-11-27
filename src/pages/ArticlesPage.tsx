@@ -941,7 +941,8 @@ const ArticlesPage = () => {
     [...articles, ...extraArticles].forEach((a) => {
       if (!map.has(a.link)) map.set(a.link, a);
     });
-    return Array.from(map.values());
+    // Sort by id (descending) to show newest articles first
+    return Array.from(map.values()).sort((a, b) => (b.id || 0) - (a.id || 0));
   }, []);
 
   // Define main categories with mappings
