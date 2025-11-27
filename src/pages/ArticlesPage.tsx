@@ -65,6 +65,7 @@ import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
 import marijuanaEffectsImage from "@/assets/marijuana-effects.jpg";
 import methamphetamineEffectsImage from "@/assets/methamphetamine-effects.jpg";
 import pantoprazoleImage from "@/assets/pantoprazole-medication.jpg";
+import adhdImage from "@/assets/adhd-disorder.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
@@ -115,6 +116,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 12;
   
   const articles = [
+    {
+      id: 1010,
+      title: "اختلال کم‌توجهی/بیش‌فعالی (ADHD): انواع، علائم و روش‌های درمانی",
+      description: "راهنمای جامع اختلال ADHD: انواع اختلال، علائم بی‌توجهی و بیش‌فعالی، علل ژنتیکی و محیطی، روش‌های تشخیص و درمان دارویی و رفتاردرمانی",
+      image: adhdImage,
+      link: "/articles/adhd",
+      category: "روانپزشکی",
+      date: "1403/10/29"
+    },
     {
       id: 1009,
       title: "قرص پنتوپرازول (Pantoprazole): کاربردها، نحوه مصرف و عوارض جانبی",
