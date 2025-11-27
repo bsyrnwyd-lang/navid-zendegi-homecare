@@ -67,6 +67,7 @@ import methamphetamineEffectsImage from "@/assets/methamphetamine-effects.jpg";
 import pantoprazoleImage from "@/assets/pantoprazole-medication.jpg";
 import adhdImage from "@/assets/adhd-disorder.jpg";
 import sleepTechniquesImage from "@/assets/sleep-techniques.jpg";
+import sacubitrilValsartanImage from "@/assets/sacubitril-valsartan.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
@@ -117,6 +118,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 12;
   
   const articles = [
+    {
+      id: 1012,
+      title: "داروی ساکوبیتریل/والزارتان (Entresto): کاربردها، مکانیسم اثر و عوارض جانبی",
+      description: "راهنمای جامع داروی ترکیبی ساکوبیتریل/والزارتان (انترستو) برای درمان نارسایی قلبی: ARNI، موارد مصرف و هشدارهای مهم",
+      image: sacubitrilValsartanImage,
+      link: "/articles/sacubitril-valsartan",
+      category: "دارو",
+      date: "1403/10/29"
+    },
     {
       id: 1011,
       title: "راهکارهای کمک به خواب رفتن: از تکنیک‌های تنفسی تا مکمل‌های دارویی",

@@ -95,6 +95,7 @@ const MethamphetamineEffectsPage = lazy(() => import("./pages/articles/Methamphe
 const PantoprazolePage = lazy(() => import("./pages/articles/PantoprazolePage"));
 const ADHDPage = lazy(() => import("./pages/articles/ADHDPage"));
 const SleepTechniquesPage = lazy(() => import("./pages/articles/SleepTechniquesPage"));
+const SacubitrilValsartanPage = lazy(() => import("./pages/articles/SacubitrilValsartanPage"));
 const BotulismPage = lazy(() => import("./pages/articles/BotulismPage"));
 const HPVTreatmentGuidePage = lazy(() => import("./pages/articles/HPVTreatmentGuidePage"));
 const ElderlyCareGuidePage = lazy(() => import("./pages/articles/ElderlyCareGuidePage"));
@@ -250,6 +251,7 @@ const App = () => (
            <Route path="/articles/pantoprazole" element={<PantoprazolePage />} />
             <Route path="/articles/adhd" element={<ADHDPage />} />
             <Route path="/articles/sleep-techniques" element={<SleepTechniquesPage />} />
+            <Route path="/articles/sacubitril-valsartan" element={<SacubitrilValsartanPage />} />
            <Route path="/articles/botulism" element={<BotulismPage />} />
            <Route path="/articles/hpv-treatment-guide" element={<HPVTreatmentGuidePage />} />
            <Route path="/articles/elderly-care-guide" element={<ElderlyCareGuidePage />} />
