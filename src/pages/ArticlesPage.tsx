@@ -63,6 +63,7 @@ import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
 import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
 import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
 import marijuanaEffectsImage from "@/assets/marijuana-effects.jpg";
+import methamphetamineEffectsImage from "@/assets/methamphetamine-effects.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
@@ -539,6 +540,15 @@ const ArticlesPage = () => {
       link: "/articles/marijuana-effects",
       category: "روانپزشکی",
       date: "1403/10/25"
+    },
+    {
+      id: 1007,
+      title: "عوارض مصرف شیشه (مت‌آمفتامین): تخریب شدید مغز، قلب و سیستم عصبی",
+      description: "بررسی جامع عوارض خطرناک مصرف شیشه شامل سایکوز، آسیب‌های مغزی، سکته قلبی، کاردیومیوپاتی و دهان مت",
+      image: methamphetamineEffectsImage,
+      link: "/articles/methamphetamine-effects",
+      category: "روانپزشکی",
+      date: "1403/10/26"
     },
     {
       id: 47,
