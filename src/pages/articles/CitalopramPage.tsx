@@ -1,43 +1,48 @@
-import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
-import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
+import ArticleLayout from "@/components/ArticleLayout";
 import SEOHead from "@/components/SEOHead";
-import StructuredData from "@/components/StructuredData";
+import ArticleSchema from "@/components/ArticleSchema";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
-import citalopramImage from "@/assets/citalopram-medication.jpg";
+import { Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import citalopramImage from "@/assets/citalopram-antidepressant.jpg";
+import depressionImage from "@/assets/depression-article.jpg";
+import psychiatryImage from "@/assets/psychiatry-home-visit.jpg";
+import medicalAnxietyImage from "@/assets/medical-anxiety-article.jpg";
 
 const CitalopramPage = () => {
-  const breadcrumbs = [
-    { name: "خانه", url: "https://navidzendegi.com/" },
-    { name: "مقالات", url: "https://navidzendegi.com/articles" },
-    { name: "سیتالوپرام", url: "https://navidzendegi.com/articles/citalopram" }
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "قرص سیتالوپرام", url: "/articles/citalopram" },
   ];
 
   const faqs = [
     {
-      question: "سیتالوپرام چقدر طول می‌کشد تا اثر کند؟",
-      answer: "معمولاً اثرات کامل سیتالوپرام بین 4 تا 6 هفته پس از شروع مصرف ظاهر می‌شود. در برخی افراد ممکن است بهبود جزئی در هفته‌های اول مشاهده شود اما برای دستیابی به نتیجه کامل نیاز به صبر و پیگیری منظم با روانپزشک است."
+      question: "سیتالوپرام چه مدت طول می‌کشد تا اثر کند؟",
+      answer: "شروع اثر ضد افسردگی سیتالوپرام معمولاً 1 تا 4 هفته طول می‌کشد و تأثیر کامل آن ممکن است پس از 8 تا 12 هفته مشاهده شود. بنابراین، قطع یا تغییر دوز نباید خودسرانه باشد و باید با صبر و پیگیری تحت نظر روانپزشک ادامه یابد."
     },
     {
-      question: "آیا می‌توانم سیتالوپرام را به صورت ناگهانی قطع کنم؟",
-      answer: "خیر، قطع ناگهانی سیتالوپرام می‌تواند منجر به سندرم قطع دارو شود که شامل علائمی مانند سرگیجه، تهوع، اضطراب و تحریک‌پذیری است. قطع دارو باید به صورت تدریجی و تحت نظارت دقیق روانپزشک انجام شود."
+      question: "چرا سیتالوپرام نباید به طور ناگهانی قطع شود؟",
+      answer: "قطع ناگهانی سیتالوپرام منجر به سندرم قطع مصرف (Discontinuation Syndrome) می‌شود که شامل علائمی مانند تهوع، سرگیجه، لرزش، اضطراب، اختلال خواب و احساس شوک الکتریکی در دست‌ها و پاها است. دوز دارو باید همیشه تحت نظر پزشک و به تدریج کاهش یابد."
     },
     {
-      question: "عوارض جانبی سیتالوپرام چیست؟",
-      answer: "عوارض جانبی شایع شامل تهوع، اسهال، خشکی دهان، بی‌خوابی، خواب‌آلودگی و اختلالات جنسی است. عوارض جدی نادر مانند سندرم سروتونین و طولانی شدن فاصله QT قلبی نیز ممکن است رخ دهد که نیاز به پایش پزشکی دارند."
+      question: "چه عوارض قلبی خطرناکی با مصرف سیتالوپرام مرتبط است؟",
+      answer: "سیتالوپرام، به ویژه در دوزهای بالاتر از 40 میلی‌گرم، می‌تواند باعث طولانی شدن فاصله QT در نوار قلب شود که خطر آریتمی قلبی خطرناک به نام تورساد دو پوانت و ایست قلبی ناگهانی را افزایش می‌دهد. علائم هشداردهنده شامل غش کردن، سرگیجه شدید، تپش قلب و درد قفسه سینه است."
     },
     {
-      question: "آیا سیتالوپرام در بارداری امن است؟",
-      answer: "مصرف سیتالوپرام در بارداری تنها در صورتی توصیه می‌شود که منافع آن بر خطرات احتمالی غلبه کند. زنان باردار یا کسانی که قصد بارداری دارند باید حتماً با روانپزشک خود مشورت کنند تا بهترین تصمیم درمانی اتخاذ شود."
+      question: "سندرم سروتونین چیست؟",
+      answer: "سندرم سروتونین یک وضعیت نادر اما بالقوه کشنده است که در اثر افزایش بیش از حد سروتونین در مغز ایجاد می‌شود، به ویژه هنگام مصرف همزمان با داروهای دیگر. علائم شامل بی‌قراری شدید، توهم، تند شدن ضربان قلب، افزایش تعریق، تب بالا، سفت شدن عضلات و مشکلات هماهنگی است."
     },
     {
-      question: "چرا باید با ویزیت آنلاین روانپزشک سیتالوپرام مصرف کنم؟",
-      answer: "ویزیت آنلاین روانپزشک امکان تنظیم دقیق دوز، پایش عوارض جانبی، و مدیریت تداخلات دارویی را در محیط آرام منزل فراهم می‌کند. این خدمات به ویژه برای بیمارانی که دسترسی محدود به کلینیک دارند یا ترجیح می‌دهند در خانه مشاوره دریافت کنند، بسیار مفید است."
+      question: "آیا سیتالوپرام برای کودکان و نوجوانان امن است؟",
+      answer: "داروهای ضد افسردگی، به ویژه در شروع درمان در کودکان، نوجوانان و جوانان زیر 25 سال، ممکن است ریسک افکار یا اقدام به خودکشی را افزایش دهند. پایش دقیق بیمار توسط خانواده و پزشک در هفته‌های ابتدایی درمان ضروری است."
+    },
+    {
+      question: "چه کسانی نباید سیتالوپرام مصرف کنند؟",
+      answer: "افرادی که سابقه آریتمی قلبی، طولانی شدن فاصله QT، نارسایی قلبی، یا مصرف همزمان داروهایی که سروتونین را افزایش می‌دهند (مانند MAOIs) دارند، نباید سیتالوپرام مصرف کنند. همچنین در سالمندان و افرادی با مشکلات کلیوی یا کبدی باید با احتیاط بیشتری تجویز شود."
     }
   ];
 
@@ -45,234 +50,221 @@ const CitalopramPage = () => {
     {
       title: "افسردگی: علائم، تشخیص و روش‌های درمان",
       description: "آشنایی کامل با علائم افسردگی، روش‌های تشخیص و گزینه‌های درمانی مؤثر",
-      image: "/src/assets/depression-article.jpg",
+      image: depressionImage,
       link: "/articles/depression",
-      category: "سلامت روان"
+      category: "روانپزشکی"
     },
     {
-      title: "ویزیت آنلاین پزشک: راهنمای جامع",
-      description: "هرآنچه باید درباره ویزیت آنلاین پزشک و مزایای آن بدانید",
-      image: "/src/assets/doctor-patient-home.jpg",
-      link: "/services/online-doctor",
-      category: "خدمات پزشکی"
+      title: "اضطراب پزشکی: علل، علائم و راهکارهای کنترل",
+      description: "بررسی جامع اضطراب پزشکی و روش‌های مدیریت آن با کمک متخصصان",
+      image: medicalAnxietyImage,
+      link: "/articles/medical-anxiety",
+      category: "روانپزشکی"
     },
     {
-      title: "اختلالات اضطرابی: علائم و درمان",
-      description: "شناخت انواع اختلالات اضطرابی و روش‌های درمان آنها",
-      image: "/src/assets/psychiatry-home-visit.jpg",
+      title: "خدمات روانپزشکی در منزل",
+      description: "دریافت مشاوره و ویزیت روانپزشک در منزل برای درمان افسردگی و اضطراب",
+      image: psychiatryImage,
       link: "/services/psychiatry",
-      category: "سلامت روان"
+      category: "خدمات"
     }
   ];
 
   return (
-    <div className="min-h-screen flex flex-col" dir="rtl">
+    <ArticleLayout>
       <SEOHead
-        title="سیتالوپرام (سلکسا): درمان افسردگی، عوارض و ویزیت آنلاین روانپزشک"
-        description="راهنمای جامع سیتالوپرام (Citalopram): مکانیسم اثر، کاربردهای درمانی در افسردگی و اضطراب، عوارض جانبی و اهمیت ویزیت آنلاین روانپزشک نوید زندگی"
-        keywords="سیتالوپرام، Citalopram، سلکسا، افسردگی، اضطراب، SSRI، سروتونین، ویزیت آنلاین روانپزشک، نوید زندگی"
+        title="قرص سیتالوپرام: کاربردها، عوارض جانبی و هشدارهای حیاتی | نوید زندگی"
+        description="راهنمای کامل قرص سیتالوپرام (SSRI): مکانیسم عمل، کاربردها در درمان افسردگی و اضطراب، عوارض قلبی، سندرم سروتونین و ضرورت نظارت پزشکی"
+        keywords="سیتالوپرام، ضد افسردگی، SSRI، افسردگی، اضطراب، OCD، عوارض قلبی، سندرم سروتونین، QT طولانی، قطع دارو، روانپزشکی"
         canonical="https://navidzendegi.com/articles/citalopram"
-        ogImage="https://navidzendegi.com/src/assets/citalopram-medication.jpg"
         ogType="article"
-        publishedTime="2025-01-15T10:00:00Z"
-        modifiedTime="2025-01-15T10:00:00Z"
+        publishedTime="2025-01-15T12:00:00+03:30"
+        modifiedTime="2025-01-15T12:00:00+03:30"
       />
-      
-      <StructuredData
-        breadcrumbs={breadcrumbs}
-        article={{
-          title: "سیتالوپرام (Citalopram): مدیریت تخصصی افسردگی و اختلالات اضطراب",
-          description: "راهنمای کامل سیتالوپرام: مکانیسم اثر، کاربردها، عوارض و نکات مهم درمانی",
-          author: "نوید زندگی",
-          publishedDate: "2025-01-15T10:00:00Z",
-          modifiedDate: "2025-01-15T10:00:00Z",
-          image: "https://navidzendegi.com/src/assets/citalopram-medication.jpg"
-        }}
-        faqs={faqs}
+      <ArticleSchema
+        title="قرص سیتالوپرام (Citalopram): کاربردها، مکانیسم عمل، عوارض جانبی و هشدارهای حیاتی"
+        description="راهنمای جامع قرص سیتالوپرام شامل کاربردها، عوارض جانبی و هشدارهای مهم"
+        publishedTime="2025-01-15T12:00:00+03:30"
+        modifiedTime="2025-01-15T12:00:00+03:30"
+        image="/src/assets/citalopram-antidepressant.jpg"
       />
-      
-      <Header />
-      <FloatingContact />
-      
-      <main className="flex-1">
-        <article className="container mx-auto px-4 py-8 max-w-4xl">
-          <BreadcrumbNavigation items={[
-            { name: "خانه", url: "/" },
-            { name: "مقالات", url: "/articles" },
-            { name: "سیتالوپرام", url: "/articles/citalopram" }
-          ]} />
-          
-          <div className="mt-8 mb-8">
-            <img
-              src={citalopramImage}
-              alt="قرص سیتالوپرام (Citalopram) برای درمان افسردگی و اضطراب"
-              className="w-full h-[400px] object-cover rounded-lg shadow-lg"
-              loading="eager"
-            />
+
+      <main className="container mx-auto px-4 py-12 max-w-4xl">
+        <BreadcrumbNavigation items={breadcrumbItems} />
+
+        <article className="prose prose-lg max-w-none">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-foreground mb-4">
+              قرص سیتالوپرام (Citalopram): کاربردها، مکانیسم عمل، عوارض جانبی و هشدارهای حیاتی
+            </h1>
+            <div className="flex items-center gap-4 text-muted-foreground text-sm mb-6">
+              <span>نویسنده: تیم پزشکی نوید زندگی</span>
+              <span>تاریخ انتشار: 15 ژانویه 2025</span>
+            </div>
+          </header>
+
+          <img
+            src={citalopramImage}
+            alt="قرص سیتالوپرام - داروی ضد افسردگی SSRI"
+            className="w-full h-auto rounded-lg shadow-lg mb-8"
+            loading="eager"
+          />
+
+          <div className="bg-destructive/10 border-r-4 border-destructive p-6 rounded-lg mb-8">
+            <p className="text-destructive-foreground font-semibold mb-2">
+              ⚠️ هشدار مهم: خودسرانه مصرف دارو ممنوع است
+            </p>
+            <p className="text-sm text-muted-foreground">
+              سیتالوپرام باید فقط با تجویز پزشک متخصص و تحت نظارت دقیق مصرف شود. قطع یا تغییر دوز خودسرانه خطرناک است.
+            </p>
           </div>
 
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            سیتالوپرام (Citalopram): مدیریت تخصصی افسردگی و اختلالات اضطراب
-          </h1>
-
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              <strong>سیتالوپرام (Citalopram)</strong> یکی از داروهای رایج و مؤثر در دسته <strong>مهارکننده‌های انتخابی بازجذب سروتونین (SSRI)</strong> است. این دارو به طور عمده برای درمان <strong>افسردگی اساسی (Major Depressive Disorder)</strong> و برخی از <strong>اختلالات اضطرابی</strong> تجویز می‌شود و با نام تجاری <strong>سلکسا (Celexa)</strong> نیز شناخته می‌شود. سیتالوپرام با هدف بهبود خلق‌وخو، کاهش اضطراب و بازگرداندن تعادل شیمیایی مغز عمل می‌کند.
+          <div className="space-y-6 text-foreground leading-relaxed">
+            <p>
+              قرص سیتالوپرام یکی از داروهای پرمصرف و مؤثر در گروه مهارکننده‌های انتخابی بازجذب سروتونین (SSRIs) است. این دارو با تنظیم سطح یکی از مهم‌ترین انتقال‌دهنده‌های عصبی در مغز، به بهبود خلق‌وخو و کاهش علائم اضطرابی کمک می‌کند. سیتالوپرام، مانند تمام داروهای مؤثر بر سیستم عصبی مرکزی، باید فقط با تجویز <a href="/services/psychiatry" className="text-primary hover:underline">پزشک متخصص روانپزشکی</a> و تحت نظارت دقیق مصرف شود.
             </p>
 
-            <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
-              مکانیسم اثر سیتالوپرام: افزایش سطح سروتونین
+            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">
+              کاربردها و مکانیسم عمل سیتالوپرام
             </h2>
-            
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              سیتالوپرام عملکرد خود را با تأثیرگذاری بر یکی از مهم‌ترین انتقال‌دهنده‌های عصبی در مغز، یعنی <strong>سروتونین</strong>، انجام می‌دهد:
+            <p>
+              سیتالوپرام یک داروی ضد <a href="/articles/depression" className="text-primary hover:underline">افسردگی</a> است و برای درمان اختلالات زیر تجویز می‌شود:
             </p>
 
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong>بازجذب سروتونین:</strong> سروتونین یک انتقال‌دهنده عصبی کلیدی است که در تنظیم خلق‌وخو، خواب و اشتها نقش دارد. در افراد مبتلا به <Link to="/articles/depression" className="text-primary hover:underline">افسردگی</Link>، سطح این ماده اغلب پایین است.
-            </p>
-
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong>مهار انتخابی:</strong> سیتالوپرام با مهار انتخابی بازجذب سروتونین توسط سلول‌های عصبی، میزان سروتونین در شکاف سیناپسی (فضای بین سلول‌های عصبی) را افزایش می‌دهد. این افزایش به مرور زمان منجر به بهبود علائم افسردگی و اضطراب می‌شود.
-            </p>
-
-            <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
-              کاربردهای درمانی اصلی سیتالوپرام
-            </h2>
-            
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              سیتالوپرام یک داروی <Link to="/services/psychiatry" className="text-primary hover:underline">روانپزشکی</Link> با کاربردهای تأیید شده در درمان بیماری‌های زیر است:
-            </p>
-
-            <ul className="list-disc list-inside space-y-3 text-muted-foreground mb-6">
-              <li>
-                <strong>اختلال افسردگی اساسی (MDD):</strong> برای تسکین علائم افسردگی مانند غم و اندوه مستمر، از دست دادن علاقه، و مشکلات خواب
-              </li>
-              <li>
-                <strong>اختلال هراس (Panic Disorder):</strong> کاهش دفعات و شدت حملات پانیک
-              </li>
-              <li>
-                <strong>اختلال وسواس فکری-عملی (OCD):</strong> در برخی موارد و با نظر پزشک، برای کاهش علائم وسواسی
-              </li>
+            <ul className="list-disc list-inside space-y-2 mr-6">
+              <li><strong>اختلال افسردگی اساسی (Major Depressive Disorder):</strong> کمک به بهبود خلق‌وخو، افزایش سطح انرژی و انگیزه.</li>
+              <li><strong>اختلال وسواس فکری-عملی (OCD):</strong> کمک به کنترل افکار وسواسی و اعمال اجباری.</li>
+              <li><strong>اختلالات اضطرابی:</strong> از جمله اختلال هراس (Panic Disorder) و اختلال <a href="/articles/medical-anxiety" className="text-primary hover:underline">اضطراب اجتماعی</a>.</li>
+              <li><strong>سایر موارد (خارج از برچسب):</strong> در مواردی مانند نوروپاتی دیابتی، انزال زودرس و اختلالات خوردن نیز ممکن است تجویز شود.</li>
             </ul>
 
-            <div className="bg-primary/5 border-r-4 border-primary p-6 rounded-lg my-8">
-              <p className="text-foreground font-semibold mb-2">نکته مهم:</p>
-              <p className="text-muted-foreground leading-relaxed">
-                اثرات کامل درمانی سیتالوپرام معمولاً چندین هفته (4 تا 6 هفته) پس از شروع مصرف ظاهر می‌شود و نیاز به صبر و پیگیری منظم دارد. دوز دارو باید توسط روانپزشک متخصص تنظیم شود.
+            <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">
+              مکانیسم عمل
+            </h3>
+            <p>
+              سیتالوپرام با مهار انتخابی بازجذب سروتونین از شکاف سیناپسی در پایانه‌های عصبی، باعث افزایش سطح سروتونین فعال در مغز می‌شود. سروتونین که اغلب به عنوان "هورمون شادی" شناخته می‌شود، نقش کلیدی در تنظیم خلق‌وخو، خواب، اشتها و احساس خوب بودن دارد. افزایش فعالیت سروتونین به مرور زمان باعث ایجاد تعادل روانی و کاهش علائم بیماری می‌شود.
+            </p>
+
+            <div className="bg-accent/20 border-r-4 border-accent p-6 rounded-lg my-6">
+              <p className="font-semibold mb-2">💡 نکته مهم:</p>
+              <p className="text-sm">
+                شروع اثر ضد افسردگی سیتالوپرام معمولاً 1 تا 4 هفته طول می‌کشد و تأثیر کامل آن ممکن است پس از 8 تا 12 هفته مشاهده شود. بنابراین، قطع یا تغییر دوز نباید خودسرانه باشد.
               </p>
             </div>
 
-            <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
-              عوارض جانبی، تداخلات و ملاحظات درمانی
+            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">
+              عوارض جانبی شایع و موقت
             </h2>
-            
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              مانند تمام داروهای SSRI، سیتالوپرام نیز عوارض جانبی دارد که نیاز به پایش دقیق دارند.
+            <p>
+              مانند هر داروی دیگری، سیتالوپرام می‌تواند عوارض جانبی ایجاد کند که اغلب در چند هفته اول مصرف مشاهده شده و با عادت کردن بدن به دارو، برطرف می‌شوند:
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">
-              1. عوارض جانبی شایع
-            </h3>
-            
-            <ul className="list-disc list-inside space-y-3 text-muted-foreground mb-6">
-              <li>
-                <strong>عوارض گوارشی:</strong> تهوع، اسهال و خشکی دهان (اغلب در ابتدای درمان و گذرا هستند)
-              </li>
-              <li>
-                <strong>اختلالات خواب:</strong> بی‌خوابی یا خواب‌آلودگی
-              </li>
-              <li>
-                <strong>اختلالات جنسی:</strong> کاهش میل جنسی یا اختلال در عملکرد جنسی (از شایع‌ترین عوارض SSRIها)
-              </li>
-            </ul>
+            <div className="overflow-x-auto my-6">
+              <table className="w-full border-collapse border border-border">
+                <thead>
+                  <tr className="bg-muted">
+                    <th className="border border-border p-3 text-right">سیستم بدن</th>
+                    <th className="border border-border p-3 text-right">عوارض شایع</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">دستگاه گوارش</td>
+                    <td className="border border-border p-3">تهوع (شایع‌ترین عارضه)، سوءهاضمه، اسهال یا یبوست، خشکی دهان</td>
+                  </tr>
+                  <tr className="bg-muted/50">
+                    <td className="border border-border p-3 font-semibold">سیستم عصبی مرکزی</td>
+                    <td className="border border-border p-3">خواب‌آلودگی، بی‌خوابی، سردرد، گیجی، لرزش (Tremor)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">عملکرد جنسی</td>
+                    <td className="border border-border p-3">کاهش میل جنسی، اختلال در رسیدن به ارگاسم، تأخیر در انزال (در مردان)</td>
+                  </tr>
+                  <tr className="bg-muted/50">
+                    <td className="border border-border p-3 font-semibold">سایر موارد</td>
+                    <td className="border border-border p-3">تعریق بیش‌ازحد، خستگی یا ضعف، تغییر در اشتها و وزن</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">
-              2. عوارض جدی و هشدارها
-            </h3>
-            
-            <ul className="list-disc list-inside space-y-3 text-muted-foreground mb-6">
-              <li>
-                <strong>سندرم سروتونین:</strong> یک عارضه نادر اما جدی است که در اثر مصرف همزمان با داروهای دیگر افزایش‌دهنده سروتونین (مانند MAOIs) رخ می‌دهد و نیاز به مراجعه فوری به پزشک دارد
-              </li>
-              <li>
-                <strong>طولانی شدن فاصله QT:</strong> در دوزهای بالا می‌تواند باعث تغییرات در <Link to="/cardiology" className="text-primary hover:underline">ریتم قلب</Link> شود و در بیمارانی که سابقه مشکلات قلبی دارند، باید با احتیاط مصرف شود
-              </li>
-              <li>
-                <strong>قطع ناگهانی ممنوع:</strong> سیتالوپرام نباید به صورت ناگهانی قطع شود؛ قطع مصرف باید به صورت تدریجی و تحت نظارت روانپزشک انجام گیرد تا از بروز سندرم قطع دارو (Discontinuation Syndrome) جلوگیری شود
-              </li>
-            </ul>
-
-            <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">
-              3. ملاحظات بارداری و شیردهی
-            </h3>
-            
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              مصرف سیتالوپرام در بارداری و شیردهی تنها در صورتی مجاز است که منافع آن بر خطرات احتمالی آن غلبه کند و حتماً باید با مشورت متخصص باشد.
-            </p>
-
-            <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
-              پایش و تنظیم دارو با ویزیت آنلاین روانپزشک
+            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">
+              هشدارهای حیاتی و عوارض جانبی جدی
             </h2>
-            
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              به دلیل اهمیت تنظیم دقیق دوز و مدیریت عوارض جانبی، استفاده از خدمات تخصصی در منزل یا به صورت آنلاین، برای بیماران مصرف‌کننده سیتالوپرام ضروری است.
+            <p>
+              برخی عوارض جانبی سیتالوپرام نادر، اما جدی هستند و در صورت مشاهده، باید فوراً به پزشک اطلاع داده شود:
             </p>
 
-            <ul className="list-disc list-inside space-y-3 text-muted-foreground mb-6">
-              <li>
-                <strong>تنظیم دوز تخصصی:</strong> <Link to="/services/online-doctor" className="text-primary hover:underline">ویزیت آنلاین روانپزشک</Link> نوید زندگی امکان تنظیم دقیق دوز دارو، مدیریت عوارض و ارزیابی تأثیر درمان را در محیط آرام منزل فراهم می‌کند
-              </li>
-              <li>
-                <strong>پرهیز از قطع خودسرانه:</strong> مشاوره مستمر با روانپزشک آنلاین، اطمینان می‌دهد که بیمار از قطع ناگهانی و خودسرانه دارو پرهیز می‌کند
-              </li>
+            <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">
+              ۱. عوارض قلبی (سندرم QT طولانی)
+            </h3>
+            <ul className="list-disc list-inside space-y-2 mr-6">
+              <li>سیتالوپرام، به ویژه در دوزهای بالاتر از 40 میلی‌گرم (یا در سالمندان بالاتر از 20 میلی‌گرم)، می‌تواند باعث طولانی شدن فاصله QT در نوار قلب شود.</li>
+              <li>این عارضه خطر یک آریتمی قلبی خطرناک به نام تورساد دو پوانت (Torsades de Pointes) و <a href="/articles/heart-attack-symptoms" className="text-primary hover:underline">ایست قلبی ناگهانی</a> را افزایش می‌دهد.</li>
+              <li><strong>علائم هشداردهنده:</strong> غش کردن، سرگیجه شدید، تپش قلب سریع یا نامنظم، یا درد قفسه سینه.</li>
             </ul>
 
-            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-lg p-8 my-12 text-center">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                نیاز به مشاوره تخصصی روانپزشکی دارید؟
+            <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">
+              ۲. سندرم سروتونین
+            </h3>
+            <ul className="list-disc list-inside space-y-2 mr-6">
+              <li>این یک وضعیت نادر اما بالقوه کشنده است که در اثر افزایش بیش از حد سروتونین در مغز ایجاد می‌شود، به ویژه هنگام مصرف همزمان با داروهای دیگر که سطح سروتونین را بالا می‌برند (مثل MAOIs یا برخی داروهای میگرن).</li>
+              <li><strong>علائم:</strong> بی‌قراری شدید، توهم، تند شدن ضربان قلب، افزایش تعریق، تب بالا، سفت شدن عضلات و مشکلات هماهنگی.</li>
+            </ul>
+
+            <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">
+              ۳. افکار و رفتار خودکشی
+            </h3>
+            <ul className="list-disc list-inside space-y-2 mr-6">
+              <li>داروهای ضد افسردگی، به ویژه در شروع درمان یا هنگام تغییر دوز در کودکان، نوجوانان و جوانان زیر 25 سال، ممکن است ریسک افکار یا اقدام به خودکشی را افزایش دهند.</li>
+              <li>پایش دقیق بیمار توسط خانواده و پزشک در هفته‌های ابتدایی درمان ضروری است.</li>
+            </ul>
+
+            <h3 className="text-2xl font-semibold text-foreground mt-6 mb-3">
+              ۴. علائم قطع مصرف (Discontinuation Syndrome)
+            </h3>
+            <ul className="list-disc list-inside space-y-2 mr-6">
+              <li>هرگز نباید سیتالوپرام را به طور ناگهانی قطع کرد. قطع ناگهانی منجر به علائمی مانند تهوع، سرگیجه، لرزش، اضطراب، اختلال خواب و احساس شوک الکتریکی در دست‌ها و پاها می‌شود.</li>
+              <li>دوز دارو باید همیشه تحت نظر پزشک و به تدریج کاهش یابد.</li>
+            </ul>
+
+            <div className="bg-primary/10 border-r-4 border-primary p-6 rounded-lg my-8">
+              <h3 className="text-xl font-bold text-foreground mb-4">
+                مشاوره تخصصی برای مصرف ایمن سیتالوپرام
               </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                برای شروع درمان سیتالوپرام، تنظیم دوز ایمن و مدیریت عوارض جانبی، با روانپزشکان مجرب ما مشورت کنید. برای رزرو وقت ویزیت آنلاین روانپزشک و شروع مسیر بهبود، همین حالا با نوید زندگی تماس بگیرید.
+              <p className="text-foreground mb-4">
+                مصرف سیتالوپرام نیازمند نظارت تخصصی است، به‌ویژه به دلیل هشدارهای قلبی و روانی. برای <a href="/services/psychiatry" className="text-primary hover:underline font-semibold">مشاوره روانپزشکی آنلاین</a> جهت تنظیم دقیق دوز و ارزیابی قلبی (ECG) قبل و حین مصرف، با نوید زندگی تماس بگیرید تا از ایمنی درمان خود مطمئن شوید.
               </p>
-              <a
-                href="tel:09386117912"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                <span>تماس: 09386117912</span>
+              <a href="tel:09386117912">
+                <Button size="lg" className="w-full sm:w-auto">
+                  <Phone className="ml-2 h-5 w-5" />
+                  مشاوره روانپزشکی: 09386117912
+                </Button>
               </a>
             </div>
 
-            <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">
+            <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">
               منابع (References)
             </h2>
-            
-            <ol className="list-decimal list-inside space-y-3 text-sm text-muted-foreground mb-8">
+            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
               <li>
-                Kennedy, S. H., et al. (2016). Canadian Network for Mood and Anxiety Treatments (CANMAT) 2016 Clinical Guidelines for the Management of Adults with Major Depressive Disorder. The Canadian Journal of Psychiatry, 61(9), 540-560.
+                Mayo Clinic. (2024). Citalopram (Oral Route) - Side Effects & Dosage.
               </li>
               <li>
-                Stahl, S. M. (2013). Stahl's Essential Psychopharmacology: Neuroscientific Basis and Practical Applications. Cambridge University Press. (Explaining SSRI mechanism).
+                Stahl, S. M. (2017). Stahl's Essential Psychopharmacology: Neuroscientific Basis and Practical Applications. Cambridge University Press.
               </li>
               <li>
-                Fergusson, D. M., et al. (2005). Selective serotonin reuptake inhibitor use and the risk of congenital anomalies: a meta-analysis of cohort studies. Psychopharmacology (Berl), 179(3), 505-512.
+                U.S. Food and Drug Administration (FDA). (2011). FDA Drug Safety Communication: Revised recommendations for citalopram related to a potential for abnormal heart rhythms with high doses.
               </li>
             </ol>
           </div>
-
-          <FAQSection faqs={faqs} />
-          
-          <div className="mt-12">
-            <PricingInfo />
-          </div>
-
-          <RelatedArticles articles={relatedArticles} />
         </article>
+
+        <FAQSection faqs={faqs} />
+        <RelatedArticles articles={relatedArticles} />
+        <PricingInfo />
       </main>
-      
-      <Footer />
-    </div>
+    </ArticleLayout>
   );
 };
 
