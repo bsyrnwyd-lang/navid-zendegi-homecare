@@ -90,6 +90,7 @@ const HighBloodPressurePage = lazy(() => import("./pages/articles/HighBloodPress
 const AtorvastatinPage = lazy(() => import("./pages/articles/AtorvastatinPage"));
 const MediterraneanDietPage = lazy(() => import("./pages/articles/MediterraneanDietPage"));
 const CocaineDangersPage = lazy(() => import("./pages/articles/CocaineDangersPage"));
+const MarijuanaEffectsPage = lazy(() => import("./pages/articles/MarijuanaEffectsPage"));
 const BotulismPage = lazy(() => import("./pages/articles/BotulismPage"));
 const HPVTreatmentGuidePage = lazy(() => import("./pages/articles/HPVTreatmentGuidePage"));
 const ElderlyCareGuidePage = lazy(() => import("./pages/articles/ElderlyCareGuidePage"));
@@ -240,6 +241,7 @@ const App = () => (
            <Route path="/articles/atorvastatin" element={<AtorvastatinPage />} />
            <Route path="/articles/mediterranean-diet" element={<MediterraneanDietPage />} />
            <Route path="/articles/cocaine-dangers" element={<CocaineDangersPage />} />
+           <Route path="/articles/marijuana-effects" element={<MarijuanaEffectsPage />} />
            <Route path="/articles/botulism" element={<BotulismPage />} />
            <Route path="/articles/hpv-treatment-guide" element={<HPVTreatmentGuidePage />} />
            <Route path="/articles/elderly-care-guide" element={<ElderlyCareGuidePage />} />
