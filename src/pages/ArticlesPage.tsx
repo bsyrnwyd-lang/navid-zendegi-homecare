@@ -62,6 +62,7 @@ import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
 import atorvastatinImage from "@/assets/atorvastatin-medication.jpg";
 import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
 import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
+import marijuanaEffectsImage from "@/assets/marijuana-effects.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
@@ -527,7 +528,17 @@ const ArticlesPage = () => {
       description: "آشنایی با عوارض جدی و خطرناک کوکائین بر قلب، مغز و سیستم عصبی و خطر سکته و مرگ آنی",
       image: cocaineDangersImage,
       link: "/articles/cocaine-dangers",
-      category: "سلامت عمومی"
+      category: "سلامت عمومی",
+      date: "1403/10/25"
+    },
+    {
+      id: 49,
+      title: "عوارض مصرف گل (ماری‌جوانا/حشیش): تأثیرات مخرب بر مغز، قلب و ریه",
+      description: "بررسی کامل عوارض جسمی و روانی مصرف گل و حشیش شامل آسیب به مغز، اختلالات روانی، بیماری‌های قلبی و ریوی",
+      image: marijuanaEffectsImage,
+      link: "/articles/marijuana-effects",
+      category: "روانپزشکی",
+      date: "1403/10/25"
     },
     {
       id: 47,
