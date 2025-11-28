@@ -68,6 +68,7 @@ import pantoprazoleImage from "@/assets/pantoprazole-medication.jpg";
 import adhdImage from "@/assets/adhd-disorder.jpg";
 import sleepTechniquesImage from "@/assets/sleep-techniques.jpg";
 import sacubitrilValsartanImage from "@/assets/sacubitril-valsartan.jpg";
+import valsartanImage from "@/assets/valsartan-medication.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
@@ -118,6 +119,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 12;
   
   const articles = [
+    {
+      id: 1013,
+      title: "والزارتان (دیووان): موارد مصرف، عوارض جانبی و نکات مهم",
+      description: "راهنمای جامع داروی والزارتان برای درمان فشار خون بالا و نارسایی قلبی. آشنایی با مکانیسم اثر، عوارض جانبی و هشدارهای مهم.",
+      image: valsartanImage,
+      link: "/articles/valsartan",
+      category: "دارو",
+      date: "1403/10/29"
+    },
     {
       id: 1012,
       title: "داروی ساکوبیتریل/والزارتان (Entresto): کاربردها، مکانیسم اثر و عوارض جانبی",
