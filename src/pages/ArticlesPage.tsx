@@ -69,6 +69,7 @@ import adhdImage from "@/assets/adhd-disorder.jpg";
 import sleepTechniquesImage from "@/assets/sleep-techniques.jpg";
 import sacubitrilValsartanImage from "@/assets/sacubitril-valsartan.jpg";
 import valsartanImage from "@/assets/valsartan-medication.jpg";
+import sertralineImage from "@/assets/sertraline-medication.jpg";
 import botulismWarningImage from "@/assets/botulism-warning.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import elderlyCareImage from "@/assets/elderly-care-home.jpg";
@@ -119,6 +120,15 @@ const ArticlesPage = () => {
   const articlesPerPage = 12;
   
   const articles = [
+    {
+      id: 1014,
+      title: "داروی سرتالین (Sertraline) - زولوفت",
+      description: "راهنمای جامع داروی سرتالین (Zoloft) برای درمان افسردگی، اضطراب و OCD. مکانیسم اثر SSRIs، عوارض جانبی و هشدارهای FDA.",
+      image: sertralineImage,
+      link: "/articles/sertraline",
+      category: "دارو",
+      date: "1403/10/29"
+    },
     {
       id: 1013,
       title: "والزارتان (دیووان): موارد مصرف، عوارض جانبی و نکات مهم",
