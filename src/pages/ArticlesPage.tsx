@@ -1,12 +1,12 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Search } from "lucide-react";
+import { Search, FileText } from "lucide-react";
 import {
   Pagination,
   PaginationContent,
@@ -16,6 +16,15 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import cholesterolTestImage from "@/assets/cholesterol-test-article.jpg";
 import breathingTreatmentImage from "@/assets/shortness-breath-treatment.jpg";
 import neurobionImage from "@/assets/neurobion-ampoule-article.jpg";
@@ -113,10 +122,25 @@ import airPollutionEffectsImage from "@/assets/air-pollution-article.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
+// تابع نرمال‌سازی متن فارسی
+const normalizeText = (text: string): string => {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, ' ')
+    .replace(/ي/g, 'ی')
+    .replace(/ك/g, 'ک')
+    .replace(/ئ/g, 'ی')
+    .replace(/ؤ/g, 'و')
+    .replace(/إ|أ/g, 'ا');
+};
+
 const ArticlesPage = () => {
+  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("همه");
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchOpen, setSearchOpen] = useState(false);
   const articlesPerPage = 12;
   
   const articles = [
@@ -1031,6 +1055,54 @@ const ArticlesPage = () => {
   const mainCategories = Object.keys(categoryMappings);
 
   // Filter articles based on selected category and search query
+  // جستجوی fuzzy برای dropdown
+  const searchResults = useMemo(() => {
+    if (!searchQuery || searchQuery.length < 2) return [];
+
+    const normalizedQuery = normalizeText(searchQuery);
+    const queryWords = normalizedQuery.split(' ');
+
+    const scored = mergedArticles.map(article => {
+      const normalizedTitle = normalizeText(article.title);
+      const normalizedDesc = normalizeText(article.description || '');
+      const normalizedCategory = normalizeText(article.category || '');
+
+      let score = 0;
+
+      // امتیاز برای تطابق کامل در عنوان
+      if (normalizedTitle.includes(normalizedQuery)) {
+        score += 100;
+      }
+
+      // امتیاز برای تطابق در توضیحات
+      if (normalizedDesc.includes(normalizedQuery)) {
+        score += 50;
+      }
+
+      // امتیاز برای تطابق در دسته‌بندی
+      if (normalizedCategory.includes(normalizedQuery)) {
+        score += 70;
+      }
+
+      // امتیاز برای تطابق هر کلمه جداگانه
+      queryWords.forEach(word => {
+        if (word.length < 2) return;
+
+        if (normalizedTitle.includes(word)) score += 30;
+        if (normalizedDesc.includes(word)) score += 15;
+        if (normalizedCategory.includes(word)) score += 25;
+      });
+
+      return { article, score };
+    });
+
+    return scored
+      .filter(s => s.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 8)
+      .map(s => s.article);
+  }, [searchQuery, mergedArticles]);
+
   const filteredArticles = useMemo(() => {
     let filtered = mergedArticles;
 
@@ -1117,16 +1189,80 @@ const ArticlesPage = () => {
                 راهنمای جامع سلامت و درمان در منزل با بهترین متخصصان پزشکی
               </p>
 
-              {/* Search Box */}
+              {/* Search Box with Dropdown */}
               <div className="relative max-w-xl mx-auto">
-                <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                <Input
-                  type="text"
-                  placeholder="جستجو در مقالات..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-4 pr-12 h-12 text-base"
-                />
+                <Popover open={searchOpen && searchQuery.length >= 2} onOpenChange={setSearchOpen}>
+                  <PopoverTrigger asChild>
+                    <div className="relative">
+                      <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none z-10" />
+                      <Command shouldFilter={false} className="rounded-lg border shadow-md">
+                        <CommandInput
+                          placeholder="جستجو در مقالات..."
+                          value={searchQuery}
+                          onValueChange={(value) => {
+                            setSearchQuery(value);
+                            setSearchOpen(value.length >= 2);
+                          }}
+                          onFocus={() => setSearchOpen(searchQuery.length >= 2)}
+                          className="h-12 text-base border-0"
+                        />
+                      </Command>
+                    </div>
+                  </PopoverTrigger>
+                  <PopoverContent 
+                    className="w-[var(--radix-popover-trigger-width)] p-0" 
+                    align="start"
+                    onOpenAutoFocus={(e) => e.preventDefault()}
+                  >
+                    <Command shouldFilter={false}>
+                      <CommandList className="max-h-[400px]">
+                        <CommandEmpty>
+                          <div className="py-6 text-center">
+                            <p className="text-sm text-muted-foreground mb-2">نتیجه‌ای یافت نشد</p>
+                            <p className="text-xs text-muted-foreground">
+                              برای کمک و راهنمایی با ما تماس بگیرید:{" "}
+                              <a 
+                                href="tel:09386117912" 
+                                className="text-primary font-semibold hover:underline"
+                              >
+                                09386117912
+                              </a>
+                            </p>
+                          </div>
+                        </CommandEmpty>
+
+                        {searchResults.length > 0 && (
+                          <CommandGroup heading="مقالات پزشکی">
+                            {searchResults.map((article) => (
+                              <CommandItem
+                                key={article.id}
+                                onSelect={() => {
+                                  navigate(article.link);
+                                  setSearchQuery("");
+                                  setSearchOpen(false);
+                                }}
+                                className="cursor-pointer"
+                              >
+                                <FileText className="ml-2 h-4 w-4 text-primary" />
+                                <div className="flex flex-col items-start flex-1">
+                                  <span className="font-medium">{article.title}</span>
+                                  <div className="flex items-center gap-2 mt-1">
+                                    <span className="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">
+                                      {article.category}
+                                    </span>
+                                    <span className="text-xs text-muted-foreground line-clamp-1">
+                                      {article.description}
+                                    </span>
+                                  </div>
+                                </div>
+                              </CommandItem>
+                            ))}
+                          </CommandGroup>
+                        )}
+                      </CommandList>
+                    </Command>
+                  </PopoverContent>
+                </Popover>
               </div>
             </div>
           </div>
