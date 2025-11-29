@@ -123,6 +123,29 @@ import airPollutionEffectsImage from "@/assets/air-pollution-article.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
+// دیکشنری مترادف‌ها و کلمات مرتبط فارسی
+const synonymDictionary: Record<string, string[]> = {
+  'قلب': ['کاردیولوژی', 'قلبی', 'عروق', 'قلبی عروقی', 'کرونر', 'عروقی'],
+  'فشار': ['فشارخون', 'هیپرتانسیون', 'فشارخون بالا', 'bp'],
+  'دیابت': ['قند', 'قندخون', 'شکر', 'شیرین'],
+  'سردرد': ['میگرن', 'مغزی', 'سر درد'],
+  'افسردگی': ['دپرسیون', 'افسرده', 'خلق'],
+  'اضطراب': ['استرس', 'نگرانی', 'وسواس'],
+  'تب': ['تب و لرز', 'حرارت', 'یخ کردن'],
+  'سرفه': ['سرماخوردگی', 'آنفلوانزا', 'سرما'],
+  'درد': ['درد و ناراحتی', 'کمردرد'],
+  'بارداری': ['حاملگی', 'زایمان', 'باردار'],
+  'کودک': ['نوزاد', 'بچه', 'کودکان'],
+  'دارو': ['داروی', 'قرص', 'دوا', 'دواه', 'مصرف دارو'],
+  'تغذیه': ['رژیم', 'خوراکی', 'غذا', 'ویتامین'],
+  'آنژیو': ['آنژیوگرافی', 'کاتتریزاسیون'],
+  'وارفارین': ['وارفارن', 'ضد انعقاد'],
+  'کلسترول': ['کلستریل', 'کلسترل', 'چربی خون'],
+  'اکو': ['اکوکاردیوگرافی', 'سونوگرافی قلب', 'اکوی قلب'],
+  'ریه': ['ریوی', 'تنفس', 'تنفسی', 'پنومونی'],
+  'جراحی': ['عمل', 'آپاندیس'],
+};
+
 // تابع نرمال‌سازی متن فارسی
 const normalizeText = (text: string): string => {
   return text
@@ -133,7 +156,152 @@ const normalizeText = (text: string): string => {
     .replace(/ك/g, 'ک')
     .replace(/ئ/g, 'ی')
     .replace(/ؤ/g, 'و')
-    .replace(/إ|أ/g, 'ا');
+    .replace(/إ|أ/g, 'ا')
+    .replace(/ه‌/g, 'ه')
+    .replace(/ـ/g, '');
+};
+
+// تابع محاسبه فاصله Levenshtein برای تشخیص غلط‌های تایپی
+const levenshteinDistance = (str1: string, str2: string): number => {
+  const len1 = str1.length;
+  const len2 = str2.length;
+  const matrix: number[][] = [];
+
+  for (let i = 0; i <= len1; i++) {
+    matrix[i] = [i];
+  }
+
+  for (let j = 0; j <= len2; j++) {
+    matrix[0][j] = j;
+  }
+
+  for (let i = 1; i <= len1; i++) {
+    for (let j = 1; j <= len2; j++) {
+      const cost = str1[i - 1] === str2[j - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
+    }
+  }
+
+  return matrix[len1][len2];
+};
+
+// تابع بررسی تطابق مفهومی با استفاده از دیکشنری مترادف
+const hasSemanticMatch = (text: string, query: string): boolean => {
+  const normalizedText = normalizeText(text);
+  const normalizedQuery = normalizeText(query);
+
+  // بررسی تطابق مستقیم
+  if (normalizedText.includes(normalizedQuery)) return true;
+
+  // بررسی مترادف‌ها
+  for (const [key, synonyms] of Object.entries(synonymDictionary)) {
+    const normalizedKey = normalizeText(key);
+    
+    // اگر کلید در query یافت شد
+    if (normalizedQuery.includes(normalizedKey) || levenshteinDistance(normalizedQuery, normalizedKey) <= 2) {
+      // بررسی کنیم که آیا متن شامل مترادف‌ها هست
+      for (const synonym of synonyms) {
+        const normalizedSynonym = normalizeText(synonym);
+        if (normalizedText.includes(normalizedSynonym) || 
+            levenshteinDistance(normalizedText, normalizedSynonym) <= 2) {
+          return true;
+        }
+      }
+    }
+
+    // اگر مترادف در query یافت شد
+    for (const synonym of synonyms) {
+      const normalizedSynonym = normalizeText(synonym);
+      if (normalizedQuery.includes(normalizedSynonym) || 
+          levenshteinDistance(normalizedQuery, normalizedSynonym) <= 2) {
+        // بررسی کنیم که آیا متن شامل کلید اصلی هست
+        if (normalizedText.includes(normalizedKey) || 
+            levenshteinDistance(normalizedText, normalizedKey) <= 2) {
+          return true;
+        }
+      }
+    }
+  }
+
+  return false;
+};
+
+// تابع fuzzy search پیشرفته با تشخیص غلط‌های تایپی و تطابق مفهومی
+const fuzzySearchArticles = (articles: any[], query: string) => {
+  if (!query || query.length < 2) return articles;
+
+  const normalizedQuery = normalizeText(query);
+  const queryWords = normalizedQuery.split(' ').filter(w => w.length >= 2);
+
+  const scored = articles.map(article => {
+    const normalizedTitle = normalizeText(article.title);
+    const normalizedDesc = normalizeText(article.description || '');
+    const normalizedCategory = normalizeText(article.category || '');
+
+    let score = 0;
+
+    // امتیاز برای تطابق کامل
+    if (normalizedTitle.includes(normalizedQuery)) {
+      score += 100;
+    }
+    if (normalizedDesc.includes(normalizedQuery)) {
+      score += 50;
+    }
+
+    // امتیاز برای تطابق مفهومی (synonyms)
+    if (hasSemanticMatch(normalizedTitle, normalizedQuery)) {
+      score += 80;
+    }
+    if (hasSemanticMatch(normalizedDesc, normalizedQuery)) {
+      score += 40;
+    }
+    if (hasSemanticMatch(normalizedCategory, normalizedQuery)) {
+      score += 60;
+    }
+
+    // امتیاز برای تطابق هر کلمه جداگانه
+    queryWords.forEach(word => {
+      // تطابق مستقیم
+      if (normalizedTitle.includes(word)) score += 30;
+      if (normalizedDesc.includes(word)) score += 15;
+      if (normalizedCategory.includes(word)) score += 20;
+
+      // fuzzy matching برای تشخیص غلط‌های تایپی
+      const titleWords = normalizedTitle.split(' ');
+      const descWords = normalizedDesc.split(' ');
+
+      titleWords.forEach(titleWord => {
+        if (titleWord.length >= 3 && word.length >= 3) {
+          const distance = levenshteinDistance(word, titleWord);
+          const maxLen = Math.max(word.length, titleWord.length);
+          if (distance <= 2 && distance / maxLen <= 0.4) {
+            score += 25;
+          }
+        }
+      });
+
+      descWords.forEach(descWord => {
+        if (descWord.length >= 3 && word.length >= 3) {
+          const distance = levenshteinDistance(word, descWord);
+          const maxLen = Math.max(word.length, descWord.length);
+          if (distance <= 2 && distance / maxLen <= 0.4) {
+            score += 12;
+          }
+        }
+      });
+    });
+
+    return { article, score };
+  });
+
+  return scored
+    .filter(s => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(s => s.article);
 };
 
 const ArticlesPage = () => {
@@ -1072,49 +1240,10 @@ const ArticlesPage = () => {
   // جستجوی fuzzy برای dropdown
   const searchResults = useMemo(() => {
     if (!tempSearchQuery || tempSearchQuery.length < 2) return [];
-
-    const normalizedQuery = normalizeText(tempSearchQuery);
-    const queryWords = normalizedQuery.split(' ');
-
-    const scored = mergedArticles.map(article => {
-      const normalizedTitle = normalizeText(article.title);
-      const normalizedDesc = normalizeText(article.description || '');
-      const normalizedCategory = normalizeText(article.category || '');
-
-      let score = 0;
-
-      // امتیاز برای تطابق کامل در عنوان
-      if (normalizedTitle.includes(normalizedQuery)) {
-        score += 100;
-      }
-
-      // امتیاز برای تطابق در توضیحات
-      if (normalizedDesc.includes(normalizedQuery)) {
-        score += 50;
-      }
-
-      // امتیاز برای تطابق در دسته‌بندی
-      if (normalizedCategory.includes(normalizedQuery)) {
-        score += 70;
-      }
-
-      // امتیاز برای تطابق هر کلمه جداگانه
-      queryWords.forEach(word => {
-        if (word.length < 2) return;
-
-        if (normalizedTitle.includes(word)) score += 30;
-        if (normalizedDesc.includes(word)) score += 15;
-        if (normalizedCategory.includes(word)) score += 25;
-      });
-
-      return { article, score };
-    });
-
-    return scored
-      .filter(s => s.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 8)
-      .map(s => s.article);
+    
+    const results = fuzzySearchArticles(mergedArticles, tempSearchQuery);
+    
+    return results.slice(0, 8);
   }, [tempSearchQuery, mergedArticles]);
 
   const filteredArticles = useMemo(() => {
@@ -1128,14 +1257,9 @@ const ArticlesPage = () => {
       );
     }
 
-    // Filter by search query
+    // Filter by search query with fuzzy matching
     if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(article =>
-        article.title.toLowerCase().includes(query) ||
-        article.description.toLowerCase().includes(query) ||
-        article.category.toLowerCase().includes(query)
-      );
+      filtered = fuzzySearchArticles(filtered, searchQuery);
     }
 
     return filtered;
