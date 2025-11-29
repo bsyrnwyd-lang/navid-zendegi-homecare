@@ -97,6 +97,7 @@ const ADHDPage = lazy(() => import("./pages/articles/ADHDPage"));
 const SleepTechniquesPage = lazy(() => import("./pages/articles/SleepTechniquesPage"));
 const SacubitrilValsartanPage = lazy(() => import("./pages/articles/SacubitrilValsartanPage"));
 const ValsartanPage = lazy(() => import("./pages/articles/ValsartanPage"));
+const SertralinePage = lazy(() => import("./pages/articles/SertralinePage"));
 const BotulismPage = lazy(() => import("./pages/articles/BotulismPage"));
 const HPVTreatmentGuidePage = lazy(() => import("./pages/articles/HPVTreatmentGuidePage"));
 const ElderlyCareGuidePage = lazy(() => import("./pages/articles/ElderlyCareGuidePage"));
@@ -252,9 +253,10 @@ const App = () => (
            <Route path="/articles/pantoprazole" element={<PantoprazolePage />} />
             <Route path="/articles/adhd" element={<ADHDPage />} />
             <Route path="/articles/sleep-techniques" element={<SleepTechniquesPage />} />
-            <Route path="/articles/sacubitril-valsartan" element={<SacubitrilValsartanPage />} />
-            <Route path="/articles/valsartan" element={<ValsartanPage />} />
-           <Route path="/articles/botulism" element={<BotulismPage />} />
+             <Route path="/articles/sacubitril-valsartan" element={<SacubitrilValsartanPage />} />
+             <Route path="/articles/valsartan" element={<ValsartanPage />} />
+             <Route path="/articles/sertraline" element={<SertralinePage />} />
+            <Route path="/articles/botulism" element={<BotulismPage />} />
            <Route path="/articles/hpv-treatment-guide" element={<HPVTreatmentGuidePage />} />
            <Route path="/articles/elderly-care-guide" element={<ElderlyCareGuidePage />} />
            <Route path="/articles/influenza-vaccine" element={<InfluenzaVaccinePage />} />
