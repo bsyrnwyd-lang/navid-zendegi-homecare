@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,7 +6,9 @@ import FloatingContact from "@/components/FloatingContact";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Search, FileText } from "lucide-react";
+import { Search, FileText, CheckCircle2 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import {
   Pagination,
   PaginationContent,
@@ -20,7 +22,6 @@ import {
   Command,
   CommandEmpty,
   CommandGroup,
-  CommandInput,
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
@@ -140,8 +141,21 @@ const ArticlesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("همه");
   const [searchQuery, setSearchQuery] = useState("");
+  const [tempSearchQuery, setTempSearchQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
   const articlesPerPage = 12;
+
+  const handleSearchSubmit = () => {
+    setSearchQuery(tempSearchQuery);
+    setSearchOpen(false);
+    setCurrentPage(1);
+  };
+
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSearchSubmit();
+    }
+  };
   
   const articles = [
     {
@@ -1057,9 +1071,9 @@ const ArticlesPage = () => {
   // Filter articles based on selected category and search query
   // جستجوی fuzzy برای dropdown
   const searchResults = useMemo(() => {
-    if (!searchQuery || searchQuery.length < 2) return [];
+    if (!tempSearchQuery || tempSearchQuery.length < 2) return [];
 
-    const normalizedQuery = normalizeText(searchQuery);
+    const normalizedQuery = normalizeText(tempSearchQuery);
     const queryWords = normalizedQuery.split(' ');
 
     const scored = mergedArticles.map(article => {
@@ -1101,7 +1115,7 @@ const ArticlesPage = () => {
       .sort((a, b) => b.score - a.score)
       .slice(0, 8)
       .map(s => s.article);
-  }, [searchQuery, mergedArticles]);
+  }, [tempSearchQuery, mergedArticles]);
 
   const filteredArticles = useMemo(() => {
     let filtered = mergedArticles;
@@ -1191,22 +1205,32 @@ const ArticlesPage = () => {
 
               {/* Search Box with Dropdown */}
               <div className="relative max-w-xl mx-auto">
-                <Popover open={searchOpen && searchQuery.length >= 2} onOpenChange={setSearchOpen}>
+                <Popover open={searchOpen && tempSearchQuery.length >= 2} onOpenChange={setSearchOpen}>
                   <PopoverTrigger asChild>
-                    <div className="relative">
-                      <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none z-10" />
-                      <Command shouldFilter={false} className="rounded-lg border shadow-md">
-                        <CommandInput
+                    <div className="relative flex gap-2">
+                      <div className="relative flex-1">
+                        <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" />
+                        <Input
+                          type="text"
                           placeholder="جستجو در مقالات..."
-                          value={searchQuery}
-                          onValueChange={(value) => {
-                            setSearchQuery(value);
-                            setSearchOpen(value.length >= 2);
+                          value={tempSearchQuery}
+                          onChange={(e) => {
+                            setTempSearchQuery(e.target.value);
+                            setSearchOpen(e.target.value.length >= 2);
                           }}
-                          onFocus={() => setSearchOpen(searchQuery.length >= 2)}
-                          className="h-12 text-base border-0"
+                          onKeyDown={handleSearchKeyDown}
+                          onFocus={() => setSearchOpen(tempSearchQuery.length >= 2)}
+                          className="h-12 text-base pr-12"
                         />
-                      </Command>
+                      </div>
+                      <Button
+                        onClick={handleSearchSubmit}
+                        size="lg"
+                        className="h-12 px-6"
+                      >
+                        <CheckCircle2 className="h-5 w-5 ml-2" />
+                        تایید
+                      </Button>
                     </div>
                   </PopoverTrigger>
                   <PopoverContent 
@@ -1238,6 +1262,7 @@ const ArticlesPage = () => {
                                 key={article.id}
                                 onSelect={() => {
                                   navigate(article.link);
+                                  setTempSearchQuery("");
                                   setSearchQuery("");
                                   setSearchOpen(false);
                                 }}
