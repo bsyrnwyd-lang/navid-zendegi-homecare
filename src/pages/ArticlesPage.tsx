@@ -120,6 +120,7 @@ import vitaminHealthImage from "@/assets/vitamins-health-article.jpg";
 import drugCardiovascularImage from "@/assets/drug-cardiovascular-effects.jpg";
 import pregnancySupplementsImage from "@/assets/pregnancy-supplements.jpg";
 import airPollutionEffectsImage from "@/assets/air-pollution-article.jpg";
+import childrenAirPollutionImage from "@/assets/children-air-pollution.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -326,6 +327,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1015,
+      title: "تأثیر آلودگی هوا بر سلامت کودکان: آسیب‌های ریوی، عصبی و رشدی",
+      description: "بررسی جامع تأثیرات مخرب آلودگی هوا بر سیستم تنفسی، مغز و رشد کودکان. آسیب‌پذیری بالای کودکان در برابر PM2.5 و تأثیرات بر بهره هوشی، آسم و بیماری‌های تنفسی",
+      image: childrenAirPollutionImage,
+      link: "/articles/children-air-pollution",
+      category: "محیط زیست و سلامت",
+      date: "1403/12/01"
+    },
     {
       id: 1014,
       title: "داروی سرتالین (Sertraline) - زولوفت",
