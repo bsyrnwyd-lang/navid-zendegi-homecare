@@ -57,6 +57,7 @@ const MigrainePage = lazy(() => import("./pages/articles/MigrainePage"));
 const MeningitisPage = lazy(() => import("./pages/articles/MeningitisPage"));
 const AirPollutionPage = lazy(() => import("./pages/articles/AirPollutionPage"));
 const ChildrenAirPollutionPage = lazy(() => import("./pages/articles/ChildrenAirPollutionPage"));
+const MouthUlcerPage = lazy(() => import("./pages/articles/MouthUlcerPage"));
 const CoffeeHeartPage = lazy(() => import("./pages/articles/CoffeeHeartPage"));
 const ColdTreatmentPage = lazy(() => import("./pages/articles/ColdTreatmentPage"));
 const DepressionHeartDiseasePage = lazy(() => import("./pages/articles/DepressionHeartDiseasePage"));
@@ -211,6 +212,7 @@ const App = () => (
           <Route path="/articles/meningitis" element={<MeningitisPage />} />
            <Route path="/articles/air-pollution" element={<AirPollutionPage />} />
            <Route path="/articles/children-air-pollution" element={<ChildrenAirPollutionPage />} />
+           <Route path="/articles/mouth-ulcer" element={<MouthUlcerPage />} />
           <Route path="/articles/coffee-heart" element={<CoffeeHeartPage />} />
           <Route path="/articles/cold-treatment" element={<ColdTreatmentPage />} />
           <Route path="/articles/depression-heart-disease" element={<DepressionHeartDiseasePage />} />

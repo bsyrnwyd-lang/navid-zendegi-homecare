@@ -121,6 +121,7 @@ import drugCardiovascularImage from "@/assets/drug-cardiovascular-effects.jpg";
 import pregnancySupplementsImage from "@/assets/pregnancy-supplements.jpg";
 import airPollutionEffectsImage from "@/assets/air-pollution-article.jpg";
 import childrenAirPollutionImage from "@/assets/children-air-pollution.jpg";
+import mouthUlcerImage from "@/assets/mouth-ulcer-article.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -327,6 +328,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1016,
+      title: "آفت دهانی (RAS): علل، انواع و درمان بر اساس منابع دانشگاهی",
+      description: "راهنمای جامع آفت دهانی عودکننده: طبقه‌بندی انواع آفت (مینور، ماژور، هرپتی‌فرم)، علل ایجاد، کمبودهای تغذیه‌ای و درمان موضعی و سیستمیک",
+      image: mouthUlcerImage,
+      link: "/articles/mouth-ulcer",
+      category: "عمومی",
+      date: "1403/12/02"
+    },
     {
       id: 1015,
       title: "تأثیر آلودگی هوا بر سلامت کودکان: آسیب‌های ریوی، عصبی و رشدی",
