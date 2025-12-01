@@ -122,6 +122,7 @@ import pregnancySupplementsImage from "@/assets/pregnancy-supplements.jpg";
 import airPollutionEffectsImage from "@/assets/air-pollution-article.jpg";
 import childrenAirPollutionImage from "@/assets/children-air-pollution.jpg";
 import mouthUlcerImage from "@/assets/mouth-ulcer-article.jpg";
+import pressureInjuryImage from "@/assets/pressure-injury-care.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -328,6 +329,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1017,
+      title: "زخم بستر (آسیب فشاری): علل، مراحل و درمان تخصصی",
+      description: "راهنمای جامع زخم بستر: مکانیسم ایجاد، عوامل خطر، طبقه‌بندی چهار مرحله‌ای، روش‌های پیشگیری و درمان حرفه‌ای. مراقبت تخصصی از زخم بستر در منزل",
+      image: pressureInjuryImage,
+      link: "/articles/pressure-injury",
+      category: "عمومی",
+      date: "1403/12/03"
+    },
     {
       id: 1016,
       title: "آفت دهانی (RAS): علل، انواع و درمان بر اساس منابع دانشگاهی",
