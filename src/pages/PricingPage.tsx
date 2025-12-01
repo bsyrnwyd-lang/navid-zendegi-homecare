@@ -90,7 +90,7 @@ const PricingPage = () => {
     price: "950,000"
   }, {
     service: "هولتر در منزل",
-    price: "2,000,000"
+    price: "2,500,000"
   }, {
     service: "ویزیت آنلاین پزشک عمومی",
     price: "150,000"
