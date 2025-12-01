@@ -63,7 +63,7 @@ const PricingPage = () => {
     price: "980,000"
   }, {
     service: "ویزیت متخصص داخلی",
-    price: "2,500,000"
+    price: "از 2,500,000"
   }, {
     service: "ویزیت پزشک متخصص",
     price: "از 2,000,000"
