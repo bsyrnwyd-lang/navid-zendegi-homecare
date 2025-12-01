@@ -87,9 +87,10 @@ const PressureInjuryPage = () => {
       />
 
       <ArticleLayout>
-        <BreadcrumbNavigation items={breadcrumbItems} />
+        <div className="container mx-auto max-w-4xl px-4 py-8">
+          <BreadcrumbNavigation items={breadcrumbItems} />
 
-        <article className="prose prose-lg max-w-none">
+          <article className="prose prose-lg max-w-none">
           <img
             src={pressureInjuryImage}
             alt="مراقبت تخصصی از زخم بستر در منزل"
@@ -266,6 +267,7 @@ const PressureInjuryPage = () => {
         <FAQSection faqs={faqItems} />
 
         <RelatedArticles articles={relatedArticles} />
+        </div>
       </ArticleLayout>
     </>
   );
