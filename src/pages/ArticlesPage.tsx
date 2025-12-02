@@ -124,6 +124,7 @@ import childrenAirPollutionImage from "@/assets/children-air-pollution.jpg";
 import mouthUlcerImage from "@/assets/mouth-ulcer-article.jpg";
 import pressureInjuryImage from "@/assets/pressure-injury-care.jpg";
 import cardiacRehabImage from "@/assets/cardiac-rehab-exercise.jpg";
+import troponinImage from "@/assets/troponin-test.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -330,6 +331,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1019,
+      title: "تروپونین قلبی (Cardiac Troponin): بیومارکر طلایی سکته قلبی",
+      description: "راهنمای جامع تروپونین قلبی: ساختار، عملکرد، اهمیت در تشخیص سکته قلبی، آزمایش‌های حساسیت بالا و علل غیرایسکمیک افزایش تروپونین",
+      image: troponinImage,
+      link: "/articles/troponin",
+      category: "قلب و عروق",
+      date: "1403/12/03"
+    },
     {
       id: 1018,
       title: "نقش ورزش در توانبخشی قلبی (Cardiac Rehabilitation)",
