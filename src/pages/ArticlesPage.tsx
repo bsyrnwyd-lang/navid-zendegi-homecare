@@ -123,6 +123,7 @@ import airPollutionEffectsImage from "@/assets/air-pollution-article.jpg";
 import childrenAirPollutionImage from "@/assets/children-air-pollution.jpg";
 import mouthUlcerImage from "@/assets/mouth-ulcer-article.jpg";
 import pressureInjuryImage from "@/assets/pressure-injury-care.jpg";
+import cardiacRehabImage from "@/assets/cardiac-rehab-exercise.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -329,6 +330,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1018,
+      title: "نقش ورزش در توانبخشی قلبی (Cardiac Rehabilitation)",
+      description: "راهنمای جامع توانبخشی قلبی: فواید ورزش برای بیماران قلبی، مراحل برنامه، انواع تمرینات هوازی و مقاومتی و تأثیرات بر بقاء و کیفیت زندگی",
+      image: cardiacRehabImage,
+      link: "/articles/cardiac-rehab",
+      category: "قلب و عروق",
+      date: "1403/12/03"
+    },
     {
       id: 1017,
       title: "زخم بستر (آسیب فشاری): علل، مراحل و درمان تخصصی",
