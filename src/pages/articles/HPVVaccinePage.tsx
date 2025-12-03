@@ -6,7 +6,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import gardasilImage from "@/assets/gardasil-vaccine-article.jpg";
+import hpvVaccineImage from "@/assets/hpv-vaccine-article.jpg";
 import genitalWartsImage from "@/assets/genital-warts-article.jpg";
 import gynecologyImage from "@/assets/gynecology.jpg";
 import vaccinationImage from "@/assets/vaccination-article.jpg";
@@ -87,7 +87,7 @@ const HPVVaccinePage = () => {
         description="راهنمای جامع واکسن HPV شامل انواع واکسن، سن مناسب تزریق، برنامه دوزبندی و اثربخشی"
         publishedTime="2024-12-03"
         modifiedTime="2024-12-03"
-        image={gardasilImage}
+        image={hpvVaccineImage}
       />
 
       <main className="pt-24 pb-16 px-4">
@@ -100,7 +100,7 @@ const HPVVaccinePage = () => {
                 واکسن HPV: پیشگیری از سرطان‌های مرتبط با ویروس پاپیلومای انسانی
               </h1>
               <img
-                src={gardasilImage}
+                src={hpvVaccineImage}
                 alt="واکسن HPV برای پیشگیری از سرطان دهانه رحم"
                 className="w-full rounded-lg shadow-md mb-6"
               />
