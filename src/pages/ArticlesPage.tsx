@@ -126,6 +126,7 @@ import pressureInjuryImage from "@/assets/pressure-injury-care.jpg";
 import cardiacRehabImage from "@/assets/cardiac-rehab-exercise.jpg";
 import troponinImage from "@/assets/troponin-test.jpg";
 import annualScreeningImage from "@/assets/annual-screening-tests.jpg";
+import hpvVaccineImage from "@/assets/hpv-vaccine-article.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -336,7 +337,7 @@ const ArticlesPage = () => {
       id: 1021,
       title: "واکسن HPV: پیشگیری از سرطان دهانه رحم و بیماری‌های تناسلی",
       description: "راهنمای جامع واکسن HPV شامل انواع واکسن، سن مناسب تزریق، برنامه دوزبندی، اثربخشی و عوارض جانبی. خدمات تزریق واکسن در منزل.",
-      image: gardasilImage,
+      image: hpvVaccineImage,
       link: "/articles/hpv-vaccine",
       category: "زنان",
       date: "1403/12/03"
