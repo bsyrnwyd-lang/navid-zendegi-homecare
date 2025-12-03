@@ -125,6 +125,7 @@ import mouthUlcerImage from "@/assets/mouth-ulcer-article.jpg";
 import pressureInjuryImage from "@/assets/pressure-injury-care.jpg";
 import cardiacRehabImage from "@/assets/cardiac-rehab-exercise.jpg";
 import troponinImage from "@/assets/troponin-test.jpg";
+import annualScreeningImage from "@/assets/annual-screening-tests.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -331,6 +332,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1020,
+      title: "آزمایشات و غربالگری‌های پزشکی سالانه بر اساس گروه‌های سنی",
+      description: "راهنمای جامع آزمایشات و غربالگری‌های سالانه برای جوانان، میانسالان و سالمندان: چکاپ قند و چربی خون، ماموگرافی، کولونوسکوپی، تراکم استخوان و واکسیناسیون",
+      image: annualScreeningImage,
+      link: "/articles/annual-screening-tests",
+      category: "سلامت عمومی",
+      date: "1403/12/03"
+    },
     {
       id: 1019,
       title: "تروپونین قلبی (Cardiac Troponin): بیومارکر طلایی سکته قلبی",

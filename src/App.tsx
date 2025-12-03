@@ -147,6 +147,7 @@ const AirPollutionEffectsPage = lazy(() => import("./pages/articles/AirPollution
 const BloodPressureMeasurementPage = lazy(() => import("./pages/articles/BloodPressureMeasurementPage"));
 const CardiacRehabPage = lazy(() => import("./pages/articles/CardiacRehabPage"));
 const TroponinPage = lazy(() => import("./pages/articles/TroponinPage"));
+const AnnualScreeningTestsPage = lazy(() => import("./pages/articles/AnnualScreeningTestsPage"));
 
 const queryClient = new QueryClient();
 
@@ -308,8 +309,9 @@ const App = () => (
                  <Route path="/articles/blood-pressure-measurement" element={<BloodPressureMeasurementPage />} />
                  <Route path="/articles/cardiac-rehab" element={<CardiacRehabPage />} />
                  <Route path="/articles/troponin" element={<TroponinPage />} />
+                 <Route path="/articles/annual-screening-tests" element={<AnnualScreeningTestsPage />} />
                 
-                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
          </Routes>
         </Suspense>
