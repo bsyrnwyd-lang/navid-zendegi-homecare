@@ -150,6 +150,7 @@ const TroponinPage = lazy(() => import("./pages/articles/TroponinPage"));
 const AnnualScreeningTestsPage = lazy(() => import("./pages/articles/AnnualScreeningTestsPage"));
 const HPVVaccinePage = lazy(() => import("./pages/articles/HPVVaccinePage"));
 const TrifluoperazinePage = lazy(() => import("./pages/articles/TrifluoperazinePage"));
+const CervicalDiscPage = lazy(() => import("./pages/articles/CervicalDiscPage"));
 
 const queryClient = new QueryClient();
 
@@ -313,7 +314,8 @@ const App = () => (
                  <Route path="/articles/troponin" element={<TroponinPage />} />
                  <Route path="/articles/annual-screening-tests" element={<AnnualScreeningTestsPage />} />
                  <Route path="/articles/hpv-vaccine" element={<HPVVaccinePage />} />
-                 <Route path="/articles/trifluoperazine" element={<TrifluoperazinePage />} />
+                  <Route path="/articles/trifluoperazine" element={<TrifluoperazinePage />} />
+                  <Route path="/articles/cervical-disc" element={<CervicalDiscPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

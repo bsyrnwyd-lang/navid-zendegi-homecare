@@ -129,6 +129,7 @@ import annualScreeningImage from "@/assets/annual-screening-tests.jpg";
 import hpvVaccineImage from "@/assets/hpv-vaccine-article.jpg";
 import trifluoperazineImage from "@/assets/trifluoperazine-medication.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
+import cervicalDiscImage from "@/assets/cervical-disc-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -334,6 +335,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1023,
+      title: "دیسک گردن: آسیب‌های دیسک بین مهره‌ای گردنی",
+      description: "راهنمای جامع دیسک گردن شامل آناتومی، علائم رادیکولوپاتی و میلوپاتی گردنی، روش‌های تشخیص و درمان‌های محافظه‌کارانه و جراحی",
+      image: cervicalDiscImage,
+      link: "/articles/cervical-disc",
+      category: "سلامت عمومی",
+      date: "1403/09/15"
+    },
     {
       id: 1022,
       title: "تری‌فلوئوپرازین: آنتی‌سایکوتیک تیپیکال فنوتییازینی",
