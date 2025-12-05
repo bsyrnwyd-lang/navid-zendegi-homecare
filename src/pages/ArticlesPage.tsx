@@ -127,6 +127,7 @@ import cardiacRehabImage from "@/assets/cardiac-rehab-exercise.jpg";
 import troponinImage from "@/assets/troponin-test.jpg";
 import annualScreeningImage from "@/assets/annual-screening-tests.jpg";
 import hpvVaccineImage from "@/assets/hpv-vaccine-article.jpg";
+import trifluoperazineImage from "@/assets/trifluoperazine-medication.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
@@ -333,6 +334,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1022,
+      title: "تری‌فلوئوپرازین: آنتی‌سایکوتیک تیپیکال فنوتییازینی",
+      description: "راهنمای جامع داروی تری‌فلوئوپرازین شامل مکانیسم اثر، موارد مصرف در اسکیزوفرنی و اضطراب، عوارض جانبی خارج هرمی و هشدارهای حیاتی",
+      image: trifluoperazineImage,
+      link: "/articles/trifluoperazine",
+      category: "دارو",
+      date: "1403/09/15"
+    },
     {
       id: 1021,
       title: "واکسن HPV: پیشگیری از سرطان دهانه رحم و بیماری‌های تناسلی",
