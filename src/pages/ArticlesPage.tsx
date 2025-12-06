@@ -130,6 +130,7 @@ import hpvVaccineImage from "@/assets/hpv-vaccine-article.jpg";
 import trifluoperazineImage from "@/assets/trifluoperazine-medication.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import cervicalDiscImage from "@/assets/cervical-disc-article.jpg";
+import pregnancySleepImage from "@/assets/pregnancy-sleep-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -335,6 +336,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1024,
+      title: "تأثیر کم‌خوابی مادران باردار بر رشد جنین و تکامل کودک",
+      description: "بررسی علمی تأثیرات کم‌خوابی مادران باردار بر رشد جنین: افزایش خطر زایمان زودرس، محدودیت رشد داخل رحمی و مشکلات رفتاری کودک",
+      image: pregnancySleepImage,
+      link: "/articles/pregnancy-sleep",
+      category: "زنان",
+      date: "1403/09/15"
+    },
     {
       id: 1023,
       title: "دیسک گردن: آسیب‌های دیسک بین مهره‌ای گردنی",
