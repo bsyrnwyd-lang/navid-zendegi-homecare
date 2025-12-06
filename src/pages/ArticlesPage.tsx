@@ -131,6 +131,7 @@ import trifluoperazineImage from "@/assets/trifluoperazine-medication.jpg";
 import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.jpg";
 import cervicalDiscImage from "@/assets/cervical-disc-article.jpg";
 import pregnancySleepImage from "@/assets/pregnancy-sleep-article.jpg";
+import huntingtonDiseaseImage from "@/assets/huntington-disease-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -336,6 +337,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1025,
+      title: "بیماری هانتیگتون: اختلال نورودژنراتیو ارثی و پیشرونده",
+      description: "راهنمای جامع بیماری هانتیگتون: مکانیسم ژنتیکی، علائم حرکتی (کوره‌آ) و شناختی، روش‌های تشخیص و درمان‌های حمایتی و توان‌بخشی",
+      image: huntingtonDiseaseImage,
+      link: "/articles/huntington-disease",
+      category: "سلامت عمومی",
+      date: "1403/09/15"
+    },
     {
       id: 1024,
       title: "تأثیر کم‌خوابی مادران باردار بر رشد جنین و تکامل کودک",
