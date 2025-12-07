@@ -132,6 +132,7 @@ import bloodPressureMeasurementImage from "@/assets/blood-pressure-measurement.j
 import cervicalDiscImage from "@/assets/cervical-disc-article.jpg";
 import pregnancySleepImage from "@/assets/pregnancy-sleep-article.jpg";
 import huntingtonDiseaseImage from "@/assets/huntington-disease-article.jpg";
+import smaImage from "@/assets/sma-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -337,6 +338,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1026,
+      title: "آتروفی عضلانی نخاعی (SMA): پاتوفیزیولوژی، طبقه‌بندی و درمان‌های نوین",
+      description: "راهنمای جامع آتروفی عضلانی نخاعی: مکانیسم ژنتیکی، تیپ‌های بالینی، درمان‌های تعدیل‌کننده ژن و خدمات مراقبتی در منزل",
+      image: smaImage,
+      link: "/articles/sma",
+      category: "سلامت عمومی",
+      date: "1403/09/17"
+    },
     {
       id: 1025,
       title: "بیماری هانتیگتون: اختلال نورودژنراتیو ارثی و پیشرونده",
