@@ -1,22 +1,30 @@
+import { memo, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Instagram } from "lucide-react";
-import { useState } from "react";
 
-const FloatingContact = () => {
+const FloatingContact = memo(() => {
   const [isExpanded, setIsExpanded] = useState(false);
   const phoneNumber = "09386117912";
   
-  const handleCall = () => {
+  const handleCall = useCallback(() => {
     window.location.href = `tel:${phoneNumber}`;
-  };
+  }, []);
 
-  const handleWhatsApp = () => {
+  const handleWhatsApp = useCallback(() => {
     window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
-  };
+  }, []);
 
-  const handleInstagram = () => {
+  const handleInstagram = useCallback(() => {
     window.open('https://instagram.com/navidzendegi1', '_blank');
-  };
+  }, []);
+
+  const toggleExpanded = useCallback(() => {
+    setIsExpanded(prev => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsExpanded(false);
+  }, []);
 
   return (
     <>
@@ -25,7 +33,7 @@ const FloatingContact = () => {
         <Button
           variant="floating"
           size="lg"
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={toggleExpanded}
           className="rounded-full w-16 h-16 flex items-center justify-center"
           aria-label="تماس با ما - منوی تماس"
         >
@@ -67,11 +75,13 @@ const FloatingContact = () => {
       {isExpanded && (
         <div 
           className="fixed inset-0 z-40 bg-transparent"
-          onClick={() => setIsExpanded(false)}
+          onClick={closeMenu}
         />
       )}
     </>
   );
-};
+});
+
+FloatingContact.displayName = 'FloatingContact';
 
 export default FloatingContact;

@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import legacy from '@vitejs/plugin-legacy';
+import compression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -13,7 +14,22 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
-    legacy({ targets: ['defaults', 'not IE 11', 'Android >= 5', 'iOS >= 10'] })
+    legacy({ 
+      targets: ['defaults', 'not IE 11', 'Android >= 5', 'iOS >= 10'],
+      modernPolyfills: false,
+    }),
+    // Gzip compression for production
+    mode === 'production' && compression({
+      algorithm: 'gzip',
+      ext: '.gz',
+      threshold: 1024,
+    }),
+    // Brotli compression for modern browsers
+    mode === 'production' && compression({
+      algorithm: 'brotliCompress',
+      ext: '.br',
+      threshold: 1024,
+    }),
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -27,15 +43,32 @@ export default defineConfig(({ mode }) => ({
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
-        // NOTE: manualChunks removed intentionally to prevent circular dependency errors
-        // ("Cannot access 'S' before initialization"). Let Rollup handle chunking automatically.
+        manualChunks: {
+          // Split vendor chunks for better caching
+          'react-vendor': ['react', 'react-dom'],
+          'router': ['react-router-dom'],
+          'ui-core': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-accordion'],
+        }
       }
     },
     chunkSizeWarningLimit: 1000,
     cssCodeSplit: true,
     sourcemap: false,
-    minify: 'esbuild',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+      },
+      mangle: true,
+    },
     reportCompressedSize: false,
-    assetsInlineLimit: 4096
-  }
+    assetsInlineLimit: 4096,
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['@tanstack/react-query'],
+  },
 }));

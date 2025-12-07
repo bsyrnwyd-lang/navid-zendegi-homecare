@@ -1,22 +1,23 @@
+import { memo, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Heart, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/navid-zendegi-logo-small.jpg";
 
-const Footer = () => {
+const Footer = memo(() => {
   const phoneNumber = "09386117912";
   
-  const handleCall = () => {
+  const handleCall = useCallback(() => {
     window.location.href = `tel:${phoneNumber}`;
-  };
+  }, []);
 
-  const handleWhatsApp = () => {
+  const handleWhatsApp = useCallback(() => {
     window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
-  };
+  }, []);
 
-  const handleInstagram = () => {
+  const handleInstagram = useCallback(() => {
     window.open('https://instagram.com/navidzendegi1', '_blank');
-  };
+  }, []);
 
   return (
     <footer className="bg-foreground text-background py-12">
@@ -160,6 +161,8 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

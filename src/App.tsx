@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, memo } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 
 // Eager-load homepage to ensure instant boot reliability
@@ -156,16 +156,27 @@ const HuntingtonDiseasePage = lazy(() => import("./pages/articles/HuntingtonDise
 const SMAPage = lazy(() => import("./pages/articles/SMAPage"));
 const ThrombolyticAgentsPage = lazy(() => import("./pages/articles/ThrombolyticAgentsPage"));
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutes
+      gcTime: 1000 * 60 * 30, // 30 minutes (formerly cacheTime)
+      refetchOnWindowFocus: false,
+      retry: 1,
+    },
+  },
+});
 
-const LoadingFallback = () => (
+const LoadingFallback = memo(() => (
   <div className="min-h-screen flex items-center justify-center bg-background">
     <div className="flex flex-col items-center gap-4">
       <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
       <p className="text-muted-foreground text-lg">در حال بارگذاری...</p>
     </div>
   </div>
-);
+));
+
+LoadingFallback.displayName = 'LoadingFallback';
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
