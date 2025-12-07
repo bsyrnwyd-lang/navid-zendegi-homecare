@@ -1,13 +1,13 @@
+import { memo, useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Phone, MessageCircle, Menu, ChevronDown, ChevronUp, Instagram, Search } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 import logo from "@/assets/navid-zendegi-logo-small.jpg";
 import { SearchDialog } from "@/components/SearchDialog";
 
-const Header = () => {
+const Header = memo(() => {
   const phoneNumber = "09386117912";
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -26,17 +26,17 @@ const Header = () => {
     return () => document.removeEventListener("keydown", down);
   }, []);
   
-  const handleCall = () => {
+  const handleCall = useCallback(() => {
     window.location.href = `tel:${phoneNumber}`;
-  };
+  }, []);
 
-  const handleWhatsApp = () => {
+  const handleWhatsApp = useCallback(() => {
     window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
-  };
+  }, []);
 
-  const handleInstagram = () => {
+  const handleInstagram = useCallback(() => {
     window.open('https://instagram.com/navidzendegi1', '_blank');
-  };
+  }, []);
 
   const navigationItems = [
     { to: "/", label: "صفحه اصلی" },
@@ -237,6 +237,8 @@ const Header = () => {
       <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />
     </header>
   );
-};
+});
+
+Header.displayName = 'Header';
 
 export default Header;

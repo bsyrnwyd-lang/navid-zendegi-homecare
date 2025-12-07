@@ -1,18 +1,18 @@
+import { memo, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Shield, Clock, Heart } from "lucide-react";
-import heroImage from "@/assets/iranian-medical-hero.jpg";
 import doctorPatientImage from "@/assets/iranian-doctor-home-visit-optimized.jpg";
 
-const Hero = () => {
+const Hero = memo(() => {
   const phoneNumber = "09386117912";
   
-  const handleCall = () => {
+  const handleCall = useCallback(() => {
     window.location.href = `tel:${phoneNumber}`;
-  };
+  }, []);
 
-  const handleWhatsApp = () => {
+  const handleWhatsApp = useCallback(() => {
     window.open(`https://wa.me/98${phoneNumber.substring(1)}`, '_blank');
-  };
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background to-muted">
@@ -22,6 +22,8 @@ const Hero = () => {
           alt="ویزیت پزشک در منزل تهران - خدمات پزشکی نوید زندگی شامل ویزیت دکتر عمومی و متخصص در خانه"
           className="w-full h-full object-cover opacity-20"
           fetchPriority="high"
+          loading="eager"
+          decoding="sync"
           width="1920"
           height="1080"
         />
@@ -87,6 +89,8 @@ const Hero = () => {
       </div>
     </section>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;
