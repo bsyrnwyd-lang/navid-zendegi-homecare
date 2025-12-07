@@ -133,6 +133,7 @@ import cervicalDiscImage from "@/assets/cervical-disc-article.jpg";
 import pregnancySleepImage from "@/assets/pregnancy-sleep-article.jpg";
 import huntingtonDiseaseImage from "@/assets/huntington-disease-article.jpg";
 import smaImage from "@/assets/sma-article.jpg";
+import thrombolyticAgentsImage from "@/assets/thrombolytic-agents-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -338,6 +339,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1027,
+      title: "مقایسه رتپلاز و آلتپلاز: عوامل ترومبولیتیک در درمان سکته قلبی",
+      description: "مقایسه فارماکولوژیک آلتپلاز (tPA) و رتپلاز (rPA) در درمان سکته قلبی حاد، نقش تشخیص اورژانس در منزل و انتقال سریع بیمار",
+      image: thrombolyticAgentsImage,
+      link: "/articles/thrombolytic-agents",
+      category: "قلب و عروق",
+      date: "1403/09/17"
+    },
     {
       id: 1026,
       title: "آتروفی عضلانی نخاعی (SMA): پاتوفیزیولوژی، طبقه‌بندی و درمان‌های نوین",
