@@ -135,6 +135,7 @@ import huntingtonDiseaseImage from "@/assets/huntington-disease-article.jpg";
 import smaImage from "@/assets/sma-article.jpg";
 import thrombolyticAgentsImage from "@/assets/thrombolytic-agents-article.jpg";
 import dvtAnticoagulantImage from "@/assets/dvt-anticoagulant-article.jpg";
+import aiEthicsMedicalImage from "@/assets/ai-ethics-medical-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -340,6 +341,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1029,
+      title: "محدودیت‌ها و ملاحظات اخلاقی AI در تشخیص و درمان",
+      description: "بررسی چالش‌های فنی، اخلاقی و حقوقی استفاده از هوش مصنوعی در پزشکی: مسئله جعبه سیاه، سوگیری داده‌ها و مسئولیت‌پذیری",
+      image: aiEthicsMedicalImage,
+      link: "/articles/ai-ethics-medical",
+      category: "سلامت عمومی",
+      date: "1403/09/18"
+    },
     {
       id: 1028,
       title: "مقایسه هپارین و انوکساپارین در درمان DVT",
