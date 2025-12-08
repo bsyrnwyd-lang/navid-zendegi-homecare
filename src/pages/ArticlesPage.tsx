@@ -134,6 +134,7 @@ import pregnancySleepImage from "@/assets/pregnancy-sleep-article.jpg";
 import huntingtonDiseaseImage from "@/assets/huntington-disease-article.jpg";
 import smaImage from "@/assets/sma-article.jpg";
 import thrombolyticAgentsImage from "@/assets/thrombolytic-agents-article.jpg";
+import dvtAnticoagulantImage from "@/assets/dvt-anticoagulant-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -339,6 +340,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1028,
+      title: "مقایسه هپارین و انوکساپارین در درمان DVT",
+      description: "مقایسه فارماکولوژیک هپارین غیرکسر شده (UFH) و انوکساپارین (LMWH) در درمان ترومبوز ورید عمقی و کاربرد در خدمات پرستاری منزل",
+      image: dvtAnticoagulantImage,
+      link: "/articles/dvt-anticoagulants",
+      category: "دارو",
+      date: "1403/09/18"
+    },
     {
       id: 1027,
       title: "مقایسه رتپلاز و آلتپلاز: عوامل ترومبولیتیک در درمان سکته قلبی",
