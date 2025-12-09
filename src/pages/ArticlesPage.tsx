@@ -137,6 +137,7 @@ import thrombolyticAgentsImage from "@/assets/thrombolytic-agents-article.jpg";
 import dvtAnticoagulantImage from "@/assets/dvt-anticoagulant-article.jpg";
 import aiEthicsMedicalImage from "@/assets/ai-ethics-medical-article.jpg";
 import fluMortalityImage from "@/assets/flu-mortality-article.jpg";
+import fluMedicationsImage from "@/assets/flu-treatment-medications.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -342,6 +343,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1031,
+      title: "داروهای درمان آنفولانزا: ضدویروسی‌ها و درمان‌های حمایتی",
+      description: "راهنمای جامع داروهای درمان آنفولانزا شامل تامیفلو، زانامیویر، بالوکساویر و درمان‌های حمایتی برای کاهش علائم",
+      image: fluMedicationsImage,
+      link: "/articles/influenza-medications",
+      category: "دارو",
+      date: "1403/09/19"
+    },
     {
       id: 1030,
       title: "نرخ مرگ و میر آنفولانزا: آمار جهانی و گروه‌های پرخطر",
