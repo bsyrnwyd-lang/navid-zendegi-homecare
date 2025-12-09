@@ -157,6 +157,7 @@ const SMAPage = lazy(() => import("./pages/articles/SMAPage"));
 const ThrombolyticAgentsPage = lazy(() => import("./pages/articles/ThrombolyticAgentsPage"));
 const DVTAnticoagulantsPage = lazy(() => import("./pages/articles/DVTAnticoagulantsPage"));
 const AIEthicsMedicalPage = lazy(() => import("./pages/articles/AIEthicsMedicalPage"));
+const InfluenzaMortalityPage = lazy(() => import("./pages/articles/InfluenzaMortalityPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -339,6 +340,7 @@ const App = () => (
                     <Route path="/articles/thrombolytic-agents" element={<ThrombolyticAgentsPage />} />
                     <Route path="/articles/dvt-anticoagulants" element={<DVTAnticoagulantsPage />} />
                     <Route path="/articles/ai-ethics-medical" element={<AIEthicsMedicalPage />} />
+                    <Route path="/articles/influenza-mortality" element={<InfluenzaMortalityPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

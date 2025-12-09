@@ -136,6 +136,7 @@ import smaImage from "@/assets/sma-article.jpg";
 import thrombolyticAgentsImage from "@/assets/thrombolytic-agents-article.jpg";
 import dvtAnticoagulantImage from "@/assets/dvt-anticoagulant-article.jpg";
 import aiEthicsMedicalImage from "@/assets/ai-ethics-medical-article.jpg";
+import fluMortalityImage from "@/assets/flu-mortality-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -341,6 +342,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1030,
+      title: "نرخ مرگ و میر آنفولانزا: آمار جهانی و گروه‌های پرخطر",
+      description: "بررسی آمار مرگ و میر آنفولانزا در سطح جهانی، گروه‌های سنی پرخطر، تأثیر واکسیناسیون و مقایسه با پاندمی‌ها",
+      image: fluMortalityImage,
+      link: "/articles/influenza-mortality",
+      category: "سلامت عمومی",
+      date: "1403/09/19"
+    },
     {
       id: 1029,
       title: "محدودیت‌ها و ملاحظات اخلاقی AI در تشخیص و درمان",
