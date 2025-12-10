@@ -161,6 +161,7 @@ const InfluenzaMortalityPage = lazy(() => import("./pages/articles/InfluenzaMort
 const InfluenzaMedicationsPage = lazy(() => import("./pages/articles/InfluenzaMedicationsPage"));
 const InfluenzaTransmissionPage = lazy(() => import("./pages/articles/InfluenzaTransmissionPage"));
 const BotoxPage = lazy(() => import("./pages/articles/BotoxPage"));
+const ColdVsFluPage = lazy(() => import("./pages/articles/ColdVsFluPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -347,6 +348,7 @@ const App = () => (
                      <Route path="/articles/influenza-medications" element={<InfluenzaMedicationsPage />} />
                      <Route path="/articles/influenza-transmission" element={<InfluenzaTransmissionPage />} />
                      <Route path="/articles/botox" element={<BotoxPage />} />
+                     <Route path="/articles/cold-vs-flu" element={<ColdVsFluPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
