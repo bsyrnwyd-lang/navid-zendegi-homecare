@@ -138,6 +138,7 @@ import dvtAnticoagulantImage from "@/assets/dvt-anticoagulant-article.jpg";
 import aiEthicsMedicalImage from "@/assets/ai-ethics-medical-article.jpg";
 import fluMortalityImage from "@/assets/flu-mortality-article.jpg";
 import fluMedicationsImage from "@/assets/flu-treatment-medications.jpg";
+import fluTransmissionImage from "@/assets/flu-transmission-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -343,6 +344,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1032,
+      title: "نحوه انتقال آنفولانزا: قطرات تنفسی، تماس و هوا",
+      description: "راهنمای کامل مسیرهای انتقال آنفولانزا شامل قطرات تنفسی، تماس مستقیم و غیرمستقیم، انتقال هوایی و دوره واگیرداری",
+      image: fluTransmissionImage,
+      link: "/articles/influenza-transmission",
+      category: "سلامت عمومی",
+      date: "1403/09/20"
+    },
     {
       id: 1031,
       title: "داروهای درمان آنفولانزا: ضدویروسی‌ها و درمان‌های حمایتی",
