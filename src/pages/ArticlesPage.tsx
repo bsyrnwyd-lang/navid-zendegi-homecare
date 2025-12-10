@@ -139,6 +139,7 @@ import aiEthicsMedicalImage from "@/assets/ai-ethics-medical-article.jpg";
 import fluMortalityImage from "@/assets/flu-mortality-article.jpg";
 import fluMedicationsImage from "@/assets/flu-treatment-medications.jpg";
 import fluTransmissionImage from "@/assets/flu-transmission-article.jpg";
+import botoxImage from "@/assets/botox-treatment-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -344,6 +345,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1033,
+      title: "بوتاکس: کاربردها، مکانیسم اثر و ملاحظات درمانی",
+      description: "راهنمای کامل بوتاکس شامل مکانیسم اثر، کاربردهای زیبایی و درمانی، عوارض جانبی و ملاحظات مهم",
+      image: botoxImage,
+      link: "/articles/botox",
+      category: "سلامت عمومی",
+      date: "1403/09/20"
+    },
     {
       id: 1032,
       title: "نحوه انتقال آنفولانزا: قطرات تنفسی، تماس و هوا",
