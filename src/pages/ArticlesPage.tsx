@@ -140,6 +140,7 @@ import fluMortalityImage from "@/assets/flu-mortality-article.jpg";
 import fluMedicationsImage from "@/assets/flu-treatment-medications.jpg";
 import fluTransmissionImage from "@/assets/flu-transmission-article.jpg";
 import botoxImage from "@/assets/botox-treatment-article.jpg";
+import coldVsFluImage from "@/assets/cold-vs-flu-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -345,6 +346,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1034,
+      title: "تفاوت سرماخوردگی و آنفولانزا: علائم، تشخیص و درمان",
+      description: "مقایسه کامل سرماخوردگی و آنفولانزا شامل تفاوت علائم، شدت بیماری، روش‌های درمان و پیشگیری",
+      image: coldVsFluImage,
+      link: "/articles/cold-vs-flu",
+      category: "سلامت عمومی",
+      date: "1403/09/20"
+    },
     {
       id: 1033,
       title: "بوتاکس: کاربردها، مکانیسم اثر و ملاحظات درمانی",
