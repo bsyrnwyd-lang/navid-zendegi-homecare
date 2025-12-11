@@ -87,7 +87,7 @@ const PricingPage = () => {
     price: "4,800,000"
   }, {
     service: "نوار قلب در منزل",
-    price: "950,000"
+    price: "1,300,000"
   }, {
     service: "هولتر در منزل",
     price: "2,500,000"
