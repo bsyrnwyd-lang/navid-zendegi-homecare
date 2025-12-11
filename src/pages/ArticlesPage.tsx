@@ -142,6 +142,7 @@ import fluTransmissionImage from "@/assets/flu-transmission-article.jpg";
 import botoxImage from "@/assets/botox-treatment-article.jpg";
 import coldVsFluImage from "@/assets/cold-vs-flu-article.jpg";
 import greenTeaHealthImage from "@/assets/green-tea-health-article.jpg";
+import strepThroatImage from "@/assets/strep-throat-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -347,6 +348,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1036,
+      title: "گلو درد چرکی (Strep Throat): تشخیص، عامل بیماری و درمان",
+      description: "راهنمای کامل گلو درد چرکی شامل علائم، تشخیص با آزمایش سریع، درمان آنتی‌بیوتیکی و پیشگیری از عوارض",
+      image: strepThroatImage,
+      link: "/articles/strep-throat",
+      category: "سلامت عمومی",
+      date: "1403/09/21"
+    },
     {
       id: 1035,
       title: "چای سبز: فواید سلامتی، مکانیسم اثر و ترکیبات فعال",
