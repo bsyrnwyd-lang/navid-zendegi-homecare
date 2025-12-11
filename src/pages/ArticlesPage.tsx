@@ -141,6 +141,7 @@ import fluMedicationsImage from "@/assets/flu-treatment-medications.jpg";
 import fluTransmissionImage from "@/assets/flu-transmission-article.jpg";
 import botoxImage from "@/assets/botox-treatment-article.jpg";
 import coldVsFluImage from "@/assets/cold-vs-flu-article.jpg";
+import greenTeaHealthImage from "@/assets/green-tea-health-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -346,6 +347,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1035,
+      title: "چای سبز: فواید سلامتی، مکانیسم اثر و ترکیبات فعال",
+      description: "راهنمای کامل فواید چای سبز شامل خواص آنتی‌اکسیدانی، تأثیر بر سلامت قلب و مغز، کنترل قند خون و خواص ضدسرطانی",
+      image: greenTeaHealthImage,
+      link: "/articles/green-tea-health",
+      category: "تغذیه",
+      date: "1403/09/21"
+    },
     {
       id: 1034,
       title: "تفاوت سرماخوردگی و آنفولانزا: علائم، تشخیص و درمان",
