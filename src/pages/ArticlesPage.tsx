@@ -143,6 +143,7 @@ import botoxImage from "@/assets/botox-treatment-article.jpg";
 import coldVsFluImage from "@/assets/cold-vs-flu-article.jpg";
 import greenTeaHealthImage from "@/assets/green-tea-health-article.jpg";
 import strepThroatImage from "@/assets/strep-throat-article.jpg";
+import zincSupplementImage from "@/assets/zinc-supplement-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -348,6 +349,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1037,
+      title: "زینک (روی): عنصر ضروری، نقش‌ها و مکمل‌یاری",
+      description: "راهنمای کامل زینک شامل نقش در سیستم ایمنی، التیام زخم، سلامت پوست و مغز، منابع غذایی، علائم کمبود و مکمل‌یاری",
+      image: zincSupplementImage,
+      link: "/articles/zinc-supplement",
+      category: "تغذیه",
+      date: "1403/09/22"
+    },
     {
       id: 1036,
       title: "گلو درد چرکی (Strep Throat): تشخیص، عامل بیماری و درمان",
