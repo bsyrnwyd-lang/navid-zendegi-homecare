@@ -144,6 +144,7 @@ import coldVsFluImage from "@/assets/cold-vs-flu-article.jpg";
 import greenTeaHealthImage from "@/assets/green-tea-health-article.jpg";
 import strepThroatImage from "@/assets/strep-throat-article.jpg";
 import zincSupplementImage from "@/assets/zinc-supplement-article.jpg";
+import earInfectionImage from "@/assets/ear-infection-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -349,6 +350,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1038,
+      title: "عفونت گوش: انواع، علائم و راهکارهای درمانی",
+      description: "راهنمای کامل عفونت گوش شامل انواع عفونت (گوش میانی، خارجی، داخلی)، علائم در کودکان و بزرگسالان، تشخیص و درمان",
+      image: earInfectionImage,
+      link: "/articles/ear-infection",
+      category: "سلامت عمومی",
+      date: "1403/09/22"
+    },
     {
       id: 1037,
       title: "زینک (روی): عنصر ضروری، نقش‌ها و مکمل‌یاری",
