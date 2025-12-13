@@ -167,6 +167,7 @@ const StrepThroatPage = lazy(() => import("./pages/articles/StrepThroatPage"));
 const ZincSupplementPage = lazy(() => import("./pages/articles/ZincSupplementPage"));
 const EarInfectionPage = lazy(() => import("./pages/articles/EarInfectionPage"));
 const IronSupplementPage = lazy(() => import("./pages/articles/IronSupplementPage"));
+const MagnesiumSupplementPage = lazy(() => import("./pages/articles/MagnesiumSupplementPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -359,6 +360,7 @@ const App = () => (
                      <Route path="/articles/zinc-supplement" element={<ZincSupplementPage />} />
                      <Route path="/articles/ear-infection" element={<EarInfectionPage />} />
                      <Route path="/articles/iron-supplement" element={<IronSupplementPage />} />
+                     <Route path="/articles/magnesium-supplement" element={<MagnesiumSupplementPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

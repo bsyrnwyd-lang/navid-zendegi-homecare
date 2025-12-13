@@ -146,6 +146,7 @@ import strepThroatImage from "@/assets/strep-throat-article.jpg";
 import zincSupplementImage from "@/assets/zinc-supplement-article.jpg";
 import earInfectionImage from "@/assets/ear-infection-article.jpg";
 import ironSupplementImage from "@/assets/iron-supplement-article.jpg";
+import magnesiumSupplementImage from "@/assets/magnesium-supplement-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -351,6 +352,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1040,
+      title: "منیزیم (Magnesium): عنصر حیاتی، نقش‌ها و مکمل‌یاری",
+      description: "راهنمای کامل منیزیم شامل نقش در سلامت قلب، عضلات و اعصاب، علائم کمبود، منابع غذایی و اهمیت مکمل‌یاری",
+      image: magnesiumSupplementImage,
+      link: "/articles/magnesium-supplement",
+      category: "تغذیه",
+      date: "1403/09/23"
+    },
     {
       id: 1039,
       title: "آهن (Iron): نقش‌ها، کمبود و میزان مصرف توصیه‌شده",
