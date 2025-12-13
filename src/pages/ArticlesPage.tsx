@@ -145,6 +145,7 @@ import greenTeaHealthImage from "@/assets/green-tea-health-article.jpg";
 import strepThroatImage from "@/assets/strep-throat-article.jpg";
 import zincSupplementImage from "@/assets/zinc-supplement-article.jpg";
 import earInfectionImage from "@/assets/ear-infection-article.jpg";
+import ironSupplementImage from "@/assets/iron-supplement-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -350,6 +351,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1039,
+      title: "آهن (Iron): نقش‌ها، کمبود و میزان مصرف توصیه‌شده",
+      description: "راهنمای کامل آهن شامل نقش در حمل اکسیژن، علائم کم‌خونی فقر آهن، میزان مصرف توصیه‌شده برای بزرگسالان و زنان باردار",
+      image: ironSupplementImage,
+      link: "/articles/iron-supplement",
+      category: "تغذیه",
+      date: "1403/09/23"
+    },
     {
       id: 1038,
       title: "عفونت گوش: انواع، علائم و راهکارهای درمانی",
