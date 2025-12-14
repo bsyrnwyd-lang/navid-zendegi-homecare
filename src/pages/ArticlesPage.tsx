@@ -147,6 +147,7 @@ import zincSupplementImage from "@/assets/zinc-supplement-article.jpg";
 import earInfectionImage from "@/assets/ear-infection-article.jpg";
 import ironSupplementImage from "@/assets/iron-supplement-article.jpg";
 import magnesiumSupplementImage from "@/assets/magnesium-supplement-article.jpg";
+import phosphorusSupplementImage from "@/assets/phosphorus-supplement-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -352,6 +353,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1041,
+      title: "فسفر (Phosphorus): نقش‌های حیاتی، جذب و کمبود",
+      description: "راهنمای کامل فسفر شامل نقش در سلامت استخوان، تولید انرژی ATP، ساختار DNA، کمبود و زیادی فسفر و ملاحظات پزشکی",
+      image: phosphorusSupplementImage,
+      link: "/articles/phosphorus-supplement",
+      category: "تغذیه",
+      date: "1403/09/24"
+    },
     {
       id: 1040,
       title: "منیزیم (Magnesium): عنصر حیاتی، نقش‌ها و مکمل‌یاری",
