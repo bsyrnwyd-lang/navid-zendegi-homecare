@@ -148,6 +148,7 @@ import earInfectionImage from "@/assets/ear-infection-article.jpg";
 import ironSupplementImage from "@/assets/iron-supplement-article.jpg";
 import magnesiumSupplementImage from "@/assets/magnesium-supplement-article.jpg";
 import phosphorusSupplementImage from "@/assets/phosphorus-supplement-article.jpg";
+import calciumSupplementImage from "@/assets/calcium-supplement-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -353,6 +354,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1042,
+      title: "کلسیم (Calcium): عنصر حیاتی، نقش‌ها و جذب",
+      description: "راهنمای کامل کلسیم شامل نقش در سلامت استخوان و دندان، عملکرد عصبی-عضلانی، لخته شدن خون و اهمیت پایش درمانی",
+      image: calciumSupplementImage,
+      link: "/articles/calcium-supplement",
+      category: "تغذیه",
+      date: "1403/09/25"
+    },
     {
       id: 1041,
       title: "فسفر (Phosphorus): نقش‌های حیاتی، جذب و کمبود",
