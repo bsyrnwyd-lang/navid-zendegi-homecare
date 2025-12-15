@@ -149,6 +149,7 @@ import ironSupplementImage from "@/assets/iron-supplement-article.jpg";
 import magnesiumSupplementImage from "@/assets/magnesium-supplement-article.jpg";
 import phosphorusSupplementImage from "@/assets/phosphorus-supplement-article.jpg";
 import calciumSupplementImage from "@/assets/calcium-supplement-article.jpg";
+import weightLossInjectionsImage from "@/assets/weight-loss-injection-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -354,6 +355,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1043,
+      title: "آمپول‌های لاغری: سماگلوتاید و لیراگلوتاید (GLP-1)",
+      description: "بررسی علمی آمپول‌های لاغری GLP-1 شامل سماگلوتاید (Wegovy, Ozempic) و لیراگلوتاید (Saxenda)، مکانیسم اثر، اثربخشی و عوارض",
+      image: weightLossInjectionsImage,
+      link: "/articles/weight-loss-injections",
+      category: "دارو",
+      date: "1403/09/25"
+    },
     {
       id: 1042,
       title: "کلسیم (Calcium): عنصر حیاتی، نقش‌ها و جذب",
