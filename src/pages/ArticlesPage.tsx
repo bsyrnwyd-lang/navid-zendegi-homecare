@@ -150,6 +150,7 @@ import magnesiumSupplementImage from "@/assets/magnesium-supplement-article.jpg"
 import phosphorusSupplementImage from "@/assets/phosphorus-supplement-article.jpg";
 import calciumSupplementImage from "@/assets/calcium-supplement-article.jpg";
 import weightLossInjectionsImage from "@/assets/weight-loss-injection-article.jpg";
+import hemoglobinImage from "@/assets/hemoglobin-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -355,6 +356,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1044,
+      title: "هموگلوبین (Hemoglobin): ساختار، عملکرد و اهمیت بالینی",
+      description: "راهنمای کامل هموگلوبین شامل ساختار مولکولی، نقش در انتقال اکسیژن، کم‌خونی، تالاسمی و هموگلوبینوپاتی‌ها",
+      image: hemoglobinImage,
+      link: "/articles/hemoglobin",
+      category: "سلامت عمومی",
+      date: "1403/09/26"
+    },
     {
       id: 1043,
       title: "آمپول‌های لاغری: سماگلوتاید و لیراگلوتاید (GLP-1)",
