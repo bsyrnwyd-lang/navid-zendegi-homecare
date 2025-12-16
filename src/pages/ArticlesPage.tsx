@@ -151,6 +151,7 @@ import phosphorusSupplementImage from "@/assets/phosphorus-supplement-article.jp
 import calciumSupplementImage from "@/assets/calcium-supplement-article.jpg";
 import weightLossInjectionsImage from "@/assets/weight-loss-injection-article.jpg";
 import hemoglobinImage from "@/assets/hemoglobin-article.jpg";
+import whiteBloodCellsImage from "@/assets/white-blood-cells-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -356,6 +357,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1045,
+      title: "گلبول‌های سفید (WBC): ارتش دفاعی بدن",
+      description: "راهنمای کامل گلبول‌های سفید شامل انواع (نوتروفیل، لنفوسیت، مونوسیت)، نقش در سیستم ایمنی، لکوسیتوز و لکوپنی",
+      image: whiteBloodCellsImage,
+      link: "/articles/white-blood-cells",
+      category: "سلامت عمومی",
+      date: "1403/09/26"
+    },
     {
       id: 1044,
       title: "هموگلوبین (Hemoglobin): ساختار، عملکرد و اهمیت بالینی",
