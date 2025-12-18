@@ -152,6 +152,7 @@ import calciumSupplementImage from "@/assets/calcium-supplement-article.jpg";
 import weightLossInjectionsImage from "@/assets/weight-loss-injection-article.jpg";
 import hemoglobinImage from "@/assets/hemoglobin-article.jpg";
 import whiteBloodCellsImage from "@/assets/white-blood-cells-article.jpg";
+import metforminImage from "@/assets/metformin-medication.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -357,6 +358,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1046,
+      title: "متفورمین (Metformin): راهنمای کامل مکانیسم اثر و کاربردها",
+      description: "راهنمای جامع متفورمین شامل مکانیسم اثر، کاربردها در دیابت نوع ۲ و PCOS، عوارض گوارشی، اسیدوز لاکتیک و نکات مهم مصرف",
+      image: metforminImage,
+      link: "/articles/metformin",
+      category: "دارو",
+      date: "1403/09/27"
+    },
     {
       id: 1045,
       title: "گلبول‌های سفید (WBC): ارتش دفاعی بدن",
