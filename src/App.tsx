@@ -174,6 +174,7 @@ const WeightLossInjectionsPage = lazy(() => import("./pages/articles/WeightLossI
 const HemoglobinPage = lazy(() => import("./pages/articles/HemoglobinPage"));
 const WhiteBloodCellsPage = lazy(() => import("./pages/articles/WhiteBloodCellsPage"));
 const MetforminPage = lazy(() => import("./pages/articles/MetforminPage"));
+const TiltTableTestPage = lazy(() => import("./pages/articles/TiltTableTestPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -372,7 +373,8 @@ const App = () => (
                      <Route path="/articles/weight-loss-injections" element={<WeightLossInjectionsPage />} />
                      <Route path="/articles/hemoglobin" element={<HemoglobinPage />} />
                      <Route path="/articles/white-blood-cells" element={<WhiteBloodCellsPage />} />
-                     <Route path="/articles/metformin" element={<MetforminPage />} />
+                      <Route path="/articles/metformin" element={<MetforminPage />} />
+                      <Route path="/articles/tilt-table-test" element={<TiltTableTestPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
