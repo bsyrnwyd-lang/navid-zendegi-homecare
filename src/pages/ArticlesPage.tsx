@@ -153,6 +153,7 @@ import weightLossInjectionsImage from "@/assets/weight-loss-injection-article.jp
 import hemoglobinImage from "@/assets/hemoglobin-article.jpg";
 import whiteBloodCellsImage from "@/assets/white-blood-cells-article.jpg";
 import metforminImage from "@/assets/metformin-medication.jpg";
+import tiltTableTestImage from "@/assets/tilt-table-test.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -358,6 +359,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1047,
+      title: "تست تیلت (Tilt Table Test): تشخیص علل سنکوپ و غش کردن",
+      description: "راهنمای کامل تست تیلت شامل مراحل انجام، تفسیر نتایج، کاربرد در تشخیص سنکوپ واسوواگال و افت فشار خون ارتوستاتیک",
+      image: tiltTableTestImage,
+      link: "/articles/tilt-table-test",
+      category: "قلب و عروق",
+      date: "1403/09/29"
+    },
     {
       id: 1046,
       title: "متفورمین (Metformin): راهنمای کامل مکانیسم اثر و کاربردها",
