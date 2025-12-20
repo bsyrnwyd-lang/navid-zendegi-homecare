@@ -305,10 +305,10 @@ const GoogleAdsLandingPage = () => {
                 onClick={handleCall}
                 variant="hero"
                 size="lg"
-                className="text-lg px-8 py-6"
+                className="text-sm sm:text-lg px-4 sm:px-8 py-4 sm:py-6 w-full sm:w-auto"
               >
-                <Phone className="w-6 h-6 ml-2" />
-                برای دریافت خدمات تماس بگیرید: {phoneNumber}
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 ml-2 flex-shrink-0" />
+                <span className="truncate">تماس: {phoneNumber}</span>
               </Button>
             </div>
           </div>
@@ -359,10 +359,10 @@ const GoogleAdsLandingPage = () => {
                 onClick={handleCall}
                 variant="hero"
                 size="lg"
-                className="text-lg px-8 py-6"
+                className="text-sm sm:text-lg px-4 sm:px-8 py-4 sm:py-6 w-full sm:w-auto"
               >
-                <Phone className="w-6 h-6 ml-2" />
-                تماس مستقیم با پشتیبانی پزشکی: {phoneNumber}
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 ml-2 flex-shrink-0" />
+                <span className="truncate">تماس با پشتیبانی: {phoneNumber}</span>
               </Button>
             </div>
           </div>
@@ -551,18 +551,18 @@ const GoogleAdsLandingPage = () => {
                 onClick={handleCall}
                 variant="hero"
                 size="lg"
-                className="text-xl px-10 py-8"
+                className="text-base sm:text-xl px-6 sm:px-10 py-6 sm:py-8 w-full sm:w-auto"
               >
-                <Phone className="w-7 h-7 ml-3" />
-                تماس فوری: {phoneNumber}
+                <Phone className="w-6 h-6 sm:w-7 sm:h-7 ml-2 sm:ml-3 flex-shrink-0" />
+                <span className="truncate">تماس فوری: {phoneNumber}</span>
               </Button>
               <Button
                 onClick={handleWhatsApp}
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 py-6 border-2"
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 border-2 w-full sm:w-auto"
               >
-                <MessageCircle className="w-6 h-6 ml-2" />
+                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 ml-2 flex-shrink-0" />
                 واتساپ
               </Button>
             </div>
