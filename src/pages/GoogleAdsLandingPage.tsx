@@ -143,14 +143,26 @@ const GoogleAdsLandingPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="text-center lg:text-right">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary leading-tight">
-                  ویزیت پزشک در منزل تهران و کرج | اعزام فوری
+                  ویزیت پزشک عمومی و متخصص در منزل تهران و کرج
                 </h1>
                 <p className="text-xl md:text-2xl mb-4 text-foreground">
                   خدمات پزشکی و درمانی در منزل شما، بدون نیاز به مراجعه به درمانگاه
                 </p>
-                <p className="text-lg mb-8 text-muted-foreground">
-                  اعزام سریع پزشک عمومی و پرستار، شبانه‌روزی در تمام مناطق تهران و کرج
+                <p className="text-lg mb-6 text-muted-foreground">
+                  اعزام سریع پزشک عمومی، متخصص داخلی و متخصص قلب (همراه با اکو و نوار قلب) به صورت شبانه‌روزی
                 </p>
+                
+                <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-6">
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                    ✓ پزشک عمومی
+                  </span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                    ✓ متخصص داخلی
+                  </span>
+                  <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                    ✓ متخصص قلب + اکو + نوار قلب
+                  </span>
+                </div>
             
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Button
