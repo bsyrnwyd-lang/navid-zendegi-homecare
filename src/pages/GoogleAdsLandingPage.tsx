@@ -162,6 +162,9 @@ const GoogleAdsLandingPage = () => {
                   <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
                     ✓ متخصص قلب + اکو + نوار قلب
                   </span>
+                  <span className="bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
+                    ✓ ویزیت تمامی تخصص‌ها
+                  </span>
                 </div>
             
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
