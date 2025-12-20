@@ -175,6 +175,7 @@ const HemoglobinPage = lazy(() => import("./pages/articles/HemoglobinPage"));
 const WhiteBloodCellsPage = lazy(() => import("./pages/articles/WhiteBloodCellsPage"));
 const MetforminPage = lazy(() => import("./pages/articles/MetforminPage"));
 const TiltTableTestPage = lazy(() => import("./pages/articles/TiltTableTestPage"));
+const GoogleAdsLandingPage = lazy(() => import("./pages/GoogleAdsLandingPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -375,6 +376,9 @@ const App = () => (
                      <Route path="/articles/white-blood-cells" element={<WhiteBloodCellsPage />} />
                       <Route path="/articles/metformin" element={<MetforminPage />} />
                       <Route path="/articles/tilt-table-test" element={<TiltTableTestPage />} />
+                      
+                      {/* Google Ads Landing Page */}
+                      <Route path="/google-ads" element={<GoogleAdsLandingPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
