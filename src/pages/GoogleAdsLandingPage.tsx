@@ -1,4 +1,4 @@
-import { Phone, CheckCircle, Heart, Clock, Shield, Users, Star, Stethoscope, Activity, Syringe, MessageCircle, MapPin, CheckCircle2 } from "lucide-react";
+import { Phone, CheckCircle, Heart, Clock, Shield, Users, Star, Stethoscope, Activity, Syringe, MessageCircle, MapPin, CheckCircle2, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import FAQSection from "@/components/FAQSection";
-import PricingInfo from "@/components/PricingInfo";
 import doctorHomeVisitImage from "@/assets/doctor-home-visit-landing.jpg";
 
 const GoogleAdsLandingPage = () => {
@@ -547,12 +546,95 @@ const GoogleAdsLandingPage = () => {
           </div>
         </section>
 
-        {/* Pricing Info Card */}
+        {/* نظرات مشتریان */}
         <section className="medical-section">
           <div className="container mx-auto max-w-5xl">
-            <PricingInfo />
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">
+              نظرات بیماران و همراهان
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
+                <div className="flex items-center gap-1 mb-3">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <Quote className="w-8 h-8 text-primary/20 mb-2" />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  مادرم ۸۵ سال سن داره و امکان بردنش به مطب نبود. پزشک خیلی سریع اومد و با صبر و حوصله معاینه کرد. واقعاً ممنونم از نوید زندگی.
+                </p>
+                <p className="font-semibold text-foreground">خانم رضایی - تهران</p>
+              </div>
+              
+              <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
+                <div className="flex items-center gap-1 mb-3">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <Quote className="w-8 h-8 text-primary/20 mb-2" />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  ساعت ۱۱ شب بچه‌ام تب کرد. با یه تماس پرستار اومد و سرم وصل کرد. خیالم راحت شد که نیازی به اورژانس نیست. خدمات عالی!
+                </p>
+                <p className="font-semibold text-foreground">آقای محمدی - کرج</p>
+              </div>
+              
+              <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
+                <div className="flex items-center gap-1 mb-3">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <Quote className="w-8 h-8 text-primary/20 mb-2" />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  برای پدرم که مشکل قلبی داشت، متخصص قلب با دستگاه اکو اومد منزل. کار حرفه‌ای و قیمت منصفانه. پیشنهاد می‌کنم.
+                </p>
+                <p className="font-semibold text-foreground">آقای کریمی - تهرانپارس</p>
+              </div>
+              
+              <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
+                <div className="flex items-center gap-1 mb-3">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <Quote className="w-8 h-8 text-primary/20 mb-2" />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  چند ماهه که برای مادربزرگم پرستار میاد پانسمان زخم بستر. خیلی دقیق و بهداشتی کار می‌کنن. زخمش خیلی بهتر شده.
+                </p>
+                <p className="font-semibold text-foreground">خانم احمدی - سعادت‌آباد</p>
+              </div>
+              
+              <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
+                <div className="flex items-center gap-1 mb-3">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <Quote className="w-8 h-8 text-primary/20 mb-2" />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  سرماخوردگی شدید داشتم و نمی‌تونستم برم مطب. پزشک عمومی اومد، معاینه کرد و دارو نوشت. خیلی راحت بود.
+                </p>
+                <p className="font-semibold text-foreground">آقای نوری - ونک</p>
+              </div>
+              
+              <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
+                <div className="flex items-center gap-1 mb-3">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <Quote className="w-8 h-8 text-primary/20 mb-2" />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  قیمت‌ها شفاف بود و قبل از اعزام همه چیز رو توضیح دادن. فاکتور رسمی هم دادن برای بیمه. خیلی حرفه‌ای بودن.
+                </p>
+                <p className="font-semibold text-foreground">خانم صادقی - شهرک غرب</p>
+              </div>
+            </div>
           </div>
         </section>
+
       </main>
 
       <Footer />
