@@ -378,7 +378,7 @@ const App = () => (
                       <Route path="/articles/tilt-table-test" element={<TiltTableTestPage />} />
                       
                       {/* Google Ads Landing Page */}
-                      <Route path="/google-ads" element={<GoogleAdsLandingPage />} />
+                      <Route path="/doctor-at-home" element={<GoogleAdsLandingPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
