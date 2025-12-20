@@ -96,6 +96,7 @@ const GoogleAdsLandingPage = () => {
     { icon: Shield, title: "پانسمان و مراقبت‌های بعد از عمل", link: "/services/nursing" },
     { icon: Users, title: "خدمات پزشکی سالمندان", link: "/articles/elderly-care-guide" },
     { icon: Activity, title: "نوار قلب در منزل", link: "/services/echo-ecg" },
+    { icon: Activity, title: "هولتر در منزل", link: "/services/holter" },
   ];
 
   const targetAudience = [
@@ -138,9 +139,9 @@ const GoogleAdsLandingPage = () => {
 
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}
-        <section className="medical-section bg-gradient-to-br from-primary/10 to-secondary/10">
-          <div className="container mx-auto max-w-5xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <section className="medical-section bg-gradient-to-br from-primary/10 to-secondary/10 overflow-hidden">
+          <div className="container mx-auto max-w-5xl px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="text-center lg:text-right">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary leading-tight">
                   ویزیت پزشک عمومی و متخصص در منزل تهران و کرج
@@ -172,18 +173,18 @@ const GoogleAdsLandingPage = () => {
                     onClick={handleCall}
                     variant="hero"
                     size="lg"
-                    className="text-lg px-8 py-6"
+                    className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 w-full sm:w-auto"
                   >
-                    <Phone className="w-6 h-6 ml-2" />
-                    تماس فوری: {phoneNumber}
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 ml-2 flex-shrink-0" />
+                    <span className="truncate">تماس فوری: {phoneNumber}</span>
                   </Button>
                   <Button
                     onClick={handleWhatsApp}
                     variant="outline"
                     size="lg"
-                    className="text-lg px-8 py-6 border-2"
+                    className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 border-2 w-full sm:w-auto"
                   >
-                    <MessageCircle className="w-6 h-6 ml-2" />
+                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 ml-2 flex-shrink-0" />
                     واتساپ
                   </Button>
                 </div>
@@ -288,6 +289,9 @@ const GoogleAdsLandingPage = () => {
                 </Link>
                 <Link to="/services/laboratory" className="text-primary hover:underline flex items-center gap-2">
                   → نمونه‌گیری آزمایش در منزل
+                </Link>
+                <Link to="/services/holter" className="text-primary hover:underline flex items-center gap-2">
+                  → هولتر در منزل
                 </Link>
               </div>
             </div>
