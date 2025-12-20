@@ -7,6 +7,7 @@ import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import FAQSection from "@/components/FAQSection";
 import PricingInfo from "@/components/PricingInfo";
+import doctorHomeVisitImage from "@/assets/doctor-home-visit-landing.jpg";
 
 const GoogleAdsLandingPage = () => {
   const phoneNumber = "09386117912";
@@ -131,7 +132,7 @@ const GoogleAdsLandingPage = () => {
         title="ویزیت پزشک در منزل | خدمات پزشکی شبانه‌روزی تهران و کرج"
         description="اعزام فوری پزشک و پرستار در منزل، خدمات پزشکی شبانه‌روزی، تماس فوری 09386117912"
         keywords="ویزیت پزشک در منزل، پزشک در منزل تهران، پرستار در منزل، تزریقات در منزل، خدمات پزشکی شبانه‌روزی"
-        canonical="https://navidzendegi.ir/google-ads"
+        canonical="https://navidzendegi.ir/doctor-at-home"
       />
       
       <Header />
@@ -139,36 +140,52 @@ const GoogleAdsLandingPage = () => {
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}
         <section className="medical-section bg-gradient-to-br from-primary/10 to-secondary/10">
-          <div className="container mx-auto max-w-5xl text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary leading-tight">
-              ویزیت پزشک در منزل تهران و کرج | اعزام فوری
-            </h1>
-            <p className="text-xl md:text-2xl mb-4 text-foreground">
-              خدمات پزشکی و درمانی در منزل شما، بدون نیاز به مراجعه به درمانگاه
-            </p>
-            <p className="text-lg mb-8 text-muted-foreground">
-              اعزام سریع پزشک عمومی و پرستار، شبانه‌روزی در تمام مناطق تهران و کرج
-            </p>
+          <div className="container mx-auto max-w-5xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="text-center lg:text-right">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary leading-tight">
+                  ویزیت پزشک در منزل تهران و کرج | اعزام فوری
+                </h1>
+                <p className="text-xl md:text-2xl mb-4 text-foreground">
+                  خدمات پزشکی و درمانی در منزل شما، بدون نیاز به مراجعه به درمانگاه
+                </p>
+                <p className="text-lg mb-8 text-muted-foreground">
+                  اعزام سریع پزشک عمومی و پرستار، شبانه‌روزی در تمام مناطق تهران و کرج
+                </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                onClick={handleCall}
-                variant="hero"
-                size="lg"
-                className="text-lg px-8 py-6"
-              >
-                <Phone className="w-6 h-6 ml-2" />
-                تماس فوری: {phoneNumber}
-              </Button>
-              <Button
-                onClick={handleWhatsApp}
-                variant="outline"
-                size="lg"
-                className="text-lg px-8 py-6 border-2"
-              >
-                <MessageCircle className="w-6 h-6 ml-2" />
-                واتساپ
-              </Button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Button
+                    onClick={handleCall}
+                    variant="hero"
+                    size="lg"
+                    className="text-lg px-8 py-6"
+                  >
+                    <Phone className="w-6 h-6 ml-2" />
+                    تماس فوری: {phoneNumber}
+                  </Button>
+                  <Button
+                    onClick={handleWhatsApp}
+                    variant="outline"
+                    size="lg"
+                    className="text-lg px-8 py-6 border-2"
+                  >
+                    <MessageCircle className="w-6 h-6 ml-2" />
+                    واتساپ
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <img 
+                  src={doctorHomeVisitImage} 
+                  alt="ویزیت پزشک در منزل تهران - خدمات پزشکی در خانه شامل معاینه، تجویز دارو و مشاوره پزشکی"
+                  className="w-full h-80 lg:h-[450px] object-cover rounded-2xl shadow-2xl"
+                  width="1344"
+                  height="768"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
+              </div>
             </div>
           </div>
         </section>
