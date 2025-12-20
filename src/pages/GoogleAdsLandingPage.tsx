@@ -1,4 +1,4 @@
-import { Phone, CheckCircle, Heart, Clock, Shield, Users, Star, Stethoscope, Activity, Syringe, MessageCircle, MapPin, CheckCircle2, Quote } from "lucide-react";
+import { Phone, CheckCircle, Heart, Clock, Shield, Users, Star, Stethoscope, Activity, Syringe, MessageCircle, MapPin, CheckCircle2, Quote, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -97,6 +97,7 @@ const GoogleAdsLandingPage = () => {
     { icon: Users, title: "خدمات پزشکی سالمندان", link: "/articles/elderly-care-guide" },
     { icon: Activity, title: "نوار قلب در منزل", link: "/services/echo-ecg" },
     { icon: Activity, title: "هولتر در منزل", link: "/services/holter" },
+    { icon: Package, title: "اجاره تجهیزات پزشکی", link: "/services/medical-equipment-rental" },
   ];
 
   const targetAudience = [
@@ -292,6 +293,9 @@ const GoogleAdsLandingPage = () => {
                 </Link>
                 <Link to="/services/holter" className="text-primary hover:underline flex items-center gap-2">
                   → هولتر در منزل
+                </Link>
+                <Link to="/services/medical-equipment-rental" className="text-primary hover:underline flex items-center gap-2">
+                  → اجاره تجهیزات پزشکی
                 </Link>
               </div>
             </div>
