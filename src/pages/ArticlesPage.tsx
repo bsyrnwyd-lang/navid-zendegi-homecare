@@ -155,6 +155,7 @@ import whiteBloodCellsImage from "@/assets/white-blood-cells-article.jpg";
 import metforminImage from "@/assets/metformin-medication.jpg";
 import tiltTableTestImage from "@/assets/tilt-table-test.jpg";
 import injectionHomeImage from "@/assets/iranian-injection-home.jpg";
+import infectiousDiseaseImage from "@/assets/infectious-disease.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -360,6 +361,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1049,
+      title: "هپاتیت چیست؟ انواع، علائم و راهنمای درمان",
+      description: "راهنمای کامل هپاتیت شامل انواع A، B و C، علائم، تشخیص و خدمات آزمایش و تزریق واکسن در منزل",
+      image: infectiousDiseaseImage,
+      link: "/articles/hepatitis",
+      category: "بیماری‌ها",
+      date: "1403/10/01"
+    },
     {
       id: 1048,
       title: "تزریق HBIG در منزل: ایمونوگلوبولین هپاتیت B",
