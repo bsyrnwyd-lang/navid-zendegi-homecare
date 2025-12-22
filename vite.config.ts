@@ -40,14 +40,22 @@ export default defineConfig(({ mode }) => ({
     target: 'es2019',
     rollupOptions: {
       output: {
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-        manualChunks: {
-          // Split vendor chunks for better caching
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
-          'ui-core': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-accordion'],
+        chunkFileNames: 'assets/js/[hash].js',
+        entryFileNames: 'assets/js/main-[hash].js',
+        assetFileNames: 'assets/[ext]/[hash].[ext]',
+        manualChunks(id) {
+          // Pack all vendor libraries into a single chunk
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+          // Pack all article pages into one chunk
+          if (id.includes('/pages/articles/')) {
+            return 'articles';
+          }
+          // Pack all service pages into one chunk
+          if (id.includes('/pages/services/')) {
+            return 'services';
+          }
         }
       }
     },
