@@ -32,11 +32,11 @@ const Hero = memo(() => {
       
       <div className="container mx-auto px-4 py-20 z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
-            ویزیت پزشک در منزل تهران
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground leading-tight">
+            ویزیت پزشک در منزل تهران | نوید زندگی
             <br />
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              نوید زندگی | ویزیت پزشک عمومی و متخصص در منزل
+              ویزیت پزشک عمومی، متخصص داخلی و متخصص قلب در منزل
             </span>
           </h1>
           
