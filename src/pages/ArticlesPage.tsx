@@ -154,6 +154,7 @@ import hemoglobinImage from "@/assets/hemoglobin-article.jpg";
 import whiteBloodCellsImage from "@/assets/white-blood-cells-article.jpg";
 import metforminImage from "@/assets/metformin-medication.jpg";
 import tiltTableTestImage from "@/assets/tilt-table-test.jpg";
+import injectionHomeImage from "@/assets/iranian-injection-home.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -359,6 +360,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1048,
+      title: "تزریق HBIG در منزل: ایمونوگلوبولین هپاتیت B",
+      description: "راهنمای کامل تزریق داروی HBIG شامل کاربردها در نوزادان، مواجهه شغلی، تماس جنسی و پیوند کبد با حفظ زنجیره سرد",
+      image: injectionHomeImage,
+      link: "/articles/hbig-injection",
+      category: "خدمات در منزل",
+      date: "1403/10/01"
+    },
     {
       id: 1047,
       title: "تست تیلت (Tilt Table Test): تشخیص علل سنکوپ و غش کردن",
