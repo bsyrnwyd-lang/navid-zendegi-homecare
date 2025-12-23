@@ -156,6 +156,7 @@ import metforminImage from "@/assets/metformin-medication.jpg";
 import tiltTableTestImage from "@/assets/tilt-table-test.jpg";
 import injectionHomeImage from "@/assets/iranian-injection-home.jpg";
 import infectiousDiseaseImage from "@/assets/infectious-disease.jpg";
+import tuberculosisImage from "@/assets/tuberculosis-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -361,6 +362,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1050,
+      title: "بیماری سل چیست؟ علائم، راه‌های انتقال و مراقبت در منزل",
+      description: "راهنمای جامع بیماری سل (TB): علائم، تفاوت سل نهفته و فعال، تشخیص و درمان با خدمات نمونه‌گیری و مراقبت در منزل",
+      image: tuberculosisImage,
+      link: "/articles/tuberculosis",
+      category: "بیماری‌ها",
+      date: "1403/10/02"
+    },
     {
       id: 1049,
       title: "هپاتیت چیست؟ انواع، علائم و راهنمای درمان",

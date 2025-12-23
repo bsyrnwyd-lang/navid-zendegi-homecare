@@ -647,4 +647,14 @@
       <image:title>پیشگیری از آنفولانزا - واکسیناسیون و بهداشت</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/tuberculosis</loc>
+    <lastmod>2025-12-23</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/tuberculosis-article.jpg</image:loc>
+      <image:title>بیماری سل - علائم، تشخیص و مراقبت در منزل</image:title>
+    </image:image>
+  </url>
 </urlset>
