@@ -178,6 +178,7 @@ const TiltTableTestPage = lazy(() => import("./pages/articles/TiltTableTestPage"
 const GoogleAdsLandingPage = lazy(() => import("./pages/GoogleAdsLandingPage"));
 const HBIGInjectionPage = lazy(() => import("./pages/articles/HBIGInjectionPage"));
 const HepatitisPage = lazy(() => import("./pages/articles/HepatitisPage"));
+const TuberculosisPage = lazy(() => import("./pages/articles/TuberculosisPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -383,6 +384,7 @@ const App = () => (
                       <Route path="/doctor-at-home" element={<GoogleAdsLandingPage />} />
                       <Route path="/articles/hbig-injection" element={<HBIGInjectionPage />} />
                       <Route path="/articles/hepatitis" element={<HepatitisPage />} />
+                      <Route path="/articles/tuberculosis" element={<TuberculosisPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
