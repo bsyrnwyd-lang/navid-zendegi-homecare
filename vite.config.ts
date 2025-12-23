@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
-import legacy from '@vitejs/plugin-legacy';
 import compression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
@@ -14,10 +13,6 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
-    legacy({ 
-      targets: ['defaults', 'not IE 11', 'Android >= 5', 'iOS >= 10'],
-      modernPolyfills: false,
-    }),
     // Gzip compression for production
     mode === 'production' && compression({
       algorithm: 'gzip',
@@ -37,30 +32,22 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    target: 'es2019',
+    target: 'es2020',
     rollupOptions: {
       output: {
         chunkFileNames: 'assets/js/[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
         assetFileNames: 'assets/[ext]/[hash].[ext]',
+        // Consolidate all code into fewer chunks
         manualChunks(id) {
-          // Pack all vendor libraries into a single chunk
           if (id.includes('node_modules')) {
             return 'vendor';
-          }
-          // Pack all article pages into one chunk
-          if (id.includes('/pages/articles/')) {
-            return 'articles';
-          }
-          // Pack all service pages into one chunk
-          if (id.includes('/pages/services/')) {
-            return 'services';
           }
         }
       }
     },
-    chunkSizeWarningLimit: 1000,
-    cssCodeSplit: true,
+    chunkSizeWarningLimit: 1500,
+    cssCodeSplit: false, // Single CSS file
     sourcemap: false,
     minify: 'terser',
     terserOptions: {
@@ -72,11 +59,10 @@ export default defineConfig(({ mode }) => ({
       mangle: true,
     },
     reportCompressedSize: false,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 8192, // Inline smaller assets
   },
   // Optimize dependencies
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
-    exclude: ['@tanstack/react-query'],
   },
 }));
