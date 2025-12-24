@@ -667,4 +667,14 @@
       <image:title>بیماری کزاز - علائم، پیشگیری و تزریق واکسن در منزل</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/pneumonia</loc>
+    <lastmod>2025-12-24</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/pneumonia-article.jpg</image:loc>
+      <image:title>ذات‌الریه (پنومونی) - علائم و درمان در منزل</image:title>
+    </image:image>
+  </url>
 </urlset>

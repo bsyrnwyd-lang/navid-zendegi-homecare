@@ -158,6 +158,7 @@ import injectionHomeImage from "@/assets/iranian-injection-home.jpg";
 import infectiousDiseaseImage from "@/assets/infectious-disease.jpg";
 import tuberculosisImage from "@/assets/tuberculosis-article.jpg";
 import tetanusImage from "@/assets/tetanus-article.jpg";
+import pneumoniaImage from "@/assets/pneumonia-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -363,6 +364,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1052,
+      title: "ذات‌الریه (پنومونی) چیست؟ از علائم تا درمان در منزل",
+      description: "راهنمای جامع ذات‌الریه: علائم، انواع پنومونی و خدمات اکسیژن‌تراپی، تزریق آنتی‌بیوتیک و ویزیت پزشک در منزل",
+      image: pneumoniaImage,
+      link: "/articles/pneumonia",
+      category: "بیماری‌ها",
+      date: "1403/10/04"
+    },
     {
       id: 1051,
       title: "کزاز چیست؟ علائم، پیشگیری و تزریق واکسن در منزل",
