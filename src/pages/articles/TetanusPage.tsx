@@ -1,13 +1,17 @@
-import ArticleLayout from "@/components/ArticleLayout";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import ArticleSchema from "@/components/ArticleSchema";
-import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
 import { Link } from "react-router-dom";
-import { AlertTriangle, Phone, Clock, Shield, Syringe, Heart } from "lucide-react";
+import { Phone } from "lucide-react";
 import tetanusImage from "@/assets/tetanus-article.jpg";
+import vaccinationImage from "@/assets/vaccination-article.jpg";
+import meningitisImage from "@/assets/meningitis-article.jpg";
+import tuberculosisImage from "@/assets/tuberculosis-article.jpg";
 
 const TetanusPage = () => {
   const faqs = [
@@ -24,10 +28,6 @@ const TetanusPage = () => {
       answer: "قفل شدن فک (ناتوانی در باز کردن دهان)، سفتی عضلات گردن و شکم، دشواری در بلع و اسپاسم‌های دردناک از علائم اولیه کزاز هستند."
     },
     {
-      question: "آیا تزریق واکسن کزاز در منزل امکان‌پذیر است؟",
-      answer: "بله، نوید زندگی خدمات تزریق واکسن و سرم کزاز را با حفظ زنجیره سرد در منزل ارائه می‌دهد. برای هماهنگی با شماره 09386117912 تماس بگیرید."
-    },
-    {
       question: "بعد از زخم آلوده چقدر زمان دارم برای تزریق واکسن؟",
       answer: "در صورت زخم آلوده، هرچه زودتر اقدام کنید بهتر است. ترجیحاً در ۲۴ ساعت اول و حداکثر تا ۷۲ ساعت پس از جراحت باید واکسن یا سرم تزریق شود."
     },
@@ -37,18 +37,12 @@ const TetanusPage = () => {
     }
   ];
 
-  const breadcrumbItems = [
-    { name: "صفحه اصلی", url: "/" },
-    { name: "مقالات", url: "/articles" },
-    { name: "بیماری کزاز", url: "/articles/tetanus" }
-  ];
-
   return (
-    <ArticleLayout>
+    <div className="min-h-screen bg-background">
       <SEOHead
-        title="کزاز چیست؟ علائم، پیشگیری و تزریق واکسن در منزل | نوید زندگی"
-        description="بیماری کزاز یک فوریت پزشکی است. علائم، راه‌های پیشگیری و خدمات تزریق واکسن کزاز در منزل توسط نوید زندگی. پانسمان تخصصی زخم و مراقبت ۲۴ ساعته."
-        keywords="کزاز, واکسن کزاز, تزریق واکسن در منزل, سرم کزاز, پانسمان زخم, علائم کزاز, پیشگیری از کزاز"
+        title="کزاز چیست؟ علائم، پیشگیری و درمان | نوید زندگی"
+        description="بیماری کزاز یک فوریت پزشکی است. علائم، راه‌های پیشگیری و خدمات پانسمان تخصصی زخم و مراقبت پرستاری در منزل توسط نوید زندگی."
+        keywords="کزاز, علائم کزاز, پیشگیری از کزاز, پانسمان زخم, مراقبت پرستاری"
         canonical="https://navidzendegi.com/articles/tetanus"
         ogType="article"
         publishedTime="2025-01-15T10:00:00+03:30"
@@ -56,258 +50,218 @@ const TetanusPage = () => {
       />
       
       <ArticleSchema
-        title="کزاز چیست؟ علائم، پیشگیری و تزریق واکسن در منزل"
-        description="بیماری کزاز یک فوریت پزشکی است. علائم، راه‌های پیشگیری و خدمات تزریق واکسن کزاز در منزل توسط نوید زندگی."
+        title="کزاز چیست؟ علائم، پیشگیری و درمان"
+        description="بیماری کزاز یک فوریت پزشکی است. علائم، راه‌های پیشگیری و خدمات پانسمان تخصصی زخم در منزل."
         publishedTime="2025-01-15T10:00:00+03:30"
         modifiedTime="2025-01-15T10:00:00+03:30"
         image={tetanusImage}
       />
 
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <BreadcrumbNavigation items={breadcrumbItems} />
-
+      <Header />
+      
+      <main className="pt-20 md:pt-24">
         {/* Hero Section */}
-        <header className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-relaxed">
-            کزاز؛ بیماری خطرناکی که با یک زخم ساده آغاز می‌شود
-          </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            آیا می‌دانستید باکتری کزاز می‌تواند از طریق یک خراش کوچک با وسیله‌ای زنگ‌زده یا حتی خاک آلوده وارد بدن شود؟ بیماری کزاز که به "قفل شدن فک" نیز معروف است، یک فوریت پزشکی است.
-          </p>
-        </header>
-
-        {/* Featured Image */}
-        <div className="mb-8 rounded-lg overflow-hidden">
-          <img 
-            src={tetanusImage} 
-            alt="تزریق واکسن کزاز در منزل توسط پرستار نوید زندگی" 
-            className="w-full h-auto object-cover"
-            loading="eager"
-          />
-        </div>
-
-        {/* Warning Box */}
-        <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4 mb-8">
-          <div className="flex items-start gap-3">
-            <AlertTriangle className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="font-bold text-destructive mb-1">هشدار مهم</h3>
-              <p className="text-sm text-foreground">
-                کزاز یک فوریت پزشکی است. هرگز خوددرمانی نکنید. در صورت جراحت با اشیاء آلوده، فوراً برای تزریق واکسن یا سرم اقدام کنید. برای هماهنگی تزریق در منزل با شماره <a href="tel:09386117912" className="text-primary font-bold hover:underline">09386117912</a> تماس بگیرید.
+        <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-8">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+                کزاز؛ بیماری خطرناکی که با یک زخم ساده آغاز می‌شود
+              </h1>
+              <p className="text-base md:text-lg text-foreground leading-relaxed text-justify">
+                آیا می‌دانستید باکتری کزاز می‌تواند از طریق یک خراش کوچک با وسیله‌ای زنگ‌زده یا حتی خاک آلوده وارد بدن شود؟ بیماری کزاز که به "قفل شدن فک" نیز معروف است، یک فوریت پزشکی است. مرکز <Link to="/" className="text-primary hover:underline font-medium">نوید زندگی</Link> با ارائه خدمات <Link to="/services/nursing" className="text-primary hover:underline">پانسمان تخصصی</Link> و مراقبت‌های پرستاری در منزل، در کنار شما و خانواده‌تان است.
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Introduction */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">بیماری کزاز چیست؟</h2>
-          <p className="text-foreground leading-relaxed mb-4">
-            کزاز یک بیماری شدید است که توسط سم باکتری <strong>کلستریدیوم تتانی</strong> ایجاد می‌شود. این باکتری در خاک، گرد و غبار و مدفوع حیوانات وجود دارد. وقتی باکتری وارد یک زخم عمیق یا حتی سطحی شود، سمی تولید می‌کند که به اعصاب کنترل‌کننده عضلات حمله کرده و باعث گرفتگی‌های دردناک می‌شود.
-          </p>
-          <p className="text-foreground leading-relaxed">
-            مرکز <Link to="/" className="text-primary hover:underline font-medium">نوید زندگی</Link> با ارائه <Link to="/services/nursing" className="text-primary hover:underline">خدمات پرستاری در منزل</Link> شامل پانسمان تخصصی و تزریق واکسن کزاز، امنیت سلامت شما را در کوتاه‌ترین زمان تضمین می‌کند.
-          </p>
-        </section>
-
-        {/* Symptoms Section */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">علائم اصلی بیماری کزاز</h2>
-          <p className="text-foreground leading-relaxed mb-4">
-            علائم معمولاً بین <strong>۳ تا ۲۱ روز</strong> پس از آلودگی ظاهر می‌شوند. مهم‌ترین نشانه‌ها عبارتند از:
-          </p>
-          <ul className="space-y-3 mb-4">
-            <li className="flex items-start gap-2">
-              <span className="text-primary font-bold">•</span>
-              <span><strong>قفل شدن فک (Trismus):</strong> ناتوانی در باز کردن دهان</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary font-bold">•</span>
-              <span><strong>اسپاسم عضلات گردن و شکم:</strong> سفت شدن شدید عضلات</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary font-bold">•</span>
-              <span><strong>لبخند کزاز (Risus Sardonicus):</strong> اسپاسم عضلات صورت که حالتی شبیه لبخند اجباری ایجاد می‌کند</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary font-bold">•</span>
-              <span><strong>دشواری در بلع:</strong> مشکل در قورت دادن غذا یا آب</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary font-bold">•</span>
-              <span><strong>تشنج‌های دردناک بدن:</strong> که ممکن است با صدا یا نور تحریک شود</span>
-            </li>
-          </ul>
-        </section>
-
-        {/* When to get vaccine */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">چه زمانی به تزریق واکسن کزاز نیاز داریم؟</h2>
-          <p className="text-foreground leading-relaxed mb-4">
-            بسیاری از افراد تصور می‌کنند کزاز فقط مربوط به میخ زنگ‌زده است، اما در موارد زیر حتماً باید برای تزریق واکسن یا یادآور اقدام کنید:
-          </p>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <Syringe className="w-6 h-6 text-primary mb-2" />
-              <h3 className="font-bold mb-2">بریدگی با اجسام فلزی</h3>
-              <p className="text-sm text-muted-foreground">چاقو، ابزار کار، یا قطعات خودرو</p>
+            
+            <div className="relative mb-8">
+              <img 
+                src={tetanusImage} 
+                alt="بیماری کزاز - علائم و پیشگیری"
+                className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+              />
             </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <Shield className="w-6 h-6 text-primary mb-2" />
-              <h3 className="font-bold mb-2">جراحت در محیط باز</h3>
-              <p className="text-sm text-muted-foreground">هر زخمی که با خاک یا کود در تماس باشد</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <Heart className="w-6 h-6 text-primary mb-2" />
-              <h3 className="font-bold mb-2">گاز گرفتگی حیوانات</h3>
-              <p className="text-sm text-muted-foreground">سگ، گربه یا سایر حیوانات</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <Clock className="w-6 h-6 text-primary mb-2" />
-              <h3 className="font-bold mb-2">گذشتن ۱۰ سال از آخرین واکسن</h3>
-              <p className="text-sm text-muted-foreground">حتی بدون وجود زخم، هر ۱۰ سال یکبار</p>
+
+            <div className="text-center mb-8">
+              <a href="tel:09386117912" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-lg font-semibold">
+                <Phone className="ml-2 h-5 w-5" />
+                تماس فوری: 09386117912
+              </a>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">خدمات نوید زندگی برای پیشگیری از کزاز</h2>
-          <p className="text-foreground leading-relaxed mb-4">
-            در زمان بروز حادثه، استرس و جابه‌جایی بیمار می‌تواند خطرناک باشد. ما خدمات زیر را در محل شما ارائه می‌دهیم:
-          </p>
-
-          <div className="space-y-6">
-            <div className="border-r-4 border-primary pr-4">
-              <h3 className="text-xl font-bold text-foreground mb-2">۱. شست‌وشو و پانسمان تخصصی زخم</h3>
-              <p className="text-foreground leading-relaxed">
-                باکتری کزاز در محیط‌های بدون اکسیژن (زخم‌های عمیق) رشد می‌کند. <Link to="/services/nursing" className="text-primary hover:underline">پرستاران ما</Link> با متدهای علمی، زخم را کاملاً ضدعفونی کرده و بافت‌های مرده را جدا می‌کنند تا احتمال رشد باکتری به صفر برسد.
-              </p>
-            </div>
-
-            <div className="border-r-4 border-primary pr-4">
-              <h3 className="text-xl font-bold text-foreground mb-2">۲. تزریق واکسن و سرم کزاز (TIG)</h3>
-              <p className="text-foreground leading-relaxed">
-                اگر زخم آلوده باشد و بیمار واکسینه نشده باشد، نیاز به تزریق فوری سرم ضد کزاز (Tetanus Immunoglobulin) و واکسن همزمان وجود دارد. تیم ما با حفظ زنجیره سرد، دارو را به منزل شما آورده و <Link to="/articles/vaccination" className="text-primary hover:underline">تزریق واکسن</Link> را انجام می‌دهد.
-              </p>
-            </div>
-
-            <div className="border-r-4 border-primary pr-4">
-              <h3 className="text-xl font-bold text-foreground mb-2">۳. مراقبت‌های پرستاری ۲۴ ساعته</h3>
-              <p className="text-foreground leading-relaxed">
-                برای بیمارانی که دوران نقاهت پس از کزاز را می‌گذرانند، <Link to="/services/nursing" className="text-primary hover:underline">مراقبت‌های ویژه</Link> جهت مدیریت اسپاسم‌ها و تغذیه در منزل توسط کادر مجرب ما انجام می‌شود.
-              </p>
-            </div>
+        {/* Warning Section */}
+        <section className="medical-section bg-destructive/5">
+          <div className="container mx-auto max-w-4xl">
+            <p className="text-base text-foreground leading-relaxed text-justify">
+              <strong className="text-destructive">هشدار مهم:</strong> کزاز یک فوریت پزشکی است. هرگز خوددرمانی نکنید. در صورت جراحت با اشیاء آلوده، فوراً برای تزریق واکسن یا سرم به نزدیک‌ترین مرکز درمانی مراجعه کنید. برای مشاوره و خدمات پرستاری با شماره <a href="tel:09386117912" className="text-primary font-bold hover:underline">09386117912</a> تماس بگیرید.
+            </p>
           </div>
         </section>
 
-        {/* Quick Guide Table */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">راهنمای سریع: با زخم مشکوک چه کنیم؟</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-border rounded-lg">
-              <thead>
-                <tr className="bg-muted/50">
-                  <th className="border border-border p-3 text-right">مرحله</th>
-                  <th className="border border-border p-3 text-right">اقدام لازم</th>
-                  <th className="border border-border p-3 text-right">نقش نوید زندگی</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-border p-3 font-bold">۱</td>
-                  <td className="border border-border p-3">شست‌وشوی سریع زخم با آب و صابون</td>
-                  <td className="border border-border p-3">راهنمایی تلفنی رایگان</td>
-                </tr>
-                <tr className="bg-muted/20">
-                  <td className="border border-border p-3 font-bold">۲</td>
-                  <td className="border border-border p-3">جلوگیری از خونریزی با پارچه تمیز</td>
-                  <td className="border border-border p-3">اعزام سریع پرستار</td>
-                </tr>
-                <tr>
-                  <td className="border border-border p-3 font-bold">۳</td>
-                  <td className="border border-border p-3">بررسی تاریخچه واکسیناسیون</td>
-                  <td className="border border-border p-3">مشاوره توسط کارشناس</td>
-                </tr>
-                <tr className="bg-muted/20">
-                  <td className="border border-border p-3 font-bold">۴</td>
-                  <td className="border border-border p-3">تزریق یادآور یا آنتی‌توکسین</td>
-                  <td className="border border-border p-3">انجام تزریق در منزل</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+        {/* Content Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              بیماری کزاز چیست؟
+            </h2>
+            <p className="text-base text-foreground mb-6 leading-relaxed text-justify">
+              کزاز یک بیماری شدید است که توسط سم باکتری <strong>کلستریدیوم تتانی</strong> ایجاد می‌شود. این باکتری در خاک، گرد و غبار و مدفوع حیوانات وجود دارد. وقتی باکتری وارد یک زخم عمیق یا حتی سطحی شود، سمی تولید می‌کند که به اعصاب کنترل‌کننده عضلات حمله کرده و باعث گرفتگی‌های دردناک می‌شود.
+            </p>
 
-        {/* Why Trust Us */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">چرا برای پیشگیری از کزاز به ما اعتماد کنید؟</h2>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="text-center p-4">
-              <Clock className="w-10 h-10 text-primary mx-auto mb-2" />
-              <h3 className="font-bold mb-1">سرعت در اعزام</h3>
-              <p className="text-sm text-muted-foreground">زمان در پیشگیری از کزاز حیاتی است</p>
-            </div>
-            <div className="text-center p-4">
-              <Shield className="w-10 h-10 text-primary mx-auto mb-2" />
-              <h3 className="font-bold mb-1">تجهیزات کامل</h3>
-              <p className="text-sm text-muted-foreground">همراه داشتن تمامی اقلام پانسمان و داروهای اورژانسی</p>
-            </div>
-            <div className="text-center p-4">
-              <Heart className="w-10 h-10 text-primary mx-auto mb-2" />
-              <h3 className="font-bold mb-1">پیشگیری از عفونت</h3>
-              <p className="text-sm text-muted-foreground">انجام رویه‌ها در محیط استریل منزل</p>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              علائم اصلی بیماری کزاز
+            </h2>
+            <p className="text-base text-foreground mb-4 leading-relaxed text-justify">
+              علائم معمولاً بین ۳ تا ۲۱ روز پس از آلودگی ظاهر می‌شوند. مهم‌ترین نشانه‌ها عبارتند از:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>قفل شدن فک (Trismus):</strong> ناتوانی در باز کردن دهان که اولین و شایع‌ترین علامت کزاز است.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>اسپاسم عضلات گردن و شکم:</strong> سفت شدن شدید عضلات که می‌تواند بسیار دردناک باشد.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>لبخند کزاز (Risus Sardonicus):</strong> اسپاسم عضلات صورت که حالتی شبیه لبخند اجباری ایجاد می‌کند.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>دشواری در بلع:</strong> مشکل در قورت دادن غذا یا آب.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>تشنج‌های دردناک بدن:</strong> که ممکن است با صدا یا نور تحریک شود.
+              </li>
+            </ul>
+
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              چه زمانی به تزریق واکسن کزاز نیاز داریم؟
+            </h2>
+            <p className="text-base text-foreground mb-4 leading-relaxed text-justify">
+              بسیاری از افراد تصور می‌کنند کزاز فقط مربوط به میخ زنگ‌زده است، اما در موارد زیر حتماً باید به مرکز درمانی مراجعه کنید:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>بریدگی با اجسام فلزی:</strong> چاقو، ابزار کار، یا قطعات خودرو.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>جراحت در محیط باز:</strong> هر زخمی که با خاک یا کود در تماس باشد.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>گاز گرفتگی حیوانات:</strong> سگ، گربه یا سایر حیوانات.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>سوختگی‌های عمیق:</strong> که بافت بدن را تخریب کرده است.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>گذشتن بیش از ۱۰ سال از آخرین واکسن:</strong> حتی بدون وجود زخم، هر ۱۰ سال یکبار باید واکسن یادآور تزریق شود.
+              </li>
+            </ul>
+
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              خدمات نوید زندگی برای مراقبت از زخم
+            </h2>
+            <p className="text-base text-foreground mb-4 leading-relaxed text-justify">
+              در زمان بروز حادثه، استرس و جابه‌جایی بیمار می‌تواند خطرناک باشد. ما خدمات زیر را در محل شما ارائه می‌دهیم:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>شست‌وشو و پانسمان تخصصی زخم:</strong> باکتری کزاز در محیط‌های بدون اکسیژن (زخم‌های عمیق) رشد می‌کند. <Link to="/services/nursing" className="text-primary hover:underline">پرستاران ما</Link> با متدهای علمی، زخم را کاملاً ضدعفونی کرده و بافت‌های مرده را جدا می‌کنند تا احتمال رشد باکتری به حداقل برسد.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>مراقبت‌های پرستاری ۲۴ ساعته:</strong> برای بیمارانی که دوران نقاهت پس از کزاز را می‌گذرانند، مراقبت‌های ویژه جهت مدیریت اسپاسم‌ها و تغذیه در منزل توسط کادر مجرب ما انجام می‌شود.
+              </li>
+              <li className="text-base text-foreground">
+                <strong>مشاوره و راهنمایی:</strong> تیم ما می‌تواند در مورد مراجعه به مراکز درمانی برای تزریق واکسن راهنمایی‌های لازم را ارائه دهد.
+              </li>
+            </ul>
+
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+              راهنمای سریع: با زخم مشکوک چه کنیم؟
+            </h2>
+            <ul className="space-y-4 mb-8">
+              <li className="text-base text-foreground">
+                <strong>مرحله ۱:</strong> شست‌وشوی سریع زخم با آب و صابون
+              </li>
+              <li className="text-base text-foreground">
+                <strong>مرحله ۲:</strong> جلوگیری از خونریزی با پارچه تمیز
+              </li>
+              <li className="text-base text-foreground">
+                <strong>مرحله ۳:</strong> بررسی تاریخچه واکسیناسیون خود
+              </li>
+              <li className="text-base text-foreground">
+                <strong>مرحله ۴:</strong> مراجعه فوری به مرکز درمانی برای تزریق واکسن یا سرم کزاز
+              </li>
+            </ul>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="bg-primary/10 border border-primary/30 rounded-lg p-6 mb-8 text-center">
-          <Phone className="w-12 h-12 text-primary mx-auto mb-4" />
-          <h2 className="text-xl font-bold text-foreground mb-2">
-            همین حالا برای تزریق واکسن یادآور یا مدیریت جراحات تماس بگیرید
-          </h2>
-          <p className="text-muted-foreground mb-4">سلامتی شما، مأموریت ماست</p>
-          <a 
-            href="tel:09386117912" 
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors"
-          >
-            <Phone className="w-5 h-5" />
-            09386117912
-          </a>
+        <section className="medical-section bg-primary/5">
+          <div className="container mx-auto max-w-4xl text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
+              خدمات پرستاری و پانسمان زخم در منزل
+            </h2>
+            <p className="text-base text-foreground mb-6 leading-relaxed">
+              برای خدمات پانسمان تخصصی زخم و مراقبت‌های پرستاری در منزل، همین حالا با نوید زندگی تماس بگیرید. سلامتی شما، مأموریت ماست.
+            </p>
+            <a 
+              href="tel:09386117912" 
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-lg font-semibold"
+            >
+              <Phone className="ml-2 h-6 w-6" />
+              تماس: 09386117912
+            </a>
+          </div>
         </section>
 
-        <FAQSection faqs={faqs} />
+        {/* FAQ Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-4xl">
+            <FAQSection faqs={faqs} />
+          </div>
+        </section>
 
-        <RelatedArticles 
-          articles={[
-            {
-              title: "واکسیناسیون در منزل",
-              description: "خدمات تزریق واکسن در منزل توسط پرستاران مجرب",
-              image: "/placeholder.svg",
-              link: "/articles/vaccination",
-              category: "خدمات پزشکی"
-            },
-            {
-              title: "مننژیت چیست؟",
-              description: "علائم، تشخیص و درمان مننژیت",
-              image: "/placeholder.svg",
-              link: "/articles/meningitis",
-              category: "بیماری‌های عفونی"
-            },
-            {
-              title: "بیماری سل",
-              description: "علائم، راه‌های انتقال و خدمات مراقبت در منزل",
-              image: "/placeholder.svg",
-              link: "/articles/tuberculosis",
-              category: "بیماری‌های عفونی"
-            }
-          ]}
-        />
+        {/* Related Articles */}
+        <section className="medical-section bg-muted/30">
+          <div className="container mx-auto max-w-4xl">
+            <RelatedArticles 
+              articles={[
+                {
+                  title: "واکسیناسیون در منزل",
+                  description: "اهمیت واکسیناسیون و راهنمای کامل واکسن‌های ضروری",
+                  image: vaccinationImage,
+                  link: "/articles/vaccination",
+                  category: "پیشگیری"
+                },
+                {
+                  title: "مننژیت چیست؟",
+                  description: "علائم، تشخیص و درمان مننژیت",
+                  image: meningitisImage,
+                  link: "/articles/meningitis",
+                  category: "بیماری‌های عفونی"
+                },
+                {
+                  title: "بیماری سل",
+                  description: "علائم، راه‌های انتقال و خدمات مراقبت در منزل",
+                  image: tuberculosisImage,
+                  link: "/articles/tuberculosis",
+                  category: "بیماری‌های عفونی"
+                }
+              ]}
+            />
+          </div>
+        </section>
 
-        <PricingInfo />
+        {/* Pricing Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-4xl">
+            <PricingInfo />
+          </div>
+        </section>
       </main>
-    </ArticleLayout>
+
+      <Footer />
+      <FloatingContact />
+    </div>
   );
 };
 
