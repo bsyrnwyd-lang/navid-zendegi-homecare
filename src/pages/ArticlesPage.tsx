@@ -157,6 +157,7 @@ import tiltTableTestImage from "@/assets/tilt-table-test.jpg";
 import injectionHomeImage from "@/assets/iranian-injection-home.jpg";
 import infectiousDiseaseImage from "@/assets/infectious-disease.jpg";
 import tuberculosisImage from "@/assets/tuberculosis-article.jpg";
+import tetanusImage from "@/assets/tetanus-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
@@ -362,6 +363,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1051,
+      title: "کزاز چیست؟ علائم، پیشگیری و تزریق واکسن در منزل",
+      description: "بیماری کزاز یک فوریت پزشکی است. علائم، راه‌های پیشگیری و خدمات تزریق واکسن و سرم کزاز در منزل توسط نوید زندگی",
+      image: tetanusImage,
+      link: "/articles/tetanus",
+      category: "بیماری‌ها",
+      date: "1403/10/04"
+    },
     {
       id: 1050,
       title: "بیماری سل چیست؟ علائم، راه‌های انتقال و مراقبت در منزل",
