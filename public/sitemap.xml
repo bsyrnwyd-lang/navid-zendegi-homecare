@@ -657,4 +657,14 @@
       <image:title>بیماری سل - علائم، تشخیص و مراقبت در منزل</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/tetanus</loc>
+    <lastmod>2025-12-24</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/tetanus-article.jpg</image:loc>
+      <image:title>بیماری کزاز - علائم، پیشگیری و تزریق واکسن در منزل</image:title>
+    </image:image>
+  </url>
 </urlset>

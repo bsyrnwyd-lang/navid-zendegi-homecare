@@ -179,6 +179,7 @@ const GoogleAdsLandingPage = lazy(() => import("./pages/GoogleAdsLandingPage"));
 const HBIGInjectionPage = lazy(() => import("./pages/articles/HBIGInjectionPage"));
 const HepatitisPage = lazy(() => import("./pages/articles/HepatitisPage"));
 const TuberculosisPage = lazy(() => import("./pages/articles/TuberculosisPage"));
+const TetanusPage = lazy(() => import("./pages/articles/TetanusPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -385,6 +386,7 @@ const App = () => (
                       <Route path="/articles/hbig-injection" element={<HBIGInjectionPage />} />
                       <Route path="/articles/hepatitis" element={<HepatitisPage />} />
                       <Route path="/articles/tuberculosis" element={<TuberculosisPage />} />
+                      <Route path="/articles/tetanus" element={<TetanusPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
