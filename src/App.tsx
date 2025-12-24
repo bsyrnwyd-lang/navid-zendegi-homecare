@@ -180,6 +180,7 @@ const HBIGInjectionPage = lazy(() => import("./pages/articles/HBIGInjectionPage"
 const HepatitisPage = lazy(() => import("./pages/articles/HepatitisPage"));
 const TuberculosisPage = lazy(() => import("./pages/articles/TuberculosisPage"));
 const TetanusPage = lazy(() => import("./pages/articles/TetanusPage"));
+const PneumoniaPage = lazy(() => import("./pages/articles/PneumoniaPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -387,6 +388,7 @@ const App = () => (
                       <Route path="/articles/hepatitis" element={<HepatitisPage />} />
                       <Route path="/articles/tuberculosis" element={<TuberculosisPage />} />
                       <Route path="/articles/tetanus" element={<TetanusPage />} />
+                      <Route path="/articles/pneumonia" element={<PneumoniaPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
