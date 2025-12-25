@@ -10,67 +10,44 @@ import cardiologyHomeServicesImage from "@/assets/cardiology-home-services.jpg";
 import ecgHomeImage from "@/assets/ecg-home-service.jpg";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
 import cardiologyHomeImage from "@/assets/cardiology-home-visit.jpg";
-
 const CardiologyHomeServicesPage = () => {
-  const faqs = [
-    {
-      question: "آیا دستگاه‌های نوار قلب و اکو پرتابل دقیق هستند؟",
-      answer: "بله، دستگاه‌های پرتابل مورد استفاده در نوید زندگی از تکنولوژی‌های پیشرفته برخوردارند و نتایج آن‌ها با دقت بالا قابل مقایسه با دستگاه‌های بیمارستانی است."
-    },
-    {
-      question: "آیا متخصص قلب می‌تواند نسخه و دارو تجویز کند؟",
-      answer: "بله، متخصص قلب اعزامی پس از معاینه و بررسی نتایج تست‌ها، نسخه درمانی کامل تجویز می‌کند و آموزش‌های لازم را به بیمار و خانواده ارائه می‌دهد."
-    },
-    {
-      question: "زمان انتظار برای اعزام پزشک چقدر است؟",
-      answer: "تیم نوید زندگی در کوتاه‌ترین زمان ممکن (معمولاً ۱ تا ۳ ساعت) متخصص قلب و تجهیزات را به منزل شما اعزام می‌کند."
-    },
-    {
-      question: "آیا این خدمات در کرج هم ارائه می‌شود؟",
-      answer: "بله، تمامی خدمات قلبی شامل ویزیت متخصص، نوار قلب و اکو در تمام مناطق تهران و کرج ارائه می‌شود."
-    },
-    {
-      question: "هزینه خدمات قلبی در منزل چقدر است؟",
-      answer: "هزینه خدمات بسته به نوع سرویس متفاوت است. برای اطلاع از تعرفه‌های دقیق با شماره 09386117912 تماس بگیرید."
-    }
-  ];
-
-  const relatedArticles = [
-    {
-      title: "علائم سکته قلبی",
-      description: "علائم هشداردهنده سکته قلبی را بشناسید",
-      image: ecgHomeImage,
-      link: "/articles/heart-attack-symptoms",
-      category: "قلب و عروق"
-    },
-    {
-      title: "تپش قلب و علل آن",
-      description: "علل تپش قلب و راه‌های درمان آن",
-      image: echoHomeImage,
-      link: "/articles/heart-palpitations",
-      category: "قلب و عروق"
-    },
-    {
-      title: "فشار خون بالا",
-      description: "همه چیز درباره کنترل فشار خون",
-      image: cardiologyHomeImage,
-      link: "/articles/high-blood-pressure",
-      category: "قلب و عروق"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="ویزیت متخصص قلب، نوار قلب و اکو در منزل تهران و کرج | نوید زندگی"
-        description="آیا به دنبال ویزیت متخصص قلب، نوار قلب یا اکو در منزل هستید؟ نوید زندگی تخصصی‌ترین خدمات قلبی را با تجهیزات پیشرفته در تهران و کرج ارائه می‌دهد."
-        keywords="اکو قلب در منزل تهران، ویزیت متخصص قلب در منزل کرج، نوار قلب در خانه، دکتر قلب در منزل، اکوکاردیوگرافی در منزل"
-        canonical="https://navidzendegi.com/articles/cardiology-home-services"
-        ogType="article"
-        author="نوید زندگی"
-        publishedTime="2025-06-20"
-        modifiedTime="2025-06-20"
-      />
+  const faqs = [{
+    question: "آیا دستگاه‌های نوار قلب و اکو پرتابل دقیق هستند؟",
+    answer: "بله، دستگاه‌های پرتابل مورد استفاده در نوید زندگی از تکنولوژی‌های پیشرفته برخوردارند و نتایج آن‌ها با دقت بالا قابل مقایسه با دستگاه‌های بیمارستانی است."
+  }, {
+    question: "آیا متخصص قلب می‌تواند نسخه و دارو تجویز کند؟",
+    answer: "بله، متخصص قلب اعزامی پس از معاینه و بررسی نتایج تست‌ها، نسخه درمانی کامل تجویز می‌کند و آموزش‌های لازم را به بیمار و خانواده ارائه می‌دهد."
+  }, {
+    question: "زمان انتظار برای اعزام پزشک چقدر است؟",
+    answer: "تیم نوید زندگی در کوتاه‌ترین زمان ممکن (معمولاً ۱ تا ۳ ساعت) متخصص قلب و تجهیزات را به منزل شما اعزام می‌کند."
+  }, {
+    question: "آیا این خدمات در کرج هم ارائه می‌شود؟",
+    answer: "بله، تمامی خدمات قلبی شامل ویزیت متخصص، نوار قلب و اکو در تمام مناطق تهران و کرج ارائه می‌شود."
+  }, {
+    question: "هزینه خدمات قلبی در منزل چقدر است؟",
+    answer: "هزینه خدمات بسته به نوع سرویس متفاوت است. برای اطلاع از تعرفه‌های دقیق با شماره 09386117912 تماس بگیرید."
+  }];
+  const relatedArticles = [{
+    title: "علائم سکته قلبی",
+    description: "علائم هشداردهنده سکته قلبی را بشناسید",
+    image: ecgHomeImage,
+    link: "/articles/heart-attack-symptoms",
+    category: "قلب و عروق"
+  }, {
+    title: "تپش قلب و علل آن",
+    description: "علل تپش قلب و راه‌های درمان آن",
+    image: echoHomeImage,
+    link: "/articles/heart-palpitations",
+    category: "قلب و عروق"
+  }, {
+    title: "فشار خون بالا",
+    description: "همه چیز درباره کنترل فشار خون",
+    image: cardiologyHomeImage,
+    link: "/articles/high-blood-pressure",
+    category: "قلب و عروق"
+  }];
+  return <div className="min-h-screen bg-background">
+      <SEOHead title="ویزیت متخصص قلب، نوار قلب و اکو در منزل تهران و کرج | نوید زندگی" description="آیا به دنبال ویزیت متخصص قلب، نوار قلب یا اکو در منزل هستید؟ نوید زندگی تخصصی‌ترین خدمات قلبی را با تجهیزات پیشرفته در تهران و کرج ارائه می‌دهد." keywords="اکو قلب در منزل تهران، ویزیت متخصص قلب در منزل کرج، نوار قلب در خانه، دکتر قلب در منزل، اکوکاردیوگرافی در منزل" canonical="https://navidzendegi.com/articles/cardiology-home-services" ogType="article" author="نوید زندگی" publishedTime="2025-06-20" modifiedTime="2025-06-20" />
       <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}
@@ -86,11 +63,7 @@ const CardiologyHomeServicesPage = () => {
             </div>
             
             <div className="relative mb-8">
-              <img 
-                src={cardiologyHomeServicesImage} 
-                alt="ویزیت متخصص قلب در منزل تهران و کرج"
-                className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
-              />
+              <img src={cardiologyHomeServicesImage} alt="ویزیت متخصص قلب در منزل تهران و کرج" className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg" />
             </div>
 
             <div className="text-center mb-8">
@@ -181,11 +154,7 @@ const CardiologyHomeServicesPage = () => {
             </ul>
 
             {/* Warning Box */}
-            <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4 mb-8">
-              <p className="text-base text-foreground">
-                <strong>هشدار:</strong> در صورت مشاهده علائم حاد قلبی مانند درد شدید قفسه سینه همراه با تعریق و تنگی نفس، فوراً با اورژانس ۱۱۵ تماس بگیرید.
-              </p>
-            </div>
+            
           </div>
         </section>
 
@@ -198,10 +167,7 @@ const CardiologyHomeServicesPage = () => {
             <p className="text-base text-foreground mb-6 leading-relaxed">
               سلامت قلب شما، نباید قربانی ترافیک و دوری راه شود. نوید زندگی با تیمی متشکل از بهترین متخصصین قلب و مدرن‌ترین تجهیزات، مراقبت‌های ویژه بیمارستانی را به خانه شما در تهران و کرج آورده است.
             </p>
-            <a 
-              href="tel:09386117912" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-lg font-semibold"
-            >
+            <a href="tel:09386117912" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-lg font-semibold">
               <Phone className="ml-2 h-6 w-6" />
               تماس: 09386117912
             </a>
@@ -231,8 +197,6 @@ const CardiologyHomeServicesPage = () => {
       </main>
       <Footer />
       <FloatingContact />
-    </div>
-  );
+    </div>;
 };
-
 export default CardiologyHomeServicesPage;
