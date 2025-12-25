@@ -37,6 +37,7 @@ import nailSpotsImage from "@/assets/nail-spots-article.jpg";
 import strokeImage from "@/assets/neurology.jpg";
 import heartAttackImage from "@/assets/cardiology-home-visit.jpg";
 import cardiologyHomeServicesImage from "@/assets/cardiology-home-services.jpg";
+import specialistDoctorImage from "@/assets/specialist-doctor.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
@@ -365,6 +366,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1054,
+      title: "ویزیت انواع پزشک متخصص در منزل؛ بیمارستان را به خانه بیاورید",
+      description: "اعزام متخصص داخلی، قلب، مغز و اعصاب، ارتوپدی، عفونی، اطفال و روانپزشک به منزل در تهران و کرج",
+      image: specialistDoctorImage,
+      link: "/articles/specialist-home-visit",
+      category: "خدمات پزشکی",
+      date: "1403/10/05"
+    },
     {
       id: 1053,
       title: "آیا ویزیت متخصص قلب، نوار قلب و اکو در منزل امکان‌پذیر است؟",
