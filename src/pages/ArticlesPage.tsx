@@ -36,6 +36,7 @@ import hpvPoolImage from "@/assets/hpv-pool-article.jpg";
 import nailSpotsImage from "@/assets/nail-spots-article.jpg";
 import strokeImage from "@/assets/neurology.jpg";
 import heartAttackImage from "@/assets/cardiology-home-visit.jpg";
+import cardiologyHomeServicesImage from "@/assets/cardiology-home-services.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
@@ -364,6 +365,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1053,
+      title: "آیا ویزیت متخصص قلب، نوار قلب و اکو در منزل امکان‌پذیر است؟",
+      description: "خدمات تخصصی قلبی شامل ویزیت متخصص قلب، نوار قلب ۱۲ کاناله و اکوکاردیوگرافی در منزل تهران و کرج",
+      image: cardiologyHomeServicesImage,
+      link: "/articles/cardiology-home-services",
+      category: "قلب و عروق",
+      date: "1403/10/05"
+    },
     {
       id: 1052,
       title: "ذات‌الریه (پنومونی) چیست؟ از علائم تا درمان در منزل",
