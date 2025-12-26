@@ -38,6 +38,7 @@ import strokeImage from "@/assets/neurology.jpg";
 import heartAttackImage from "@/assets/cardiology-home-visit.jpg";
 import cardiologyHomeServicesImage from "@/assets/cardiology-home-services.jpg";
 import specialistDoctorImage from "@/assets/specialist-doctor.jpg";
+import ivSerumHomeImage from "@/assets/iv-serum-home.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
@@ -366,6 +367,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1055,
+      title: "آیا تزریق سرم در منزل خطرناک است؟",
+      description: "دانستنی‌های حیاتی درباره ایمنی و استانداردهای تزریق سرم در منزل توسط پرستار مجرب",
+      image: ivSerumHomeImage,
+      link: "/articles/iv-serum-home-safety",
+      category: "خدمات پزشکی",
+      date: "1403/10/06"
+    },
     {
       id: 1054,
       title: "ویزیت انواع پزشک متخصص در منزل؛ بیمارستان را به خانه بیاورید",
