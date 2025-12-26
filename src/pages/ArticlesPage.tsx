@@ -39,6 +39,7 @@ import heartAttackImage from "@/assets/cardiology-home-visit.jpg";
 import cardiologyHomeServicesImage from "@/assets/cardiology-home-services.jpg";
 import specialistDoctorImage from "@/assets/specialist-doctor.jpg";
 import ivSerumHomeImage from "@/assets/iv-serum-home.jpg";
+import biliCheckNewbornImage from "@/assets/bilicheck-newborn.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
@@ -367,6 +368,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1056,
+      title: "آزمایش زردی نوزاد در منزل بدون سوزن",
+      description: "تست زردی نوزاد با دستگاه بیلی‌چک بدون خون‌گیری و درد در منزل تهران و کرج",
+      image: biliCheckNewbornImage,
+      link: "/articles/newborn-jaundice-test",
+      category: "اطفال",
+      date: "1403/10/06"
+    },
     {
       id: 1055,
       title: "آیا تزریق سرم در منزل خطرناک است؟",
