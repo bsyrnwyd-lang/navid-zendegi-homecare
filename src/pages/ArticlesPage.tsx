@@ -40,6 +40,7 @@ import cardiologyHomeServicesImage from "@/assets/cardiology-home-services.jpg";
 import specialistDoctorImage from "@/assets/specialist-doctor.jpg";
 import ivSerumHomeImage from "@/assets/iv-serum-home.jpg";
 import biliCheckNewbornImage from "@/assets/bilicheck-newborn.jpg";
+import seborrheicDermatitisImage from "@/assets/seborrheic-dermatitis.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
@@ -368,6 +369,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1057,
+      title: "درماتیت سبوره؛ راهنمای کامل تشخیص و درمان",
+      description: "بررسی علمی درماتیت سبوره، علل بروز، علائم و روش‌های درمان تخصصی با ویزیت متخصص پوست در منزل",
+      image: seborrheicDermatitisImage,
+      link: "/articles/seborrheic-dermatitis",
+      category: "پوست",
+      date: "1403/10/07"
+    },
     {
       id: 1056,
       title: "آزمایش زردی نوزاد در منزل بدون سوزن",
