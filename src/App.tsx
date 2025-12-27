@@ -185,6 +185,7 @@ const CardiologyHomeServicesPage = lazy(() => import("./pages/articles/Cardiolog
 const SpecialistHomeVisitPage = lazy(() => import("./pages/articles/SpecialistHomeVisitPage"));
 const IVSerumHomeSafetyPage = lazy(() => import("./pages/articles/IVSerumHomeSafetyPage"));
 const NewbornJaundiceTestPage = lazy(() => import("./pages/articles/NewbornJaundiceTestPage"));
+const SeborrheicDermatitisPage = lazy(() => import("./pages/articles/SeborrheicDermatitisPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -397,6 +398,7 @@ const App = () => (
                       <Route path="/articles/specialist-home-visit" element={<SpecialistHomeVisitPage />} />
                        <Route path="/articles/iv-serum-home-safety" element={<IVSerumHomeSafetyPage />} />
                        <Route path="/articles/newborn-jaundice-test" element={<NewbornJaundiceTestPage />} />
+                       <Route path="/articles/seborrheic-dermatitis" element={<SeborrheicDermatitisPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
