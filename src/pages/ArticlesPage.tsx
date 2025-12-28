@@ -42,6 +42,7 @@ import ivSerumHomeImage from "@/assets/iv-serum-home.jpg";
 import biliCheckNewbornImage from "@/assets/bilicheck-newborn.jpg";
 import seborrheicDermatitisImage from "@/assets/seborrheic-dermatitis.jpg";
 import lichenPlanusImage from "@/assets/lichen-planus-article.jpg";
+import foodPoisoningImage from "@/assets/food-poisoning-treatment.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
@@ -370,6 +371,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1059,
+      title: "درمان سریع مسمومیت غذایی در منزل؛ سرم‌تراپی فوری",
+      description: "راهنمای کامل درمان مسمومیت غذایی با سرم‌تراپی و تزریقات در منزل تهران و کرج",
+      image: foodPoisoningImage,
+      link: "/articles/food-poisoning",
+      category: "اورژانس پزشکی",
+      date: "1403/10/08"
+    },
     {
       id: 1058,
       title: "لیکن پلان چیست؟ راهنمای کامل تشخیص و درمان",
