@@ -737,4 +737,14 @@
       <image:title>لیکن پلان - تشخیص و درمان تخصصی در منزل</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/food-poisoning</loc>
+    <lastmod>2025-12-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/food-poisoning-treatment.jpg</image:loc>
+      <image:title>درمان سریع مسمومیت غذایی در منزل - سرم‌تراپی فوری</image:title>
+    </image:image>
+  </url>
 </urlset>
