@@ -43,6 +43,7 @@ import biliCheckNewbornImage from "@/assets/bilicheck-newborn.jpg";
 import seborrheicDermatitisImage from "@/assets/seborrheic-dermatitis.jpg";
 import lichenPlanusImage from "@/assets/lichen-planus-article.jpg";
 import foodPoisoningImage from "@/assets/food-poisoning-treatment.jpg";
+import echoSafetyImage from "@/assets/echo-safety-home.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import smokingImage from "@/assets/iranian-cardiology-home.jpg";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
@@ -371,6 +372,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1060,
+      title: "اکوکاردیوگرافی در منزل؛ نحوه کارکرد و ایمنی امواج",
+      description: "آیا اکو قلب اشعه دارد؟ بررسی کامل ایمنی امواج اکوکاردیوگرافی و خدمات اکو در منزل تهران و کرج",
+      image: echoSafetyImage,
+      link: "/articles/echo-safety-home",
+      category: "قلب و عروق",
+      date: "1403/10/08"
+    },
     {
       id: 1059,
       title: "درمان سریع مسمومیت غذایی در منزل؛ سرم‌تراپی فوری",
