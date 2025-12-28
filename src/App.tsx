@@ -188,6 +188,7 @@ const NewbornJaundiceTestPage = lazy(() => import("./pages/articles/NewbornJaund
 const SeborrheicDermatitisPage = lazy(() => import("./pages/articles/SeborrheicDermatitisPage"));
 const LichenPlanusPage = lazy(() => import("./pages/articles/LichenPlanusPage"));
 const FoodPoisoningPage = lazy(() => import("./pages/articles/FoodPoisoningPage"));
+const EchoSafetyHomePage = lazy(() => import("./pages/articles/EchoSafetyHomePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -403,6 +404,7 @@ const App = () => (
                        <Route path="/articles/seborrheic-dermatitis" element={<SeborrheicDermatitisPage />} />
                        <Route path="/articles/lichen-planus" element={<LichenPlanusPage />} />
                        <Route path="/articles/food-poisoning" element={<FoodPoisoningPage />} />
+                       <Route path="/articles/echo-safety-home" element={<EchoSafetyHomePage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
