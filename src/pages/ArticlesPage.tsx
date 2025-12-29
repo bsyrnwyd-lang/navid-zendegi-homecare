@@ -98,6 +98,7 @@ import echoIndicationsImage from "@/assets/echo-indications-article.jpg";
 import afStrokeImage from "@/assets/af-stroke-risk-article.jpg";
 import dexamethasoneImage from "@/assets/dexamethasone-injection.jpg";
 import ecgHomeImage from "@/assets/ecg-home-service.jpg";
+import holterHomeImage from "@/assets/holter-home-service.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
@@ -372,6 +373,14 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1062,
+      title: "هولتر ریتم و فشار خون در منزل؛ پایش ۲۴ ساعته قلب",
+      description: "هولتر مانیتورینگ قلب و فشار خون در منزل تهران و کرج. تشخیص آریتمی‌های گذرا و فشار خون مخفی توسط متخصص قلب",
+      image: holterHomeImage,
+      link: "/articles/holter-guide",
+      category: "قلب و عروق"
+    },
     {
       id: 1061,
       title: "نوار قلب (ECG) چیست؟ راهنمای کامل نحوه انجام و تحلیل",

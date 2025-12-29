@@ -767,4 +767,14 @@
       <image:title>نوار قلب ECG در منزل - راهنمای کامل نحوه انجام و تحلیل</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/holter-guide</loc>
+    <lastmod>2025-12-29</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/holter-home-service.jpg</image:loc>
+      <image:title>هولتر ریتم و فشار خون در منزل - پایش ۲۴ ساعته قلب</image:title>
+    </image:image>
+  </url>
 </urlset>
