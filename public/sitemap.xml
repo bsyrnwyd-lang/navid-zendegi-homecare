@@ -757,4 +757,14 @@
       <image:title>اکوکاردیوگرافی در منزل - ایمنی امواج اکو</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/ecg-guide</loc>
+    <lastmod>2025-12-29</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/ecg-home-service.jpg</image:loc>
+      <image:title>نوار قلب ECG در منزل - راهنمای کامل نحوه انجام و تحلیل</image:title>
+    </image:image>
+  </url>
 </urlset>
