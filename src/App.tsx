@@ -191,6 +191,7 @@ const FoodPoisoningPage = lazy(() => import("./pages/articles/FoodPoisoningPage"
 const EchoSafetyHomePage = lazy(() => import("./pages/articles/EchoSafetyHomePage"));
 const ECGGuidePage = lazy(() => import("./pages/articles/ECGGuidePage"));
 const HolterGuidePage = lazy(() => import("./pages/articles/HolterGuidePage"));
+const DandruffPage = lazy(() => import("./pages/articles/DandruffPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -409,6 +410,7 @@ const App = () => (
                        <Route path="/articles/echo-safety-home" element={<EchoSafetyHomePage />} />
                        <Route path="/articles/ecg-guide" element={<ECGGuidePage />} />
                        <Route path="/articles/holter-guide" element={<HolterGuidePage />} />
+                       <Route path="/articles/dandruff" element={<DandruffPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

@@ -99,6 +99,7 @@ import afStrokeImage from "@/assets/af-stroke-risk-article.jpg";
 import dexamethasoneImage from "@/assets/dexamethasone-injection.jpg";
 import ecgHomeImage from "@/assets/ecg-home-service.jpg";
 import holterHomeImage from "@/assets/holter-home-service.jpg";
+import dandruffImage from "@/assets/dandruff-treatment.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
@@ -373,6 +374,14 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1063,
+      title: "شوره سر؛ از یک مشکل ساده تا نیاز به مداخله پزشکی",
+      description: "راهنمای کامل شوره سر، علل، انواع و درمان تخصصی توسط متخصص پوست در منزل تهران و کرج",
+      image: dandruffImage,
+      link: "/articles/dandruff",
+      category: "پوست"
+    },
     {
       id: 1062,
       title: "هولتر ریتم و فشار خون در منزل؛ پایش ۲۴ ساعته قلب",
