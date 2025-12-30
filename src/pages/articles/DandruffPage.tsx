@@ -7,6 +7,9 @@ import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
 import { Phone, AlertTriangle } from "lucide-react";
 import dandruffImage from "@/assets/dandruff-treatment.jpg";
+import seborrheicDermatitisImage from "@/assets/seborrheic-dermatitis.jpg";
+import hairLossImage from "@/assets/hair-loss-article.jpg";
+import specialistDoctorImage from "@/assets/specialist-doctor.jpg";
 
 const DandruffPage = () => {
   const breadcrumbItems = [
@@ -42,21 +45,21 @@ const DandruffPage = () => {
     {
       title: "درماتیت سبوره‌ای",
       description: "علل، علائم و درمان درماتیت سبوره‌ای پوست سر و صورت",
-      image: "/placeholder.svg",
+      image: seborrheicDermatitisImage,
       link: "/articles/seborrheic-dermatitis",
       category: "پوست"
     },
     {
       title: "ریزش مو",
       description: "علل و درمان ریزش مو در زنان و مردان",
-      image: "/placeholder.svg",
+      image: hairLossImage,
       link: "/articles/hair-loss",
       category: "پوست و مو"
     },
     {
       title: "ویزیت پزشک متخصص در منزل",
       description: "خدمات ویزیت تخصصی پوست و مو در منزل",
-      image: "/placeholder.svg",
+      image: specialistDoctorImage,
       link: "/services/specialist",
       category: "خدمات"
     }

@@ -7,6 +7,9 @@ import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
 import { Phone, AlertTriangle } from "lucide-react";
 import chestPainImage from "@/assets/chest-pain-diagnosis.jpg";
+import ecgHomeImage from "@/assets/ecg-home-service.jpg";
+import heartAttackImage from "@/assets/cardiology-home-visit.jpg";
+import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
 
 const ChestPainDiagnosisPage = () => {
   const breadcrumbItems = [
@@ -42,21 +45,21 @@ const ChestPainDiagnosisPage = () => {
     {
       title: "نوار قلب (ECG) چیست؟",
       description: "راهنمای کامل نحوه انجام و تحلیل نوار قلب در منزل",
-      image: "/placeholder.svg",
+      image: ecgHomeImage,
       link: "/articles/ecg-guide",
       category: "قلب و عروق"
     },
     {
       title: "علائم سکته قلبی",
       description: "علائم هشداردهنده سکته قلبی و اقدامات فوری",
-      image: "/placeholder.svg",
+      image: heartAttackImage,
       link: "/articles/heart-attack-symptoms",
       category: "قلب و عروق"
     },
     {
       title: "تپش قلب",
       description: "علل و درمان تپش قلب و ضربان نامنظم",
-      image: "/placeholder.svg",
+      image: heartPalpitationsImage,
       link: "/articles/heart-palpitations",
       category: "قلب و عروق"
     }
