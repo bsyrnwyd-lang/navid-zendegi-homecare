@@ -100,6 +100,7 @@ import dexamethasoneImage from "@/assets/dexamethasone-injection.jpg";
 import ecgHomeImage from "@/assets/ecg-home-service.jpg";
 import holterHomeImage from "@/assets/holter-home-service.jpg";
 import dandruffImage from "@/assets/dandruff-treatment.jpg";
+import chestPainDiagnosisImage from "@/assets/chest-pain-diagnosis.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
@@ -374,6 +375,14 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1064,
+      title: "تفاوت درد قلبی، عضلانی و عصبی قفسه سینه",
+      description: "راهنمای تشخیص فوری انواع درد قفسه سینه با جدول مقایسه و خدمات نوار قلب در منزل تهران و کرج",
+      image: chestPainDiagnosisImage,
+      link: "/articles/chest-pain-diagnosis",
+      category: "قلب و عروق"
+    },
     {
       id: 1063,
       title: "شوره سر؛ از یک مشکل ساده تا نیاز به مداخله پزشکی",
