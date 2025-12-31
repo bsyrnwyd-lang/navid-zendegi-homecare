@@ -193,6 +193,7 @@ const ECGGuidePage = lazy(() => import("./pages/articles/ECGGuidePage"));
 const HolterGuidePage = lazy(() => import("./pages/articles/HolterGuidePage"));
 const DandruffPage = lazy(() => import("./pages/articles/DandruffPage"));
 const ChestPainDiagnosisPage = lazy(() => import("./pages/articles/ChestPainDiagnosisPage"));
+const ItraconazolePage = lazy(() => import("./pages/articles/ItraconazolePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -413,6 +414,7 @@ const App = () => (
                        <Route path="/articles/holter-guide" element={<HolterGuidePage />} />
                        <Route path="/articles/dandruff" element={<DandruffPage />} />
                        <Route path="/articles/chest-pain-diagnosis" element={<ChestPainDiagnosisPage />} />
+                       <Route path="/articles/itraconazole" element={<ItraconazolePage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
