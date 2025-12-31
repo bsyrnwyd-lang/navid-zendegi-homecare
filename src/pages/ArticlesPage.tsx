@@ -102,6 +102,7 @@ import holterHomeImage from "@/assets/holter-home-service.jpg";
 import dandruffImage from "@/assets/dandruff-treatment.jpg";
 import chestPainDiagnosisImage from "@/assets/chest-pain-diagnosis.jpg";
 import itraconazoleImage from "@/assets/itraconazole-medication.jpg";
+import captoprilImage from "@/assets/captopril-medication.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
@@ -376,6 +377,14 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1066,
+      title: "داروی کاپتوپریل؛ کنترل فشار خون و نارسایی قلبی",
+      description: "راهنمای کامل داروی کاپتوپریل: کاربردها، عوارض جانبی، سرفه خشک و نکات حیاتی مصرف",
+      image: captoprilImage,
+      link: "/articles/captopril",
+      category: "دارو"
+    },
     {
       id: 1065,
       title: "داروی ایتراکونازول؛ کاربردها، عوارض و نکات حیاتی",
