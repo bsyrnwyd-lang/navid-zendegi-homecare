@@ -103,6 +103,7 @@ import dandruffImage from "@/assets/dandruff-treatment.jpg";
 import chestPainDiagnosisImage from "@/assets/chest-pain-diagnosis.jpg";
 import itraconazoleImage from "@/assets/itraconazole-medication.jpg";
 import captoprilImage from "@/assets/captopril-medication.jpg";
+import bloodPressureReadingsImage from "@/assets/blood-pressure-readings.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
@@ -377,6 +378,14 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1067,
+      title: "فشار خون سیستولیک و دیاستولیک؛ تفاوت عدد اول و دوم",
+      description: "راهنمای کامل تفسیر اعداد فشار خون: تفاوت فشار سیستولیک و دیاستولیک و جدول فشار خون نرمال",
+      image: bloodPressureReadingsImage,
+      link: "/articles/systolic-diastolic",
+      category: "قلب و عروق"
+    },
     {
       id: 1066,
       title: "داروی کاپتوپریل؛ کنترل فشار خون و نارسایی قلبی",
