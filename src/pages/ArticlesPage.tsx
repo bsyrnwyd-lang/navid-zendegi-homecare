@@ -101,6 +101,7 @@ import ecgHomeImage from "@/assets/ecg-home-service.jpg";
 import holterHomeImage from "@/assets/holter-home-service.jpg";
 import dandruffImage from "@/assets/dandruff-treatment.jpg";
 import chestPainDiagnosisImage from "@/assets/chest-pain-diagnosis.jpg";
+import itraconazoleImage from "@/assets/itraconazole-medication.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
@@ -375,6 +376,14 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1065,
+      title: "داروی ایتراکونازول؛ کاربردها، عوارض و نکات حیاتی",
+      description: "راهنمای کامل داروی ایتراکونازول: موارد مصرف، عوارض جانبی، تداخلات دارویی و هشدارهای قلبی",
+      image: itraconazoleImage,
+      link: "/articles/itraconazole",
+      category: "دارو"
+    },
     {
       id: 1064,
       title: "تفاوت درد قلبی، عضلانی و عصبی قفسه سینه",
