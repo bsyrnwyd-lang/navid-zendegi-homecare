@@ -196,6 +196,7 @@ const ChestPainDiagnosisPage = lazy(() => import("./pages/articles/ChestPainDiag
 const ItraconazolePage = lazy(() => import("./pages/articles/ItraconazolePage"));
 const CaptoprilPage = lazy(() => import("./pages/articles/CaptoprilPage"));
 const SystolicDiastolicPage = lazy(() => import("./pages/articles/SystolicDiastolicPage"));
+const SodiumPotassiumPage = lazy(() => import("./pages/articles/SodiumPotassiumPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -419,6 +420,7 @@ const App = () => (
                        <Route path="/articles/itraconazole" element={<ItraconazolePage />} />
                        <Route path="/articles/captopril" element={<CaptoprilPage />} />
                        <Route path="/articles/systolic-diastolic" element={<SystolicDiastolicPage />} />
+                       <Route path="/articles/sodium-potassium" element={<SodiumPotassiumPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
