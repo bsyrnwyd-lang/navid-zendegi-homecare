@@ -45,6 +45,34 @@ const OrganizationSchema = () => {
           "@type": "Offer",
           "itemOffered": {
             "@type": "MedicalProcedure",
+            "name": "ویزیت متخصص قلب در منزل"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTest",
+            "name": "هولتر قلب در منزل"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTest",
+            "name": "هولتر فشار خون در منزل"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTest",
+            "name": "اکوکاردیوگرافی در منزل"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
             "name": "ویزیت پزشک عمومی در منزل"
           }
         },
@@ -52,7 +80,14 @@ const OrganizationSchema = () => {
           "@type": "Offer",
           "itemOffered": {
             "@type": "MedicalProcedure",
-            "name": "ویزیت متخصص قلب و عروق در منزل"
+            "name": "ویزیت متخصص داخلی در منزل"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTest",
+            "name": "نوار قلب در منزل"
           }
         },
         {
