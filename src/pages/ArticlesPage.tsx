@@ -104,6 +104,7 @@ import chestPainDiagnosisImage from "@/assets/chest-pain-diagnosis.jpg";
 import itraconazoleImage from "@/assets/itraconazole-medication.jpg";
 import captoprilImage from "@/assets/captopril-medication.jpg";
 import bloodPressureReadingsImage from "@/assets/blood-pressure-readings.jpg";
+import sodiumPotassiumImage from "@/assets/sodium-potassium-balance.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
@@ -378,6 +379,14 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1068,
+      title: "نمک یا پتاسیم؛ کدام فرمانروای فشار خون شماست؟",
+      description: "راهنمای علمی تأثیر سدیم و پتاسیم بر فشار خون و نقش تغذیه در کنترل فشار خون بالا",
+      image: sodiumPotassiumImage,
+      link: "/articles/sodium-potassium",
+      category: "تغذیه"
+    },
     {
       id: 1067,
       title: "فشار خون سیستولیک و دیاستولیک؛ تفاوت عدد اول و دوم",
