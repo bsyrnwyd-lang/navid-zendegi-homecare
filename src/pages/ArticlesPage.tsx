@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
+import FAQSection from "@/components/FAQSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -1853,8 +1856,63 @@ const ArticlesPage = () => {
     return pages;
   };
 
+  const articlesFAQs = [
+    {
+      question: "آیا مقالات پزشکی نوید زندگی توسط متخصصان نوشته شده است؟",
+      answer: "بله، تمام مقالات توسط تیم پزشکی نوید زندگی شامل پزشکان متخصص و کارشناسان بهداشت نوشته و بازبینی می‌شود و بر اساس منابع علمی معتبر تهیه شده‌اند."
+    },
+    {
+      question: "آیا مطالعه مقالات جایگزین ویزیت پزشک است؟",
+      answer: "خیر، مقالات پزشکی صرفاً جهت آگاهی‌بخشی هستند و جایگزین ویزیت پزشک نمی‌شوند. برای تشخیص و درمان بیماری‌ها حتماً با پزشک متخصص مشورت کنید."
+    },
+    {
+      question: "چگونه می‌توانم مقاله مورد نظرم را پیدا کنم؟",
+      answer: "شما می‌توانید از جستجوی هوشمند در بالای صفحه استفاده کنید یا از دسته‌بندی‌های موضوعی مانند قلب و عروق، دارو، تغذیه و غیره استفاده نمایید."
+    },
+    {
+      question: "آیا خدمات پزشکی در منزل نوید زندگی در تهران و کرج ارائه می‌شود؟",
+      answer: "بله، تمام خدمات پزشکی در منزل شامل ویزیت پزشک متخصص، آزمایش خون، اکوکاردیوگرافی و پرستاری در تهران و کرج ارائه می‌شود. برای رزرو با شماره 09386117912 تماس بگیرید."
+    }
+  ];
+
+  // Generate ItemList schema for articles
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "مقالات پزشکی نوید زندگی",
+    "description": "مجموعه مقالات آموزشی و علمی در حوزه سلامت و پزشکی",
+    "numberOfItems": mergedArticles.length,
+    "itemListElement": mergedArticles.slice(0, 20).map((article, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Article",
+        "name": article.title,
+        "description": article.description,
+        "url": `https://navidzendegi.com${article.link}`
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="مقالات پزشکی | راهنمای سلامت و درمان در منزل | نوید زندگی"
+        description={`بیش از ${mergedArticles.length} مقاله پزشکی علمی و آموزشی در حوزه قلب و عروق، دارو، تغذیه، پوست و سلامت. راهنمای جامع خدمات پزشکی در منزل تهران و کرج. تماس: 09386117912`}
+        keywords="مقالات پزشکی, سلامت, درمان در منزل, قلب و عروق, داروها, تغذیه سالم, پزشک در منزل تهران, آزمایش خون در منزل"
+        canonical="https://navidzendegi.com/articles"
+        ogType="website"
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <StructuredData 
+        breadcrumbs={[
+          { name: "صفحه اصلی", url: "https://navidzendegi.com/" },
+          { name: "مقالات پزشکی", url: "https://navidzendegi.com/articles" }
+        ]}
+      />
       <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero Section with Search */}
@@ -1864,8 +1922,11 @@ const ArticlesPage = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 مقالات پزشکی نوید زندگی
               </h1>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground mb-4">
                 راهنمای جامع سلامت و درمان در منزل با بهترین متخصصان پزشکی
+              </p>
+              <p className="text-sm text-muted-foreground mb-8">
+                بیش از <span className="font-bold text-primary">{mergedArticles.length}</span> مقاله علمی در {mainCategories.length - 1} دسته‌بندی تخصصی
               </p>
 
               {/* Search Box with Dropdown */}
@@ -2106,6 +2167,13 @@ const ArticlesPage = () => {
                 )}
               </>
             )}
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <FAQSection faqs={articlesFAQs} />
           </div>
         </section>
 
