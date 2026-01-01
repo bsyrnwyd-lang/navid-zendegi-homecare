@@ -33,18 +33,34 @@ const Hero = memo(() => {
       <div className="container mx-auto px-4 py-20 z-10 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground leading-tight">
-            ویزیت پزشک در منزل تهران | نوید زندگی
+            ویزیت متخصص قلب و پزشک در منزل تهران | نوید زندگی
             <br />
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              ویزیت پزشک عمومی، متخصص داخلی و متخصص قلب در منزل
+              هولتر در منزل | اکو قلب در منزل | پزشک عمومی در منزل
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            پرستاری در منزل، تزریقات در منزل، پزشک متخصص در منزل توسط نوید زندگی
+            ویزیت متخصص قلب، هولتر ۲۴ ساعته، اکوکاردیوگرافی و پزشک عمومی در منزل
             <br />
-            ویزیت پزشک قلب در منزل در سراسر تهران و کرج
+            خدمات تخصصی قلب و عروق در سراسر تهران و کرج - تماس: <a href="tel:09386117912" className="text-primary hover:underline font-semibold">09386117912</a>
           </p>
+          
+          {/* لینک‌های سریع به خدمات اصلی */}
+          <div className="flex flex-wrap gap-3 justify-center mb-8">
+            <a href="/cardiology" className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors">
+              ویزیت متخصص قلب در منزل
+            </a>
+            <a href="/services/holter" className="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium hover:bg-secondary/20 transition-colors">
+              هولتر در منزل
+            </a>
+            <a href="/general-doctor" className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium hover:bg-accent/20 transition-colors">
+              پزشک عمومی در منزل
+            </a>
+            <a href="/services/specialist" className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors">
+              ویزیت متخصص در منزل
+            </a>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" style={{ minHeight: '120px' }}>
             <Button
