@@ -10,6 +10,7 @@ import FloatingContact from "@/components/FloatingContact";
 import PricingInfo from "@/components/PricingInfo";
 import OrganizationSchema from "@/components/OrganizationSchema";
 import SEOHead from "@/components/SEOHead";
+import RecentArticles from "@/components/RecentArticles";
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
         <PricingInfo />
         <Services />
         <SEOContent />
+        <RecentArticles />
         <AboutUs />
         <WhyChooseUs />
         <Contact />
