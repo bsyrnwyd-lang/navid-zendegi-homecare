@@ -105,6 +105,7 @@ import itraconazoleImage from "@/assets/itraconazole-medication.jpg";
 import captoprilImage from "@/assets/captopril-medication.jpg";
 import bloodPressureReadingsImage from "@/assets/blood-pressure-readings.jpg";
 import sodiumPotassiumImage from "@/assets/sodium-potassium-balance.jpg";
+import liverEnzymesImage from "@/assets/liver-enzymes-test.jpg";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 import aspirinImage from "@/assets/aspirin-medication.jpg";
 import rosuvastatinImage from "@/assets/rosuvastatin-medication.jpg";
@@ -379,6 +380,14 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1069,
+      title: "تفسیر کامل آنزیم‌های کبدی؛ ALT، AST، ALP و GGT",
+      description: "راهنمای علمی تفسیر آنزیم‌های کبدی در آزمایش خون و علل افزایش آن‌ها. آزمایش خون کبد در منزل تهران و کرج",
+      image: liverEnzymesImage,
+      link: "/articles/liver-enzymes",
+      category: "آزمایشگاه"
+    },
     {
       id: 1068,
       title: "نمک یا پتاسیم؛ کدام فرمانروای فشار خون شماست؟",
