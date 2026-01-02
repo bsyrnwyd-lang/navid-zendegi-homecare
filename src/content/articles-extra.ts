@@ -18,7 +18,7 @@ export interface ArticleCard {
 
 export const extraArticles: ArticleCard[] = [
   {
-    id: 1007,
+    id: 1071,
     title: "ماسل بریج (پل میوکارد)؛ نقش هولتر در تشخیص دردهای قلبی پنهان",
     description: "راهنمای جامع ماسل بریج: علت پنهان دردهای قلبی، نقش حیاتی هولتر در تشخیص، علائم و درمان",
     image: muscleBridgeImage,
@@ -27,7 +27,7 @@ export const extraArticles: ArticleCard[] = [
     date: "1403/10/13"
   },
   {
-    id: 1006,
+    id: 1070,
     title: "پیس‌میکر و ICD؛ راهنمای کامل باتری و دفیبریلاتور قلب",
     description: "راهنمای جامع پیس‌میکر و ICD: نحوه عملکرد، تفاوت‌ها، زندگی روزمره با باتری قلب و خدمات مراقبتی در منزل",
     image: pacemakerICDImage,
