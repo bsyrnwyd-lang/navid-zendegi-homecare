@@ -24,7 +24,7 @@ export const extraArticles: ArticleCard[] = [
     image: muscleBridgeImage,
     link: "/articles/muscle-bridge",
     category: "قلب",
-    date: "1403/10/13"
+    date: "۱۴۰۴/۱۰/۱۳"
   },
   {
     id: 1070,
@@ -33,7 +33,7 @@ export const extraArticles: ArticleCard[] = [
     image: pacemakerICDImage,
     link: "/articles/pacemaker-icd",
     category: "قلب",
-    date: "1403/10/13"
+    date: "۱۴۰۴/۱۰/۱۳"
   },
   {
     id: 1005,
@@ -42,7 +42,7 @@ export const extraArticles: ArticleCard[] = [
     image: constipationImage,
     link: "/articles/constipation",
     category: "عمومی",
-    date: "1403/11/07"
+    date: "۱۴۰۴/۱۱/۰۷"
   },
   {
     id: 1004,
@@ -51,7 +51,7 @@ export const extraArticles: ArticleCard[] = [
     image: abdominalPainImage,
     link: "/articles/abdominal-pain",
     category: "عمومی",
-    date: "1403/11/06"
+    date: "۱۴۰۴/۱۱/۰۶"
   },
   {
     id: 1003,
@@ -60,7 +60,7 @@ export const extraArticles: ArticleCard[] = [
     image: legSwellingImage,
     link: "/articles/leg-swelling",
     category: "عمومی",
-    date: "1403/11/05"
+    date: "۱۴۰۴/۱۱/۰۵"
   },
   {
     id: 1002,
@@ -69,7 +69,7 @@ export const extraArticles: ArticleCard[] = [
     image: vitaminsColdImage,
     link: "/articles/vitamins-cold",
     category: "تغذیه",
-    date: "1403/11/04"
+    date: "۱۴۰۴/۱۱/۰۴"
   },
   {
     id: 1001,
@@ -78,6 +78,6 @@ export const extraArticles: ArticleCard[] = [
     image: vitaminEImage,
     link: "/articles/vitamin-e",
     category: "تغذیه",
-    date: "1403/11/03"
+    date: "۱۴۰۴/۱۱/۰۳"
   }
 ];
