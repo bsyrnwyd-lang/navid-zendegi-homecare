@@ -32,7 +32,7 @@ const mainArticles = [
     image: liverEnzymesImage,
     link: "/articles/liver-enzymes",
     category: "آزمایشگاه",
-    date: "۱۴۰۳/۱۰/۱۲"
+    date: "۱۴۰۴/۱۰/۱۲"
   },
   {
     id: 1068,
@@ -41,7 +41,7 @@ const mainArticles = [
     image: sodiumPotassiumImage,
     link: "/articles/sodium-potassium",
     category: "تغذیه",
-    date: "۱۴۰۳/۱۰/۱۱"
+    date: "۱۴۰۴/۱۰/۱۱"
   },
   {
     id: 1067,
@@ -50,7 +50,7 @@ const mainArticles = [
     image: bloodPressureReadingsImage,
     link: "/articles/systolic-diastolic",
     category: "قلب و عروق",
-    date: "۱۴۰۳/۱۰/۱۰"
+    date: "۱۴۰۴/۱۰/۱۰"
   },
   {
     id: 1066,
@@ -59,7 +59,7 @@ const mainArticles = [
     image: captoprilImage,
     link: "/articles/captopril",
     category: "دارو",
-    date: "۱۴۰۳/۱۰/۰۹"
+    date: "۱۴۰۴/۱۰/۰۹"
   },
   {
     id: 1065,
@@ -68,7 +68,7 @@ const mainArticles = [
     image: itraconazoleImage,
     link: "/articles/itraconazole",
     category: "دارو",
-    date: "۱۴۰۳/۱۰/۰۸"
+    date: "۱۴۰۴/۱۰/۰۸"
   },
   {
     id: 1064,
@@ -77,7 +77,7 @@ const mainArticles = [
     image: chestPainDiagnosisImage,
     link: "/articles/chest-pain-diagnosis",
     category: "قلب و عروق",
-    date: "۱۴۰۳/۱۰/۰۷"
+    date: "۱۴۰۴/۱۰/۰۷"
   }
 ];
 
