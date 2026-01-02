@@ -198,6 +198,7 @@ const CaptoprilPage = lazy(() => import("./pages/articles/CaptoprilPage"));
 const SystolicDiastolicPage = lazy(() => import("./pages/articles/SystolicDiastolicPage"));
 const SodiumPotassiumPage = lazy(() => import("./pages/articles/SodiumPotassiumPage"));
 const LiverEnzymesPage = lazy(() => import("./pages/articles/LiverEnzymesPage"));
+const PacemakerICDPage = lazy(() => import("./pages/articles/PacemakerICDPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -423,6 +424,7 @@ const App = () => (
                        <Route path="/articles/systolic-diastolic" element={<SystolicDiastolicPage />} />
                        <Route path="/articles/sodium-potassium" element={<SodiumPotassiumPage />} />
                        <Route path="/articles/liver-enzymes" element={<LiverEnzymesPage />} />
+                       <Route path="/articles/pacemaker-icd" element={<PacemakerICDPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

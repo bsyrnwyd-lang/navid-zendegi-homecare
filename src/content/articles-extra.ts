@@ -3,6 +3,7 @@ import vitaminsColdImage from "@/assets/vitamins-cold-article.jpg";
 import legSwellingImage from "@/assets/leg-swelling-article.jpg";
 import abdominalPainImage from "@/assets/abdominal-pain-article.jpg";
 import constipationImage from "@/assets/constipation-article.jpg";
+import pacemakerICDImage from "@/assets/pacemaker-icd-article.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -15,6 +16,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1006,
+    title: "پیس‌میکر و ICD؛ راهنمای کامل باتری و دفیبریلاتور قلب",
+    description: "راهنمای جامع پیس‌میکر و ICD: نحوه عملکرد، تفاوت‌ها، زندگی روزمره با باتری قلب و خدمات مراقبتی در منزل",
+    image: pacemakerICDImage,
+    link: "/articles/pacemaker-icd",
+    category: "قلب",
+    date: "1403/10/13"
+  },
   {
     id: 1005,
     title: "یبوست؛ علل، انواع، تشخیص و راهکارهای علمی",
