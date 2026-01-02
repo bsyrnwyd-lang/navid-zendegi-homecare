@@ -859,4 +859,14 @@
       <image:title>تفسیر آنزیم‌های کبدی - آزمایش خون کبد</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/pacemaker-icd</loc>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/pacemaker-icd-article.jpg</image:loc>
+      <image:title>پیس‌میکر و ICD - باتری و دفیبریلاتور قلب</image:title>
+    </image:image>
+  </url>
 </urlset>
