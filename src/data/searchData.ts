@@ -800,6 +800,13 @@ export const articlesData: SearchItem[] = [
     url: '/articles/mitral-clip',
     description: 'ترمیم دریچه قلب بدون جراحی باز',
     keywords: ['میترال کلیپ', 'دریچه میترال', 'قلب', 'جراحی', 'MitralClip', 'نارسایی دریچه']
+  },
+  {
+    type: 'article',
+    title: 'تعویض دریچه میترال',
+    url: '/articles/mitral-valve-replacement',
+    description: 'تشخیص، پیگیری و مراقبت در منزل',
+    keywords: ['تعویض دریچه', 'دریچه میترال', 'قلب', 'جراحی قلب', 'دریچه مکانیکی', 'دریچه بیولوژیک']
   }
 ];
 

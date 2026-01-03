@@ -6,6 +6,7 @@ import constipationImage from "@/assets/constipation-article.jpg";
 import pacemakerICDImage from "@/assets/pacemaker-icd-article.jpg";
 import muscleBridgeImage from "@/assets/muscle-bridge-holter.jpg";
 import mitralClipImage from "@/assets/mitral-clip-article.jpg";
+import mitralValveReplacementImage from "@/assets/mitral-valve-replacement.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -18,6 +19,24 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1073,
+    title: "تعویض دریچه میترال؛ تشخیص، پیگیری و مراقبت در منزل",
+    description: "راهنمای جامع تعویض دریچه میترال: تشخیص با اکو، انواع دریچه مصنوعی و مراقبت‌های تخصصی در منزل",
+    image: mitralValveReplacementImage,
+    link: "/articles/mitral-valve-replacement",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۴"
+  },
+  {
+    id: 1072,
+    title: "میترال کلیپ (MitralClip)؛ ترمیم انقلابی دریچه قلب بدون جراحی باز",
+    description: "راهنمای جامع میترال کلیپ: ترمیم دریچه میترال بدون جراحی باز، مقایسه با جراحی سنتی و مراقبت‌های پس از عمل در منزل",
+    image: mitralClipImage,
+    link: "/articles/mitral-clip",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۴"
+  },
   {
     id: 1072,
     title: "میترال کلیپ (MitralClip)؛ ترمیم انقلابی دریچه قلب بدون جراحی باز",
