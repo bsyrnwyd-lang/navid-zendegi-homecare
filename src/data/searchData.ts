@@ -793,6 +793,13 @@ export const articlesData: SearchItem[] = [
     url: '/articles/air-pollution-effects',
     description: 'اثرات آلودگی هوا بر سلامت قلبی-ریوی',
     keywords: ['آلودگی هوا', 'PM2.5', 'AQI', 'قلب', 'ریه', 'سکته']
+  },
+  {
+    type: 'article',
+    title: 'میترال کلیپ (MitralClip)',
+    url: '/articles/mitral-clip',
+    description: 'ترمیم دریچه قلب بدون جراحی باز',
+    keywords: ['میترال کلیپ', 'دریچه میترال', 'قلب', 'جراحی', 'MitralClip', 'نارسایی دریچه']
   }
 ];
 

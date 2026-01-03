@@ -5,6 +5,7 @@ import abdominalPainImage from "@/assets/abdominal-pain-article.jpg";
 import constipationImage from "@/assets/constipation-article.jpg";
 import pacemakerICDImage from "@/assets/pacemaker-icd-article.jpg";
 import muscleBridgeImage from "@/assets/muscle-bridge-holter.jpg";
+import mitralClipImage from "@/assets/mitral-clip-article.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -17,6 +18,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1072,
+    title: "میترال کلیپ (MitralClip)؛ ترمیم انقلابی دریچه قلب بدون جراحی باز",
+    description: "راهنمای جامع میترال کلیپ: ترمیم دریچه میترال بدون جراحی باز، مقایسه با جراحی سنتی و مراقبت‌های پس از عمل در منزل",
+    image: mitralClipImage,
+    link: "/articles/mitral-clip",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۴"
+  },
   {
     id: 1071,
     title: "ماسل بریج (پل میوکارد)؛ نقش هولتر در تشخیص دردهای قلبی پنهان",
