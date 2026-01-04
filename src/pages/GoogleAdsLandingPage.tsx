@@ -221,7 +221,7 @@ const GoogleAdsLandingPage = () => {
                   <CheckCircle className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">قیمت شفاف</h3>
-                <p className="text-muted-foreground text-sm">بدون هزینه پنهان + فاکتور رسمی</p>
+                <p className="text-muted-foreground text-sm">بدون هزینه پنهان</p>
               </div>
             </div>
           </div>
