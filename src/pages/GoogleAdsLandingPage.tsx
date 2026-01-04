@@ -126,7 +126,7 @@ const GoogleAdsLandingPage = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-6">
-              پزشک در کمتر از ۲ ساعت به منزل شما می‌رسد
+              پزشک در کمتر از ۱ ساعت به منزل شما می‌رسد
             </p>
 
             {/* Trust Badges */}
