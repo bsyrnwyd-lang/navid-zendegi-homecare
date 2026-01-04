@@ -207,7 +207,7 @@ const GoogleAdsLandingPage = () => {
                   <Clock className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">اعزام سریع</h3>
-                <p className="text-muted-foreground text-sm">پزشک در کمتر از ۲ ساعت به منزل می‌رسد</p>
+                <p className="text-muted-foreground text-sm">پزشک در کمتر از ۱ ساعت به منزل می‌رسد</p>
               </div>
               <div className="text-center p-6">
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
