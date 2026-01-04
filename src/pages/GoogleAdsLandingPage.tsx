@@ -141,7 +141,7 @@ const GoogleAdsLandingPage = () => {
               </span>
               <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
                 <CheckCircle className="w-4 h-4 text-secondary" />
-                فاکتور رسمی
+                پزشک عمومی و متخصص
               </span>
             </div>
 
