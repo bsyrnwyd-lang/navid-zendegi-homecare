@@ -8,6 +8,7 @@ import muscleBridgeImage from "@/assets/muscle-bridge-holter.jpg";
 import mitralClipImage from "@/assets/mitral-clip-article.jpg";
 import mitralValveReplacementImage from "@/assets/mitral-valve-replacement.jpg";
 import tricuspidValveReplacementImage from "@/assets/tricuspid-valve-replacement.jpg";
+import taviProcedureImage from "@/assets/tavi-procedure.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -20,6 +21,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1075,
+    title: "عمل تاوی (TAVI)؛ تعویض دریچه آئورت بدون جراحی باز",
+    description: "راهنمای جامع عمل تاوی: تعویض دریچه آئورت بدون شکافتن سینه، کاندیداها، عوارض و مراقبت‌های پس از عمل در منزل",
+    image: taviProcedureImage,
+    link: "/articles/tavi-procedure",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۵"
+  },
   {
     id: 1074,
     title: "تعویض دریچه تریکاسپید؛ بازسازی مسیر خون و مراقبت در منزل",
