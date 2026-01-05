@@ -7,6 +7,7 @@ import pacemakerICDImage from "@/assets/pacemaker-icd-article.jpg";
 import muscleBridgeImage from "@/assets/muscle-bridge-holter.jpg";
 import mitralClipImage from "@/assets/mitral-clip-article.jpg";
 import mitralValveReplacementImage from "@/assets/mitral-valve-replacement.jpg";
+import tricuspidValveReplacementImage from "@/assets/tricuspid-valve-replacement.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -19,6 +20,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1074,
+    title: "تعویض دریچه تریکاسپید؛ بازسازی مسیر خون و مراقبت در منزل",
+    description: "راهنمای جامع تعویض دریچه تریکاسپید: بیماری‌های دریچه سه‌لتی، انتخاب دریچه بیولوژیک یا مکانیکی و خدمات هولتر و اکو در منزل",
+    image: tricuspidValveReplacementImage,
+    link: "/articles/tricuspid-valve-replacement",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۵"
+  },
   {
     id: 1073,
     title: "تعویض دریچه میترال؛ تشخیص، پیگیری و مراقبت در منزل",
