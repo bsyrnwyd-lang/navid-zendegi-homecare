@@ -10,6 +10,7 @@ import mitralValveReplacementImage from "@/assets/mitral-valve-replacement.jpg";
 import tricuspidValveReplacementImage from "@/assets/tricuspid-valve-replacement.jpg";
 import taviProcedureImage from "@/assets/tavi-procedure.jpg";
 import cabgSurgeryImage from "@/assets/cabg-surgery.jpg";
+import alopeciaAreataImage from "@/assets/alopecia-areata.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -22,6 +23,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1077,
+    title: "ریزش سکه‌ای مو و ریش (آلوپسی آره‌آتا)؛ علل و درمان",
+    description: "راهنمای جامع ریزش سکه‌ای مو: مکانیسم بیماری، علل و محرک‌ها، روش‌های تشخیص و جدیدترین درمان‌ها شامل PRP در منزل",
+    image: alopeciaAreataImage,
+    link: "/articles/alopecia-areata",
+    category: "پوست و مو",
+    date: "۱۴۰۴/۱۰/۱۶"
+  },
   {
     id: 1076,
     title: "جراحی بای‌پس قلب (CABG)؛ راهنمای کامل و مراقبت در منزل",
