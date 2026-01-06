@@ -9,6 +9,7 @@ import mitralClipImage from "@/assets/mitral-clip-article.jpg";
 import mitralValveReplacementImage from "@/assets/mitral-valve-replacement.jpg";
 import tricuspidValveReplacementImage from "@/assets/tricuspid-valve-replacement.jpg";
 import taviProcedureImage from "@/assets/tavi-procedure.jpg";
+import cabgSurgeryImage from "@/assets/cabg-surgery.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -21,6 +22,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1076,
+    title: "جراحی بای‌پس قلب (CABG)؛ راهنمای کامل و مراقبت در منزل",
+    description: "راهنمای جامع جراحی بای‌پس عروق کرونر: اندیکاسیون‌ها، انواع پیوند، روش‌های جراحی و مراقبت‌های تخصصی پس از عمل در منزل",
+    image: cabgSurgeryImage,
+    link: "/articles/cabg-surgery",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۶"
+  },
   {
     id: 1075,
     title: "عمل تاوی (TAVI)؛ تعویض دریچه آئورت بدون جراحی باز",

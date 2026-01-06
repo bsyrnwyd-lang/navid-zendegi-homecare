@@ -204,6 +204,7 @@ const MitralClipPage = lazy(() => import("./pages/articles/MitralClipPage"));
 const MitralValveReplacementPage = lazy(() => import("./pages/articles/MitralValveReplacementPage"));
 const TricuspidValveReplacementPage = lazy(() => import("./pages/articles/TricuspidValveReplacementPage"));
 const TAVIProcedurePage = lazy(() => import("./pages/articles/TAVIProcedurePage"));
+const CABGSurgeryPage = lazy(() => import("./pages/articles/CABGSurgeryPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -435,6 +436,7 @@ const App = () => (
                        <Route path="/articles/mitral-valve-replacement" element={<MitralValveReplacementPage />} />
                        <Route path="/articles/tricuspid-valve-replacement" element={<TricuspidValveReplacementPage />} />
                        <Route path="/articles/tavi-procedure" element={<TAVIProcedurePage />} />
+                       <Route path="/articles/cabg-surgery" element={<CABGSurgeryPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
