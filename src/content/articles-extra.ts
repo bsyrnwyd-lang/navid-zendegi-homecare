@@ -12,6 +12,7 @@ import taviProcedureImage from "@/assets/tavi-procedure.jpg";
 import cabgSurgeryImage from "@/assets/cabg-surgery.jpg";
 import alopeciaAreataImage from "@/assets/alopecia-areata.jpg";
 import heartMedicationsWarningImage from "@/assets/heart-medications-warning.jpg";
+import legEdemaImage from "@/assets/leg-edema-article.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -24,6 +25,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1079,
+    title: "ورم پا؛ زنگ خطر خاموش قلب یا مشکل ساده؟",
+    description: "علت ورم پا چیست؟ رابطه ورم پا با بیماری قلبی، لخته وریدی و نارسایی کلیه. خدمات اکو، نوار قلب و ویزیت در منزل",
+    image: legEdemaImage,
+    link: "/articles/leg-edema",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۷"
+  },
   {
     id: 1078,
     title: "چرا نباید داروهای قلبی را خودسرانه قطع کرد؟",
