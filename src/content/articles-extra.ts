@@ -11,6 +11,7 @@ import tricuspidValveReplacementImage from "@/assets/tricuspid-valve-replacement
 import taviProcedureImage from "@/assets/tavi-procedure.jpg";
 import cabgSurgeryImage from "@/assets/cabg-surgery.jpg";
 import alopeciaAreataImage from "@/assets/alopecia-areata.jpg";
+import heartMedicationsWarningImage from "@/assets/heart-medications-warning.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -23,6 +24,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1078,
+    title: "چرا نباید داروهای قلبی را خودسرانه قطع کرد؟",
+    description: "خطرات قطع ناگهانی آسپرین، پلاویکس، استاتین و بتابلاکرها. راهنمای مراقبت قلبی در منزل با خدمات ویزیت، اکو و نوار قلب",
+    image: heartMedicationsWarningImage,
+    link: "/articles/heart-medications-warning",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۷"
+  },
   {
     id: 1077,
     title: "ریزش سکه‌ای مو و ریش (آلوپسی آره‌آتا)؛ علل و درمان",
