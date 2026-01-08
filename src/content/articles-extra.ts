@@ -14,6 +14,7 @@ import alopeciaAreataImage from "@/assets/alopecia-areata.jpg";
 import heartMedicationsWarningImage from "@/assets/heart-medications-warning.jpg";
 import legEdemaImage from "@/assets/leg-edema-article.jpg";
 import inrMonitoringImage from "@/assets/inr-monitoring-article.jpg";
+import heparinEnoxaparinImage from "@/assets/heparin-enoxaparin-article.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -26,6 +27,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1081,
+    title: "راهنمای جامع هپارین و انوکساپارین؛ مراقبت و تزریق در منزل",
+    description: "راهنمای کامل مصرف هپارین و انوکساپارین: تفاوت انواع هپارین، تکنیک تزریق، عوارض HIT و خدمات پایش و تزریق در منزل",
+    image: heparinEnoxaparinImage,
+    link: "/articles/heparin-enoxaparin",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۸"
+  },
   {
     id: 1080,
     title: "چرا عدد INR ثابت نمی‌ماند؟ عوامل موثر بر نوسانات وارفارین",
