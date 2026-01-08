@@ -13,6 +13,7 @@ import cabgSurgeryImage from "@/assets/cabg-surgery.jpg";
 import alopeciaAreataImage from "@/assets/alopecia-areata.jpg";
 import heartMedicationsWarningImage from "@/assets/heart-medications-warning.jpg";
 import legEdemaImage from "@/assets/leg-edema-article.jpg";
+import inrMonitoringImage from "@/assets/inr-monitoring-article.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -25,6 +26,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1080,
+    title: "چرا عدد INR ثابت نمی‌ماند؟ عوامل موثر بر نوسانات وارفارین",
+    description: "راهنمای جامع عوامل موثر بر نوسانات INR شامل تداخلات دارویی، رژیم غذایی و ویتامین K. خدمات آزمایش INR و ویزیت در منزل",
+    image: inrMonitoringImage,
+    link: "/articles/inr-monitoring",
+    category: "قلب",
+    date: "۱۴۰۴/۱۰/۱۸"
+  },
   {
     id: 1079,
     title: "ورم پا؛ زنگ خطر خاموش قلب یا مشکل ساده؟",
