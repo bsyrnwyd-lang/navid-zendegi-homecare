@@ -2064,7 +2064,7 @@ const ArticlesPage = () => {
                   {currentArticles.map((article) => (
                     <Card key={article.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col">
                       <Link to={article.link} className="block">
-                        <div className="overflow-hidden rounded-t-lg">
+                        <div className="overflow-hidden rounded-t-lg relative">
                           <img 
                             src={article.image}
                             alt={article.title}
@@ -2077,6 +2077,11 @@ const ArticlesPage = () => {
                               }
                             }}
                           />
+                          {article.date && (
+                            <span className="absolute bottom-2 right-2 bg-background/90 text-foreground/80 text-xs px-2 py-1 rounded">
+                              {article.date}
+                            </span>
+                          )}
                         </div>
                       </Link>
                       <CardHeader className="flex-none">
