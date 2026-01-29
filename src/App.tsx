@@ -211,6 +211,7 @@ const LegEdemaPage = lazy(() => import("./pages/articles/LegEdemaPage"));
 const INRMonitoringPage = lazy(() => import("./pages/articles/INRMonitoringPage"));
 const HeparinEnoxaparinPage = lazy(() => import("./pages/articles/HeparinEnoxaparinPage"));
 const SilentHeartAttackPage = lazy(() => import("./pages/articles/SilentHeartAttackPage"));
+const PostCCUCarePage = lazy(() => import("./pages/articles/PostCCUCarePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -449,6 +450,7 @@ const App = () => (
                        <Route path="/articles/inr-monitoring" element={<INRMonitoringPage />} />
                        <Route path="/articles/heparin-enoxaparin" element={<HeparinEnoxaparinPage />} />
                        <Route path="/articles/silent-heart-attack" element={<SilentHeartAttackPage />} />
+                       <Route path="/articles/post-ccu-care" element={<PostCCUCarePage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
