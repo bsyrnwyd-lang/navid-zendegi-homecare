@@ -939,4 +939,14 @@
       <image:title>بیماری‌های دریچه‌ای قلب - تشخیص و مراقبت در منزل</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/diabetes-heart</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/diabetes-heart-connection.jpg</image:loc>
+      <image:title>دیابت و قلب - پایش قلبی در منزل برای بیماران دیابتی</image:title>
+    </image:image>
+  </url>
 </urlset>
