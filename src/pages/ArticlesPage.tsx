@@ -181,6 +181,8 @@ import pneumoniaImage from "@/assets/pneumonia-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
+import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
+import preoperativeCardiacImage from "@/assets/preoperative-cardiac-evaluation.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -385,6 +387,24 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1085,
+      title: "تاییدیه قلب قبل از جراحی؛ چرا و چگونه؟",
+      description: "راهنمای کامل ارزیابی قلبی قبل از جراحی: نوار قلب، اکو و صدور گواهی تاییدیه در منزل برای جراحی‌های مختلف",
+      image: preoperativeCardiacImage,
+      link: "/articles/preoperative-cardiac-evaluation",
+      category: "قلب و عروق",
+      date: "۱۴۰۳/۱۱/۱۰"
+    },
+    {
+      id: 1084,
+      title: "فشار خون مقاوم به درمان؛ وقتی قرص‌ها جواب نمی‌دهند",
+      description: "راهنمای کامل فشار خون مقاوم: علل، تداخلات دارویی، آپنه خواب و خدمات تشخیصی اکو و هولتر در منزل",
+      image: resistantHypertensionImage,
+      link: "/articles/resistant-hypertension",
+      category: "قلب و عروق",
+      date: "۱۴۰۳/۱۱/۱۰"
+    },
     {
       id: 1083,
       title: "مراقبت‌های حیاتی پس از ترخیص از CCU؛ هفته اول، پل پیروزی بر بیماری",
