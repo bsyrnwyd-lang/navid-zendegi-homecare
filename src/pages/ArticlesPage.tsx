@@ -179,6 +179,7 @@ import tuberculosisImage from "@/assets/tuberculosis-article.jpg";
 import tetanusImage from "@/assets/tetanus-article.jpg";
 import pneumoniaImage from "@/assets/pneumonia-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
+import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -383,6 +384,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1082,
+      title: "سکته قلبی خاموش؛ وقتی قلب بدون فریاد آسیب می‌بیند",
+      description: "راهنمای جامع سکته قلبی خاموش (Silent Ischemia): مکانیسم، علائم پنهان، افراد در معرض خطر و خدمات تشخیص در منزل",
+      image: silentHeartAttackImage,
+      link: "/articles/silent-heart-attack",
+      category: "قلب و عروق",
+      date: "۱۴۰۳/۱۱/۱۰"
+    },
     {
       id: 1069,
       title: "تفسیر کامل آنزیم‌های کبدی؛ ALT، AST، ALP و GGT",
