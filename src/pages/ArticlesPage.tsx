@@ -187,6 +187,7 @@ import pulmonaryEdemaImage from "@/assets/pulmonary-edema.jpg";
 import postprandialHypotensionImage from "@/assets/postprandial-hypotension.jpg";
 import echoSafetyHomeImage from "@/assets/echo-safety-home.jpg";
 import heartValveDiseaseImage from "@/assets/heart-valve-disease.jpg";
+import diabetesHeartImage from "@/assets/diabetes-heart-connection.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -391,6 +392,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1090,
+      title: "دیابت و قلب؛ چرا بیماران دیابتی باید بیش از دیگران مراقب قلب خود باشند؟",
+      description: "راهنمای کامل ارتباط دیابت و بیماری‌های قلبی: سکته قلبی خاموش، تصلب شرایین در دیابت، چک‌آپ قلبی با اکو و نوار قلب در منزل",
+      image: diabetesHeartImage,
+      link: "/articles/diabetes-heart",
+      category: "قلب و عروق",
+      date: "۱۴۰۳/۱۱/۱۰"
+    },
     {
       id: 1089,
       title: "بیماری‌های دریچه‌ای قلب؛ از تشخیص تا مراقبت‌های تخصصی در منزل",
