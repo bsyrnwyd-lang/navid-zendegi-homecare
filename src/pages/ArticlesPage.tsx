@@ -184,6 +184,7 @@ import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
 import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
 import preoperativeCardiacImage from "@/assets/preoperative-cardiac-evaluation.jpg";
 import pulmonaryEdemaImage from "@/assets/pulmonary-edema.jpg";
+import postprandialHypotensionImage from "@/assets/postprandial-hypotension.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -388,6 +389,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1087,
+      title: "افت فشار خون و تپش قلب بعد از غذا (Postprandial Hypotension)؛ پدیده‌ای شایع در سالمندان",
+      description: "راهنمای کامل افت فشار خون بعد از غذا: علائم، علل، تشخیص در منزل و راهکارهای عملی برای سالمندان",
+      image: postprandialHypotensionImage,
+      link: "/articles/postprandial-hypotension",
+      category: "قلب و عروق",
+      date: "۱۴۰۳/۱۱/۱۰"
+    },
     {
       id: 1086,
       title: "آب آوردن ریه (ادم ریوی)؛ وقتی تنگی نفس به یک وضعیت اورژانسی تبدیل می‌شود",
