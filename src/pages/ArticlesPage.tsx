@@ -180,6 +180,7 @@ import tetanusImage from "@/assets/tetanus-article.jpg";
 import pneumoniaImage from "@/assets/pneumonia-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
 import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
+import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -384,6 +385,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1083,
+      title: "مراقبت‌های حیاتی پس از ترخیص از CCU؛ هفته اول، پل پیروزی بر بیماری",
+      description: "راهنمای گام‌به‌گام مراقبت‌های منزل پس از ترخیص از بخش مراقبت‌های ویژه قلبی شامل مدیریت دارویی، پایش علائم و خدمات در منزل",
+      image: postCCUCareImage,
+      link: "/articles/post-ccu-care",
+      category: "قلب و عروق",
+      date: "۱۴۰۳/۱۱/۱۰"
+    },
     {
       id: 1082,
       title: "سکته قلبی خاموش؛ وقتی قلب بدون فریاد آسیب می‌بیند",
