@@ -879,4 +879,24 @@
       <image:title>ماسل بریج - نقش هولتر در تشخیص دردهای قلبی پنهان</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/resistant-hypertension</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/resistant-hypertension.jpg</image:loc>
+      <image:title>فشار خون مقاوم به درمان - تشخیص و درمان در منزل</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/preoperative-cardiac-evaluation</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/preoperative-cardiac-evaluation.jpg</image:loc>
+      <image:title>تاییدیه قلب قبل از جراحی - ارزیابی قلبی در منزل</image:title>
+    </image:image>
+  </url>
 </urlset>
