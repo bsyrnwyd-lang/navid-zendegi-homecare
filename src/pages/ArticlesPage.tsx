@@ -185,6 +185,7 @@ import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
 import preoperativeCardiacImage from "@/assets/preoperative-cardiac-evaluation.jpg";
 import pulmonaryEdemaImage from "@/assets/pulmonary-edema.jpg";
 import postprandialHypotensionImage from "@/assets/postprandial-hypotension.jpg";
+import echoSafetyHomeImage from "@/assets/echo-safety-home.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -389,6 +390,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1088,
+      title: "تکنولوژی در خدمت سلامت؛ آیا دقت اکو و نوار قلب در منزل با بیمارستان برابر است؟",
+      description: "مقایسه فنی تجهیزات پورتابل اکو و نوار قلب با دستگاه‌های ثابت بیمارستانی و بررسی استانداردهای FDA و CE",
+      image: echoSafetyHomeImage,
+      link: "/articles/portable-device-accuracy",
+      category: "قلب و عروق",
+      date: "۱۴۰۳/۱۱/۱۰"
+    },
     {
       id: 1087,
       title: "افت فشار خون و تپش قلب بعد از غذا (Postprandial Hypotension)؛ پدیده‌ای شایع در سالمندان",
