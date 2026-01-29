@@ -183,6 +183,7 @@ import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
 import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
 import preoperativeCardiacImage from "@/assets/preoperative-cardiac-evaluation.jpg";
+import pulmonaryEdemaImage from "@/assets/pulmonary-edema.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -387,6 +388,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1086,
+      title: "آب آوردن ریه (ادم ریوی)؛ وقتی تنگی نفس به یک وضعیت اورژانسی تبدیل می‌شود",
+      description: "راهنمای کامل ادم ریوی: علائم هشداردهنده، علل قلبی، تشخیص با اکو و نوار قلب در منزل و درمان فوری",
+      image: pulmonaryEdemaImage,
+      link: "/articles/pulmonary-edema",
+      category: "قلب و عروق",
+      date: "۱۴۰۳/۱۱/۱۰"
+    },
     {
       id: 1085,
       title: "تاییدیه قلب قبل از جراحی؛ چرا و چگونه؟",
