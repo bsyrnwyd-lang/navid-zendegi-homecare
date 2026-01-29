@@ -186,6 +186,7 @@ import preoperativeCardiacImage from "@/assets/preoperative-cardiac-evaluation.j
 import pulmonaryEdemaImage from "@/assets/pulmonary-edema.jpg";
 import postprandialHypotensionImage from "@/assets/postprandial-hypotension.jpg";
 import echoSafetyHomeImage from "@/assets/echo-safety-home.jpg";
+import heartValveDiseaseImage from "@/assets/heart-valve-disease.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -390,6 +391,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1089,
+      title: "بیماری‌های دریچه‌ای قلب؛ از تشخیص تا مراقبت‌های تخصصی در منزل",
+      description: "راهنمای کامل بیماری‌های دریچه‌ای قلب: تنگی و نارسایی دریچه، علائم هشداردهنده، تشخیص با اکو در منزل و مراقبت از دریچه‌های مصنوعی",
+      image: heartValveDiseaseImage,
+      link: "/articles/heart-valve-disease",
+      category: "قلب و عروق",
+      date: "۱۴۰۳/۱۱/۱۰"
+    },
     {
       id: 1088,
       title: "تکنولوژی در خدمت سلامت؛ آیا دقت اکو و نوار قلب در منزل با بیمارستان برابر است؟",
