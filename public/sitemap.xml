@@ -1076,4 +1076,14 @@
       <image:title>استئوسارکوم (سرطان استخوان) - مراقبت تخصصی و پایش قلبی در منزل</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/prostate-volume</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/prostate-volume-ultrasound.jpg</image:loc>
+      <image:title>حجم نرمال پروستات - راهنمای تفسیر سونوگرافی و ارتباط با قلب</image:title>
+    </image:image>
+  </url>
 </urlset>
