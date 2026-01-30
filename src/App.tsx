@@ -234,6 +234,7 @@ const ProstateVolumePage = lazy(() => import("./pages/articles/ProstateVolumePag
 const DrugInteractionsHeartProstatePage = lazy(() => import("./pages/articles/DrugInteractionsHeartProstatePage"));
 const EjectionFractionPage = lazy(() => import("./pages/articles/EjectionFractionPage"));
 const SildenafilTadalafilPage = lazy(() => import("./pages/articles/SildenafilTadalafilPage"));
+const AngiographyHistoryPage = lazy(() => import("./pages/articles/AngiographyHistoryPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -495,6 +496,7 @@ const App = () => (
                        <Route path="/articles/drug-interactions-heart-prostate" element={<DrugInteractionsHeartProstatePage />} />
                        <Route path="/articles/ejection-fraction" element={<EjectionFractionPage />} />
                        <Route path="/articles/sildenafil-tadalafil" element={<SildenafilTadalafilPage />} />
+                       <Route path="/articles/angiography-history" element={<AngiographyHistoryPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
