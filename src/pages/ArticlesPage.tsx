@@ -190,6 +190,7 @@ import heartValveDiseaseImage from "@/assets/heart-valve-disease.jpg";
 import diabetesHeartImage from "@/assets/diabetes-heart-connection.jpg";
 import womenHeartDiseaseImage from "@/assets/women-heart-disease.jpg";
 import sleepApneaHeartImage from "@/assets/sleep-apnea-heart.jpg";
+import supplementsHeartImage from "@/assets/supplements-heart-athletes.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -394,6 +395,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1095,
+      title: "مکمل‌های بدنسازی و قلب؛ چرا ورزشکاران به هولتر قلب نیاز دارند؟",
+      description: "خطرات محرک‌ها و مکمل‌های ورزشی برای قلب، آریتمی‌های ناشی از مکمل، نقش هولتر و اکو در پایش ورزشکاران",
+      image: supplementsHeartImage,
+      link: "/articles/supplements-heart-athletes",
+      category: "قلب و عروق",
+      date: "۱۴۰۴/۱۱/۱۱"
+    },
     {
       id: 1094,
       title: "آپنه خواب و خروپف؛ چرا توقف تنفس شبانه زنگ خطری برای ایست قلبی است؟",
