@@ -221,6 +221,7 @@ const HeartValveDiseasePage = lazy(() => import("./pages/articles/HeartValveDise
 const DiabetesHeartPage = lazy(() => import("./pages/articles/DiabetesHeartPage"));
 const BloodPressureReadingsPage = lazy(() => import("./pages/articles/BloodPressureReadingsPage"));
 const CardiacRehabHomePage = lazy(() => import("./pages/articles/CardiacRehabHomePage"));
+const WomenHeartDiseasePage = lazy(() => import("./pages/articles/WomenHeartDiseasePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -469,6 +470,7 @@ const App = () => (
                        <Route path="/articles/diabetes-heart" element={<DiabetesHeartPage />} />
                        <Route path="/articles/blood-pressure-readings" element={<BloodPressureReadingsPage />} />
                        <Route path="/articles/cardiac-rehab-home" element={<CardiacRehabHomePage />} />
+                       <Route path="/articles/women-heart-disease" element={<WomenHeartDiseasePage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
