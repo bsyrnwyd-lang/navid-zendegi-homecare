@@ -179,6 +179,7 @@ import tuberculosisImage from "@/assets/tuberculosis-article.jpg";
 import tetanusImage from "@/assets/tetanus-article.jpg";
 import pneumoniaImage from "@/assets/pneumonia-article.jpg";
 import { extraArticles } from "@/content/articles-extra";
+import { allArticles as centralArticles } from "@/content/allArticles";
 import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
 import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
@@ -1981,11 +1982,11 @@ const ArticlesPage = () => {
     }
   ];
 
-  // Merge with extra articles and de-duplicate by link (newest/custom first)
+  // Merge with extra articles, central articles and de-duplicate by link (newest/custom first)
   const mergedArticles = useMemo(() => {
     const map = new Map<string, any>();
-    // Ensure newly added in-app articles appear first
-    [...articles, ...extraArticles].forEach((a) => {
+    // ترکیب همه منابع مقالات - مقالات مرکزی اولویت دارند
+    [...centralArticles, ...articles, ...extraArticles].forEach((a) => {
       if (!map.has(a.link)) map.set(a.link, a);
     });
     // Sort by id (descending) to show newest articles first

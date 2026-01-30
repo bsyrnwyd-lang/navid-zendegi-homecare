@@ -1,0 +1,281 @@
+/**
+ * فایل مرکزی تعریف تمام مقالات
+ * ===================================
+ * هر مقاله جدید را فقط اینجا اضافه کنید
+ * صفحه اصلی و صفحه مقالات خودکار آپدیت می‌شوند
+ * 
+ * نکته مهم: ID مقاله جدید باید بیشتر از بالاترین ID موجود باشد
+ * در حال حاضر بالاترین ID: 1104
+ */
+
+// Import all article images
+import womenHeartDiseaseImage from "@/assets/women-heart-disease.jpg";
+import cardiacRehabHomeImage from "@/assets/cardiac-rehab-home.jpg";
+import bloodPressureReadingsImage from "@/assets/blood-pressure-readings.jpg";
+import diabetesHeartImage from "@/assets/diabetes-heart-connection.jpg";
+import heartValveDiseaseImage from "@/assets/heart-valve-disease.jpg";
+import echoSafetyHomeImage from "@/assets/echo-safety-home.jpg";
+import ejectionFractionImage from "@/assets/ef-ejection-fraction.jpg";
+import drugInteractionsHeartProstateImage from "@/assets/drug-interactions-heart-prostate.jpg";
+import prostateVolumeImage from "@/assets/prostate-volume-ultrasound.jpg";
+import osteosarcomaImage from "@/assets/osteosarcoma-home-care.jpg";
+import urologyUltrasoundImage from "@/assets/urology-ultrasound-home.jpg";
+import abdominalUltrasoundImage from "@/assets/abdominal-ultrasound-home.jpg";
+import dopplerDVTImage from "@/assets/doppler-ultrasound-dvt.jpg";
+import supplementsHeartImage from "@/assets/supplements-heart-athletes.jpg";
+import sleepApneaHeartImage from "@/assets/sleep-apnea-heart.jpg";
+import bellsPalsyImage from "@/assets/bells-palsy-home-care.jpg";
+import guillainBarreImage from "@/assets/guillain-barre-home-care.jpg";
+import postprandialHypotensionImage from "@/assets/postprandial-hypotension.jpg";
+import pulmonaryEdemaImage from "@/assets/pulmonary-edema.jpg";
+import preoperativeCardiacImage from "@/assets/preoperative-cardiac-evaluation.jpg";
+import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
+import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
+import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
+
+export interface ArticleData {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  category: string;
+  date?: string;
+}
+
+/**
+ * لیست اصلی مقالات - مرتب شده بر اساس ID نزولی (جدیدترین بالا)
+ * برای اضافه کردن مقاله جدید:
+ * 1. عکس را import کنید
+ * 2. مقاله را به ابتدای این آرایه اضافه کنید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1104) قرار دهید
+ */
+export const allArticles: ArticleData[] = [
+  // ═══════════════════════════════════════════════════════════════
+  // جدیدترین مقالات (ID بالاتر = جدیدتر)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1104,
+    title: "عدد EF در اکو قلب چیست؟ تفسیر کسر تخلیه‌ای و معنای درصدهای آن",
+    description: "تفسیر EF نرمال و غیرنرمال، علت EF پایین، خطرات نارسایی قلبی، نقش هولتر و اکو در پایش قدرت قلب",
+    image: ejectionFractionImage,
+    link: "/articles/ejection-fraction",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1103,
+    title: "تداخلات دارویی خطرناک؛ مثلث قلب، پروستات و ناتوانی جنسی",
+    description: "خطرات ترکیب ویاگرا با نیترات‌های قلبی، تداخل داروهای پروستات با فشار خون، نقش هولتر و اکو در پایش ایمنی دارو",
+    image: drugInteractionsHeartProstateImage,
+    link: "/articles/drug-interactions-heart-prostate",
+    category: "دارو",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1102,
+    title: "راهنمای جامع حجم نرمال پروستات؛ اعداد سونوگرافی چه معنایی دارند؟",
+    description: "حجم نرمال پروستات بر اساس سن، تفسیر BPH، ارتباط پروستات با قلب و عروق، سونوگرافی و اکو در منزل",
+    image: prostateVolumeImage,
+    link: "/articles/prostate-volume",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1101,
+    title: "استئوسارکوم؛ تشخیص، مراقبت‌های داخلی و پایش قلب در منزل",
+    description: "مدیریت استئوسارکوم در منزل: پایش عوارض شیمی‌درمانی، اکوکاردیوگرافی برای سمیت قلبی، سونوگرافی داپلر",
+    image: osteosarcomaImage,
+    link: "/articles/osteosarcoma",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1100,
+    title: "فلج بلز (Bell's Palsy): تفاوت با سکته مغزی، علائم و درمان در منزل",
+    description: "راهنمای جامع فلج بلز: تشخیص تفریقی با سکته مغزی، نقش هولتر فشار خون و نوار قلب در منزل",
+    image: bellsPalsyImage,
+    link: "/articles/bells-palsy",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1099,
+    title: "بیماری گیلن باره (Guillain-Barré): علائم، درمان و مراقبت در منزل",
+    description: "راهنمای جامع گیلن باره: از ضعف عضلانی تا پایش قلبی و عروقی در منزل. نقش هولتر، اکو و سونوگرافی داپلر",
+    image: guillainBarreImage,
+    link: "/articles/guillain-barre",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1098,
+    title: "مشکلات ادراری و پروستات در آقایان؛ تشخیص دقیق با سونوگرافی ارولوژی در منزل",
+    description: "سونوگرافی تخصصی ارولوژی در منزل برای تشخیص بزرگی پروستات، سنگ کلیه و مثانه و بررسی باقی‌مانده ادرار",
+    image: urologyUltrasoundImage,
+    link: "/articles/urology-ultrasound-home",
+    category: "عمومی",
+    date: "۱۴۰۴/۰۵/۱۰"
+  },
+  {
+    id: 1097,
+    title: "دردهای شکمی در سالمندان؛ تشخیص فوری سنگ کلیه و کیسه صفرا با سونوگرافی در منزل",
+    description: "سونوگرافی شکم و لگن در منزل: تشخیص سنگ کلیه، سنگ کیسه صفرا، کبد چرب و بررسی آئورت شکمی",
+    image: abdominalUltrasoundImage,
+    link: "/articles/abdominal-ultrasound-home",
+    category: "عمومی",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1096,
+    title: "ورم پا را جدی بگیرید؛ تشخیص فوری لخته خون (DVT) با سونوگرافی داپلر در منزل",
+    description: "علائم DVT، افراد در معرض خطر، مزایای سونوگرافی داپلر سیار و خدمات درمانی در منزل",
+    image: dopplerDVTImage,
+    link: "/articles/doppler-dvt",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1095,
+    title: "مکمل‌های بدنسازی و قلب؛ چرا ورزشکاران به هولتر قلب نیاز دارند؟",
+    description: "خطرات محرک‌ها و مکمل‌های ورزشی برای قلب، آریتمی‌های ناشی از مکمل، نقش هولتر و اکو در پایش ورزشکاران",
+    image: supplementsHeartImage,
+    link: "/articles/supplements-heart-athletes",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1094,
+    title: "آپنه خواب و خروپف؛ چرا توقف تنفس شبانه زنگ خطری برای ایست قلبی است؟",
+    description: "مکانیسم تخریب قلب توسط آپنه خواب، نقش هولتر فشار خون و قلب در تشخیص، خدمات پایش شبانه در منزل",
+    image: sleepApneaHeartImage,
+    link: "/articles/sleep-apnea-heart",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1093,
+    title: "بیماری قلبی در زنان؛ علائم فریبنده و ضرورت پایش تخصصی در منزل",
+    description: "راهنمای کامل بیماری قلبی در زنان: علائم متفاوت سکته قلبی در بانوان، عوامل خطر مثل یائسگی و بارداری، خدمات هولتر، اکو و نوار قلب در منزل",
+    image: womenHeartDiseaseImage,
+    link: "/articles/women-heart-disease",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1092,
+    title: "بازتوانی قلبی در منزل؛ چطور بعد از سکته یا جراحی به زندگی عادی برگردیم؟",
+    description: "راهنمای کامل بازتوانی قلبی: شروع تدریجی ورزش، نقش اکو و نوار قلب در تعیین ظرفیت قلب",
+    image: cardiacRehabHomeImage,
+    link: "/articles/cardiac-rehab-home",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1091,
+    title: "راهنمای کنترل فشار خون با دستگاه‌های خانگی؛ چرا اعداد گاهی اشتباه هستند؟",
+    description: "آموزش روش صحیح استفاده از فشارسنج دیجیتال، اشتباهات رایج در اندازه‌گیری، انتخاب دستگاه بازویی یا مچی، و خدمات کالیبره کردن دستگاه توسط متخصص قلب در منزل",
+    image: bloodPressureReadingsImage,
+    link: "/articles/blood-pressure-readings",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
+  {
+    id: 1090,
+    title: "دیابت و قلب؛ چرا بیماران دیابتی باید بیش از دیگران مراقب قلب خود باشند؟",
+    description: "راهنمای کامل ارتباط دیابت و بیماری‌های قلبی: سکته قلبی خاموش، تصلب شرایین در دیابت، چک‌آپ قلبی با اکو و نوار قلب در منزل",
+    image: diabetesHeartImage,
+    link: "/articles/diabetes-heart",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1089,
+    title: "بیماری‌های دریچه‌ای قلب؛ از تشخیص تا مراقبت‌های تخصصی در منزل",
+    description: "راهنمای کامل بیماری‌های دریچه‌ای قلب: تنگی و نارسایی دریچه، علائم هشداردهنده، تشخیص با اکو در منزل و مراقبت از دریچه‌های مصنوعی",
+    image: heartValveDiseaseImage,
+    link: "/articles/heart-valve-disease",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1088,
+    title: "تکنولوژی در خدمت سلامت؛ آیا دقت اکو و نوار قلب در منزل با بیمارستان برابر است؟",
+    description: "مقایسه فنی تجهیزات پورتابل اکو و نوار قلب با دستگاه‌های ثابت بیمارستانی و بررسی استانداردهای FDA و CE",
+    image: echoSafetyHomeImage,
+    link: "/articles/portable-device-accuracy",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1087,
+    title: "افت فشار خون و تپش قلب بعد از غذا (Postprandial Hypotension)؛ پدیده‌ای شایع در سالمندان",
+    description: "راهنمای کامل افت فشار خون بعد از غذا: علائم، علل، تشخیص در منزل و راهکارهای عملی برای سالمندان",
+    image: postprandialHypotensionImage,
+    link: "/articles/postprandial-hypotension",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1086,
+    title: "آب آوردن ریه (ادم ریوی)؛ وقتی تنگی نفس به یک وضعیت اورژانسی تبدیل می‌شود",
+    description: "راهنمای کامل ادم ریوی: علائم هشداردهنده، علل قلبی، تشخیص با اکو و نوار قلب در منزل و درمان فوری",
+    image: pulmonaryEdemaImage,
+    link: "/articles/pulmonary-edema",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1085,
+    title: "تاییدیه قلب قبل از جراحی؛ چرا و چگونه؟",
+    description: "راهنمای کامل ارزیابی قلبی قبل از جراحی: نوار قلب، اکو و صدور گواهی تاییدیه در منزل برای جراحی‌های مختلف",
+    image: preoperativeCardiacImage,
+    link: "/articles/preoperative-cardiac-evaluation",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1084,
+    title: "فشار خون مقاوم به درمان؛ وقتی قرص‌ها جواب نمی‌دهند",
+    description: "راهنمای کامل فشار خون مقاوم: علل، تداخلات دارویی، آپنه خواب و خدمات تشخیصی اکو و هولتر در منزل",
+    image: resistantHypertensionImage,
+    link: "/articles/resistant-hypertension",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1083,
+    title: "مراقبت‌های حیاتی پس از ترخیص از CCU؛ هفته اول، پل پیروزی بر بیماری",
+    description: "راهنمای گام‌به‌گام مراقبت‌های منزل پس از ترخیص از بخش مراقبت‌های ویژه قلبی شامل مدیریت دارویی، پایش علائم و خدمات در منزل",
+    image: postCCUCareImage,
+    link: "/articles/post-ccu-care",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1082,
+    title: "سکته قلبی خاموش؛ وقتی قلب بدون فریاد آسیب می‌بیند",
+    description: "راهنمای جامع سکته قلبی خاموش (Silent Ischemia): مکانیسم، علائم پنهان، افراد در معرض خطر و خدمات تشخیص در منزل",
+    image: silentHeartAttackImage,
+    link: "/articles/silent-heart-attack",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  }
+];
+
+/**
+ * گرفتن جدیدترین مقالات برای صفحه اصلی
+ * @param count تعداد مقالات
+ * @returns آرایه‌ای از جدیدترین مقالات
+ */
+export const getLatestArticles = (count: number = 6): ArticleData[] => {
+  return allArticles.slice(0, count);
+};
+
+/**
+ * گرفتن بالاترین ID موجود برای اضافه کردن مقاله جدید
+ */
+export const getNextArticleId = (): number => {
+  const maxId = Math.max(...allArticles.map(a => a.id));
+  return maxId + 1;
+};
