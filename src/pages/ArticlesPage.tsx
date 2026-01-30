@@ -195,6 +195,7 @@ import dopplerDVTImage from "@/assets/doppler-ultrasound-dvt.jpg";
 import abdominalUltrasoundImage from "@/assets/abdominal-ultrasound-home.jpg";
 import urologyUltrasoundImage from "@/assets/urology-ultrasound-home.jpg";
 import guillainBarreImage from "@/assets/guillain-barre-home-care.jpg";
+import bellsPalsyImage from "@/assets/bells-palsy-home-care.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -497,6 +498,15 @@ const ArticlesPage = () => {
       link: "/articles/portable-device-accuracy",
       category: "قلب و عروق",
       date: "۱۴۰۳/۱۱/۱۰"
+    },
+    {
+      id: 1100,
+      title: "فلج بلز (Bell's Palsy): تفاوت با سکته مغزی، علائم و درمان در منزل",
+      description: "راهنمای جامع فلج بلز: تشخیص تفریقی با سکته مغزی، نقش هولتر فشار خون و نوار قلب در منزل",
+      image: bellsPalsyImage,
+      link: "/articles/bells-palsy",
+      category: "سلامت عمومی",
+      date: "۱۴۰۴/۱۱/۱۱"
     },
     {
       id: 1099,
