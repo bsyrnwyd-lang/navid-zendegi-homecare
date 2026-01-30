@@ -1,67 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Main Pages - High Priority -->
   <url>
     <loc>https://navidzendegi.com/</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/logo.jpg</image:loc>
+      <image:title>نوید زندگی - پزشک در منزل تهران</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://navidzendegi.com/cardiology</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/cardiology-home-visit.jpg</image:loc>
+      <image:title>متخصص قلب در منزل تهران</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://navidzendegi.com/services/holter</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/holter-monitoring.jpg</image:loc>
+      <image:title>هولتر قلب و فشار خون در منزل</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://navidzendegi.com/general-doctor</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://navidzendegi.com/services/specialist</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://navidzendegi.com/services/internal</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://navidzendegi.com/about</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://navidzendegi.com/pricing</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://navidzendegi.com/contact</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://navidzendegi.com/collaboration</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://navidzendegi.com/articles</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <priority>0.9</priority>
     <changefreq>daily</changefreq>
   </url>
-  
-  <!-- Service Pages -->
   <url>
     <loc>https://navidzendegi.com/services/specialist</loc>
     <lastmod>2024-01-15</lastmod>

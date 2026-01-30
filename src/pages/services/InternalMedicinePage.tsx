@@ -3,18 +3,40 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import PricingInfo from "@/components/PricingInfo";
+import SEOSchema from "@/components/SEOSchema";
+import InternalLinks, { cardioLinks, generalLinks, diagnosticLinks } from "@/components/InternalLinks";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import internalImage from "@/assets/internal-medicine.jpg";
 
 const InternalMedicinePage = () => {
+  const serviceLinks = [
+    ...cardioLinks.slice(0, 3),
+    ...generalLinks.filter(l => l.to !== "/services/internal"),
+    ...diagnosticLinks.slice(0, 2),
+  ];
+
+  const faqs = [
+    { question: "متخصص داخلی چه بیماری‌هایی را درمان می‌کند؟", answer: "متخصص داخلی بیماری‌های مزمن مثل دیابت، فشار خون، مشکلات تیروئید، بیماری‌های گوارشی و تنفسی را تشخیص و درمان می‌کند." },
+    { question: "هزینه ویزیت متخصص داخلی در منزل چقدر است؟", answer: "هزینه ویزیت متخصص داخلی در منزل بسته به منطقه و ساعت متفاوت است. برای اطلاع از تعرفه دقیق با شماره ۰۹۳۸۶۱۱۷۹۱۲ تماس بگیرید." },
+    { question: "آیا آزمایش خون هم در منزل انجام می‌شود؟", answer: "بله، همراه با ویزیت متخصص داخلی امکان نمونه‌گیری و انجام آزمایش خون در منزل وجود دارد." },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="ویزیت متخصص داخلی در منزل تهران | دکتر داخلی برای بیماری‌های مزمن | نوید زندگی"
-        description="اعزام فوری متخصص داخلی در منزل تهران برای کنترل و درمان بیماری‌هایی چون دیابت، فشار خون، مشکلات گوارشی و تیروئید. مراقبت‌های کامل بیماری‌های داخلی در خانه."
-        keywords="متخصص داخلی در منزل، دکتر داخلی در تهران، ویزیت داخلی منزل، درمان دیابت در خانه، کنترل فشار خون، بیماری‌های مزمن، اختلالات تیروئید"
-        canonical="https://navidzendegi.ir/services/internal-medicine"
+        title="ویزیت متخصص داخلی در منزل تهران | نوید زندگی"
+        description="اعزام فوری متخصص داخلی در منزل تهران. کنترل دیابت، فشار خون، مشکلات گوارشی و تیروئید. آزمایش در منزل. تماس: ۰۹۳۸۶۱۱۷۹۱۲"
+        keywords="متخصص داخلی در منزل، دکتر داخلی تهران، ویزیت داخلی منزل، درمان دیابت، کنترل فشار خون"
+        canonical="https://navidzendegi.com/services/internal"
       />
+      <SEOSchema 
+        type="service"
+        serviceName="ویزیت متخصص داخلی در منزل تهران"
+        serviceDescription="اعزام فوری متخصص داخلی در منزل تهران برای کنترل و درمان بیماری‌های مزمن"
+        areaServed="تهران"
+      />
+      <SEOSchema type="faq" faqs={faqs} />
       <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero Section */}
@@ -119,6 +141,26 @@ const InternalMedicinePage = () => {
               <Phone className="ml-2 h-6 w-6" />
               تماس: 09386117912
             </a>
+          </div>
+        </section>
+
+        {/* Internal Links Section */}
+        <section className="medical-section">
+          <div className="container mx-auto max-w-4xl">
+            <InternalLinks 
+              title="خدمات مرتبط در منزل" 
+              links={serviceLinks}
+            />
+            
+            <div className="mt-8 p-6 bg-muted/30 rounded-lg">
+              <h3 className="text-lg font-semibold mb-4">مقالات مرتبط</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <li><Link to="/articles/diabetes" className="text-primary hover:underline text-sm">دیابت و کنترل قند خون</Link></li>
+                <li><Link to="/articles/high-blood-pressure" className="text-primary hover:underline text-sm">فشار خون بالا</Link></li>
+                <li><Link to="/articles/cholesterol-test" className="text-primary hover:underline text-sm">آزمایش کلسترول</Link></li>
+                <li><Link to="/articles/vitamins-health" className="text-primary hover:underline text-sm">ویتامین‌ها و سلامتی</Link></li>
+              </ul>
+            </div>
           </div>
         </section>
 
