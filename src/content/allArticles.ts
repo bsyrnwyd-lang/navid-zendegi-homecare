@@ -5,7 +5,7 @@
  * صفحه اصلی و صفحه مقالات خودکار آپدیت می‌شوند
  * 
  * نکته مهم: ID مقاله جدید باید بیشتر از بالاترین ID موجود باشد
- * در حال حاضر بالاترین ID: 1105
+ * در حال حاضر بالاترین ID: 1106
  */
 
 // Import all article images
@@ -33,6 +33,7 @@ import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
 import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
 import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 import sildenfilTadalafilImage from "@/assets/sildenafil-tadalafil-article.jpg";
+import angiographyHistoryImage from "@/assets/angiography-history-technology.jpg";
 
 export interface ArticleData {
   id: number;
@@ -49,12 +50,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1105) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1106) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1106,
+    title: "آنژیوگرافی؛ سفر به اعماق رگ‌ها (تاریخچه، تکنولوژی و شیوه‌ها)",
+    description: "تاریخچه کشف آنژیوگرافی از ورنر فورسمن تا امروز، دستگاه سی‌آرم و کت‌لب، مراحل انجام و نقش اکو و هولتر در پایش قبل و بعد از آن",
+    image: angiographyHistoryImage,
+    link: "/articles/angiography-history",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
   {
     id: 1105,
     title: "سیلدنافیل و تادالافیل؛ از آزمایشگاه‌های قلب تا اتاق خواب",
