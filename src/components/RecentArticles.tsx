@@ -4,80 +4,119 @@ import { ArrowLeft, Calendar } from "lucide-react";
 import { useMemo } from "react";
 import { extraArticles } from "@/content/articles-extra";
 
-// Import images for main articles
-import liverEnzymesImage from "@/assets/liver-enzymes-test.jpg";
-import sodiumPotassiumImage from "@/assets/sodium-potassium-balance.jpg";
+// Import images for latest articles
+import cardiacRehabHomeImage from "@/assets/cardiac-rehab-home.jpg";
 import bloodPressureReadingsImage from "@/assets/blood-pressure-readings.jpg";
-import captoprilImage from "@/assets/captopril-medication.jpg";
-import itraconazoleImage from "@/assets/itraconazole-medication.jpg";
-import chestPainDiagnosisImage from "@/assets/chest-pain-diagnosis.jpg";
+import diabetesHeartImage from "@/assets/diabetes-heart-connection.jpg";
+import heartValveDiseaseImage from "@/assets/heart-valve-disease.jpg";
+import echoSafetyHomeImage from "@/assets/echo-safety-home.jpg";
+import postprandialHypotensionImage from "@/assets/postprandial-hypotension.jpg";
+import pulmonaryEdemaImage from "@/assets/pulmonary-edema.jpg";
+import preoperativeCardiacImage from "@/assets/preoperative-cardiac-evaluation.jpg";
+import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
+import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
+import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 
-// تاریخ امروز به شمسی
-const getTodayPersianDate = (): string => {
-  const today = new Date();
-  const formatter = new Intl.DateTimeFormat('fa-IR', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit'
-  });
-  return formatter.format(today).replace(/\//g, '/');
-};
-
-// مقالات اصلی با تاریخ
+// مقالات اصلی با ID بالا - به‌روزترین مقالات
 const mainArticles = [
   {
-    id: 1069,
-    title: "تفسیر کامل آنزیم‌های کبدی؛ ALT، AST، ALP و GGT",
-    description: "راهنمای علمی تفسیر آنزیم‌های کبدی در آزمایش خون",
-    image: liverEnzymesImage,
-    link: "/articles/liver-enzymes",
-    category: "آزمایشگاه",
-    date: "۱۴۰۴/۱۰/۱۲"
+    id: 1092,
+    title: "بازتوانی قلبی در منزل؛ چطور بعد از سکته یا جراحی به زندگی عادی برگردیم؟",
+    description: "راهنمای کامل بازتوانی قلبی: شروع تدریجی ورزش، نقش اکو و نوار قلب در تعیین ظرفیت قلب",
+    image: cardiacRehabHomeImage,
+    link: "/articles/cardiac-rehab-home",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
   },
   {
-    id: 1068,
-    title: "نمک یا پتاسیم؛ کدام فرمانروای فشار خون شماست؟",
-    description: "راهنمای علمی تأثیر سدیم و پتاسیم بر فشار خون",
-    image: sodiumPotassiumImage,
-    link: "/articles/sodium-potassium",
-    category: "تغذیه",
-    date: "۱۴۰۴/۱۰/۱۱"
-  },
-  {
-    id: 1067,
-    title: "فشار خون سیستولیک و دیاستولیک؛ تفاوت عدد اول و دوم",
-    description: "راهنمای کامل تفسیر اعداد فشار خون",
+    id: 1091,
+    title: "راهنمای کنترل فشار خون با دستگاه‌های خانگی؛ چرا اعداد گاهی اشتباه هستند؟",
+    description: "آموزش روش صحیح استفاده از فشارسنج دیجیتال و کالیبره کردن دستگاه توسط متخصص",
     image: bloodPressureReadingsImage,
-    link: "/articles/systolic-diastolic",
+    link: "/articles/blood-pressure-readings",
     category: "قلب و عروق",
-    date: "۱۴۰۴/۱۰/۱۰"
+    date: "۱۴۰۴/۱۱/۱۱"
   },
   {
-    id: 1066,
-    title: "داروی کاپتوپریل؛ کنترل فشار خون و نارسایی قلبی",
-    description: "راهنمای کامل داروی کاپتوپریل و عوارض آن",
-    image: captoprilImage,
-    link: "/articles/captopril",
-    category: "دارو",
-    date: "۱۴۰۴/۱۰/۰۹"
-  },
-  {
-    id: 1065,
-    title: "داروی ایتراکونازول؛ کاربردها، عوارض و نکات حیاتی",
-    description: "راهنمای کامل داروی ایتراکونازول",
-    image: itraconazoleImage,
-    link: "/articles/itraconazole",
-    category: "دارو",
-    date: "۱۴۰۴/۱۰/۰۸"
-  },
-  {
-    id: 1064,
-    title: "تفاوت درد قلبی، عضلانی و عصبی قفسه سینه",
-    description: "راهنمای تشخیص فوری انواع درد قفسه سینه",
-    image: chestPainDiagnosisImage,
-    link: "/articles/chest-pain-diagnosis",
+    id: 1090,
+    title: "دیابت و قلب؛ چرا بیماران دیابتی باید بیش از دیگران مراقب قلب خود باشند؟",
+    description: "سکته قلبی خاموش در دیابت، تصلب شرایین و چک‌آپ قلبی با اکو و نوار قلب در منزل",
+    image: diabetesHeartImage,
+    link: "/articles/diabetes-heart",
     category: "قلب و عروق",
-    date: "۱۴۰۴/۱۰/۰۷"
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1089,
+    title: "بیماری‌های دریچه‌ای قلب؛ از تشخیص تا مراقبت‌های تخصصی در منزل",
+    description: "تنگی و نارسایی دریچه، علائم هشداردهنده و تشخیص با اکو در منزل",
+    image: heartValveDiseaseImage,
+    link: "/articles/heart-valve-disease",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1088,
+    title: "دقت اکو و نوار قلب در منزل با بیمارستان برابر است؟",
+    description: "مقایسه فنی تجهیزات پورتابل با دستگاه‌های ثابت بیمارستانی و استانداردهای FDA",
+    image: echoSafetyHomeImage,
+    link: "/articles/portable-device-accuracy",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1087,
+    title: "افت فشار خون بعد از غذا؛ پدیده‌ای شایع در سالمندان",
+    description: "علائم، علل و تشخیص افت فشار خون پس از غذا در منزل",
+    image: postprandialHypotensionImage,
+    link: "/articles/postprandial-hypotension",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1086,
+    title: "آب آوردن ریه (ادم ریوی)؛ وقتی تنگی نفس اورژانسی می‌شود",
+    description: "علائم هشداردهنده ادم ریوی، علل قلبی و تشخیص با اکو در منزل",
+    image: pulmonaryEdemaImage,
+    link: "/articles/pulmonary-edema",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1085,
+    title: "تاییدیه قلب قبل از جراحی؛ چرا و چگونه؟",
+    description: "ارزیابی قلبی قبل از جراحی: نوار قلب، اکو و صدور گواهی تاییدیه در منزل",
+    image: preoperativeCardiacImage,
+    link: "/articles/preoperative-cardiac-evaluation",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1084,
+    title: "فشار خون مقاوم به درمان؛ وقتی داروها کار نمی‌کنند",
+    description: "علل فشار خون مقاوم، بررسی‌های تشخیصی و خدمات ویزیت متخصص در منزل",
+    image: resistantHypertensionImage,
+    link: "/articles/resistant-hypertension",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1083,
+    title: "مراقبت‌های تخصصی پس از ترخیص از CCU در منزل",
+    description: "خدمات ویزیت، اکو، نوار قلب و هولتر در منزل برای بیماران پس از ترخیص",
+    image: postCCUCareImage,
+    link: "/articles/post-ccu-care",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
+  },
+  {
+    id: 1082,
+    title: "سکته قلبی خاموش؛ وقتی قلب بی‌صدا آسیب می‌بیند",
+    description: "علائم سکته قلبی بدون درد و اهمیت چک‌آپ دوره‌ای با اکو و نوار قلب",
+    image: silentHeartAttackImage,
+    link: "/articles/silent-heart-attack",
+    category: "قلب و عروق",
+    date: "۱۴۰۳/۱۱/۱۰"
   }
 ];
 
@@ -89,7 +128,9 @@ const RecentArticles = () => {
     // حذف تکراری‌ها بر اساس لینک
     const uniqueMap = new Map<string, typeof allArticles[0]>();
     allArticles.forEach((article) => {
-      if (!uniqueMap.has(article.link)) {
+      // فقط مقاله با ID بالاتر را نگه دار
+      const existing = uniqueMap.get(article.link);
+      if (!existing || (article.id || 0) > (existing.id || 0)) {
         uniqueMap.set(article.link, article);
       }
     });
