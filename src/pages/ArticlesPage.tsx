@@ -197,6 +197,7 @@ import urologyUltrasoundImage from "@/assets/urology-ultrasound-home.jpg";
 import guillainBarreImage from "@/assets/guillain-barre-home-care.jpg";
 import bellsPalsyImage from "@/assets/bells-palsy-home-care.jpg";
 import osteosarcomaImage from "@/assets/osteosarcoma-home-care.jpg";
+import prostateVolumeImage from "@/assets/prostate-volume-ultrasound.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -401,6 +402,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1102,
+      title: "راهنمای جامع حجم نرمال پروستات؛ اعداد سونوگرافی چه معنایی دارند؟",
+      description: "حجم نرمال پروستات بر اساس سن، تفسیر BPH، ارتباط پروستات با قلب و عروق، سونوگرافی و اکو در منزل",
+      image: prostateVolumeImage,
+      link: "/articles/prostate-volume",
+      category: "سلامت عمومی",
+      date: "۱۴۰۴/۱۱/۱۱"
+    },
     {
       id: 1101,
       title: "استئوسارکوم؛ تشخیص، مراقبت‌های داخلی و پایش قلب در منزل",
