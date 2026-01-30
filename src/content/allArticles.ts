@@ -5,7 +5,7 @@
  * صفحه اصلی و صفحه مقالات خودکار آپدیت می‌شوند
  * 
  * نکته مهم: ID مقاله جدید باید بیشتر از بالاترین ID موجود باشد
- * در حال حاضر بالاترین ID: 1104
+ * در حال حاضر بالاترین ID: 1105
  */
 
 // Import all article images
@@ -32,6 +32,7 @@ import preoperativeCardiacImage from "@/assets/preoperative-cardiac-evaluation.j
 import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
 import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
 import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
+import sildenfilTadalafilImage from "@/assets/sildenafil-tadalafil-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -48,12 +49,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1104) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1105) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1105,
+    title: "سیلدنافیل و تادالافیل؛ از آزمایشگاه‌های قلب تا اتاق خواب",
+    description: "تاریخچه کشف ویاگرا و سیالیس، تفاوت‌های کلیدی، تداخلات خطرناک با نیترات‌ها و داروهای پروستات، نقش اکو و هولتر در پایش ایمنی",
+    image: sildenfilTadalafilImage,
+    link: "/articles/sildenafil-tadalafil",
+    category: "دارو",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
   {
     id: 1104,
     title: "عدد EF در اکو قلب چیست؟ تفسیر کسر تخلیه‌ای و معنای درصدهای آن",
