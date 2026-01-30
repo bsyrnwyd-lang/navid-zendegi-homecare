@@ -1096,4 +1096,14 @@
       <image:title>تداخلات دارویی قلب، پروستات و ناتوانی جنسی - مشاوره تخصصی در منزل</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://navidzendegi.com/articles/ejection-fraction</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://navidzendegi.com/assets/ef-ejection-fraction.jpg</image:loc>
+      <image:title>تفسیر عدد EF در اکو قلب - کسر تخلیه‌ای و نارسایی قلبی</image:title>
+    </image:image>
+  </url>
 </urlset>
