@@ -1,3 +1,6 @@
+# نوید زندگی - خدمات پزشکی در منزل
+# https://navidzendegi.com
+
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -16,6 +19,13 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
 User-agent: *
 Allow: /
 Crawl-delay: 2
@@ -23,14 +33,26 @@ Crawl-delay: 2
 # Disallow admin and sensitive areas
 Disallow: /admin/
 Disallow: /api/
-Disallow: *.json$
+Disallow: /*.json$
 Disallow: /src/
+Disallow: /_next/
+Disallow: /node_modules/
 
 # Allow important files
 Allow: /favicon.ico
 Allow: /logo.jpg
 Allow: /sitemap.xml
 Allow: /manifest.json
+Allow: /robots.txt
 
-# Sitemap location
+# Allow all article pages
+Allow: /articles/
+
+# Allow all service pages
+Allow: /services/
+
+# Sitemaps
 Sitemap: https://navidzendegi.com/sitemap.xml
+
+# Host preference
+Host: https://navidzendegi.com

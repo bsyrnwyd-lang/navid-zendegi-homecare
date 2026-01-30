@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, memo } from 'react';
+import { memo, useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -8,6 +8,8 @@ interface OptimizedImageProps {
   height?: number;
   priority?: boolean;
   placeholder?: 'blur' | 'empty';
+  aspectRatio?: string;
+  sizes?: string;
 }
 
 const OptimizedImage = memo(({ 
@@ -17,10 +19,13 @@ const OptimizedImage = memo(({
   width, 
   height, 
   priority = false,
-  placeholder = 'blur'
+  placeholder = 'blur',
+  aspectRatio,
+  sizes = '100vw'
 }: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
+  const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,7 +43,7 @@ const OptimizedImage = memo(({
       },
       { 
         threshold: 0.01,
-        rootMargin: '200px' // Load images 200px before they enter viewport
+        rootMargin: '300px' // Load images 300px before they enter viewport for smoother UX
       }
     );
 
@@ -53,6 +58,18 @@ const OptimizedImage = memo(({
     setIsLoaded(true);
   };
 
+  const handleError = () => {
+    setHasError(true);
+    setIsLoaded(true);
+  };
+
+  // Generate srcset for responsive images
+  const generateSrcSet = (src: string) => {
+    if (!src || src.startsWith('data:') || src.startsWith('blob:')) return undefined;
+    // For local assets, let the bundler handle optimization
+    return undefined;
+  };
+
   return (
     <div 
       ref={imgRef}
@@ -60,7 +77,7 @@ const OptimizedImage = memo(({
       style={{ 
         width: width ? `${width}px` : '100%', 
         height: height ? `${height}px` : 'auto',
-        aspectRatio: width && height ? `${width}/${height}` : undefined
+        aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined)
       }}
     >
       {/* Placeholder */}
@@ -71,8 +88,18 @@ const OptimizedImage = memo(({
         />
       )}
       
+      {/* Error state */}
+      {hasError && (
+        <div 
+          className={`absolute inset-0 bg-muted flex items-center justify-center ${className}`}
+          aria-hidden="true"
+        >
+          <span className="text-muted-foreground text-sm">تصویر بارگذاری نشد</span>
+        </div>
+      )}
+      
       {/* Actual image */}
-      {isInView && (
+      {isInView && !hasError && (
         <img
           src={src}
           alt={alt}
@@ -85,6 +112,9 @@ const OptimizedImage = memo(({
           decoding={priority ? 'sync' : 'async'}
           fetchPriority={priority ? 'high' : 'auto'}
           onLoad={handleLoad}
+          onError={handleError}
+          srcSet={generateSrcSet(src)}
+          sizes={sizes}
         />
       )}
     </div>
