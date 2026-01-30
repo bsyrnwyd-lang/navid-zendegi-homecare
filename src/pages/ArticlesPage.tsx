@@ -196,6 +196,7 @@ import abdominalUltrasoundImage from "@/assets/abdominal-ultrasound-home.jpg";
 import urologyUltrasoundImage from "@/assets/urology-ultrasound-home.jpg";
 import guillainBarreImage from "@/assets/guillain-barre-home-care.jpg";
 import bellsPalsyImage from "@/assets/bells-palsy-home-care.jpg";
+import osteosarcomaImage from "@/assets/osteosarcoma-home-care.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -400,6 +401,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1101,
+      title: "استئوسارکوم؛ تشخیص، مراقبت‌های داخلی و پایش قلب در منزل",
+      description: "مدیریت استئوسارکوم در منزل: پایش عوارض شیمی‌درمانی، اکوکاردیوگرافی برای سمیت قلبی، سونوگرافی داپلر",
+      image: osteosarcomaImage,
+      link: "/articles/osteosarcoma",
+      category: "سلامت عمومی",
+      date: "۱۴۰۴/۱۱/۱۱"
+    },
     {
       id: 1098,
       title: "مشکلات ادراری و پروستات در آقایان؛ تشخیص دقیق با سونوگرافی ارولوژی در منزل",
@@ -1963,7 +1973,7 @@ const ArticlesPage = () => {
     "تغذیه": ["تغذیه", "تغذیه و رژیم", "تغذیه و سلامت"],
     "بارداری": ["بارداری و زایمان", "بارداری", "سلامت مادر و کودک"],
     "دارو": ["دارو", "تغذیه و سلامت"],
-    "عمومی": ["عمومی", "درمان و سلامت", "محیط زیست و سلامت", "اورژانس پزشکی", "جراحی", "اورولوژی"],
+    "عمومی": ["عمومی", "سلامت عمومی", "درمان و سلامت", "محیط زیست و سلامت", "اورژانس پزشکی", "جراحی", "اورولوژی"],
   };
 
   const mainCategories = Object.keys(categoryMappings);
