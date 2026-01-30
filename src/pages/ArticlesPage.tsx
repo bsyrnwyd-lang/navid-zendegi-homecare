@@ -194,6 +194,7 @@ import supplementsHeartImage from "@/assets/supplements-heart-athletes.jpg";
 import dopplerDVTImage from "@/assets/doppler-ultrasound-dvt.jpg";
 import abdominalUltrasoundImage from "@/assets/abdominal-ultrasound-home.jpg";
 import urologyUltrasoundImage from "@/assets/urology-ultrasound-home.jpg";
+import guillainBarreImage from "@/assets/guillain-barre-home-care.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -496,6 +497,15 @@ const ArticlesPage = () => {
       link: "/articles/portable-device-accuracy",
       category: "قلب و عروق",
       date: "۱۴۰۳/۱۱/۱۰"
+    },
+    {
+      id: 1099,
+      title: "بیماری گیلن باره (Guillain-Barré): علائم، درمان و مراقبت در منزل",
+      description: "راهنمای جامع گیلن باره: از ضعف عضلانی تا پایش قلبی و عروقی در منزل. نقش هولتر، اکو و سونوگرافی داپلر",
+      image: guillainBarreImage,
+      link: "/articles/guillain-barre",
+      category: "سلامت عمومی",
+      date: "۱۴۰۴/۱۱/۱۱"
     },
     {
       id: 1087,
