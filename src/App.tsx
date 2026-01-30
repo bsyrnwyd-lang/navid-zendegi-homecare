@@ -229,6 +229,7 @@ const AbdominalUltrasoundHomePage = lazy(() => import("./pages/articles/Abdomina
 const UrologyUltrasoundHomePage = lazy(() => import("./pages/articles/UrologyUltrasoundHomePage"));
 const GuillainBarrePage = lazy(() => import("./pages/articles/GuillainBarrePage"));
 const BellsPalsyPage = lazy(() => import("./pages/articles/BellsPalsyPage"));
+const OsteosarcomaPage = lazy(() => import("./pages/articles/OsteosarcomaPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -485,6 +486,7 @@ const App = () => (
                        <Route path="/articles/urology-ultrasound-home" element={<UrologyUltrasoundHomePage />} />
                        <Route path="/articles/guillain-barre" element={<GuillainBarrePage />} />
                        <Route path="/articles/bells-palsy" element={<BellsPalsyPage />} />
+                       <Route path="/articles/osteosarcoma" element={<OsteosarcomaPage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
