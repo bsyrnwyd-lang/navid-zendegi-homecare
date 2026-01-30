@@ -191,6 +191,7 @@ import diabetesHeartImage from "@/assets/diabetes-heart-connection.jpg";
 import womenHeartDiseaseImage from "@/assets/women-heart-disease.jpg";
 import sleepApneaHeartImage from "@/assets/sleep-apnea-heart.jpg";
 import supplementsHeartImage from "@/assets/supplements-heart-athletes.jpg";
+import dopplerDVTImage from "@/assets/doppler-ultrasound-dvt.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -395,6 +396,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1096,
+      title: "ورم پا را جدی بگیرید؛ تشخیص فوری لخته خون (DVT) با سونوگرافی داپلر در منزل",
+      description: "علائم DVT، افراد در معرض خطر، مزایای سونوگرافی داپلر سیار و خدمات درمانی در منزل",
+      image: dopplerDVTImage,
+      link: "/articles/doppler-dvt",
+      category: "قلب و عروق",
+      date: "۱۴۰۴/۱۱/۱۱"
+    },
     {
       id: 1095,
       title: "مکمل‌های بدنسازی و قلب؛ چرا ورزشکاران به هولتر قلب نیاز دارند؟",
