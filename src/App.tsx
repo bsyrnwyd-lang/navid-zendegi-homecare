@@ -220,6 +220,7 @@ const PortableDeviceAccuracyPage = lazy(() => import("./pages/articles/PortableD
 const HeartValveDiseasePage = lazy(() => import("./pages/articles/HeartValveDiseasePage"));
 const DiabetesHeartPage = lazy(() => import("./pages/articles/DiabetesHeartPage"));
 const BloodPressureReadingsPage = lazy(() => import("./pages/articles/BloodPressureReadingsPage"));
+const CardiacRehabHomePage = lazy(() => import("./pages/articles/CardiacRehabHomePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -467,6 +468,7 @@ const App = () => (
                        <Route path="/articles/heart-valve-disease" element={<HeartValveDiseasePage />} />
                        <Route path="/articles/diabetes-heart" element={<DiabetesHeartPage />} />
                        <Route path="/articles/blood-pressure-readings" element={<BloodPressureReadingsPage />} />
+                       <Route path="/articles/cardiac-rehab-home" element={<CardiacRehabHomePage />} />
                 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
