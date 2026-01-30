@@ -188,6 +188,7 @@ import postprandialHypotensionImage from "@/assets/postprandial-hypotension.jpg"
 import echoSafetyHomeImage from "@/assets/echo-safety-home.jpg";
 import heartValveDiseaseImage from "@/assets/heart-valve-disease.jpg";
 import diabetesHeartImage from "@/assets/diabetes-heart-connection.jpg";
+import womenHeartDiseaseImage from "@/assets/women-heart-disease.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -393,9 +394,18 @@ const ArticlesPage = () => {
   
   const articles = [
     {
+      id: 1093,
+      title: "بیماری قلبی در زنان؛ علائم فریبنده و ضرورت پایش تخصصی در منزل",
+      description: "راهنمای کامل بیماری قلبی در زنان: علائم متفاوت سکته قلبی در بانوان، عوامل خطر مثل یائسگی و بارداری، خدمات هولتر، اکو و نوار قلب در منزل",
+      image: womenHeartDiseaseImage,
+      link: "/articles/women-heart-disease",
+      category: "قلب و عروق",
+      date: "۱۴۰۴/۱۱/۱۱"
+    },
+    {
       id: 1092,
       title: "بازتوانی قلبی در منزل؛ چطور بعد از سکته یا جراحی به زندگی عادی برگردیم؟",
-      description: "راهنمای کامل بازتوانی قلبی در منزل: شروع تدریجی ورزش بعد از سکته قلبی، نقش اکو و نوار قلب در تعیین ظرفیت قلب، علائم هشداردهنده و خدمات نوید زندگی",
+      description: "راهنمای کامل بازتوانی قلبی: شروع تدریجی ورزش، نقش اکو و نوار قلب در تعیین ظرفیت قلب",
       image: cardiacRehabImage,
       link: "/articles/cardiac-rehab-home",
       category: "قلب و عروق",

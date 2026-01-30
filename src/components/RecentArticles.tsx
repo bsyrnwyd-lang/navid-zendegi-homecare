@@ -5,20 +5,24 @@ import { useMemo } from "react";
 import { extraArticles } from "@/content/articles-extra";
 
 // Import images for latest articles
+import womenHeartDiseaseImage from "@/assets/women-heart-disease.jpg";
 import cardiacRehabHomeImage from "@/assets/cardiac-rehab-home.jpg";
 import bloodPressureReadingsImage from "@/assets/blood-pressure-readings.jpg";
 import diabetesHeartImage from "@/assets/diabetes-heart-connection.jpg";
 import heartValveDiseaseImage from "@/assets/heart-valve-disease.jpg";
 import echoSafetyHomeImage from "@/assets/echo-safety-home.jpg";
-import postprandialHypotensionImage from "@/assets/postprandial-hypotension.jpg";
-import pulmonaryEdemaImage from "@/assets/pulmonary-edema.jpg";
-import preoperativeCardiacImage from "@/assets/preoperative-cardiac-evaluation.jpg";
-import resistantHypertensionImage from "@/assets/resistant-hypertension.jpg";
-import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
-import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 
 // مقالات اصلی با ID بالا - به‌روزترین مقالات
 const mainArticles = [
+  {
+    id: 1093,
+    title: "بیماری قلبی در زنان؛ علائم فریبنده و ضرورت پایش تخصصی در منزل",
+    description: "علائم متفاوت سکته قلبی در بانوان، عوامل خطر مثل یائسگی و بارداری",
+    image: womenHeartDiseaseImage,
+    link: "/articles/women-heart-disease",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
   {
     id: 1092,
     title: "بازتوانی قلبی در منزل؛ چطور بعد از سکته یا جراحی به زندگی عادی برگردیم؟",
@@ -61,60 +65,6 @@ const mainArticles = [
     description: "مقایسه فنی تجهیزات پورتابل با دستگاه‌های ثابت بیمارستانی و استانداردهای FDA",
     image: echoSafetyHomeImage,
     link: "/articles/portable-device-accuracy",
-    category: "قلب و عروق",
-    date: "۱۴۰۳/۱۱/۱۰"
-  },
-  {
-    id: 1087,
-    title: "افت فشار خون بعد از غذا؛ پدیده‌ای شایع در سالمندان",
-    description: "علائم، علل و تشخیص افت فشار خون پس از غذا در منزل",
-    image: postprandialHypotensionImage,
-    link: "/articles/postprandial-hypotension",
-    category: "قلب و عروق",
-    date: "۱۴۰۳/۱۱/۱۰"
-  },
-  {
-    id: 1086,
-    title: "آب آوردن ریه (ادم ریوی)؛ وقتی تنگی نفس اورژانسی می‌شود",
-    description: "علائم هشداردهنده ادم ریوی، علل قلبی و تشخیص با اکو در منزل",
-    image: pulmonaryEdemaImage,
-    link: "/articles/pulmonary-edema",
-    category: "قلب و عروق",
-    date: "۱۴۰۳/۱۱/۱۰"
-  },
-  {
-    id: 1085,
-    title: "تاییدیه قلب قبل از جراحی؛ چرا و چگونه؟",
-    description: "ارزیابی قلبی قبل از جراحی: نوار قلب، اکو و صدور گواهی تاییدیه در منزل",
-    image: preoperativeCardiacImage,
-    link: "/articles/preoperative-cardiac-evaluation",
-    category: "قلب و عروق",
-    date: "۱۴۰۳/۱۱/۱۰"
-  },
-  {
-    id: 1084,
-    title: "فشار خون مقاوم به درمان؛ وقتی داروها کار نمی‌کنند",
-    description: "علل فشار خون مقاوم، بررسی‌های تشخیصی و خدمات ویزیت متخصص در منزل",
-    image: resistantHypertensionImage,
-    link: "/articles/resistant-hypertension",
-    category: "قلب و عروق",
-    date: "۱۴۰۳/۱۱/۱۰"
-  },
-  {
-    id: 1083,
-    title: "مراقبت‌های تخصصی پس از ترخیص از CCU در منزل",
-    description: "خدمات ویزیت، اکو، نوار قلب و هولتر در منزل برای بیماران پس از ترخیص",
-    image: postCCUCareImage,
-    link: "/articles/post-ccu-care",
-    category: "قلب و عروق",
-    date: "۱۴۰۳/۱۱/۱۰"
-  },
-  {
-    id: 1082,
-    title: "سکته قلبی خاموش؛ وقتی قلب بی‌صدا آسیب می‌بیند",
-    description: "علائم سکته قلبی بدون درد و اهمیت چک‌آپ دوره‌ای با اکو و نوار قلب",
-    image: silentHeartAttackImage,
-    link: "/articles/silent-heart-attack",
     category: "قلب و عروق",
     date: "۱۴۰۳/۱۱/۱۰"
   }
