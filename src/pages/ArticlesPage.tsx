@@ -189,6 +189,7 @@ import echoSafetyHomeImage from "@/assets/echo-safety-home.jpg";
 import heartValveDiseaseImage from "@/assets/heart-valve-disease.jpg";
 import diabetesHeartImage from "@/assets/diabetes-heart-connection.jpg";
 import womenHeartDiseaseImage from "@/assets/women-heart-disease.jpg";
+import sleepApneaHeartImage from "@/assets/sleep-apnea-heart.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -393,6 +394,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1094,
+      title: "آپنه خواب و خروپف؛ چرا توقف تنفس شبانه زنگ خطری برای ایست قلبی است؟",
+      description: "مکانیسم تخریب قلب توسط آپنه خواب، نقش هولتر فشار خون و قلب در تشخیص، خدمات پایش شبانه در منزل",
+      image: sleepApneaHeartImage,
+      link: "/articles/sleep-apnea-heart",
+      category: "قلب و عروق",
+      date: "۱۴۰۴/۱۱/۱۱"
+    },
     {
       id: 1093,
       title: "بیماری قلبی در زنان؛ علائم فریبنده و ضرورت پایش تخصصی در منزل",
