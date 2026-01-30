@@ -5,7 +5,7 @@
  * صفحه اصلی و صفحه مقالات خودکار آپدیت می‌شوند
  * 
  * نکته مهم: ID مقاله جدید باید بیشتر از بالاترین ID موجود باشد
- * در حال حاضر بالاترین ID: 1106
+ * در حال حاضر بالاترین ID: 1107
  */
 
 // Import all article images
@@ -34,6 +34,7 @@ import postCCUCareImage from "@/assets/post-ccu-care-home.jpg";
 import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 import sildenfilTadalafilImage from "@/assets/sildenafil-tadalafil-article.jpg";
 import angiographyHistoryImage from "@/assets/angiography-history-technology.jpg";
+import angiographyVsAngioplastyImage from "@/assets/angiography-vs-angioplasty.jpg";
 
 export interface ArticleData {
   id: number;
@@ -50,12 +51,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1106) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1107) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1107,
+    title: "تفاوت آنژیوگرافی و آنژیوپلاستی؛ تشخیص در مقابل درمان",
+    description: "تفاوت آنژیوگرافی (تشخیصی) و آنژیوپلاستی (فنرگذاری)، استنت قلب چیست، مراقبت‌های قبل و بعد با اکو و هولتر در منزل",
+    image: angiographyVsAngioplastyImage,
+    link: "/articles/angiography-vs-angioplasty",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
   {
     id: 1106,
     title: "آنژیوگرافی؛ سفر به اعماق رگ‌ها (تاریخچه، تکنولوژی و شیوه‌ها)",
