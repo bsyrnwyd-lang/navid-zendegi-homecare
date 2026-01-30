@@ -8,8 +8,8 @@ import { Phone, AlertTriangle } from "lucide-react";
 import prostateVolumeImage from "@/assets/prostate-volume-ultrasound.jpg";
 
 // Related article images
-import echoImage from "@/assets/echo-article.jpg";
-import holterImage from "@/assets/holter-article.jpg";
+import echoImage from "@/assets/echo-home-service.jpg";
+import holterImage from "@/assets/holter-home-service.jpg";
 import urologyImage from "@/assets/urology.jpg";
 
 const ProstateVolumePage = () => {
