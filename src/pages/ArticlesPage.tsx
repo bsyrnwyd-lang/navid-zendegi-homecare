@@ -193,6 +193,7 @@ import sleepApneaHeartImage from "@/assets/sleep-apnea-heart.jpg";
 import supplementsHeartImage from "@/assets/supplements-heart-athletes.jpg";
 import dopplerDVTImage from "@/assets/doppler-ultrasound-dvt.jpg";
 import abdominalUltrasoundImage from "@/assets/abdominal-ultrasound-home.jpg";
+import urologyUltrasoundImage from "@/assets/urology-ultrasound-home.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -397,6 +398,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1098,
+      title: "مشکلات ادراری و پروستات در آقایان؛ تشخیص دقیق با سونوگرافی ارولوژی در منزل",
+      description: "سونوگرافی تخصصی ارولوژی در منزل برای تشخیص بزرگی پروستات، سنگ کلیه و مثانه و بررسی باقی‌مانده ادرار",
+      image: urologyUltrasoundImage,
+      link: "/articles/urology-ultrasound-home",
+      category: "عمومی",
+      date: "۱۴۰۴/۰۵/۱۰"
+    },
     {
       id: 1097,
       title: "دردهای شکمی در سالمندان؛ تشخیص فوری سنگ کلیه و کیسه صفرا با سونوگرافی در منزل",
