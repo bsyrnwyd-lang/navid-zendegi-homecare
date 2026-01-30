@@ -198,6 +198,7 @@ import guillainBarreImage from "@/assets/guillain-barre-home-care.jpg";
 import bellsPalsyImage from "@/assets/bells-palsy-home-care.jpg";
 import osteosarcomaImage from "@/assets/osteosarcoma-home-care.jpg";
 import prostateVolumeImage from "@/assets/prostate-volume-ultrasound.jpg";
+import drugInteractionsHeartProstateImage from "@/assets/drug-interactions-heart-prostate.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -402,6 +403,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1103,
+      title: "تداخلات دارویی خطرناک؛ مثلث قلب، پروستات و ناتوانی جنسی",
+      description: "خطرات ترکیب ویاگرا با نیترات‌های قلبی، تداخل داروهای پروستات با فشار خون، نقش هولتر و اکو در پایش ایمنی دارو",
+      image: drugInteractionsHeartProstateImage,
+      link: "/articles/drug-interactions-heart-prostate",
+      category: "دارو",
+      date: "۱۴۰۴/۱۱/۱۱"
+    },
     {
       id: 1102,
       title: "راهنمای جامع حجم نرمال پروستات؛ اعداد سونوگرافی چه معنایی دارند؟",
