@@ -192,6 +192,7 @@ import womenHeartDiseaseImage from "@/assets/women-heart-disease.jpg";
 import sleepApneaHeartImage from "@/assets/sleep-apnea-heart.jpg";
 import supplementsHeartImage from "@/assets/supplements-heart-athletes.jpg";
 import dopplerDVTImage from "@/assets/doppler-ultrasound-dvt.jpg";
+import abdominalUltrasoundImage from "@/assets/abdominal-ultrasound-home.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -396,6 +397,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1097,
+      title: "دردهای شکمی در سالمندان؛ تشخیص فوری سنگ کلیه و کیسه صفرا با سونوگرافی در منزل",
+      description: "سونوگرافی شکم و لگن در منزل: تشخیص سنگ کلیه، سنگ کیسه صفرا، کبد چرب و بررسی آئورت شکمی",
+      image: abdominalUltrasoundImage,
+      link: "/articles/abdominal-ultrasound-home",
+      category: "عمومی",
+      date: "۱۴۰۴/۱۱/۱۱"
+    },
     {
       id: 1096,
       title: "ورم پا را جدی بگیرید؛ تشخیص فوری لخته خون (DVT) با سونوگرافی داپلر در منزل",
