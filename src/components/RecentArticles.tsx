@@ -1,95 +1,11 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar } from "lucide-react";
-import { useMemo } from "react";
-import { extraArticles } from "@/content/articles-extra";
-
-// Import images for latest articles
-import womenHeartDiseaseImage from "@/assets/women-heart-disease.jpg";
-import cardiacRehabHomeImage from "@/assets/cardiac-rehab-home.jpg";
-import bloodPressureReadingsImage from "@/assets/blood-pressure-readings.jpg";
-import diabetesHeartImage from "@/assets/diabetes-heart-connection.jpg";
-import heartValveDiseaseImage from "@/assets/heart-valve-disease.jpg";
-import echoSafetyHomeImage from "@/assets/echo-safety-home.jpg";
-
-// مقالات اصلی با ID بالا - به‌روزترین مقالات
-const mainArticles = [
-  {
-    id: 1093,
-    title: "بیماری قلبی در زنان؛ علائم فریبنده و ضرورت پایش تخصصی در منزل",
-    description: "علائم متفاوت سکته قلبی در بانوان، عوامل خطر مثل یائسگی و بارداری",
-    image: womenHeartDiseaseImage,
-    link: "/articles/women-heart-disease",
-    category: "قلب و عروق",
-    date: "۱۴۰۴/۱۱/۱۱"
-  },
-  {
-    id: 1092,
-    title: "بازتوانی قلبی در منزل؛ چطور بعد از سکته یا جراحی به زندگی عادی برگردیم؟",
-    description: "راهنمای کامل بازتوانی قلبی: شروع تدریجی ورزش، نقش اکو و نوار قلب در تعیین ظرفیت قلب",
-    image: cardiacRehabHomeImage,
-    link: "/articles/cardiac-rehab-home",
-    category: "قلب و عروق",
-    date: "۱۴۰۴/۱۱/۱۱"
-  },
-  {
-    id: 1091,
-    title: "راهنمای کنترل فشار خون با دستگاه‌های خانگی؛ چرا اعداد گاهی اشتباه هستند؟",
-    description: "آموزش روش صحیح استفاده از فشارسنج دیجیتال و کالیبره کردن دستگاه توسط متخصص",
-    image: bloodPressureReadingsImage,
-    link: "/articles/blood-pressure-readings",
-    category: "قلب و عروق",
-    date: "۱۴۰۴/۱۱/۱۱"
-  },
-  {
-    id: 1090,
-    title: "دیابت و قلب؛ چرا بیماران دیابتی باید بیش از دیگران مراقب قلب خود باشند؟",
-    description: "سکته قلبی خاموش در دیابت، تصلب شرایین و چک‌آپ قلبی با اکو و نوار قلب در منزل",
-    image: diabetesHeartImage,
-    link: "/articles/diabetes-heart",
-    category: "قلب و عروق",
-    date: "۱۴۰۳/۱۱/۱۰"
-  },
-  {
-    id: 1089,
-    title: "بیماری‌های دریچه‌ای قلب؛ از تشخیص تا مراقبت‌های تخصصی در منزل",
-    description: "تنگی و نارسایی دریچه، علائم هشداردهنده و تشخیص با اکو در منزل",
-    image: heartValveDiseaseImage,
-    link: "/articles/heart-valve-disease",
-    category: "قلب و عروق",
-    date: "۱۴۰۳/۱۱/۱۰"
-  },
-  {
-    id: 1088,
-    title: "دقت اکو و نوار قلب در منزل با بیمارستان برابر است؟",
-    description: "مقایسه فنی تجهیزات پورتابل با دستگاه‌های ثابت بیمارستانی و استانداردهای FDA",
-    image: echoSafetyHomeImage,
-    link: "/articles/portable-device-accuracy",
-    category: "قلب و عروق",
-    date: "۱۴۰۳/۱۱/۱۰"
-  }
-];
+import { getLatestArticles } from "@/content/allArticles";
 
 const RecentArticles = () => {
-  // ترکیب و مرتب‌سازی خودکار مقالات بر اساس ID (جدیدترین بالاتر)
-  const sortedArticles = useMemo(() => {
-    const allArticles = [...mainArticles, ...extraArticles];
-    
-    // حذف تکراری‌ها بر اساس لینک
-    const uniqueMap = new Map<string, typeof allArticles[0]>();
-    allArticles.forEach((article) => {
-      // فقط مقاله با ID بالاتر را نگه دار
-      const existing = uniqueMap.get(article.link);
-      if (!existing || (article.id || 0) > (existing.id || 0)) {
-        uniqueMap.set(article.link, article);
-      }
-    });
-    
-    // مرتب‌سازی بر اساس ID نزولی و انتخاب 6 مقاله اول
-    return Array.from(uniqueMap.values())
-      .sort((a, b) => (b.id || 0) - (a.id || 0))
-      .slice(0, 6);
-  }, []);
+  // گرفتن 6 مقاله جدید از منبع مرکزی - کاملاً خودکار
+  const latestArticles = getLatestArticles(6);
 
   return (
     <section className="py-16 bg-muted/30">
@@ -104,7 +20,7 @@ const RecentArticles = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedArticles.map((article) => (
+          {latestArticles.map((article) => (
             <Card key={article.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col">
               <Link to={article.link} className="block">
                 <div className="overflow-hidden rounded-t-lg">
