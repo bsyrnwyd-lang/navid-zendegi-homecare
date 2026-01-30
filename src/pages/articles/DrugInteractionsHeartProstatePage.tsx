@@ -9,8 +9,8 @@ import drugInteractionsImage from "@/assets/drug-interactions-heart-prostate.jpg
 
 // Related article images
 import prostateVolumeImage from "@/assets/prostate-volume-ultrasound.jpg";
-import holterImage from "@/assets/holter-article.jpg";
-import echoImage from "@/assets/echo-article.jpg";
+import holterImage from "@/assets/holter-home-service.jpg";
+import echoImage from "@/assets/echo-home-service.jpg";
 
 const DrugInteractionsHeartProstatePage = () => {
   const publishDate = "2025-01-30";
