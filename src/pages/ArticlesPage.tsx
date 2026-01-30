@@ -199,6 +199,7 @@ import bellsPalsyImage from "@/assets/bells-palsy-home-care.jpg";
 import osteosarcomaImage from "@/assets/osteosarcoma-home-care.jpg";
 import prostateVolumeImage from "@/assets/prostate-volume-ultrasound.jpg";
 import drugInteractionsHeartProstateImage from "@/assets/drug-interactions-heart-prostate.jpg";
+import ejectionFractionImage from "@/assets/ef-ejection-fraction.jpg";
 
 // دیکشنری مترادف‌ها و کلمات مرتبط فارسی
 const synonymDictionary: Record<string, string[]> = {
@@ -403,6 +404,15 @@ const ArticlesPage = () => {
   };
   
   const articles = [
+    {
+      id: 1104,
+      title: "عدد EF در اکو قلب چیست؟ تفسیر کسر تخلیه‌ای و معنای درصدهای آن",
+      description: "تفسیر EF نرمال و غیرنرمال، علت EF پایین، خطرات نارسایی قلبی، نقش هولتر و اکو در پایش قدرت قلب",
+      image: ejectionFractionImage,
+      link: "/articles/ejection-fraction",
+      category: "قلب و عروق",
+      date: "۱۴۰۴/۱۱/۱۱"
+    },
     {
       id: 1103,
       title: "تداخلات دارویی خطرناک؛ مثلث قلب، پروستات و ناتوانی جنسی",
