@@ -15,6 +15,7 @@ import heartMedicationsWarningImage from "@/assets/heart-medications-warning.jpg
 import legEdemaImage from "@/assets/leg-edema-article.jpg";
 import inrMonitoringImage from "@/assets/inr-monitoring-article.jpg";
 import heparinEnoxaparinImage from "@/assets/heparin-enoxaparin-article.jpg";
+import sleepApneaHeartImage from "@/assets/sleep-apnea-heart.jpg";
 
 export interface ArticleCard {
   id: number;
@@ -27,6 +28,15 @@ export interface ArticleCard {
 }
 
 export const extraArticles: ArticleCard[] = [
+  {
+    id: 1094,
+    title: "آپنه خواب و خروپف؛ چرا توقف تنفس شبانه زنگ خطری برای ایست قلبی است؟",
+    description: "مکانیسم تخریب قلب توسط آپنه خواب، نقش هولتر فشار خون و قلب در تشخیص، خدمات پایش شبانه در منزل",
+    image: sleepApneaHeartImage,
+    link: "/articles/sleep-apnea-heart",
+    category: "قلب",
+    date: "۱۴۰۴/۱۱/۱۱"
+  },
   {
     id: 1081,
     title: "راهنمای جامع هپارین و انوکساپارین؛ مراقبت و تزریق در منزل",
