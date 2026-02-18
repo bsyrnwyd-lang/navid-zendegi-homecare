@@ -35,6 +35,7 @@ import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 import sildenfilTadalafilImage from "@/assets/sildenafil-tadalafil-article.jpg";
 import angiographyHistoryImage from "@/assets/angiography-history-technology.jpg";
 import angiographyVsAngioplastyImage from "@/assets/angiography-vs-angioplasty.jpg";
+import methocarbamolImage from "@/assets/methocarbamol-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -51,12 +52,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1107) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1108) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1108,
+    title: "متوکاربامول (روباکسین)؛ تاریخچه، مکانیسم اثر و نکات ایمنی",
+    description: "راهنمای جامع متوکاربامول: تاریخچه کشف، مکانیسم اثر مرکزی، فارماکوکینتیک، عوارض جانبی و خدمات پایش در منزل",
+    image: methocarbamolImage,
+    link: "/articles/methocarbamol",
+    category: "دارو",
+    date: "۱۴۰۴/۱۱/۲۹"
+  },
   {
     id: 1107,
     title: "تفاوت آنژیوگرافی و آنژیوپلاستی؛ تشخیص در مقابل درمان",
