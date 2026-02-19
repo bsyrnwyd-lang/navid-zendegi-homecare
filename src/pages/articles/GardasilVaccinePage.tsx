@@ -1,11 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 import gardasilImage from "@/assets/gardasil-vaccine-article.jpg";
 
 const GardasilVaccinePage = () => {
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "واکسن گارداسیل", url: "/articles/gardasil-vaccine" }
+  ];
   const phoneNumber = "09386117912";
   
   const handleCall = () => {
@@ -23,6 +29,7 @@ const GardasilVaccinePage = () => {
         <article className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <BreadcrumbNavigation items={breadcrumbItems} />
               
               <header className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8">

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import RelatedArticles from "@/components/RelatedArticles";
 import mediterraneanDietImage from "@/assets/mediterranean-diet.jpg";
@@ -9,6 +10,11 @@ import cholesterolImage from "@/assets/cholesterol-test-article.jpg";
 import bloodPressureImage from "@/assets/blood-pressure-article.jpg";
 
 const MediterraneanDietPage = () => {
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "رژیم مدیترانه‌ای", url: "/articles/mediterranean-diet" }
+  ];
   const relatedArticles = [
     {
       title: "دیابت چیست و چگونه کنترل می‌شود؟",
@@ -50,6 +56,7 @@ const MediterraneanDietPage = () => {
       
       <main className="container mx-auto px-4 pt-24 pb-8 md:pt-28 md:pb-12">
         <article className="max-w-4xl mx-auto">
+          <BreadcrumbNavigation items={breadcrumbItems} />
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               رژیم مدیترانه‌ای: بهترین رژیم غذایی برای قلب، کنترل قند خون و دیابت

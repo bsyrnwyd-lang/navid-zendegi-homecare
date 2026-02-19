@@ -3,6 +3,7 @@ import { ArrowRight, Phone, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import ArticleSchema from "@/components/ArticleSchema";
 import PricingInfo from "@/components/PricingInfo";
@@ -12,6 +13,11 @@ import { Button } from "@/components/ui/button";
 import asthmaImage from "@/assets/asthma-treatment.jpg";
 
 const AsthmaPage = () => {
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "آسم", url: "/articles/asthma" }
+  ];
   const handleCall = () => {
     window.location.href = "tel:09386117912";
   };
@@ -88,13 +94,7 @@ const AsthmaPage = () => {
       <FloatingContact />
 
       <main className="container mx-auto px-4 py-8 mt-20">
-        <Link
-          to="/articles"
-          className="inline-flex items-center text-primary hover:text-primary/80 mb-6 transition-colors"
-        >
-          <ArrowRight className="ml-2 h-4 w-4" />
-          بازگشت به مقالات
-        </Link>
+        <BreadcrumbNavigation items={breadcrumbItems} />
 
         <article className="prose prose-lg max-w-4xl mx-auto">
           <img

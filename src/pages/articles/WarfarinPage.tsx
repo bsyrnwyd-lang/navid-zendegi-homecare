@@ -2,6 +2,7 @@ import { Phone, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -11,6 +12,12 @@ import highBloodPressureImage from "@/assets/high-blood-pressure-control.jpg";
 import postAngiographyMedicationsImage from "@/assets/post-angiography-medications.jpg";
 
 const WarfarinPage = () => {
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "وارفارین", url: "/articles/warfarin" }
+  ];
+
   const handleCall = () => {
     window.location.href = "tel:09122593357";
   };
@@ -58,6 +65,7 @@ const WarfarinPage = () => {
       
       <main className="container mx-auto px-4 pt-24 pb-8 md:pt-28 md:pb-12">
         <article className="max-w-4xl mx-auto">
+          <BreadcrumbNavigation items={breadcrumbItems} />
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               وارفارین؛ داروی ضدانعقاد و نکات مهم در مصرف آن

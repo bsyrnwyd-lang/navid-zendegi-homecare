@@ -1,16 +1,24 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Phone } from "lucide-react";
 import meningitisImage from "@/assets/meningitis-article.jpg";
 
 const MeningitisPage = () => {
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "مننژیت چیست؟", url: "/articles/meningitis" }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
       <main className="pt-20 md:pt-24">
         <article className="container mx-auto px-4 py-8 md:py-16 max-w-4xl">
+          <BreadcrumbNavigation items={breadcrumbItems} />
           {/* Article Header */}
           <header className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">

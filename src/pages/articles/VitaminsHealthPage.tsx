@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 import medicalEquipmentImage from "@/assets/medical-equipment.jpg";
@@ -8,6 +9,11 @@ import PricingInfo from "@/components/PricingInfo";
 import SEOHead from "@/components/SEOHead";
 
 const VitaminsHealthPage = () => {
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "اهمیت ویتامین‌ها در سلامت بدن", url: "/articles/vitamins-health" }
+  ];
   const phoneNumber = "09386117912";
   
   const handleCall = () => {
@@ -31,6 +37,7 @@ const VitaminsHealthPage = () => {
       
       <main className="pt-20 md:pt-24">
         <article className="max-w-4xl mx-auto px-4 py-8">
+          <BreadcrumbNavigation items={breadcrumbItems} />
           <header className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               اهمیت ویتامین‌ها در سلامت بدن
