@@ -12,6 +12,7 @@ import pneumoniaImage from "@/assets/pneumonia-article.jpg";
 import aspirationPneumoniaImage from "@/assets/aspiration-pneumonia.jpg";
 import influenzaImage from "@/assets/infectious-disease.jpg";
 import ivTherapyImage from "@/assets/iv-therapy-home.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const PneumoniaPage = () => {
   const faqs = [
@@ -67,6 +68,7 @@ const PneumoniaPage = () => {
         {/* Hero Section */}
         <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto max-w-4xl">
+            <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"ذات‌الریه",url:"/articles/pneumonia"}]} />
             <div className="text-center mb-8">
               <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
                 ذات‌الریه (پنومونی) چیست؟ از علائم تا درمان تخصصی در منزل

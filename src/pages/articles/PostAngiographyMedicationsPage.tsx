@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import medicationsImage from "@/assets/post-angiography-medications.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const PostAngiographyMedicationsPage = () => {
   return (
@@ -22,6 +23,7 @@ const PostAngiographyMedicationsPage = () => {
         <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"داروهای بعد آنژیوگرافی",url:"/articles/post-angiography-medications"}]} />
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-center">
                 داروهای ضروری بعد از آنژیوگرافی و استنت‌گذاری
               </h1>

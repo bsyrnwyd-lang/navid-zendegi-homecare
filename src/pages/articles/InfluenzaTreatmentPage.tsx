@@ -4,6 +4,7 @@ import FloatingContact from "@/components/FloatingContact";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 import influenzaImage from "@/assets/iranian-doctor-home-visit-optimized.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const InfluenzaTreatmentPage = () => {
   const phoneNumber = "09386117912";
@@ -25,6 +26,7 @@ const InfluenzaTreatmentPage = () => {
         <article className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"درمان آنفلوآنزا",url:"/articles/influenza-treatment"}]} />
               
               {/* Article Header */}
               <header className="text-center mb-12">

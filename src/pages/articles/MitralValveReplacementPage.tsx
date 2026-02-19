@@ -11,6 +11,7 @@ import mitralValveImage from "@/assets/mitral-valve-replacement.jpg";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
 import warfarinImage from "@/assets/warfarin-medication.jpg";
 import mitralClipImage from "@/assets/mitral-clip-article.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const MitralValveReplacementPage = () => {
   const faqs = [
@@ -80,6 +81,7 @@ const MitralValveReplacementPage = () => {
         {/* Hero Section */}
         <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto max-w-4xl">
+            <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"تعویض دریچه میترال",url:"/articles/mitral-valve-replacement"}]} />
             <div className="text-center mb-8">
               <p className="text-sm text-muted-foreground mb-2">تاریخ انتشار: ۱۴۰۴/۱۰/۱۴</p>
               <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">

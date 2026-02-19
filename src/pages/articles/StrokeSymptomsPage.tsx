@@ -4,6 +4,7 @@ import FloatingContact from "@/components/FloatingContact";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle } from "lucide-react";
 import strokeImage from "@/assets/neurology.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const StrokeSymptomsPage = () => {
   const phoneNumber = "09386117912";
@@ -24,6 +25,7 @@ const StrokeSymptomsPage = () => {
         <article className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"علائم سکته مغزی",url:"/articles/stroke-symptoms"}]} />
               
               {/* Article Header */}
               <header className="text-center mb-12">

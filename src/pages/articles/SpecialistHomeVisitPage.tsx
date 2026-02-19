@@ -7,6 +7,7 @@ import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Phone, Heart, Brain, Bone, Shield, Baby, User, Activity, Clock, Home, CheckCircle } from "lucide-react";
 import specialistHomeVisitImage from "@/assets/specialist-doctor.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const SpecialistHomeVisitPage = () => {
   const faqs = [
@@ -78,6 +79,7 @@ const SpecialistHomeVisitPage = () => {
       <Header />
       
       <main className="container mx-auto px-4 py-8 max-w-4xl">
+        <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"ویزیت متخصص در منزل",url:"/articles/specialist-home-visit"}]} />
         {/* Hero Section */}
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-relaxed">

@@ -11,6 +11,7 @@ import mitralClipImage from "@/assets/mitral-clip-article.jpg";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
 import holterImage from "@/assets/holter-monitoring.jpg";
 import pacemakerICDImage from "@/assets/pacemaker-icd-article.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const MitralClipPage = () => {
   const faqs = [
@@ -80,6 +81,7 @@ const MitralClipPage = () => {
         {/* Hero Section */}
         <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto max-w-4xl">
+            <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"میترال کلیپ",url:"/articles/mitral-clip"}]} />
             <div className="text-center mb-8">
               <p className="text-sm text-muted-foreground mb-2">تاریخ انتشار: ۱۴۰۴/۱۰/۱۴</p>
               <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary">

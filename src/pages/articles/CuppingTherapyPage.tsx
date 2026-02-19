@@ -13,6 +13,7 @@ import cuppingTherapyImage from "@/assets/cupping-therapy-home.jpg";
 import generalDoctorImage from "@/assets/general-doctor-home.jpg";
 import nursingImage from "@/assets/nursing-home-care.jpg";
 import vaccinationImage from "@/assets/vaccination-article.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const CuppingTherapyPage = () => {
   const handleCall = () => {
@@ -93,6 +94,7 @@ const CuppingTherapyPage = () => {
         {/* Hero Section */}
         <section className="medical-section">
           <div className="container mx-auto max-w-5xl">
+            <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"حجامت در منزل",url:"/articles/cupping-therapy"}]} />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold mb-8 text-primary leading-tight">
