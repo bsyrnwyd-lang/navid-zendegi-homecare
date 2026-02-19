@@ -237,6 +237,7 @@ const SildenafilTadalafilPage = lazy(() => import("./pages/articles/SildenafilTa
 const AngiographyHistoryPage = lazy(() => import("./pages/articles/AngiographyHistoryPage"));
 const AngiographyVsAngioplastyPage = lazy(() => import("./pages/articles/AngiographyVsAngioplastyPage"));
 const MethocarbamolPage = lazy(() => import("./pages/articles/MethocarbamolPage"));
+const LevothyroxinePage = lazy(() => import("./pages/articles/LevothyroxinePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -500,7 +501,8 @@ const App = () => (
                        <Route path="/articles/sildenafil-tadalafil" element={<SildenafilTadalafilPage />} />
                        <Route path="/articles/angiography-history" element={<AngiographyHistoryPage />} />
                        <Route path="/articles/angiography-vs-angioplasty" element={<AngiographyVsAngioplastyPage />} />
-                       <Route path="/articles/methocarbamol" element={<MethocarbamolPage />} />
+                        <Route path="/articles/methocarbamol" element={<MethocarbamolPage />} />
+                        <Route path="/articles/levothyroxine" element={<LevothyroxinePage />} />
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
