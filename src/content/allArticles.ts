@@ -37,6 +37,7 @@ import angiographyHistoryImage from "@/assets/angiography-history-technology.jpg
 import angiographyVsAngioplastyImage from "@/assets/angiography-vs-angioplasty.jpg";
 import methocarbamolImage from "@/assets/methocarbamol-article.jpg";
 import levothyroxineImage from "@/assets/levothyroxine-article.jpg";
+import chromiumSupplementImage from "@/assets/chromium-supplement-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -53,12 +54,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1109) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1110) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1110,
+    title: "مکمل کروم؛ کلید طلایی تنظیم سوخت‌وساز و انسولین (تاریخچه، عملکرد و پایش‌های قلبی)",
+    description: "راهنمای جامع مکمل کروم پیکولینات: تاریخچه، مکانیسم اثر بر انسولین، ارتباط با قلب و خدمات پایش در منزل",
+    image: chromiumSupplementImage,
+    link: "/articles/chromium-supplement",
+    category: "تغذیه",
+    date: "۱۴۰۴/۱۱/۳۰"
+  },
   {
     id: 1109,
     title: "لووتیروکسین؛ عصای معجزه‌گر غده تیروئید (تاریخچه، مکانیسم اثر و پایش‌های قلبی)",

@@ -238,6 +238,7 @@ const AngiographyHistoryPage = lazy(() => import("./pages/articles/AngiographyHi
 const AngiographyVsAngioplastyPage = lazy(() => import("./pages/articles/AngiographyVsAngioplastyPage"));
 const MethocarbamolPage = lazy(() => import("./pages/articles/MethocarbamolPage"));
 const LevothyroxinePage = lazy(() => import("./pages/articles/LevothyroxinePage"));
+const ChromiumSupplementPage = lazy(() => import("./pages/articles/ChromiumSupplementPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -503,6 +504,7 @@ const App = () => (
                        <Route path="/articles/angiography-vs-angioplasty" element={<AngiographyVsAngioplastyPage />} />
                         <Route path="/articles/methocarbamol" element={<MethocarbamolPage />} />
                         <Route path="/articles/levothyroxine" element={<LevothyroxinePage />} />
+                        <Route path="/articles/chromium-supplement" element={<ChromiumSupplementPage />} />
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
