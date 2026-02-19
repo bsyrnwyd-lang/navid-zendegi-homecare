@@ -1,10 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import palpitationsImage from "@/assets/heart-palpitations.jpg";
 
 const HeartPalpitationsPage = () => {
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "تپش قلب", url: "/articles/heart-palpitations" }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -18,6 +25,9 @@ const HeartPalpitationsPage = () => {
       />
       <Header />
       <main className="pt-20 md:pt-24">
+        <div className="container mx-auto px-4 mb-4">
+          <BreadcrumbNavigation items={breadcrumbItems} />
+        </div>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
           <div className="container mx-auto px-4">

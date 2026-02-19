@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import SEOHead from "@/components/SEOHead";
 import RelatedArticles from "@/components/RelatedArticles";
 import cocaineDangersImage from "@/assets/cocaine-dangers.jpg";
@@ -9,6 +10,11 @@ import heartAttackImage from "@/assets/cardiology-home-visit.jpg";
 import nursingImage from "@/assets/nursing-home-care.jpg";
 
 const CocaineDangersPage = () => {
+  const breadcrumbItems = [
+    { name: "خانه", url: "/" },
+    { name: "مقالات", url: "/articles" },
+    { name: "عوارض کوکائین", url: "/articles/cocaine-dangers" }
+  ];
   const relatedArticles = [
     {
       title: "افسردگی: علائم، علل و درمان",
@@ -50,6 +56,7 @@ const CocaineDangersPage = () => {
       
       <main className="container mx-auto px-4 pt-24 pb-8 md:pt-28 md:pb-12">
         <article className="max-w-4xl mx-auto">
+          <BreadcrumbNavigation items={breadcrumbItems} />
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               عوارض خطرناک کوکائین بر قلب، مغز و سیستم عصبی مرکزی
