@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
@@ -110,6 +111,7 @@ const MaleUTIPage = () => {
         <article className="medical-section bg-background">
           <div className="container-custom py-12">
             <div className="max-w-4xl mx-auto">
+              <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"عفونت ادراری مردان",url:"/articles/male-uti"}]} />
               <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 عفونت ادراری در مردان (UTI): علائم، علل زمینه‌ای و ضرورت ویزیت متخصص اورولوژی در منزل
               </h1>

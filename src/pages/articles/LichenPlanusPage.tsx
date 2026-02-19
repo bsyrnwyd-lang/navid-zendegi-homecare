@@ -4,14 +4,7 @@ import ArticleSchema from "@/components/ArticleSchema";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import lichenPlanusImage from "@/assets/lichen-planus-article.jpg";
 import skinItchingImage from "@/assets/skin-itching-article.jpg";
 import mouthUlcerImage from "@/assets/mouth-ulcer-article.jpg";
@@ -86,22 +79,7 @@ const LichenPlanusPage = () => {
 
       <main className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          {/* Breadcrumb */}
-          <Breadcrumb className="mb-6">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">خانه</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/articles">مقالات</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>لیکن پلان</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"لیکن پلان",url:"/articles/lichen-planus"}]} />
 
           {/* Main Image */}
           <img

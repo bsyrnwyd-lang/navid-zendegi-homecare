@@ -4,14 +4,7 @@ import ArticleSchema from "@/components/ArticleSchema";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import PricingInfo from "@/components/PricingInfo";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import seborrheicDermatitisImage from "@/assets/seborrheic-dermatitis.jpg";
 import skinItchingImage from "@/assets/skin-itching-article.jpg";
 import hairLossImage from "@/assets/hair-loss-article.jpg";
@@ -86,22 +79,7 @@ const SeborrheicDermatitisPage = () => {
 
       <main className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          {/* Breadcrumb */}
-          <Breadcrumb className="mb-6">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">خانه</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/articles">مقالات</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>درماتیت سبوره</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"درماتیت سبوره",url:"/articles/seborrheic-dermatitis"}]} />
 
           {/* Main Image */}
           <img

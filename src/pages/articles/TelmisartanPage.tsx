@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
@@ -110,6 +111,7 @@ const TelmisartanPage = () => {
         <article className="medical-section bg-background">
           <div className="container-custom py-12">
             <div className="max-w-4xl mx-auto">
+              <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"تلمیزارتان",url:"/articles/telmisartan"}]} />
               <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 تلمیزارتان (Telmisartan): داروی نسل جدید فشار خون بالا، مکانیسم عمل اختصاصی و محافظت طولانی‌مدت قلبی و کلیوی
               </h1>

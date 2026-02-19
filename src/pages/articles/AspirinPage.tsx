@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { ArrowRight, Phone, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -88,13 +89,7 @@ const AspirinPage = () => {
       <FloatingContact />
 
       <main className="container mx-auto px-4 py-8 mt-20">
-        <Link
-          to="/articles"
-          className="inline-flex items-center text-primary hover:text-primary/80 mb-6 transition-colors"
-        >
-          <ArrowRight className="ml-2 h-4 w-4" />
-          بازگشت به مقالات
-        </Link>
+        <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"آسپرین",url:"/articles/aspirin"}]} />
 
         <article className="prose prose-lg max-w-4xl mx-auto">
           <img

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
@@ -95,6 +96,7 @@ const OpiumHeartEffectsPage = () => {
       <main className="pt-20 md:pt-24">
         <article className="medical-section">
           <div className="container mx-auto max-w-4xl">
+            <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"اثرات تریاک بر قلب",url:"/articles/opium-heart-effects"}]} />
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               اثرات تریاک بر روی قلب: مرور علمی بر پیامدهای قلبی–عروقی مصرف اوپیوم
             </h1>

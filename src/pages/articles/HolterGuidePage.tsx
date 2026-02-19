@@ -2,6 +2,7 @@ import { Phone, MessageCircle, Heart, Activity, Clock, CheckCircle2 } from "luci
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import ArticleLayout from "@/components/ArticleLayout";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import PricingInfo from "@/components/PricingInfo";
 import RelatedArticles from "@/components/RelatedArticles";
 import FAQSection from "@/components/FAQSection";
@@ -94,6 +95,7 @@ const HolterGuidePage = () => {
 
       <main className="py-12 px-4">
         <article className="max-w-4xl mx-auto">
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"راهنمای هولتر",url:"/articles/holter-guide"}]} />
           
           <header className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-relaxed">
