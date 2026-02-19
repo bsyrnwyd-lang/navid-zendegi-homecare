@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
@@ -77,14 +78,8 @@ const AlopeciaAreataPage = () => {
       <main className="pt-24 pb-16">
         <article className="container mx-auto px-4 max-w-4xl">
           
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"ریزش سکه‌ای مو",url:"/articles/alopecia-areata"}]} />
           <header className="mb-8">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-              <Link to="/" className="hover:text-primary">خانه</Link>
-              <span>/</span>
-              <Link to="/articles" className="hover:text-primary">مقالات</Link>
-              <span>/</span>
-              <span>ریزش سکه‌ای مو</span>
-            </div>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-relaxed">
               ریزش سکه‌ای مو و ریش (آلوپسی آره‌آتا)؛ از علل تا جدیدترین درمان‌ها
             </h1>

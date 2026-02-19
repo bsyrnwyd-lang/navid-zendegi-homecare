@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
@@ -77,6 +78,9 @@ const TAVIProcedurePage = () => {
       />
       <Header />
       <main className="pt-20 md:pt-24">
+        <div className="container mx-auto max-w-4xl px-4 pt-4">
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"عمل تاوی",url:"/articles/tavi-procedure"}]} />
+        </div>
         {/* Hero Section */}
         <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto max-w-4xl">

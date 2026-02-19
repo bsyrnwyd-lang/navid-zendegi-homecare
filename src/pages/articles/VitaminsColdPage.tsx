@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
@@ -77,6 +78,9 @@ const VitaminsColdPage = () => {
       <FloatingContact />
       
       <main className="pt-20 md:pt-24">
+        <div className="container mx-auto max-w-5xl px-4 pt-4">
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"ویتامین‌ها و سرماخوردگی",url:"/articles/vitamins-cold"}]} />
+        </div>
         {/* Hero Section */}
         <section className="medical-section">
           <div className="container mx-auto max-w-5xl">

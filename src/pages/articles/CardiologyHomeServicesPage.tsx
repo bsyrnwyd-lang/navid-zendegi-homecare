@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
@@ -50,6 +51,9 @@ const CardiologyHomeServicesPage = () => {
       <SEOHead title="ویزیت متخصص قلب، نوار قلب و اکو در منزل تهران و کرج | نوید زندگی" description="آیا به دنبال ویزیت متخصص قلب، نوار قلب یا اکو در منزل هستید؟ نوید زندگی تخصصی‌ترین خدمات قلبی را با تجهیزات پیشرفته در تهران و کرج ارائه می‌دهد." keywords="اکو قلب در منزل تهران، ویزیت متخصص قلب در منزل کرج، نوار قلب در خانه، دکتر قلب در منزل، اکوکاردیوگرافی در منزل" canonical="https://navidzendegi.com/articles/cardiology-home-services" ogType="article" author="نوید زندگی" publishedTime="2025-06-20" modifiedTime="2025-06-20" />
       <Header />
       <main className="pt-20 md:pt-24">
+        <div className="container mx-auto max-w-4xl px-4 pt-4">
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"خدمات قلبی در منزل",url:"/articles/cardiology-home-services"}]} />
+        </div>
         {/* Hero Section */}
         <section className="medical-section bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto max-w-4xl">

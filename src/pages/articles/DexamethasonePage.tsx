@@ -1,4 +1,5 @@
 import { Phone, MessageCircle } from "lucide-react";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
@@ -89,6 +90,7 @@ const DexamethasonePage = () => {
       
       <main className="flex-1">
         <article className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"دگزامتازون",url:"/articles/dexamethasone"}]} />
           {/* Hero Section */}
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-relaxed">

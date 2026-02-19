@@ -1,4 +1,5 @@
 import { Phone, MessageCircle } from "lucide-react";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
@@ -91,7 +92,10 @@ const ClopidogrelPage = () => {
         <Header />
         <FloatingContact />
 
-        <article className="container mx-auto px-4 pt-32 pb-8 max-w-4xl">
+        <div className="container mx-auto px-4 pt-32 max-w-4xl">
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"کلوپیدوگرل",url:"/articles/clopidogrel"}]} />
+        </div>
+        <article className="container mx-auto px-4 pb-8 max-w-4xl">
           <h1 className="text-4xl font-bold text-foreground mb-6">
             کلوپیدوگرل (Clopidogrel)؛ داروی ضدپلاکت مهم در پیشگیری از حملات قلبی و سکته‌ها
           </h1>

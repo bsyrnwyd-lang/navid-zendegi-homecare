@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -82,6 +83,7 @@ const AspirationPneumoniaPage = () => {
         <Header />
         
         <main className="flex-grow container mx-auto px-4 py-8 mt-16">
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"ذات‌الریه آسپیراسیونی",url:"/articles/aspiration-pneumonia"}]} />
           <article className="max-w-4xl mx-auto">
             <div className="mb-8">
               <img

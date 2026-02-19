@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -90,6 +91,7 @@ const AtorvastatinPage = () => {
       <FloatingContact />
       
       <main className="container mx-auto px-4 pt-24 pb-8 md:pt-28 md:pb-12">
+        <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"آتورواستاتین",url:"/articles/atorvastatin"}]} />
         <article className="max-w-4xl mx-auto">
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

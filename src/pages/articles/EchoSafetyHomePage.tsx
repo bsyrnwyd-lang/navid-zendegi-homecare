@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
@@ -82,6 +83,7 @@ const EchoSafetyHomePage = () => {
 
       <main className="py-12 px-4">
         <article className="max-w-4xl mx-auto">
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"ایمنی اکو در منزل",url:"/articles/echo-safety-home"}]} />
           <img
             src={echoSafetyImage}
             alt="اکوکاردیوگرافی در منزل - بررسی ایمنی امواج اکو"
