@@ -36,6 +36,7 @@ import sildenfilTadalafilImage from "@/assets/sildenafil-tadalafil-article.jpg";
 import angiographyHistoryImage from "@/assets/angiography-history-technology.jpg";
 import angiographyVsAngioplastyImage from "@/assets/angiography-vs-angioplasty.jpg";
 import methocarbamolImage from "@/assets/methocarbamol-article.jpg";
+import levothyroxineImage from "@/assets/levothyroxine-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -52,12 +53,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1108) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1109) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1109,
+    title: "لووتیروکسین؛ عصای معجزه‌گر غده تیروئید (تاریخچه، مکانیسم اثر و پایش‌های قلبی)",
+    description: "راهنمای جامع لووتیروکسین: تاریخچه، مکانیسم اثر، تأثیر بر قلب، قوانین مصرف و خدمات پایش تیروئید و قلب در منزل",
+    image: levothyroxineImage,
+    link: "/articles/levothyroxine",
+    category: "دارو",
+    date: "۱۴۰۴/۱۱/۳۰"
+  },
   {
     id: 1108,
     title: "متوکاربامول (روباکسین)؛ تاریخچه، مکانیسم اثر و نکات ایمنی",
