@@ -6,6 +6,7 @@ import { Phone, MessageCircle } from "lucide-react";
 import pediatricsImage from "@/assets/pediatrics.jpg";
 import PricingInfo from "@/components/PricingInfo";
 import SEOHead from "@/components/SEOHead";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const ChildGrowthMonitoringPage = () => {
   const phoneNumber = "09386117912";
@@ -31,6 +32,7 @@ const ChildGrowthMonitoringPage = () => {
       
       <main className="pt-20 md:pt-24">
         <article className="max-w-4xl mx-auto px-4 py-8">
+          <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"رشد کودک",url:"/articles/child-growth-monitoring"}]} />
           <header className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               رشد کودک؛ اهمیت پایش منظم در منزل

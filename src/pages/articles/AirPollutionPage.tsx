@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import { Phone } from "lucide-react";
 import airPollutionImage from "@/assets/air-pollution-article.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const AirPollutionPage = () => {
   return (
@@ -10,8 +11,9 @@ const AirPollutionPage = () => {
       <Header />
       
       <main className="pt-20 md:pt-24">
-        <article className="container mx-auto px-4 py-8 md:py-16 max-w-4xl">
-          {/* Article Header */}
+          <article className="container mx-auto px-4 py-8 md:py-16 max-w-4xl">
+            <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"آلودگی هوا و قلب",url:"/articles/air-pollution"}]} />
+            {/* Article Header */}
           <header className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               تأثیر آلودگی هوا بر بیماری‌های قلبی و ریوی

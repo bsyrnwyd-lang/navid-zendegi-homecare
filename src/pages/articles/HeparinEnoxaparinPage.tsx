@@ -12,6 +12,7 @@ import heparinImage from "@/assets/heparin-enoxaparin-article.jpg";
 import warfarinImage from "@/assets/warfarin-medication.jpg";
 import dvtImage from "@/assets/dvt-anticoagulant-article.jpg";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const HeparinEnoxaparinPage = () => {
   const handleCall = () => {
@@ -83,6 +84,7 @@ const HeparinEnoxaparinPage = () => {
       <FloatingContact />
       
       <main className="container mx-auto px-4 pt-24 pb-8 md:pt-28 md:pb-12">
+        <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"هپارین و انوکساپارین",url:"/articles/heparin-enoxaparin"}]} />
         <article className="max-w-4xl mx-auto">
           <div className="mb-8">
             <p className="text-sm text-muted-foreground mb-2">تاریخ انتشار: ۱۸ دی ۱۴۰۴</p>

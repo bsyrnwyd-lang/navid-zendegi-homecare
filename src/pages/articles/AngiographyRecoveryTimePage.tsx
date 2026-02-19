@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEOHead from "@/components/SEOHead";
 import recoveryImage from "@/assets/angiography-recovery.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const AngiographyRecoveryTimePage = () => {
   return (
@@ -22,6 +23,7 @@ const AngiographyRecoveryTimePage = () => {
         <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"بهبودی بعد آنژیوگرافی",url:"/articles/angiography-recovery-time"}]} />
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-center">
                 مدت زمان و بستری بعد از آنژیوگرافی
               </h1>

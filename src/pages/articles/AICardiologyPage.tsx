@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import aiCardiologyImage from "@/assets/ai-cardiology-article.jpg";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 const AICardiologyPage = () => {
   return (
@@ -12,6 +13,7 @@ const AICardiologyPage = () => {
         <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <BreadcrumbNavigation items={[{name:"خانه",url:"/"},{name:"مقالات",url:"/articles"},{name:"هوش مصنوعی در قلب",url:"/articles/ai-cardiology"}]} />
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-center">
                 استفاده از هوش مصنوعی در تفسیر اکو و‌ نوار قلب
               </h1>
