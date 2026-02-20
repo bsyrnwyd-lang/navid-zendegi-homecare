@@ -11,6 +11,7 @@ import PricingInfo from "@/components/PricingInfo";
 import OrganizationSchema from "@/components/OrganizationSchema";
 import SEOHead from "@/components/SEOHead";
 import RecentArticles from "@/components/RecentArticles";
+import AreasServed from "@/components/AreasServed";
 
 const Index = () => {
   return (
@@ -18,7 +19,7 @@ const Index = () => {
       <SEOHead 
         title="پزشک در منزل تهران | ویزیت متخصص قلب در منزل | نوید زندگی"
         description="ویزیت پزشک در منزل تهران ۲۴ ساعته. متخصص قلب، داخلی، اعصاب در منزل. اکو، هولتر، نوار قلب، آزمایش در محل. تماس: ۰۹۳۸۶۱۱۷۹۱۲"
-        keywords="پزشک در منزل تهران, ویزیت پزشک در منزل, متخصص قلب در منزل, اکو در منزل, هولتر در منزل, نوار قلب در منزل, متخصص داخلی در منزل, آزمایش خون در منزل"
+        keywords="پزشک در منزل, پزشک در منزل تهران, ویزیت پزشک در منزل, متخصص قلب در منزل, اکو در منزل, هولتر در منزل, نوار قلب در منزل, متخصص داخلی در منزل, آزمایش خون در منزل, پرستاری در منزل تهران, ویزیت متخصص در منزل"
         canonical="https://navidzendegi.com/"
         ogType="website"
       />
@@ -29,6 +30,7 @@ const Index = () => {
         <PricingInfo />
         <Services />
         <SEOContent />
+        <AreasServed />
         <RecentArticles />
         <AboutUs />
         <WhyChooseUs />
