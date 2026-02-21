@@ -240,6 +240,7 @@ const MethocarbamolPage = lazy(() => import("./pages/articles/MethocarbamolPage"
 const LevothyroxinePage = lazy(() => import("./pages/articles/LevothyroxinePage"));
 const ChromiumSupplementPage = lazy(() => import("./pages/articles/ChromiumSupplementPage"));
 const RanolazinePage = lazy(() => import("./pages/articles/RanolazinePage"));
+const IvabradinePage = lazy(() => import("./pages/articles/IvabradinePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -507,6 +508,7 @@ const App = () => (
                         <Route path="/articles/levothyroxine" element={<LevothyroxinePage />} />
                         <Route path="/articles/chromium-supplement" element={<ChromiumSupplementPage />} />
                         <Route path="/articles/ranolazine" element={<RanolazinePage />} />
+                        <Route path="/articles/ivabradine" element={<IvabradinePage />} />
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
