@@ -38,6 +38,7 @@ import angiographyVsAngioplastyImage from "@/assets/angiography-vs-angioplasty.j
 import methocarbamolImage from "@/assets/methocarbamol-article.jpg";
 import levothyroxineImage from "@/assets/levothyroxine-article.jpg";
 import chromiumSupplementImage from "@/assets/chromium-supplement-article.jpg";
+import ranolazineImage from "@/assets/ranolazine-medication.jpg";
 
 export interface ArticleData {
   id: number;
@@ -54,12 +55,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1110) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1111) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1111,
+    title: "رانولازین (رانکسا)؛ رویکردی نوین در درمان دردهای قلبی",
+    description: "راهنمای جامع رانولازین: تاریخچه، مکانیسم سلولی، عوارض، تداخلات دارویی و پایش‌های تخصصی قلب در منزل",
+    image: ranolazineImage,
+    link: "/articles/ranolazine",
+    category: "دارو",
+    date: "۱۴۰۴/۱۲/۰۳"
+  },
   {
     id: 1110,
     title: "مکمل کروم؛ کلید طلایی تنظیم سوخت‌وساز و انسولین (تاریخچه، عملکرد و پایش‌های قلبی)",
