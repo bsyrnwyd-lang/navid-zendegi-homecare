@@ -242,6 +242,7 @@ const ChromiumSupplementPage = lazy(() => import("./pages/articles/ChromiumSuppl
 const RanolazinePage = lazy(() => import("./pages/articles/RanolazinePage"));
 const IvabradinePage = lazy(() => import("./pages/articles/IvabradinePage"));
 const IvabradineVsBetablockerPage = lazy(() => import("./pages/articles/IvabradineVsBetablockerPage"));
+const HeartFailureDrugInteractionsPage = lazy(() => import("./pages/articles/HeartFailureDrugInteractionsPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -511,6 +512,7 @@ const App = () => (
                         <Route path="/articles/ranolazine" element={<RanolazinePage />} />
                         <Route path="/articles/ivabradine" element={<IvabradinePage />} />
                         <Route path="/articles/ivabradine-vs-betablocker" element={<IvabradineVsBetablockerPage />} />
+                        <Route path="/articles/heart-failure-drug-interactions" element={<HeartFailureDrugInteractionsPage />} />
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
