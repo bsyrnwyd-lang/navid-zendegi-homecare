@@ -41,6 +41,7 @@ import chromiumSupplementImage from "@/assets/chromium-supplement-article.jpg";
 import ranolazineImage from "@/assets/ranolazine-medication.jpg";
 import ivabradineImage from "@/assets/ivabradine-medication.jpg";
 import ivabradineVsBetablockerImage from "@/assets/ivabradine-vs-betablocker.jpg";
+import heartFailureDrugInteractionsImage from "@/assets/heart-failure-drug-interactions.jpg";
 
 export interface ArticleData {
   id: number;
@@ -57,12 +58,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1113) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1114) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1114,
+    title: "تداخلات دارویی خطرناک در نارسایی قلبی؛ چه داروهایی برای قلب شما سم هستند؟",
+    description: "داروهای ممنوع در نارسایی قلبی: خطرات ژلوفن، قرص سرماخوردگی، آنتی‌بیوتیک‌ها و مکمل‌های گیاهی برای بیماران قلبی و پایش دارویی در منزل",
+    image: heartFailureDrugInteractionsImage,
+    link: "/articles/heart-failure-drug-interactions",
+    category: "دارو",
+    date: "۱۴۰۴/۱۲/۰۴"
+  },
   {
     id: 1113,
     title: "ایوابرادین یا بتابلاکر؟ نبرد برای کنترل ضربان در نارسایی قلبی",
