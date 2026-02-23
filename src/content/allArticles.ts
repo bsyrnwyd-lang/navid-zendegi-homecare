@@ -43,6 +43,7 @@ import ivabradineImage from "@/assets/ivabradine-medication.jpg";
 import ivabradineVsBetablockerImage from "@/assets/ivabradine-vs-betablocker.jpg";
 import heartFailureDrugInteractionsImage from "@/assets/heart-failure-drug-interactions.jpg";
 import hiddenStrokeHeartAttackImage from "@/assets/hidden-stroke-heart-attack-symptoms.jpg";
+import heartStrokeRiskQuizImage from "@/assets/heart-stroke-risk-quiz.jpg";
 
 export interface ArticleData {
   id: number;
@@ -59,12 +60,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1115) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1116) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1116,
+    title: "تست آنلاین ریسک سکته قلبی و مغزی؛ آیا در معرض خطر هستید؟",
+    description: "تست رایگان غربالگری ریسک سکته قلبی و مغزی بر اساس استانداردهای انجمن قلب آمریکا. ارزیابی فوری علائم و اعزام متخصص به منزل",
+    image: heartStrokeRiskQuizImage,
+    link: "/articles/heart-stroke-risk-quiz",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۲/۰۵"
+  },
   {
     id: 1115,
     title: "علائم پنهان سکته قلبی و مغزی؛ تشخیص سریع با تجهیزات پرتابل در منزل",
