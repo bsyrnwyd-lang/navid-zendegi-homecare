@@ -71,8 +71,16 @@ const HeartStrokeRiskQuizPage = () => {
 
   const result = getResult();
 
+  const RadioDot = ({ selected }: { selected: boolean }) => (
+    <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+      selected ? "border-primary" : "border-muted-foreground"
+    }`}>
+      {selected && <div className="w-2.5 h-2.5 rounded-full bg-primary" />}
+    </div>
+  );
+
   const optionClass = (selected: boolean) =>
-    `block w-full text-right p-4 rounded-lg border-2 cursor-pointer transition-all ${
+    `flex items-center gap-3 w-full text-right p-4 rounded-lg border-2 cursor-pointer transition-all ${
       selected
         ? "border-primary bg-primary/10 font-semibold"
         : "border-border hover:border-primary/50 bg-card"
@@ -180,13 +188,16 @@ const HeartStrokeRiskQuizPage = () => {
               </h2>
               <div className="space-y-2">
                 <button className={optionClass(answers.q1 === "a")} onClick={() => handleAnswer("q1", "a")}>
-                  الف) بله، شدید است.
+                  <RadioDot selected={answers.q1 === "a"} />
+                  <span>الف) بله، شدید است.</span>
                 </button>
                 <button className={optionClass(answers.q1 === "b")} onClick={() => handleAnswer("q1", "b")}>
-                  ب) بله، خفیف یا مبهم است.
+                  <RadioDot selected={answers.q1 === "b"} />
+                  <span>ب) بله، خفیف یا مبهم است.</span>
                 </button>
                 <button className={optionClass(answers.q1 === "c")} onClick={() => handleAnswer("q1", "c")}>
-                  ج) خیر.
+                  <RadioDot selected={answers.q1 === "c"} />
+                  <span>ج) خیر.</span>
                 </button>
               </div>
             </div>
@@ -198,13 +209,16 @@ const HeartStrokeRiskQuizPage = () => {
               </h2>
               <div className="space-y-2">
                 <button className={optionClass(answers.q2 === "a")} onClick={() => handleAnswer("q2", "a")}>
-                  الف) بله.
+                  <RadioDot selected={answers.q2 === "a"} />
+                  <span>الف) بله.</span>
                 </button>
                 <button className={optionClass(answers.q2 === "b")} onClick={() => handleAnswer("q2", "b")}>
-                  ب) فقط کمی تنگی نفس دارم.
+                  <RadioDot selected={answers.q2 === "b"} />
+                  <span>ب) فقط کمی تنگی نفس دارم.</span>
                 </button>
                 <button className={optionClass(answers.q2 === "c")} onClick={() => handleAnswer("q2", "c")}>
-                  ج) خیر.
+                  <RadioDot selected={answers.q2 === "c"} />
+                  <span>ج) خیر.</span>
                 </button>
               </div>
             </div>
@@ -216,13 +230,16 @@ const HeartStrokeRiskQuizPage = () => {
               </h2>
               <div className="space-y-2">
                 <button className={optionClass(answers.q3 === "a")} onClick={() => handleAnswer("q3", "a")}>
-                  الف) بله، ناگهانی شروع شده است.
+                  <RadioDot selected={answers.q3 === "a"} />
+                  <span>الف) بله، ناگهانی شروع شده است.</span>
                 </button>
                 <button className={optionClass(answers.q3 === "b")} onClick={() => handleAnswer("q3", "b")}>
-                  ب) گاهی اوقات دچار فراموشی کلمات می‌شوم.
+                  <RadioDot selected={answers.q3 === "b"} />
+                  <span>ب) گاهی اوقات دچار فراموشی کلمات می‌شوم.</span>
                 </button>
                 <button className={optionClass(answers.q3 === "c")} onClick={() => handleAnswer("q3", "c")}>
-                  ج) خیر.
+                  <RadioDot selected={answers.q3 === "c"} />
+                  <span>ج) خیر.</span>
                 </button>
               </div>
             </div>
@@ -234,13 +251,16 @@ const HeartStrokeRiskQuizPage = () => {
               </h2>
               <div className="space-y-2">
                 <button className={optionClass(answers.q4 === "a")} onClick={() => handleAnswer("q4", "a")}>
-                  الف) بله، ضعف شدید در یک طرف دارم.
+                  <RadioDot selected={answers.q4 === "a"} />
+                  <span>الف) بله، ضعف شدید در یک طرف دارم.</span>
                 </button>
                 <button className={optionClass(answers.q4 === "b")} onClick={() => handleAnswer("q4", "b")}>
-                  ب) کمی احساس گزگز یا مورمور دارم.
+                  <RadioDot selected={answers.q4 === "b"} />
+                  <span>ب) کمی احساس گزگز یا مورمور دارم.</span>
                 </button>
                 <button className={optionClass(answers.q4 === "c")} onClick={() => handleAnswer("q4", "c")}>
-                  ج) خیر.
+                  <RadioDot selected={answers.q4 === "c"} />
+                  <span>ج) خیر.</span>
                 </button>
               </div>
             </div>
