@@ -44,6 +44,7 @@ import ivabradineVsBetablockerImage from "@/assets/ivabradine-vs-betablocker.jpg
 import heartFailureDrugInteractionsImage from "@/assets/heart-failure-drug-interactions.jpg";
 import hiddenStrokeHeartAttackImage from "@/assets/hidden-stroke-heart-attack-symptoms.jpg";
 import heartStrokeRiskQuizImage from "@/assets/heart-stroke-risk-quiz.jpg";
+import repathaEvolocumabImage from "@/assets/repatha-evolocumab-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -60,12 +61,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1116) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1117) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1117,
+    title: "رپتا (Repatha)؛ پایان عصر کلسترول بالا؟ (تکنولوژی نوین در خدمت قلب)",
+    description: "راهنمای جامع داروی رپتا (اولوسوکومب): مکانیسم مهار PCSK9، تاریخچه، عوارض، و پایش با سونوگرافی داپلر و آزمایشگاه سیار در منزل",
+    image: repathaEvolocumabImage,
+    link: "/articles/repatha-evolocumab",
+    category: "دارو",
+    date: "۱۴۰۴/۱۲/۰۶"
+  },
   {
     id: 1116,
     title: "تست آنلاین ریسک سکته قلبی و مغزی؛ آیا در معرض خطر هستید؟",

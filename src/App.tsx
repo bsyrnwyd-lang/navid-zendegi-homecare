@@ -245,6 +245,7 @@ const IvabradineVsBetablockerPage = lazy(() => import("./pages/articles/Ivabradi
 const HeartFailureDrugInteractionsPage = lazy(() => import("./pages/articles/HeartFailureDrugInteractionsPage"));
 const HiddenStrokeHeartAttackPage = lazy(() => import("./pages/articles/HiddenStrokeHeartAttackPage"));
 const HeartStrokeRiskQuizPage = lazy(() => import("./pages/articles/HeartStrokeRiskQuizPage"));
+const RepathaEvolocumabPage = lazy(() => import("./pages/articles/RepathaEvolocumabPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -517,6 +518,7 @@ const App = () => (
                          <Route path="/articles/heart-failure-drug-interactions" element={<HeartFailureDrugInteractionsPage />} />
                          <Route path="/articles/hidden-stroke-heart-attack-symptoms" element={<HiddenStrokeHeartAttackPage />} />
                          <Route path="/articles/heart-stroke-risk-quiz" element={<HeartStrokeRiskQuizPage />} />
+                         <Route path="/articles/repatha-evolocumab" element={<RepathaEvolocumabPage />} />
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
