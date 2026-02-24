@@ -45,6 +45,7 @@ import heartFailureDrugInteractionsImage from "@/assets/heart-failure-drug-inter
 import hiddenStrokeHeartAttackImage from "@/assets/hidden-stroke-heart-attack-symptoms.jpg";
 import heartStrokeRiskQuizImage from "@/assets/heart-stroke-risk-quiz.jpg";
 import repathaEvolocumabImage from "@/assets/repatha-evolocumab-article.jpg";
+import famotidineImage from "@/assets/famotidine-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -61,12 +62,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1117) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1118) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1118,
+    title: "فاموتیدین؛ نگهبان هوشمند معده (تاریخچه، عملکرد و هشدارهای قلبی)",
+    description: "راهنمای جامع فاموتیدین: تاریخچه، مکانیسم مهار گیرنده H2، تفاوت درد قلب و معده، عوارض و خدمات پایش در منزل",
+    image: famotidineImage,
+    link: "/articles/famotidine",
+    category: "دارو",
+    date: "۱۴۰۴/۱۲/۰۶"
+  },
   {
     id: 1117,
     title: "رپتا (Repatha)؛ پایان عصر کلسترول بالا؟ (تکنولوژی نوین در خدمت قلب)",
