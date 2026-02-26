@@ -46,6 +46,7 @@ import hiddenStrokeHeartAttackImage from "@/assets/hidden-stroke-heart-attack-sy
 import heartStrokeRiskQuizImage from "@/assets/heart-stroke-risk-quiz.jpg";
 import repathaEvolocumabImage from "@/assets/repatha-evolocumab-article.jpg";
 import famotidineImage from "@/assets/famotidine-article.jpg";
+import downSyndromeHomeVisitImage from "@/assets/down-syndrome-home-visit.jpg";
 
 export interface ArticleData {
   id: number;
@@ -62,12 +63,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1118) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1119) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1119,
+    title: "ویزیت پزشک در منزل برای بیماران سندروم دان | مراقبت تخصصی در خانه",
+    description: "ویزیت پزشک در منزل برای بیماران سندروم دان با اعزام سریع پزشک عمومی و متخصص. دریافت خدمات پزشکی ایمن و تخصصی در خانه بدون نیاز به مراجعه حضوری.",
+    image: downSyndromeHomeVisitImage,
+    link: "/articles/down-syndrome-home-visit",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۲/۰۸"
+  },
   {
     id: 1118,
     title: "فاموتیدین؛ نگهبان هوشمند معده (تاریخچه، عملکرد و هشدارهای قلبی)",

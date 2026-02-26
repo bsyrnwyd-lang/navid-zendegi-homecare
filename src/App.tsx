@@ -247,6 +247,7 @@ const HiddenStrokeHeartAttackPage = lazy(() => import("./pages/articles/HiddenSt
 const HeartStrokeRiskQuizPage = lazy(() => import("./pages/articles/HeartStrokeRiskQuizPage"));
 const RepathaEvolocumabPage = lazy(() => import("./pages/articles/RepathaEvolocumabPage"));
 const FamotidinePage = lazy(() => import("./pages/articles/FamotidinePage"));
+const DownSyndromeHomeVisitPage = lazy(() => import("./pages/articles/DownSyndromeHomeVisitPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -520,7 +521,8 @@ const App = () => (
                          <Route path="/articles/hidden-stroke-heart-attack-symptoms" element={<HiddenStrokeHeartAttackPage />} />
                          <Route path="/articles/heart-stroke-risk-quiz" element={<HeartStrokeRiskQuizPage />} />
                          <Route path="/articles/repatha-evolocumab" element={<RepathaEvolocumabPage />} />
-                         <Route path="/articles/famotidine" element={<FamotidinePage />} />
+                          <Route path="/articles/famotidine" element={<FamotidinePage />} />
+                          <Route path="/articles/down-syndrome-home-visit" element={<DownSyndromeHomeVisitPage />} />
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
