@@ -50,6 +50,7 @@ import downSyndromeHomeVisitImage from "@/assets/down-syndrome-home-visit.jpg";
 import caffeineHeartEffectsImage from "@/assets/caffeine-heart-effects.jpg";
 import turnerSyndromeImage from "@/assets/turner-syndrome-article.jpg";
 import hivArticleImage from "@/assets/hiv-article.jpg";
+import hpvTreatmentGuideImage from "@/assets/hpv-treatment-guide.jpg";
 
 export interface ArticleData {
   id: number;
@@ -66,12 +67,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1122) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1123) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1123,
+    title: "از تفسیر آزمایش تا درمان قطعی زگیل تناسلی (HPV)",
+    description: "تفسیر آزمایش HPV مثبت، تیپ‌های کم‌خطر و پرخطر، درمان زگیل تناسلی، بهترین مکمل دفع HPV و آزمایش پاپ‌اسمیر در منزل",
+    image: hpvTreatmentGuideImage,
+    link: "/articles/hpv-treatment-guide",
+    category: "زنان",
+    date: "۱۴۰۴/۱۲/۰۹"
+  },
   {
     id: 1122,
     title: "HIV از فرضیه تا واقعیت؛ تاریخچه، علم و زندگی با ویروس",
