@@ -48,6 +48,7 @@ import repathaEvolocumabImage from "@/assets/repatha-evolocumab-article.jpg";
 import famotidineImage from "@/assets/famotidine-article.jpg";
 import downSyndromeHomeVisitImage from "@/assets/down-syndrome-home-visit.jpg";
 import caffeineHeartEffectsImage from "@/assets/caffeine-heart-effects.jpg";
+import turnerSyndromeImage from "@/assets/turner-syndrome-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -64,12 +65,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1120) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1121) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1121,
+    title: "سندرم ترنر؛ ژنتیک، علائم و پایش قلبی در منزل",
+    description: "بررسی سندرم ترنر: علت ژنتیکی، علائم ظاهری، ناهنجاری‌های قلبی و اهمیت اکو و هولتر در منزل. خدمات تخصصی نوید زندگی.",
+    image: turnerSyndromeImage,
+    link: "/articles/turner-syndrome",
+    category: "زنان",
+    date: "۱۴۰۴/۱۲/۰۹"
+  },
   {
     id: 1120,
     title: "تأثیرات کافئین بر قلب و سلامت؛ تیغ دو لبه قهوه",
