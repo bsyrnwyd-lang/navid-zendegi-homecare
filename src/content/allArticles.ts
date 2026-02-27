@@ -49,6 +49,7 @@ import famotidineImage from "@/assets/famotidine-article.jpg";
 import downSyndromeHomeVisitImage from "@/assets/down-syndrome-home-visit.jpg";
 import caffeineHeartEffectsImage from "@/assets/caffeine-heart-effects.jpg";
 import turnerSyndromeImage from "@/assets/turner-syndrome-article.jpg";
+import hivArticleImage from "@/assets/hiv-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -65,12 +66,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1121) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1122) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1122,
+    title: "HIV از فرضیه تا واقعیت؛ تاریخچه، علم و زندگی با ویروس",
+    description: "بررسی جامع HIV: تاریخچه، مکانیسم عملکرد، درمان مدرن ART، مفهوم U=U و خدمات آزمایش و پایش محرمانه در منزل نوید زندگی",
+    image: hivArticleImage,
+    link: "/articles/hiv-modern-treatment",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۲/۰۹"
+  },
   {
     id: 1121,
     title: "سندرم ترنر؛ ژنتیک، علائم و پایش قلبی در منزل",
