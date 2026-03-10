@@ -57,6 +57,7 @@ import stentSmokingImage from "@/assets/stent-smoking-article.jpg";
 import acidRainSkinImage from "@/assets/acid-rain-skin-article.jpg";
 import fruitsHeartHealthImage from "@/assets/fruits-heart-health.jpg";
 import leechTherapyHeartImage from "@/assets/leech-therapy-heart.jpg";
+import traditionalMedicineDangersImage from "@/assets/traditional-medicine-dangers.jpg";
 
 export interface ArticleData {
   id: number;
@@ -79,6 +80,15 @@ export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1130,
+    title: "خطرات طب سنتی غیرعلمی: تداخلات دارویی و آسیب کبد",
+    description: "بررسی علمی خطرات داروهای گیاهی غیراصولی: تداخل با داروهای قلب، سمیت کبدی و کلیوی، آلودگی میکروبی و نقش آزمایش خون در منزل",
+    image: traditionalMedicineDangersImage,
+    link: "/articles/traditional-medicine-dangers",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۲/۲۰"
+  },
   {
     id: 1129,
     title: "زالودرمانی و گرفتگی قلب: حقایق علمی و خطرات",
