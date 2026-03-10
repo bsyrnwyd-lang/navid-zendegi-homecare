@@ -57,6 +57,7 @@ import stentSmokingImage from "@/assets/stent-smoking-article.jpg";
 import acidRainSkinImage from "@/assets/acid-rain-skin-article.jpg";
 import fruitsHeartHealthImage from "@/assets/fruits-heart-health.jpg";
 import leechTherapyHeartImage from "@/assets/leech-therapy-heart.jpg";
+import traditionalMedicineDangersImage from "@/assets/traditional-medicine-dangers.jpg";
 
 export interface ArticleData {
   id: number;
