@@ -254,6 +254,7 @@ const HIVArticlePage = lazy(() => import("./pages/articles/HIVArticlePage"));
 const HPVExerciseStressPage = lazy(() => import("./pages/articles/HPVExerciseStressPage"));
 const PSVTArticlePage = lazy(() => import("./pages/articles/PSVTArticlePage"));
 const StentSmokingArticlePage = lazy(() => import("./pages/articles/StentSmokingArticlePage"));
+const AcidRainSkinPage = lazy(() => import("./pages/articles/AcidRainSkinPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -535,6 +536,7 @@ const App = () => (
                           <Route path="/articles/hpv-exercise-stress" element={<HPVExerciseStressPage />} />
                           <Route path="/articles/psvt-sudden-tachycardia" element={<PSVTArticlePage />} />
                           <Route path="/articles/stent-smoking-danger" element={<StentSmokingArticlePage />} />
+                          <Route path="/articles/acid-rain-skin" element={<AcidRainSkinPage />} />
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

@@ -54,6 +54,7 @@ import hpvTreatmentGuideImage from "@/assets/hpv-treatment-guide.jpg";
 import hpvExerciseStressImage from "@/assets/hpv-exercise-stress.jpg";
 import psvtArticleImage from "@/assets/psvt-article.jpg";
 import stentSmokingImage from "@/assets/stent-smoking-article.jpg";
+import acidRainSkinImage from "@/assets/acid-rain-skin-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -70,12 +71,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1126) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1127) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1127,
+    title: "باران اسیدی؛ تهدیدی شیمیایی برای سلامت پوست",
+    description: "بررسی علمی تأثیر باران اسیدی بر پوست: تخریب سد دفاعی، التهاب و فلزات سنگین. خدمات ویزیت متخصص پوست و آزمایش خون در منزل",
+    image: acidRainSkinImage,
+    link: "/articles/acid-rain-skin",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۲/۲۰"
+  },
   {
     id: 1126,
     title: "استنت و سیگار؛ چرا این ترکیب مرگبار است؟",
