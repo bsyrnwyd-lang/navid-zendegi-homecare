@@ -56,6 +56,7 @@ import psvtArticleImage from "@/assets/psvt-article.jpg";
 import stentSmokingImage from "@/assets/stent-smoking-article.jpg";
 import acidRainSkinImage from "@/assets/acid-rain-skin-article.jpg";
 import fruitsHeartHealthImage from "@/assets/fruits-heart-health.jpg";
+import leechTherapyHeartImage from "@/assets/leech-therapy-heart.jpg";
 
 export interface ArticleData {
   id: number;
@@ -78,6 +79,15 @@ export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1129,
+    title: "زالودرمانی و گرفتگی قلب: حقایق علمی و خطرات",
+    description: "بررسی علمی زالودرمانی برای بیماران قلبی، خطرات تداخل با داروهای ضدلخته و جایگزین‌های تشخیصی مدرن در منزل",
+    image: leechTherapyHeartImage,
+    link: "/articles/leech-therapy-heart",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۲/۲۰"
+  },
   {
     id: 1128,
     title: "بهترین میوه‌ها برای سلامت قلب و عروق",
