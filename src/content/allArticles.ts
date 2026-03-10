@@ -52,6 +52,7 @@ import turnerSyndromeImage from "@/assets/turner-syndrome-article.jpg";
 import hivArticleImage from "@/assets/hiv-article.jpg";
 import hpvTreatmentGuideImage from "@/assets/hpv-treatment-guide.jpg";
 import hpvExerciseStressImage from "@/assets/hpv-exercise-stress.jpg";
+import psvtArticleImage from "@/assets/psvt-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -68,12 +69,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1124) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1125) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1125,
+    title: "PSVT؛ تشخیص و درمان تپش قلب ناگهانی در منزل",
+    description: "راهنمای جامع تپش قلب ناگهانی PSVT: مکانیسم، علائم، تشخیص با هولتر قلب در منزل و درمان. خدمات نوار قلب و اکو در منزل نوید زندگی",
+    image: psvtArticleImage,
+    link: "/articles/psvt-sudden-tachycardia",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۲/۲۰"
+  },
   {
     id: 1124,
     title: "ورزش و مدیریت استرس؛ کاتالیزورهای مخفی در دفع ویروس HPV",
