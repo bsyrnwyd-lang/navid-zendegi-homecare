@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/psvt-article.jpg";
 import heartPalpitationsImage from "@/assets/heart-palpitations.jpg";
-import ecgHomeImage from "@/assets/ecg-home.jpg";
+import ecgHomeImage from "@/assets/ecg-home-service.jpg";
 import caffeineHeartImage from "@/assets/caffeine-heart-effects.jpg";
 
 const PSVTArticlePage = () => {
