@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/acid-rain-skin-article.jpg";
 import airPollutionImage from "@/assets/air-pollution-article.jpg";
-import skinItchingImage from "@/assets/skin-itching-causes.jpg";
-import hairLossImage from "@/assets/hair-loss-causes.jpg";
+import skinItchingImage from "@/assets/skin-itching-article.jpg";
+import hairLossImage from "@/assets/hair-loss-article.jpg";
 
 const AcidRainSkinPage = () => {
   const handleCall = () => {

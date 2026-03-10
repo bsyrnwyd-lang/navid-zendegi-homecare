@@ -8,7 +8,7 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/stent-smoking-article.jpg";
-import smokingHeartImage from "@/assets/smoking-heart-effects.jpg";
+import smokingHeartImage from "@/assets/drug-cardiovascular-effects.jpg";
 import echoHomeImage from "@/assets/echo-home-service.jpg";
 import silentHeartAttackImage from "@/assets/silent-heart-attack.jpg";
 
