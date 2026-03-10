@@ -53,6 +53,7 @@ import hivArticleImage from "@/assets/hiv-article.jpg";
 import hpvTreatmentGuideImage from "@/assets/hpv-treatment-guide.jpg";
 import hpvExerciseStressImage from "@/assets/hpv-exercise-stress.jpg";
 import psvtArticleImage from "@/assets/psvt-article.jpg";
+import stentSmokingImage from "@/assets/stent-smoking-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -69,12 +70,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1125) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1126) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1126,
+    title: "استنت و سیگار؛ چرا این ترکیب مرگبار است؟",
+    description: "بررسی علمی تأثیر سیگار بر استنت قلب: لخته شدن، تنگی مجدد و اسپاسم عروق. خدمات اکو قلب و آزمایش خون در منزل نوید زندگی",
+    image: stentSmokingImage,
+    link: "/articles/stent-smoking-danger",
+    category: "قلب و عروق",
+    date: "۱۴۰۴/۱۲/۲۰"
+  },
   {
     id: 1125,
     title: "PSVT؛ تشخیص و درمان تپش قلب ناگهانی در منزل",
