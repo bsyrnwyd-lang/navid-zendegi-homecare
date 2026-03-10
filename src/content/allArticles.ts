@@ -52,6 +52,7 @@ import turnerSyndromeImage from "@/assets/turner-syndrome-article.jpg";
 import hivArticleImage from "@/assets/hiv-article.jpg";
 import hpvTreatmentGuideImage from "@/assets/hpv-treatment-guide.jpg";
 import hpvExerciseStressImage from "@/assets/hpv-exercise-stress.jpg";
+import psvtArticleImage from "@/assets/psvt-article.jpg";
 
 export interface ArticleData {
   id: number;
