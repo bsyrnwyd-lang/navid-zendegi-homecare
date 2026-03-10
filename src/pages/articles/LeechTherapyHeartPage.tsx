@@ -9,7 +9,7 @@ import { AlertTriangle } from "lucide-react";
 import leechTherapyImage from "@/assets/leech-therapy-heart.jpg";
 import ecgImage from "@/assets/ecg-home-service.jpg";
 import cardiologyImage from "@/assets/cardiology-home-visit.jpg";
-import holterImage from "@/assets/holter-monitoring-home.jpg";
+import holterImage from "@/assets/holter-home-service.jpg";
 
 const LeechTherapyHeartPage = () => {
   const faqs = [
