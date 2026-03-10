@@ -252,6 +252,7 @@ const CaffeineHeartEffectsPage = lazy(() => import("./pages/articles/CaffeineHea
 const TurnerSyndromePage = lazy(() => import("./pages/articles/TurnerSyndromePage"));
 const HIVArticlePage = lazy(() => import("./pages/articles/HIVArticlePage"));
 const HPVExerciseStressPage = lazy(() => import("./pages/articles/HPVExerciseStressPage"));
+const PSVTArticlePage = lazy(() => import("./pages/articles/PSVTArticlePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
