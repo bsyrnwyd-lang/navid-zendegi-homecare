@@ -251,6 +251,7 @@ const DownSyndromeHomeVisitPage = lazy(() => import("./pages/articles/DownSyndro
 const CaffeineHeartEffectsPage = lazy(() => import("./pages/articles/CaffeineHeartEffectsPage"));
 const TurnerSyndromePage = lazy(() => import("./pages/articles/TurnerSyndromePage"));
 const HIVArticlePage = lazy(() => import("./pages/articles/HIVArticlePage"));
+const HPVExerciseStressPage = lazy(() => import("./pages/articles/HPVExerciseStressPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -529,6 +530,7 @@ const App = () => (
                           <Route path="/articles/caffeine-heart-effects" element={<CaffeineHeartEffectsPage />} />
                           <Route path="/articles/turner-syndrome" element={<TurnerSyndromePage />} />
                           <Route path="/articles/hiv-modern-treatment" element={<HIVArticlePage />} />
+                          <Route path="/articles/hpv-exercise-stress" element={<HPVExerciseStressPage />} />
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

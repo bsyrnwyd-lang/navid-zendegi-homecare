@@ -51,6 +51,7 @@ import caffeineHeartEffectsImage from "@/assets/caffeine-heart-effects.jpg";
 import turnerSyndromeImage from "@/assets/turner-syndrome-article.jpg";
 import hivArticleImage from "@/assets/hiv-article.jpg";
 import hpvTreatmentGuideImage from "@/assets/hpv-treatment-guide.jpg";
+import hpvExerciseStressImage from "@/assets/hpv-exercise-stress.jpg";
 
 export interface ArticleData {
   id: number;
@@ -67,12 +68,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1123) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1124) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1124,
+    title: "ورزش و مدیریت استرس؛ کاتالیزورهای مخفی در دفع ویروس HPV",
+    description: "تأثیر ورزش، یوگا و مدیریت استرس بر تقویت سیستم ایمنی و سرعت دفع ویروس HPV. خدمات هولتر قلب و آزمایش هورمونی در منزل",
+    image: hpvExerciseStressImage,
+    link: "/articles/hpv-exercise-stress",
+    category: "زنان",
+    date: "۱۴۰۴/۱۲/۲۰"
+  },
   {
     id: 1123,
     title: "از تفسیر آزمایش تا درمان قطعی زگیل تناسلی (HPV)",

@@ -4,7 +4,7 @@ import { useCallback, useRef } from 'react';
 const prefetchedRoutes = new Set<string>();
 
 export function usePrefetch() {
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const prefetchRoute = useCallback((path: string) => {
     // Don't prefetch if already done
