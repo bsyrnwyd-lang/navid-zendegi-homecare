@@ -55,6 +55,7 @@ import hpvExerciseStressImage from "@/assets/hpv-exercise-stress.jpg";
 import psvtArticleImage from "@/assets/psvt-article.jpg";
 import stentSmokingImage from "@/assets/stent-smoking-article.jpg";
 import acidRainSkinImage from "@/assets/acid-rain-skin-article.jpg";
+import fruitsHeartHealthImage from "@/assets/fruits-heart-health.jpg";
 
 export interface ArticleData {
   id: number;
@@ -71,12 +72,21 @@ export interface ArticleData {
  * برای اضافه کردن مقاله جدید:
  * 1. عکس را import کنید
  * 2. مقاله را به ابتدای این آرایه اضافه کنید
- * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1127) قرار دهید
+ * 3. ID را یکی بیشتر از بالاترین عدد (در حال حاضر 1128) قرار دهید
  */
 export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1128,
+    title: "بهترین میوه‌ها برای سلامت قلب و عروق",
+    description: "راهنمای علمی بهترین میوه‌ها برای قلب: انار، موز، مرکبات و سیب. تداخل دارویی گریپ‌فروت و آزمایش خون در منزل",
+    image: fruitsHeartHealthImage,
+    link: "/articles/fruits-heart-health",
+    category: "تغذیه",
+    date: "۱۴۰۴/۱۲/۲۰"
+  },
   {
     id: 1127,
     title: "باران اسیدی؛ تهدیدی شیمیایی برای سلامت پوست",
