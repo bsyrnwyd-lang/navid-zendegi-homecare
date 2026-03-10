@@ -251,6 +251,7 @@ const DownSyndromeHomeVisitPage = lazy(() => import("./pages/articles/DownSyndro
 const CaffeineHeartEffectsPage = lazy(() => import("./pages/articles/CaffeineHeartEffectsPage"));
 const TurnerSyndromePage = lazy(() => import("./pages/articles/TurnerSyndromePage"));
 const HIVArticlePage = lazy(() => import("./pages/articles/HIVArticlePage"));
+const HPVExerciseStressPage = lazy(() => import("./pages/articles/HPVExerciseStressPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
