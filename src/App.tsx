@@ -257,6 +257,7 @@ const StentSmokingArticlePage = lazy(() => import("./pages/articles/StentSmoking
 const AcidRainSkinPage = lazy(() => import("./pages/articles/AcidRainSkinPage"));
 const FruitsHeartHealthPage = lazy(() => import("./pages/articles/FruitsHeartHealthPage"));
 const LeechTherapyHeartPage = lazy(() => import("./pages/articles/LeechTherapyHeartPage"));
+const TraditionalMedicineDangersPage = lazy(() => import("./pages/articles/TraditionalMedicineDangersPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
