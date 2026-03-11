@@ -58,6 +58,7 @@ import acidRainSkinImage from "@/assets/acid-rain-skin-article.jpg";
 import fruitsHeartHealthImage from "@/assets/fruits-heart-health.jpg";
 import leechTherapyHeartImage from "@/assets/leech-therapy-heart.jpg";
 import traditionalMedicineDangersImage from "@/assets/traditional-medicine-dangers.jpg";
+import ultrasoundPregnancySafetyImage from "@/assets/ultrasound-pregnancy-safety.jpg";
 
 export interface ArticleData {
   id: number;
