@@ -59,6 +59,7 @@ import fruitsHeartHealthImage from "@/assets/fruits-heart-health.jpg";
 import leechTherapyHeartImage from "@/assets/leech-therapy-heart.jpg";
 import traditionalMedicineDangersImage from "@/assets/traditional-medicine-dangers.jpg";
 import ultrasoundPregnancySafetyImage from "@/assets/ultrasound-pregnancy-safety.jpg";
+import mriImagingImage from "@/assets/mri-imaging-article.jpg";
 
 export interface ArticleData {
   id: number;
