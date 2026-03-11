@@ -260,6 +260,7 @@ const LeechTherapyHeartPage = lazy(() => import("./pages/articles/LeechTherapyHe
 const TraditionalMedicineDangersPage = lazy(() => import("./pages/articles/TraditionalMedicineDangersPage"));
 const UltrasoundPregnancySafetyPage = lazy(() => import("./pages/articles/UltrasoundPregnancySafetyPage"));
 const MRIImagingArticlePage = lazy(() => import("./pages/articles/MRIImagingArticlePage"));
+const ColdTreatmentHomePage = lazy(() => import("./pages/articles/ColdTreatmentHomePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
