@@ -60,6 +60,7 @@ import leechTherapyHeartImage from "@/assets/leech-therapy-heart.jpg";
 import traditionalMedicineDangersImage from "@/assets/traditional-medicine-dangers.jpg";
 import ultrasoundPregnancySafetyImage from "@/assets/ultrasound-pregnancy-safety.jpg";
 import mriImagingImage from "@/assets/mri-imaging-article.jpg";
+import coldTreatmentHomeImage from "@/assets/cold-treatment-home-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -82,6 +83,15 @@ export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1133,
+    title: "درمان سرماخوردگی در خانه: بهترین روش‌های علمی ۲۰۲۶",
+    description: "بهترین روش‌های علمی درمان سرماخوردگی: عسل، روی، هیدراتاسیون و هشدار مصرف آنتی‌بیوتیک خودسرانه",
+    image: coldTreatmentHomeImage,
+    link: "/articles/cold-treatment-home",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۲/۲۱"
+  },
   {
     id: 1132,
     title: "ام‌آر‌آی (MRI) چیست؟ راهنمای کامل تصویربرداری رزونانس مغناطیسی",
