@@ -546,6 +546,7 @@ const App = () => (
                           <Route path="/articles/leech-therapy-heart" element={<LeechTherapyHeartPage />} />
                            <Route path="/articles/traditional-medicine-dangers" element={<TraditionalMedicineDangersPage />} />
                            <Route path="/articles/ultrasound-pregnancy-safety" element={<UltrasoundPregnancySafetyPage />} />
+                           <Route path="/articles/mri-imaging-guide" element={<MRIImagingArticlePage />} />
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
