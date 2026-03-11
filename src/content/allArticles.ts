@@ -58,6 +58,7 @@ import acidRainSkinImage from "@/assets/acid-rain-skin-article.jpg";
 import fruitsHeartHealthImage from "@/assets/fruits-heart-health.jpg";
 import leechTherapyHeartImage from "@/assets/leech-therapy-heart.jpg";
 import traditionalMedicineDangersImage from "@/assets/traditional-medicine-dangers.jpg";
+import ultrasoundPregnancySafetyImage from "@/assets/ultrasound-pregnancy-safety.jpg";
 
 export interface ArticleData {
   id: number;
@@ -80,6 +81,15 @@ export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1131,
+    title: "ایمنی سونوگرافی در بارداری: آیا امواج صوتی به جنین آسیب می‌زند؟",
+    description: "بررسی علمی ایمنی سونوگرافی در بارداری، خطرات احتمالی امواج صوتی، اصل ALARA و خدمات سونوگرافی ایمن در منزل",
+    image: ultrasoundPregnancySafetyImage,
+    link: "/articles/ultrasound-pregnancy-safety",
+    category: "زنان",
+    date: "۱۴۰۴/۱۲/۲۱"
+  },
   {
     id: 1130,
     title: "خطرات طب سنتی غیرعلمی: تداخلات دارویی و آسیب کبد",
