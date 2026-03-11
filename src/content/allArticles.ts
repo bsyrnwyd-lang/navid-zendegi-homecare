@@ -59,6 +59,7 @@ import fruitsHeartHealthImage from "@/assets/fruits-heart-health.jpg";
 import leechTherapyHeartImage from "@/assets/leech-therapy-heart.jpg";
 import traditionalMedicineDangersImage from "@/assets/traditional-medicine-dangers.jpg";
 import ultrasoundPregnancySafetyImage from "@/assets/ultrasound-pregnancy-safety.jpg";
+import mriImagingImage from "@/assets/mri-imaging-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -81,6 +82,15 @@ export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1132,
+    title: "ام‌آر‌آی (MRI) چیست؟ راهنمای کامل تصویربرداری رزونانس مغناطیسی",
+    description: "راهنمای جامع ام‌آر‌آی: مکانیسم کار، کاربردها، تفاوت با سی‌تی‌اسکن، موارد منع و نقش خدمات نوید زندگی",
+    image: mriImagingImage,
+    link: "/articles/mri-imaging-guide",
+    category: "سلامت عمومی",
+    date: "۱۴۰۴/۱۲/۲۱"
+  },
   {
     id: 1131,
     title: "ایمنی سونوگرافی در بارداری: آیا امواج صوتی به جنین آسیب می‌زند؟",
