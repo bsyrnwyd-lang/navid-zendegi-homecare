@@ -259,6 +259,7 @@ const FruitsHeartHealthPage = lazy(() => import("./pages/articles/FruitsHeartHea
 const LeechTherapyHeartPage = lazy(() => import("./pages/articles/LeechTherapyHeartPage"));
 const TraditionalMedicineDangersPage = lazy(() => import("./pages/articles/TraditionalMedicineDangersPage"));
 const UltrasoundPregnancySafetyPage = lazy(() => import("./pages/articles/UltrasoundPregnancySafetyPage"));
+const MRIImagingArticlePage = lazy(() => import("./pages/articles/MRIImagingArticlePage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
