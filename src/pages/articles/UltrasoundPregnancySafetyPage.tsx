@@ -108,8 +108,8 @@ const UltrasoundPregnancySafetyPage = () => {
           سونوگرافی یکی از بزرگ‌ترین دستاوردهای پزشکی مدرن در مراقبت‌های دوران بارداری است. با این حال، بسیاری از مادران نگران هستند که آیا تابش امواج صوتی می‌تواند به بافت‌های ظریف جنین آسیب بزند یا خیر. در این مقاله، این موضوع را از دیدگاه علمی بررسی می‌کنیم.
         </p>
 
-        <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-8">
-          <p className="text-amber-800 dark:text-amber-200 text-sm font-medium">
+        <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4 mb-8">
+          <p className="text-destructive text-sm font-medium">
             ⚠️ هشدار: هرگونه تصمیم درباره انجام یا عدم انجام سونوگرافی باید با مشورت پزشک متخصص باشد. از خوددرمانی و تصمیم‌گیری خودسرانه پرهیز کنید.
           </p>
         </div>
