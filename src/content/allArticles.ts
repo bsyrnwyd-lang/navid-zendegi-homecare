@@ -61,6 +61,7 @@ import traditionalMedicineDangersImage from "@/assets/traditional-medicine-dange
 import ultrasoundPregnancySafetyImage from "@/assets/ultrasound-pregnancy-safety.jpg";
 import mriImagingImage from "@/assets/mri-imaging-article.jpg";
 import coldTreatmentHomeImage from "@/assets/cold-treatment-home-article.jpg";
+import anomalyScanImage from "@/assets/anomaly-scan-pregnancy-article.jpg";
 
 export interface ArticleData {
   id: number;
@@ -83,6 +84,15 @@ export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1134,
+    title: "سونوگرافی آنومالی؛ راهنمای کامل غربالگری مرحله دوم بارداری",
+    description: "راهنمای جامع سونوگرافی آنومالی: بهترین زمان (هفته ۱۸-۲۲)، اندام‌های مورد بررسی، تعیین جنسیت و خدمات سونوگرافی پرتابل در منزل",
+    image: anomalyScanImage,
+    link: "/articles/anomaly-scan-pregnancy",
+    category: "زنان",
+    date: "۱۴۰۴/۱۲/۲۲"
+  },
   {
     id: 1133,
     title: "درمان سرماخوردگی در خانه: بهترین روش‌های علمی ۲۰۲۶",
