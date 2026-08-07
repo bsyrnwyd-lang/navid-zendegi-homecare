@@ -551,8 +551,10 @@ const App = () => (
                            <Route path="/articles/traditional-medicine-dangers" element={<TraditionalMedicineDangersPage />} />
                            <Route path="/articles/ultrasound-pregnancy-safety" element={<UltrasoundPregnancySafetyPage />} />
                            <Route path="/articles/mri-imaging-guide" element={<MRIImagingArticlePage />} />
-                           <Route path="/articles/cold-treatment-home" element={<ColdTreatmentHomePage />} />
-                           <Route path="/articles/anomaly-scan-pregnancy" element={<AnomalyScanPregnancyPage />} />
+                            <Route path="/articles/cold-treatment-home" element={<ColdTreatmentHomePage />} />
+                            <Route path="/articles/anomaly-scan-pregnancy" element={<AnomalyScanPregnancyPage />} />
+                            <Route path="/articles/cellulite-treatment" element={<CelluliteTreatmentPage />} />
+
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
