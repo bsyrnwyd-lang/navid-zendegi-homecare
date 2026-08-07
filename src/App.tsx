@@ -262,6 +262,8 @@ const UltrasoundPregnancySafetyPage = lazy(() => import("./pages/articles/Ultras
 const MRIImagingArticlePage = lazy(() => import("./pages/articles/MRIImagingArticlePage"));
 const ColdTreatmentHomePage = lazy(() => import("./pages/articles/ColdTreatmentHomePage"));
 const AnomalyScanPregnancyPage = lazy(() => import("./pages/articles/AnomalyScanPregnancyPage"));
+const CelluliteTreatmentPage = lazy(() => import("./pages/articles/CelluliteTreatmentPage"));
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -549,8 +551,10 @@ const App = () => (
                            <Route path="/articles/traditional-medicine-dangers" element={<TraditionalMedicineDangersPage />} />
                            <Route path="/articles/ultrasound-pregnancy-safety" element={<UltrasoundPregnancySafetyPage />} />
                            <Route path="/articles/mri-imaging-guide" element={<MRIImagingArticlePage />} />
-                           <Route path="/articles/cold-treatment-home" element={<ColdTreatmentHomePage />} />
-                           <Route path="/articles/anomaly-scan-pregnancy" element={<AnomalyScanPregnancyPage />} />
+                            <Route path="/articles/cold-treatment-home" element={<ColdTreatmentHomePage />} />
+                            <Route path="/articles/anomaly-scan-pregnancy" element={<AnomalyScanPregnancyPage />} />
+                            <Route path="/articles/cellulite-treatment" element={<CelluliteTreatmentPage />} />
+
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
