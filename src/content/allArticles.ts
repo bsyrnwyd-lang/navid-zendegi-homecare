@@ -62,6 +62,8 @@ import ultrasoundPregnancySafetyImage from "@/assets/ultrasound-pregnancy-safety
 import mriImagingImage from "@/assets/mri-imaging-article.jpg";
 import coldTreatmentHomeImage from "@/assets/cold-treatment-home-article.jpg";
 import anomalyScanImage from "@/assets/anomaly-scan-pregnancy-article.jpg";
+import celluliteTreatmentImage from "@/assets/cellulite-treatment-article.jpg";
+
 
 export interface ArticleData {
   id: number;
