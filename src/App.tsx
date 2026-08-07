@@ -262,6 +262,8 @@ const UltrasoundPregnancySafetyPage = lazy(() => import("./pages/articles/Ultras
 const MRIImagingArticlePage = lazy(() => import("./pages/articles/MRIImagingArticlePage"));
 const ColdTreatmentHomePage = lazy(() => import("./pages/articles/ColdTreatmentHomePage"));
 const AnomalyScanPregnancyPage = lazy(() => import("./pages/articles/AnomalyScanPregnancyPage"));
+const CelluliteTreatmentPage = lazy(() => import("./pages/articles/CelluliteTreatmentPage"));
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
