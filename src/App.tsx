@@ -17,6 +17,7 @@ const AboutUsPage = lazy(() => import("./pages/AboutUsPage"));
 const PricingPage = lazy(() => import("./pages/PricingPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const CollaborationPage = lazy(() => import("./pages/CollaborationPage"));
+const DoctorsPage = lazy(() => import("./pages/DoctorsPage"));
 const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
 
 // Service pages
@@ -303,6 +304,7 @@ const App = () => (
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/collaboration" element={<CollaborationPage />} />
+          <Route path="/doctors" element={<DoctorsPage />} />
           <Route path="/articles" element={<ArticlesPage />} />
           
           {/* Service Pages */}

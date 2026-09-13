@@ -44,6 +44,7 @@ const Header = memo(() => {
     { to: "/services/holter", label: "هولتر در منزل" },
     { to: "/general-doctor", label: "پزشک عمومی در منزل" },
     { to: "/services/specialist", label: "متخصص در منزل" },
+    { to: "/doctors", label: "پزشکان" },
     { to: "/pricing", label: "تعرفه خدمات" },
     { to: "/contact", label: "تماس با ما" }
   ];
