@@ -124,8 +124,7 @@ const DoctorsPage = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12 bg-muted/30 rounded-lg">
-                <Stethoscope className="w-12 h-12 text-primary/60 mx-auto mb-4" />
+              <div className="text-center py-8">
                 <p className="text-lg text-foreground mb-2">لیست پزشکان به زودی تکمیل می‌شود</p>
                 <p className="text-muted-foreground">
                   برای اطلاع از پزشکان فعال و رزرو ویزیت در منزل، همین حالا با ما تماس بگیرید.
