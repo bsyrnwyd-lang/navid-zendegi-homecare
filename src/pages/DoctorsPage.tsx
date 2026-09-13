@@ -184,15 +184,13 @@ const DoctorsPage = () => {
               links={serviceLinks}
             />
 
-            <div className="mt-8 p-6 bg-muted/30 rounded-lg">
-              <h3 className="text-lg font-semibold mb-4">مقالات مرتبط</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                <li><Link to="/articles/specialist-home-visit" className="text-primary hover:underline text-sm">ویزیت متخصص در منزل</Link></li>
-                <li><Link to="/articles/cardiology-home-services" className="text-primary hover:underline text-sm">خدمات قلب در منزل</Link></li>
-                <li><Link to="/articles/echo-home" className="text-primary hover:underline text-sm">اکو در منزل</Link></li>
-                <li><Link to="/articles/ecg-home" className="text-primary hover:underline text-sm">نوار قلب در منزل</Link></li>
-              </ul>
-            </div>
+            <h3 className="text-lg font-semibold mt-8 mb-4">مقالات مرتبط</h3>
+            <ul className="space-y-2">
+              <li><Link to="/articles/specialist-home-visit" className="text-primary hover:underline text-sm">ویزیت متخصص در منزل</Link></li>
+              <li><Link to="/articles/cardiology-home-services" className="text-primary hover:underline text-sm">خدمات قلب در منزل</Link></li>
+              <li><Link to="/articles/echo-home" className="text-primary hover:underline text-sm">اکو در منزل</Link></li>
+              <li><Link to="/articles/ecg-home" className="text-primary hover:underline text-sm">نوار قلب در منزل</Link></li>
+            </ul>
           </div>
         </section>
 
