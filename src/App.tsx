@@ -264,6 +264,7 @@ const MRIImagingArticlePage = lazy(() => import("./pages/articles/MRIImagingArti
 const ColdTreatmentHomePage = lazy(() => import("./pages/articles/ColdTreatmentHomePage"));
 const AnomalyScanPregnancyPage = lazy(() => import("./pages/articles/AnomalyScanPregnancyPage"));
 const CelluliteTreatmentPage = lazy(() => import("./pages/articles/CelluliteTreatmentPage"));
+const AnemiaHeartPage = lazy(() => import("./pages/articles/AnemiaHeartPage"));
 
 
 const queryClient = new QueryClient({
@@ -556,6 +557,7 @@ const App = () => (
                             <Route path="/articles/cold-treatment-home" element={<ColdTreatmentHomePage />} />
                             <Route path="/articles/anomaly-scan-pregnancy" element={<AnomalyScanPregnancyPage />} />
                             <Route path="/articles/cellulite-treatment" element={<CelluliteTreatmentPage />} />
+                            <Route path="/articles/anemia-heart" element={<AnemiaHeartPage />} />
 
 
                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

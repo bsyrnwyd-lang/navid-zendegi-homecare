@@ -5,7 +5,7 @@
  * صفحه اصلی و صفحه مقالات خودکار آپدیت می‌شوند
  * 
  * نکته مهم: ID مقاله جدید باید بیشتر از بالاترین ID موجود باشد
- * در حال حاضر بالاترین ID: 1135
+ * در حال حاضر بالاترین ID: 1136
  */
 
 // Import all article images
@@ -63,6 +63,7 @@ import mriImagingImage from "@/assets/mri-imaging-article.jpg";
 import coldTreatmentHomeImage from "@/assets/cold-treatment-home-article.jpg";
 import anomalyScanImage from "@/assets/anomaly-scan-pregnancy-article.jpg";
 import celluliteTreatmentImage from "@/assets/cellulite-treatment-article.jpg";
+import anemiaHeartImage from "@/assets/anemia-heart-article.jpg";
 
 
 export interface ArticleData {
@@ -86,6 +87,15 @@ export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1136,
+    title: "کم‌خونی و قلب؛ وقتی فقر آهن قلب را خسته می‌کند",
+    description: "رابطه کم‌خونی و فقر آهن با بیماری قلبی: علائم، آزمایش CBC و فریتین در منزل، نوار قلب و اکو در منزل و هشدار خوددرمانی",
+    image: anemiaHeartImage,
+    link: "/articles/anemia-heart",
+    category: "قلب و عروق",
+    date: "۱۴۰۵/۰۶/۲۴"
+  },
   {
     id: 1135,
     title: "سلولیت (Cellulite)؛ علت، درمان و نقش پایش‌های تخصصی در منزل",
