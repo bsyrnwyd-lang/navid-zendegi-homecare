@@ -264,6 +264,7 @@ const MRIImagingArticlePage = lazy(() => import("./pages/articles/MRIImagingArti
 const ColdTreatmentHomePage = lazy(() => import("./pages/articles/ColdTreatmentHomePage"));
 const AnomalyScanPregnancyPage = lazy(() => import("./pages/articles/AnomalyScanPregnancyPage"));
 const CelluliteTreatmentPage = lazy(() => import("./pages/articles/CelluliteTreatmentPage"));
+const AnemiaHeartPage = lazy(() => import("./pages/articles/AnemiaHeartPage"));
 
 
 const queryClient = new QueryClient({
