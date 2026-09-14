@@ -209,7 +209,7 @@ const AnemiaHeartPage = () => {
 
               <h3 className="text-xl font-semibold mt-4 mb-2">ویزیت پزشک و تزریق‌های درمانی در منزل</h3>
               <p>
-                پزشک متخصص با <Link to="/services/specialist-doctor" className="text-primary hover:underline font-semibold">ویزیت در منزل</Link> علت کم‌خونی را مشخص و درمان را شروع می‌کند. در مواردی که قرص آهن جواب نمی‌دهد یا تحمل آن سخت است (تهوع شدید)، <Link to="/services/nursing" className="text-primary hover:underline font-semibold">خدمات پرستاری در منزل</Link> آمپول آهن وریدی و سایر تزریق‌ها را با استانداردهای ایمن اجرا می‌کند.
+                پزشک متخصص با <Link to="/services/specialist" className="text-primary hover:underline font-semibold">ویزیت در منزل</Link> علت کم‌خونی را مشخص و درمان را شروع می‌کند. در مواردی که قرص آهن جواب نمی‌دهد یا تحمل آن سخت است (تهوع شدید)، <Link to="/services/nursing" className="text-primary hover:underline font-semibold">خدمات پرستاری در منزل</Link> آمپول آهن وریدی و سایر تزریق‌ها را با استانداردهای ایمن اجرا می‌کند.
               </p>
             </section>
 
