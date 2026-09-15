@@ -64,6 +64,7 @@ import coldTreatmentHomeImage from "@/assets/cold-treatment-home-article.jpg";
 import anomalyScanImage from "@/assets/anomaly-scan-pregnancy-article.jpg";
 import celluliteTreatmentImage from "@/assets/cellulite-treatment-article.jpg";
 import anemiaHeartImage from "@/assets/anemia-heart-article.jpg";
+import hypothyroidismHeartImage from "@/assets/hypothyroidism-heart-article.jpg";
 
 
 export interface ArticleData {
@@ -87,6 +88,15 @@ export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1137,
+    title: "کم‌کاری تیروئید و قلب؛ زنگ خطر خاموش برای ضربان قلب",
+    description: "رابطه کم‌کاری تیروئید با بیماری قلبی: برادی‌کاردی، کلسترول بالا و نارسایی قلب؛ آزمایش TSH در منزل، نوار قلب و اکو در منزل و هشدار خوددرمانی",
+    image: hypothyroidismHeartImage,
+    link: "/articles/hypothyroidism-heart",
+    category: "قلب و عروق",
+    date: "۱۴۰۵/۰۶/۲۴"
+  },
   {
     id: 1136,
     title: "کم‌خونی و قلب؛ وقتی فقر آهن قلب را خسته می‌کند",
