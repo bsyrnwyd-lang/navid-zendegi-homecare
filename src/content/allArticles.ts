@@ -65,6 +65,7 @@ import anomalyScanImage from "@/assets/anomaly-scan-pregnancy-article.jpg";
 import celluliteTreatmentImage from "@/assets/cellulite-treatment-article.jpg";
 import anemiaHeartImage from "@/assets/anemia-heart-article.jpg";
 import hypothyroidismHeartImage from "@/assets/hypothyroidism-heart-article.jpg";
+import stressHeartImage from "@/assets/stress-heart-article.jpg";
 
 
 export interface ArticleData {
@@ -88,6 +89,15 @@ export const allArticles: ArticleData[] = [
   // ═══════════════════════════════════════════════════════════════
   // جدیدترین مقالات (ID بالاتر = جدیدتر)
   // ═══════════════════════════════════════════════════════════════
+  {
+    id: 1138,
+    title: "استرس و قلب؛ وقتی تنش روزمره ضربان قلب را می‌دزدد",
+    description: "رابطه استرس مزمن با بیماری قلبی: تپش قلب، فشار خون بالا و سندرم قلب شکسته؛ نوار قلب، هولتر و اکو در منزل و هشدار خوددرمانی",
+    image: stressHeartImage,
+    link: "/articles/stress-heart",
+    category: "قلب و عروق",
+    date: "۱۴۰۵/۰۷/۰۳"
+  },
   {
     id: 1137,
     title: "کم‌کاری تیروئید و قلب؛ زنگ خطر خاموش برای ضربان قلب",
